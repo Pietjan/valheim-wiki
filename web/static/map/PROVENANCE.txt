@@ -1,0 +1,2 @@
+extracted:  2026-10-28T00:20:39+0100
+source:     /mnt/c/Program Files (x86)/Steam/steamapps/common/Valheim/valheim_Data/StreamingAssets/SoftRef

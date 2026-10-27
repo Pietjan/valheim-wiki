@@ -1,0 +1,139 @@
+{
+  "extracted": "2026-10-28T00:20:39+0100",
+  "source": "/mnt/c/Program Files (x86)/Steam/steamapps/common/Valheim/valheim_Data/StreamingAssets/SoftRef",
+  "palette": {
+    "AshLands": [
+      0.4811320900917053,
+      0.12482201308012009,
+      0.12482201308012009
+    ],
+    "BlackForest": [
+      0.41963836550712585,
+      0.45481041073799133,
+      0.24669261276721954
+    ],
+    "DeepNorth": [
+      1,
+      1,
+      1
+    ],
+    "Meadows": [
+      0.5725337862968445,
+      0.6551003456115723,
+      0.3605249226093292
+    ],
+    "Mistlands": [
+      0.2,
+      0.2,
+      0.2
+    ],
+    "Mountain": [
+      1,
+      1,
+      1
+    ],
+    "Ocean": [
+      1,
+      1,
+      1
+    ],
+    "Plains": [
+      0.9062027931213379,
+      0.6707255840301514,
+      0.47043564915657043
+    ],
+    "Swamp": [
+      0.6394598484039307,
+      0.4469825327396393,
+      0.3448844254016876
+    ]
+  },
+  "grid": {
+    "textureSize": 2048,
+    "pixelSize": 12
+  },
+  "material": {
+    "colors": {
+      "ForestColor": [
+        0.9191176295280457,
+        0.8217993378639221,
+        0.6758217811584473
+      ],
+      "WaterColor": [
+        0.8428665399551392,
+        0.9372565150260925,
+        1.0917128324508667
+      ],
+      "WaterColorAshlands": [
+        0.2078431397676468,
+        0.2078431397676468,
+        0.2078431397676468
+      ],
+      "WaterColorAshlandsDeep": [
+        0.2235294133424759,
+        0.250980406999588,
+        0.3686274588108063
+      ],
+      "WaterColorDeep": [
+        0.3429930806159973,
+        0.5337382555007935,
+        0.7647058963775635
+      ],
+      "ambientLightColor": [
+        0.8088235259056091,
+        0.8417850732803345,
+        1
+      ],
+      "lavaColor1": [
+        0.4156862795352936,
+        0.0235294122248888,
+        0
+      ],
+      "lavaColor2": [
+        4.512624263763428,
+        0.2598893642425537,
+        0
+      ],
+      "lightColor": [
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158
+      ]
+    },
+    "floats": {
+      "normalIntensity": 4,
+      "normalWidth": 0.0010000000474974513
+    }
+  },
+  "sun": {
+    "environment": "Clear",
+    "dir": [
+      0,
+      0.7071,
+      -0.7071
+    ],
+    "color": [
+      1.7000000476837158,
+      1.3128220926403174,
+      0.8228000692844404
+    ],
+    "ambient": [
+      0.4626230299472809,
+      0.573756754398346,
+      0.7058976292610168
+    ]
+  },
+  "textures": {
+    "background": "background.png",
+    "clouds": "clouds.png",
+    "foglayer": "foglayer.png",
+    "forest": "forest.png",
+    "lava": "lava.png",
+    "mountain": "mountain.png",
+    "space": "space.png",
+    "water": "water.png"
+  },
+  "notes": [
+    "Mistlands and Ocean colours are Minimap.cs's own (m_mistlandsColor's initialiser and Color.white), not serialised in the prefab."
+  ]
+}

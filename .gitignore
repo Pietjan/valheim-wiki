@@ -1,0 +1,6 @@
+# build output
+/public/
+/bin/
+# scratch
+probe.txt
+*.prof

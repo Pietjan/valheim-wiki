@@ -1,0 +1,233 @@
+# index	name	prefab	enable	biome	biomeArea	quantity	prioritized	centerFirst	unique	group	minDistanceFromSimilar	groupMax	maxDistanceFromSimilar	interiorRadius	exteriorRadius	minTerrainDelta	maxTerrainDelta	minimumVegetation	maximumVegetation	surroundCheckVegetation	surroundCheckDistance	surroundCheckLayers	surroundBetterThanAverage	inForest	forestTresholdMin	forestTresholdMax	minDistanceFromCenter	maxDistanceFromCenter	minDistance	maxDistance	minAltitude	maxAltitude	altBiomeParent	snapToWater	randomRotation	slopeRotation	clearArea	iconPlaced	iconAlways
+0	StoneCircle	StoneCircle	1	1	7	25	0	0	0		200		0	0	16	0	3	0	1	0	20	2	0	0	1	5	0	0	0	0	1	1000		0	1	0	1	0	0
+1	StartTemple	StartTemple	1	1	2	1	1	1	0		0		0	0	25	0	3	0	1	0	20	2	0	1	1	5	0	0	0	10000	3	1000		0	0	0	1	0	1
+2	Eikthyrnir	Eikthyrnir	1	1	2	3	1	0	0		0		0	0	10	0	3	0	1	0	20	2	0	0	1	5	0	0	0	1000	1	1000		0	1	0	1	0	0
+3	GoblinKing	GoblinKing	1	16	2	4	1	0	0		3000		0	0	32	0	4	0	1	0	20	2	0	0	1	5	0	0	0	0	1	1000		0	1	0	1	0	0
+4	Greydwarf_camp1	Greydwarf_camp1	1	8	2	300	0	0	0		128		0	0	10	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	1	0	0
+5			0	8	7	50	0	0	0		0		0	0	0	0	3	0	1	0	20	2	0	1	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+6			0	8	7	100	0	0	0		0		0	0	0	0	3	0	1	0	20	2	0	1	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+7	Runestone_Greydwarfs	Runestone_Greydwarfs	1	8	7	25	0	0	0	Runestones	128		0	0	8	0	3	0	1	0	20	2	0	0	1	99	0	0	0	2000	1	1000		0	1	0	1	0	0
+8	Grave1	Grave1	1	2	6	200	0	0	0		0		0	0	12.04	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	0.5	1000		0	1	0	1	0	0
+9	SwampRuin1	SwampRuin1	1	2	6	30	0	0	0	SwampRuin	256		0	0	12	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	-0.5	1000		0	1	0	0	0	0
+10	SwampRuin2	SwampRuin2	1	2	6	30	0	0	0	SwampRuin	256		0	0	10	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	-0.5	1000		0	1	0	1	0	0
+11	FireHole	FireHole	1	2	2	75	0	0	0	FireHole	16		0	0	5	0	5	0	1	0	20	2	0	0	0	1	0	0	0	0	-1	1000		0	1	0	1	0	0
+12	Runestone_Draugr	Runestone_Draugr	1	2	-1	50	0	0	0	Runestones	128		0	0	8	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	0.5	1000		0	1	0	1	0	0
+13			0	0	7	200	0	0	0		0		0	0	0	0	3	0	1	0	20	2	0	0	1	5	0	0	0	0	1	1000		0	1	0	0	0	0
+14			0	0	7	0	0	0	0		0		0	0	0	0	5	0	1	0	20	2	0	0	1	5	0	0	0	0	1	1000		0	1	0	0	0	0
+15			0	0	7	0	0	0	0		0		0	0	0	0	3	0	1	0	20	2	0	0	1	5	0	0	0	0	1	1000		0	1	0	0	0	0
+16	GDKing	GDKing	1	8	6	4	1	0	0		3000		0	0	25	0	5	0	1	0	20	2	0	0	1	5	0	0	1000	7000	1	1000		0	1	0	1	0	0
+17	Bonemass	Bonemass	1	2	6	5	1	0	0		3000		0	0	19.79	0	4	0	1	0	20	2	0	0	1	5	0	0	2000	10000	0	2		0	1	0	1	0	0
+18	Crypt2	Crypt2	1	8	-1	200	0	0	0		128		0	21	12	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	1	0	0
+19	Ruin1	Ruin1	1	8	-1	200	0	0	0		0		0	0	10.7	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+20	Ruin2	Ruin2	1	8	-1	200	0	0	0		0		0	0	9.89	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	1	0	0
+21			0	8	-1	0	0	0	0		0		0	0	0	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+22			0	8	-1	0	0	0	0		0		0	0	0	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+23			0	8	-1	0	0	0	0		0		0	0	0	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+24	StoneHouse1_heath	StoneHouse1_heath	1	16	-1	0	0	0	0		0		0	0	6	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	1	0	0
+25	StoneHouse2_heath	StoneHouse2_heath	1	16	-1	0	0	0	0		0		0	0	6	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	1	0	0
+26	StoneHouse5_heath	StoneHouse5_heath	1	16	-1	0	0	0	0		0		0	0	7	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	1	0	0
+27			0	8	-1	0	0	0	0		0		0	0	0	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+28	StoneHouse3	StoneHouse3	1	8	-1	200	0	0	0		0		0	0	6	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+29	StoneHouse4	StoneHouse4	1	8	-1	200	0	0	0		0		0	0	7	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+30			0	8	-1	0	0	0	0		0		0	0	0	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+31	Ruin3	Ruin3	1	16	-1	50	0	0	0	Goblintower	512		0	0	10	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	1	0	0
+32			0	16	-1	200	0	0	0		0		0	0	0	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+33	GoblinCamp2	GoblinCamp2	1	16	-1	200	0	0	0		250		0	0	30	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	2	1000		0	0	0	1	0	0
+34	StoneTower1	StoneTower1	1	16	-1	50	0	0	0	Goblintower	512		0	0	14	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	1	0	0
+35			0	16	-1	100	0	0	0		500		0	0	0	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+36	StoneTower3	StoneTower3	1	16	-1	50	0	0	0	Goblintower	512		0	0	14	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	1	0	0
+37			0	16	-1	100	0	0	0		500		0	0	0	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+38	StoneHenge1	StoneHenge1	1	16	-1	5	0	0	0	Stonehenge	1000		0	0	30	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	5	1000		0	1	0	1	0	0
+39	StoneHenge2	StoneHenge2	1	16	-1	5	0	0	0	Stonehenge	1000		0	0	30	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	5	1000		0	1	0	1	0	0
+40	StoneHenge3	StoneHenge3	1	16	-1	5	0	0	0	Stonehenge	1000		0	0	30	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	5	1000		0	1	0	1	0	0
+41	StoneHenge4	StoneHenge4	1	16	-1	5	0	0	0	Stonehenge	1000		0	0	30	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	5	1000		0	1	0	1	0	0
+42	StoneHenge5	StoneHenge5	1	16	-1	20	0	0	0	Stonehenge	500		0	0	16	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	2	1000		0	1	0	1	0	0
+43	StoneHenge6	StoneHenge6	1	16	-1	20	0	0	0	Stonehenge	500		0	0	16	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	2	1000		0	1	0	1	0	0
+44	WoodHouse1	WoodHouse1	1	1	7	20	0	0	0		0		0	0	8	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+45	WoodHouse2	WoodHouse2	1	1	7	20	0	0	0		0		0	0	8	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+46	WoodHouse3	WoodHouse3	1	1	7	20	0	0	0		0		0	0	10	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+47	WoodHouse4	WoodHouse4	1	1	7	20	0	0	0		0		0	0	8	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+48	WoodHouse5	WoodHouse5	1	1	7	20	0	0	0		0		0	0	8	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+49	WoodHouse6	WoodHouse6	1	1	7	20	0	0	0		0		0	0	8	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+50	WoodHouse7	WoodHouse7	1	1	7	20	0	0	0		0		0	0	8	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+51	WoodHouse8	WoodHouse8	1	1	7	20	0	0	0		0		0	0	10	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+52	WoodHouse9	WoodHouse9	1	1	7	20	0	0	0		0		0	0	8	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+53	WoodHouse10	WoodHouse10	1	1	7	20	0	0	0		0		0	0	8	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+54	WoodHouse11	WoodHouse11	1	1	7	20	0	0	0		0		0	0	8	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+55	WoodHouse12	WoodHouse12	1	1	7	20	0	0	0		0		0	0	6	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+56	WoodHouse13	WoodHouse13	1	1	7	20	0	0	0		0		0	0	9	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+57	WoodFarm1	WoodFarm1	1	1	7	10	0	0	0	woodvillage	128		0	0	32	0	4	0	1	0	20	2	0	0	0	1	0	0	500	2000	1	1000		0	1	0	1	0	0
+58	WoodVillage1	WoodVillage1	1	1	7	15	0	0	0	woodvillage	256		0	0	32	0	4	0	1	0	20	2	0	0	0	1	0	0	2000	10000	1	1000		0	1	0	1	0	0
+59			0	8	2	100	0	0	0		0		0	0	0	5	10	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	0	1	0	0	0
+60	TrollCave02	TrollCave02	1	8	2	200	0	0	0		256		0	24	12	5	10	0	1	0	20	2	0	0	0	1	0	0	0	0	3	1000		0	0	1	1	0	0
+61			0	2	7	0	0	0	0		0		0	0	0	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	-1	2		0	1	0	0	0	0
+62			0	2	7	0	0	0	0		0		0	0	0	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	-1	2		0	1	0	0	0	0
+63			0	2	7	0	0	0	0		0		0	0	0	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	-1	2		0	1	0	0	0	0
+64	SunkenCrypt4	SunkenCrypt4	1	2	2	175	1	0	0	SunkenCrypt	64		0	14	12	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	0	2		0	1	0	1	0	0
+65	Dolmen01	Dolmen01	1	9	3	100	0	0	0		0		0	0	8	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+66	Dolmen02	Dolmen02	1	9	3	100	0	0	0		0		0	0	8	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+67	Dolmen03	Dolmen03	1	9	3	50	0	0	0		0		0	0	10	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+68	Crypt3	Crypt3	1	8	3	200	0	0	0		128		0	21	11	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	3	1000		0	1	0	1	0	0
+69	Crypt4	Crypt4	1	8	3	200	0	0	0		128		0	21	18	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+70	InfestedTree01	InfestedTree01	1	2	3	700	0	0	0		0		0	0	5	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	-1	1000		0	1	0	0	0	0
+71	SwampHut1	SwampHut1	1	2	3	50	0	0	0	Swamphut	128		0	0	8	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	-2	1000		0	1	0	0	0	0
+72	SwampHut2	SwampHut2	1	2	3	50	0	0	0	Swamphut	128		0	0	8	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	2	1000		0	1	0	0	0	0
+73	SwampHut3	SwampHut3	1	2	3	50	0	0	0	Swamphut	128		0	0	8	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	2	1000		0	1	0	0	0	0
+74	SwampHut4	SwampHut4	1	2	3	50	0	0	0	Swamphut	128		0	0	8	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	-1	1000		0	1	0	0	0	0
+75	SwampHut5	SwampHut5	1	2	3	25	0	0	0	Swamphut	128		0	0	10	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	-1	1000		0	1	0	1	0	0
+76	SwampWell1	SwampWell1	1	2	3	25	0	0	0		1024		0	0	10	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	-1	1000		0	1	0	0	0	0
+77	StoneTowerRuins04	StoneTowerRuins04	1	4	3	50	0	0	0	Mountainruin	128		0	0	12.28	6	40	0	1	0	20	2	0	0	0	1	0	0	0	0	150	1000		0	1	1	1	0	0
+78	StoneTowerRuins05	StoneTowerRuins05	1	4	3	50	0	0	0	Mountainruin	128		0	0	22	6	40	0	1	0	20	2	0	0	0	1	0	0	0	0	150	1000		0	1	1	1	0	0
+79	StoneTowerRuins03	StoneTowerRuins03	1	8	3	80	0	0	0	Stonetowerruins	200		0	0	9	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	2	1000		0	1	0	1	0	0
+80	StoneTowerRuins07	StoneTowerRuins07	1	8	3	80	0	0	0	Stonetowerruins	200		0	0	9	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	2	1000		0	1	0	1	0	0
+81	StoneTowerRuins08	StoneTowerRuins08	1	8	3	80	0	0	0	Stonetowerruins	200		0	0	9	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	2	1000		0	1	0	1	0	0
+82	StoneTowerRuins09	StoneTowerRuins09	1	8	3	80	0	0	0	Stonetowerruins	200		0	0	7	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	2	1000		0	1	0	1	0	0
+83	StoneTowerRuins10	StoneTowerRuins10	1	8	3	80	0	0	0	Stonetowerruins	200		0	0	7	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	2	1000		0	1	0	1	0	0
+84	Vendor_BlackForest	Vendor_BlackForest	1	8	2	10	1	0	1		512		0	0	12	0	2	0	1	0	20	2	0	0	0	1	0	0	1500	0	1	1000		0	1	0	1	1	0
+85	ShipSetting01	ShipSetting01	1	1	3	100	0	0	0		128		0	0	24	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	0	0	0
+86	Dragonqueen	Dragonqueen	1	4	2	3	1	0	0		3000		0	0	12	0	4	0	1	0	20	2	0	0	0	1	0	0	0	8000	150	500		0	1	0	1	0	0
+87	DrakeNest01	DrakeNest01	1	4	3	200	0	0	0		100		0	0	5	0	3	0	1	0	20	2	0	0	0	1	0	0	0	10000	100	2000		0	1	0	1	0	0
+88	Waymarker01	Waymarker01	1	4	3	50	0	0	0		0		0	0	3	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	100	1000		0	1	0	1	0	0
+89	Waymarker02	Waymarker02	1	4	3	50	0	0	0		0		0	0	3	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	100	1000		0	1	0	1	0	0
+90	AbandonedLogCabin02	AbandonedLogCabin02	1	4	3	33	0	0	0	Abandonedcabin	128		0	0	10.51	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	100	1000		0	1	0	1	0	0
+91	AbandonedLogCabin03	AbandonedLogCabin03	1	4	3	33	0	0	0	Abandonedcabin	128		0	0	10	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	100	1000		0	1	0	1	0	0
+92	AbandonedLogCabin04	AbandonedLogCabin04	1	4	3	50	0	0	0	Abandonedcabin	128		0	0	10	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	100	1000		0	1	0	1	0	0
+93	MountainGrave01	MountainGrave01	1	4	3	100	0	0	0		50		0	0	3.93	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	100	1000		0	1	0	1	0	0
+94	DrakeLorestone	DrakeLorestone	1	4	3	50	0	0	0	Runestones	128		0	0	4	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	100	1000		0	1	0	1	0	0
+95	MountainWell1	MountainWell1	1	4	3	25	0	0	0		256		0	0	14	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	100	1000		0	1	0	0	0	0
+96			0	4	3	500	0	0	0		0		0	0	0	0	20	0	1	0	20	2	0	0	0	1	0	0	0	0	100	1000		0	1	0	0	0	0
+97	ShipWreck01	ShipWreck01	1	282	3	25	0	0	0	Shipwreck	1024		0	0	10	0	10	0	1	0	20	2	0	0	0	1	0	0	0	0	-1	1		0	1	0	1	0	0
+98	ShipWreck02	ShipWreck02	1	282	3	25	0	0	0	Shipwreck	1024		0	0	10	0	10	0	1	0	20	2	0	0	0	1	0	0	0	0	-1	1		0	1	0	1	0	0
+99	ShipWreck03	ShipWreck03	1	282	3	25	0	0	0	Shipwreck	1024		0	0	10	0	10	0	1	0	20	2	0	0	0	1	0	0	0	0	-1	1		0	1	0	1	0	0
+100	ShipWreck04	ShipWreck04	1	282	3	25	0	0	0	Shipwreck	1024		0	0	14	0	10	0	1	0	20	2	0	0	0	1	0	0	0	0	-1	1		0	1	0	1	0	0
+101			0	1	3	0	0	0	0		0		0	0	0	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	1	0	0	0	0
+102	Runestone_Meadows	Runestone_Meadows	1	1	3	100	0	0	0	Runestones	128		0	0	8	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	1	0	0
+103	Runestone_Boars	Runestone_Boars	1	1	3	50	0	0	0	Runestones	128		0	0	8	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	1	0	0
+104	Runestone_Swamps	Runestone_Swamps	1	2	3	100	0	0	0	Runestones	128		0	0	8	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	0	1000		0	1	0	1	0	0
+105	Runestone_Mountains	Runestone_Mountains	1	4	3	100	0	0	0	Runestones	128		0	0	8	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	100	1000		0	1	0	1	0	0
+106	Runestone_BlackForest	Runestone_BlackForest	1	8	3	50	0	0	0	Runestones	128		0	0	8	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	1	0	0
+107	Runestone_Plains	Runestone_Plains	1	16	3	100	0	0	0	Runestones	128		0	0	8	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000		0	1	0	1	0	0
+108	DevHouse1	DevHouse1	0	0	3	0	0	0	0		0		0	0	8	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	1	0	0	0	0
+109	DevSoundTest	DevSoundTest	0	0	3	0	0	0	0		0		0	0	43.65	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	1	0	0	0	0
+110	DevHouse2	DevHouse2	0	0	3	0	0	0	0		0		0	0	10.92	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	1	0	0	0	0
+111	DevHouse3	DevHouse3	0	0	3	0	0	0	0		0		0	0	10.92	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	1	0	0	0	0
+112	DevWall1	DevWall1	0	0	3	0	0	0	0		0		0	0	10.32	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	1	0	0	0	0
+113	DevWall2	DevWall2	0	0	3	0	0	0	0		0		0	0	18	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	1	0	0	0	0
+114	DevFloor1	DevFloor1	0	0	3	0	0	0	0		0		0	0	8	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	1	0	0	0	0
+115	DevGround1	DevGround1	0	0	3	0	0	0	0		0		0	0	8	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	1	0	0	0	0
+116	DevGround2	DevGround2	0	0	3	0	0	0	0		0		0	0	21.1	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	1	0	0	0	0
+117	DevHouse4	DevHouse4	0	0	3	0	0	0	0		0		0	0	15	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	0	0	0	0	0
+118	DevHouse5	DevHouse5	0	0	3	0	0	0	0		0		0	0	15	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	0	0	0	0	0
+119	DevDressingRoom	DevDressingRoom	0	0	3	0	0	0	0		0		0	0	15	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	0	0	0	0	0
+120	DevKitchen	DevKitchen	0	0	3	0	0	0	0		0		0	0	15	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	0	0	0	0	0
+121	DevGarden	DevGarden	0	0	3	0	0	0	0		0		0	0	0	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	0	0	0	0	0
+122	DevForge	DevForge	0	0	3	0	0	0	0		0		0	0	0	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	0	0	0	0	0
+123	DevMageRoom	DevMageRoom	0	0	3	0	0	0	0		0		0	0	0	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	0	0	0	0	0
+124	DevBedchamber	DevBedchamber	0	0	3	0	0	0	0		0		0	0	0	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-1000	1000		0	0	0	0	0	0
+125	DevCombatRing	DevCombatRing	0	0	0	0	0	0	0		0		0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0	0	0	0	0	0
+126	DevHouseStart	DevHouseStart	0	0	3	5	0	0	0		2000		0	0	13	0	1.5	0	1	0	20	2	0	1	0.5	1	1500	0	1500	10000	5	1000		0	1	0	1	0	0
+127	DevCombatRange	DevCombatRange	0	0	3	5	0	0	0		2000		0	0	13	0	1.5	0	1	0	20	2	0	1	0.5	1	1500	0	1500	10000	5	1000		0	1	0	1	0	0
+128	CombatRuin01	CombatRuin01	1	1	3	5	0	0	0		2000		0	0	13	0	1.5	0	1	0	20	2	0	1	0.5	1	1500	0	1500	10000	5	1000		0	1	0	1	0	0
+129	BigRockClearing	BigRockClearing	1	8	2	10	0	0	1		2000		0	0	15	0	2	0	1	0	20	2	0	1	0.8	1	1000	0	1000	10000	5	1000		0	1	0	1	0	0
+130	TarPit1	TarPit1	1	16	2	100	0	0	0	tarpit	128		0	0	20	0	1.5	0	1	0	20	2	0	0	0	0	0	0	0	0	5	60		0	1	0	1	0	0
+131	TarPit2	TarPit2	1	16	2	16	0	0	0	tarpit	128		0	0	25	0	1.5	0	1	0	20	2	0	0	0	0	0	0	0	0	5	60		0	1	0	1	0	0
+132	TarPit3	TarPit3	1	16	2	100	0	0	0	tarpit	128		0	0	14	0	1.5	0	1	0	20	2	0	0	0	0	0	0	0	0	5	60		0	1	0	1	0	0
+133	MountainCave02	MountainCave02	1	4	3	120	0	0	0	mountaincaves	200		0	32	15	0	40	0	1	0	20	2	0	0	0	0	0	0	0	0	100	5000		0	0	1	1	0	0
+134	AncientUpgradeStation	AncientUpgradeStation	1	4	2	10	1	0	1	AncientUpgradeStation	400		0	22	22	0	40	0	1	1	40	2	0	0	0	0	500	0	200	0	0	5000		0	0	1	1	1	0
+135	Mistlands_GuardTower1_new	Mistlands_GuardTower1_new	1	512	2	75	0	0	0	Dvergr	128		0	0	24	0	10	0	1	0	20	2	0	0	0	0	0	0	0	0	2	1000		0	0	1	1	0	0
+136	Mistlands_GuardTower1_ruined_new	Mistlands_GuardTower1_ruined_new	1	512	2	80	0	0	0	Dvergr	128		0	0	20	0	10	0	1	0	20	2	0	0	0	0	0	0	0	0	2	1000		0	0	1	1	0	0
+137	Mistlands_GuardTower1_ruined_new2	Mistlands_GuardTower1_ruined_new2	1	512	2	20	0	0	0	Dvergr	128		0	0	20	0	10	0	1	0	20	2	0	0	0	0	0	0	0	0	2	1000		0	0	1	1	0	0
+138	Mistlands_GuardTower2_new	Mistlands_GuardTower2_new	1	512	2	75	0	0	0	Dvergr	128		0	0	24	0	10	0	1	0	20	2	0	0	0	0	0	0	0	0	4	1000		0	0	1	1	0	0
+139	Mistlands_GuardTower3_new	Mistlands_GuardTower3_new	1	512	2	50	0	0	0	Dvergr	128		0	0	24	0	10	0	1	0	20	2	0	0	0	0	0	0	0	0	12	1000		0	0	1	1	0	0
+140	Mistlands_GuardTower3_ruined_new	Mistlands_GuardTower3_ruined_new	1	512	2	50	0	0	0	Dvergr	128		0	0	20	0	10	0	1	0	20	2	0	0	0	0	0	0	0	0	11	1000		0	0	1	1	0	0
+141	Mistlands_Lighthouse1_new	Mistlands_Lighthouse1_new	1	512	2	100	0	0	0	Dvergr	128		0	0	20	0	40	0	1	0	20	2	0	0	0	0	0	0	0	0	1	20		0	0	1	1	0	0
+142	Mistlands_Excavation1	Mistlands_Excavation1	1	512	2	40	0	0	0	Excavation	128		0	0	20	0	4	0	1	0	20	2	0	0	0	0	0	0	0	0	4	100		0	0	1	1	0	0
+143	Mistlands_Excavation2	Mistlands_Excavation2	1	512	2	40	0	0	0	Excavation	128		0	0	20	0	4	0	1	0	20	2	0	0	0	0	0	0	0	0	4	100		0	0	1	1	0	0
+144	Mistlands_Excavation3	Mistlands_Excavation3	1	512	2	40	0	0	0	Excavation	96		0	0	17	0	5	0	1	0	20	2	0	0	0	0	0	0	0	0	4	100		0	0	1	1	0	0
+145	Mistlands_Harbour1	Mistlands_Harbour1	1	512	1	100	0	0	0	Harbour	64		0	0	20	2	20	0	1	0	20	2	0	0	0	0	0	0	0	0	-1	-0.25		1	0	1	1	0	0
+146	Mistlands_Viaduct1	Mistlands_Viaduct1	1	512	2	100	0	0	0	Harbour	128		0	0	24	2	40	0	1	0	20	2	0	0	0	0	0	0	0	0	-1	15		0	0	1	1	0	0
+147	Mistlands_Viaduct2	Mistlands_Viaduct2	1	512	2	150	0	0	0	Harbour	64		0	0	8	4	40	0	1	0	20	2	0	0	0	0	0	0	0	0	-1	25		0	1	0	1	0	0
+148	Mistlands_RockSpire1	Mistlands_RockSpire1	1	512	2	200	0	0	0		60		0	0	4	2	99	0	1	0	20	2	0	0	0	0	0	0	0	0	-10	1000		0	1	0	0	0	0
+149	Mistlands_Giant1	Mistlands_Giant1	1	512	2	250	0	0	0	Giant	180		0	0	11	0	3	0	1	0	20	2	0	0	0	0	0	0	0	0	-1	1000		0	1	0	0	0	0
+150	Mistlands_Giant2	Mistlands_Giant2	1	512	2	85	0	0	0	Giant	256		0	0	10	0	4	0	1	0	20	2	0	0	0	0	0	0	0	0	-1	1000		0	1	0	0	0	0
+151	Mistlands_DvergrTownEntrance1	Mistlands_DvergrTownEntrance1	1	512	2	120	1	0	0	DvergrDungeon	256		0	32	20	5	40	0	1	0	20	2	0	0	0	0	0	0	0	0	12	1000		0	0	1	1	0	0
+152	Mistlands_DvergrTownEntrance2	Mistlands_DvergrTownEntrance2	1	512	2	120	1	0	0	DvergrDungeon	256		0	32	32	0	40	0	1	0	20	2	0	0	0	0	0	0	0	0	1	20		0	0	1	1	0	0
+153	Mistlands_DvergrBossEntrance1	Mistlands_DvergrBossEntrance1	1	512	2	5	1	0	0	DvergrBoss	2048		0	32	32	0	40	0	1	0	20	2	0	0	0	0	0	0	0	0	1	20		0	0	1	1	0	0
+154	Mistlands_RoadPost1	Mistlands_RoadPost1	1	512	3	500	0	0	0		0		0	0	6	0	10	0	1	0	20	2	0	0	0	0	0	0	0	0	1	1000		0	1	0	1	0	0
+155	Mistlands_StatueGroup1	Mistlands_StatueGroup1	1	512	3	200	0	0	0		32		0	0	16	0	10	0	1	0	20	2	0	0	0	0	0	0	0	0	2	1000		0	0	1	1	0	0
+156	Mistlands_Statue1	Mistlands_Statue1	1	512	3	200	0	0	0		0		0	0	6	0	10	0	1	0	20	2	0	0	0	0	0	0	0	0	2	1000		0	0	1	1	0	0
+157	Mistlands_Statue2	Mistlands_Statue2	1	512	3	200	0	0	0		0		0	0	6	0	10	0	1	0	20	2	0	0	0	0	0	0	0	0	2	1000		0	0	1	1	0	0
+158	Mistlands_Swords1	Mistlands_Swords1	1	512	2	33	0	0	0	GiantArmor	256		0	0	12	0	10	0	1	0	20	2	0	0	0	0	0	0	0	0	-1	1000		0	1	0	1	0	0
+159	Mistlands_Swords2	Mistlands_Swords2	1	512	2	33	0	0	0	GiantArmor	256		0	0	12	0	10	0	1	0	20	2	0	0	0	0	0	0	0	0	-1	1000		0	1	0	1	0	0
+160	Mistlands_Swords3	Mistlands_Swords3	1	512	2	33	0	0	0	GiantArmor	256		0	0	8	0	10	0	1	0	20	2	0	0	0	0	0	0	0	0	-1	1000		0	1	0	1	0	0
+161	Runestone_Mistlands	Runestone_Mistlands	1	512	3	50	0	0	0	Runestones	128		0	0	12	0	10	0	1	0	20	2	0	0	0	0	0	0	0	0	-1	1000		0	1	1	1	0	0
+162	Hildir_cave	Hildir_cave	1	4	2	3	1	0	0		2000		0	32	15	0	40	0	1	0	20	2	0	0	0	0	0	0	1000	8000	200	5000		0	0	1	1	1	0
+163	Hildir_camp	Hildir_camp	1	1	3	10	1	0	1		1000		0	0	24	0	2	0	1	0	20	2	0	0	0	1	0	0	3000	8000	1	1000		0	1	0	1	1	0
+164	Hildir_crypt	Hildir_crypt	1	8	2	3	1	0	0		3000		0	21	18	0	2	0	1	0	20	2	0	0	0	1	0	0	3000	8000	1	1000		0	1	0	0	1	0
+165	Hildir_plainsfortress	Hildir_plainsfortress	1	16	2	3	1	0	0		3000		0	0	32	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	8	1000		0	1	0	1	0	0
+166	FaderLocation	FaderLocation	1	32	2	3	1	0	0	FaderBoss	2048		0	0	32	0	40	0	0.1	0	20	2	0	0	0	0	0	0	0	0	1	300		0	0	1	1	0	0
+167	PlaceofMystery1	PlaceofMystery1	1	32	2	1	1	0	1	PlaceofMystery	2048		0	0	24	0	5	0	0.1	0	20	2	0	0	0	0	0	0	0	0	0	1000		0	1	0	1	0	0
+168	PlaceofMystery2	PlaceofMystery2	1	32	2	1	1	0	1	PlaceofMystery	2048		0	0	24	0	5	0	0.1	0	20	2	0	0	0	0	0	0	0	0	0	1000		0	1	0	1	0	0
+169	PlaceofMystery3	PlaceofMystery3	1	32	2	1	1	0	1	PlaceofMystery	2048		0	24	24	0	5	0	0.1	0	20	2	0	0	0	0	0	0	0	0	0	1000		0	1	0	1	0	0
+170	CharredFortress	CharredFortress	1	32	-1	20	1	0	0	FaderBoss	256	zigg	0	0	32	0	10	0	0.1	0	20	2	0	0	1	5	0	0	0	0	20	1000		0	0	0	1	0	0
+171	FortressRuins	FortressRuins	1	32	-1	100	0	0	0		0	zigg	70	0	32	0	10	0	0.8	0	20	2	0	0	1	5	0	0	0	0	0	1000		0	1	0	1	0	0
+172	CharredRuins1	CharredRuins1	1	32	2	75	0	0	0	zigg	256		0	0	32	0	6	0	1	0	20	2	0	0	1	5	0	0	0	0	-5	1000		0	1	0	1	0	0
+173	Runestone_Ashlands	Runestone_Ashlands	1	32	-1	70	0	0	0	Runestones	128		0	0	12	0	10	0	0.1	0	20	2	0	0	1	5	0	0	0	0	0	1000		0	1	1	1	0	0
+174	LeviathanLava	LeviathanLava	1	32	3	100	0	0	0		0		0	0	10	0	10	0.6	1	1	30	2	0	0	0	1	0	0	0	0	10	1000		0	1	0	0	0	0
+175	SulfurArch	SulfurArch	1	32	2	100	0	0	0		40		0	0	30	0	6	0	0.8	0	20	2	0	0	0	1	0	0	0	0	10	1000		0	1	0	1	0	0
+176	CharredStone_Spawner	CharredStone_Spawner	1	32	3	300	0	0	0		100		0	0	20	0	10	0	0.2	0	20	2	0	0	1	5	0	0	0	0	0	1000		0	1	0	1	0	0
+177	VoltureNest	VoltureNest	1	32	3	350	0	0	0		100		0	0	16	0	5	0	0.1	0	20	2	0	0	1	5	0	0	0	0	0	1000		0	1	0	1	0	0
+178	CharredTowerRuins1	CharredTowerRuins1	1	32	-1	30	0	0	0	towerruins	100		0	0	22	0	4	0	0.5	0	20	2	0	0	1	5	0	0	0	0	0	1000		0	1	0	1	0	0
+179	CharredTowerRuins1_dvergr	CharredTowerRuins1_dvergr	1	32	-1	30	0	0	0	towerruins	100		0	0	22	0	4	0	0.1	0	20	2	0	0	1	5	0	0	0	0	0	1000		0	1	0	1	0	0
+180	CharredTowerRuins2	CharredTowerRuins2	1	32	-1	40	0	0	0		0		0	0	12	0	4	0	0.3	0	20	2	0	0	1	5	0	0	0	0	0	1000		0	1	0	1	0	0
+181	CharredTowerRuins3	CharredTowerRuins3	1	32	-1	30	0	0	0		500		0	0	12	0	4	0	0.3	0	20	2	0	0	1	5	0	0	0	0	0	1000		0	1	0	0	0	0
+182	AshlandRuins	AshlandRuins	1	32	2	100	0	0	0		16		0	0	32	0	4	0	0.2	0	20	2	0	0	1	5	0	0	0	0	0	1000		0	1	0	1	0	0
+183	MorgenHole1	MorgenHole1	1	32	2	40	0	0	0	MorgenHole	300		0	24	24	0	10	0	0.3	0	20	2	0	0	1	5	0	0	0	0	0	1000		0	1	0	1	0	0
+184	MorgenHole2	MorgenHole2	1	32	2	40	0	0	0	MorgenHole	200		0	24	24	0	10	0	0.3	0	20	2	0	0	1	5	0	0	0	0	0	1000		0	1	0	1	0	0
+185	MorgenHole3	MorgenHole3	1	32	2	40	0	0	0	MorgenHole	200		0	24	24	0	10	0	0.3	0	20	2	0	0	1	5	0	0	0	0	0	1000		0	1	0	1	0	0
+186	CharredRuins2	CharredRuins2	1	32	2	100	0	0	0		128		0	0	15	0	30	0	1	0	20	2	0	0	1	5	0	0	0	0	-5	1000		0	1	0	1	0	0
+187	CharredRuins3	CharredRuins3	1	32	2	100	0	0	0		128		0	0	12	0	30	0	1	0	20	2	0	0	1	5	0	0	0	0	-5	1000		0	1	0	1	0	0
+188	CharredRuins4	CharredRuins4	1	32	2	100	0	0	0		128		0	0	10	0	30	0	1	0	20	2	0	0	1	5	0	0	0	0	-5	1000		0	1	0	1	0	0
+189	DevWallAsh	DevWallAsh	0	32	2	5	1	0	0	FaderBoss	2048		0	0	10	0	40	0	0.5	0	20	2	0	0	0	0	0	0	0	0	1	300		0	0	1	1	0	0
+190	BogWitch_Camp	BogWitch_Camp	1	2	2	10	1	0	1		1000		0	0	24	0	2	0	1	0	20	2	0	0	0	1	0	0	3000	8000	1	1000		0	1	0	1	1	0
+191	bosslocation	DN_Bossroom	1	64	3	3	1	0	0	dn_boss	1024		0	32	32	0	6	0	1	0	20	2	0	0	0	0	0	0	0	0	80	5000		0	0	1	1	1	0
+192	darkesthole	TheDarkestHole	0	64	2	1	1	0	1	thehole	60	0	0	0	32	0	300	0	1	0	20	2	0	1	0	1	0	0	0	0	20	1000		0	1	0	1	0	0
+193	thehole01	TheHole01	1	64	2	40	0	0	0		256	thehole	0	0	28	0	3	0	1	0	32	5	0.8	0	0	1	0	0	0	0	2	1000		0	0	0	1	0	0
+194	NorthVillage	NorthVillage	1	64	2	135	0	0	0		70	thehole	85	0	32	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	2	1000		0	1	0	1	0	0
+195	morkborg	MorkBorg	1	64	3	40	0	0	0	morkborg	275	0	0	0	30	0	300	0	1	0	20	2	0	0	0	1	0	0	0	0	30	10000		0	0	0	1	0	0
+196	NorthMemorialPlace	NorthMemorialPlace	1	64	2	15	0	0	0	memorialplace	400	0	0	0	25	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	2	1000		0	1	0	1	0	0
+197	FrozenShip01	FrozenShip01_DN	1	64	3	50	0	0	0	FrozenShip	64		0	0	10	0	100	0	1	0	20	2	0	0	0	1	8000	9750	0	0	-15	-5		1	0	1	0	0	0
+198	FrozenShip02	FrozenShip02_DN	1	64	3	50	0	0	0	FrozenShip	64		0	0	16	0	100	0	1	0	20	2	0	0	0	1	8000	9750	0	0	-15	-5		1	0	1	0	0	0
+199	FrozenShip03	FrozenShip03_DN	1	64	3	50	0	0	0	FrozenShip	64		0	0	10	0	100	0	1	0	20	2	0	0	0	1	8000	9750	0	0	-15	-5		1	0	1	0	0	0
+200	icepond	IcePond1	1	64	2	40	0	0	0	icepond	128		0	0	20	0	1.5	0	1	0	20	2	0	1	0	1	0	0	0	0	10	200		0	1	0	0	0	0
+201	hotspring	HotSpring1	0	64	2	50	0	0	0	hotspring	10	0	0	0	6	0	5	0	1	0	20	2	0	1	0	1	0	0	0	0	40	1000		0	1	0	1	0	0
+202	hotspring2	HotSpring2	0	64	2	50	0	0	0	hotspring	10	0	0	0	9	4	20	0	1	0	20	2	0	1	0	1	0	0	0	0	40	1000		0	1	1	1	0	0
+203	hotspring3	HotSpring3	0	64	2	50	0	0	0	hotspring	10	0	0	0	13	4	300	0	1	0	20	2	0	1	0	1	0	0	0	0	40	1000		0	1	1	1	0	0
+204	hut01	DN_hut01	1	64	2	40	0	0	0	northvillage	100	0	0	0	12	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	40	1000		0	1	1	1	0	0
+205	shipsetting	ShipSetting02	1	64	3	100	0	0	0	shipsetting	64		0	0	24	0	2	0	1	0	20	2	0	0	0	0.5	0	0	0	0	2	1000		0	1	0	1	0	0
+206	shipsetting	ShipSetting03	1	64	3	50	0	0	0	shipsetting	64		0	0	24	0	2	0	1	0	20	2	0	0	0	0.5	0	0	0	0	2	1000		0	1	0	1	0	0
+207	Lumbercamp	LumberCamp	1	64	2	50	0	0	0	thehole	100		0	0	32	0	3	0	1	0	20	2	0	1	0	1	0	0	0	0	4	1000		0	1	0	1	0	0
+208	Shipwreck_DN	ShipWreck01_DN	1	64	3	170	0	0	0		0		0	0	10	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-0.5	0.5		0	1	0	1	0	0
+209	Shipwreck02_DN	ShipWreck02_DN	1	64	3	120	0	0	0		0		0	0	10	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	-0.5	1		0	0	1	1	0	0
+210	HalfBurried_ForestCrypt	HalfBurried_ForestCrypt	0	8	3	100	0	0	0		0		0	0	25	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	5	500		0	1	0	1	0	0
+211	FimbulLocation01	FimbulLocation01	0	0	3	100	0	0	0		0		0	0	25	0	2	0	1	0	20	2	0	0	0	1	0	0	0	0	5	500		0	1	0	1	0	0
+212	Runestone_DeepNorth	Runestone_DeepNorth	1	64	3	70	0	0	0	Runestones	128		0	0	12	0	10	0	0.1	0	20	2	0	0	1	5	0	0	0	0	0	1000		0	1	1	1	0	0
+213	DN_gammeltrollFrac01	DN_gammeltrollFrac01	1	64	3	30	0	0	0		0		0	0	8	0	10	0	1	0	20	2	0	0	1	5	0	0	0	0	5	1000		0	1	0	1	0	0
+214	DN_gammeltrollFrac02	DN_gammeltrollFrac02	1	64	3	30	0	0	0		0		0	0	8	0	10	0	1	0	20	2	0	0	1	5	0	0	0	0	10	1000		0	1	0	1	0	0
+215	BearCave	BearCave	1	8	2	50	0	0	0		256		0	24	12	5	10	0	1	0	20	2	0	0	1	5	0	0	0	0	5	1000		0	0	1	1	0	0
+216	WoodVillage2	WoodVillage2	1	1	7	15	0	0	0	woodvillage	256		0	0	32	0	4	0	1	0	20	2	0	0	0	1	0	0	2000	10000	1	1000	Dark Meadows	0	1	0	1	0	0
+217	StoneTowerRuins07_sunk	StoneTowerRuins07_sunk	1	8	3	10	0	0	0	Stonetowerruins_sunk	50		0	0	7	0	4	0	1	0	20	2	0	0	0	2	0	0	0	0	-8	-2	Ruin Black Forest	0	1	0	0	0	0
+218	StoneTowerRuins08_sunk	StoneTowerRuins08_sunk	1	8	3	10	0	0	0	Stonetowerruins_sunk	50		0	0	7	0	4	0	1	0	20	2	0	0	0	2	0	0	0	0	-8	-2	Ruin Black Forest	0	1	0	0	0	0
+219	StoneTowerRuins09_sunk	StoneTowerRuins09_sunk	1	8	3	10	0	0	0	Stonetowerruins_sunk	50		0	0	7	0	4	0	1	0	20	2	0	0	0	2	0	0	0	0	-8	-2	Ruin Black Forest	0	1	0	0	0	0
+220	StoneTowerRuins10_sunk	StoneTowerRuins10_sunk	1	8	3	10	0	0	0	Stonetowerruins_sunk	50		0	0	7	0	4	0	1	0	20	2	0	0	0	2	0	0	0	0	-8	-2	Ruin Black Forest	0	1	0	0	0	0
+221	SwampHut1_1	SwampHut1_1	1	2	3	50	0	0	0		0		0	0	8	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	-2	1000	Hut Swamp	0	1	0	0	0	0
+222	SwampHut2_1	SwampHut2_1	1	2	3	50	0	0	0		0		0	0	8	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	-2	1000	Hut Swamp	0	1	0	0	0	0
+223	SwampHut3_1	SwampHut3_1	1	2	3	50	0	0	0		0		0	0	8	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	-2	1000	Hut Swamp	0	1	0	0	0	0
+224	StoneTowerRuins05_leet	StoneTowerRuins05_leet	1	4	3	10	0	0	0		32		0	0	22	0	40	0	1	0	20	2	0	0	0	1	0	0	0	0	150	1000	Fortress Mountain	0	1	1	1	0	0
+225	GoblinCamp2_1	GoblinCamp2_1	1	16	0	5	0	0	0		0		0	0	30	0	3	0	1	0	20	2	0	0	0	1	0	0	0	0	2	1000	Goblin Plains	0	0	0	1	0	0
+226	GoblinHut01	GoblinHut01	1	16	7	30	0	0	0		0		0	0	6	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000	Goblin Plains	0	1	0	0	0	0
+227	GoblinHut02	GoblinHut02	1	16	7	30	0	0	0		0		0	0	7	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000	Goblin Plains	0	1	0	0	0	0
+228	GoblinHut03	GoblinHut03	1	16	7	20	0	0	0		0		0	0	12	0	4	0	1	0	20	2	0	0	0	1	0	0	0	0	1	1000	Goblin Plains	0	1	0	0	0	0
+229	TarPit1	TarPit1_1	1	16	2	50	0	0	0		0		0	0	20	0	1.5	0	1	0	20	2	0	0	0	0	0	0	0	0	3	1000	Death Plains	0	1	0	1	0	0
+230	TarPit2	TarPit2_1	1	16	2	20	0	0	0		0		0	0	25	0	1.5	0	1	0	20	2	0	0	0	0	0	0	0	0	3	1000	Death Plains	0	1	0	1	0	0
+231	TarPit3	TarPit3_1	1	16	2	100	0	0	0		0		0	0	14	0	1.5	0	1	0	20	2	0	0	0	0	0	0	0	0	3	1000	Death Plains	0	1	0	1	0	0

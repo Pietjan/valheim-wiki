@@ -1,0 +1,2140 @@
+# key	token	english
+# key is a prefab's name, or biome:<Biome>; token is the game's name token, '-' where the game has none;
+# english is the name to show without the game's translations: the game's English for a token, ours otherwise
+AbandonedLogCabin02	-	Abandoned cabin
+AbandonedLogCabin03	-	Abandoned cabin
+AbandonedLogCabin04	-	Abandoned cabin
+Abomination	$enemy_abomination	Abomination
+Acorn	$item_oakseeds	Acorns
+Amber	$item_amber	Amber
+AmberPearl	$item_amberpearl	Amber Pearl
+AncientCoin	$item_ancientcoin	Ancient Coin
+AncientGemstoneBlack	$item_ancientgemstone_black	Draumyx
+AncientGemstoneGreen	$item_ancientgemstone_green	Grimvarn
+AncientGemstoneOrange	$item_ancientgemstone_orange	Solryth
+AncientGemstonePurple	$item_ancientgemstone_purple	Veydris
+AncientSeed	$item_ancientseed	Ancient Seed
+AncientUpgradeStation	$piece_upgradestation	Forge of Potential
+ArmorAshlandsMediumChest	$item_chest_medium_ashlands	Breastplate of Ask
+ArmorAshlandsMediumlegs	$item_legs_medium_ashlands	Trousers of Ask
+ArmorBerserkerChest	$item_chest_berserker	Patterns of the Bear
+ArmorBerserkerLegs	$item_legs_berserker	Loincloth of the Bear
+ArmorBerserkerUndeadChest	$item_chest_berserker_undead	Vilebone Cage
+ArmorBerserkerUndeadLegs	$item_legs_berserker_undead	Vilebone Drapes
+ArmorBronzeChest	$item_chest_bronze	Bronze Plate Tunic
+ArmorBronzeLegs	$item_legs_bronze	Bronze Plate Leggings
+ArmorCarapaceChest	$item_chest_carapace	Carapace Breastplate
+ArmorCarapaceLegs	$item_legs_carapace	Carapace Greaves
+ArmorDeepNorthHeavyChest	$item_chest_heavy_deepnorth	Breastplate of the Protector
+ArmorDeepNorthHeavylegs	$item_legs_heavy_deepnorth	Trousers of the Protector
+ArmorDeepNorthMageChest	$item_chest_mage_deepnorth	Robes of the Caller
+ArmorDeepNorthMagelegs	$item_legs_mage_deepnorth	Trousers of the Caller
+ArmorDeepNorthMediumChest	$item_chest_medium_deepnorth	Chestpiece of the Vanguard
+ArmorDeepNorthMediumlegs	$item_legs_medium_deepnorth	Trousers of the Vanguard
+ArmorDress1	$item_chest_dress1	Plain Brown Dress
+ArmorDress10	$item_chest_dress10	Simple Undyed Dress
+ArmorDress2	$item_chest_dress2	Brown Dress with Shawl
+ArmorDress3	$item_chest_dress3	Brown Dress with Beads
+ArmorDress4	$item_chest_dress4	Plain Blue Dress
+ArmorDress5	$item_chest_dress5	Blue Dress with Shawl
+ArmorDress6	$item_chest_dress6	Blue Dress with Beads
+ArmorDress7	$item_chest_dress7	Plain Yellow Dress
+ArmorDress8	$item_chest_dress8	Yellow Dress with Shawl
+ArmorDress9	$item_chest_dress9	Yellow Dress with Beads
+ArmorFenringChest	$item_chest_fenris	Fenris Coat
+ArmorFenringLegs	$item_legs_fenris	Fenris Leggings
+ArmorFlametalChest	$item_chest_flametal	Flametal Breastplate
+ArmorFlametalLegs	$item_legs_flametal	Flametal Greaves
+ArmorGoldHeavyChestUncooked	$item_chest_heavy_gold_uncooked	Cast: Breastplate of the Protector
+ArmorGoldHeavyHelmetUncooked	$item_helmet_heavy_gold_uncooked	Cast: Helmet of the Protector
+ArmorGoldHeavyLegsUncooked	$item_legs_heavy_gold_uncooked	Cast: Trousers of the Protector
+ArmorGoldMageChestUncooked	$item_chest_mage_gold_uncooked	Cast: Robes of the Caller
+ArmorGoldMageHelmetUncooked	$item_helmet_mage_gold_uncooked	Cast: Headdress of the Caller
+ArmorGoldMageLegsUncooked	$item_legs_mage_gold_uncooked	Cast: Trousers of the Caller
+ArmorGoldMediumChestUncooked	$item_chest_medium_gold_uncooked	Cast: Chestpiece of the Vanguard
+ArmorGoldMediumHelmetUncooked	$item_helmet_medium_gold_uncooked	Cast: Hood of the Vanguard
+ArmorGoldMediumLegsUncooked	$item_legs_medium_gold_uncooked	Cast: Trousers of the Vanguard
+ArmorHarvester1	$item_chest_harvester1	Harvest Tunic
+ArmorHarvester2	$item_chest_harvester2	Harvest Dress
+ArmorIronChest	$item_chest_iron	Iron Scale Mail
+ArmorIronLegs	$item_legs_iron	Iron Greaves
+ArmorLeatherChest	$item_chest_leather	Leather Tunic
+ArmorLeatherLegs	$item_legs_leather	Leather Trousers
+ArmorLoxChest	$item_chest_lox	Lox Fur Jacket
+ArmorLoxLegs	$item_legs_lox	Lox Fur Trousers
+ArmorMageChest	$item_chest_mage	Eitr-weave Robe
+ArmorMageChest_Ashlands	$item_chest_mage_ashlands	Robes of Embla
+ArmorMageLegs	$item_legs_mage	Eitr-weave Trousers
+ArmorMageLegs_Ashlands	$item_legs_mage_ashlands	Trousers of Embla
+ArmorPaddedCuirass	$item_chest_pcuirass	Padded Cuirass
+ArmorPaddedGreaves	$item_legs_pgreaves	Padded Greaves
+ArmorRagsChest	$item_chest_rags	Rag Tunic
+ArmorRagsLegs	$item_legs_rags	Rag Trousers
+ArmorRootChest	$item_chest_root	Root Harnesk
+ArmorRootLegs	$item_legs_root	Root Leggings
+ArmorStand	$piece_armorstand	Armour Stand
+ArmorStand_Female	$piece_armorstand	Armour Stand
+ArmorStand_Male	$piece_armorstand_male	ArmorStand_Male
+ArmorTrollLeatherChest	$item_chest_trollleather	Troll Leather Tunic
+ArmorTrollLeatherLegs	$item_legs_trollleather	Troll Leather Trousers
+ArmorTunic1	$item_chest_tunic1	Plain Blue Tunic
+ArmorTunic10	$item_chest_tunic10	Simple Undyed Tunic
+ArmorTunic2	$item_chest_tunic2	Blue Tunic with Cape
+ArmorTunic3	$item_chest_tunic3	Blue Tunic with Beads
+ArmorTunic4	$item_chest_tunic4	Plain Red Tunic
+ArmorTunic5	$item_chest_tunic5	Red Tunic with Cape
+ArmorTunic6	$item_chest_tunic6	Red Tunic with Beads
+ArmorTunic7	$item_chest_tunic7	Plain Yellow Tunic
+ArmorTunic8	$item_chest_tunic8	Yellow Tunic with Cape
+ArmorTunic9	$item_chest_tunic9	Yellow Tunic with Beads
+ArmorWolfChest	$item_chest_wolf	Wolf Hide Chestpiece
+ArmorWolfLegs	$item_legs_wolf	Wolf Hide Trousers
+ArrowBloodGold	$item_arrow_bloodgold	Bloodgold Arrow
+ArrowBronze	$item_arrow_bronze	Bronzehead Arrow
+ArrowCarapace	$item_arrow_carapace	Carapace Arrow
+ArrowCharred	$item_arrow_charred	Charred Arrow
+ArrowFire	$item_arrow_fire	Fire Arrow
+ArrowFlint	$item_arrow_flint	Flinthead Arrow
+ArrowFrost	$item_arrow_frost	Frost Arrow
+ArrowIron	$item_arrow_iron	Ironhead Arrow
+ArrowNeedle	$item_arrow_needle	Needle Arrow
+ArrowObsidian	$item_arrow_obsidian	Obsidian Arrow
+ArrowPoison	$item_arrow_poison	Poison Arrow
+ArrowSilver	$item_arrow_silver	Silver Arrow
+ArrowWood	$item_arrow_wood	Wood Arrow
+artisan_ext1	$piece_artisan_ext1	Artisan Press
+ashland_pot1_green	$piece_ancient_pot	Ancient Pot
+ashland_pot1_red	$piece_ancient_pot	Ancient Pot
+ashland_pot2_green	$piece_ancient_pot	Ancient Pot
+ashland_pot2_red	$piece_ancient_pot	Ancient Pot
+ashland_pot3_green	$piece_ancient_pot	Ancient Pot
+ashland_pot3_red	$piece_ancient_pot	Ancient Pot
+AshlandRuins	-	Ruins
+Ashlands_Arch1	$piece_stonewall1x1	Stone Wall 1x1
+Ashlands_Arch2	$piece_stonewall1x1	Stone Wall 1x1
+Ashlands_ArchRoofDamaged	-	Ruined arch
+Ashlands_Pillar4	-	Ruined pillar
+Ashlands_rock2	-	Rock
+Ashlands_Ruins_Wall_Windows_Broken_4x6	-	Ruined wall
+Ashlands_WallBlock_1x2x2	$piece_stonewall1x1	Stone Wall 1x1
+Ashlands_WallBlock_base	$piece_stonewall1x1	Stone Wall 1x1
+AshlandsBranch1	$prop_treelog	Log
+AshlandsBranch2	$item_pickable_branch	Branch
+AshlandsBranch3	$prop_treelog	Log
+AshlandsBush1	-	Bush
+AshlandsTree1	$prop_ashlandstree	Scorched Tree
+AshlandsTree3	$prop_ashlandstree	Scorched Tree
+AshlandsTree4	$prop_ashlandstree	Scorched Tree
+AshlandsTree5	$prop_ashlandstree	Scorched Tree
+AshlandsTree6	$prop_ashlandstree	Scorched Tree
+AshlandsTree6_big	$prop_ashlandstree	Scorched Tree
+AshlandsTreeLog1	$prop_treelog	Log
+AshlandsTreeLog2	$prop_treelog	Log
+AshlandsTreeLogHalf1	$prop_treelog	Log
+AshlandsTreeLogHalf2	$prop_treelog	Log
+AshlandsTreeStump1	$prop_treestump	Stump
+AshlandsTreeStump2	$prop_treestump	Stump
+AshlandsTreeStump3	$prop_treestump	Stump
+ashwood_arch_big	$piece_ashwoodarch_big	Ashwood Arch
+ashwood_arch_bottom	$piece_ashwoodarch_bottom	Ashwood Bottom Arch
+ashwood_arch_top	$piece_ashwoodarch_top	Ashwood Top Arch
+ashwood_beam_1m	$piece_ashwood_beam_1m	Ashwood Beam 1 m
+ashwood_beam_2m	$piece_ashwood_beam_2m	Ashwood Beam 2 m
+ashwood_bed	$piece_ashwood_bed	Ashwood Bed
+ashwood_deco_floor	$piece_ashwood_floor_deco	Ashwood Decorative Floor
+ashwood_decowall_2x2	$piece_ashwood_decowall	Ashwood Decorative Wall
+ashwood_decowall_divider	$piece_ashwood_decowall_divider	Ashwood Divider
+ashwood_decowall_tree	$piece_ashwood_decowall_tree	Ashwood Decorative Window
+ashwood_door	$piece_ashwood_door	Ashwood Door
+ashwood_floor_1x1	$piece_ashwood_floor_1x1	Ashwood Floor 1x1
+ashwood_floor_2x2	$piece_ashwood_floor_2x2	Ashwood Floor 2x2
+ashwood_halfwall_1x2	$piece_ashwood_halfwall	Ashwood Half Wall
+ashwood_pole_1m	$piece_ashwood_pole_1m	Ashwood Pole 1 m
+ashwood_pole_2m	$piece_ashwood_pole_2m	Ashwood Pole 2 m
+ashwood_quarterwall_1x1	$piece_ashwood_quarterwall	Ashwood Quarter Wall
+ashwood_stair	$piece_ashwoodstair	Ashwood Stair
+ashwood_wall_2x2	$piece_ashwood_wall	Ashwood Wall
+ashwood_wall_arch	$piece_ashwood_archedwall	Ashwood Arched Wall
+ashwood_wall_beam_26	$piece_ashwoodbeam26	Ashwood Beam 26°
+ashwood_wall_beam_26_alt	$piece_ashwoodbeam26	Ashwood Beam 26°
+ashwood_wall_beam_45	$piece_ashwoodbeam45	Ashwood Beam 45°
+ashwood_wall_beam_45_alt	$piece_ashwoodbeam45	Ashwood Beam 45°
+ashwood_wall_beam_67	$piece_ashwoodbeam67	Ashwood Beam 67°
+ashwood_wall_cross_26	$piece_ashwoodcross26	Ashwood Roof Cross 26°
+ashwood_wall_cross_26_alt	$piece_ashwoodcross26	Ashwood Roof Cross 26°
+ashwood_wall_cross_45	$piece_ashwoodcross45	Ashwood Roof Cross 45°
+ashwood_wall_cross_45_alt	$piece_ashwoodcross45	Ashwood Roof Cross 45°
+ashwood_wall_cross_67	$piece_ashwoodwallrooftop67	Ashwood Roof Cross 67°
+ashwood_wall_roof_26	$piece_ashwoodwallroof_26	Ashwood Wall 26°
+ashwood_wall_roof_26_upsidedown	$piece_ashwoodwallroof_26_upsidedown	Ashwood Wall 26° (Inverted)
+ashwood_wall_roof_45	$piece_ashwoodwallroof_45	Ashwood Wall 45°
+ashwood_wall_roof_45_upsidedown	$piece_ashwoodwallroof_45_upsidedown	Ashwood Wall 45° (Inverted)
+ashwood_wall_roof_67_a	$piece_ashwoodwallroof67	Ashwood Wall 67°
+ashwood_wall_roof_67_upsidedown	$piece_ashwoodwallroof67upsidedown	Ashwood Wall 67° (Inverted)
+AskBladder	$item_askbladder	Asksvin Bladder
+AskHide	$item_askhide	Asksvin Hide
+Asksvin	$enemy_asksvin	Asksvin
+Asksvin_hatchling	$enemy_asksvin_hatchling	Asksvin Hatchling
+AsksvinCarrionNeck	$item_asksvincarrionneck	Asksvin Neck
+AsksvinCarrionPelvic	$item_asksvincarrionpelvic	Asksvin Pelvis
+AsksvinCarrionRibcage	$item_asksvincarrionribcage	Asksvin Ribcage
+AsksvinCarrionSkull	$item_asksvincarrionskull	Asksvin Skull
+AsksvinEgg	$item_asksvin_egg	Asksvin Egg
+AsksvinMeat	$item_asksvin_meat	Asksvin Tail
+Aspect_Bonemass	$enemy_aspect_bonemass	Aspect of the Writhing Dead
+Aspect_Eikthyr	$enemy_aspect_eikthyr	Aspect of the Lightning Stag
+Aspect_Elder	$enemy_aspect_gdking	Aspect of the Living Forest
+Aspect_Fader	$enemy_aspect_fader	Aspect of the Emerald Flame
+Aspect_Moder	$enemy_aspect_dragon	Aspect of the Dragon Mother
+Aspect_SeekerQueen	$enemy_aspect_seekerqueen	Aspect of the Crawling Matriarch
+Aspect_TentaRoot	$enemy_root	Root
+Aspect_Yagluth	$enemy_aspect_goblinking	Aspect of the Twisted Soul
+AtgeirBlackmetal	$item_atgeir_blackmetal	Black Metal Atgeir
+AtgeirBronze	$item_atgeir_bronze	Bronze Atgeir
+AtgeirGold	$item_atgeir_gold	Nord Atgeir
+AtgeirGold_BloodLightning	$item_atgeir_gold_bloodlightning	Thunderblood Atgeir
+AtgeirGold_FrostFire	$item_atgeir_gold_frostfire	Frostfire Atgeir
+AtgeirGoldUncooked	$item_atgeir_gold_uncooked	Cast: Nord Atgeir
+AtgeirHimminAfl	$item_atgeir_himminafl	Himminafl
+AtgeirIron	$item_atgeir_iron	Iron Atgeir
+AtgeirWood	$item_atgeir_wood	Wooden Atgeir
+AxeBerzerkr	$item_axe_berzerkr	Berserkir Axes
+AxeBerzerkrBlood	$item_axe_berzerkr_blood	Bleeding Berserkir Axes
+AxeBerzerkrLightning	$item_axe_berzerkr_lightning	Thundering Berserkir Axes
+AxeBerzerkrNature	$item_axe_berzerkr_nature	Primal Berserkir Axes
+AxeBlackMetal	$item_axe_blackmetal	Black Metal Axe
+AxeBronze	$item_axe_bronze	Bronze Axe
+AxeEarly	$item_axe_early	Early Axes
+AxeFlint	$item_axe_flint	Flint Axe
+AxeGold	$item_axe_gold	Nord Axe
+AxeGold_BloodLightning	$item_axe_gold_bloodlightning	Thunderblood Axe
+AxeGold_FrostFire	$item_axe_gold_frostfire	Frostfire Axe
+AxeGoldUncooked	$item_axe_gold_uncooked	Cast: Nord Axe
+AxeHead1	$item_axehead1	Curious Axe Head
+AxeHead2	$item_axehead2	Mysterious Axe Head
+AxeIron	$item_axe_iron	Iron Axe
+AxeJotunBane	$item_axe_jotunbane	Jotun Bane
+AxeStone	$item_axe_stone	Stone Axe
+AxeWood	$item_axe_wood	Wooden Axe
+BakedPoteitr	$item_bakedpoteitr	Baked Poteitr
+BakedPoteitrUncooked	$item_bakedpoteitr_uncooked	Unbaked Poteitr
+bar_ancientmetal_stack	$piece_ancientmetalstack	bar_ancientmetal_stack
+bar_blackmetal_stack	$piece_blackmetalbarstack	Black Metal Stack
+bar_bronze_stack	$piece_bronzebarstack	Bronze Stack
+bar_copper_stack	$piece_copperbarstack	Copper Stack
+bar_flametal_stack	$piece_flametalbarstack	Flametal Stack
+bar_gold_stack	$piece_bloodgoldbarstack	Bloodgold Stack
+bar_iron_stack	$piece_ironbarstack	Iron Stack
+bar_silver_stack	$piece_silverbarstack	Silver Stack
+bar_tin_stack	$piece_tinbarstack	Tin Stack
+BarberKit	$item_barberkit	Barber Kit
+Barka	$enemy_barka	Barka
+BarkaBranch	$item_barkabranch	Frozen Branch
+Barley	$item_barley	Barley
+BarleyFlour	$item_barleyflour	Barley Flour
+BarleyWine	$item_barleywine	Fire Resistance Barley Wine
+BarleyWineBase	$item_barleywinebase	Barley Wine Base: Fire Resistance
+BarrelRings	$item_barrelrings	Barrel Hoops
+Bat	$enemy_bat	Bat
+Bat_Swamp	$enemy_bat	Bat
+BatteringRam	$tool_batteringram	Battering Ram
+Battleaxe	$item_battleaxe	Battleaxe
+BattleaxeBlackmetal	$item_battleaxe_blackmetal	Black Metal Battleaxe
+BattleaxeCrystal	$item_battleaxe_crystal	Crystal Battleaxe
+BattleaxeGold	$item_axe2h_gold	Nord Greataxe
+BattleaxeGold_BloodLightning	$item_axe2h_gold_bloodlightning	Thunderblood Greataxe
+BattleaxeGold_FrostFire	$item_axe2h_gold_frostfire	Frostfire Greataxe
+BattleaxeGoldUncooked	$item_battleaxe_gold_uncooked	Cast: Nord Greataxe
+BattleaxeSkullSplittur	$item_battleaxe_skullsplittur	Skull Splittur
+BattleaxeWood	$item_battleaxe_wood	Wooden Battleaxe
+BearCave	$location_bearcave	Bear Cave
+bed	$piece_bed	Bed
+Beech1	$prop_beech	Beech
+beech_log	$prop_treelog	Log
+beech_log_half	$prop_treelog	Log
+Beech_Sapling	$prop_beech_sapling	Beech sapling
+Beech_small1	$prop_beech	Beech
+Beech_small2	$prop_beech	Beech
+Beech_Stub	$prop_treestump	Stump
+BeechSeeds	$item_beechseeds	Beech Seeds
+Bell	$item_bell	Bell
+BellFragment	$item_bellfragment	Bell Fragment
+BeltStrength	$item_beltstrength	Megingjord
+BigRockClearing	-	Boulder clearing
+Bilebag	$item_bilebag	Bilebag
+biome:AshLands	$biome_ashlands	Ashlands
+biome:BlackForest	$biome_blackforest	Black Forest
+biome:DeepNorth	$biome_deepnorth	Deep North
+biome:Meadows	$biome_meadows	Meadows
+biome:Mistlands	$biome_mistlands	Mistlands
+biome:Mountain	$biome_mountain	Mountain
+biome:Ocean	$biome_ocean	Ocean
+biome:Plains	$biome_plains	Plains
+biome:Swamp	$biome_swamp	Swamp
+Birch1	$prop_birch	Birch
+Birch1_aut	$prop_birch	Birch
+Birch2	$prop_birch	Birch
+Birch2_aut	$prop_birch	Birch
+Birch_log	$prop_treelog	Log
+Birch_log_half	$prop_treelog	Log
+Birch_Sapling	$prop_birch_sapling	Birch Sapling
+BirchSeeds	$item_birchseeds	Birch Seeds
+BirchStub	$prop_treestump	Stump
+Bjorn	$enemy_bjorn	Bear
+Bjorn_sleeping	$enemy_bjorn	Bear
+Bjorn_spiritcaller	$spiritcaller_bjorn	Bjorn_spiritcaller
+BjornHide	$item_bjornhide	Bear Hide
+BjornMeat	$item_bjorn_meat	Bear Meat
+BjornPaw	$item_bjornpaw	Bear Paw
+BlackCore	$item_blackcore	Black Core
+blackforge	$piece_blackforge	Black Forge
+blackforge_ext1	$piece_blackforge_ext1	Black Forge Cooler
+blackforge_ext2_vise	$piece_blackforge_ext2	Vice
+blackforge_ext3_metalcutter	$piece_blackforge_ext3	Metal Cutter
+blackforge_ext4_gemcutter	$piece_blackforge_ext4	Gem Cutter
+blackforge_ext5_apron	$piece_blackforge_ext5	Smith's Aprons
+BlackIce_Core	$blackice_core	Malicious Ice
+BlackIce_Core_outer	$blackice_core	Malicious Ice
+BlackIce_Start	$blackice_triggeritem	Malicious Ice
+BlackMarble	$item_blackmarble	Black Marble
+blackmarble_1x1	$piece_blackmarble1x1	Black Marble 1x1x1
+blackmarble_2x1x1	$piece_blackmarble2x1x1	Black Marble 2x1x1
+blackmarble_2x2_enforced	$piece_blackmarble2x2_enforced	Enforced Black Marble
+blackmarble_2x2x1	$piece_blackmarble2x2x1	Black Marble 2x2x1
+blackmarble_2x2x2	$piece_blackmarble2x2x2	Black Marble 2x2x2
+blackmarble_arch	$piece_blackmarble_arch	Black Marble Arch
+blackmarble_base_1	$piece_blackmarble_base1	Black Marble Plinth
+blackmarble_base_2	$piece_blackmarble_base2	Black Marble Wide Plinth
+blackmarble_basecorner	$piece_blackmarble_basecorner	Black Marble Plinth Corner
+blackmarble_column_1	$piece_blackmarble_column_1	Black Marble Column Small
+blackmarble_column_2	$piece_blackmarble_column_2	Black Marble Column Wide
+blackmarble_column_3	$piece_blackmarble_column_3	Black Marble Column Tall
+blackmarble_creep_4x1x1	$piece_blackmarble2x2x1	Black Marble 2x2x1
+blackmarble_creep_4x2x1	$piece_blackmarble2x2x1	Black Marble 2x2x1
+blackmarble_creep_slope_inverted_1x1x2	$piece_blackmarble_out1	Black Marble Cornice
+blackmarble_creep_slope_inverted_2x2x1	$piece_blackmarble_out1	Black Marble Cornice
+blackmarble_creep_stair	$piece_blackmarble_stair	Black Marble Stair
+blackmarble_floor	$piece_blackmarble_floor	Black Marble Floor
+blackmarble_floor_large	$piece_blackmarble_floor4x4	Black Marble Floor 4x4
+blackmarble_floor_triangle	$piece_blackmarble_floor_triangle	Black Marble Floor Triangle
+blackmarble_head01	$piece_blackmarble_bronze_head1	Bronze Head 1
+blackmarble_head02	$piece_blackmarble_bronze_head2	Bronze Head 2
+blackmarble_head_big01	$piece_blackmarble_head_big1	Black Marble Large Head 1
+blackmarble_head_big02	$piece_blackmarble_head_big2	Black Marble Large Head 2
+blackmarble_out_1	$piece_blackmarble_out1	Black Marble Cornice
+blackmarble_out_2	$piece_blackmarble_out2	Black Marble Cornice Wide
+blackmarble_outcorner	$piece_blackmarble_outcorner	Black Marble Cornice Corner
+blackmarble_pile	$piece_marblepile	Black Marble Pile
+blackmarble_slope_1x2	$piece_blackmarble_slope1x2	Black Marble Slope
+blackmarble_slope_inverted_1x2	$piece_blackmarble_inverted_slope1x2	Black Marble Slope (Inverted)
+blackmarble_stair	$piece_blackmarble_stair	Black Marble Stair
+blackmarble_stair_corner	$piece_blackmarble_stair_corner_right	Black Marble Stair Right
+blackmarble_stair_corner_left	$piece_blackmarble_stair_corner_left	Black Marble Stair Left
+blackmarble_tile_floor_1x1	$piece_blackmarble_tile_floor_1x1	Black Marble Floor Tile Small
+blackmarble_tile_floor_2x2	$piece_blackmarble_tile_floor_2x2	Black Marble Floor Tile Large
+blackmarble_tile_wall_1x1	$piece_blackmarble_tile_wall_1x1	Black Marble Wall Tile Small
+blackmarble_tile_wall_2x2	$piece_blackmarble_tile_wall_2x2	Black Marble Wall Tile Large
+blackmarble_tile_wall_2x4	$piece_blackmarble_tile_wall_2x4	Black Marble Wall Tile Tall
+blackmarble_tip	$piece_blackmarble_tip	Black Marble Quarter Spire
+BlackMetal	$item_blackmetal	Black Metal
+BlackMetalScrap	$item_blackmetalscrap	Black Metal Scrap
+BlackSoup	$item_blacksoup	Black Soup
+Blackwood	$item_blackwood	Ashwood
+blackwood_stack	$piece_blackwoodstack	Ashwood Stack
+blastfurnace	$piece_blastfurnace	Blast Furnace
+Blob	$enemy_blob	Blob
+BlobAspect	$enemy_blob	Blob
+BlobElite	$enemy_blobelite	Oozer
+BlobFrost	$enemy_blobfrost	Frost Blob
+BlobLava	$enemy_bloblava	Lava Blob
+BlobMork	$enemy_blobmork	Shapeless Pulp
+BlobMorkBig	$enemy_bigblob	Hexahedric Pulp
+BlobMorkMini	$enemy_blobmorkmini	Tiny Pulp
+BlobTar	$enemy_blobtar	Growth
+BlobVial	$item_blobvial	Corked Vial
+Bloodbag	$item_bloodbag	Bloodbag
+BloodGoldKey	$item_bloodgoldkey	Intricate Key
+BloodPudding	$item_bloodpudding	Blood Pudding
+Blueberries	$item_blueberries	Blueberries
+BlueberryBush	$item_blueberries	Blueberries
+Boar	$enemy_boar	Boar
+Boar_piggy	$enemy_boarpiggy	Piggy
+Boar_spiritcaller	$spiritcaller_boar	Boar_spiritcaller
+BoarJerky	$item_boarjerky	Boar Jerky
+BogWitch_Camp	$npc_bogwitch	The Bog Witch
+BogWitch_Fire_Pit	$piece_firepit	Campfire
+BogWitchKvastur	$enemy_kvastur	Kvastur
+BoltBlackmetal	$item_bolt_blackmetal	Black Metal Bolt
+BoltBloodGold	$item_bolt_bloodgold	Bloodgold Bolt
+BoltBone	$item_bolt_bone	Bone Bolt
+BoltCarapace	$item_bolt_carapace	Carapace Bolt
+BoltCharred	$item_bolt_charred	Charred Bolt
+BoltIron	$item_bolt_iron	Iron Bolt
+BombBile	$item_bilebomb	Bile Bomb
+BombBlob_Frost	$item_bombblob_frost	Blob Bomb: Frost
+BombBlob_Lava	$item_bombblob_lava	Blob Bomb: Lava
+BombBlob_Morkhalla	$item_bombblob_morkhalla	Blob Bomb: Pulp
+BombBlob_Poison	$item_bombblob_poison	Blob Bomb: Poison
+BombBlob_PoisonElite	$item_bombblob_poisonelite	Blob Bomb: Elite Poison
+BombBlob_Tar	$item_bombblob_tar	Blob Bomb: Tar
+BombDynamite	$item_bomb_dynamite	Ember Charge
+BombLava	$item_lavabomb	Basalt Bomb
+BombOoze	$item_oozebomb	Ooze Bomb
+BombSiege	$item_catapult_ammo	Explosive Payload
+BombSmoke	$item_smokebomb	Smoke Bomb
+bone_stack	$piece_bonestack	Bone Stack
+BoneFragments	$item_bonefragments	Bone Fragments
+Bonemass	$enemy_bonemass	Bonemass
+BonemawSerpent	$enemy_bonemawserpent	Bonemaw
+BoneMawSerpentMeat	$item_bonemawmeat	Bonemaw Meat
+BonemawSerpentScale	$item_bonemawscale	Bonemaw Scale
+BonemawSerpentTooth	$item_bonemawtooth	Bonemaw Tooth
+BonePileSpawner	$enemy_skeletonspawner	Evil Bone Pile
+BonePileSpawner_swamp	$enemy_skeletonspawner	Evil Bone Pile
+bonfire	$piece_bonfire	Bonfire
+BossStone_Bonemass	$guardianstone_name	Sacrificial Stone
+BossStone_DragonQueen	$guardianstone_name	Sacrificial Stone
+BossStone_Eikthyr	$guardianstone_name	Sacrificial Stone
+BossStone_Fader	$guardianstone_name	Sacrificial Stone
+BossStone_TheElder	$guardianstone_name	Sacrificial Stone
+BossStone_TheQueen	$guardianstone_name	Sacrificial Stone
+BossStone_Yagluth	$guardianstone_name	Sacrificial Stone
+Bow	$item_bow	Crude Bow
+BowAshlands	$item_bow_ashlands	Ash Fang
+BowAshlandsBlood	$item_bow_ashlandsblood	Blood Fang
+BowAshlandsRoot	$item_bow_ashlandsroot	Root Fang
+BowAshlandsStorm	$item_bow_ashlandsstorm	Storm Fang
+BowDraugrFang	$item_bow_draugrfang	Draugr Fang
+BowFineWood	$item_bow_finewood	Finewood Bow
+BowGold	$item_bow_gold	Nord Bow
+BowGold_BloodLightning	$item_bow_gold_bloodlightning	Thunderblood Bow
+BowGold_FrostFire	$item_bow_gold_frostfire	Frostfire Bow
+BowGoldUncooked	$item_bow_gold_uncooked	Cast: Nord Bow
+BowHuntsman	$item_bow_huntsman	Huntsman Bow
+BowSpineSnap	$item_bow_snipesnap	Spinesnap
+Bread	$item_bread	Bread
+BreadDough	$item_breaddough	Bread Dough
+Bronze	$item_bronze	Bronze
+BronzeNails	$item_bronzenails	Bronze Nails
+BronzeScrap	$item_bronzescrap	Scrap Bronze
+BugMeat	$item_bug_meat	Seeker Meat
+Bush01	-	Bush
+Bush01_deepnorth	-	Bush
+Bush01_heath	-	Bush
+Bush02_en	-	Bush
+Candle_resin	$piece_candle	Resin Candle
+Candle_resin_bogwitch	$piece_candle	Resin Candle
+CandleWick	$item_candlewick	Candle Wick
+CapeAsh	$item_cape_ash	Ashen Cape
+CapeAsksvin	$item_cape_asksvin	Asksvin Cloak
+CapeDeepNorth	$item_cape_deepnorth	Moose Hide Cape
+CapeDeepNorthMage	$item_cape_deepnorth_mage	Cape of the Caller
+CapeDeerHide	$item_cape_deerhide	Deer Hide Cape
+CapeFeather	$item_cape_feather	Feather Cape
+CapeLinen	$item_cape_linen	Linen Cape
+CapeLox	$item_cape_lox	Lox Cape
+CapeOdin	$item_cape_odin	Cape of Oden
+CapeTrollHide	$item_cape_trollhide	Troll Hide Cape
+CapeWolf	$item_cape_wolf	Wolf Fur Cape
+Carapace	$item_carapace	Carapace
+Carrot	$item_carrot	Carrot
+CarrotSeeds	$item_carrotseeds	Carrot Seeds
+CarrotSoup	$item_carrotsoup	Carrot Soup
+Cart	$tool_cart	Cart
+Catapult	$tool_catapult	Catapult
+Catapult_ammo	$item_catapult_training_ammo	Grausten Payload
+Catapult_Ammo_BloodGold	$item_catapult_bloodgold_ammo	Bloodgold Payload
+cauldron_ext1_spice	$piece_cauldron_ext1_spice	Spice Rack
+cauldron_ext3_butchertable	$piece_cauldron_ext3_butchertable	Butcher's Table
+cauldron_ext4_pots	$piece_cauldron_ext4_pans	Pots and Pans
+cauldron_ext5_mortarandpestle	$piece_cauldron_ext5_mortarandpestle	Mortar and Pestle
+cauldron_ext6_rollingpins	$piece_cauldron_ext6_rollingpins	Rolling Pins and Cutting Boards
+cauldron_ext7_smoker	$piece_cauldron_ext7_smoker	Smoker
+CelestialFeather	$item_celestialfeather	Celestial Feather
+CeramicPlate	$item_ceramicplate	Ceramic Plate
+Chain	$item_chain	Chain
+charcoal_kiln	$piece_charcoalkiln	Charcoal Kiln
+CharcoalResin	$item_charcoalresin	Charcoal Resin
+Charred_Archer	$enemy_charred_archer	Charred Marksman
+Charred_Archer_Fader	$enemy_charred_melee_Fader	Summoned Charred Warrior
+Charred_Mage	$enemy_charred_mage	Charred Warlock
+Charred_Melee	$enemy_charred_melee	Charred Warrior
+Charred_Melee_Dyrnwyn	$enemy_charred_melee_Dyrnwyn	<color=orange>Lord Reto</color>
+Charred_Melee_Fader	$enemy_charred_melee_Fader	Summoned Charred Warrior
+charred_shieldgenerator	$piece_shieldgenerator	Shield Generator
+Charred_Twitcher	$enemy_charred_twitcher	Charred Twitcher
+Charred_Twitcher_Summoned	$enemy_charred_twitcher_summoned	Summoned Twitcher
+CharredBone	$item_charredbone	Charred Bone
+CharredCogwheel	$item_charredcogwheel	Charred Cogwheel
+CharredFortress	$charredfortress	Charred Fortress
+CharredRuins1	-	Charred ruins
+CharredRuins2	-	Charred ruins
+CharredRuins3	-	Charred ruins
+CharredRuins4	-	Charred ruins
+Charredskull	$item_charredskull	Charred Skull
+CharredStone_Spawner	$enemy_charredtwitcherspawner	Monument of Torment
+CharredTowerRuins1	-	Charred tower ruin
+CharredTowerRuins1_dvergr	-	Charred tower ruin
+CharredTowerRuins2	-	Charred tower ruin
+CharredTowerRuins3	-	Charred tower ruin
+chest_hildir1	$item_chest_hildir1	Hildir's Brass Chest
+chest_hildir2	$item_chest_hildir2	Hildir's Silver Chest
+chest_hildir3	$item_chest_hildir3	Hildir's Bronze Chest
+Chicken	$enemy_chicken	Chicken
+ChickenEgg	$item_chicken_egg	Egg
+ChickenMeat	$item_chicken_meat	Chicken Meat
+Chitin	$item_chitin	Chitin
+cliff_ashlands2	-	Cliff
+cliff_ashlands3_Arch_1	-	Rock arch
+cliff_ashlands4	-	Cliff
+cliff_ashlands5	-	Cliff
+cliff_ashlands6	-	Cliff
+cliff_mistlands1	-	Cliff
+cliff_mistlands2	-	Cliff
+Cloudberry	$item_cloudberries	Cloudberries
+CloudberryBush	$item_cloudberries	Cloudberries
+Club	$item_club	Club
+Coal	$item_coal	Coal
+coal_pile	$piece_coalpile	Coal Pile
+Coins	$item_coins	Coins
+CombatRuin01	-	Battlefield
+CookedAsksvinMeat	$item_asksvin_meat_cooked	Cooked Asksvin Tail
+CookedBjornMeat	$item_bjorn_meat_cooked	Cooked Bear Meat
+CookedBoneMawSerpentMeat	$item_bonemawmeat_cooked	Cooked Bonemaw Meat
+CookedBugMeat	$item_bug_meat_cooked	Cooked Seeker Meat
+CookedChickenMeat	$item_chicken_meat_cooked	Cooked Chicken Meat
+CookedDeerMeat	$item_deer_meat_cooked	Cooked Deer Meat
+CookedEgg	$item_egg_cooked	Cooked Egg
+CookedHareMeat	$item_hare_meat_cooked	Cooked Hare Meat
+CookedLoxMeat	$item_loxmeat_cooked	Cooked Lox Meat
+CookedMeat	$item_boar_meat_cooked	Cooked Boar Meat
+CookedMooseMeat	$item_moose_meat_cooked	Cooked Moose Meat
+CookedSealBlubber	$item_blubber_cooked	Cooked Seal Blubber
+CookedVoltureMeat	$item_volture_meat_cooked	Cooked Volture Meat
+CookedWolfMeat	$item_wolf_meat_cooked	Cooked Wolf Meat
+Copper	$item_copper	Copper
+CopperOre	$item_copperore	Copper Ore
+CopperScrap	$item_copperscrap	Copper Scrap
+CrossbowArbalest	$item_crossbow_arbalest	Arbalest
+CrossbowGold	$item_crossbow_gold	Nord Crossbow
+CrossbowGold_BloodLightning	$item_crossbow_bloodlightning_gold	Thunderblood Crossbow
+CrossbowGold_FrostFire	$item_crossbow_frostfire_gold	Frostfire Crossbow
+CrossbowGoldUncooked	$item_crossbow_gold_uncooked	Cast: Nord Crossbow
+CrossbowRipper	$item_crossbow_ripper	Ripper
+CrossbowRipperBlood	$item_crossbow_ripper_blood	Wound Ripper
+CrossbowRipperLightning	$item_crossbow_ripper_lightning	Storm Ripper
+CrossbowRipperNature	$item_crossbow_ripper_nature	Root Ripper
+CrownJewel	$item_crownjewel	Crown Jewel
+Crypt2	$location_forestcrypt	Burial Chambers
+Crypt3	$location_forestcrypt	Burial Chambers
+Crypt4	$location_forestcrypt	Burial Chambers
+crypt_skeleton_chest	$ancient_chest	Ancient Coffin
+CryptKey	$item_cryptkey	Swamp Key
+Crystal	$item_crystal	Crystal
+crystal_wall_1x1	$piece_crystalwall1x1	Crystal Wall 1x1
+cultivate	$piece_cultivate	Cultivate
+Cultivator	$item_cultivator	Cultivator
+CuredSquirrelHamstring	$item_curedsquirrelhamstring	Cured Squirrel Hamstring
+Dandelion	$item_dandelion	Dandelion
+darkwood_arch	$piece_darkwoodarch	Darkwood Arch
+darkwood_beam	$piece_darkwoodbeam	Darkwood Beam 2 m
+darkwood_beam4x4	$piece_darkwoodbeam4	Darkwood Beam 4 m
+darkwood_beam_26	$piece_darkwoodbeam_26	Darkwood Beam 26°
+darkwood_beam_45	$piece_darkwoodbeam_45	Darkwood Beam 45°
+darkwood_beam_67	$piece_darkwoodbeam67	darkwood_beam_67
+darkwood_decowall	$piece_darkwooddecowall	Carved Darkwood Divider
+darkwood_gate	$piece_darkwoodgate	Darkwood Gate
+darkwood_pole	$piece_darkwoodpole	Darkwood Pole 2m
+darkwood_pole4	$piece_darkwoodpole4	Darkwood Pole 4m
+darkwood_raven	$piece_darkwoodraven	Raven Adornment
+darkwood_roof	$piece_darkwoodroof26	Shingle Roof 26°
+darkwood_roof_45	$piece_darkwoodroof45	Shingle Roof 45°
+darkwood_roof_67	$piece_darkwoodroof67	Shingle Roof 67°
+darkwood_roof_icorner	$piece_darkwoodrooficorner	Shingle Roof Inner Corner 26°
+darkwood_roof_icorner_45	$piece_darkwoodrooficorner45	Shingle Roof Inner Corner 45°
+darkwood_roof_icorner_67	$piece_darkwoodrooficorner67	Shingle Roof Inner Corner 67°
+darkwood_roof_ocorner	$piece_darkwoodroofocorner	Shingle Roof Outer Corner 26°
+darkwood_roof_ocorner_45	$piece_darkwoodroofocorner45	Shingle Roof Outer Corner 45°
+darkwood_roof_ocorner_67	$piece_darkwoodroofocorner67	Shingle Roof Outer Corner 67°
+darkwood_roof_top	$piece_darkwoodrooftop	Shingle Roof Ridge 26°
+darkwood_roof_top_45	$piece_darkwoodrooftop45	Shingle Roof Ridge 45°
+darkwood_roof_top_67	$piece_darkwoodrooftop67	Shingle Roof Ridge 67°
+darkwood_wolf	$piece_darkwoodwolf	Wolf Adornment
+Deathsquito	$enemy_deathsquito	Deathsquito
+deepnorth_lantern_standing	-	Lantern
+Deer	$enemy_deer	Deer
+Deer_White	$enemy_deerwhite	Deer_White
+DeerHide	$item_deerhide	Deer Hide
+DeerMeat	$item_deer_meat	Deer Meat
+DeerStew	$item_deerstew	Deer Stew
+Demister	$item_demister	Wisplight
+DN_Bossroom	$hud_pin_dnboss	Aesir Passage
+DN_gammeltrollFrac01	-	Fallen Gammeltroll
+DN_gammeltrollFrac02	-	Fallen Gammeltroll
+DN_hut01	-	Hut
+Dolmen01	-	Dolmen
+Dolmen02	-	Dolmen
+Dolmen03	-	Dolmen
+Dragon	$enemy_dragon	Moder
+DragonEgg	$item_dragonegg	Dragon Egg
+Dragonqueen	$enemy_dragon	Moder
+DragonTear	$item_dragontear	Dragon Tear
+DrakeLorestone	-	Rune stone
+DrakeNest01	-	Drake nest
+Draugr	$enemy_draugr	Draugr
+Draugr_Elite	$enemy_draugrelite	Draugr Elite
+Draugr_Elite_sleeping	$enemy_draugrelite	Draugr Elite
+Draugr_Ranged	$enemy_draugr	Draugr
+Draugr_Ranged_sleeping	$enemy_draugr	Draugr
+Draugr_sleeping	$enemy_draugr	Draugr
+dungeon_sunkencrypt_irongate_rusty	$piece_irongate	Iron Gate
+Dverger	$enemy_dvergr	Dvergr Rogue
+dverger_guardstone	$piece_guardstone	Ward
+DvergerArbalest	$item_crossbow_arbalest	Arbalest
+DvergerArbalest_shoot	$item_crossbow_arbalest	Arbalest
+DvergerArbalest_shootAshlands	$item_crossbow_arbalest	Arbalest
+DvergerArbalest_shootDeepNorth	$item_crossbow_arbalest	Arbalest
+DvergerAshlands	$enemy_dvergr	Dvergr Rogue
+DvergerDeepNorth	$enemy_dvergr_deepnorth	Imprisoned Dvergr
+DvergerMage	$enemy_dvergr_mage	Dvergr Mage
+DvergerMageFire	$enemy_dvergr_mage	Dvergr Mage
+DvergerMageIce	$enemy_dvergr_mage	Dvergr Mage
+DvergerMageSupport	$enemy_dvergr_mage	Dvergr Mage
+DvergerTest	$enemy_dverger	DvergerTest
+DvergrKey	$item_dvergrkey	Sealbreaker
+DvergrKeyFragment	$item_dvergrkeyfragment	Sealbreaker Fragment
+DvergrNeedle	$item_dvergrneedle	Dvergr Extractor
+dvergrprops_crate	$piece_crate	Crate
+dvergrprops_crate_ashlands	$piece_crate	Crate
+dvergrprops_crate_long	$piece_crate_long	Dvergr Component Crate
+dvergrprops_wood_floor	$piece_woodfloor2x2	Wood Floor 2x2
+dvergrprops_wood_stair	$piece_woodstair	Wood Stairs
+DyrnwynBladeFragment	$item_Dyrnwyn_blade	Dyrnwyn Blade Fragment
+DyrnwynHiltFragment	$item_Dyrnwyn_hilt	Dyrnwyn Hilt Fragment
+DyrnwynTipFragment	$item_Dyrnwyn_tip	Dyrnwyn Tip Fragment
+Ectoplasm	$item_ectoplasm	Ectoplasm
+Eikthyr	$enemy_eikthyr	Eikthyr
+Eikthyrnir	$enemy_eikthyr	Eikthyr
+Eitr	$item_eitr	Refined Eitr
+eitrrefinery	$piece_eitrrefinery	Eitr Refinery
+Elaking	$enemy_elaking	Elaking
+elaking_trashpile	$elaking_trashpile	Pile of Rubble
+ElakingHairBundle	$item_elakinghairbundle	Elaking Hair Bundle
+ElakingLantern	$enemy_elaking	Elaking
+ElakingMole	$enemy_elakingmole	Eyeless One
+ElderBark	$item_elderbark	Ancient Bark
+Entrails	$item_entrails	Entrails
+Eyescream	$item_eyescream	Eyescream
+Fader	$enemy_fader	Fader
+FaderDrop	$item_fader_drop	Kindled Ribs
+FaderEmber	$item_faderember	Embers
+FaderLocation	$enemy_fader_codename	The Emerald Flame
+FallenValkyrie	$enemy_fallenvalkyrie	Fallen Valkyrie
+FallenWarrior	$enemy_fallenwarrior	Fallen Warrior
+FeastAshlands	$item_feastashlands	Ashlands Gourmet Bowl
+FeastAshlands_Material	$item_feastashlands	Ashlands Gourmet Bowl
+FeastBlackforest	$item_feastblackforest	Black Forest Buffet Platter
+FeastBlackforest_Material	$item_feastblackforest	Black Forest Buffet Platter
+FeastDeepNorth	$item_feastdeepnorth	Northern Morning Fare
+FeastDeepNorth_Material	$item_feastdeepnorth	Northern Morning Fare
+Feaster	$item_feaster	Serving Tray
+FeastMeadows	$item_feastmeadows	Whole Roasted Meadow Boar
+FeastMeadows_Material	$item_feastmeadows	Whole Roasted Meadow Boar
+FeastMistlands	$item_feastmistlands	Mushrooms Galore á la Mistlands
+FeastMistlands_Material	$item_feastmistlands	Mushrooms Galore á la Mistlands
+FeastMountains	$item_feastmountains	Hearty Mountain Logger's Stew
+FeastMountains_Material	$item_feastmountains	Hearty Mountain Logger's Stew
+FeastOceans	$item_feastoceans	Sailor's Bounty
+FeastOceans_Material	$item_feastoceans	Sailor's Bounty
+FeastPlains	$item_feastplains	Plains Pie Picnic
+FeastPlains_Material	$item_feastplains	Plains Pie Picnic
+FeastSwamps	$item_feastswamps	Swamp Dweller's Delight
+FeastSwamps_Material	$item_feastswamps	Swamp Dweller's Delight
+Feathers	$item_feathers	Feathers
+Fenring	$enemy_fenring	Fenring
+Fenring_Cultist	$enemy_fenringcultist	Cultist
+Fenring_Cultist_Hildir	$enemy_fenringcultist_hildir	<color=orange>Geirrhafa</color>
+Fenring_Cultist_Hildir_nochest	$enemy_fenringcultist_hildir	<color=orange>Geirrhafa</color>
+fenrirhide_hanging	$item_wolfhairbundle	Fenris Hair
+fermenter	$piece_fermenter	Fermenter
+Fiddleheadfern	$item_fiddleheadfern	Fiddlehead
+FierySvinstew	$item_fierysvinstew	Fiery Svinstew
+FineWood	$item_finewood	Finewood
+FirCone	$item_fircone	Fir Cone
+FirConeFrost	$item_fircone_big	Timberwood Cone
+fire_pit	$piece_firepit	Campfire
+fire_pit_haldor	$piece_firepit	Campfire
+fire_pit_hildir	$piece_firepit	Campfire
+fire_pit_iron	$piece_firepit_iron	Iron Fire Pit
+FireFlies	-	Fireflies
+FireHole	-	Fire hole
+FireworksRocket_Blue	$item_fireworkrocket_blue	Blue Fireworks
+FireworksRocket_Cyan	$item_fireworkrocket_cyan	Cyan Fireworks
+FireworksRocket_Green	$item_fireworkrocket_green	Green Fireworks
+FireworksRocket_Purple	$item_fireworkrocket_purple	Purple Fireworks
+FireworksRocket_Red	$item_fireworkrocket_red	Red Fireworks
+FireworksRocket_White	$item_fireworkrocket_white	Basic Fireworks
+FireworksRocket_Yellow	$item_fireworkrocket_yellow	Yellow Fireworks
+FirTree	$prop_fir	Fir
+FirTree_big	$prop_timberwoodtree	Timber Tree
+FirTree_Big_log	$prop_treelog	Log
+FirTree_Big_plantable_Stub	$prop_treestump	Stump
+FirTree_big_Sapling	$prop_fir_big_sapling	Timberwood Sapling
+FirTree_log	$prop_treelog	Log
+FirTree_log_half	$prop_treelog	Log
+FirTree_oldLog	$prop_treelog	Log
+FirTree_oldLog_deepnorth	$prop_treelog	Log
+FirTree_Sapling	$prop_fir_sapling	Fir Sapling
+FirTree_small	$prop_fir	Fir
+FirTree_small_dead	$prop_fir	Fir
+FirTree_Snow_log	$prop_treelog	Log
+FirTree_Snow_Stub	$prop_treestump	Stump
+FirTree_Stub	$prop_treestump	Stump
+Fish1	$animal_fish1	Perch
+Fish10	$animal_fish10	Northern Salmon
+Fish11	$animal_fish11	Magmafish
+Fish12	$animal_fish12	Pufferfish
+Fish2	$animal_fish2	Pike
+Fish3	$animal_fish3	Tuna
+Fish4_cave	$animal_fish4	Tetra
+Fish5	$animal_fish5	Trollfish
+Fish6	$animal_fish6	Giant Herring
+Fish7	$animal_fish7	Grouper
+Fish8	$animal_fish8	Coral Cod
+Fish9	$animal_fish9	Anglerfish
+FishAndBread	$item_fishandbread	Fish 'n' Bread
+FishAndBreadUncooked	$item_fishandbreaduncooked	Uncooked Fish 'n' Bread
+FishAnglerRaw	$item_fish_raw	Raw Fish
+FishCooked	$item_fish_cooked	Cooked Fish
+FishingBait	$item_fishingbait	Fishing Bait
+FishingBaitAshlands	$item_fishingbait_ashlands	Hot Fishing Bait
+FishingBaitCave	$item_fishingbait_cave	Cold Fishing Bait
+FishingBaitDeepNorth	$item_fishingbait_deepnorth	Frosty Fishing Bait
+FishingBaitForest	$item_fishingbait_forest	Mossy Fishing Bait
+FishingBaitMistlands	$item_fishingbait_mistlands	Misty Fishing Bait
+FishingBaitOcean	$item_fishingbait_ocean	Heavy Fishing Bait
+FishingBaitPlains	$item_fishingbait_plains	Stingy Fishing Bait
+FishingBaitSwamp	$item_fishingbait_swamp	Sticky Fishing Bait
+FishingRod	$item_fishingrod	Fishing Rod
+FishRaw	$item_fish_raw	Raw Fish
+FishSoup	$item_fishsoup	Fish Soup
+FishWraps	$item_fishwraps	Fish Wraps
+FistBjornClaw	$item_fistweapon_bjorn	Paws of the Bear
+FistBjornUndeadClaw	$item_fistweapon_bjorn_undead	Vilebone Maulclaws
+FistFenrirClaw	$item_fistweapon_fenris	Flesh Rippers
+FistGold	$item_fistweapon_gold	Nord Knucklechains
+FistGold_BloodLightning	$item_fistweapon_gold_bloodlightning	Thunderblood Knucklechains
+FistGold_FrostFire	$item_fistweapon_frostfire_gold	Frostfire Knucklechains
+FistGoldUncooked	$item_fistweapon_gold_uncooked	Cast: Nord Knucklechains
+Flametal	$item_flametal_old	Ancient Metal
+flametal_gate	$piece_flametalgate	Flametal Gate
+FlametalNew	$item_flametal	Flametal
+FlametalOre	$item_flametalore_old	Glowing Metal Ore
+FlametalOreNew	$item_flametalore	Flametal Ore
+Flax	$item_flax	Flax
+Flies	-	Flies
+Flint	$item_flint	Flint
+flint_pile	$piece_flintpile	Flint Pile
+forge	$piece_forge	Forge
+forge_ext1	$piece_forge_ext1	Forge Bellows
+forge_ext2	$piece_forge_ext2	Anvils
+forge_ext3	$piece_forge_ext3	Grinding Wheel
+forge_ext4	$piece_forge_ext4	Smith's Anvil
+forge_ext5	$piece_forge_ext5	Forge Cooler
+forge_ext6	$piece_forge_ext6	Forge Tool Rack
+FortressRuins	-	Fortress ruins
+FragrantBundle	$item_fragrantbundle	Fragrant Bundle
+FreezeGland	$item_freezegland	Freeze Gland
+FreshSeaweed	$item_freshseaweed	Fresh Seaweed
+FrostCore	$item_frostcore	Frostcore
+FrostWisp	$enemy_frostwisp	FrostWisp
+Frostwood	$item_frostwood	Timberwood
+FrozenFuel	$item_frozenfuel	Liquid Frost
+FrozenGD	-	Frozen Greydwarf
+FrozenKing	$enemy_frozenking	Kall Fimbulbringer
+FrozenKing_p2	$enemy_frozenking	Kall Fimbulbringer
+FrozenKing_p3	$enemy_frozenking_p3	Kall Fimbulbringer
+FrozenKingDrop	$item_frozenking_drop	Sacrificial Blood
+FrozenShip01_DN	-	Frozen ship
+FrozenShip02_DN	-	Frozen ship
+FrozenShip03_DN	-	Frozen ship
+FrozenSkeleton_Pose1	-	Frozen skeleton
+FrozenSkeleton_Pose2	-	Frozen skeleton
+Frysling	$enemy_frysling	Frysling
+fuling_trap	$piece_trap	Trap
+fuling_turret	$piece_turret	Ballista
+FW_ArmorBronzeChest	$item_chest_bronze	Bronze Plate Tunic
+FW_ArmorBronzeLegs	$item_legs_bronze	Bronze Plate Leggings
+FW_ArmorFenringChest	$item_chest_fenris	Fenris Coat
+FW_ArmorFenringLegs	$item_legs_fenris	Fenris Leggings
+FW_ArmorMageChest	$item_chest_mage	Eitr-weave Robe
+FW_ArmorMageChest_Ashlands	$item_chest_mage_ashlands	Robes of Embla
+FW_ArmorMageLegs	$item_legs_mage	Eitr-weave Trousers
+FW_ArmorMageLegs_Ashlands	$item_legs_mage_ashlands	Trousers of Embla
+FW_ArmorPaddedCuirass	$item_chest_pcuirass	Padded Cuirass
+FW_ArmorPaddedGreaves	$item_legs_pgreaves	Padded Greaves
+FW_ArmorTrollLeatherChest	$item_chest_trollleather	Troll Leather Tunic
+FW_ArmorTrollLeatherLegs	$item_legs_trollleather	Troll Leather Trousers
+FW_AxeBronze	$item_axe_bronze	Bronze Axe
+FW_BattleaxeCrystal	$item_battleaxe_crystal	Crystal Battleaxe
+FW_BowDraugrFang	$item_bow_draugrfang	Draugr Fang
+FW_CapeLinen	$item_cape_linen	Linen Cape
+FW_CapeTrollHide	$item_cape_trollhide	Troll Hide Cape
+FW_CapeWolf	$item_cape_wolf	Wolf Fur Cape
+FW_HelmetBronze	$item_helmet_bronze	Bronze Helmet
+FW_KnifeSilver	$item_knife_silver	Silver Knife
+FW_KnifeSkollAndHati	$item_knife_skollandhati	Skoll and Hati
+FW_ShieldBlackmetalTower	$item_shield_blackmetal_tower	Black Metal Tower Shield
+FW_StaffFireball	$item_stafffireball	Staff of Embers
+FW_StaffLightning	$item_staff_lightning	Dundr
+FW_SwordBlackmetal	$item_sword_blackmetal	Black Metal Sword
+gd_king	$enemy_gdking	The Elder
+GDKing	$enemy_gdking	The Elder
+GemstoneBlue	$item_gemstone_blue	Iolite
+GemstoneGreen	$item_gemstone_green	Jade
+GemstoneRed	$item_gemstone_red	Bloodstone
+GenericMoldUncooked	$item_smallparts_gold_uncooked	GenericMoldUncooked
+Ghost	$enemy_ghost	Ghost
+Ghost_old	$enemy_ghost_void	The Void
+Ghost_sleeping	$enemy_ghost	Ghost
+Ghost_Void	$enemy_ghost_void	The Void
+GhostSkull	$mysticlight	GhostSkull
+giant_brain	$piece_giant_brain	Soft Tissue
+giant_brain_frac	$piece_giant_brain	Soft Tissue
+giant_helmet1	$piece_giant_helmet	Ancient Armour
+giant_helmet1_destruction	$piece_giant_helmet	Ancient Armour
+giant_helmet2	$piece_giant_helmet	Ancient Armour
+giant_helmet2_destruction	$piece_giant_helmet	Ancient Armour
+giant_ribs	$piece_giant_bone	Petrified Bone
+giant_ribs_frac	$piece_giant_bone	Petrified Bone
+giant_skull	$piece_giant_bone	Petrified Bone
+giant_skull_frac	$piece_giant_bone	Petrified Bone
+giant_sword1	$piece_giant_sword	Ancient Sword
+giant_sword1_destruction	$piece_giant_sword	Ancient Sword
+giant_sword2	$piece_giant_sword	Ancient Sword
+giant_sword2_destruction	$piece_giant_sword	Ancient Sword
+GiantBloodSack	$item_bloodclot	Blood Clot
+Gjall	$enemy_gjall	Gjall
+GlowWorm	$item_glowworm	Luminous Larva
+Goblin	$enemy_goblin	Fuling
+Goblin_Gem	$enemy_gemgoblin	Riktig Fuling
+goblin_totempole	$item_goblintotem	Fuling Totem
+GoblinArcher	$enemy_goblin	Fuling
+GoblinBrute	$enemy_goblinbrute	Fuling Berserker
+GoblinBrute_Hildir	$enemy_goblinbrute_hildir	<color=orange>Thungr</color> 
+GoblinBruteBros	$enemy_goblinbrute_hildircombined	<color=orange>Zil & Thungr</color>
+GoblinBruteBros_nochest	$enemy_goblinbrute_hildircombined	<color=orange>Zil & Thungr</color>
+GoblinCamp2	-	Fuling village
+GoblinCamp2_1	-	Fuling village
+GoblinDeepNorth	$enemy_goblin_deepnorth	Captive Fuling
+GoblinHut01	-	Fuling hut
+GoblinHut02	-	Fuling hut
+GoblinHut03	-	Fuling hut
+GoblinKing	$enemy_goblinking	Yagluth
+GoblinShaman	$enemy_goblinshaman	Fuling Shaman
+GoblinShaman_Hildir	$enemy_goblin_hildir	<color=orange>Zil</color> 
+GoblinShaman_Hildir_nochest	$enemy_goblin_hildir	<color=orange>Zil</color> 
+GoblinTotem	$item_goblintotem	Fuling Totem
+Gold	$item_gold	Bloodgold
+GoldOre	$item_goldore	Petrified Tissue
+goldvein	$piece_deposit_goldvein	Petrified Gammeltroll
+goldvein_frac	$piece_deposit_goldvein	Petrified Gammeltroll
+GrapplingHook	$item_graplinghook	Grappling Hook
+Grausten	$item_grausten	Grausten
+grausten_pile	$piece_graustenpile	Grausten Pile
+Grave1	-	Grave
+GraveStone_Broken_World	-	Broken gravestone
+Greydwarf	$enemy_greydwarf	Greydwarf
+Greydwarf_camp1	$enemy_greydwarfspawner	Greydwarf Nest
+Greydwarf_Elite	$enemy_greydwarfbrute	Greydwarf Brute
+Greydwarf_Frozen	$enemy_greydwarf	Greydwarf
+Greydwarf_Root	-	Root
+Greydwarf_Shaman	$enemy_greydwarfshaman	Greydwarf Shaman
+Greydwarf_Shaman_Frozen	$enemy_greydwarfshaman	Greydwarf Shaman
+Greydwarf_Surprise	$largebone	Large Bone
+GreydwarfEye	$item_greydwarfeye	Greydwarf Eye
+GreydwarfSurprise	$pinecone	GreydwarfSurprise
+Greyling	$enemy_greyling	Greyling
+guard_stone	$piece_guardstone	Ward
+Guck	$item_guck	Guck
+GuckSack	$item_destructible_gucksack	Guck Sack
+GuckSack_small	$item_destructible_gucksack	Guck Sack
+Hammer	$item_hammer	Hammer
+hanging_hairstrands	$item_wolfhairbundle	Fenris Hair
+HardAntler	$item_hardantler	Hard Antler
+Hare	$enemy_hare	Hare
+HareMeat	$item_hare_meat	Hare Meat
+Hatchling	$enemy_drake	Drake
+HatefulBlood	$item_hatefulblood	Malicious Blood
+hearth	$piece_hearth	Hearth
+HeathRockPillar	-	Rock pillar
+HelmetAshlandsMediumHood	$item_helmet_medium_ashlands	Hood of Ask
+HelmetBerserkerHood	$item_helmet_berserker	Headdress of the Bear
+HelmetBerserkerUndead	$item_helmet_berserker_undead	Vilebone Visage
+HelmetBronze	$item_helmet_bronze	Bronze Helmet
+HelmetCarapace	$item_helmet_carapace	Carapace Helmet
+HelmetCelebration	$item_helmet_celebration	Celebratory Cap
+HelmetCrownofValheim	$item_helmet_crown_of_valheim	Crown of Valheim
+HelmetDNHeavy	$item_helmet_heavy_deepnorth	Helmet of the Protector
+HelmetDNMage	$item_helmet_mage_deepnorth	Headdress of the Caller
+HelmetDNMediumHood	$item_helmet_medium_deepnorth	Hood of the Vanguard
+HelmetDrake	$item_helmet_drake	Drake Helmet
+HelmetDverger	$item_helmet_dverger	Dverger Circlet
+HelmetFenring	$item_helmet_fenris	Fenris Hood
+HelmetFishingHat	$item_helmet_fishinghat	Fishing Hat
+HelmetFlametal	$item_helmet_flametal	Flametal Helmet
+HelmetHat1	$item_helmet_hat1	Blue Tied Headscarf
+HelmetHat10	$item_helmet_hat10	Simple Purple Cap
+HelmetHat2	$item_helmet_hat2	Green Twisted Headscarf
+HelmetHat3	$item_helmet_hat3	Brown Fur Cap
+HelmetHat4	$item_helmet_hat4	Extravagant Green Cap
+HelmetHat5	$item_helmet_hat5	Simple Red Cap
+HelmetHat6	$item_helmet_hat6	Yellow Tied Headscarf
+HelmetHat7	$item_helmet_hat7	Red Twisted Headscarf
+HelmetHat8	$item_helmet_hat8	Grey Fur Cap
+HelmetHat9	$item_helmet_hat9	Extravagant Orange Cap
+HelmetIron	$item_helmet_iron	Iron Helmet
+HelmetLeather	$item_helmet_leather	Leather Helmet
+HelmetLox	$item_helmet_lox	Lox Fur Hood
+HelmetMage	$item_helmet_mage	Eitr-weave Hood
+HelmetMage_Ashlands	$item_helmet_mage_ashlands	Hood of Embla
+HelmetMidsummerCrown	$item_helmet_midsummercrown	Midsummer Crown
+HelmetOdin	$item_helmet_odin	Hood of Oden
+HelmetPadded	$item_helmet_padded	Padded Helmet
+HelmetPointyHat	$item_helmet_witchhat	Pointy Hat
+HelmetRoot	$item_helmet_root	Root Mask
+HelmetRootCrown	$item_helmet_rootcrown	Crown of Roots
+HelmetStrawHat	$item_helmet_strawhat	Straw Hat
+HelmetSweatBand	$item_helmet_sweatband	Headband
+HelmetTrollLeather	$item_helmet_trollleather	Troll Leather Hood
+HelmetYule	$item_helmet_yule	Yule Hat
+Hen	$enemy_hen	Hen
+Hildir_camp	$npc_hildir	Hildir
+Hildir_cave	$hud_pin_hildir2	Howling Cavern
+Hildir_crypt	$hud_pin_hildir1	Smouldering Tomb
+Hildir_plainsfortress	$hud_pin_hildir3	Sealed Tower
+HildirKey_forestcrypt	$item_hildirkey1	Hildir's Brass Key
+HildirKey_mountaincave	$item_hildirkey2	Hildir's Silver Key
+HildirKey_plainsfortress	$item_hildirkey3	Hildir's Bronze Key
+Hive	$enemy_hive	Hive
+Hoe	$item_hoe	Hoe
+Honey	$item_honey	Honey
+HoneyGlazedChicken	$item_honeyglazedchicken	Honey Glazed Chicken
+HoneyGlazedChickenUncooked	$item_honeyglazedchickenuncooked	Uncooked Honey Glazed Chicken
+Hook	$item_hook	Hook
+HugeRoot1	$prop_ancienttreeroot	Ancient Root
+Ice	$item_ice	Ice
+ice1	-	Ice
+ice_rock1	-	Ice rock
+IcePond1	-	Ice pond
+IceShoes	$item_iceshoes	IceShoes
+IceShore_1	-	Ice
+IceSkates	$item_iceskates	IceSkates
+incinerator	$piece_incinerator	Obliterator
+InfestedTree01	-	Infested tree
+Iron	$item_iron	Iron
+iron_floor_1x1	$piece_ironfloorSmall	Cage Floor 1x1
+iron_floor_1x1_v2	$piece_ironfloorSmall	Cage Floor 1x1
+iron_floor_2x2	$piece_ironfloor	Cage Floor 2x2
+iron_grate	$piece_irongate	Iron Gate
+iron_wall_1x1	$piece_ironwallSmall	Cage Wall 1x1
+iron_wall_1x1_rusty	$piece_ironwallSmall	Cage Wall 1x1
+iron_wall_2x2	$piece_ironwall	Cage Wall 2x2
+IronNails	$item_ironnails	Iron Nails
+IronOre	$item_ironore	Iron Ore
+Ironpit	$item_ironpit	Iron Pit
+IronScrap	$item_ironscrap	Scrap Iron
+itemstand	$piece_itemstand	Item Stand
+itemstandh	$piece_itemstand	Item Stand
+JotunWarrior	$enemy_jotun_warrior	Krigen
+JotunWarriorDualWield	$enemy_jotun_warrior	Krigen
+JotunWitch	$enemy_jotun_witch	Hexen
+jute_carpet	$piece_jute_carpet	Red Jute Carpet
+jute_carpet_blue	$piece_juteblue_carpet	Blue Jute Carpet
+JuteBlue	$item_juteblue	Blue Jute
+JuteRed	$item_jutered	Red Jute
+Kale	$item_kale	Kale
+KaleChips	$item_kalechips	Kale Chips
+KaleChipsUncooked	$item_kalechips_uncooked	Raw Kale Chips
+KaleSeeds	$item_kaleseeds	Kale Seeds
+Karve	$ship_karve	Karve
+KeysGoldUncooked	$item_keys_gold_uncooked	Cast: Intricate Key
+KnifeBlackMetal	$item_knife_blackmetal	Black Metal Knife
+KnifeButcher	$item_knife_butcher	Butcher Knife
+KnifeChitin	$item_knife_chitin	Abyssal Razor
+KnifeCopper	$item_knife_copper	Copper Knife
+KnifeFlint	$item_knife_flint	Flint Knife
+KnifeGold	$item_knife_gold	Nord Dagger
+KnifeGold_BloodLightning	$item_knife_gold_bloodlightning	Thunderblood Dagger
+KnifeGold_FrostFire	$item_knife_gold_frostfire	Frostfire Dagger
+KnifeGoldUncooked	$item_knife_gold_uncooked	Cast: Nord Dagger
+KnifeSilver	$item_knife_silver	Silver Knife
+KnifeSkollAndHati	$item_knife_skollandhati	Skoll and Hati
+KnifeVoid	$item_knife_void	Voidcaller
+KnifeWood	$item_knife_wood	Wooden Knife
+Lantern	$item_lantern	Dvergr Lantern
+Lantern_DN	$item_lanternDN	Salvaged Lantern
+Lantern_hooded	$piece_hoodedlantern	Hooded Lantern
+LargeBone	$largebone	Large Bone
+LargeBone_half01	$largebone	Large Bone
+LargeBone_half02	$largebone	Large Bone
+Larva	$item_larva	Larva
+LastBossGate_RuneTile	$item_runetile	LastBossGate_RuneTile
+LeatherScraps	$item_leatherscraps	Leather Scraps
+Leatherstraps	$item_leatherstraps	Leather Straps
+Leech	$enemy_leech	Leech
+Leech_cave	$enemy_leech	Leech
+Leviathan	$rock_abyssalbarnacle	Abyssal Barnacle
+LeviathanLava	-	Lava leviathan
+LinenThread	$item_linenthread	Linen Thread
+Lingonberry	$item_lingonberries	Lingonberries
+LingonberryBush	$item_lingonberries	Lingonberries
+Lingondricka	$item_lingondricka	Lingonberry Juice
+loot_deepNorth_Granary	$piece_chestbarrel	Barrel
+loot_deepNorth_TimberHall	$piece_chestbarrel	Barrel
+Lox	$enemy_lox	Lox
+Lox_Calf	$enemy_loxcalf	Lox Calf
+LoxMeat	$item_loxmeat	Lox Meat
+LoxPelt	$item_loxpelt	Lox Pelt
+LoxPie	$item_loxpie	Lox Meat Pie
+LoxPieUncooked	$item_loxpie_uncooked	Unbaked Lox Pie
+LumberCamp	-	Lumber camp
+LuredFaderEmber	$item_faderember	Embers
+LuredWisp	$item_wisp	Wisp
+MaceBronze	$item_mace_bronze	Bronze Mace
+MaceEldner	$item_mace_eldner	Flametal Mace
+MaceEldnerBlood	$item_mace_eldner_blood	Bloodgeon
+MaceEldnerLightning	$item_mace_eldner_lightning	Storm Star
+MaceEldnerNature	$item_mace_eldner_nature	Klossen
+MaceGold	$item_mace_gold	Nord Mace
+MaceGold_BloodLightning	$item_mace_gold_bloodlightning	Thunderblood Mace
+MaceGold_FrostFire	$item_mace_gold_frostfire	Frostfire Mace
+MaceGoldUncooked	$item_mace_gold_uncooked	Cast: Nord Mace
+MaceIron	$item_mace_iron	Iron Mace
+MaceNeedle	$item_mace_needle	Porcupine
+MaceSilver	$item_mace_silver	Frostner
+MaceWood	$item_mace_wood	Wooden Mace
+MagicallyStuffedShroom	$item_magicallystuffedmushroom	Stuffed Mushroom
+MagicallyStuffedShroomUncooked	$item_magicallystuffedmushroomuncooked	Uncooked Stuffed Mushroom
+Mandible	$item_mandible	Mandible
+MarinatedGreens	$item_marinatedgreens	Marinated Greens
+MashedMeat	$item_mashedmeat	Mashed Meat
+MeadBaseBugRepellent	$item_meadbasebugrepellent	Mead Base: Anti-Sting
+MeadBaseBzerker	$item_meadbasebzerker	Mead base: Berserkir
+MeadBaseEitrLingering	$item_meadbaseeitr_lingering	Mead Base: Lingering Eitr
+MeadBaseEitrMinor	$item_meadbaseeitr	Mead Base: Minor Eitr
+MeadBaseFrostResist	$item_meadbasefrostresist	Mead Base: Frost Resistance
+MeadBaseHasty	$item_meadbasehasty	Mead base: Ratatosk
+MeadBaseHealthLingering	$item_meadbasehealth_lingering	Mead Base: Lingering Health
+MeadBaseHealthMajor	$item_meadbasehealth_major	Mead Base: Major Healing
+MeadBaseHealthMedium	$item_meadbasehealth_medium	Mead Base: Medium Healing
+MeadBaseHealthMinor	$item_meadbasehealth	Mead Base: Minor Healing
+MeadBaseLightFoot	$item_meadbaselightfoot	Mead Base: Lightfoot
+MeadBasePoisonResist	$item_meadbasepoisonresist	Mead Base: Poison Resistance
+MeadBaseStaminaLingering	$item_meadbasestamina_lingering	Mead Base: Lingering Stamina
+MeadBaseStaminaMedium	$item_meadbasestamina_medium	Mead Base: Medium Stamina
+MeadBaseStaminaMinor	$item_meadbasestamina	Mead Base: Minor Stamina
+MeadBaseStrength	$item_meadbasestrength	Mead Base: Troll Endurance
+MeadBaseSwimmer	$item_meadbaseswimmer	Mead Base: Vananidir
+MeadBaseTamer	$item_meadbasetamer	Mead Base: Animal Whispers
+MeadBaseTasty	$item_meadbasetasty	Mead Base: Tasty
+MeadBugRepellent	$item_mead_bugrepellent	Anti-Sting Concoction
+MeadBzerker	$item_mead_bzerker	Berserkir Mead
+MeadEitrLingering	$item_mead_eitr_lingering	Lingering Eitr Mead
+MeadEitrMinor	$item_mead_eitr_minor	Minor Eitr Mead
+MeadFrostResist	$item_mead_frostres	Frost Resistance Mead
+MeadHasty	$item_mead_hasty	Tonic of Ratatosk
+MeadHealthLingering	$item_mead_hp_lingering	Lingering Healing Mead
+MeadHealthMajor	$item_mead_hp_major	Major Healing Mead
+MeadHealthMedium	$item_mead_hp_medium	Medium Healing Mead
+MeadHealthMinor	$item_mead_hp_minor	Minor Healing Mead
+MeadLightfoot	$item_mead_lightfoot	Lightfoot Mead
+MeadPoisonResist	$item_mead_poisonres	Poison Resistance Mead
+MeadStaminaLingering	$item_mead_stamina_lingering	Lingering Stamina Mead
+MeadStaminaMedium	$item_mead_stamina_medium	Medium Stamina Mead
+MeadStaminaMinor	$item_mead_stamina_minor	Minor Stamina Mead
+MeadStrength	$item_mead_strength	Mead of Troll Endurance
+MeadSwimmer	$item_mead_swimmer	Draught of Vananidir
+MeadTamer	$item_mead_tamer	Brew of Animal Whispers
+MeadTasty	$item_mead_tasty	Tasty Mead
+MeadTrollPheromones	$item_mead_trollpheromones	Love Potion
+MeatballsMashedPoteitr	$item_meatballsmashedpoteitr	Meatballs and Poteitr
+MeatPlatter	$item_meatplatter	Meat Platter
+MeatPlatterUncooked	$item_meatplatteruncooked	Uncooked Meat Platter
+MechanicalSpring	$item_mechanicalspring	Mechanical Spring
+MemorialCoal	$item_memorialcoal	Memorial Coal
+MemorialStone_Large	$memorial_stone	MemorialStone_Large
+MemorialStone_Medium	$hover_memorialstone	Ancestral Memorial
+MemorialStone_Small	$hover_memorialstone	Ancestral Memorial
+metalbar_1x2	$piece_blackmarble1x1	Black Marble 1x1x1
+MinceMeatSauce	$item_mincemeatsauce	Minced Meat Sauce
+MineRock_Meteorite	$item_flametalore	Flametal Ore
+MineRock_Obsidian	$piece_deposit_obsidian	Obsidian Deposit
+MineRock_Tin	$piece_deposit_tin	Tin Deposit
+MistArea	-	Mist
+MistArea_edge	-	Mist
+MisthareSupreme	$item_mistharesupreme	Misthare Supreme
+MisthareSupremeUncooked	$item_mistharesupremeuncooked	Uncooked Misthare Supreme
+Mistile	$enemy_mistile	Mistile
+Mistlands_DvergrBossEntrance1	$location_dvergrboss	Infested Citadel
+Mistlands_DvergrTownEntrance1	$location_dvergrtown	Infested Mine
+Mistlands_DvergrTownEntrance2	$location_dvergrtown	Infested Mine
+Mistlands_Excavation1	-	Excavation
+Mistlands_Excavation2	-	Excavation
+Mistlands_Excavation3	-	Excavation
+Mistlands_Giant1	-	Giant remains
+Mistlands_Giant2	-	Giant remains
+Mistlands_GuardTower1_new	-	Guard tower
+Mistlands_GuardTower1_ruined_new	-	Ruined guard tower
+Mistlands_GuardTower1_ruined_new2	-	Ruined guard tower
+Mistlands_GuardTower2_new	-	Guard tower
+Mistlands_GuardTower3_new	-	Guard tower
+Mistlands_GuardTower3_ruined_new	-	Ruined guard tower
+Mistlands_Harbour1	-	Harbour
+Mistlands_Lighthouse1_new	-	Lighthouse
+Mistlands_RoadPost1	-	Road post
+Mistlands_RockSpire1	-	Rock spire
+Mistlands_Statue1	-	Statue
+Mistlands_Statue2	-	Statue
+Mistlands_StatueGroup1	-	Statues
+Mistlands_Swords1	-	Giant swords
+Mistlands_Swords2	-	Giant swords
+Mistlands_Swords3	-	Giant swords
+Mistlands_Viaduct1	-	Viaduct
+Mistlands_Viaduct2	-	Viaduct
+MoldArmorGoldChest	$item_mold_armor_gold_chest	Mould: Breastplate of the Protector
+MoldArmorGoldHelmet	$item_mold_armor_gold_helmet	Mould: Helmet of the Protector
+MoldArmorGoldLegs	$item_mold_armor_gold_legs	Mould: Trousers of the Protector
+MoldArmorMageChest	$item_mold_armor_mage_chest	Mould: Robes of the Caller
+MoldArmorMageHelmet	$item_mold_armor_mage_helmet	Mould: Headdress of the Caller
+MoldArmorMageLegs	$item_mold_armor_mage_legs	Mould: Trousers of the Caller
+MoldArmormediumChest	$item_mold_armor_medium_chest	Mould: Chestpiece of the Vanguard
+MoldArmorMediumHelmet	$item_mold_armor_medium_helmet	Mould: Hood of the Vanguard
+MoldArmorMediumLegs	$item_mold_armor_medium_legs	Mould: Trousers of the Vanguard
+MoldAtgeir	$item_mold_atgeir	Mould: Nord Atgeir
+MoldAxe	$item_mold_axe	Mould: Nord Axe
+MoldAxe2H	$item_mold_axe2h	Mould: Nord Greataxe
+MoldBow	$item_mold_bow	Mould: Nord Bow
+MoldCrossbow	$item_mold_crossbow	Mould: Nord Crossbow
+MoldFistweapon	$item_mold_fistweapon	Mould: Nord Knucklechains
+MoldKeys	$item_mold_keys	Mould: Intricate Key
+MoldKnife	$item_mold_knife	Mould: Nord Dagger
+MoldMace	$item_mold_mace	Mould: Nord Mace
+MoldMace2H	$item_mold_mace2h	Mould: Nord Sledge
+MoldShieldBuckler	$item_mold_shield_buckler	Mould: Nord Buckler
+MoldShieldRound	$item_mold_shield_round	Mould: Nord Shield
+MoldShieldTower	$item_mold_shield_tower	Mould: Nord Greatshield
+MoldSmallParts	$item_mold_smallparts	MoldSmallParts
+MoldSpear	$item_mold_spear	Mould: Nord Spear
+MoldStafffrostorbs	$item_mold_stafffrostorbs	Mould: Northern Vengeance
+MoldStaffOrbofAhri	$item_mold_stafforbofahri	Mould: Echo Spike
+MoldStaffspiritcaller	$item_mold_staffspiritcaller	Mould: Spirit Caller
+MoldStaffthunderblood	$item_mold_staffthunderblood	Mould: Lightning Strike
+MoldSword	$item_mold_sword	Mould: Nord Sword
+MoldSword2H	$item_mold_sword2h	Mould: Nord Greatsword
+MoleClaws	$item_moleclaws	Long Claws
+MoltenCore	$item_moltencore	Molten Core
+Moose	$enemy_moose	Moose
+Moose_calf	$enemy_moosecalf	Moose Calf
+Moose_spiritcaller	$spiritcaller_moose	Moose_spiritcaller
+MooseHide	$item_moosehide	Moose Hide
+MooseKebab	$item_moosekebab	Meat In Bread
+MooseMeat	$item_moose_meat	Moose Meat
+MooseSinew	$item_moosesinew	Moose Sinew
+Morgen	$enemy_morgen	Morgen
+Morgen_NonSleeping	$enemy_morgen	Morgen
+MorgenHeart	$item_morgenheart	Morgen Heart
+MorgenHole1	$location_morgenhole	Putrid Hole
+MorgenHole2	$location_morgenhole	Putrid Hole
+MorgenHole3	$location_morgenhole	Putrid Hole
+MorgenSinew	$item_morgensinew	Morgen Sinew
+MorkBorg	$location_morkhalla	Mörkhalla
+Morkhalla_ChestAncient	$piece_morkhallachestancient	Ancient Chest
+Morkhalla_Eye1	$item_ancientgemstone_black	Draumyx
+Morkhalla_Eye2	$item_ancientgemstone_green	Grimvarn
+Morkhalla_Eye3	$item_ancientgemstone_orange	Solryth
+Morkhalla_Eye4	$item_ancientgemstone_purple	Veydris
+Morkhalla_Eye5_gemstone	$item_gemstone_blue	Iolite
+Morkhalla_Eye6_gemstone	$item_gemstone_green	Jade
+Morkhalla_Eye7_gemstone	$item_gemstone_red	Bloodstone
+Morkhalla_firepit	$piece_firepit	Campfire
+Morkhalla_Stonepile	$piece_marblepile	Black Marble Pile
+MountainCave02	$location_mountaincave	Frost Caves
+MountainGrave01	-	Mountain grave
+MountainWell1	-	Mountain well
+mud_road	$piece_levelground	Level Ground
+mudpile	$piece_mudpile	Muddy Scrap Pile
+mudpile2	$piece_mudpile	Muddy Scrap Pile
+mudpile2_frac	$piece_mudpile	Muddy Scrap Pile
+mudpile_beacon	$piece_mudpile	Muddy Scrap Pile
+mudpile_frac	$piece_mudpile	Muddy Scrap Pile
+mudpile_old	$piece_mudpile	Muddy Scrap Pile
+Mushroom	$item_mushroomcommon	Mushroom
+MushroomBlue	$item_mushroomblue	Blue Mushroom
+MushroomBzerker	$item_mushroom_bzerker	Toadstool
+MushroomJotunPuffs	$item_jotunpuffs	Jotun Puffs
+MushroomMagecap	$item_magecap	Magecap
+MushroomOmelette	$item_mushroomomelette	Mushroom Omelette
+MushroomSmokePuff	$item_smokepuff	Smoke Puff
+MushroomYellow	$item_mushroomyellow	Yellow Mushroom
+Neck	$enemy_neck	Neck
+NeckTail	$item_necktail	Neck Tail
+NeckTailGrilled	$item_necktailgrilled	Grilled Neck Tail
+Needle	$item_needle	Needle
+NornThread	$item_nornthread	Nornathread
+NorthMemorialPlace	$memorialplace	Memorial Place
+NorthVillage	-	Northern village
+Oak1	$prop_oak	Oak
+Oak_log	$prop_treelog	Log
+Oak_log_half	$prop_treelog	Log
+Oak_Sapling	$prop_oak_sapling	Oak Sapling
+OakStub	$prop_treestump	Stump
+Oat	$item_oat	Oats
+OatFlour	$item_oatflour	Oat Flour
+OatmealLingonberryJam	$item_oatmeallingonberryjam	Oatmeal
+OatMilk	$item_oatmilk	Oat Milk
+OatSeeds	$item_oatseeds	Oat Seeds
+Obsidian	$item_obsidian	Obsidian
+obsidian_pile	$piece_obsidianpile	Obsidian Pile
+Onion	$item_onion	Onion
+OnionSeeds	$item_onionseeds	Onion Seeds
+OnionSoup	$item_onionsoup	Onion Soup
+Ooze	$item_ooze	Ooze
+OozeMork	$item_ooze_mork	Dead Pulp
+OrbFrostFire	$item_orbfrostfire	Frostfire Essence
+OrbThunderBlood	$item_orbthunderblood	Thunderblood Essence
+OvenPancake	$item_ovenpancake	Oven Pancake
+OvenPancakeUncooked	$item_ovenpancake_uncooked	Oven Pancake Batter
+Pancakes	$item_pancakes	Pancakes
+path	$piece_path	Pathen
+paved_road	$piece_pavedroad	Paved Road
+Pickable_Ashstone	$item_grausten	Grausten
+Pickable_Barley	$item_barley	Barley
+Pickable_Barley_Wild	$item_barley	Barley
+Pickable_BlackCoreStand	$item_blackcore	Black Core
+Pickable_BogIronOre	$item_pickable_bogiron	Bog Iron
+Pickable_Branch	$item_pickable_branch	Branch
+Pickable_Branch_Snow	$item_pickable_branch	Branch
+Pickable_Carrot	$item_carrot	Carrot
+Pickable_Charredskull	$item_charredskull	Charred Skull
+Pickable_Dandelion	$item_dandelion	Dandelion
+Pickable_DragonEgg	$item_dragonegg	Dragon Egg
+Pickable_DvergerThing	$item_turnip	Turnip
+Pickable_DvergrLantern	$item_lantern	Dvergr Lantern
+Pickable_DvergrMineTreasure	$piece_treasure_pile	Coin Pile
+Pickable_DvergrStein	$item_dvergrtankard	Dvergr Tankard
+Pickable_Fiddlehead	$item_fiddleheadfern	Fiddlehead
+Pickable_Fishingrod	$item_fishingrod	Fishing Rod
+Pickable_Flax	$item_flax	Flax
+Pickable_Flax_Wild	$item_flax	Flax
+Pickable_Flint	$item_flint	Flint
+Pickable_ForestCryptRemains01	$item_pickable_skeletalremains	Skeletal Remains
+Pickable_ForestCryptRemains02	$item_pickable_skeletalremains	Skeletal Remains
+Pickable_ForestCryptRemains03	$item_pickable_skeletalremains	Skeletal Remains
+Pickable_ForestCryptRemains04	$item_pickable_skeletalremains	Skeletal Remains
+Pickable_FrostCoreHanger	$item_frostcore	Frostcore
+Pickable_GlowWorm	$item_glowworm	Luminous Larva
+Pickable_Hairstrands01	$item_pickable_hairstrands	Fenris Hair
+Pickable_Hairstrands02	$item_pickable_hairstrands	Fenris Hair
+Pickable_HardRockOffspring	$item_stone	Stone
+Pickable_Kale	$item_kale	Kale
+Pickable_MeatPile	$item_pickable_meatpile	Meat Pile
+Pickable_Meteorite	$item_pickable_meteorite	Meteorite
+Pickable_MoltenCoreStand	$item_moltencore	Molten Core
+Pickable_MountainCaveCrystal	$item_crystal	Crystal
+Pickable_MountainCaveObsidian	$item_obsidian	Obsidian
+Pickable_MountainRemains01_buried	$item_pickable_skeletalremains	Skeletal Remains
+Pickable_Mushroom	$item_mushroomcommon	Mushroom
+Pickable_Mushroom_blue	$item_mushroomblue	Blue Mushroom
+Pickable_Mushroom_JotunPuffs	$item_jotunpuffs	Jotun Puffs
+Pickable_Mushroom_Magecap	$item_magecap	Magecap
+Pickable_Mushroom_yellow	$item_mushroomyellow	Yellow Mushroom
+Pickable_Oat	$item_oatseeds	Oat Seeds
+Pickable_Obsidian	$item_pickable_obsidian	Obsidian
+Pickable_Onion	$item_onion	Onion
+Pickable_Pot_Shard	$item_pot_shard_green	Pot Shard
+Pickable_Poteitr	$item_poteitr	Poteitr
+Pickable_RoyalJelly	$item_royaljelly	Royal Jelly
+Pickable_SeedCarrot	$item_carrotseeds	Carrot Seeds
+Pickable_SeedKale	$item_kaleseeds	Kale Seeds
+Pickable_SeedOnion	$item_onionseeds	Onion Seeds
+Pickable_SeedTurnip	$item_turnipseeds	Turnip Seeds
+Pickable_SmokePuff	$item_smokepuff	Smoke Puff
+Pickable_Snowball	$item_snowball	Snowball
+Pickable_Stone	$item_stone	Stone
+Pickable_StoneRock	$item_stonerock	Rock
+Pickable_SulfurRock	$item_pickable_sulfurrock	Sulfur Rock
+Pickable_SurtlingCoreStand	$item_surtlingcore	Surtling Core
+Pickable_Swordpiece1	$item_Dyrnwyn_hilt	Dyrnwyn Hilt Fragment
+Pickable_Swordpiece2	$item_Dyrnwyn_blade	Dyrnwyn Blade Fragment
+Pickable_Swordpiece3	$item_Dyrnwyn_tip	Dyrnwyn Tip Fragment
+Pickable_Tar	$item_tar	Tar
+Pickable_TarBig	$item_tar	Tar
+Pickable_Thistle	$item_thistle	Thistle
+Pickable_Tin	$item_tinore	Tin Ore
+Pickable_Turnip	$item_turnip	Turnip
+Pickable_VoltureEgg	$item_voltureegg	Volture Egg
+PickaxeAntler	$item_pickaxe_antler	Antler Pickaxe
+PickaxeBlackMetal	$item_pickaxe_blackmetal	Black Metal Pickaxe
+PickaxeBronze	$item_pickaxe_bronze	Bronze Pickaxe
+PickaxeIron	$item_pickaxe_iron	Iron Pickaxe
+PickaxeStone	$item_pickaxe_stone	Stone Pickaxe
+piece_ArcheryTarget	$piece_archerytarget	Archery Target
+piece_artisanstation	$piece_artisanstation	Artisan Table
+piece_asksvinskeleton	$piece_asksvinskeleton	Asksvin Skeleton
+piece_banner01	$piece_banner01	Black Banner
+piece_banner02	$piece_banner02	Blue Banner
+piece_banner03	$piece_banner03	White and Red Striped Banner
+piece_banner04	$piece_banner04	Red Banner
+piece_banner05	$piece_banner05	Green Banner
+piece_banner06	$piece_banner06	Blue, Red and White Banner
+piece_banner07	$piece_banner07	White and Blue Striped Banner
+piece_banner08	$piece_banner08	Yellow Banner
+piece_banner09	$piece_banner09	Purple Banner
+piece_banner10	$piece_banner10	Orange Banner
+piece_banner11	$piece_banner11	White Banner
+piece_barber	$piece_barber	Barber Station
+piece_bathtub	$piece_bathtub	Hot Tub
+piece_bed02	$piece_bed02	Dragon Bed
+piece_beehive	$piece_beehive	Beehive
+piece_bench01	$piece_bench01	Wood Bench
+piece_bench_runed	$piece_bench_runed	Carved Bench
+piece_birdnest	$piece_birdnest	Birds' Nest
+piece_blackmarble_bench	$piece_blackmarble_bench	Black Marble Bench
+piece_blackmarble_table	$piece_blackmarble_table	Black Marble Table
+piece_blackmarble_throne	$piece_blackmarble_throne	Black Marble Throne
+piece_blackwood_bench	$piece_bench01	Wood Bench
+piece_blackwood_bench01	$piece_blackwoodbench01	Ashwood Bench
+piece_bone_throne	$piece_bone_throne	Bone Throne
+piece_brazierceiling01	$piece_brazierceiling01	Hanging Brazier
+piece_brazierfloor01	$piece_brazierfloor01	Standing Brazier
+piece_brazierfloor02	$piece_brazierfloor02	Blue Standing Brazier
+piece_cartographytable	$piece_cartographytable	Cartography Table
+piece_cauldron	$piece_cauldron	Cauldron
+piece_CelebrationGarland	$piece_celebrationgarland	Flower Garland
+piece_chair	$piece_stool	Stool
+piece_chair02	$piece_chair	Wood Chair
+piece_chair03	$piece_darkwoodchair	Darkwood Chair
+piece_chair_runed	$piece_chair_runed	Carved Chair
+piece_chest	$piece_chest	Reinforced Chest
+piece_chest_barrel	$piece_chestbarrel	Barrel
+piece_chest_blackmetal	$piece_chestblackmetal	Black Metal Chest
+piece_chest_grausten	$piece_chestgrausten	Grausten Chest
+piece_chest_private	$piece_chestprivate	Personal Chest
+piece_chest_treasure	$piece_chesttreasure	Treasure Chest
+piece_chest_warderobe	$piece_chestwarderobe	Wardrobe
+piece_chest_wood	$piece_chestwood	Chest
+piece_cloth_hanging_door	$piece_clothdoor	Red Jute Curtain
+piece_cloth_hanging_door_blue	$piece_hanging_cloth_blue1	Blue Jute Drapes
+piece_cloth_hanging_door_blue2	$piece_hanging_cloth_blue2	Blue Jute Curtain
+piece_cookingstation	$piece_cookingstation	Cooking Station
+piece_cookingstation_iron	$piece_cookingstation_iron	Iron Cooking Station
+piece_drawbridge	$piece_drawbridge_dn	Timberwood Drawbridge
+piece_drawbridge_log	$piece_drawbridge_log	Rustic Drawbridge
+piece_dvergr_lantern	$piece_dvergr_lantern	Dvergr Wall Lantern
+piece_dvergr_lantern_pole	$piece_dvergr_lantern_pole	Dvergr Pole Lantern
+piece_dvergr_metal_wall_2x2	$piece_dvergr_metal_wall	Dvergr Metal Wall
+piece_dvergr_pole	$piece_dvergr_pole	Dvergr Pole
+piece_dvergr_sharpstakes	$piece_dvergr_sharpstakes	Dvergr Sharp Stakes
+piece_dvergr_spiralstair	$piece_dvergr_spiralstair	Dvergr Spiral Staircase Left
+piece_dvergr_spiralstair_right	$piece_dvergr_spiralstair_right	Dvergr Spiral Staircase Right
+piece_dvergr_stake_wall	$piece_dvergr_stake_wall	Dvergr Stakewall
+piece_dvergr_wood_door	$piece_dvergr_door	Dvergr Door
+piece_dvergr_wood_wall	$piece_dvergr_woodwall	Dvergr Wall
+piece_EternalPyre	$piece_faderember	Eternal Pyre
+piece_FaderEmbers	$piece_faderember	Eternal Pyre
+piece_FairylightGarland	$piece_fairylightgarland	Fey Lights
+Piece_flametal_beam	$piece_flametal_beam	Flametal Beam
+Piece_flametal_pillar	$piece_flametal_pillar	Flametal Pillar
+piece_FrostFoundry	$piece_frostfoundry	Frost Foundry
+piece_FrostKiln	$piece_frostkiln	Frigid Kiln
+piece_gift1	$piece_yuleklapp	Yuleklapp
+piece_gift2	$piece_yuleklapp	Yuleklapp
+piece_gift3	$piece_yuleklapp	Yuleklapp
+Piece_grausten_floor_1x1	$piece_grausten_floor1x1	Grausten Floor 1x1
+Piece_grausten_floor_2x2	$piece_grausten_floor2x2	Grausten Floor 2x2
+Piece_grausten_floor_4x4	$piece_grausten_floor4x4	Grausten Floor 4x4
+Piece_grausten_pillar_arch	$piece_grausten_archmedium	Grausten Medium Arch
+Piece_grausten_pillar_arch_small	$piece_grausten_archsmall	Grausten Small Arch
+Piece_grausten_pillarbase_medium	$piece_grausten_pillarmedium	Grausten Medium Pillar
+Piece_grausten_pillarbase_small	$piece_grausten_pillarsmall	Grausten Small Pillar
+Piece_grausten_pillarbase_tapered	$piece_grausten_pillartapered	Grausten Tapered Pillar
+Piece_grausten_pillarbase_tapered_inverted	$piece_grausten_pillartaperedinverted	Grausten Tapered Pillar (Inverted)
+Piece_grausten_pillarbeam_medium	$piece_grausten_beammedium	Grausten Medium Beam
+Piece_grausten_pillarbeam_small	$piece_grausten_beamsmall	Grausten Small Beam
+piece_grausten_roof_45	$piece_grausten_roof45	Grausten Roof
+piece_grausten_roof_45_arch	$piece_grausten_roof45_arch	Grausten Arched Roof
+piece_grausten_roof_45_arch_corner	$piece_grausten_roof45_archcorner	Grausten Arched Roof Corner
+piece_grausten_roof_45_arch_corner2	$piece_grausten_roof45_archcorner2	Grausten Arched Roof Corner
+piece_grausten_roof_45_corner	$piece_grausten_roof45_corner	Grausten Roof Corner
+piece_grausten_roof_45_corner2	$piece_grausten_roof45_corner2	Grausten Roof Corner
+Piece_grausten_stone_ladder	$piece_grausten_stoneladder	Grausten Steep Stairs
+piece_grausten_stonestair	$piece_grausten_stair	Grausten Stairs
+Piece_grausten_wall_1x2	$piece_grausten_wall1x2	Grausten Wall 1x2
+Piece_grausten_wall_2x2	$piece_grausten_wall2x2	Grausten Wall 2x2
+Piece_grausten_wall_4x2	$piece_grausten_wall4x2	Grausten Wall 4x2
+Piece_grausten_wall_arch	$piece_grausten_wallarch	Grausten Wall Arch
+Piece_grausten_wall_arch_inverted	$piece_grausten_wallarchinv	Grausten Wall Arch (Inverted)
+Piece_grausten_window_2x2	$piece_grausten_window2x2	Grausten Window 2x2
+Piece_grausten_window_4x2	$piece_grausten_window4x2	Grausten Window 4x2
+piece_groundtorch	$piece_groundtorch	Standing Iron Torch
+piece_groundtorch_blue	$piece_groundtorchblue	Standing Blue-burning Iron Torch
+piece_groundtorch_green	$piece_groundtorchgreen	Standing Green-burning Iron Torch
+piece_groundtorch_mist	$piece_groundtorchdemister	Wisp Torch
+piece_groundtorch_wood	$piece_groundtorchwood	Standing Wood Torch
+piece_hexagonal_door	$piece_hexagonalgate	Hexagonal Gate
+piece_hoodedlantern	$piece_hoodedlantern	Hooded Lantern
+piece_icecube	$piece_icecube	Ice Block
+piece_jackoturnip	$piece_jackoturnip	Jack-o-turnip
+piece_Lavalantern	$piece_lavalantern	Lava Lantern
+piece_logbench01	$piece_benchlog	Sitting Log
+piece_magetable	$piece_magetable	Galdr Table
+piece_magetable_ext	$piece_magetable_ext	Rune Table
+piece_magetable_ext2	$piece_magetable_ext2	Unfading Candles
+piece_magetable_ext3	$piece_magetable_ext3	Feathery Wreath
+piece_magetable_ext4	$piece_magetable_ext4	Standing Loom
+piece_maypole	$piece_maypole	Maypole
+piece_MeadCauldron	$piece_meadcauldron	Mead Ketill
+piece_mistletoe	$piece_mistletoe	Mistletoe
+piece_moose_throne	$piece_moose_throne	Antler Throne
+piece_oven	$piece_oven	Stone Oven
+piece_pot1	$piece_pot_medium_green	Medium Green Pot
+piece_pot1_cracked	$piece_pot_medium_cracked	Medium Clay Pot
+piece_pot1_red	$piece_pot_medium_red	Medium Red Pot
+piece_pot2	$piece_pot_large_green	Large Green Pot
+piece_pot2_cracked	$piece_pot_large_cracked	Large Clay Pot
+piece_pot2_red	$piece_pot_large_red	Large Red Pot
+piece_pot3	$piece_pot_small_green	Small Green Pot
+piece_pot3_cracked	$piece_pot_small_cracked	Small Clay Pot
+piece_pot3_red	$piece_pot_small_red	Small Red Pot
+piece_preptable	$piece_preptable	Food Preparation Table
+piece_sapcollector	$piece_sapcollector	Sap Extractor
+piece_sharpstakes	$piece_sharpstakes	Sharp Stakes
+piece_shieldgenerator	$piece_shieldgenerator	Shield Generator
+piece_snowlantern	$piece_snowlantern	Snow Lantern
+piece_spinningwheel	$piece_spinningwheel	Spinning Wheel
+piece_stakewall_blackwood	$piece_BlackwoodStakewall	Ashwood Stakewall
+piece_stonecutter	$piece_stonecutter	Stonecutter
+piece_table	$piece_table	Table
+piece_table_oak	$piece_table_oak	Long Heavy Table
+piece_table_round	$piece_table_round	Round Table
+piece_table_runed	$piece_table_runed	Long Carved Table
+piece_table_runed_small	$piece_table_runed_small	Square Carved Table
+piece_throne01	$piece_throne01	Raven Throne
+piece_throne02	$piece_stonethrone	Stone Throne
+piece_TrainingDummy	$piece_trainingdummy	T.W.I.G.
+piece_trap_troll	$piece_trap	Trap
+piece_turret	$piece_turret	Ballista
+piece_walltorch	$piece_sconce	Sconce
+piece_wisplure	$piece_wisplure	Wisp Fountain
+piece_workbench	$piece_workbench	Workbench
+piece_workbench_ext1	$piece_workbench_ext1	Chopping Block
+piece_workbench_ext2	$piece_workbench_ext2	Tanning Rack
+piece_workbench_ext3	$piece_workbench_ext3	Adze
+piece_workbench_ext4	$piece_workbench_ext4	Tool Shelf
+piece_xmascrown	$piece_yulecrown	Yule Wreath
+piece_xmasgarland	$piece_yulegarland	Yule Garland
+piece_xmastree	$piece_yuletree	Yule Tree
+PineCone	$item_pinecone	Pine Cone
+Pinetree_01	$prop_pine	Pine
+Pinetree_01_Stub	$prop_treestump	Stump
+PineTree_log	$prop_treelog	Log
+PineTree_log_half	$prop_treelog	Log
+PineTree_Sapling	$prop_pine_sapling	Pine Sapling
+Pinetree_Snow	$prop_pine_snow	Timber Tree
+Pinetree_Snow_dead	$prop_pine_snow	Timber Tree
+PineTree_Snow_log	$prop_treelog	Log
+PineTree_Snow_log_half	$prop_treelog	Log
+PineTree_Snow_log_half_frost_troll	$prop_treelog	Log
+PineTree_Snow_log_XL	$prop_treelog	Log
+PineTree_Snow_log_XL_half	$prop_treelog	Log
+Pinetree_Snow_Stub	$prop_treestump	Stump
+PiquantPie	$item_piquantpie	Piquant Pie
+PiquantPieUncooked	$item_piquantpie_uncooked	Uncooked Piquant Pie
+placeable_bigrock_01	$piece_rock_01	Ornamental Boulder
+placeable_bigrock_02	$piece_rock_02	Decorative Boulder
+Placeable_HardRock	$item_hardrock	Mysterious Rock
+Placeable_Stone	$item_stone	Stone
+PlaceofMystery1	$placeofmystery	Mysterious Location
+PlaceofMystery2	$placeofmystery	Mysterious Location
+PlaceofMystery3	$placeofmystery	Mysterious Location
+portal	$piece_portal	Portal
+portal_stone	$piece_portal_stone	Portal – Stone
+portal_wood	$piece_portal	Portal
+Pot_Shard_Green	$item_pot_shard_green	Pot Shard
+Pot_Shard_Red	$item_pot_shard_red	Pot_Shard_Red
+Poteitr	$item_poteitr	Poteitr
+PoteitrSeeds	$item_poteitrseeds	Seed Poteitr
+PowderedDragonEgg	$item_powdereddragonegg	Powdered Dragon Eggshells
+ProustitePowder	$item_proustitepowder	Proustite Powder
+Pukeberries	$item_pukeberries	Bukeperries
+PulledBear	$item_pulledbear	Pulled Bear
+PungentPebbles	$item_pungentpebbles	Pungent Pebbles
+QueenBee	$item_queenbee	Queen Bee
+QueenDrop	$item_seekerqueen_drop	Majestic Carapace
+QueensJam	$item_queensjam	Queen's Jam
+Raft	$ship_raft	Raft
+raise	$piece_raise	Raise Ground
+Raspberry	$item_raspberries	Raspberries
+RaspberryBush	$item_raspberries	Raspberries
+RawMeat	$item_boar_meat	Boar Meat
+replant	$piece_replant	Grass
+Resin	$item_resin	Resin
+RoastedCrustPie	$item_roastedcrustpie	Roasted Crust Pie
+RoastedCrustPieUncooked	$item_roastedcrustpie_uncooked	Uncooked Roasted Crust Pie
+rock1_mountain	-	Boulder
+rock2_heath	-	Rock
+rock2_mountain	-	Rock
+rock3_mountain	-	Rock
+rock3_mountain_1	-	Rock
+rock3_silver	$piece_deposit_silver	Silver Deposit
+rock3_silver_frac	$piece_deposit_silver	Silver Deposit
+rock4_coast	-	Rock
+rock4_copper	$piece_deposit_copper	Copper Deposit
+rock4_copper_frac	$piece_deposit_copper	Copper Deposit
+rock4_forest	-	Rock
+rock4_heath	-	Rock
+Rock_3	-	Boulder
+Rock_3_deepnorth	-	Boulder
+Rock_4	-	Rock
+Rock_4_deepnorth	-	Rock
+Rock_4_plains	-	Rock
+Rock_7_deepnorth	-	Rock
+Rock_7_meadows	-	Rock
+rock_mistlands1	-	Rock
+Root	$item_root	Root
+RottenMeat	$item_meat_rotten	Rotten Meat
+RoundLog	$item_roundlog	Corewood
+RoyalJelly	$item_royaljelly	Royal Jelly
+Ruby	$item_ruby	Ruby
+rug_asksvin	$piece_rug_asksvin	Asksvin Rug
+rug_Bjorn	$piece_rug_bjorn	Bearskin Rug
+rug_deer	$piece_rug_deer	Deer Rug
+rug_fur	$piece_rug_lox	Lox Rug
+rug_hare	$piece_rug_hare	Hare Rug
+rug_moose	$piece_rug_moose	Moose Hide Carpet
+rug_seal	$piece_rug_seal	Sealskin Rug
+rug_straw	$piece_rug_straw	Straw
+rug_wolf	$piece_rug_wolf	Wolf Rug
+Ruin1	-	Ruin
+Ruin2	-	Ruin
+Ruin3	-	Ruin
+Runestone_Ashlands	-	Rune stone
+Runestone_BlackForest	-	Rune stone
+Runestone_Boars	-	Rune stone
+Runestone_DeepNorth	-	Rune stone
+Runestone_Draugr	-	Rune stone
+Runestone_Greydwarfs	-	Rune stone
+Runestone_Meadows	-	Rune stone
+Runestone_Mistlands	-	Rune stone
+Runestone_Mountains	-	Rune stone
+Runestone_Plains	-	Rune stone
+Runestone_Swamps	-	Rune stone
+SaddleAsksvin	$item_saddleasksvin	Asksvin Saddle
+SaddleLox	$item_saddlelox	Lox Saddle
+SaddleMoose	$item_saddlemoose	Moose Saddle
+Salad	$item_salad	Salad
+Sap	$item_sap	Sap
+sapling_barley	$piece_sapling_barley	Barley
+sapling_carrot	$piece_sapling_carrot	Carrot
+sapling_flax	$piece_sapling_flax	Flax
+sapling_jotunpuffs	$item_jotunpuffs	Jotun Puffs
+sapling_Kale	$piece_sapling_kale	Kale
+sapling_magecap	$item_magecap	Magecap
+sapling_oat	$piece_sapling_oat	Oat Straw
+sapling_onion	$piece_sapling_onion	Onion
+sapling_poteitr	$piece_sapling_poteitr	Poteitr
+sapling_seedcarrot	$piece_sapling_seedcarrot	Seed-carrot
+sapling_seedkale	$piece_sapling_seedkale	Seed Kale
+sapling_seedonion	$piece_sapling_seedonion	Seed-onion
+sapling_seedturnip	$piece_sapling_seedturnip	Seed-turnip
+sapling_turnip	$piece_sapling_turnip	Turnip
+Sausages	$item_sausages	Sausages
+scale_halfwall_1x2	$piece_scale_halfwall	Scalewood Half Wall
+scale_quarterwall_1x1	$piece_scale_quarterwall	Scalewood Quarter Wall
+scale_wall_2x2	$piece_scale_wall	Scalewood Wall
+scale_wall_roof_26	$piece_scale_26	Scalewood Wall 26° Left
+scale_wall_roof_26_flipped	$piece_scale_26_flipped	Scalewood Wall 26° Right
+scale_wall_roof_26_upsidedown	$piece_scale_26_upsidedown	Scalewood Wall 26° Right (Inverted)
+scale_wall_roof_26_upsidedown_flipped	$piece_scale_26_upsidedown_flipped	Scalewood Wall 26° Left (Inverted)
+scale_wall_roof_45	$piece_scale_45	Scalewood Wall 45° Left
+scale_wall_roof_45_flipped	$piece_scale_45_flipped	Scalewood Wall 45° Right
+scale_wall_roof_45_upsidedown	$piece_scale_45_upsidedown	Scalewood Wall 45° Right (Inverted)
+scale_wall_roof_45_upsidedown_flipped	$piece_scale_45_upsidedown_flipped	Scalewood Wall 45° Left (Inverted)
+scale_wall_roof_67	$piece_scale_67	Scalewood Wall 67° Left
+scale_wall_roof_67_flipped	$piece_scale_67_flipped	Scalewood Wall 67° Right
+scale_wall_roof_67_upsidedown	$piece_scale_67_upsidedown	Scalewood Wall 67° Right (Inverted)
+scale_wall_roof_67_upsidedown_flipped	$piece_scale_67_upsidedown_flipped	Scalewood Wall 67° Left (Inverted)
+ScaleHide	$item_scalehide	Scale Hide
+ScorchingMedley	$item_scorchingmedley	Scorching Medley
+Scythe	$item_scythe	Scythe
+ScytheHandle	$item_scythehandle	Scythe Handle
+Seal	$enemy_seal	Seal
+Seal_Pup	$enemy_seal_baby	Baby Seal
+SealBlubber	$item_blubber	Seal Blubber
+SealHide	$item_sealhide	Seal Pelt
+SealSoup	$item_sealsoup	Seal Meat Soup
+Seeker	$enemy_seeker	Seeker
+SeekerAspic	$item_seekeraspic	Seeker Aspic
+SeekerBrood	$enemy_babyseeker	Seeker Brood
+SeekerBrute	$enemy_seekerbrute	Seeker Soldier
+SeekerQueen	$enemy_seekerqueen	The Queen
+Serpent	$enemy_serpent	Serpent
+SerpentMeat	$item_serpentmeat	Serpent Meat
+SerpentMeatCooked	$item_serpentmeatcooked	Cooked Serpent Meat
+SerpentScale	$item_serpentscale	Serpent Scale
+SerpentStew	$item_serpentstew	Serpent Stew
+ShadowPerson	$enemy_shadowperson	Shadow
+SharpeningStone	$item_sharpeningstone	Sharpening Stone
+ShieldBanded	$item_shield_banded	Banded Shield
+ShieldBlackmetal	$item_shield_blackmetal	Black Metal Shield
+ShieldBlackmetalTower	$item_shield_blackmetal_tower	Black Metal Tower Shield
+ShieldBoneTower	$item_shield_bonetower	Bone Tower Shield
+ShieldBronzeBuckler	$item_shield_bronzebuckler	Bronze Buckler
+ShieldBucklerGoldUncooked	$item_shield_buckler_gold_uncooked	Cast: Nord Buckler
+ShieldCarapace	$item_shield_carapace	Carapace Shield
+ShieldCarapaceBuckler	$item_shield_carapacebuckler	Carapace Buckler
+ShieldCore	$item_shieldcore	Shield Core
+ShieldFlametal	$item_shield_flametal	Flametal Shield
+ShieldFlametalTower	$item_shield_flametal_tower	Flametal Tower Shield
+ShieldGold	$item_shield_gold	Nord Shield
+ShieldGoldBuckler	$item_shield_goldbuckler	Nord Buckler
+ShieldGoldTower	$item_shield_gold_tower	Nord Greatshield
+ShieldIronBuckler	$item_shield_ironbuckler	Iron Buckler
+ShieldIronSquare	$item_shield_iron_square	Iron Shield
+ShieldIronTower	$item_shield_iron_tower	Iron Tower Shield
+ShieldKnight	$item_shield_knight	Knight shield UNUSED
+ShieldRoots	$item_shield_roots	Shield of Roots
+ShieldRoundGoldUncooked	$item_shield_round_gold_uncooked	Cast: Nord Shield
+ShieldSerpentscale	$item_shield_serpentscale	Serpent Scale Shield
+ShieldSilver	$item_shield_silver	Silver Shield
+ShieldTowerGoldUncooked	$item_shield_tower_gold_uncooked	Cast: Nord Greatshield
+ShieldWood	$item_shield_wood	Wood Shield
+ShieldWoodTower	$item_shield_woodtower	Wood Tower Shield
+ShipSetting01	-	Stone ship
+ShipSetting02	-	Stone ship
+ShipSetting03	-	Stone ship
+ShipWreck01	-	Shipwreck
+ShipWreck01_DN	-	Shipwreck
+ShipWreck02	-	Shipwreck
+ShipWreck02_DN	-	Shipwreck
+ShipWreck03	-	Shipwreck
+ShipWreck04	-	Shipwreck
+ShocklateSmoothie	$item_shocklatesmoothie	Muckshake
+ShootStump	$prop_treestump	Stump
+Shovel	$item_snowshovel	Snow Shovel
+shrub_2	-	Shrub
+shrub_2_heath	-	Shrub
+sign	$piece_sign	Sign
+sign_notext	$piece_sign	Sign
+Silver	$item_silver	Silver
+SilverNecklace	$item_silvernecklace	Silver Necklace
+SilverOre	$item_silverore	Silver Ore
+silvervein	$piece_deposit_silvervein	Silver Vein
+silvervein_frac	$piece_deposit_silvervein	Silver Vein
+SizzlingBerryBroth	$item_sizzlingberrybroth	Sizzling Berry Broth
+Skeleton	$enemy_skeleton	Skeleton
+Skeleton_aspect	$enemy_skeleton	Skeleton
+Skeleton_DeepNorth	$enemy_skeleton	Skeleton
+Skeleton_Friendly	$enemy_skeleton_summoned	Skelett
+Skeleton_Hildir	$enemy_skeletonfire	<color=orange>Brenna</color>
+Skeleton_Hildir_nochest	$enemy_skeletonfire	<color=orange>Brenna</color>
+Skeleton_Meadows	$enemy_skeleton	Skeleton
+Skeleton_Meadows_noarcher	$enemy_skeleton	Skeleton
+Skeleton_Mountains	$enemy_skeleton	Skeleton
+Skeleton_Mountains_noarcher	$enemy_skeleton	Skeleton
+Skeleton_NoArcher	$enemy_skeleton	Skeleton
+Skeleton_Poison	$enemy_skeletonpoison	Rancid Remains
+Skeleton_Swamps	$enemy_skeleton	Skeleton
+Skeleton_Swamps_noarcher	$enemy_skeleton	Skeleton
+skull_pile	$piece_skullpile	Pile of Skulls
+Sled	$tool_sled	Sled
+SledgeDemolisher	$item_sledge_demolisher	Demolisher
+SledgeGold	$item_sledge_gold	Nord Sledge
+SledgeGold_BloodLightning	$item_mace2h_gold_bloodlightning	Thunderblood Sledge
+SledgeGold_FrostFire	$item_mace2h_gold_frostfire	Frostfire Sledge
+SledgeGoldUncooked	$item_sledge_gold_uncooked	Cast: Nord Sledge
+SledgeIron	$item_sledge_iron	Iron Sledge
+SledgeStagbreaker	$item_stagbreaker	Stagbreaker
+SledgeWood	$item_sledge_wood	Wooden Sledge
+SmallPartsGoldUncooked	$item_smallparts_gold_uncooked	SmallPartsGoldUncooked
+smelter	$piece_smelter	Smelter
+SmokedFish	$item_smokedfish	Smoked Fish
+SmokedMooseMeat	$item_smokedmoosemeat	Smoked Moose Meat
+Snowball	$item_snowball	Snowball
+SnowFirTree	$prop_timberwoodtree	Timber Tree
+SnowFirTree 2	$prop_timberwoodtree	Timber Tree
+SnowFirTree_small	$prop_fir	Fir
+Softtissue	$item_softtissue	Soft Tissue
+SP_ArmorBronzeChest	$item_chest_bronze	Bronze Plate Tunic
+SP_ArmorBronzeLegs	$item_legs_bronze	Bronze Plate Leggings
+SP_ArmorDress1	$item_chest_dress1	Plain Brown Dress
+SP_ArmorFenringChest	$item_chest_fenris	Fenris Coat
+SP_ArmorFenringLegs	$item_legs_fenris	Fenris Leggings
+SP_ArmorLeatherLegs	$item_legs_leather	Leather Trousers
+SP_ArmorMageChest	$item_chest_mage	Eitr-weave Robe
+SP_ArmorMageChest_Ashlands	$item_chest_mage_ashlands	Robes of Embla
+SP_ArmorMageLegs	$item_legs_mage	Eitr-weave Trousers
+SP_ArmorMageLegs_Ashlands	$item_legs_mage_ashlands	Trousers of Embla
+SP_ArmorPaddedCuirass	$item_chest_pcuirass	Padded Cuirass
+SP_ArmorPaddedGreaves	$item_legs_pgreaves	Padded Greaves
+SP_ArmorTrollLeatherChest	$item_chest_trollleather	Troll Leather Tunic
+SP_ArmorTrollLeatherLegs	$item_legs_trollleather	Troll Leather Trousers
+SP_ArmorTunic5	$item_chest_tunic5	Red Tunic with Cape
+SP_AxeBronze	$item_axe_bronze	Bronze Axe
+SP_BattleaxeCrystal	$item_battleaxe_crystal	Crystal Battleaxe
+SP_BowDraugrFang	$item_bow_draugrfang	Draugr Fang
+SP_CapeLinen	$item_cape_linen	Linen Cape
+SP_CapeTrollHide	$item_cape_trollhide	Troll Hide Cape
+SP_CapeWolf	$item_cape_wolf	Wolf Fur Cape
+SP_HelmetBronze	$item_helmet_bronze	Bronze Helmet
+SP_KnifeSilver	$item_knife_silver	Silver Knife
+SP_KnifeSkollAndHati	$item_knife_skollandhati	Skoll and Hati
+SP_ShieldBlackmetalTower	$item_shield_blackmetal_tower	Black Metal Tower Shield
+SP_StaffFireball	$item_stafffireball	Staff of Embers
+SP_StaffLightning	$item_staff_lightning	Dundr
+SP_SwordBlackmetal	$item_sword_blackmetal	Black Metal Sword
+Sparkler	$item_sparkler	Sparkler
+SparklingShroomshake	$item_sparklingshroomshake	Sparkling Shroomshake
+Spawner_CharredCross	$enemy_charredspawnercross	Effigy of Malice
+Spawner_CharredStone	$enemy_charredtwitcherspawner	Monument of Torment
+Spawner_CharredStone_Elite	$enemy_charredtwitcherspawner	Monument of Torment
+Spawner_CharredStone_event	$enemy_charredtwitcherspawner	Monument of Torment
+Spawner_DraugrPile	$enemy_draugrspawner	Body Pile
+Spawner_GreydwarfNest	$enemy_greydwarfspawner	Greydwarf Nest
+Spawner_Hole	$enemy_holespawner	Wardrobe Shaft
+Spawner_Hole_double	$enemy_holespawner	Wardrobe Shaft
+SpearBronze	$item_spear_bronze	Bronze Spear
+SpearCarapace	$item_spear_carapace	Carapace Spear
+SpearChitin	$item_spear_chitin	Abyssal Harpoon
+SpearElderbark	$item_spear_ancientbark	Ancient Bark Spear
+SpearFlint	$item_spear_flint	Flint Spear
+SpearGold	$item_spear_gold	Nord Spear
+SpearGold_BloodLightning	$item_spear_gold_bloodlightning	Thunderblood Spear
+SpearGold_FrostFire	$item_spear_gold_frostfire	Frostfire Spear
+SpearGoldUncooked	$item_spear_gold_uncooked	Cast: Nord Spear
+SpearSplitner	$item_spear_splitner	Splitnir
+SpearSplitner_Blood	$item_spear_splitner_blood	Splitnir the Bleeding
+SpearSplitner_Lightning	$item_spear_splitner_lightning	Splitnir the Storming
+SpearSplitner_Nature	$item_spear_splitner_nature	Splitnir the Primal
+SpearWolfFang	$item_spear_wolffang	Fang Spear
+SpearWood	$item_spear_wood	Wooden Spear
+SpiceAshlands	$item_spiceashlands	Fiery Spice Powder
+SpiceDeepNorth	$item_spicedeepnorth	Seasoning of the Gourd
+SpiceForests	$item_spiceforests	Woodland Herb Blend
+SpiceMistlands	$item_spicemistlands	Herbs of the Hidden Hills
+SpiceMountains	$item_spicemountains	Mountain Peak Pepper Powder
+SpiceOceans	$item_spiceoceans	Seafarer's Herbs
+SpicePlains	$item_spiceplains	Grasslands Herbalist Harvest
+SpicyMarmalade	$item_spicymarmalade	Spicy Marmalade
+staff_greenroots_tentaroot	$enemy_summonedroot	Summoned Root
+StaffClusterbomb	$item_staffclusterbomb	Staff of Fracturing
+StaffFireball	$item_stafffireball	Staff of Embers
+StaffFrostOrbs	$item_staff_frostorbs	Northern Vengeance
+StaffFrostOrbsUncooked	$item_frostorbs_uncooked	Cast: Northern Vengeance
+StaffGreenRoots	$item_staffgreenroots	Staff of the Wild
+StaffIceShards	$item_stafficeshards	Staff of Frost
+StaffLightning	$item_staff_lightning	Dundr
+StaffOrbofAhri	$item_staff_orbofahri	Echo Spike
+StaffOrbofAhriUncooked	$item_staff_orbofahri_uncooked	Cast: Echo Spike
+StaffRedTroll	$item_staffredtroll	Trollstav
+StaffShield	$item_staffshield	Staff of Protection
+StaffSkeleton	$item_staffskeleton	Dead Raiser
+StaffSpiritCaller	$item_staff_spiritcaller	Spirit Caller
+StaffSpiritCallerUncooked	$item_staff_spiritcaller_uncooked	Cast: Spirit Caller
+StaffThunderBlood	$item_staff_thunderblood	Lightning Strike
+StaffThunderbloodUncooked	$item_staff_thunderblood_uncooked	Cast: Lightning Strike
+stake_wall	$piece_stakewall	Stakewall
+StartTemple	-	Sacrificial Stones
+StatueEvil	-	Evil statue
+stave_beam_26	$piece_stavebeam26	Timber Beam 26°
+stave_beam_2m	$piece_stavebeam2	Timber Beam 2m
+stave_beam_45	$piece_stavebeam45	Timber Beam 45°
+stave_beam_4m	$piece_stavebeam4	Timber Beam 4m
+stave_beam_67	$piece_stavebeam67	Timber Beam 67°
+stave_deco_beam_26	$piece_stavedecobeam26	Decorated Timber Beam 26°
+stave_deco_beam_2m	$piece_stave_deco_beam_2m	Decorated Timber Beam 2m
+stave_deco_beam_45	$piece_stavedecobeam45	Decorated Timber Beam 45°
+stave_deco_beam_67	$piece_stavedecobeam67	Decorated Timber Beam 67°
+stave_deco_pole_2m	$piece_stave_deco_pole_2m	Decorated Timber Pole 2m
+stave_deco_wall_2x2	$piece_deco_stave_wall	Lathed Timber Wall
+stave_gate	$piece_stavegate	Timberwood Gate
+stave_pole_2m	$piece_stave_pole_2m	Timber Pole 2m
+stave_pole_4m	$piece_stave_pole_4m	Timber Pole 4m
+stave_wall_2x2	$piece_stave_wall	Timber Wall
+stave_wall_cross_26	$piece_stavecross26	Timber Roof Cross 26°
+stave_wall_cross_45	$piece_stavecross45	Timber Roof Cross 45°
+stave_wall_cross_67	$piece_stavewallrooftop67	Timber Roof Cross 67°
+Stone	$item_stone	Stone
+stone_arch	$piece_stonearch	Stone Arch
+stone_fence	$piece_stonefence	Stone Fence
+stone_floor	$piece_stonefloor4x4	Stone Floor 4x4
+stone_floor_2x2	$piece_stonefloor2x2	Stone Floor 2x2
+stone_pile	$piece_stonepile	Stone Pile
+stone_pillar	$piece_stonepillar	Stone Pillar
+stone_stair	$piece_stonestair	Stone Stair
+stone_wall_1x1	$piece_stonewall1x1	Stone Wall 1x1
+stone_wall_1x1_ruin	-	Ruined wall
+stone_wall_2x1	$piece_stonewall2x1	Stone Wall 2x1
+stone_wall_2x1_ruin	-	Ruined wall
+stone_wall_4x2	$piece_stonewall4x2	Stone Wall 4x2
+stone_wall_ruin	-	Ruined wall
+stone_wall_ruin_2	-	Ruined wall
+StoneCircle	-	Stone circle
+StoneGolem	$enemy_stonegolem	Stone Golem
+StoneHenge1	-	Standing stones
+StoneHenge2	-	Standing stones
+StoneHenge3	-	Standing stones
+StoneHenge4	-	Standing stones
+StoneHenge5	-	Standing stones
+StoneHenge6	-	Standing stones
+StoneHouse1_heath	-	Stone house
+StoneHouse2_heath	-	Stone house
+StoneHouse3	-	Stone house
+StoneHouse4	-	Stone house
+StoneHouse5_heath	-	Stone house
+StoneRock	$item_stonerock	Rock
+StoneTower1	-	Stone tower
+StoneTower3	-	Stone tower
+StoneTowerRuins03	-	Tower ruin
+StoneTowerRuins04	-	Tower ruin
+StoneTowerRuins05	-	Tower ruin
+StoneTowerRuins05_leet	-	Tower ruin
+StoneTowerRuins07	-	Tower ruin
+StoneTowerRuins07_sunk	-	Sunken tower ruin
+StoneTowerRuins08	-	Tower ruin
+StoneTowerRuins08_sunk	-	Sunken tower ruin
+StoneTowerRuins09	-	Tower ruin
+StoneTowerRuins09_sunk	-	Sunken tower ruin
+StoneTowerRuins10	-	Tower ruin
+StoneTowerRuins10_sunk	-	Sunken tower ruin
+stubbe	$prop_treestump	Stump
+stubbe_deepnorth	$prop_treestump	Stump
+StumpHole	-	Hollow stump
+StumpHut	-	Hollow stump
+StumpLog	-	Hollow log
+SulfurArch	-	Sulfur arch
+SulfurStone	$item_sulfurstone	Sulfur
+SunkenCrypt4	$location_sunkencrypt	Sunken Crypts
+Surtling	$enemy_surtling	Surtling
+SurtlingCore	$item_surtlingcore	Surtling Core
+SwampHut1	-	Swamp hut
+SwampHut1_1	-	Swamp hut
+SwampHut2	-	Swamp hut
+SwampHut2_1	-	Swamp hut
+SwampHut3	-	Swamp hut
+SwampHut3_1	-	Swamp hut
+SwampHut4	-	Swamp hut
+SwampHut5	-	Swamp hut
+SwampRuin1	-	Swamp ruin
+SwampRuin2	-	Swamp ruin
+SwampTree1	$prop_ancienttree	Ancient Tree
+SwampTree1_log	$prop_treelog	Log
+SwampTree1_Stub	$prop_treestump	Stump
+SwampTree2	-	Dead tree
+SwampTree2_log	$prop_treelog	Log
+SwampWell1	-	Swamp well
+SwordBlackmetal	$item_sword_blackmetal	Black Metal Sword
+SwordBronze	$item_sword_bronze	Bronze Sword
+SwordDyrnwyn	$item_sword_dyrnwyn	Dyrnwyn
+SwordGold	$item_sword_gold	Nord Sword
+SwordGold_BloodLightning	$item_sword_gold_bloodlightning	Thunderblood Sword
+SwordGold_FrostFire	$item_sword_gold_frostfire	Frostfire Sword
+SwordGoldUncooked	$item_sword_gold_uncooked	Cast: Nord Sword
+SwordIron	$item_sword_iron	Iron Sword
+SwordIronFire	$item_sword_fire	Dyrnwyn
+SwordMistwalker	$item_sword_mistwalker	Mistwalker
+SwordNiedhogg	$item_sword_niedhogg	Nidhögg
+SwordNiedhoggBlood	$item_sword_niedhogg_blood	Nidhögg the Bleeding
+SwordNiedhoggLightning	$item_sword_niedhogg_lightning	Nidhögg the Thundering
+SwordNiedhoggNature	$item_sword_niedhogg_nature	Nidhögg the Primal
+SwordSilver	$item_sword_silver	Silver Sword
+SwordWood	$item_sword_wood	Wooden Sword
+Tankard	$item_tankard	Tankard
+Tankard_dvergr	$item_dvergrtankard	Dvergr Tankard
+TankardAnniversary	$item_tankard_anniversary	Horn of Celebration
+TankardOdin	$item_tankard_odin	Mead Horn of Oden
+Tar	$item_tar	Tar
+TarPit1	-	Tar pit
+TarPit1_1	-	Tar pit
+TarPit2	-	Tar pit
+TarPit2_1	-	Tar pit
+TarPit3	-	Tar pit
+TarPit3_1	-	Tar pit
+TentaRoot	$enemy_root	Root
+TentaRoot_wild	$enemy_root	Root
+TheHive	$enemy_thehive	TheHive
+TheHole01	$location_darkesthole	The Hole
+Thistle	$item_thistle	Thistle
+THSwordGold	$item_sword2h_gold	Nord Greatsword
+THSwordGold_BloodLightning	$item_sword2h_gold_bloodlightning	Thunderblood Greatsword
+THSwordGold_FrostFire	$item_sword2h_gold_frostfire	Frostfire Greatsword
+THSwordGoldUncooked	$item_sword2h_gold_uncooked	Cast: Nord Greatsword
+THSwordKrom	$item_sword_krom	Krom
+THSwordSlayer	$item_sword_slayer	Slayer
+THSwordSlayerBlood	$item_sword_slayer_blood	Brutal Slayer
+THSwordSlayerLightning	$item_sword_slayer_lightning	Scourging Slayer
+THSwordSlayerNature	$item_sword_slayer_nature	Primal Slayer
+THSwordWood	$item_sword_wood_2h	Wooden Greatsword
+Thunderstone	$item_thunderstone	Thunder Stone
+Tick	$enemy_tick	Tick
+Tin	$item_tin	Tin
+TinOre	$item_tinore	Tin Ore
+Torch	$item_torch	Torch
+TorchMist	$item_torchmist	TorchMist
+treasure_pile	$piece_treasure_pile	Coin Pile
+treasure_stack	$piece_treasure_stack	Coin Stack
+TreasureChest_charredfortress	$piece_charredchest	Charred Chest
+TrinketBlackDamageHealth	$item_trinketblackdamagedealth	Bracelets of the Brave
+TrinketBlackStamina	$item_trinketblackdtamina	Evasion Mantle
+TrinketBloodGoldHealth	$item_trinketbloodgoldhealth	Neckstabber
+TrinketBloodGoldStamina	$item_trinketbloodgoldstamina	Witch Crown
+TrinketBronzeHealth	$item_trinketbronzehealth	Heart of the Forest
+TrinketBronzeStamina	$item_trinketbronzestamina	Bronze Pendant
+TrinketCarapaceEitr	$item_trinketcarapaceeitr	Pulsating Earrings
+TrinketChitinSwim	$item_trinketchitinswim	Fins of Destiny
+TrinketFlametalEitr	$item_trinketflametaleitr	Jörmundling
+TrinketFlametalStaminaHealth	$item_trinketflametalstaminahealth	Brimstone
+TrinketIronHealth	$item_trinketironhealth	Iron Brooch
+TrinketIronStamina	$item_trinketironstamina	Nimble Anklet
+TrinketScaleStaminaDamage	$item_trinketscalestaminadamage	Resounding Shackle
+TrinketSilverDamage	$item_trinketsilverdamage	Wolf Sight
+TrinketSilverResist	$item_trinketsilverresist	Crystal Heart
+Troll	$enemy_troll	Troll
+Troll_sleeping	$enemy_troll	Troll
+Troll_Summoned	$enemy_summonedtroll	Summoned Troll
+TrollCave02	$location_forestcave	Troll Cave
+TrollFrost	$enemy_trollfrost	Gammeltroll
+TrollFrost_Dead	$piece_deposit_goldvein	Petrified Gammeltroll
+TrollFrost_Frac	$piece_deposit_goldvein	Petrified Gammeltroll
+TrollFrost_Frac_arm	$piece_deposit_goldvein	Petrified Gammeltroll
+TrollFrost_Frac_legs	$piece_deposit_goldvein	Petrified Gammeltroll
+TrollHide	$item_trollhide	Troll Hide
+TrophyAbomination	$item_trophy_abomination	Abomination Trophy
+TrophyAsksvin	$item_trophy_asksvin	Asksvin Trophy
+TrophyBarka	$item_trophy_barka	Barka Trophy
+TrophyBjorn	$item_trophy_bjorn	Bear Trophy
+TrophyBjornUndead	$item_trophy_bjorn_undead	Vile Trophy
+TrophyBlob	$item_trophy_blob	Blob Trophy
+TrophyBlob_Frost	$item_trophy_blob_frost	Frost Blob Trophy
+TrophyBlob_Lava	$item_trophy_blob_lava	Lava Blob Trophy
+TrophyBlob_Morkhalla	$item_trophy_blob_morkhalla	Pulp Trophy
+TrophyBoar	$item_trophy_boar	Boar Trophy
+TrophyBonemass	$item_trophy_bonemass	Bonemass Trophy
+TrophyBonemawSerpent	$item_trophy_bonemaw	Bonemaw Trophy
+TrophyCharredArcher	$item_trophy_charredarcher	Marksman Trophy
+TrophyCharredMage	$item_trophy_charredmage	Warlock Trophy
+TrophyCharredMelee	$item_trophy_charredmelee	Warrior Trophy
+TrophyCultist	$item_trophy_cultist	Cultist Trophy
+TrophyCultist_Hildir	$item_trophy_cultist_hildir	Geirrhafa Trophy
+TrophyDeathsquito	$item_trophy_deathsquito	Deathsquito Trophy
+TrophyDeer	$item_trophy_deer	Deer Trophy
+TrophyDeerWhite	$item_trophy_deer_white	TrophyDeerWhite
+TrophyDragonQueen	$item_trophy_dragonqueen	Moder Trophy
+TrophyDraugr	$item_trophy_draugr	Draugr Trophy
+TrophyDraugrElite	$item_trophy_draugrelite	Draugr Elite Trophy
+TrophyDraugrFem	$item_trophy_draugr	Draugr Trophy
+TrophyDvergr	$item_trophy_dvergr	Dvergr Trophy
+TrophyEikthyr	$item_trophy_eikthyr	Eikthyr Trophy
+TrophyElaking	$item_trophy_elaking	Elaking Trophy
+TrophyFader	$item_trophy_fader	Fader Trophy
+TrophyFallenValkyrie	$item_trophy_fallenvalkyrie	Fallen Valkyrie Trophy
+TrophyFenring	$item_trophy_fenring	Fenring Trophy
+TrophyForestTroll	$item_trophy_troll	Troll Trophy
+TrophyFrostTroll	$item_trophy_troll	Troll Trophy
+TrophyGhost	$item_trophy_ghost	Ghost Trophy
+TrophyGjall	$item_trophy_gjall	Gjall Trophy
+TrophyGoblin	$item_trophy_goblin	Fuling Trophy
+TrophyGoblinBrute	$item_trophy_goblinbrute	Fuling Berserker Trophy
+TrophyGoblinBruteBrosBrute	$item_trophy_brutebro	Thungr Trophy
+TrophyGoblinBruteBrosShaman	$item_trophy_shamanbro	Zil Trophy
+TrophyGoblinKing	$item_trophy_goblinking	Yagluth Trophy
+TrophyGoblinShaman	$item_trophy_goblinshaman	Fuling Shaman Trophy
+TrophyGreydwarf	$item_trophy_greydwarf	Greydwarf Trophy
+TrophyGreydwarfBrute	$item_trophy_greydwarfbrute	Greydwarf Brute Trophy
+TrophyGreydwarfShaman	$item_trophy_greydwarfshaman	Greydwarf Shaman Trophy
+TrophyGrowth	$item_trophy_growth	Growth Trophy
+TrophyHare	$item_trophy_hare	Hare Trophy
+TrophyHatchling	$item_trophy_hatchling	Drake Trophy
+TrophyJotunWarrior	$item_trophy_jotunwarrior	Krigen Trophy
+TrophyJotunWitch	$item_trophy_jotunwitch	Hexen Trophy
+TrophyKvastur	$enemy_kvastur	Kvastur
+TrophyLeech	$item_trophy_leech	Leech Trophy
+TrophyLox	$item_trophy_lox	Lox Trophy
+TrophyMole	$item_trophy_mole	Eyeless One Trophy
+TrophyMoose	$item_trophy_moose	Moose Trophy
+TrophyMorgen	$item_trophy_morgen	Morgen Trophy
+TrophyNeck	$item_trophy_neck	Neck Trophy
+TrophySeal	$item_trophy_seal	Seal Trophy
+TrophySeeker	$item_trophy_seeker	Seeker Trophy
+TrophySeekerBrute	$item_trophy_seeker_brute	Seeker Soldier Trophy
+TrophySeekerQueen	$item_trophy_seekerqueen	The Queen Trophy
+TrophySerpent	$item_trophy_serpent	Serpent Trophy
+TrophySGolem	$item_trophy_sgolem	Stone Golem Trophy
+TrophySkeleton	$item_trophy_skeleton	Skeleton Trophy
+TrophySkeletonHildir	$item_trophy_skeleton_hildir	Brenna Trophy
+TrophySkeletonPoison	$item_trophy_skeletonpoison	Rancid Remains Trophy
+TrophySurtling	$item_trophy_surtling	Surtling Trophy
+TrophyTheElder	$item_trophy_elder	The Elder Trophy
+TrophyTick	$item_trophy_tick	Tick Trophy
+TrophyUlv	$item_trophy_ulv	Ulv Trophy
+TrophyVolture	$item_trophy_volture	Volture Trophy
+TrophyWolf	$item_trophy_wolf	Wolf Trophy
+TrophyWraith	$item_trophy_wraith	Wraith Trophy
+TrophyWrithan	$item_trophy_writhan	Writhan Trophy
+Turnip	$item_turnip	Turnip
+TurnipSeeds	$item_turnipseeds	Turnip Seeds
+TurnipStew	$item_turnipstew	Turnip Stew
+TurretBolt	$item_turretbolt	Black Metal Missile
+TurretBoltBloodgold	$item_turretbolt_bloodgold	Bloodgold Missile
+TurretBoltBone	$item_turretboltbone	TurretBoltBone
+TurretBoltFlametal	$item_turretbolt_flametal	Flametal Missile
+TurretBoltWood	$item_turretboltwood	Wooden Missile
+Ulv	$enemy_ulv	Ulv
+Unbjorn	$enemy_unbjorn	Vile
+UndeadBjornRibcage	$item_UndeadBjornRibcage	Vile Ribcage
+UnstableLavaRock	$item_destructible_unstablelavarock	Unstable Lava Rock
+Upgrader0Armor	$item_upgrader_tier0 $item_upgrader_armor $item_upgrader_name	Upgrader0Armor
+Upgrader0Weapon	$item_upgrader_tier0 $item_upgrader_weapon $item_upgrader_name	Upgrader0Weapon
+Upgrader1Armor	$item_upgrader_tier1 $item_upgrader_armor $item_upgrader_name	Upgrader1Armor
+Upgrader1Weapon	$item_upgrader_tier1 $item_upgrader_weapon $item_upgrader_name	Upgrader1Weapon
+Upgrader2Armor	$item_upgrader_tier2 $item_upgrader_armor $item_upgrader_name	Upgrader2Armor
+Upgrader2Weapon	$item_upgrader_tier2 $item_upgrader_weapon $item_upgrader_name	Upgrader2Weapon
+Upgrader3Armor	$item_upgrader_tier3 $item_upgrader_armor $item_upgrader_name	Upgrader3Armor
+Upgrader3Weapon	$item_upgrader_tier3 $item_upgrader_weapon $item_upgrader_name	Upgrader3Weapon
+Upgrader4Armor	$item_upgrader_tier4 $item_upgrader_armor $item_upgrader_name	Upgrader4Armor
+Upgrader4Weapon	$item_upgrader_tier4 $item_upgrader_weapon $item_upgrader_name	Upgrader4Weapon
+Upgrader5Armor	$item_upgrader_tier5 $item_upgrader_armor $item_upgrader_name	Upgrader5Armor
+Upgrader5Weapon	$item_upgrader_tier5 $item_upgrader_weapon $item_upgrader_name	Upgrader5Weapon
+Upgrader6Armor	$item_upgrader_tier6 $item_upgrader_armor $item_upgrader_name	Upgrader6Armor
+Upgrader6Weapon	$item_upgrader_tier6 $item_upgrader_weapon $item_upgrader_name	Upgrader6Weapon
+Upgrader7Armor	$item_upgrader_tier7 $item_upgrader_armor $item_upgrader_name	Upgrader7Armor
+Upgrader7Weapon	$item_upgrader_tier7 $item_upgrader_weapon $item_upgrader_name	Upgrader7Weapon
+Vendor_BlackForest	$npc_haldor	Haldor
+vfx_edge_clouds	-	Clouds
+vfx_swamp_mist	-	Swamp mist
+VikingCupcake	$item_vikingcupcake	Frosted Sweetbread
+VikingCupcakeUncooked	$item_vikingcupcake_uncooked	Unbaked Sweetbread
+VikingShip	$ship_longship	Longship
+VikingShip_Ashlands	$ship_longship_ashlands	Drakkar
+VineAsh	$item_vineberry	Vineberry Cluster
+VineAsh_sapling	$piece_sapling_vineash	Ashvine
+Vineberry	$item_vineberry	Vineberry Cluster
+VineberrySeeds	$item_vineberryseeds	Vineberry Seeds
+VineGreen	$item_vineberry	Vineberry Cluster
+VineGreen_sapling	$piece_sapling_vinegreen	Ivy
+VineGreenSeeds	$item_vinegreenseeds	Ivy Seeds
+Voidplasm	$item_ectoplasm	Ectoplasm
+Volture	$enemy_volture	Volture
+VoltureEgg	$item_voltureegg	Volture Egg
+VoltureMeat	$item_volture_meat	Volture Meat
+VoltureNest	-	Volture nest
+Waymarker01	-	Cairn
+Waymarker02	-	Cairn
+windmill	$piece_windmill	Windmill
+Wishbone	$item_wishbone	Wishbone
+Wisp	$item_wisp	Wisp
+WitheredBone	$item_witheredbone	Withered Bone
+Wolf	$enemy_wolf	Wolf
+Wolf_cub	$enemy_wolfcub	Wolf Cub
+Wolf_spiritcaller	$spiritcaller_wolf	Wolf_spiritcaller
+WolfClaw	$item_wolfclaw	Fenris Claw
+WolfFang	$item_wolffang	Wolf Fang
+WolfHairBundle	$item_wolfhairbundle	Fenris Hair
+WolfJerky	$item_wolfjerky	Wolf Jerky
+WolfMeat	$item_wolf_meat	Wolf Meat
+WolfMeatSkewer	$item_wolf_skewer	Wolf Skewer
+WolfPelt	$item_wolfpelt	Wolf Pelt
+Wood	$item_wood	Wood
+wood_beam	$piece_woodbeam2	Wood Beam 2 m
+wood_beam_1	$piece_woodbeam1	Wood Beam 1 m
+wood_beam_26	$piece_woodbeam26	Wood Beam 26°
+wood_beam_45	$piece_woodbeam45	Wood Beam 45°
+wood_beam_67	$piece_woodbeam67	Wood Beam 67°
+wood_core_stack	$piece_woodcorestack	Corewood Stack
+wood_door	$piece_wooddoor	Wood Door
+wood_dragon1	$piece_wooddragon	Wood Dragon Adornment
+wood_fence	$piece_woodfence	Roundpole Fence
+wood_fence_gate	$piece_woodfencegate	Roundpole Gate
+wood_fine_stack	$piece_woodfinestack	Finewood Stack
+wood_floor	$piece_woodfloor2x2	Wood Floor 2x2
+wood_floor_1x1	$piece_woodfloor1x1	Wood Floor 1x1
+wood_frost_stack	$piece_woodfroststack	Timberwood Stack
+wood_gate	$piece_woodgate	Wood Gate
+wood_ledge	$piece_woodledge	Wood Ledge
+wood_log_26	$piece_woodlog26	Log Beam 26°
+wood_log_45	$piece_woodlog45	Log Beam 45°
+wood_log_67	$piece_woodlog67	Log Beam 67°
+wood_pole	$piece_woodpole	Wood Pole 1 m
+wood_pole2	$piece_woodpole2	Wood Pole 2 m
+wood_pole_log	$piece_logpole2	Log Pole 2 m
+wood_pole_log_4	$piece_logpole4	Log Pole 4 m
+wood_pole_log_4_worn	$piece_logpole4	Log Pole 4 m
+wood_roof	$piece_woodroof26	Thatch Roof 26°
+wood_roof_45	$piece_woodroof45	Thatch Roof 45°
+wood_roof_67	$piece_woodroof67	Thatch Roof 67°
+wood_roof_icorner	$piece_woodrooficorner	Thatch Roof Inner Corner 26°
+wood_roof_icorner_45	$piece_woodrooficorner45	Thatch Roof Inner Corner 45°
+wood_roof_icorner_67	$piece_woodrooficorner67	Thatch Roof Inner Corner 67°
+wood_roof_ocorner	$piece_woodroofocorner	Thatch Roof Outer Corner 26°
+wood_roof_ocorner_45	$piece_woodroofocorner45	Thatch Roof Outer Corner 45°
+wood_roof_ocorner_67	$piece_woodroofocorner67	Thatch Roof Outer Corner 67°
+wood_roof_top	$piece_woodrooftop	Thatch Roof Ridge 26°
+wood_roof_top_45	$piece_woodrooftop45	Thatch Roof Ridge 45°
+wood_roof_top_67	$piece_woodrooftop67	Thatch Roof Ridge 67°
+wood_stack	$piece_woodstack	Wood Stack
+wood_stair	$piece_woodstair	Wood Stairs
+wood_stepladder	$piece_woodstepladder	Wood Ladder
+wood_wall_half	$piece_woodwallhalf	Wood Wall Half
+wood_wall_log	$piece_logbeam2	Log Beam 2 m
+wood_wall_log_4x0.5	$piece_logbeam4	Log Beam 4 m
+wood_wall_quarter	$piece_woodwallquarter	Wood Wall 1x1
+wood_wall_roof	$piece_woodwallroof	Wood Wall 26°
+wood_wall_roof_45	$piece_woodwallroof45	Wood Wall 45°
+wood_wall_roof_45_upsidedown	$piece_woodwallroof45_upsidedown	Wood Wall 45° (Inverted)
+wood_wall_roof_67_a	$piece_woodwallroof67	Wood Wall 67°
+wood_wall_roof_67_upsidedown	$piece_woodwallroof67upsidedown	Wood Wall 67° (Inverted)
+wood_wall_roof_a	$piece_woodwallroof	Wood Wall 26°
+wood_wall_roof_top	$piece_woodwallrooftop	Wood Roof Cross 26°
+wood_wall_roof_top_45	$piece_woodwallrooftop45	Wood Roof Cross 45°
+wood_wall_roof_top_67	$piece_woodwallrooftop67	Wood Roof Cross 67°
+wood_wall_roof_upsidedown	$piece_woodwallroof_upsidedown	Wood Wall 26° (Inverted)
+wood_window	$piece_woodwindowshutter	Wood Shutter
+wood_yggdrasil_stack	$piece_yggdrasilstack	Yggdrasil Wood Stack
+wooden_path	-	Wooden path
+WoodFarm1	-	Abandoned farm
+WoodHouse1	-	Abandoned house
+WoodHouse10	-	Abandoned house
+WoodHouse11	-	Abandoned house
+WoodHouse12	-	Abandoned house
+WoodHouse13	-	Abandoned house
+WoodHouse2	-	Abandoned house
+WoodHouse3	-	Abandoned house
+WoodHouse4	-	Abandoned house
+WoodHouse5	-	Abandoned house
+WoodHouse6	-	Abandoned house
+WoodHouse7	-	Abandoned house
+WoodHouse8	-	Abandoned house
+WoodHouse9	-	Abandoned house
+woodiron_beam	$piece_woodironbeam	Wood Iron Beam
+woodiron_beam_26	$piece_woodironbeam_26	Wood Iron Beam 26°
+woodiron_beam_45	$piece_woodironbeam_45	Wood Iron Beam 45°
+woodiron_beam_67	$piece_ironwoodbeam67	Wood Iron Beam 67°
+woodiron_pole	$piece_woodironpole	Wood Iron Pole
+WoodVillage1	-	Abandoned village
+WoodVillage2	-	Abandoned village
+woodwall	$piece_woodwall	Wood Wall
+Wraith	$enemy_wraith	Wraith
+Writhan	$enemy_writhan	Writhan
+WrithanRoots	$item_writhanroots	Writhan Roots
+YagluthDrop	$item_yagluththing	Torn Spirit
+YggaShoot1	$prop_yggashoot	Yggdrasil Shoot
+YggaShoot2	$prop_yggashoot	Yggdrasil Shoot
+YggaShoot3	$prop_yggashoot	Yggdrasil Shoot
+yggashoot_log	$prop_treelog	Log
+yggashoot_log_half	$prop_treelog	Log
+YggaShoot_small1	$prop_yggashoot	Yggdrasil Shoot
+YggdrasilPorridge	$item_yggdrasilporridge	Yggdrasil Porridge
+YggdrasilRoot	-	Yggdrasil root
+YggdrasilWood	$item_yggdrasilwood	Yggdrasil Wood
+YmirRemains	$item_ymirremains	Ymir Flesh
