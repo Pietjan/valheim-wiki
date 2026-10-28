@@ -68,7 +68,7 @@ function dispatch(m) {
     engineVersion = m.version;
     return;
   }
-  if (m.type === 'point' || m.type === 'tile' || (m.type === 'error' && m.id !== undefined)) {
+  if (m.type === 'point' || m.type === 'tile' || m.type === 'zone' || (m.type === 'error' && m.id !== undefined)) {
     const p = points.get(m.id);
     if (p) {
       points.delete(m.id);
@@ -277,6 +277,20 @@ class Handle {
     return new Promise((resolve, reject) => {
       points.set(id, { resolve, reject });
       getWorker().postMessage({ type: 'tile', seed: this.seed, cx: +cx, cz: +cz, span: +span, n: n | 0, id });
+    });
+  }
+
+  // zone asks the engine what stands in one 64 m zone (zx, zz as
+  // ZoneSystem counts them, the origin zone centred on 0): {names, kinds,
+  // ids: Uint16Array (an index into names per place), data: Float32Array
+  // (x, y, z, qx, qy, qz, qw, scale per place)}. The first zone of a world
+  // replayed from the cache costs the engine its biome map, some seconds,
+  // reported as progress with phase 'scene'.
+  zone(zx, zz) {
+    const id = ++pointID;
+    return new Promise((resolve, reject) => {
+      points.set(id, { resolve, reject });
+      getWorker().postMessage({ type: 'zone', seed: this.seed, zx: zx | 0, zz: zz | 0, id });
     });
   }
 

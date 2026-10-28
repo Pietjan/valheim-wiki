@@ -22,6 +22,11 @@
 // frame. The sea is one quad at the water level, tinted by the depth under
 // it; the sky is a gradient behind everything.
 //
+// Under about a kilometre and a half the view asks the engine what stands
+// in the zones around the camera's target — the vegetation the zone build
+// scatters and the sites' models — and draws them instanced from the
+// pack under static/models/ (models.js), nearest zones first.
+//
 // Over the GL canvas sits the same 2D overlay the map has: round site icons
 // projected onto the ground, scaled by their distance, decluttered when
 // crowded. Drag to pan, right-drag (or shift, or two fingers) to orbit and
@@ -29,6 +34,7 @@
 // compass is the caller's: onView reports the yaw.
 
 import { markerImage, declutter, drawMarkerDisc, drawMarkerLabel } from './worldmap.js';
+import { ModelStore } from './models.js';
 
 const MAP_RADIUS = 12288;
 const WORLD_RADIUS = 10500;
@@ -44,6 +50,13 @@ const LEVELS = [
 ];
 
 const FLIP_Z = new Float32Array([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1]);
+// The scene: zones are asked for under SCENE_SHOW metres of camera
+// distance, within a radius that grows with it, and forgotten past it.
+const SCENE_SHOW = 1500;
+const ZONE = 64;
+const ZONE_RADIUS = d => Math.max(140, Math.min(420, d * 0.9));
+const ZONE_INFLIGHT = 4;
+
 const PATCH = 64;                 // quads a side per instanced patch
 const SKIRT = 1;                  // extra ring of vertices, pushed down
 const VERTS = PATCH + 1 + 2 * SKIRT;
@@ -425,6 +438,61 @@ void main() {
   outColor = vec4(c, 1.0);
 }`;
 
+const MODEL_VERT = `#version 300 es
+precision highp float;
+layout(location = 0) in vec3 aPos;
+layout(location = 1) in vec3 aNrm;
+layout(location = 2) in vec2 aUV;
+layout(location = 3) in vec4 aInst;     // x, y, z, scale
+layout(location = 4) in vec4 aQuat;     // x, y, z, w
+uniform mat4 uViewProj;
+uniform float uWater, uRelief;
+out vec3 vNrm;
+out vec2 vUV;
+out vec3 vWorld;
+vec3 rot(vec4 q, vec3 v) { vec3 t = 2.0 * cross(q.xyz, v); return v + q.w * t + cross(q.xyz, t); }
+void main() {
+  vec3 p = rot(aQuat, aPos * aInst.w);
+  float y = uWater + (aInst.y - uWater) * uRelief;
+  vWorld = vec3(aInst.x, y, aInst.z) + p;
+  vNrm = rot(aQuat, aNrm);
+  vUV = aUV;
+  gl_Position = uViewProj * vec4(vWorld, 1.0);
+}`;
+
+const MODEL_FRAG = `#version 300 es
+precision highp float;
+in vec3 vNrm;
+in vec2 vUV;
+in vec3 vWorld;
+out vec4 outColor;
+uniform sampler2D uTex;
+uniform int uHasTex;
+uniform vec4 uColor;
+uniform int uCutout;
+uniform float uCutoff;
+uniform vec2 uScale, uOffset;
+uniform vec3 uCamera, uSun, uFog;
+uniform float uFogK;
+void main() {
+  vec4 c = uColor;
+  if (uHasTex == 1) c = texture(uTex, vUV * uScale + uOffset) * uColor;
+  float alpha = 1.0;
+  if (uCutout == 1) {
+    if (c.a < uCutoff * 0.6) discard;
+    alpha = smoothstep(uCutoff * 0.6, uCutoff * 1.2, c.a);
+  }
+  vec3 n = normalize(vNrm);
+  if (!gl_FrontFacing) n = -n;
+  float lambert = uCutout == 1 ? max(dot(n, uSun), 0.0) * 0.55 + 0.45 : max(dot(n, uSun), 0.0);
+  vec3 sunColour = vec3(1.0, 0.95, 0.86);
+  vec3 skyColour = vec3(0.55, 0.65, 0.82);
+  vec3 lit = c.rgb * (sunColour * lambert * 0.95 + skyColour * (0.22 + 0.12 * max(n.y, 0.0)));
+  float dist = distance(uCamera, vWorld);
+  lit = mix(lit, uFog, 1.0 - exp(-dist * uFogK));
+  outColor = vec4(pow(max(lit, 0.0), vec3(1.0 / 2.2)), alpha);
+}`;
+
 // ---------------------------------------------------------------- matrices
 
 function perspective(out, fovy, aspect, near, far) {
@@ -598,7 +666,7 @@ class Layer {
 // ---------------------------------------------------------------- the view
 
 export class World3D {
-  constructor(el, { assetsBase = null, maxDPR = 1.5, relief = 2 } = {}) {
+  constructor(el, { assetsBase = null, modelsBase = null, maxDPR = 1.5, relief = 2 } = {}) {
     if (!el) throw new Error('World3D: an element is required');
     this.container = el;
     if (getComputedStyle(el).position === 'static') el.style.position = 'relative';
@@ -628,6 +696,12 @@ export class World3D {
     this.sun = norm3([-0.45, 0.62, 0.38]);
     this.fogColour = [0.78, 0.82, 0.86];
 
+    this.modelsBase = modelsBase == null ? new URL('../models/', import.meta.url).href : String(modelsBase).replace(/\/?$/, '/');
+    this.models = null;
+    this.zones = new Map();      // 'zx,zz' → {zx, zz, status, byModel: Map(name → Float32Array)}
+    this.zoneInflight = 0;
+    this.instancesDirty = true;
+    this.visibleZoneKey = '';
     this.handle = null;
     this.unsubscribe = [];
     this.layers = [null, null, null];       // base, then LEVELS
@@ -677,6 +751,9 @@ export class World3D {
     this.terrain = program(gl, TERRAIN_VERT, TERRAIN_FRAG);
     this.waterProg = program(gl, WATER_VERT, WATER_FRAG);
     this.sky = program(gl, SKY_VERT, SKY_FRAG);
+    this.modelProg = program(gl, MODEL_VERT, MODEL_FRAG);
+    if (this.models) this.models.destroy();
+    this.models = new ModelStore(gl, this.modelsBase, () => { this.instancesDirty = true; this.invalidate(); });
     // The patch's indices: VERTS×VERTS vertices, two triangles a cell.
     const idx = new Uint16Array((VERTS - 1) * (VERTS - 1) * 6);
     let k = 0;
@@ -704,6 +781,8 @@ export class World3D {
     for (const l of this.layers) if (l) l.destroy();
     this.layers = [null, null, null];
     this.pending = [null, null, null];
+    this.zones.clear();
+    this.instancesDirty = true;
     this.handle = handle;
     if (!handle) { this.invalidate(); return; }
     this.unsubscribe.push(handle.on('map', map => {
@@ -945,6 +1024,7 @@ export class World3D {
       this.dirty = false;
       this._updateCamera();
       this._wantTiles();
+      this._wantZones();
       if (this.gl) {
         try { this._draw(now); } catch (err) { console.warn('world3d draw:', err); }
       }
@@ -1036,6 +1116,9 @@ export class World3D {
       this._drawLayer(l, parent, child);
     }
     gl.disable(gl.CULL_FACE);
+
+    // What stands on the land.
+    this._drawModels();
 
     // The sea, blended over the land.
     gl.useProgram(this.waterProg.p);
@@ -1162,6 +1245,170 @@ export class World3D {
     if (!this.gl) return;
     if (this.layers[slot]) this.layers[slot].destroy();
     this.layers[slot] = new Layer(this.gl, { n: t.n, cx: t.cx, cz: t.cz, span: t.span, heights: t.heights, biomes: t.biomes, mask: t.mask, step: 1 });
+  }
+
+  // ------------------------------------------------------------ zones
+
+  // _wantZones asks for the zones around the target the camera has come
+  // close enough to see standing things in, nearest first, a few at a
+  // time, and forgets the ones it has left behind.
+  _wantZones() {
+    if (!this.handle || !this.layers[0] || !this.models) return;
+    if (this.distance > SCENE_SHOW) {
+      if (this.zones.size) { this.zones.clear(); this.instancesDirty = true; }
+      return;
+    }
+    const R = ZONE_RADIUS(this.distance);
+    const zx0 = Math.floor((this.tx + ZONE / 2) / ZONE), zz0 = Math.floor((this.tz + ZONE / 2) / ZONE);
+    const reach = Math.ceil(R / ZONE);
+    // Forget what is far.
+    for (const [key, z] of this.zones) {
+      const d = Math.hypot(z.zx * ZONE - this.tx, z.zz * ZONE - this.tz);
+      if (d > R * 1.8 + ZONE && z.status !== 'loading') { this.zones.delete(key); this.instancesDirty = true; }
+    }
+    const wanted = [];
+    for (let zz = zz0 - reach; zz <= zz0 + reach; zz++) for (let zx = zx0 - reach; zx <= zx0 + reach; zx++) {
+      const d = Math.hypot(zx * ZONE - this.tx, zz * ZONE - this.tz);
+      if (d > R + ZONE * 0.7) continue;
+      if (Math.hypot(zx * ZONE, zz * ZONE) > WORLD_RADIUS + ZONE) continue;
+      const key = zx + ',' + zz;
+      if (this.zones.has(key)) continue;
+      wanted.push({ zx, zz, d, key });
+    }
+    wanted.sort((a, b) => a.d - b.d);
+    for (const w of wanted) {
+      if (this.zoneInflight >= ZONE_INFLIGHT) break;
+      const zone = { zx: w.zx, zz: w.zz, status: 'loading', byModel: new Map(), count: 0 };
+      this.zones.set(w.key, zone);
+      this.zoneInflight++;
+      const handle = this.handle;
+      Promise.all([handle.zone(w.zx, w.zz), this.models.ready]).then(([z]) => {
+        this.zoneInflight--;
+        if (this.destroyed || this.handle !== handle || this.zones.get(w.key) !== zone) return;
+        this._fillZone(zone, z);
+        this.instancesDirty = true;
+        this.invalidate();
+      }).catch(err => {
+        this.zoneInflight--;
+        zone.status = 'failed';
+        console.warn('world3d zone:', err && err.message || err);
+        this.invalidate();
+      });
+    }
+  }
+
+  // _fillZone sorts a zone's places by model, keeping the ones the pack
+  // can draw: x, y, z, scale, then the quaternion, per instance.
+  _fillZone(zone, z) {
+    const counts = new Map();
+    const n = z.ids.length;
+    for (let i = 0; i < n; i++) {
+      const name = z.names[z.ids[i]];
+      if (!this.models.has(name)) continue;
+      counts.set(name, (counts.get(name) || 0) + 1);
+    }
+    const fill = new Map();
+    for (const [name, c] of counts) { zone.byModel.set(name, new Float32Array(c * 8)); fill.set(name, 0); }
+    for (let i = 0; i < n; i++) {
+      const name = z.names[z.ids[i]];
+      const arr = zone.byModel.get(name);
+      if (!arr) continue;
+      const k = fill.get(name);
+      const o = i * 8;
+      arr[k] = z.data[o]; arr[k + 1] = z.data[o + 1]; arr[k + 2] = z.data[o + 2]; arr[k + 3] = z.data[o + 7];
+      arr[k + 4] = z.data[o + 3]; arr[k + 5] = z.data[o + 4]; arr[k + 6] = z.data[o + 5]; arr[k + 7] = z.data[o + 6];
+      fill.set(name, k + 8);
+      zone.count++;
+    }
+    zone.status = 'ready';
+    for (const name of zone.byModel.keys()) this.models.get(name);
+  }
+
+  // _visibleZones is the ready zones in the frustum, as a list and a key.
+  _visibleZones() {
+    const out = [];
+    let key = '';
+    const y0 = this.water - 60 * this.relief, y1 = this.water + 500 * this.relief;
+    for (const z of this.zones.values()) {
+      if (z.status !== 'ready' || !z.count) continue;
+      const x0 = z.zx * ZONE - ZONE / 2 - 20, x1 = x0 + ZONE + 40;
+      const z0 = z.zz * ZONE - ZONE / 2 - 20, z1 = z0 + ZONE + 40;
+      if (!boxVisible(this.planes, x0, y0, z0, x1, y1, z1)) continue;
+      out.push(z);
+      key += z.zx + ',' + z.zz + ';';
+    }
+    return { list: out, key };
+  }
+
+  _drawModels() {
+    const { gl } = this;
+    if (!this.models || !this.zones.size) return;
+    const vis = this._visibleZones();
+    if (!vis.list.length) return;
+    if (this.instancesDirty || vis.key !== this.visibleZoneKey) {
+      this.visibleZoneKey = vis.key;
+      this.instancesDirty = false;
+      // Merge the visible zones' instances per model and upload them.
+      const merged = new Map();
+      for (const z of vis.list) for (const [name, arr] of z.byModel) {
+        let list = merged.get(name);
+        if (!list) merged.set(name, list = []);
+        list.push(arr);
+      }
+      for (const m of this.models.models.values()) if (m && m.vao) m.instances = 0;
+      for (const [name, arrays] of merged) {
+        const m = this.models.get(name);
+        if (!m) continue;
+        let total = 0;
+        for (const a of arrays) total += a.length;
+        const all = new Float32Array(total);
+        let at = 0;
+        for (const a of arrays) { all.set(a, at); at += a.length; }
+        gl.bindBuffer(gl.ARRAY_BUFFER, m.ibo);
+        gl.bufferData(gl.ARRAY_BUFFER, all, gl.DYNAMIC_DRAW);
+        m.instances = total / 8;
+      }
+    }
+    gl.useProgram(this.modelProg.p);
+    const u = this.modelProg.u;
+    gl.uniformMatrix4fv(u.uViewProj, false, this.viewProj);
+    gl.uniform1f(u.uWater, this.water);
+    gl.uniform1f(u.uRelief, this.relief);
+    gl.uniform3fv(u.uCamera, this.camera);
+    gl.uniform3fv(u.uSun, this.sun);
+    gl.uniform3fv(u.uFog, this.fogColour);
+    gl.uniform1f(u.uFogK, this.fogK);
+    gl.uniform1i(u.uTex, 0);
+    gl.activeTexture(gl.TEXTURE0);
+    gl.disable(gl.CULL_FACE);
+    let coverage = false;
+    for (const m of this.models.models.values()) {
+      if (!m || !m.vao || !m.instances) continue;
+      gl.bindVertexArray(m.vao);
+      for (const r of m.runs) {
+        const mat = r.material;
+        if (mat.cutout !== coverage) {
+          coverage = mat.cutout;
+          if (coverage) gl.enable(gl.SAMPLE_ALPHA_TO_COVERAGE); else gl.disable(gl.SAMPLE_ALPHA_TO_COVERAGE);
+        }
+        if (mat.tex) {
+          gl.bindTexture(gl.TEXTURE_2D, mat.tex.tex);
+          gl.uniform1i(u.uHasTex, 1);
+          gl.uniform4f(u.uColor, mat.color[0], mat.color[1], mat.color[2], mat.color[3]);
+        } else {
+          gl.uniform1i(u.uHasTex, 0);
+          const c = mat.name && this.models.materials[mat.name] ? mat.color : mat.tone;
+          gl.uniform4f(u.uColor, c[0], c[1], c[2], 1);
+        }
+        gl.uniform1i(u.uCutout, mat.cutout ? 1 : 0);
+        gl.uniform1f(u.uCutoff, mat.cutoff);
+        gl.uniform2f(u.uScale, mat.scale[0], mat.scale[1]);
+        gl.uniform2f(u.uOffset, mat.offset[0], mat.offset[1]);
+        gl.drawElementsInstanced(gl.TRIANGLES, r.count, gl.UNSIGNED_INT, r.first * 4, m.instances);
+      }
+    }
+    if (coverage) gl.disable(gl.SAMPLE_ALPHA_TO_COVERAGE);
+    gl.bindVertexArray(null);
   }
 
   // ------------------------------------------------------------ overlay
@@ -1429,9 +1676,10 @@ export class World3D {
     this.glCanvas.removeEventListener('webglcontextlost', this._onLost);
     this.glCanvas.removeEventListener('webglcontextrestored', this._onRestored);
     for (const l of this.layers) if (l) l.destroy();
+    if (this.models) this.models.destroy();
     if (this.gl) {
       const gl = this.gl;
-      gl.deleteProgram(this.terrain.p); gl.deleteProgram(this.waterProg.p); gl.deleteProgram(this.sky.p);
+      gl.deleteProgram(this.terrain.p); gl.deleteProgram(this.waterProg.p); gl.deleteProgram(this.sky.p); gl.deleteProgram(this.modelProg.p);
       gl.deleteBuffer(this.ibo);
       const lose = gl.getExtension('WEBGL_lose_context');
       if (lose) lose.loseContext();

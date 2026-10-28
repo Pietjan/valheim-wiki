@@ -221,7 +221,9 @@ async function init(root) {
     handle.on('info', info => { setStatus(`World ${info.seedNumber}. Drawing the biomes…`, 0.05); });
     handle.on('map', () => setStatus('Placing the world…', 0.15));
     handle.on('progress', p => {
-      if (p.total) setStatus(`Placing ${p.index + 1} of ${p.total}: ${p.placed} places`, 0.15 + 0.85 * (p.index + 1) / p.total);
+      if (p.phase === 'scene') setStatus('Growing the forest: the biome map, once…');
+      else if (p.phase === 'scene-ready') setStatus(`${handle.sites().length} places in this world.`);
+      else if (p.total) setStatus(`Placing ${p.index + 1} of ${p.total}: ${p.placed} places`, 0.15 + 0.85 * (p.index + 1) / p.total);
     });
     let lastSites = 0;
     handle.on('sites', () => {

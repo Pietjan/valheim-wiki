@@ -1,0 +1,258 @@
+# index	name	prefab	enable	min	max	forcePlacement	scaleMin	scaleMax	randTilt	chanceToUseGroundTilt	biome	biomeArea	blockCheck	snapToStaticSolid	minAltitude	maxAltitude	minVegetation	maxVegetation	surroundCheckVegetation	surroundCheckDistance	surroundCheckLayers	surroundBetterThanAverage	minOceanDepth	maxOceanDepth	minTilt	maxTilt	terrainDeltaRadius	maxTerrainDelta	minTerrainDelta	snapToWater	groundOffset	groupSizeMin	groupSizeMax	groupRadius	minDistanceFromCenter	maxDistanceFromCenter	inForest	forestTresholdMin	forestTresholdMax	altBiomeParent	znetview	prefabScale
+0	rock4_coast	rock4_coast	1	3	3	0	0.6	1.2	15	0	841	7	0	0	-2	-0.5	0	0	0	20	2	0	2	30	0	90	0	2	0	0	0	3	3	20	0	0	0	0	1		1	1
+1	rock_4_heath	rock4_heath	1	4	10	0	0.8	1	5	0	16	7	1	0	4	1000	0	0	0	20	2	0	0	0	15	45	0	2	0	0	-3	1	1	0	0	0	0	0	1		1	1
+2	heathrockpillar	HeathRockPillar	1	0	0.1	0	0.8	1.3	15	0	16	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	-2	1	1	0	0	0	0	0	1.1		1	1
+3	rock2_heath	rock2_heath	1	0	1	0	1	1.5	20	0	16	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	20	0	2	0	0	0	1	1	0	0	0	0	0	1.1		1	1
+4	hugeroot1	HugeRoot1	0	5	5	0	1	2	15	0	512	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+5	swamptree2_darkland	SwampTree2_darkland	0	10	10	0	3	5	5	0	512	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	25	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1.5
+6	rock3_mountain	rock3_mountain	1	0	2	0	1	1.5	0	0	4	6	1	0	-1000	1000	0	0	0	20	2	0	0	0	10	50	0	2	0	0	-5	1	1	0	0	0	0	0	1		1	1
+7	rock3_silver	rock3_silver	0	0	0.5	0	1	1	0	0	4	6	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	45	0	2	0	0	-8	1	1	0	0	0	0	0	1		1	1
+8	silvervein	silvervein	1	1	1	1	1	1	0	0	4	6	1	0	120	1000	0	0	0	20	2	0	0	0	0	30	9	3	0	0	-4	1	1	0	0	0	0	0	1		1	1
+9	rock1_mountain	rock1_mountain	1	5	8	0	1	1.5	0	0	4	6	1	0	-1000	1000	0	0	0	20	2	0	0	0	30	80	0	2	0	0	-6	1	1	0	0	0	0	0	1		1	1
+10	rock2_mountain	rock2_mountain	1	5	8	0	1	1.5	0	0	4	6	1	0	-1000	1000	0	0	0	20	2	0	0	0	30	80	0	2	0	0	-5	1	1	0	0	0	0	0	1		1	1
+11	rock_4_swamp	Rock_4	1	0	20	0	1	2	0	0	2	7	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	0	0	1		1	2
+12	mudpile_beacon	mudpile_beacon	1	0	5	0	1	2	0	0	2	7	1	0	0.5	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	-3	1	1	0	0	0	0	0	1		1	1
+13	rock_4_meadows_mountain	Rock_4	1	10	40	0	1	2	0	1	5	7	1	0	-10	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	0	0	1		1	2
+14	rock_4_plains	Rock_4_plains	1	5	30	0	1	2	0	1	16	7	1	0	-10	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	0	0	1		1	2
+15	rock_3_meadows_mountain	Rock_3	1	0	15	0	2	4	0	1	5	7	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	-0.5	1	1	0	0	0	0	0	1		1	2
+16	rock4_blackforest	rock4_forest	1	1	2	0	0.8	1	5	0	8	7	1	0	4	1000	0	0	0	20	2	0	0	0	5	45	0	2	0	0	-2	1	1	0	0	0	0	0	1		1	1
+17	rock4_copper_blackforest	rock4_copper	1	0	1	0	1	1	5	0	8	7	1	0	4	1000	0	0	0	20	2	0	0	0	5	45	0	2	0	0	-2	1	1	0	0	0	0	0	1		1	1
+18	minerock_tin_blackforest	MineRock_Tin	1	20	20	0	1	1	0	1	8	7	1	0	-0.6	1.5	0	0	0	20	2	0	0	0	0	90	0	2	0	0	-0.5	1	1	0	0	0	0	0	1		1	1
+19	rock_4_blackforest	Rock_4	1	20	20	0	1	3	0	1	8	7	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	45	0	2	0	0	0	1	1	0	0	0	0	0	1		1	2
+20	rock_4_mistlands	Rock_4	0	20	20	0	1	3	0	0	512	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	45	0	2	0	0	0	1	1	0	0	0	0	0	1		1	2
+21	rock_3_blackforest	Rock_3	1	5	15	0	3	6	0	0	8	7	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	25	0	2	0	0	0	1	1	0	0	0	0	0	1		1	2
+22	rock_3_mistlands	Rock_3	0	5	15	0	3	6	0	0	512	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	25	0	2	0	0	0	1	1	0	0	0	0	0	1		1	2
+23	vfx_swamp_mist	vfx_swamp_mist	1	10	10	0	1	1	0	0	2	7	1	0	-5	5	0	0	0	20	2	0	0	0	0	90	0	2	0	1	0	1	1	0	0	0	0	0	1.1		1	1
+24	crow_swamp	Crow	0	0	3	0	1	1	0	0	2	7	1	0	-5	5	0	0	0	20	2	0	0	0	0	90	0	2	0	1	15	1	1	0	0	0	0	0	1.1		1	1
+25	vfx_ocean_clouds	vfx_ocean_clouds	0	2	2	0	1	1	0	0	384	7	1	0	-100	5	0	0	0	20	2	0	0	0	0	90	0	2	0	1	0	1	1	0	0	0	0	0	1.1		1	1
+26	vfx_edge_clouds	vfx_edge_clouds	1	1	1	0	1	1	0	0	128	7	1	0	-1000	0	0	0	0	20	2	0	0	0	0	90	0	2	0	1	0	1	1	0	0	0	0	0	1.1		1	1
+27	beech1_meadows	Beech1	1	40	40	0	0.8	1.5	4	0.1	1	7	1	0	0.2	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	1	0	1.15		1	1
+28	birch1_meadows	Birch1	1	5	5	0	0.5	1	4	0.05	1	7	1	0	0.2	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	1	0	1.15		1	1
+29	birch1_aut_plains	Birch1_aut	1	30	30	0	0.5	1	4	0	16	7	1	0	0.1	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	1	0	0.8		1	1
+30	birch2_meadows	Birch2	1	0	3	0	0.5	1	4	0.05	1	7	1	0	0.2	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	1	0	1.15		1	1
+31	oak1_meadows	Oak1	1	0	1	0	0.8	1	4	0	1	7	1	0	0.5	1000	0	0	0	20	2	0	0	2	0	20	0	2	0	0	0	1	1	0	0	0	1	1	3		1	1
+32	birch2_aut_heath	Birch2_aut	1	10	10	0	1	1.5	4	0	16	7	1	0	0.1	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	1	0	0.8		1	1
+33	firtree_blackforest	FirTree	1	5	5	0	2	2.5	4	0	8	7	1	0	0.1	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	0	0	1.1		1	1
+34	firtree_many_blackforest	FirTree	1	40	40	0	2	2.5	4	0	8	1	1	0	0.1	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	0	0	1.1		1	1
+35	Pinetree_01_blackforest	Pinetree_01	1	60	60	0	1	2.5	4	0.05	8	6	1	0	0.1	1000	0	0	0	20	2	0	0	1.5	0	30	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+36	Pinetree_01_mistlands	Pinetree_01	0	5	5	0	2	2.5	4	0	512	6	1	0	0.1	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+37	acaciatree	acacitree	0	10	20	0	1	2	0	0	0	7	1	0	2	1000	0	0	0	20	2	0	0	0	0	20	0	2	0	0	0	1	1	0	0	0	1	0	1.1		0	1
+38	beech_small1_many_meadows	Beech_small1	1	100	100	0	1	1.5	10	0	1	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	1	1.1	1.15		1	1
+39	beech_small2_many_meadows	Beech_small2	1	100	100	0	1	2	10	0	1	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	1	1.1	1.15		1	1
+40	beech_small1_meadows	Beech_small1	1	80	80	0	1	1.5	10	0	1	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	1	0	1		1	1
+41	beech_small2_meadows	Beech_small2	1	80	80	0	1	2	10	0	1	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	1	0	1		1	1
+42	bush02_en_heath	Bush02_en	1	1	3	0	0.5	1.5	0	0	16	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	8	20	15	0	0	0	0	1		1	1
+43	cloudberrybush_heath	CloudberryBush	1	1	3	0	1	1	0	1	16	7	1	0	2	50	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	15	20	6	0	0	0	0	1		1	1
+44	firtree_small_dead_swamp	FirTree_small_dead	1	60	60	0	0.3	0.8	5	0.2	2	7	1	0	0.5	1000	0	0	0	20	2	0	0	0	0	25	0	2	0	0	0	1	1	0	0	0	0	1.1	1.2		1	1
+45	swamptree1	SwampTree1	1	40	40	0	0.7	1.3	10	0.2	2	7	1	0	-0.5	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+46	swamptree2	SwampTree2	1	10	20	0	1.5	2	5	0.1	2	7	1	0	-0.5	1000	0	0	0	20	2	0	0	2	0	35	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1.5
+47	swamptree2_log	SwampTree2_log	1	1	3	0	1.5	2	20	0	2	7	1	0	-0.5	1000	0	0	0	20	2	0	0	2	0	35	0	2	0	0	0	1	1	0	0	0	0	0	1		1	2
+48	flies_swamp	Flies	1	20	20	0	0.5	1.5	0	0	2	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	25	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+49	firtree_small_blackforest	FirTree_small	1	30	30	0	0.3	0.7	0	0	8	7	1	0	0.5	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	0	1.05	1.15		1	0.5
+50	firtree_small_mountain	FirTree_small	1	30	30	0	0.3	0.7	0	0	4	7	1	0	0	280	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	0	1.05	1.15		1	0.5
+51	firtree_small_dead_mistlands	FirTree_small_dead	0	30	30	0	0.3	0.7	0	0	512	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	0	1.05	1.15		1	1
+52	vertical_web	vertical_web	0	10	10	0	0.8	1.2	20	0	512	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	0	1.05	1.15		1	1
+53	horizontal_web	horizontal_web	0	10	10	0	0.8	1.2	20	0	512	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	30	1	1	0	0	0	0	1.05	1.15		1	1
+54	tunnel_web	tunnel_web	0	5	5	0	0.8	1	10	0	512	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	0	1.05	1.15		1	1
+55	firtree_small_many_blackforest	FirTree_small	1	60	60	0	0.3	0.7	0	0	8	1	1	0	0.5	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	0	1.05	1.15		1	0.5
+56	firtree_oldlog_blackforest	FirTree_oldLog	1	6	6	0	0.9	1.3	0	1	8	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	25	0	2	0	0	0	1	1	0	0	0	0	1.05	1.15		1	1
+57	stubbe_meadows	stubbe	1	1	3	0	0.8	1.2	0	1	1	7	1	0	0	1000	0	0	0	20	2	0	0	2	0	20	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+58	stubbe_swamp	stubbe	1	4	4	0	1	2	0	1	2	7	1	0	0	1000	0	0	0	20	2	0	0	2	0	20	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+59	statue_evil_swamp	StatueEvil	1	2	2	0	1	1	0	0	2	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	20	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+60	firtree_oldlog_meadows	FirTree_oldLog	1	1	4	0	1	1.2	0	1	1	7	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	20	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+61	firtree_oldlog_swamp	FirTree_oldLog	1	6	6	0	1	1.2	0	1	2	7	1	0	-1	1000	0	0	0	20	2	0	0	0	0	20	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+62	stubbe_blackforest	stubbe	1	15	15	0	0.8	1.4	0	1	8	7	1	0	0	1000	0	0	0	20	2	0	0	2	0	20	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+63	stubbe_mistlands	stubbe	0	15	15	0	0.8	1.4	0	1	512	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	20	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+64	bush01_meadows	Bush01	1	60	80	0	1	1.5	0	0	1	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	1	1	1.15		1	1
+65	bush01_heath	Bush01_heath	1	60	80	0	1	1	0	0	16	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	1	1	1.15		1	1
+66	shrub_2_meadows	shrub_2	0	20	20	0	1.5	2	0	0	1	7	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	1	1	1.15		1	1
+67	shrub_2_heath	shrub_2_heath	1	20	20	0	0.5	1	0	0	16	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	1	1	1.15		1	1
+68	shrub_2_heath	shrub_2_heath	1	20	20	0	0.5	1	0	0	2	7	1	0	0	1000	0	0	0	20	2	0	0	2	0	90	0	2	0	0	0	1	1	0	0	0	0	1	1.15		1	1
+69	pickable_thistle_swamp_blackforest	Pickable_Thistle	1	1	2	0	0.5	1	20	0	10	2	1	0	0	1000	0	0	0	20	2	0	0	0	0	20	0	2	0	0	0	2	5	4	0	0	0	1	1.15		1	1
+70	shrub_2_blackforest	shrub_2	1	100	100	0	0.5	1	0	0	8	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	0	1	1.1		1	1
+71	blueberrybush_blackforest	BlueberryBush	1	1	1	0	1	1	0	0	8	2	1	0	1	1000	0	0	0	20	2	0	0	2	0	90	0	2	0	0	0	1	8	8	0	0	0	1	1.1		1	1
+72	raspberrybush_meadows	RaspberryBush	1	1	2	0	1	1	0	0	1	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	45	0	2	0	0	0	3	8	8	0	0	1	1	1.2		1	1
+73	pickable_mushroom_meadows_blackforest_swamp	Pickable_Mushroom	1	1	2	0	1	1.5	0	0	11	7	1	0	1	1000	0	0	0	20	2	0	0	2	0	25	0	2	0	0	0	3	6	5	0	0	1	0	1		1	1
+74	pickable_dandelion_meadows	Pickable_Dandelion	1	8	10	0	1	1	0	0	1	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	15	0	2	0	0	0	1	3	3	0	0	0	1.1	5		1	1
+75	ormbunke_meadows	ormbunke_green_medium	0	0	10	0	0.75	1	0	0	1	7	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	1	0	0.9		0	1
+76	waystone	Waystone	0	0	0.2	0	1	1	0	0	17	7	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	1	1.1	4		0	1
+77	pickable_flint_meadows	Pickable_Flint	1	30	30	0	1	1	0	0	1	7	1	0	-2	1	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+78	pickable_tin_blackforest	Pickable_Tin	0	30	30	0	1	1	0	0	8	7	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+79	pickable_branch_meadows_blackforest_swamp	Pickable_Branch	1	15	15	0	1	1	0	1	11	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	1	0	1.1		1	1
+80	hugestone1_heath	HugeStone1	0	0	1	0	1	1	0	0	16	7	1	0	-2	1000	0	0	0	20	2	0	0	0	0	45	0	2	0	0	0	1	1	0	0	0	0	0	1.1		0	1
+81	rockformation1_heath	rockformation1	0	0	0.2	0	0.5	1	0	0	16	7	1	0	-10	1000	0	0	0	20	2	0	0	0	0	45	0	2	0	0	0	1	1	0	0	0	0	0	1.1		1	1
+82	rock_a_heath	rock_a	0	2	4	0	2	4	0	0	16	7	1	0	-2	1000	0	0	0	20	2	0	0	0	0	45	0	2	0	0	0	1	1	0	0	0	0	0	1.1		0	1
+83	pickable_bog_swamp	Pickable_BogIronOre	0	5	5	0	1	1	0	0	2	6	1	0	-2	1	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+84	pickable_stone_meadows_blackforest_heath_mountain	Pickable_Stone	1	30	30	0	1	1	0	1	27	7	1	0	0	1000	0	0	0	20	2	0	0	0	22	90	0	2	0	0	0	2	3	2	0	0	0	0	1		1	1
+85	pickable_stone_meadows_swamp	Pickable_Stone	1	5	5	0	1	1	0	1	3	7	1	0	-3	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	1	0	0	0	0	1		1	1
+86	pickable_stonerock_meadows_blackforest_mountain_swamp	Pickable_StoneRock	1	0	1	0	1	1	0	1	15	6	1	0	5	20	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	1	1000	0	1	0	1		1	1
+87	firtree_mountain	FirTree	1	5	20	0	1.5	3	0	0	4	7	1	0	2	280	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	0	0	1.15		1	1
+88	ice1_deepnorth	ice1	1	10	20	0	1	1	0	0	64	7	1	0	-1000	-1	0	0	0	20	2	0	0	0	0	90	0	2	0	1	0	1	1	0	0	0	1	0	1		1	1
+89	ice_rock1_deepnorth	ice_rock1	1	0	1	0	1	1	0	0	64	7	1	0	-1000	-1	0	0	0	20	2	0	0	0	0	90	0	2	0	1	-2	1	1	0	0	0	0	0	1		1	1
+90	skull1_mistlands	Skull1	0	20	20	0	1	1	10	0	512	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	45	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+91	skull2_mistlands	Skull2	0	0	3	0	0.8	1.2	5	0	512	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	45	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+92	glowingmushroom_mistlands	GlowingMushroom	0	15	15	0	1	1	5	0	512	7	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+93	minerock_obsidian_mountain	MineRock_Obsidian	1	10	15	0	0.9	1	0	1	4	3	1	0	100	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	1	0	0	0	0	1		1	1
+94	pickable_seedturnip_swamp	Pickable_SeedTurnip	1	0	0.5	0	1	1.5	0	0	2	3	1	0	0	1000	0	0	0	20	2	0	0	0	0	25	0	2	0	0	0	1	2	5	0	0	0	0	1		1	1
+95	pickable_seedcarrot_blackforest	Pickable_SeedCarrot	1	0	0.5	0	1	1.5	0	0	8	3	1	0	1	1000	0	0	0	20	2	0	0	0	0	25	0	2	0	0	0	1	2	5	0	0	0	0	1		1	1
+96	pickable_barley_heath	Pickable_Barley	0	0	2	0	1	1.5	0	0	16	3	1	0	2	1000	0	0	0	20	2	0	0	0	0	25	0	2	0	0	0	2	3	5	0	0	0	0	1		1	1
+97	leviathan	Leviathan	1	0	0.01	0	1	1	0	0	256	2	1	0	-1000	-30	0	0	0	20	2	0	0	0	0	90	0	2	0	1	0	1	1	0	0	0	0	0	1		1	1
+98	rock4_coast	rock4_coast	1	3	3	0	0.6	1.2	15	0	777	7	0	0	-2	-0.5	0	0	0	20	2	0	2	30	0	90	0	2	0	0	0	3	3	20	0	0	0	0	1		1	1
+99	Mist area	MistArea	1	1	1	1	1	1	0	0	512	2	0	0	1	1000	0.1	1	0	20	2	0	0	0	0	99	0	0	0	0	0	1	1	0	0	0	1	0	1.15		1	1
+100	Mist area _edge	MistArea_edge	1	1	1	1	1	1	0	0	512	1	0	0	1	1000	0.1	1	0	20	2	0	0	0	0	99	0	0	0	0	0	1	1	0	0	0	0	0	1		1	1
+101	cliff_mistlands1	cliff_mistlands1	1	8	8	0	0.6	1.2	0	1	512	3	0	0	1	1000	0	0.1	0	20	2	0	0	0	25	50	4	55	4	0	0	1	1	0	0	0	0	0	0		1	1
+102	cliff_mistlands2	cliff_mistlands2	1	50	50	0	0.5	1	15	0	512	3	0	0	1	1000	0	0.1	0	20	2	0	0	0	0	99	4	55	3	0	0	1	1	0	0	0	0	0	0		1	1
+103	rock_mistlands1	rock_mistlands1	1	20	20	0	1	3	15	0.2	512	3	1	0	0	1000	0	0.1	0	20	2	0	0	0	0	30	2	4	0	0	0	1	1	0	0	0	0	0	0		1	1
+104	rock_mistlands2	rock_mistlands2	0	50	50	0	0.8	1.2	0	1	512	3	1	0	0	1000	0.1	1	0	20	2	0	0	0	0	20	4	2	0	0	0	1	1	0	0	0	0	0	0		1	1
+105	skull	giant_skull	0	1	2	0	1	1	33	0	512	3	1	0	1	1000	0.1	1	0	20	2	0	0	0	0	20	5	2	0	0	0	1	1	0	0	0	0	0	0		1	1
+106	giant_helmet1	giant_helmet1	1	1	2	0	1	1	33	0	512	2	1	0	1	1000	0	0	0	20	2	0	0	0	0	30	5	3	0	0	0	1	1	0	0	0	0	0	0		1	1
+107	giant_helmet2	giant_helmet2	1	1	2	0	1	1	33	0	512	2	1	0	1	1000	0	0	0	20	2	0	0	0	0	30	5	3	0	0	-1	1	1	0	0	0	0	0	0		1	1
+108	giant_sword1	giant_sword1	1	1	2	0	1	1	60	0	512	2	1	0	1	1000	0	0	0	20	2	0	0	0	0	30	5	3	0	0	0	1	1	0	0	0	0	0	0		1	1
+109	giant_sword2	giant_sword2	1	1	2	0	1	1	60	0	512	2	1	0	1	1000	0	0	0	20	2	0	0	0	0	30	5	3	0	0	0	1	1	0	0	0	0	0	0		1	1
+110	ribs	giant_ribs	1	1	2	0	1	1	10	0	512	3	1	0	1	1000	0.3	1	0	20	2	0	0	0	0	10	5	2	0	0	0	1	1	0	0	0	0	0	0		1	1
+111	ml mist	vfx_mistlands_mist	0	4	4	1	1	1	0	0	512	1	0	0	1	1000	0.2	1	0	20	2	0	0	0	0	99	0	6	0	0	0	1	1	0	0	0	0	0	0		1	1
+112	ygga root	YggdrasilRoot	1	2	4	0	1	1.5	0	0	512	3	1	0	1	1000	0.2	1	0	20	2	0	0	0	0	45	5	6	0	0	0	1	1	0	0	0	0	0	0		1	1
+113	YggaShoot1	YggaShoot1	1	2	2	0	0.9	1.2	5	0.1	512	3	0	1	1	1000	0	0.2	0	20	2	0	0	0	0	80	3	99	3	0	0	1	1	0	0	0	0	0	0		1	1
+114	YggaShoot2	YggaShoot2	1	2	2	0	0.9	1.2	5	0.1	512	3	0	1	1	1000	0	0.2	0	20	2	0	0	0	0	80	3	99	3	0	0	1	1	0	0	0	0	0	0		1	1
+115	YggaShoot3	YggaShoot3	1	2	2	0	0.9	1.2	5	0.1	512	3	0	1	1	1000	0	0.2	0	20	2	0	0	0	0	80	3	99	3	0	0	1	1	0	0	0	0	0	0		1	1
+116	fir	YggaShoot1	1	3	3	0	0.8	0.9	5	0.1	512	3	0	1	1	1000	0.1	1	0	20	2	0	0	0	0	45	0	0	0	0	0	1	1	0	0	0	1	1	4		1	1
+117	fir	YggaShoot2	1	3	3	0	0.8	0.9	5	0.1	512	3	0	1	1	1000	0.1	1	0	20	2	0	0	0	0	45	0	0	0	0	0	1	1	0	0	0	1	1	4		1	1
+118	fir	YggaShoot3	1	3	3	0	0.8	0.9	5	0.1	512	3	0	1	1	1000	0.1	1	0	20	2	0	0	0	0	45	0	0	0	0	0	1	1	0	0	0	1	1	4		1	1
+119	YggaShoot_small1	YggaShoot_small1	1	6	6	0	1	2	5	0.1	512	3	0	1	1	1000	0	0.2	0	20	2	0	0	0	0	45	0	0	0	0	0	1	1	0	0	0	0	0	1		1	1
+120	YggaShoot_small1	YggaShoot_small1	1	40	40	0	1	2	5	0.1	512	3	0	1	1	1000	0.1	2	0	20	2	0	0	0	0	45	0	0	0	0	0	1	1	0	0	0	1	1	4		1	1
+121	bush	RaspberryBush	0	2	4	0	1	1	0	1	512	3	1	0	1	1000	0.1	2	0	20	2	0	0	0	0	60	0	0	0	0	0	3	6	5	0	0	0	0	0		1	1
+122	mushroom_magecap	Pickable_Mushroom_Magecap	1	2	2	0	1	1	0	1	512	3	0	1	1	2000	0	0.15	0	20	2	0	0	0	0	60	0	0	0	0	0	1	3	5	0	0	0	0	0		1	1
+123	mushroom_jotunpuffs	Pickable_Mushroom_JotunPuffs	1	1	2	0	1	1	0	1	512	3	1	0	1	1000	0.1	1	0	20	2	0	0	0	0	60	0	0	0	0	0	1	3	5	0	0	0	0	0		1	1
+124	cliff_ashlands1	cliff_ashlands1	0	0	2	0	0.8	1.5	40	1	32	3	1	0	0	1000	0	0.5	0	20	2	0	0	0	0	30	0	0	0	0	0	1	1	10	0	0	0	0	0		1	1
+125	cliff_ashlands2	cliff_ashlands2	1	0	1	0	0.5	1.5	0	1	32	3	0	0	1	15	0	0.5	0	20	2	0	0	0	0	99	0	0	0	0	0	1	1	0	0	0	0	0	0		1	1
+126	cliff_ashlands3	cliff_ashlands3_Arch_1	1	2	3	0	1	2	0	0	32	3	1	0	0	40	0	0.5	0	20	2	0	0	0	10	40	0	0	0	0	0	1	1	10	0	0	0	0	0		1	1
+127	cliff_ashlands4	cliff_ashlands4	0	1	2	0	0.2	0.7	0	0	32	3	1	0	10	100	0	0.5	0	20	2	0	0	0	0	20	0	0	0	0	0	1	1	10	0	0	0	0	0		1	1
+128	cliff_ashlands5	cliff_ashlands5	1	1	3	0	0.2	1.5	0	0	32	3	1	0	0	100	0	0.5	0	20	2	0	0	0	0	60	0	0	0	0	0	1	1	10	0	0	0	0	0		1	1
+129	cliff_ashlands5	cliff_ashlands5	1	3	5	0	0.8	1.2	0	0	32	3	1	0	-2	1	0	1	0	20	2	0	0	0	0	60	0	0	0	0	0	1	1	20	0	0	0	0	0		1	1
+130	cliff_ashlands6	cliff_ashlands6	1	3	6	0	0.5	0.9	0	0	32	3	1	0	-5	10	0	0.5	0	20	2	0	0	0	10	40	0	0	0	0	0	1	1	10	0	0	0	0	0		1	1
+131	cliff_ashlands7	cliff_ashlands7_HalfArch	0	0	2	0	0.5	1.5	0	0	32	3	1	0	0	10	0	0.5	0	20	2	0	0	0	0	90	0	0	0	0	0	1	1	10	0	0	0	0	0		1	1
+132	cliff_ashlands8	cliff_ashlands4	1	1	1	0	0.6	0.8	20	0	32	3	1	0	-10	0.1	0	1	0	20	2	0	0	0	0	20	0	0	0	0	-2	1	2	30	0	0	0	0	0		1	1
+133	cliff_ashlands8	cliff_ashlands4	1	1	1	0	0.9	1.1	20	0	32	3	1	0	-25	-11	0	1	0	20	2	0	0	0	0	20	0	0	0	0	-1	1	3	30	0	0	0	0	0		1	1
+134	cliff_ashlands9	cliff_ashlands8	0	0	2	0	1	2	5	0	32	3	1	0	0	15	0	0.5	0	20	2	0	0	0	0	25	0	0	0	0	0	1	2	0	0	0	0	0	0		1	1
+135	tree_ashlands1	AshlandsTree1	1	6	10	0	0.7	1.4	4	0.5	32	3	1	0	2	12	0	0.2	0	20	2	0	0	0	0	30	0	0	0	0	0	4	8	40	0	0	0	0	0		1	1
+136	tree_ashlands2	AshlandsTree1	1	5	8	0	1	1	10	0.5	32	3	1	0	1	12	0	0.2	0	20	2	0	0	0	0	30	0	0	0	0	0	2	4	40	0	0	0	0	0		1	1
+137	tree_ashlands3	AshlandsTree3	1	4	10	0	1	2	10	0.5	32	3	1	0	1	12	0	0.2	0	20	2	0	0	0	0	30	0	0	0	0	0	3	5	50	0	0	0	0	0		1	1
+138	tree_ashlands4	AshlandsTree6	1	2	3	0	1.5	2.5	10	0.5	32	3	1	0	1	12	0	0.2	0	20	2	0	0	0	0	10	0	0	0	0	0	1	1	0	0	0	0	0	0		1	1.5
+139	rock_ashlands1	Ashlands_rock1	0	1	1	0	1.5	2	0	0	32	3	0	0	-30	-10	0	0.5	0	20	2	0	0	0	0	99	0	0	0	0	0	1	2	80	0	0	0	0	0		1	1
+140	rock_ashlands2	Ashlands_rock2	1	1	0.6	0	0.8	1	5	0	32	3	1	0	4	1000	0	0.5	0	20	2	0	0	0	0	25	0	0	0	0	0	1	1	0	0	0	0	0	0		1	1
+141	rock_ashlands3	cliff_ashlands6	1	92	196	0	0.2	0.9	99	0	32	3	1	0	9	1000	0	0.5	0	20	2	0	0	0	0	99	0	0	0	0	0	1	1	0	0	0	0	0	0		1	1
+142	branch_ashlands1	AshlandsBranch1	1	4	6	0	1	3	5	0	32	3	1	0	1	6	0	0.5	0	20	2	0	0	0	0	99	0	0	0	0	0	3	5	30	0	0	0	0	0		1	1
+143	branch_ashlands2	AshlandsBranch2	1	2	3	0	0.8	1	5	0	32	3	1	0	1	7	0	0.5	0	20	2	0	0	0	0	99	0	0	0	0	0	1	1	0	0	0	0	0	0		1	1
+144	branch_ashlands3	AshlandsBranch3	1	2	3	0	0.8	1	5	0	32	3	1	0	1	6	0	0.5	0	20	2	0	0	0	0	99	0	0	0	0	0	2	4	30	0	0	0	0	0		1	1
+145	bush_ashlands1	AshlandsBush1	1	6	10	0	1	3	5	0	32	3	1	0	1	6	0	0.15	0	20	2	0	0	0	0	99	0	0	0	0	0	2	4	0	0	0	0	0	0		1	1
+146	skull	Pickable_Charredskull	1	20	40	0	1.3	1.4	5	0	32	3	1	0	11	1000	0	0.15	0	20	2	0	0	0	0	99	0	0	0	0	0.2	2	3	2	0	0	0	0	0		1	1
+147	pot_shard	Pickable_Pot_Shard	1	4	6	0	1	1	15	0	32	2	1	0	11	1000	0	0.15	0	20	2	0	0	0	0	99	0	0	0	0	0.75	4	6	20	0	0	0	0	0		1	1
+148	ashstone	Pickable_Ashstone	1	7	15	0	1	1	180	20	32	2	1	0	30	1000	0	0.15	0	20	2	0	0	0	0	99	0	0	0	0	0.1	10	20	40	0	0	0	0	0		1	1
+149	pot2_red	ashland_pot2_red	1	1	2	0	1	1	45	0	32	-1	1	0	11	1000	0	0.15	0	20	2	0	0	0	0	99	0	0	0	0	-0.5	1	3	20	0	0	0	0	0		1	1
+150	UnstableLavaRock	UnstableLavaRock	1	1	1	0	0.7	1.2	30	1	32	3	0	1	1	2000	0	1	0	20	2	0	0	0	0	40	0	0	0	0	0	1	1	10	0	0	0	0	0		1	1
+151	LeviathanLava	LeviathanLava	0	0	1	0	1	1	0	0	32	3	1	0	-10	1000	0.5	1	1	30	2	0	0	0	0	40	0	2	0	0	0	1	1	40	0	0	0	0	1		1	0.89393
+152	mushroom_SmokePuff	Pickable_SmokePuff	1	2	2	0	1	1	0	1	32	3	0	1	2	2000	0	0.2	0	20	2	0	0	0	0	60	0	0	0	0	0	1	3	5	0	0	0	0	0		1	1
+153	veg	GraveStone_Broken_World	1	4	7	0	1	1	30	10	32	3	1	0	11	1000	0	0.1	0	20	2	0	0	0	0	100	0	2	0	0	0	2	6	10	0	0	0	0	1		1	1
+154	veg	Ashlands_ArchRoofDamaged	1	2	5	0	1	1	0	50	32	3	1	0	11	1000	0	0.1	0	20	2	0	0	0	0	40	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+155	veg	Ashlands_Pillar4	1	3	6	0	1	1	90	0	32	3	1	0	11	1000	0	0.1	0	20	2	0	0	0	0	40	0	2	0	0	-1	2	3	20	0	0	0	0	1		1	1
+156	veg	Ashlands_Ruins_Wall_Windows_Broken_4x6	1	2	5	0	1	1	90	0	32	3	1	0	11	1000	0	0.1	0	20	2	0	0	0	0	40	0	2	0	0	0	2	3	20	0	0	0	0	1		1	1
+157	rock 4	Rock_4_deepnorth	1	2	6	0	4	6	0	1	64	7	1	0	-10	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	0	0	1		1	2
+158	rock 3	Rock_3_deepnorth	1	1	4	0	2	8	0	1	64	7	1	0	-10	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	-0.5	1	1	0	0	0	1	0	1		1	2
+159	rock 7	Rock_7_deepnorth	1	0	1	0	1.5	2	20	0.75	64	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	45	0	4	0	0	-0.5	2	3	20	0	0	0	0	1		1	1
+160	snowfirtree	SnowFirTree	1	3	7	0	0.5	1	4	0.1	64	7	1	0	0.2	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	1	0	1.15		1	1
+161	snowfirtree_sparse	SnowFirTree 2	1	15	25	0	0.5	1	4	0.1	64	7	1	0	0.2	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	1	0	1.15		1	1
+162	pinetree_snow	Pinetree_Snow	1	10	20	0	1	2	4	0.05	64	7	1	0	0.2	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	1	0	1.15		1	1
+163	pinetree_snow_dead	Pinetree_Snow_dead	1	15	30	0	0.5	1.5	4	0.2	64	7	1	0	0.2	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	1	0	1.15		1	1
+164	pinetree_snow	Pinetree_Snow	1	15	20	0	1	2	10	0	64	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	1	1.1	1.15		1	1
+165	snowfirtree_small	SnowFirTree_small	1	25	35	0	1	2	10	0.5	64	7	1	0	0.2	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	1	0	1.15		1	1
+166	snowfirtree_small	SnowFirTree_small	1	5	10	0	1	2	10	0.5	64	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	1	1	2		1	1
+167	stubbe	stubbe_deepnorth	1	1	3	0	0.8	1.2	10	0.9	64	7	1	0	0	1000	0	0	0	20	2	0	0	2	0	20	0	2	0	0	-0.2	0	1	0	0	0	0	0	1		1	1
+168	oldLog	FirTree_oldLog_deepnorth	1	1	3	0	1	1.2	10	0.9	64	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	20	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+169	runestone	Waystone	0	0	0.2	0	1	1	0	0	64	7	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	1	1.1	4		0	1
+170	branch	Pickable_Branch_Snow	1	15	15	0	1	1	0	1	64	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	1	0	1.1		1	1
+171	snowball	Pickable_Snowball	0	30	30	0	1	1	0	1	64	7	1	0	0	1000	0	0	0	20	2	0	0	0	22	90	0	2	0	0	0	2	3	2	0	0	0	0	1		1	1
+172	snowball	Pickable_Snowball	1	2	5	0	1	1	0	1	64	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	1	0	0	0	0	1		1	1
+173	ice	ice1	0	5	15	0	1	1	0	0	64	7	1	0	-1000	-1	0	0	0	20	2	0	0	0	0	90	0	2	0	1	0	1	1	0	0	0	0	0	1		1	1
+174	icerock	ice_rock1	1	0	1	0	1	1	0	0	64	7	1	0	-1000	-1	0	0	0	20	2	0	0	0	0	90	0	2	0	1	-2	1	1	0	0	0	0	0	1		1	1
+175	rock 4	rock4_coast	1	4	6	0	0.6	1.2	15	0	64	7	0	0	-2	-0.5	0	0	0	20	2	0	2	30	0	90	0	2	0	0	0	3	3	20	0	0	0	0	1		1	1
+176	Lingonberries	LingonberryBush	1	1	2	0	1	1	0	0	64	2	1	0	1	1000	0	0	0	20	2	0	0	2	0	90	0	2	0	0	0	3	6	8	0	0	1	0	1		1	1
+177	frozengd	FrozenGD	1	0	2	0	0.5	1	0	1	64	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	40	0	2	0	0	0	1	1	1	0	0	0	0	1		1	1
+178	frozenSkeleton1	FrozenSkeleton_Pose1	1	0	4	0	1	1.2	0	1	64	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	40	0	2	0	0	0	1	1	1	0	0	0	0	1		1	1
+179	frozenSkeleton2	FrozenSkeleton_Pose2	1	0	4	0	1	1.2	0	1	64	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	40	0	2	0	0	0	1	1	1	0	0	0	0	1		1	1
+180	bush01	Bush01_deepnorth	1	1	2	0	1	1.75	0	0	64	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	-0.1	5	10	20	0	0	0	1	1.15		1	1
+181	StumpHut	StumpHut	1	0	1	0	0.75	1	0	1	64	7	1	0	1	1000	0	0	0	20	2	0	0	2	0	20	0	2	0	0	0	0	1	0	0	0	1	0	1		1	1
+182	StumpHole_small	StumpHole	1	0	1	0	0.4	0.7	0	1	64	7	1	0	1	1000	0	0	0	20	2	0	0	2	0	20	0	2	0	0	0	1	2	24	0	0	0	0	1		1	1
+183	StumpLog	StumpLog	1	0	1	0	0.66	1	180	0	64	7	1	0	1	1000	0	0	0	20	2	0	0	2	0	20	0	2	0	0	0	1	1	0	0	0	0	0	1		1	1
+184	lantern	deepnorth_lantern_standing	0	0	1	0	1	1	0	0	64	7	1	0	2	1000	0	0	0	20	2	0	0	2	0	15	0	2	0	0	-0.15	0	1	0	0	0	1	0	1		1	1
+185	ice	ice1	0	10	20	0	1	1	0	0	64	7	1	0	-1000	-19	0	0	0	20	2	0	0	0	0	90	0	2	0	1	0	1	1	0	0	0	0	0	1		1	1
+186	shore ice	IceShore_1	0	40	50	0	1	1	0	0	64	7	1	0	-20	0.5	0	0	0	20	2	0	0	0	0	90	0	2	0	1	-0.9	1	1	1	0	0	0	0	1		1	1
+187	shore ice	IceShore_1	0	40	50	0	1	1	0	0	64	7	1	0	-20	0.5	0	0	0	20	2	0	0	0	0	90	0	2	0	1	-0.6	1	1	1	0	0	0	0	1		1	1
+188	ice	ice1	1	7	13	0	1	1	0	0	64	7	1	0	-1000	-19	0	0	0	20	2	0	0	0	0	90	0	2	0	1	0	1	1	0	0	0	0	0	1		1	1
+189	shore ice	IceShore_1	1	5	10	0	1	1	0	0	64	7	1	0	-20	0.5	0	0	0	20	2	0	0	0	0	90	0	2	0	1	-0.9	1	1	1	0	0	0	0	1		1	1
+190	shore ice	IceShore_1	1	5	10	0	1	1	0	0	64	7	1	0	-20	0.5	0	0	0	20	2	0	0	0	0	90	0	2	0	1	-0.6	1	1	1	0	0	0	0	1		1	1
+191	Kale	Pickable_SeedKale	1	0	0.5	0	1	1.5	0	0	64	3	1	0	0	1000	0	0	0	20	2	0	0	0	0	25	0	2	0	0	0	1	2	5	0	0	0	0	1		1	1
+192	pickable_mushroom1	Pickable_Mushroom	1	80	100	0	1	1.2	0	0	9	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	10	0	2	0	0	0	1	1	7	0	0	1	0	1.1	Mushroom	1	1
+193	pickable_mushroom2	Pickable_Mushroom	1	3	5	0	1	1.2	0	0	9	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	10	0	2	0	0	0	15	20	7	0	0	1	0	1.1	Mushroom	1	1
+194	lost_lantern	deepnorth_lantern_standing	1	1	1	0	1	1	0	0	607	6	1	0	0	1000	0	0	0	20	2	0	0	0	0	0	1	4	0	0	0	1	1	1	0	0	0	0	5	Lantern	1	1
+195	large_bones	LargeBone	1	5	7	0	1.2	1.5	180	0.1	530	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	180	1	4	0	0	0	2	3	10	0	0	1	0	3	Bones	1	1
+196	large_bones_half01	LargeBone_half01	1	5	7	0	1.2	1.5	180	0.1	530	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	180	1	4	0	0	0	2	3	10	0	0	1	0	3	Bones	1	1
+197	large_bones_half02	LargeBone_half02	1	5	7	0	1.2	1.5	180	0.1	530	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	180	1	4	0	0	-0.1	2	3	10	0	0	1	0	3	Bones	1	1
+198	rock_7_meadows	Rock_7_meadows	1	3	4	0	1	2	30	0.5	17	7	1	0	-1	1000	0	0	0	0	0	0	0	0	0	60	1	4	0	0	-0.5	3	5	10	0	0	0	0	2	Menhir	1	1
+199	fireflies	FireFlies	1	20	20	0	1	1	0	0	1	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	25	0	2	0	0	1	1	1	0	0	0	0	0	1	Peaceful Meadows	1	1
+200	pickable_dandelion2	Pickable_Dandelion	1	40	60	0	1	1	0	0	1	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	10	0	2	0	0	0	1	1	7	0	0	1	1	5	Dandelion Meadows	1	1
+201	pickable_dandelion3	Pickable_Dandelion	1	3	5	0	1	1	0	0	1	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	10	0	2	0	0	0	20	25	7	0	0	1	0.5	5	Dandelion Meadows	1	1
+202	raspberry_bush2	RaspberryBush	1	2	3	0	1	1	0	0	1	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	20	0	2	0	0	0	7	15	15	0	0	1	0	3	Raspberry Meadows	1	1
+203	beech_small3_meadows	Beech_small1	1	50	50	0	1	1.5	10	0	1	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	1	0.5	1.15	Smalltree Meadows	1	1
+204	beech_small4_meadows	Beech_small2	1	50	50	0	1	2	10	0	1	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	1	0.5	1.15	Smalltree Meadows	1	1
+205	stubbe2_meadows	stubbe	1	2	3	0	0.8	1.2	0	1	1	7	1	0	0	1000	0	0	0	20	2	0	0	2	0	20	0	2	0	0	0	1	1	0	0	0	0	0	1	Smalltree Meadows	1	1
+206	bush02_meadows	Bush01	1	60	80	0	1	1.5	0	0	1	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	1	0.5	1.15	Smalltree Meadows	1	1
+207	shrub_3_meadows	shrub_2	0	20	20	0	1.5	2	0	0	1	7	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	90	0	2	0	0	0	1	1	0	0	0	1	0.5	1.15	Smalltree Meadows	1	1
+208	beech2_meadows	Beech1	1	5	10	0	0.8	1.5	4	0.1	1	7	1	0	0.2	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	1	0	1.15	Smalltree Meadows	1	1
+209	birch1_meadows2	Birch1	1	10	10	0	0.5	1	4	0.05	1	7	1	0	0.2	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	1	0	1.5	Birch Meadows	1	1
+210	birch2_meadows2	Birch2	1	5	9	0	0.5	1	4	0.05	1	7	1	0	0.2	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	1	0	1.5	Birch Meadows	1	1
+211	beech5_meadows	Beech1	1	10	10	0	0.8	1.5	4	0.1	1	7	1	0	0.2	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	1	0	1.15	Birch Meadows	1	1
+212	oak2_meadows	Oak1	1	1	2	0	0.8	1	4	0	1	7	1	0	0.5	1000	0	0	0	20	2	0	0	2	0	20	0	2	0	0	0	1	1	0	0	0	1	0	3	Birch Meadows	1	1
+213	Greydwarf_root1	Greydwarf_Root	1	20	20	0	1	1.25	5	0.5	8	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	10	0	4	0	0	0	1	3	7	0	0	1	0	2	Root Black Forest	1	1
+214	Greydwarf_Surprise	Greydwarf_Surprise	1	5	7	0	1	1	0	0	8	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	0	0	10	0	0	0	2	3	10	0	0	1	0	3	Root Black Forest	1	1
+215	stone_wall_2x1_ruin	stone_wall_2x1_ruin	1	4	5	0	1	1	0	0.2	8	7	1	0	-3	1000	0	0	0	20	2	0	0	0	0	90	0	10	0	0	0	5	7	10	0	0	0	0	1	Ruin Black Forest	1	1
+216	stone_wall_1x1_ruin	stone_wall_1x1_ruin	1	4	5	0	1	1	0	0.2	8	7	1	0	-3	1000	0	0	0	20	2	0	0	0	0	90	0	10	0	0	0	5	7	15	0	0	0	0	1	Ruin Black Forest	1	1
+217	stone_wall_ruin	stone_wall_ruin	1	2	2	0	1	1	0	0.2	8	7	1	0	-3	1000	0	0	0	20	2	0	0	0	0	22	0	10	0	0	0	2	3	15	0	0	0	0	1	Ruin Black Forest	1	1
+218	stone_wall_ruin_2	stone_wall_ruin_2	1	2	2	0	1	1	0	0.2	8	7	1	0	-3	1000	0	0	0	20	2	0	0	0	0	22	0	10	0	0	0	2	3	15	0	0	0	0	1	Ruin Black Forest	1	1
+219	ghostskull	GhostSkull	1	7	10	0	1	1	0	0	8	7	1	0	1	1000	0	0	0	20	2	0	0	0	0	180	1	10	0	0	0	1	1	10	0	0	1	0	3	Ruin Black Forest	1	1
+220	rock4_blackforest	rock4_forest	1	3	3	0	0.8	1	5	0	8	7	1	0	4	1000	0	0	0	20	2	0	0	0	5	45	0	2	0	0	-2	1	1	0	0	0	0	0	1	Rock Black Forest	1	1
+221	rock_3_blackforest	Rock_3	1	15	15	0	3	6	0	0	8	7	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	25	0	2	0	0	0	1	1	0	0	0	0	0	1	Rock Black Forest	1	2
+222	rock_4_blackforest	Rock_4	1	30	30	0	1	3	0	1	8	7	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	45	0	2	0	0	0	1	1	0	0	0	0	0	1	Rock Black Forest	1	2
+223	firtree_small_blackforest2	FirTree_small	1	40	40	0	0.3	0.7	0	0	8	7	1	0	0.5	1000	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	0	1.05	1.15	Rock Black Forest	1	0.5
+224	stubbe_blackforest	stubbe	1	15	15	0	0.8	1.4	0	1	8	7	1	0	0	1000	0	0	0	20	2	0	0	2	0	20	0	2	0	0	0	1	1	0	0	0	0	0	1	Rock Black Forest	1	1
+225	firtree_blackforest2	FirTree	1	1	2	0	2	2.5	4	0	8	7	1	0	0.1	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	0	0	1.1	Rock Black Forest	1	1
+226	Pinetree_01_blackforest	Pinetree_01	1	60	60	0	1	2.5	4	0.05	8	7	1	0	0.1	1000	0	0	0	20	2	0	0	1.5	0	30	0	2	0	0	0	1	1	0	0	0	0	0	1	Pinetree Black Forest	1	1
+227	blueberry_bush1	BlueberryBush	1	3	5	0	1	1	0	0	8	3	1	0	1	1000	0	0	0	20	2	0	0	2	0	90	0	10	0	0	0	10	20	15	0	0	0	1	1.1	Blueberry Black Forest	1	1
+228	swamptree3	SwampTree1	1	20	20	0	0.7	1.3	10	0.2	2	7	1	0	-0.5	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	0	0	1	Hut Swamp	1	1
+229	swamptree4	SwampTree2	1	7	7	0	1.5	2	5	0.1	2	7	1	0	-0.5	1000	0	0	0	20	2	0	0	2	0	35	0	2	0	0	0	1	1	0	0	0	0	0	1	Hut Swamp	1	1.5
+230	wooden_path	wooden_path	1	4	5	0	1	1	0	0.5	2	7	1	0	-2	0.25	0	0	0	0	0	0	0	0	0	15	1	4	0	0	0	3	4	10	0	0	0	0	1	Hut Swamp	1	1
+231	wood pole log 4	wood_pole_log_4_worn	1	7	9	0	1	1	0	0.5	2	7	1	0	-2	0.25	0	0	0	20	2	0	0	0	0	45	0	10	0	0	-0.5	2	3	3	0	0	0	0	1	Hut Swamp	1	1
+232	statue_evil_swamp	StatueEvil	1	1	3	0	1	1	0	50	2	7	1	0	0	1000	0	0	0	20	2	0	0	0	0	20	0	2	0	0	0	2	5	7	0	0	0	0	1	Bog Swamp	1	1
+233	swamptree2_log	SwampTree2_log	1	1	2	0	1.5	2	20	0	2	7	1	0	-2	1000	0	0	0	20	2	0	0	2	0	35	0	2	0	0	0	1	1	0	0	0	0	0	1	Bog Swamp	1	2
+234	firtree_small_dead_swamp	FirTree_small_dead	1	60	60	0	0.3	1	5	0.2	2	7	1	0	0.1	1000	0	0	0	20	2	0	0	0	0	25	0	2	0	0	0	1	1	0	0	0	0	1.1	1.2	Bog Swamp	1	1
+235	swamptree5	SwampTree1	1	11	12	0	0.7	1.3	10	0.2	2	7	1	0	-1	1000	0	0	0	20	2	0	0	2	0	30	0	2	0	0	0	1	1	0	0	0	0	0	1	Bog Swamp	1	1
+236	swamptree6	SwampTree2	1	6	7	0	1.5	2	5	0.1	2	7	1	0	-1	1000	0	0	0	20	2	0	0	2	0	35	0	2	0	0	0	1	1	0	0	0	0	0	1	Bog Swamp	1	1.5
+237	firtree_mountain2	FirTree	1	10	20	0	1.5	3	0	0.2	4	7	1	0	2	280	0	0	0	20	2	0	0	0	0	30	0	2	0	0	0	1	1	0	0	0	0	0	1.15	Wolf Mountain	1	1
+238	rock3_mountain_1	rock3_mountain_1	1	5	7	0	1	1.5	0	1	4	6	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	90	0	100	0	0	-5	1	1	0	0	0	0	0	1	Drake Mountain	1	1
+239	stone_wall_ruin	stone_wall_ruin	1	2	3	0	1	1	0	0.45	4	7	1	0	-3	1000	0	0	0	20	2	0	0	0	0	22	0	20	0	0	0	1	2	20	0	0	0	0	1	Fortress Mountain	1	1
+240	stone_wall_ruin_2	stone_wall_ruin_2	1	1	2	0	1	1	0	0.45	4	7	1	0	-3	1000	0	0	0	20	2	0	0	0	0	22	0	20	0	0	0	1	2	20	0	0	0	0	1	Fortress Mountain	1	1
+241	rock3_mountain_2	rock3_mountain_1	1	3	5	0	1	1.5	0	1	4	6	1	0	-1000	1000	0	0	0	20	2	0	0	0	0	90	10	100	0	0	-5	1	1	0	0	0	0	0	1	Fortress Mountain	1	1
+242	stubbe many	stubbe	1	40	50	0	0.8	1.4	0	1	8	7	1	0	0	1000	0	0	0	20	2	0	0	2	0	20	0	2	0	0	0	1	1	0	0	0	0	0	1	Kalhygge Black Forest	1	1
+243	stubbe pine many	Pinetree_01_Stub	1	130	150	0	0.8	1.4	0	1	8	7	1	0	0	1000	0	0	0	20	2	0	0	2	0	20	0	2	0	0	0	1	1	0	0	0	0	0	1	Kalhygge Black Forest	1	1
+244	cliff_mistlands3	cliff_mistlands1	1	2	2	0	0.6	1.2	0	1	512	3	0	0	1	1000	0	0.1	0	20	2	0	0	0	25	50	4	55	4	0	0	1	1	0	0	0	0	0	0	Rockless Mistlands	1	1
+245	cliff_mistlands4	cliff_mistlands2	1	15	15	0	0.5	1	15	0	512	3	0	0	1	1000	0	0.1	0	20	2	0	0	0	0	99	4	55	3	0	0	1	1	0	0	0	0	0	0	Rockless Mistlands	1	1
+246	rock_mistlands3	rock_mistlands1	1	5	5	0	1	3	15	0.2	512	3	1	0	0	1000	0	0.1	0	20	2	0	0	0	0	30	2	4	0	0	0	1	1	0	0	0	0	0	0	Rockless Mistlands	1	1
+247	YggaShoot_small3	YggaShoot_small1	1	60	60	0	1	2	5	0.1	512	3	0	1	1	1000	0	2	0	20	2	0	0	0	0	45	2	99	0	0	0	1	1	0	0	0	1	1	4	Rockless Mistlands	1	1
+248	YggaShoot4	YggaShoot1	1	20	20	0	0.9	1.2	5	0.1	512	3	0	1	1	1000	0	0.2	0	20	2	0	0	0	0	80	3	99	2	0	0	1	1	0	0	0	0	0	0	Trees Mistlands	1	1
+249	YggaShoot_small2	YggaShoot_small1	1	100	100	0	1	2	5	0.1	512	3	0	1	1	1000	0	2	0	20	2	0	0	0	0	45	3	99	0	0	0	1	2	0	0	0	0	0	0	Trees Mistlands	1	1
+250	ygga root2	YggdrasilRoot	1	1	3	0	1	1.5	0	0	512	3	1	0	1	1000	0.2	1	0	20	2	0	0	0	0	45	5	6	0	0	0	1	1	0	0	0	0	0	0	Trees Mistlands	1	1
+251	giant_sword1_sea	giant_sword1	1	3	5	0	1	1	10	100	512	3	0	1	-3	0	0	0	0	20	2	0	0	0	0	90	3	99	0	0	0	1	1	0	0	0	0	0	0	Swords Mistlands	1	1
+252	giant_sword2_sea	giant_sword2	1	3	5	0	1	1	10	100	512	3	0	1	-3	1	0	0	0	20	2	0	0	0	0	90	3	99	0	0	0	1	1	0	0	0	0	0	0	Swords Mistlands	1	1
+253	giant_sword3	giant_sword1	1	3	5	0	1	1	80	0	512	3	0	1	1	1000	0	0	0	20	2	0	0	0	0	45	3	10	0	0	0	1	1	0	0	0	0	0	0	Swords Mistlands	1	1
+254	giant_sword4	giant_sword2	1	3	5	0	1	1	80	0	512	3	0	1	1	1000	0	0	0	20	2	0	0	0	0	45	3	10	0	0	0	1	1	0	0	0	0	0	0	Swords Mistlands	1	1
+255	giant_helmet3	giant_helmet1	1	3	3	0	1	1	33	0	512	3	0	1	0	1000	0	0	0	20	2	0	0	0	0	30	5	5	0	0	0	1	1	0	0	0	0	0	0	Swords Mistlands	1	1
+256	giant_helmet4	giant_helmet2	1	3	3	0	1	1	33	0	512	3	0	1	0	1000	0	0	0	20	2	0	0	0	0	30	5	5	0	0	-1	1	1	0	0	0	0	0	0	Swords Mistlands	1	1

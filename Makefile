@@ -100,6 +100,11 @@ data:
 icons:
 	go run ./cmd/wiki-icons -meshes ${mesh_dir} -out assets/icons
 
+## models: pack the 3D view's models from ${mesh_dir} into web/static/models
+.PHONY: models
+models:
+	go run ./cmd/wiki-models -meshes ${mesh_dir} -out web/static/models
+
 ## probe: dump the components of prefabs: make probe names=Troll,Crypt2
 .PHONY: probe
 probe:

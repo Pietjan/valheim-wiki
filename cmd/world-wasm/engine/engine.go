@@ -17,6 +17,7 @@ import (
 	"hash/fnv"
 	"math"
 
+	"github.com/pietjan/valheim-wiki/internal/scene"
 	"github.com/pietjan/valheim-wiki/internal/stablehash"
 	"github.com/pietjan/valheim-wiki/internal/worldgen"
 	"github.com/pietjan/valheim-wiki/internal/worldmap"
@@ -175,6 +176,8 @@ type World struct {
 	gen     *worldgen.Generator
 	m       *worldgen.BiomeMap
 	sectors *Sectors
+	locs    *worldgen.Locations
+	scene   *scene.World
 }
 
 // New is a world from its seed as the player types it — the game hashes
@@ -366,7 +369,62 @@ func (w *World) Place(observe func(RuleSites)) []RuleReport {
 	for i, p := range locs.Report {
 		report[i] = RuleReport{Rule: p.Rule.Name, Prefab: p.Rule.Prefab, Wanted: p.Rule.Quantity, Placed: p.Placed}
 	}
+	w.locs = locs
+	w.scene = nil
 	return report
+}
+
+// Placed is whether Place has run, so a zone can be answered.
+func (w *World) Placed() bool { return w.locs != nil }
+
+// AdoptSites hands a world the sites a cached run placed — the rule name
+// and the x, z, y of each — so its zones can be answered without placing
+// again. The biome map is built if it is not yet, which is the slow part.
+// A rule name the tables no longer know is skipped.
+func (w *World) AdoptSites(rules []string, xyz [][]float32) {
+	w.Prepare()
+	byName := map[string]*worldgen.LocationRule{}
+	for _, r := range worldgen.DefaultLocationRules() {
+		byName[r.Name] = r
+	}
+	locs := &worldgen.Locations{ByZone: map[worldgen.Zone]*worldgen.LocationInstance{}}
+	for i, name := range rules {
+		rule := byName[name]
+		if rule == nil || i >= len(xyz) {
+			continue
+		}
+		v := xyz[i]
+		for j := 0; j+2 < len(v); j += 3 {
+			p := worldgen.Vec3{X: v[j], Z: v[j+1], Y: v[j+2]}
+			locs.ByZone[worldgen.ZoneOf(p)] = &worldgen.LocationInstance{Rule: rule, Zone: worldgen.ZoneOf(p), Position: p}
+		}
+	}
+	w.locs = locs
+	w.scene = nil
+}
+
+// Scene is what stands on the placed world's ground, nil until Place has
+// run: the placed sites are what the vegetation grows around.
+func (w *World) Scene() *scene.World {
+	if w.scene == nil && w.locs != nil {
+		w.scene = scene.New(w.gen, w.seedNumber, w.locs, w.m)
+	}
+	return w.scene
+}
+
+// Zone is what stands in one 64 m zone: its sites' models and the
+// vegetation the zone build scatters, in placement order. Nil before
+// Place has run.
+func (w *World) Zone(zx, zz int) []scene.Place {
+	sc := w.Scene()
+	if sc == nil {
+		return nil
+	}
+	var out []scene.Place
+	for _, s := range sc.SitesIn(zx, zz) {
+		out = append(out, sc.SitePlace(s))
+	}
+	return append(out, sc.Vegetation(zx, zz)...)
 }
 
 // Point answers for one position: the biome under it, the ground's height

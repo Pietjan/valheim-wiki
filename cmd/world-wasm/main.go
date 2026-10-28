@@ -10,6 +10,8 @@
 //	adopt(seed, mapSize, size, ids, names)   a cached world's sector plane, so point() can name sectors
 //	point(seed, x, z)                one position's biome, height, depth, forest and sector
 //	tile(seed, cx, cz, span, n)      a close-up grid of the ground, for the 3D view
+//	zone(seed, zx, zz)               what stands in one 64 m zone: sites and vegetation
+//	adoptSites(seed, rules, xyzs)    a cached run's sites, so zone() can answer for it
 //
 // open runs to completion inside the call — twenty-odd seconds — and
 // hands each message to the worker's vegvisirEmit(message, transfer) as
@@ -54,6 +56,8 @@ func main() {
 	api.Set("adopt", js.FuncOf(adopt))
 	api.Set("point", js.FuncOf(point))
 	api.Set("tile", js.FuncOf(tile))
+	api.Set("zone", js.FuncOf(zone))
+	api.Set("adoptSites", js.FuncOf(adoptSites))
 	global.Set("vegvisirWorld", api)
 	if ready := global.Get("vegvisirReady"); ready.Type() == js.TypeFunction {
 		ready.Invoke()
@@ -262,7 +266,8 @@ func world(seed string) (*engine.World, error) {
 
 // tile samples a close-up of the ground: {n, heights: Float32Array,
 // biomes: Uint8Array, mask: Uint8Array RGBA}, row zero north, or {error}.
-func tile(_ js.Value, args []js.Value) any {
+func tile(_ js.Value, args []js.Value) (out any) {
+	defer recovered(&out)
 	w, err := world(args[0].String())
 	if err != nil {
 		return map[string]any{"error": err.Error()}
@@ -274,23 +279,101 @@ func tile(_ js.Value, args []js.Value) any {
 	}
 }
 
+// adoptSites hands the current world a cached run's sites: the rule names
+// and, per rule, a Float32Array of x, z, y. Builds the biome map if it is
+// not built, some seconds. Returns an error string or null.
+func adoptSites(_ js.Value, args []js.Value) (out any) {
+	defer func() {
+		if r := recover(); r != nil {
+			out = fmt.Sprint(r)
+		}
+	}()
+	w, err := world(args[0].String())
+	if err != nil {
+		return err.Error()
+	}
+	rules := strings(args[1])
+	list := args[2]
+	xyz := make([][]float32, list.Length())
+	for i := range xyz {
+		xyz[i] = float32Go(list.Index(i))
+	}
+	w.AdoptSites(rules, xyz)
+	return nil
+}
+
+// recovered turns a panic in a binding into an {error} answer, so a bad
+// argument does not end the program for every later call.
+func recovered(out *any) {
+	if r := recover(); r != nil {
+		*out = map[string]any{"error": fmt.Sprint(r)}
+	}
+}
+
+func float32Go(a js.Value) []float32 {
+	if a.Type() != js.TypeObject || a.Get("byteLength").Int() == 0 {
+		return nil
+	}
+	view := uint8Array.New(a.Get("buffer"), a.Get("byteOffset"), a.Get("byteLength"))
+	b := make([]byte, view.Length())
+	js.CopyBytesToGo(b, view)
+	out := make([]float32, len(b)/4)
+	for i := range out {
+		out[i] = math.Float32frombits(binary.LittleEndian.Uint32(b[4*i:]))
+	}
+	return out
+}
+
+// zone answers for one 64 m zone of the current, placed world: {names:
+// [prefab...], kinds: [kind...], ids: Uint16Array (an index into names per
+// place), data: Float32Array (x, y, z, qx, qy, qz, qw, scale per place)},
+// or {error}. A world not yet placed answers an empty zone.
+func zone(_ js.Value, args []js.Value) (out any) {
+	defer recovered(&out)
+	w, err := world(args[0].String())
+	if err != nil {
+		return map[string]any{"error": err.Error()}
+	}
+	places := w.Zone(intArg(args, 1), intArg(args, 2))
+	names := []any{}
+	kinds := []any{}
+	index := map[string]int{}
+	ids := make([]uint16, len(places))
+	data := make([]float32, 0, 8*len(places))
+	for i, p := range places {
+		k := p.Name + "|" + p.Kind
+		id, ok := index[k]
+		if !ok {
+			id = len(names)
+			index[k] = id
+			names = append(names, p.Name)
+			kinds = append(kinds, p.Kind)
+		}
+		ids[i] = uint16(id)
+		data = append(data, float32(p.At[0]), float32(p.At[1]), float32(p.At[2]),
+			float32(p.Rot[0]), float32(p.Rot[1]), float32(p.Rot[2]), float32(p.Rot[3]), float32(p.Scale[0]))
+	}
+	return map[string]any{"names": names, "kinds": kinds, "ids": uint16JS(ids), "data": float32JS(data), "placed": w.Placed()}
+}
+
 // point answers for one position of a seed.
-func point(_ js.Value, args []js.Value) any {
+func point(_ js.Value, args []js.Value) (out any) {
+	defer recovered(&out)
 	seed := args[0].String()
 	if _, err := world(seed); err != nil {
 		return map[string]any{"error": err.Error()}
 	}
 	p := current.Point(args[1].Float(), args[2].Float())
-	out := map[string]any{"x": p.X, "z": p.Z, "ok": p.OK, "biome": p.Biome, "height": nil, "depth": p.Depth, "forest": p.Forest, "sector": nil}
+	ans := map[string]any{"x": p.X, "z": p.Z, "ok": p.OK, "biome": p.Biome, "height": nil, "depth": p.Depth, "forest": p.Forest, "sector": nil}
 	if p.OK {
-		out["height"] = p.Height
+		ans["height"] = p.Height
 	}
 	if p.Sector != nil {
 		names := make([]any, len(p.Sector))
 		for i, n := range p.Sector {
 			names[i] = n
 		}
-		out["sector"] = names
+		ans["sector"] = names
 	}
-	return out
+	return ans
 }

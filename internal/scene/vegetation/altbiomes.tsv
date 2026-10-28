@@ -1,0 +1,33 @@
+# name	blockVegetationNames	addVegetationNames
+Mushroom		pickable_mushroom1,pickable_mushroom2
+Lantern		lost_lantern
+Bones		large_bones,large_bones_half01,large_bones_half02
+Menhir		rock_7_meadows
+Dark Meadows		
+Peaceful Meadows		fireflies
+Dandelion Meadows		pickable_dandelion2,pickable_dandelion3
+Raspberry Meadows		raspberry_bush2
+Smalltree Meadows	beech1_meadows,birch1_meadows,birch2_meadows	beech_small3_meadows,beech_small4_meadows,stubbe2_meadows,bush02_meadows,shrub_3_meadows,beech2_meadows
+Birch Meadows	beech1_meadows	birch1_meadows2,birch2_meadows2,beech5_meadows,oak2_meadows
+Troll Black Forest		
+Root Black Forest		Greydwarf_root1,Greydwarf_Surprise
+Ruin Black Forest		stone_wall_2x1_ruin,stone_wall_1x1_ruin,stone_wall_ruin,stone_wall_ruin_2,ghostskull
+Rock Black Forest	firtree_many_blackforest,Pinetree_01_blackforest,firtree_blackforest	rock4_blackforest,rock_3_blackforest,rock_4_blackforest,firtree_small_blackforest2,stubbe_blackforest,firtree_blackforest2
+Pinetree Black Forest	firtree_blackforest,firtree_many_blackforest,firtree_small_blackforest	Pinetree_01_blackforest
+Blueberry Black Forest		blueberry_bush1
+Hut Swamp	swamptree1,swamptree2	swamptree3,swamptree4,wooden_path,wood pole log 4
+Bog Swamp	swamptree1,swamptree2	statue_evil_swamp,swamptree2_log,firtree_small_dead_swamp,swamptree5,swamptree6
+Bat Swamp		
+Abomination Swamp		
+Wolf Mountain	rock1_mountain,rock2_mountain	firtree_mountain2
+Drake Mountain	firtree_mountain	rock3_mountain_1
+Fortress Mountain	firtree_mountain	stone_wall_ruin,stone_wall_ruin_2,rock3_mountain_2
+Lox Plains	birch2_aut_heath	
+Goblin Plains		
+Death Plains	birch2_aut_heath,heathrockpillar	
+Kalhygge Black Forest	firtree_many_blackforest,firtree_blackforest,Pinetree_01_blackforest,firtree_small_blackforest	stubbe many,stubbe pine many
+Rockless Mistlands	cliff_mistlands1,cliff_mistlands2,rock_mistlands1	cliff_mistlands3,cliff_mistlands4,rock_mistlands3,YggaShoot_small3
+Trees Mistlands		YggaShoot4,YggaShoot_small2,ygga root2
+Swords Mistlands		giant_sword1_sea,giant_sword2_sea,giant_sword3,giant_sword4,giant_helmet3,giant_helmet4
+Hare Mistlands		
+BroodSwarm Mistlands		

@@ -7,6 +7,7 @@
 //   {type:'open', seed, mapSize}          compute, or replay from the cache
 //   {type:'point', seed, x, z, id}        one position; answered with the same id
 //   {type:'tile', seed, cx, cz, span, n, id}   a close-up grid of the ground, for the 3D view
+//   {type:'zone', seed, zx, zz, id}        what stands in one 64 m zone, for the 3D view
 //
 // and gets back the protocol of docs/architecture.md, relayed message by
 // message as the engine emits it: info, map, sectors, rivers, sites (one per
@@ -33,6 +34,8 @@ let engineReady = null;   // Promise<void>: the wasm is instantiated and vegvisi
 let engineVersion = '';
 let queue = Promise.resolve();   // opens, one after another
 let emitTo = null;        // where vegvisirEmit's messages go while an open runs
+const records = new Map();   // seed → the record computed or replayed this session
+const placed = new Set();    // seeds whose sites the engine holds
 
 // vegvisirEmit is what the engine calls, synchronously, for each message of
 // an open. The typed arrays in `transfer` are fresh buffers; a copy of each
@@ -56,6 +59,9 @@ self.onmessage = e => {
         break;
       case 'tile':
         tile(m);
+        break;
+      case 'zone':
+        zone(m);
         break;
       default:
         self.postMessage({ type: 'error', message: `world-worker: unknown message type ${m.type}` });
@@ -122,11 +128,14 @@ async function open(seed, mapSize) {
     cached = null;
   }
   if (cached && cached.complete && (!mapSize || cached.mapSize === mapSize)) {
+    records.set(seed, cached);
     replay(api, cached);
     return;
   }
   const record = compute(api, seed, mapSize);
   if (record && record.complete) {
+    records.set(seed, record);
+    placed.add(seed);
     try {
       await dbPut(key, record);
     } catch (err) {
@@ -203,10 +212,13 @@ function replay(api, rec) {
     [map.heights.buffer, map.biomes.buffer, map.mask.buffer]);
   self.postMessage(msg('sectors', { size: rec.sectors.size, ids: rec.sectors.ids, list: rec.sectors.list }), [rec.sectors.ids.buffer]);
   self.postMessage(msg('rivers', rec.rivers));
+  // The sites go as copies: the record keeps its own, for the engine to
+  // adopt when the 3D view asks for a zone.
   let placed = 0;
   for (const s of rec.sites) {
     placed += s.xyz.length / 3;
-    self.postMessage(msg('sites', { rule: s.rule, prefab: s.prefab, index: s.index, total: s.total, xyz: s.xyz, placed, elapsed: elapsed() }), [s.xyz.buffer]);
+    const xyz = s.xyz.slice();
+    self.postMessage(msg('sites', { rule: s.rule, prefab: s.prefab, index: s.index, total: s.total, xyz, placed, elapsed: elapsed() }), [xyz.buffer]);
   }
   self.postMessage(msg('done', { report: rec.done.report, took: rec.done.took, placed: rec.done.placed, cached: true, replayed: elapsed() }));
 }
@@ -236,6 +248,36 @@ async function tile(m) {
     }
     self.postMessage({ type: 'tile', id: m.id, seed: m.seed, n: t.n, cx: t.cx, cz: t.cz, span: t.span, heights: t.heights, biomes: t.biomes, mask: t.mask },
       [t.heights.buffer, t.biomes.buffer, t.mask.buffer]);
+  } catch (err) {
+    fail(m.seed, 0, err, { id: m.id });
+  }
+}
+
+// zone answers what stands in one zone. The engine only knows the sites
+// of a world it placed itself; for a world replayed from the cache it is
+// handed the record's sites first, which costs the biome map once, some
+// seconds, reported as progress with phase 'scene'.
+async function zone(m) {
+  try {
+    const api = await engine();
+    const seed = String(m.seed);
+    if (!placed.has(seed)) {
+      const rec = records.get(seed);
+      if (!rec) throw new Error('zone: the world is not open');
+      self.postMessage({ type: 'progress', seed, mapSize: rec.mapSize, phase: 'scene', index: 0, total: 0, placed: rec.placed, elapsed: 0 });
+      const t0 = performance.now();
+      const err = api.adoptSites(seed, rec.sites.map(s => s.rule), rec.sites.map(s => s.xyz));
+      if (err) throw new Error('adoptSites: ' + err);
+      placed.add(seed);
+      self.postMessage({ type: 'progress', seed, mapSize: rec.mapSize, phase: 'scene-ready', index: 0, total: 0, placed: rec.placed, elapsed: Math.round(performance.now() - t0) });
+    }
+    const z = api.zone(seed, m.zx | 0, m.zz | 0);
+    if (!z || z.error) {
+      fail(m.seed, 0, new Error(z ? z.error : 'zone: no answer'), { id: m.id });
+      return;
+    }
+    self.postMessage({ type: 'zone', id: m.id, seed: m.seed, zx: m.zx | 0, zz: m.zz | 0, names: z.names, kinds: z.kinds, ids: z.ids, data: z.data, placed: z.placed },
+      [z.ids.buffer, z.data.buffer]);
   } catch (err) {
     fail(m.seed, 0, err, { id: m.id });
   }
