@@ -1,0 +1,47 @@
+{{define "content"}}
+{{$d := .Data}}{{$c := $d.Converter}}
+{{template "crumbs" .}}
+{{template "hero" (dict "icon" (iconOf $c.Prefab) "eyebrow" (converterKind $c.Kind) "title" $c.Name "lede" $d.Lede)}}
+<div class="cols">
+<div class="main">
+{{if $d.Piece}}{{if $d.Piece.Resources}}
+<h2>Building it</h2>
+<div class="recipe"><ul class="chips">{{range $d.Piece.Resources}}<li>{{template "chipn" (dict "prefab" .Item "n" .Amount)}}</li>{{end}}</ul>
+<p class="at">{{if $d.Piece.Station}}Needs {{template "chip" $d.Piece.Station}} nearby{{else}}Built with the hammer{{end}}</p></div>
+{{end}}{{end}}
+{{if $c.Conversions}}
+<h2>What it makes</h2>
+<div class="table-wrap"><table><thead><tr><th>From</th><th></th><th>To</th>{{if eq $c.Kind "fermenter"}}<th class="num">Yield</th>{{end}}{{if eq $c.Kind "cooking"}}<th>Time</th>{{end}}</tr></thead><tbody>
+{{range $c.Conversions}}<tr><td>{{template "chip" .From}}</td><td class="muted">→</td><td>{{template "chip" .To}}</td>{{if eq $c.Kind "fermenter"}}<td class="num">{{.Amount}}</td>{{end}}{{if eq $c.Kind "cooking"}}<td>{{secs .Time}}</td>{{end}}</tr>{{end}}
+</tbody></table></div>
+{{end}}
+{{if $c.Incinerations}}
+<h2>Recipes</h2>
+<div class="table-wrap"><table><thead><tr><th>Put in</th><th>Get</th></tr></thead><tbody>
+{{range $c.Incinerations}}<tr><td><ul class="chips">{{range .Requirements}}<li>{{template "chipn" (dict "prefab" .Item "n" .Amount)}}</li>{{end}}</ul></td><td>{{template "chipn" (dict "prefab" .Result "n" .Amount)}}</td></tr>{{end}}
+</tbody></table></div>
+{{end}}
+{{if $c.Notes}}<h2>Notes</h2><ul>{{range $c.Notes}}<li>{{.}}</li>{{end}}</ul>{{end}}
+</div>
+<aside class="infobox">
+<h3>{{converterKind $c.Kind}}</h3>
+<dl>
+{{if $c.Fuel}}{{template "stat" (dict "k" "Fuel" "v" (nameOf $c.Fuel))}}{{end}}
+{{if $c.Fuels}}{{template "stat" (dict "k" "Fuel" "v" (join $c.Fuels ", "))}}{{end}}
+{{if $c.FuelPerItem}}{{template "stat" (dict "k" "Fuel per item" "v" (num $c.FuelPerItem))}}{{end}}
+{{if $c.SecPerItem}}{{template "stat" (dict "k" "Time per item" "v" (secs $c.SecPerItem))}}{{end}}
+{{if $c.Duration}}{{template "stat" (dict "k" "Takes" "v" (secs $c.Duration))}}{{end}}
+{{if $c.MaxInput}}{{template "stat" (dict "k" "Holds" "v" $c.MaxInput)}}{{end}}
+{{if $c.MaxFuel}}{{template "stat" (dict "k" "Max fuel" "v" $c.MaxFuel)}}{{end}}
+{{if $c.Product}}{{template "stat" (dict "k" "Produces" "v" (nameOf $c.Product))}}{{end}}
+{{if $c.MaxProduct}}{{template "stat" (dict "k" "Stores up to" "v" $c.MaxProduct)}}{{end}}
+{{if $c.Overcooked}}{{template "stat" (dict "k" "Left too long" "v" (nameOf $c.Overcooked))}}{{end}}
+{{if $c.RequiresRoof}}{{template "stat" (dict "k" "Needs a roof" "v" "Yes")}}{{end}}
+{{if $c.RequiresFire}}{{template "stat" (dict "k" "Needs fire" "v" "Yes")}}{{end}}
+{{if $c.Biomes}}{{template "stat" (dict "k" "Works in" "v" (join (biomeNames $c.Biomes) ", "))}}{{end}}
+{{if $d.Piece}}{{if $d.Piece.Health}}{{template "stat" (dict "k" "Health" "v" (num $d.Piece.Health))}}{{end}}{{if $d.Piece.Comfort}}{{template "stat" (dict "k" "Comfort" "v" $d.Piece.Comfort)}}{{end}}{{end}}
+</dl>
+<h3>Prefab</h3><p class="small muted"><code>{{$c.Prefab}}</code></p>
+</aside>
+</div>
+{{end}}

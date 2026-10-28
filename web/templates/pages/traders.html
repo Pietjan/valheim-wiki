@@ -1,0 +1,5 @@
+{{define "content"}}
+{{template "crumbs" .}}
+<div class="index-head"><div><p class="eyebrow">Coin for goods</p><h1>Traders</h1><p>Three merchants, each in one place in your world.</p></div></div>
+<ul class="cards round">{{range .Data}}{{with .Thing}}<li><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" width="56" height="56">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span>{{end}}<span class="card-sub">{{len .Trader.Items}} wares{{with .Kind}} · {{.Name}}{{end}}</span></a></li>{{end}}</ul>
+{{end}}

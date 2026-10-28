@@ -1,0 +1,11 @@
+{{define "content"}}
+{{$d := .Data}}
+<div class="index-head"><div><p class="eyebrow">What the generator sets down</p><h1>Locations</h1><p>{{$d.Count}} kinds of place, by biome. Set your seed to see where each stands in your world, or open <a href="{{url "world/"}}">the map</a>.</p></div></div>
+<div class="filters"><input type="search" placeholder="Filter places…" data-filter="[data-name]" aria-label="Filter places"></div>
+{{range $d.Groups}}
+<h2 id="{{.Biome}}" class="group-title">{{template "biome" .Biome}} <span class="count">{{len .Kinds}}</span></h2>
+<ul class="cards round">
+{{range .Kinds}}{{$k := .}}{{with thing (index .Variants 0).Prefab}}<li data-name="{{lower $k.Name}}"><a class="card" href="{{url (print "locations/" $k.Slug "/")}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="56" height="56">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{$k.Name}}</span><span class="card-sub">{{if gt (len $k.Variants) 1}}{{len $k.Variants}} variants · {{end}}{{if $k.Quantity}}up to {{$k.Quantity}} per world{{else}}unique{{end}}</span></a></li>{{end}}{{end}}
+</ul>
+{{end}}
+{{end}}

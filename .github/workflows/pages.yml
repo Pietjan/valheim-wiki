@@ -1,0 +1,47 @@
+# Builds the site with Go and publishes it to GitHub Pages on every push
+# to master. The game data and icons are committed (extracted locally by
+# `make data` and `make icons`; the runner has no game client), so the
+# build needs only Go: the generator, and the seed engine for WebAssembly.
+name: pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Test
+        run: go test -short ./...
+      - name: Build
+        run: make build base_path=/${{ github.event.repository.name }}/ origin=https://${{ github.repository_owner }}.github.io
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

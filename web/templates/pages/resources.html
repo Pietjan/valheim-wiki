@@ -1,0 +1,11 @@
+{{define "content"}}
+{{template "crumbs" .}}
+<div class="index-head"><div><p class="eyebrow">What the land gives</p><h1>Resources</h1><p>Everything that grows, stands or lies about and gives something when picked, chopped, mined or broken.</p></div></div>
+<div class="filters"><input type="search" placeholder="Filter resources…" data-filter="[data-name]" aria-label="Filter resources"></div>
+{{range .Data}}
+<h2 id="{{.ID}}" class="group-title">{{.Name}}{{if ne .ID "destructible"}}s{{end}} <span class="count">{{len .Resources}}</span></h2>
+<ul class="cards compact">
+{{range .Resources}}{{$r := .}}{{with thing .Prefab}}<li data-name="{{lower .Name}}"><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="40" height="40">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span><span class="card-sub">{{if $r.Biomes}}{{join (biomeNames $r.Biomes) ", "}}{{else}}{{.Sub}}{{end}}</span></a></li>{{end}}{{end}}
+</ul>
+{{end}}
+{{end}}

@@ -1,0 +1,23 @@
+{{define "content"}}
+{{$d := .Data}}{{$t := $d.Trader}}
+{{template "crumbs" .}}
+{{template "hero" (dict "icon" (iconOf $t.Prefab) "round" true "eyebrow" "Trader" "title" $t.Name "lede" "")}}
+<div class="cols">
+<div class="main">
+{{with $d.Kind}}<p>Found at {{template "chip" (index .Variants 0).Prefab}}, which the map marks once you come near.</p>{{end}}
+<h2>Wares</h2>
+<div class="table-wrap"><table><thead><tr><th>Item</th><th class="num">Price</th><th>Available</th></tr></thead><tbody>
+{{range $t.Items}}<tr><td>{{template "chipn" (dict "prefab" .Item "n" (when (gt .Stack 1) .Stack ""))}}</td><td class="num">{{.Price}} coins</td><td class="muted small">{{if .RequiredKey}}after {{keyName .RequiredKey}}{{else}}always{{end}}</td></tr>{{end}}
+</tbody></table></div>
+{{if $t.UseItems}}<h2>Takes</h2><ul class="chips">{{range $t.UseItems}}<li>{{template "chip" .Item}}<span class="chip-meta">{{if .Dialogue}}{{.Dialogue}}{{end}}</span></li>{{end}}</ul>{{end}}
+{{template "yourworld" .YourWorld}}
+</div>
+<aside class="infobox">
+<h3>Trader</h3>
+<dl>
+{{template "stat" (dict "k" "Wares" "v" (len $t.Items))}}
+{{with $d.Location}}{{template "stat" (dict "k" "Camp" "v" (safe (print "<a href=\"" (thingURL .Prefab) "\">" .Name "</a>")))}}{{if .Biomes}}{{template "stat" (dict "k" "Biome" "v" (join (biomeNames .Biomes) ", "))}}{{end}}{{if .MinDistanceFromCenter}}{{template "stat" (dict "k" "From centre" "v" (print (metres .MinDistanceFromCenter) " – " (metres .MaxDistanceFromCenter)))}}{{end}}{{end}}
+</dl>
+</aside>
+</div>
+{{end}}

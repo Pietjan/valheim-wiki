@@ -1,0 +1,11 @@
+{{define "content"}}
+{{template "crumbs" .}}
+<div class="index-head"><div><p class="eyebrow">They come for you</p><h1>Raids</h1><p>Every so often the game rolls for a raid near a player's base; which ones are possible depends on what has been killed and where the base stands.</p></div></div>
+{{range .Data}}{{$e := .Event}}
+<section class="panel" id="{{slug $e.Name}}">
+<h2 style="margin:0 0 4px">{{if $e.StartMessage}}{{$e.StartMessage}}{{else}}{{$e.Name}}{{end}}</h2>
+<p class="muted small">{{if $e.Random}}Random raid{{else}}Scripted event{{end}} · lasts {{secs $e.Duration}}{{if $e.Biomes}} · in {{join (biomeNames $e.Biomes) ", "}}{{end}}{{if $e.RequiredKeys}} · after {{range $i, $k := $e.RequiredKeys}}{{if $i}}, {{end}}{{keyName $k}}{{end}}{{end}}{{if $e.NotKeys}} · not after {{range $i, $k := $e.NotKeys}}{{if $i}}, {{end}}{{keyName $k}}{{end}}{{end}}{{if $e.EndMessage}} · "{{$e.EndMessage}}"{{end}}</p>
+<ul class="chips">{{range .Spawns}}<li>{{template "chip" .Prefab}}<span class="chip-meta">up to {{.MaxSpawned}}{{if gt .MaxLevel 1}} · up to {{sub .MaxLevel 1}} stars{{end}}</span></li>{{end}}</ul>
+</section>
+{{end}}
+{{end}}

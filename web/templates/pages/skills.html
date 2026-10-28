@@ -1,0 +1,5 @@
+{{define "content"}}
+{{template "crumbs" .}}
+<div class="index-head"><div><p class="eyebrow">Practice</p><h1>Skills</h1><p>Every skill goes from 0 to 100 and loses a share on death.</p></div></div>
+<ul class="cards">{{range .Data}}{{$s := .}}{{with thing (print "skill:" .ID)}}<li id="{{slug .Name}}"><span class="card">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="56" height="56">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span><span class="card-sub">{{$s.Description}}</span></span></li>{{end}}{{end}}</ul>
+{{end}}

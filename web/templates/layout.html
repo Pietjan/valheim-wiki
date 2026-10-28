@@ -1,0 +1,83 @@
+{{- /* The one layout every page uses. Pages define "content"; some also define "head" and "foot". */ -}}
+<!doctype html>
+<html lang="en" data-base="{{url ""}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{if .Title}}{{.Title}} · {{end}}{{.Site.Title}}</title>
+{{if .Description}}<meta name="description" content="{{.Description}}">{{end}}
+<meta property="og:title" content="{{if .Title}}{{.Title}} · {{end}}{{.Site.Title}}">
+{{if .Description}}<meta property="og:description" content="{{.Description}}">{{end}}
+{{if .Icon}}<meta property="og:image" content="{{.Icon}}">{{end}}
+<meta name="theme-color" content="#1c1813" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#efe4cf" media="(prefers-color-scheme: light)">
+<link rel="icon" href="{{url "static/img/favicon.svg"}}" type="image/svg+xml">
+<link rel="preload" href="{{url "static/fonts/Norsebold.otf"}}" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="{{url "static/fonts/AveriaSerifLibre-Regular.ttf"}}" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="{{url "static/css/site.css"}}">
+<script>
+// Theme before paint: the stored choice, else the system's.
+(function(){try{var t=localStorage.getItem('vegvisir.theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();
+</script>
+<script type="module" src="{{url "static/js/app.js"}}"></script>
+{{block "head" .}}{{end}}
+</head>
+<body class="section-{{.Section}}">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="{{url ""}}" aria-label="{{.Site.Title}} home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#vegvisir"/></svg>
+      <span class="brand-name">Vegvísir</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="{{url "items/"}}" {{if eq .Section "items"}}aria-current="page"{{end}}>Items</a>
+      <a href="{{url "crafting/"}}" {{if eq .Section "crafting"}}aria-current="page"{{end}}>Crafting</a>
+      <a href="{{url "building/"}}" {{if eq .Section "building"}}aria-current="page"{{end}}>Building</a>
+      <a href="{{url "creatures/"}}" {{if eq .Section "creatures"}}aria-current="page"{{end}}>Creatures</a>
+      <a href="{{url "biomes/"}}" {{if eq .Section "biomes"}}aria-current="page"{{end}}>Biomes</a>
+      <a href="{{url "locations/"}}" {{if eq .Section "locations"}}aria-current="page"{{end}}>Locations</a>
+      <a href="{{url "world/"}}" class="nav-world" {{if eq .Section "world"}}aria-current="page"{{end}}>World</a>
+    </nav>
+    <div class="tools">
+      <button type="button" class="tool search-open" data-search-open aria-label="Search"><svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#search"/></svg><span class="tool-label">Search</span><kbd>/</kbd></button>
+      <button type="button" class="tool seed-chip" data-seed-chip aria-label="Your world seed"><svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#seed"/></svg><span class="seed-chip-text" data-seed-text>Set seed</span></button>
+      <button type="button" class="tool theme-toggle" data-theme-toggle aria-label="Switch theme"><svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#theme"/></svg></button>
+      <button type="button" class="tool nav-toggle" data-nav-toggle aria-label="Menu" aria-expanded="false"><svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#menu"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main" class="page page-{{.Section}}">
+{{template "content" .}}
+</main>
+<footer class="foot">
+  <div class="foot-inner">
+    <p><strong>Vegvísir</strong> is an unofficial Valheim wiki generated from the game's own data, version {{.Site.DB.Meta.Game}}{{if .Site.DB.Meta.Extracted}} (read {{.Site.DB.Meta.Extracted}}){{end}}. Valheim and its art are © Iron Gate Studio; this site is fan-made and free.</p>
+    <p><a href="{{url "about/"}}">About the data</a> · <a href="{{url "search/"}}">Search</a> · <a href="https://github.com/Pietjan/valheim-wiki">Source</a></p>
+  </div>
+</footer>
+<dialog class="search-dialog" data-search aria-label="Search the wiki">
+  <form class="search-form" method="dialog">
+    <svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#search"/></svg>
+    <input type="search" data-search-input placeholder="Search items, creatures, places…" autocomplete="off" spellcheck="false" aria-label="Search">
+    <kbd>esc</kbd>
+  </form>
+  <ol class="search-results" data-search-results></ol>
+  <p class="search-hint">Type to search. <kbd>↑</kbd><kbd>↓</kbd> to move, <kbd>↵</kbd> to open.</p>
+</dialog>
+<dialog class="seed-dialog" data-seed-dialog aria-label="Your world">
+  <form method="dialog" class="seed-form" data-seed-form>
+    <h2>Your world</h2>
+    <p>Enter your world's seed and every page gains a <em>Your world</em> panel: where the nearest troll cave is, how far the trader stands from spawn, which biomes border your meadows. Find the seed in the world list of the game's main menu. Nothing leaves your browser.</p>
+    <label class="seed-field"><span>Seed</span><input type="text" data-seed-input placeholder="e.g. CXJeyEhsEp" autocomplete="off" spellcheck="false" maxlength="40"></label>
+    <div class="seed-actions">
+      <button type="submit" class="btn btn-primary" value="set">Use this seed</button>
+      <button type="submit" class="btn" value="clear" data-seed-clear>Forget</button>
+      <button type="submit" class="btn btn-quiet" value="cancel">Cancel</button>
+    </div>
+    <p class="seed-progress" data-seed-progress hidden></p>
+  </form>
+</dialog>
+{{block "foot" .}}{{end}}
+</body>
+</html>

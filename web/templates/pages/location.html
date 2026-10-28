@@ -1,0 +1,55 @@
+{{define "content"}}
+{{$d := .Data}}{{$k := $d.Kind}}{{$m := $d.Main}}{{$c := $d.Contents}}
+{{template "crumbs" .}}
+{{template "hero" (dict "icon" (iconOf (index $k.Variants 0).Prefab) "round" true "eyebrow" (join (biomeNames $k.Biomes) " · ") "title" $k.Name "lede" (when $m.DiscoverLabel $m.DiscoverLabel ""))}}
+<div class="cols">
+<div class="main">
+<h2>Placement</h2>
+<p>{{if $m.Unique}}One per world{{else}}The generator tries to place {{$k.Quantity}}{{if gt (len $k.Variants) 1}} across {{len $k.Variants}} variants{{end}}{{end}} in {{join (biomeNames $k.Biomes) " and "}}{{if ne $m.BiomeArea "Everything"}}, in the {{lower $m.BiomeArea}} of the biome{{end}}{{if $m.MinDistanceFromCenter}}, at least {{metres $m.MinDistanceFromCenter}} from the world's centre{{end}}{{if $m.MaxDistanceFromCenter}}, within {{metres $m.MaxDistanceFromCenter}} of it{{end}}{{if gt $m.MinAltitude -1000.0}}{{if ge $m.MinAltitude 0.0}}, above {{num $m.MinAltitude}} m{{else}}, down to {{num $m.MinAltitude}} m{{end}}{{end}}{{if lt $m.MaxAltitude 1000.0}}, below {{num $m.MaxAltitude}} m{{end}}{{if $m.InForest}}, in forest{{end}}{{if $m.SnapToWater}}, at the waterline{{end}}{{if $m.MinDistanceFromSimilar}}, at least {{metres $m.MinDistanceFromSimilar}} from another{{end}}.{{if $m.Prioritized}} It is placed before anything else, so the world always finds room for it.{{end}}{{if $m.IconAlways}} The map marks it from the start.{{else if $m.IconPlaced}} The map marks it once found.{{end}}</p>
+{{if gt (len $k.Variants) 1}}
+<h3>Variants</h3>
+<div class="variants">{{range $k.Variants}}<div class="variant">{{if iconOf .Prefab}}<img src="{{iconOf .Prefab}}" alt="" loading="lazy" width="96" height="96">{{end}}<code>{{.Prefab}}</code>{{if .Quantity}}<br>{{.Quantity}}{{end}}</div>{{end}}</div>
+{{end}}
+{{with $m.Dungeon}}
+<h2>{{if eq .Algorithm "Dungeon"}}Dungeon{{else}}Camp{{end}}</h2>
+<p>{{if eq .Algorithm "Dungeon"}}An interior built from {{.MinRooms}}–{{.MaxRooms}} rooms{{else}}Built on the spot from rooms, {{if eq .Algorithm "CampRadial"}}in a ring {{num .CampRadiusMin}}–{{num .CampRadiusMax}} m across{{else}}on a grid{{end}}{{end}}{{if .Themes}} of the {{join .Themes ", "}} set{{end}}{{if .RequiredRooms}}, always including {{len .RequiredRooms}} special room{{if gt (len .RequiredRooms) 1}}s{{end}}{{end}}.</p>
+{{end}}
+{{if $d.Boss}}<h2>Altar</h2><p>Here {{template "chip" $d.Boss.Prefab}} is summoned{{with $c.Offering}} with {{template "chipn" (dict "prefab" .Item "n" .Count)}}{{end}}.</p>{{end}}
+{{if $d.Creatures}}<h2>Creatures</h2>
+{{if $c}}{{if $c.Spawners}}<div class="table-wrap"><table><thead><tr><th>Creature</th><th class="num">Count</th><th>Stars</th><th>Respawn</th><th></th></tr></thead><tbody>
+{{range $c.Spawners}}<tr><td>{{template "chip" .Creature}}</td><td class="num">{{.Count}}</td><td>{{if gt .MaxLevel 1}}up to {{sub .MaxLevel 1}}{{else}}—{{end}}</td><td>{{if .Respawn}}{{mins .Respawn}}{{else}}once{{end}}</td><td class="muted small">{{if .Chance}}{{if lt .Chance 1.0}}{{pct .Chance}} chance; {{end}}{{end}}{{if and .Night (not .Day)}}at night{{end}}{{if .RequiredKey}}after {{keyName .RequiredKey}}{{end}}</td></tr>{{end}}
+</tbody></table></div>{{end}}
+{{if $c.Nests}}<h3>Nests</h3><ul class="chips">{{range $c.Nests}}<li>{{template "chipn" (dict "prefab" .Prefab "n" .Count)}}<span class="chip-meta">{{range $i, $e := .Creatures}}{{if $i}}, {{end}}{{nameOf $e.Creature}}{{end}}</span></li>{{end}}</ul>{{end}}
+{{if $c.Creatures}}<ul class="chips">{{range $c.Creatures}}<li>{{template "chipn" (dict "prefab" .Creature "n" .Count)}}</li>{{end}}</ul>{{end}}{{end}}
+{{if $d.Rooms}}<p class="muted small">Including what the dungeon's rooms can hold.</p><ul class="chips">{{range $d.Creatures}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
+{{end}}
+{{if $d.Loot}}<h2>Loot</h2><p class="muted small">What the chests here can hold{{if $d.Rooms}}, rooms included{{end}}.</p>
+<ul class="chips">{{range $d.Loot}}<li>{{template "chip" .Item}}<span class="chip-meta">{{.Min}}{{if ne .Min .Max}}–{{.Max}}{{end}}</span></li>{{end}}</ul>
+{{if $c}}{{if $c.Chests}}<h3>Chests</h3><ul class="chips">{{range $c.Chests}}<li>{{template "chipn" (dict "prefab" .Prefab "n" .Count)}}{{if .Chance}}{{if lt .Chance 1.0}}<span class="chip-meta">{{pct .Chance}}</span>{{end}}{{end}}</li>{{end}}</ul>{{end}}{{end}}
+{{end}}
+{{if $c}}
+{{if $c.Pickables}}<h2>Pickables</h2><ul class="chips">{{range $c.Pickables}}<li>{{template "chipn" (dict "prefab" .Prefab "n" .Count)}}</li>{{end}}</ul>{{end}}
+{{if $c.Resources}}<h2>Resources</h2><ul class="chips">{{range $c.Resources}}<li>{{template "chipn" (dict "prefab" .Prefab "n" .Count)}}</li>{{end}}</ul>{{end}}
+{{if $c.Vegvisirs}}<h2>Vegvisir</h2><p>A runestone here reveals {{range $i, $v := $c.Vegvisirs}}{{if $i}}, {{end}}{{range $j, $l := $v.Locations}}{{if $j}}, {{end}}{{template "chip" $l}}{{end}}{{end}} on the map.</p>{{end}}
+{{if $c.Runestones}}<h2>Runestones</h2>{{range $c.Runestones}}<blockquote class="note">{{if .Label}}<b>{{.Label}}</b><br>{{end}}{{if .Text}}{{nl2br .Text}}{{end}}{{range .Texts}}<p>{{.}}</p>{{end}}</blockquote>{{end}}{{end}}
+{{if $c.Pieces}}<h2>Built here</h2><ul class="chips">{{range $c.Pieces}}<li>{{template "chipn" (dict "prefab" .Prefab "n" .Count)}}</li>{{end}}</ul>{{end}}
+{{end}}
+{{if $d.Rooms}}<h2>Rooms <span class="count">{{len $d.Rooms}}</span></h2><p class="muted small">The pieces the dungeon is assembled from.</p><ul class="chips">{{range $d.Rooms}}<li><span class="chip"><span class="chip-name" style="padding-left:8px"><code>{{.Prefab}}</code></span>{{if .Contents}}{{if .Contents.Chests}}<span class="chip-meta">{{len .Contents.Chests}} chest kind{{if gt (len .Contents.Chests) 1}}s{{end}}</span>{{end}}{{end}}</span></li>{{end}}</ul>{{end}}
+{{template "yourworld" .YourWorld}}
+</div>
+<aside class="infobox">
+<h3>Location</h3>
+<dl>
+{{template "stat" (dict "k" "Biomes" "v" (join (biomeNames $k.Biomes) ", "))}}
+{{template "stat" (dict "k" "Per world" "v" (when $m.Unique "1" (print "up to " $k.Quantity)))}}
+{{if $m.ExteriorRadius}}{{template "stat" (dict "k" "Footprint" "v" (print (num $m.ExteriorRadius) " m radius"))}}{{end}}
+{{if $m.HasInterior}}{{template "stat" (dict "k" "Interior" "v" (when $m.InteriorEnv $m.InteriorEnv "Yes"))}}{{end}}
+{{if $m.NoBuild}}{{template "stat" (dict "k" "Building" "v" "not allowed")}}{{end}}
+{{if $m.EnemyMaxLevel}}{{template "stat" (dict "k" "Enemy stars" "v" (print (sub $m.EnemyMinLevel 1) "–" (sub $m.EnemyMaxLevel 1)))}}{{end}}
+{{if $m.MapIcon}}{{template "stat" (dict "k" "Map icon" "v" (safe (print "<img src=\"" (url (print "icons/map/" $m.MapIcon ".png")) "\" alt=\"\" width=\"24\" height=\"24\">")))}}{{end}}
+{{if $m.Group}}{{template "stat" (dict "k" "Group" "v" $m.Group)}}{{end}}
+</dl>
+<h3>Prefabs</h3><p class="small muted">{{range $i, $v := $k.Variants}}{{if $i}} {{end}}<code>{{$v.Prefab}}</code>{{end}}</p>
+</aside>
+</div>
+{{end}}

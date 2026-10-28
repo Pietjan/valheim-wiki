@@ -1,0 +1,19 @@
+{{define "content"}}
+<div class="prose">
+<p class="eyebrow">About</p>
+<h1>Where this comes from</h1>
+<p>Every number on this site is read out of the game's own files: the Unity asset bundles the Valheim client ships, version {{.Site.DB.Meta.Game}}, read on {{.Site.DB.Meta.Extracted}}. Nothing is typed in by hand except the English names of places the game never names, and the words around the numbers.</p>
+<h2>How</h2>
+<ul>
+<li><strong>Items, recipes, pieces, creatures</strong> are the components on the game's prefabs: <code>ItemDrop</code>, <code>Recipe</code>, <code>Piece</code>, <code>Character</code>, <code>CharacterDrop</code> and the rest, with the defaults the game keeps for fields it does not use stripped by item type.</li>
+<li><strong>Spawning</strong> is the four spawn lists the server runs per zone, the raid table, and the spawners standing inside each location's prefab.</li>
+<li><strong>Locations</strong> are the world generator's placement rules, and what stands inside each prefab: chests with their loot tables, spawners, pickables, runestones and altars.</li>
+<li><strong>Your world</strong> is a port of the generator itself, run in your browser: the biomes, the rivers, and every rule's placement attempt in the order the game makes them. It reproduces real worlds to the metre; what it cannot know is anything decided after the seed, such as which way a randomly turned ruin faces.</li>
+<li><strong>Icons</strong> are the game's sprites; the round location and creature icons are rendered from the game's models.</li>
+</ul>
+<h2>Who</h2>
+<p>Built by Pietjan Oostra as one of a family of Valheim tools; the source is on <a href="https://github.com/Pietjan/valheim-wiki">GitHub</a>. Valheim is © Iron Gate Studio and published by Coffee Stain; this site is unofficial and makes no money.</p>
+<h2>Your seed</h2>
+<p>The seed you enter stays in your browser's storage along with the world it computed. Nothing is sent anywhere; there is no server.</p>
+</div>
+{{end}}

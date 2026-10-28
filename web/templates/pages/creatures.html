@@ -1,0 +1,14 @@
+{{define "content"}}
+{{$d := .Data}}
+<div class="index-head"><div><p class="eyebrow">Bestiary</p><h1>Creatures</h1><p>{{$d.Count}} things that move, from the ones that flee to the ones you summon. <a href="{{url "bosses/"}}">The Forsaken</a> have a page of their own, as do <a href="{{url "events/"}}">the raids</a>.</p></div></div>
+<div class="filters"><input type="search" placeholder="Filter creatures…" data-filter="[data-name]" aria-label="Filter creatures">
+<div class="pills" data-pills>{{range $d.Groups}}<button type="button" class="pill" data-pill="{{.ID}}">{{.Name}}<span class="n">{{len .Creatures}}</span></button>{{end}}</div></div>
+{{range $d.Groups}}
+<section class="group" data-group="{{.ID}}">
+<h2 id="{{.ID}}" class="group-title">{{.Name}} <span class="count">{{len .Creatures}}</span></h2>
+<ul class="cards round">
+{{range .Creatures}}{{$c := .}}{{with thing .Prefab}}<li data-name="{{lower .Name}}"><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="56" height="56">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span><span class="card-sub">{{num $c.Health}} hp{{if $c.Tameable}} · tameable{{end}}</span></a></li>{{end}}{{end}}
+</ul>
+</section>
+{{end}}
+{{end}}

@@ -1,0 +1,22 @@
+{{define "head"}}<script type="module" src="{{url "static/js/worldpage.js"}}"></script>{{end}}
+{{define "content"}}
+<div class="world" data-world>
+  <canvas data-world-canvas></canvas>
+  <div class="world-ui">
+    <div class="world-panel">
+      <h2>Your world</h2>
+      <form class="world-seed" data-world-seed-form>
+        <input type="text" placeholder="Seed" data-world-seed autocomplete="off" spellcheck="false" maxlength="40" aria-label="Seed">
+        <button type="submit" class="btn">Open</button>
+      </form>
+      <p class="world-status" data-world-status></p>
+      <h3>Find</h3>
+      <input type="search" placeholder="Filter places…" data-world-filter aria-label="Filter places">
+      <ul class="world-layers" data-world-layers></ul>
+    </div>
+  </div>
+  <svg class="world-compass" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-width="1"/><path d="M22 4l5 18-5 18-5-18z" fill="currentColor" opacity=".6"/><text x="22" y="15" text-anchor="middle" font-size="9" fill="#1a1208" font-family="Norse, serif" font-weight="700">N</text></svg>
+  <div class="world-legend" data-world-legend></div>
+  <div class="world-empty" data-world-empty><div><h2>Any seed, as a map</h2><p>Type a world seed above. The biomes, rivers and every place the generator sets down are computed in your browser in about half a minute, and kept for next time.</p></div></div>
+</div>
+{{end}}

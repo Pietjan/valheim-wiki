@@ -1,0 +1,37 @@
+{{define "content"}}
+{{$d := .Data}}{{$b := $d.Biome}}
+{{template "crumbs" .}}
+<div class="biome-hero" style="--biome:{{biomeColor $b.ID}}"></div>
+<header class="hero"><div class="hero-text"><p class="eyebrow">Biome</p><h1>{{$b.Name}}</h1>{{with $d.Boss}}<p class="lede">Ruled by <a href="{{thingURL .Prefab}}">{{.Name}}</a>{{with $d.BossLocation}}, whose altar is {{template "chip" .Prefab}}{{end}}.</p>{{end}}</div></header>
+<div class="braid" aria-hidden="true"></div>
+<div class="cols">
+<div class="main">
+{{if $d.Creatures}}<h2>Creatures <span class="count">{{len $d.Creatures}}</span></h2><ul class="cards round compact">{{range $d.Creatures}}{{with thing .Prefab}}<li><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="40" height="40">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span></a></li>{{end}}{{end}}</ul>{{end}}
+{{if $d.Kinds}}<h2>Places <span class="count">{{len $d.Kinds}}</span></h2><ul class="cards round compact">{{range $d.Kinds}}{{with thing (index .Variants 0).Prefab}}<li><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="40" height="40">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span></a></li>{{end}}{{end}}</ul>{{end}}
+{{if $d.Materials}}<h2>Materials <span class="count">{{len $d.Materials}}</span></h2><p class="muted small">What its creatures drop and its land gives.</p><ul class="chips">{{range $d.Materials}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
+{{if $d.Pickables}}<h2>Growing here</h2><ul class="chips">{{range $d.Pickables}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
+{{if $d.Trees}}<h2>Trees</h2><ul class="chips">{{range $d.Trees}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
+{{if $d.Rocks}}<h2>Ore and stone</h2><ul class="chips">{{range $d.Rocks}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
+{{if $d.Envs}}<h2>Weather</h2>
+<div class="table-wrap"><table><thead><tr><th>Weather</th><th class="num">Share</th><th>Effects</th></tr></thead><tbody>
+{{range $d.Envs}}<tr><td>{{.Name}}</td><td class="num">{{pct .Share}}</td><td class="muted small">{{join .Traits ", "}}</td></tr>{{end}}
+</tbody></table></div>{{end}}
+{{if $d.Events}}<h2>Raids</h2><ul class="chips">{{range $d.Events}}<li><a class="chip" href="{{url "events/"}}#{{slug .Name}}"><span class="chip-name" style="padding-left:8px">{{if .StartMessage}}{{.StartMessage}}{{else}}{{.Name}}{{end}}</span></a></li>{{end}}</ul>{{end}}
+{{if $d.AltBiomes}}<h2>Variants</h2><p class="muted small">Patches the generator rolls onto some of this biome's regions, each with its own look and spawns.</p>
+<div class="table-wrap"><table><thead><tr><th>Variant</th><th class="num">Chance</th><th class="num">Per world</th><th>Conditions</th></tr></thead><tbody>
+{{range $d.AltBiomes}}{{if .Enabled}}<tr><td>{{.Name}}{{if .Label}} <span class="muted small">({{.Label}})</span>{{end}}</td><td class="num">{{pct .Chance}}</td><td class="num">{{.MinAmount}}–{{.MaxAmount}}</td><td class="small muted">{{if .MinDistanceFromCenter}}≥ {{metres .MinDistanceFromCenter}} out; {{end}}{{if .RequireNeighbor}}beside {{join (biomeNames .RequireNeighbor) "/"}}; {{end}}{{if .NotNeighbor}}not beside {{join (biomeNames .NotNeighbor) "/"}}; {{end}}{{if .ForceEnv}}always {{.ForceEnv}}; {{end}}</td></tr>{{end}}{{end}}
+</tbody></table></div>{{end}}
+{{template "yourworld" .YourWorld}}
+</div>
+<aside class="infobox">
+<h3>Biome</h3>
+<dl>
+{{template "stat" (dict "k" "Map colour" "v" (safe (print "<i style=\"display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;background:" $b.MapColor "\"></i> " $b.MapColor)))}}
+{{with $d.Boss}}{{template "stat" (dict "k" "Boss" "v" (safe (print "<a href=\"" (thingURL .Prefab) "\">" .Name "</a>")))}}{{end}}
+{{template "stat" (dict "k" "Creatures" "v" (len $d.Creatures))}}
+{{template "stat" (dict "k" "Places" "v" (len $d.Kinds))}}
+{{template "stat" (dict "k" "Resources" "v" (len $d.Resources))}}
+</dl>
+</aside>
+</div>
+{{end}}

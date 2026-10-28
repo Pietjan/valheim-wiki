@@ -1,0 +1,131 @@
+{{define "content"}}
+{{$d := .Data}}{{$it := $d.Item}}{{$t := $d.Thing}}
+{{template "crumbs" .}}
+{{template "hero" (dict "icon" (iconOf $it.Prefab) "eyebrow" (print (itemType $it.Type) (when $it.Skill (print " · " $it.Skill) "")) "title" $it.Name "lede" $it.Description)}}
+<div class="cols">
+<div class="main">
+
+{{if $d.Recipes}}
+<h2 id="crafting">Crafting</h2>
+{{range $d.Recipes}}
+<div class="recipe">
+  <div class="chips">{{range .Resources}}{{if and (gt .Amount 0) (not .Upgrader)}}<li>{{template "chipn" (dict "prefab" .Item "n" .Amount)}}</li>{{end}}{{end}}</div>
+  <p class="at">
+    {{if .Station}}At {{template "chip" .Station}}{{if gt .MinStationLevel 1}} level {{.MinStationLevel}}{{end}}{{else}}Crafted by hand{{end}}{{if gt .Amount 1}} · makes {{.Amount}}{{end}}{{if .OnlyUpgrade}} · upgrade only{{end}}{{if .OneIngredient}} · any one of the ingredients suffices{{end}}{{if .RepairStation}} · repaired at {{template "chip" .RepairStation}}{{end}}
+  </p>
+</div>
+{{end}}
+{{end}}
+
+{{if $d.Qualities}}
+<h2 id="quality">By quality</h2>
+<div class="table-wrap"><table class="quality-table">
+<thead><tr><th>Quality</th>{{if $it.Damage}}<th>Damage</th>{{end}}{{if $d.IsArmor}}<th class="num">Armor</th>{{end}}{{if or $d.IsShield $d.IsWeapon}}<th class="num">Block</th>{{end}}{{if $it.Deflection}}<th class="num">Deflection</th>{{end}}{{if $it.UseDurability}}<th class="num">Durability</th>{{end}}{{if $it.WeightPerLevel}}<th class="num">Weight</th>{{end}}{{if $d.Upgrade}}<th>Upgrade cost</th>{{end}}</tr></thead>
+<tbody>
+{{range $d.Qualities}}
+<tr><td class="q">{{stars .Q}}</td>
+{{if $it.Damage}}<td><span class="dmg">{{range $k := damageTypes}}{{with index $.Data.Item.Damage $k}}{{end}}{{end}}{{template "damage" .Damage}}</span></td>{{end}}
+{{if $d.IsArmor}}<td class="num">{{num .Armor}}</td>{{end}}
+{{if or $d.IsShield $d.IsWeapon}}<td class="num">{{num .Block}}</td>{{end}}
+{{if $it.Deflection}}<td class="num">{{num .Deflection}}</td>{{end}}
+{{if $it.UseDurability}}<td class="num">{{num .Durability}}</td>{{end}}
+{{if $it.WeightPerLevel}}<td class="num">{{num1 .Weight}}</td>{{end}}
+{{if $d.Upgrade}}<td>{{if .Cost}}<ul class="chips">{{range .Cost}}<li>{{template "chipn" (dict "prefab" .Item "n" .Amount)}}</li>{{end}}</ul>{{else}}<span class="muted">—</span>{{end}}</td>{{end}}
+</tr>
+{{end}}
+</tbody></table></div>
+{{end}}
+
+{{if $d.Set}}
+<h2 id="set">{{$it.SetName | title}} set</h2>
+<p>Wearing {{$it.SetSize}} pieces{{if $d.SetEffect}} grants <a href="{{thingURL (print "effect:" $d.SetEffect.ID)}}">{{$d.SetEffect.Name}}</a>{{if $d.SetEffect.Tooltip}}: {{$d.SetEffect.Tooltip}}{{end}}{{end}}.</p>
+<ul class="chips">{{range $d.Set}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>
+{{end}}
+
+{{if or $d.Equip $d.Consume $d.AttackFx}}
+<h2 id="effects">Effects</h2>
+<ul class="chips">
+{{with $d.Equip}}<li>{{template "chip" (print "effect:" .ID)}}<span class="chip-meta">while equipped{{if .Tooltip}} · {{.Tooltip}}{{end}}</span></li>{{end}}
+{{with $d.Consume}}<li>{{template "chip" (print "effect:" .ID)}}<span class="chip-meta">when consumed{{if .TTL}} · {{secs .TTL}}{{end}}{{if .Tooltip}} · {{.Tooltip}}{{end}}</span></li>{{end}}
+{{with $d.AttackFx}}<li>{{template "chip" (print "effect:" .ID)}}<span class="chip-meta">on hit{{if .Tooltip}} · {{.Tooltip}}{{end}}</span></li>{{end}}
+</ul>
+{{end}}
+
+{{if or $d.Dropped $d.Gathered $d.Converts $d.Sold $d.Chests $d.TrophyOf}}
+<h2 id="obtained">Where to get it</h2>
+{{if $d.TrophyOf}}<p>Cut from <a href="{{thingURL $d.TrophyOf.Prefab}}">{{$d.TrophyOf.Name}}</a>.</p>{{end}}
+{{if $d.Dropped}}<h3>Dropped by</h3>
+<div class="table-wrap"><table><thead><tr><th>Creature</th><th>Amount</th><th class="num">Chance</th><th>Per star</th></tr></thead><tbody>
+{{range $d.Dropped}}<tr><td>{{template "chip" .Creature.Prefab}}</td><td>{{if eq .Drop.Min .Drop.Max}}{{.Drop.Min}}{{else}}{{.Drop.Min}}–{{.Drop.Max}}{{end}}</td><td class="num">{{pct .Drop.Chance}}</td><td class="muted small">{{if .Drop.LevelMultiplier}}{{if .Drop.LevelMultiplierNotAmount}}chance doubles{{else}}doubles{{end}}{{else}}—{{end}}{{if .Drop.OnePerPlayer}} · one per player{{end}}</td></tr>{{end}}
+</tbody></table></div>{{end}}
+{{if $d.Gathered}}<h3>Gathered from</h3>
+<div class="table-wrap"><table><thead><tr><th>Source</th><th>Kind</th><th>Yield</th><th>Respawn</th><th>Biomes</th></tr></thead><tbody>
+{{range $d.Gathered}}<tr><td><a href="{{thingURL .Prefab}}">{{.Name}}</a></td><td class="muted">{{resourceKind .Kind}}</td><td>{{if and (eq .Item $it.Prefab) .Amount}}{{.Amount}}{{else}}{{template "yield" (dict "r" . "item" $it.Prefab)}}{{end}}</td><td>{{if .Respawn}}{{mins .Respawn}}{{else if eq .Kind "pickable"}}never{{else}}—{{end}}</td><td>{{template "biomes" .Biomes}}</td></tr>{{end}}
+</tbody></table></div>{{end}}
+{{if $d.Converts}}<h3>Made in</h3>
+<ul class="chips">{{range $d.Converts}}<li>{{template "chip" .Converter.Prefab}}<span class="chip-meta">{{if .Conversion.From}}from {{nameOf .Conversion.From}}{{end}}{{if gt .Conversion.Amount 1}} ×{{.Conversion.Amount}}{{end}}{{if .Conversion.Time}} · {{secs .Conversion.Time}}{{end}}</span></li>{{end}}</ul>{{end}}
+{{if $d.Sold}}<h3>Sold by</h3>
+<ul class="chips">{{range $d.Sold}}<li>{{template "chip" .Trader.Prefab}}<span class="chip-meta">{{.Item.Price}} coins{{if gt .Item.Stack 1}} for {{.Item.Stack}}{{end}}{{if .Item.RequiredKey}} · after {{keyName .Item.RequiredKey}}{{end}}</span></li>{{end}}</ul>{{end}}
+{{if $d.Chests}}<h3>Found in chests</h3>
+<ul class="chips">{{range $d.Chests}}<li>{{template "chip" .Location.Prefab}}<span class="chip-meta">{{.Entry.Min}}{{if ne .Entry.Min .Entry.Max}}–{{.Entry.Max}}{{end}}</span></li>{{end}}</ul>{{end}}
+{{end}}
+
+{{if or $d.UsedIn $d.Builds $d.Consumed $d.Tamers}}
+<h2 id="uses">Used for</h2>
+{{if $d.UsedIn}}<h3>Crafting</h3><ul class="chips">{{range $d.UsedIn}}<li>{{template "chipn" (dict "prefab" .Item "n" "")}}<span class="chip-meta">{{template "needs" (dict "r" . "item" $it.Prefab)}}</span></li>{{end}}</ul>{{end}}
+{{if $d.Builds}}<h3>Building</h3><ul class="chips">{{range $d.Builds}}<li>{{template "chip" .Prefab}}<span class="chip-meta">{{range .Resources}}{{if eq .Item $it.Prefab}}×{{.Amount}}{{end}}{{end}}</span></li>{{end}}</ul>{{end}}
+{{if $d.Consumed}}<h3>Processing</h3><ul class="chips">{{range $d.Consumed}}<li>{{template "chip" .Converter.Prefab}}<span class="chip-meta">→ {{nameOf .Conversion.To}}</span></li>{{end}}</ul>{{end}}
+{{if $d.Tamers}}<h3>Eaten by</h3><ul class="chips">{{range $d.Tamers}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
+{{end}}
+
+{{template "yourworld" .YourWorld}}
+</div>
+
+<aside class="infobox">
+<h3>{{itemType $it.Type}}</h3>
+<dl>
+{{if $it.Damage}}{{template "stat" (dict "k" "Damage" "v" (damageHTML $it.Damage))}}{{end}}
+{{if $it.Skill}}{{template "stat" (dict "k" "Skill" "v" $it.Skill)}}{{end}}
+{{if $it.Knockback}}{{template "stat" (dict "k" "Knockback" "v" (num $it.Knockback))}}{{end}}
+{{if $it.Backstab}}{{template "stat" (dict "k" "Backstab" "v" (print (num $it.Backstab) "×"))}}{{end}}
+{{if $it.Attack}}{{if $it.Attack.Stamina}}{{template "stat" (dict "k" "Stamina" "v" (num $it.Attack.Stamina))}}{{end}}{{if $it.Attack.Eitr}}{{template "stat" (dict "k" "Eitr" "v" (num $it.Attack.Eitr))}}{{end}}{{if $it.Attack.Health}}{{template "stat" (dict "k" "Health cost" "v" (num $it.Attack.Health))}}{{end}}{{if $it.Attack.DrawStamina}}{{template "stat" (dict "k" "Draw stamina" "v" (print (num $it.Attack.DrawStamina) "/s"))}}{{end}}{{end}}
+{{if $it.Secondary}}{{if $it.Secondary.Stamina}}{{template "stat" (dict "k" "Secondary" "v" (print (num $it.Secondary.Stamina) " stamina · " (num $it.Secondary.DamageMultiplier) "× damage"))}}{{end}}{{end}}
+{{if $it.AmmoType}}{{template "stat" (dict "k" "Ammo" "v" $it.AmmoType)}}{{end}}
+{{if $it.ToolTier}}{{if or $d.IsWeapon $d.IsTool}}{{template "stat" (dict "k" "Tool tier" "v" $it.ToolTier)}}{{end}}{{end}}
+{{if $it.Armor}}{{template "stat" (dict "k" "Armor" "v" (perLevel $it.Armor $it.ArmorPerLevel))}}{{end}}
+{{if or $d.IsShield (and $d.IsWeapon $it.BlockPower)}}{{template "stat" (dict "k" "Block" "v" (perLevel $it.BlockPower $it.BlockPowerPerLevel))}}{{end}}
+{{if $it.Deflection}}{{template "stat" (dict "k" "Deflection" "v" (perLevel $it.Deflection $it.DeflectionPerLevel))}}{{end}}
+{{if $it.ParryBonus}}{{if or $d.IsShield $d.IsWeapon}}{{template "stat" (dict "k" "Parry bonus" "v" (print (num $it.ParryBonus) "×"))}}{{end}}{{end}}
+{{if $it.Resist}}{{template "stat" (dict "k" "Resistances" "v" (resistHTML $it.Resist))}}{{end}}
+{{range $k := sortedKeys $it.Modifiers}}{{template "stat" (dict "k" (modName $k) "v" (signedPct (index $it.Modifiers $k)))}}{{end}}
+{{if $d.IsFood}}
+{{if $it.Food}}{{template "stat" (dict "k" "Health" "v" (num $it.Food))}}{{end}}
+{{if $it.FoodStamina}}{{template "stat" (dict "k" "Stamina" "v" (num $it.FoodStamina))}}{{end}}
+{{if $it.FoodEitr}}{{template "stat" (dict "k" "Eitr" "v" (num $it.FoodEitr))}}{{end}}
+{{if $it.FoodRegen}}{{template "stat" (dict "k" "Healing" "v" (print (num $it.FoodRegen) " hp / 10 s"))}}{{end}}
+{{if $it.FoodBurn}}{{template "stat" (dict "k" "Duration" "v" (secs $it.FoodBurn))}}{{end}}
+{{end}}
+{{if $it.UseDurability}}{{template "stat" (dict "k" "Durability" "v" (perLevel $it.Durability $it.DurabilityPerLevel))}}{{end}}
+</dl>
+<h3>Carrying</h3>
+<dl>
+{{template "stat" (dict "k" "Weight" "v" (num1 $it.Weight))}}
+{{if gt $it.Stack 1}}{{template "stat" (dict "k" "Stack" "v" $it.Stack)}}{{end}}
+{{if gt $it.MaxQuality 1}}{{template "stat" (dict "k" "Max quality" "v" (stars $it.MaxQuality))}}{{end}}
+{{template "stat" (dict "k" "Teleportable" "v" (yes $it.Teleportable))}}
+{{if $it.Floating}}{{template "stat" (dict "k" "Floats" "v" "Yes")}}{{end}}
+{{if $it.Value}}{{template "stat" (dict "k" "Sells for" "v" (print $it.Value " coins"))}}{{end}}
+{{if $it.QuestItem}}{{template "stat" (dict "k" "Quest item" "v" "Yes")}}{{end}}
+{{if $it.BuildPieces}}{{template "stat" (dict "k" "Build menu" "v" (pieceTableName $it.BuildPieces))}}{{end}}
+</dl>
+<h3>Prefab</h3>
+<p class="small muted"><code>{{$it.Prefab}}</code></p>
+</aside>
+</div>
+{{end}}
+
+{{define "damage"}}{{$first := true}}{{range $k := damageTypes}}{{with index $ $k}}{{if not $first}} {{end}}{{$first = false}}<span>{{num .}} <b>{{damageName $k | lower}}</b></span>{{end}}{{end}}{{end}}
+
+{{define "yield"}}{{$found := false}}{{with .r.Drops}}{{range .Drops}}{{if eq .Item $.item}}{{$found = true}}{{.Min}}{{if ne .Min .Max}}–{{.Max}}{{end}}{{end}}{{end}}{{end}}{{if not $found}}{{with .r.ExtraDrops}}{{range .Drops}}{{if eq .Item $.item}}{{.Min}}{{if ne .Min .Max}}–{{.Max}}{{end}}{{end}}{{end}}{{end}}{{end}}{{end}}
+
+{{define "needs"}}{{range .r.Resources}}{{if eq .Item $.item}}×{{.Amount}}{{if .PerLevel}} +{{.PerLevel}}/level{{end}}{{end}}{{end}}{{end}}

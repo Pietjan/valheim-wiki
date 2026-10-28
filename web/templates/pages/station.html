@@ -1,0 +1,36 @@
+{{define "content"}}
+{{$d := .Data}}{{$st := $d.Station}}
+{{template "crumbs" .}}
+{{template "hero" (dict "icon" (iconOf $st.Prefab) "eyebrow" "Crafting station" "title" $st.Name "lede" $d.Lede)}}
+<div class="cols">
+<div class="main">
+{{if $d.Piece}}{{if $d.Piece.Resources}}
+<h2>Building it</h2>
+<div class="recipe"><ul class="chips">{{range $d.Piece.Resources}}<li>{{template "chipn" (dict "prefab" .Item "n" .Amount)}}</li>{{end}}</ul>
+<p class="at">{{if $d.Piece.Station}}Needs {{template "chip" $d.Piece.Station}} nearby{{else}}Built with the hammer, nothing else needed{{end}}</p></div>
+{{end}}{{end}}
+{{if $d.Extensions}}
+<h2>Upgrades</h2>
+<p>Each distinct upgrade standing within reach raises the station one level, to level {{$st.MaxLevel}}.</p>
+<ul class="chips">{{range $d.Extensions}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>
+{{end}}
+{{range $d.Levels}}
+<h2 id="level-{{.Level}}">{{if eq .Level 1}}Recipes{{else}}Unlocked at level {{.Level}}{{end}}</h2>
+{{range .Groups}}<h3>{{.Name}}</h3>
+<ul class="chips">{{range .Recipes}}<li>{{template "chip" .Item}}</li>{{end}}</ul>{{end}}
+{{end}}
+</div>
+<aside class="infobox">
+<h3>Station</h3>
+<dl>
+{{template "stat" (dict "k" "Max level" "v" $st.MaxLevel)}}
+{{template "stat" (dict "k" "Needs a roof" "v" (yes $st.RequireRoof))}}
+{{template "stat" (dict "k" "Needs fire" "v" (yes $st.RequireFire))}}
+{{template "stat" (dict "k" "Repairs" "v" (yes $st.CanRepair))}}
+{{if $st.Skill}}{{template "stat" (dict "k" "Skill" "v" $st.Skill)}}{{end}}
+{{if $d.Piece}}{{if $d.Piece.Health}}{{template "stat" (dict "k" "Health" "v" (num $d.Piece.Health))}}{{end}}{{if $d.Piece.Comfort}}{{template "stat" (dict "k" "Comfort" "v" $d.Piece.Comfort)}}{{end}}{{end}}
+</dl>
+<h3>Prefab</h3><p class="small muted"><code>{{$st.Prefab}}</code></p>
+</aside>
+</div>
+{{end}}

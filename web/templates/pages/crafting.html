@@ -1,0 +1,19 @@
+{{define "content"}}
+{{$d := .Data}}
+<div class="index-head"><div><p class="eyebrow">Workshop</p><h1>Crafting</h1><p>Where things are made. A station's level is the number of upgrades standing near it, and each level unlocks more.</p></div></div>
+<h2 id="stations">Stations</h2>
+<ul class="cards">
+{{range $d.Stations}}{{with .Thing}}<li><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" width="56" height="56">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span>{{end}}<span class="card-sub">{{if gt .Station.MaxLevel 1}}up to level {{.Station.MaxLevel}} · {{end}}{{$n := 0}}{{range .Levels}}{{range .Groups}}{{$n = add $n (len .Recipes)}}{{end}}{{end}}{{$n}} recipes</span></a></li>{{end}}
+</ul>
+{{if $d.ByHand}}
+<h2 id="hand">By hand <span class="count">{{len $d.ByHand}}</span></h2>
+<p class="muted">Made anywhere, from the inventory.</p>
+<ul class="chips">{{range $d.ByHand}}<li>{{template "chip" .Item}}</li>{{end}}</ul>
+{{end}}
+{{range $d.Converters}}
+<h2 id="{{.Kind}}">{{.Name}}{{if gt (len .Converters) 1}}s{{end}} <span class="count">{{len .Converters}}</span></h2>
+<ul class="cards">
+{{range .Converters}}{{with thing .Prefab}}<li><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" width="56" height="56">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span>{{end}}<span class="card-sub">{{if .Conversions}}{{len .Conversions}} recipes{{else if .Product}}makes {{nameOf .Product}}{{else}}{{converterKind .Kind}}{{end}}</span></a></li>{{end}}
+</ul>
+{{end}}
+{{end}}

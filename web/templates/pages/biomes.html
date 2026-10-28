@@ -1,0 +1,10 @@
+{{define "content"}}
+<div class="index-head"><div><p class="eyebrow">The lay of the land</p><h1>Biomes</h1><p>Nine lands, in the order the game means you to meet them.</p></div></div>
+{{range .Data}}{{$b := .Biome}}
+<section class="panel" style="border-left:6px solid {{biomeColor $b.ID}}">
+<h2 style="margin:0 0 6px"><a href="{{url (print "biomes/" $b.ID "/")}}">{{$b.Name}}</a></h2>
+<p class="muted small">{{len .Creatures}} creatures · {{len .Kinds}} kinds of place · {{len .Resources}} resources{{with .Boss}} · ruled by <a href="{{thingURL .Prefab}}">{{.Name}}</a>{{end}}</p>
+<ul class="chips">{{range .Creatures}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>
+</section>
+{{end}}
+{{end}}

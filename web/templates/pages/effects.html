@@ -1,0 +1,10 @@
+{{define "content"}}
+{{$d := .Data}}
+{{template "crumbs" .}}
+<div class="index-head"><div><p class="eyebrow">What touches you</p><h1>Status effects</h1><p>The Forsaken powers, set bonuses, meads, food and the weather, with the numbers the game uses.</p></div></div>
+<h2>Forsaken powers</h2>
+<ul class="cards">{{range $d.Powers}}{{with thing (print "effect:" .ID)}}<li><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="56" height="56">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span><span class="card-sub">{{.Sub}}</span></a></li>{{end}}{{end}}</ul>
+<h2>All effects <span class="count">{{len $d.Others}}</span></h2>
+<div class="filters"><input type="search" placeholder="Filter effects…" data-filter="[data-name]" aria-label="Filter"></div>
+<ul class="cards compact">{{range $d.Others}}{{$e := .}}{{with thing (print "effect:" .ID)}}<li data-name="{{lower .Name}}"><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="40" height="40">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span><span class="card-sub">{{if $e.TTL}}{{secs $e.TTL}}{{else}}{{$e.Kind}}{{end}}</span></a></li>{{end}}{{end}}</ul>
+{{end}}

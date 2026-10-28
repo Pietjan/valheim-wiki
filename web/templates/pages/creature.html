@@ -1,0 +1,97 @@
+{{define "content"}}
+{{$d := .Data}}{{$c := $d.Creature}}
+{{template "crumbs" .}}
+{{template "hero" (dict "icon" (iconOf $c.Prefab) "round" true "eyebrow" (when $c.Boss (print "Forsaken · " (when $c.BossOrder (print "boss " $c.BossOrder) "")) (faction $c.Faction)) "title" $c.Name "lede" $d.Lede)}}
+<div class="cols">
+<div class="main">
+
+{{if $c.Boss}}
+<h2>Summoning</h2>
+{{if $d.Altar}}<p>Offer {{if $d.Offering}}{{template "chipn" (dict "prefab" $d.Offering.Item "n" $d.Offering.Count)}}{{end}} at the altar in {{template "chip" $d.Altar.Prefab}}.{{if $d.Offering}}{{if $d.Offering.SetsKey}} Defeating it sets <code>{{$d.Offering.SetsKey}}</code>.{{end}}{{end}}</p>{{else}}<p class="muted">The altar is not placed by the world generator; see the boss's location page.</p>{{end}}
+{{with $d.Power}}<h3>Forsaken power</h3><p>Hang the trophy at the sacrificial stones to gain <a href="{{thingURL (print "effect:" .ID)}}">{{.Name}}</a>: {{.Tooltip}} Lasts {{secs .TTL}}, cooldown {{secs .Cooldown}}.</p>{{end}}
+{{end}}
+
+<h2>Health</h2>
+<div class="health-stars">{{range $d.Stars}}<span><span class="s">{{if .Stars}}{{.Stars}}{{else}}no star{{end}}</span>{{num .Health}} hp</span>{{end}}{{range $i, $p := $d.Phases}}<span><span class="s">phase {{add $i 2}}</span>{{num $p.Health}} hp</span>{{end}}</div>
+{{if $d.Phases}}<p class="small muted">The fight has {{add (len $d.Phases) 1}} phases, each a form with its own health and attacks.</p>{{end}}
+{{if not $c.Boss}}<p class="small muted">Each star doubles the drops and adds a level of health and damage. World level and player count scale these further.</p>{{end}}
+
+{{if $c.Attacks}}
+<h2>Attacks</h2>
+<div class="table-wrap"><table><thead><tr><th>Attack</th><th>Damage</th><th class="num">Knockback</th><th class="num">Range</th><th>Type</th></tr></thead><tbody>
+{{range $c.Attacks}}<tr><td>{{if .Name}}{{.Name}}{{else}}{{.Item}}{{end}}{{if .Chance}}{{if lt .Chance 1.0}} <span class="muted small">({{pct .Chance}})</span>{{end}}{{end}}{{if .Effect}}<br><small class="muted">inflicts {{template "chip" (print "effect:" .Effect)}}</small>{{end}}</td><td>{{if .Damage}}{{damageHTML .Damage}}{{else}}<span class="muted">—</span>{{end}}</td><td class="num">{{num .Knockback}}</td><td class="num">{{if .Range}}{{num1 .Range}} m{{else}}—{{end}}</td><td class="muted small">{{.Type}}{{if .Projectile}} · {{.Projectile}}{{end}}{{if .ToolTier}} · tier {{.ToolTier}}{{end}}</td></tr>{{end}}
+</tbody></table></div>
+{{end}}
+
+{{if $c.Drops}}
+<h2>Drops</h2>
+<div class="table-wrap"><table><thead><tr><th>Item</th><th>Amount</th><th class="num">Chance</th><th>With stars</th></tr></thead><tbody>
+{{range $c.Drops}}<tr><td>{{template "chip" .Item}}</td><td>{{if eq .Min .Max}}{{.Min}}{{else}}{{.Min}}–{{.Max}}{{end}}</td><td class="num">{{pct .Chance}}</td><td class="muted small">{{if .LevelMultiplier}}{{if .LevelMultiplierNotAmount}}chance ×2 per star{{else}}×2 per star{{end}}{{else}}unchanged{{end}}{{if .OnePerPlayer}} · one per player{{end}}</td></tr>{{end}}
+</tbody></table></div>
+{{end}}
+
+{{if $c.Tameable}}
+<h2>Taming</h2>
+<p>Takes {{secs $c.Tameable.TamingTime}} of being fed and calm; a meal keeps it fed for {{secs $c.Tameable.FedDuration}}.{{if $c.Tameable.Commandable}} Follows and fights for you.{{end}}{{if $c.Tameable.Saddle}} Rides with {{template "chip" $c.Tameable.Saddle}}.{{end}}</p>
+{{if $c.AI}}{{if $c.AI.ConsumeItems}}<h3>Eats</h3><ul class="chips">{{range $c.AI.ConsumeItems}}<li>{{template "chip" .}}</li>{{end}}</ul>{{end}}{{end}}
+{{with $c.Procreation}}<h3>Breeding</h3><p>{{if .Offspring}}Two tame and fed {{$c.Name}}s within {{num .PartnerRange}} m have a {{pct .PregnancyChance}} chance every check to make a {{template "chip" .Offspring}} after {{secs .PregnancyDuration}}, when fewer than {{.MaxCreatures}} are nearby{{if .RequiredLove}} and after {{.RequiredLove}} meals together{{end}}.{{end}}</p>{{end}}
+{{end}}
+{{with $c.Growup}}<h2>Growing up</h2><p>Becomes {{template "chip" .Grown}} after {{secs .GrowTime}}{{if .InheritTame}}, staying tame{{end}}.</p>{{end}}
+{{with $d.Parent}}<p>Born from <a href="{{thingURL .Prefab}}">{{.Name}}</a>.</p>{{end}}
+
+{{with $c.Fish}}
+<h2>Fishing</h2>
+<p>Swims at {{num .MinDepth}}–{{num .MaxDepth}} m depth; base hook chance {{pct .BaseHookChance}}.</p>
+{{if .Baits}}<ul class="chips">{{range .Baits}}<li>{{template "chip" .Bait}}<span class="chip-meta">{{pct .Chance}}</span></li>{{end}}</ul>{{end}}
+{{end}}
+
+{{if or $d.Spawns $d.Found $d.Events}}
+<h2>Where it is found</h2>
+{{if $d.Spawns}}
+<div class="table-wrap"><table><thead><tr><th>Biomes</th><th>Time</th><th class="num">Max</th><th class="num">Group</th><th class="num">Chance</th><th>Conditions</th></tr></thead><tbody>
+{{range $d.Spawns}}{{if hasPrefix .Source "world:"}}<tr><td>{{template "biomes" .Biomes}}{{if ne .BiomeArea "Everything"}}<br><small class="muted">{{lower .BiomeArea}} of the biome</small>{{end}}</td><td>{{if and .Day .Night}}day and night{{else if .Night}}night{{else}}day{{end}}</td><td class="num">{{.MaxSpawned}}</td><td class="num">{{if eq .GroupMin .GroupMax}}{{.GroupMin}}{{else}}{{.GroupMin}}–{{.GroupMax}}{{end}}</td><td class="num">{{num .Chance}}% / {{secs .Interval}}</td><td class="small muted">{{if .RequiredKey}}after {{keyName .RequiredKey}}; {{end}}{{if .InForest}}{{if not .OutsideForest}}in forest; {{end}}{{else}}open ground; {{end}}{{if gt .MinAltitude -1000.0}}{{if gt .MinAltitude 0.0}}above {{num .MinAltitude}} m; {{end}}{{end}}{{if lt .MaxAltitude 1000.0}}below {{num .MaxAltitude}} m; {{end}}{{if .MinDistanceFromCenter}}≥ {{metres .MinDistanceFromCenter}} from centre; {{end}}{{if gt .MaxLevel 1}}up to {{sub .MaxLevel 1}} stars{{if .LevelUpMinCenterDistance}} beyond {{metres .LevelUpMinCenterDistance}}{{end}}; {{end}}{{if .HuntPlayer}}hunts you; {{end}}{{if .Environments}}only in {{join .Environments ", "}}; {{end}}</td></tr>{{end}}{{end}}
+</tbody></table></div>
+{{end}}
+{{if $d.Kinds}}<h3>In places</h3><ul class="chips">{{range $d.Kinds}}<li>{{template "chip" (index .Variants 0).Prefab}}</li>{{end}}</ul>{{end}}
+{{if $d.Events}}<h3>In raids</h3><ul class="chips">{{range $d.Events}}<li><a class="chip" href="{{url "events/"}}#{{slug .Name}}"><span class="chip-name" style="padding-left:8px">{{if .StartMessage}}{{.StartMessage}}{{else}}{{.Name}}{{end}}</span></a></li>{{end}}</ul>{{end}}
+{{end}}
+{{if $d.Summoner}}<h2>Summoned by</h2><ul class="chips">{{range $d.Summoner}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
+
+{{template "yourworld" .YourWorld}}
+</div>
+
+<aside class="infobox">
+{{if $d.Portrait}}<img class="portrait" src="{{$d.Portrait}}" alt="{{$c.Name}}" width="300" height="300">{{end}}
+<h3>Creature</h3>
+<dl>
+{{template "stat" (dict "k" "Health" "v" (num $c.Health))}}
+{{template "stat" (dict "k" "Faction" "v" (faction $c.Faction))}}
+{{if $c.Biomes}}{{template "stat" (dict "k" "Biomes" "v" (join (biomeNames $c.Biomes) ", "))}}{{end}}
+{{if $c.Resist}}{{template "stat" (dict "k" "Damage" "v" (resistHTML $c.Resist))}}{{end}}
+{{if $c.RunSpeed}}{{template "stat" (dict "k" "Speed" "v" (print (num $c.WalkSpeed) " / " (num $c.RunSpeed) " m/s"))}}{{end}}
+{{if $c.Flying}}{{template "stat" (dict "k" "Flies" "v" "Yes")}}{{end}}
+{{if $c.CanSwim}}{{template "stat" (dict "k" "Swims" "v" "Yes")}}{{end}}
+{{if $c.Tolerates}}{{template "stat" (dict "k" "Unharmed by" "v" (join $c.Tolerates ", "))}}{{end}}
+{{if $c.Stagger}}{{template "stat" (dict "k" "Stagger" "v" (print (pct $c.Stagger) " of hp"))}}{{end}}
+{{if $d.Trophy}}{{template "stat" (dict "k" "Trophy" "v" (safe (print "<a href=\"" (thingURL $d.Trophy.Prefab) "\">" $d.Trophy.Name "</a>")))}}{{end}}
+{{if $c.DefeatKey}}{{template "stat" (dict "k" "Sets key" "v" $c.DefeatKey)}}{{end}}
+</dl>
+{{if $c.AI}}
+<h3>Behaviour</h3>
+<dl>
+{{if $c.AI.ViewRange}}{{template "stat" (dict "k" "Sees" "v" (print (num $c.AI.ViewRange) " m · " (num $c.AI.ViewAngle) "°"))}}{{end}}
+{{if $c.AI.HearRange}}{{template "stat" (dict "k" "Hears" "v" (print (num $c.AI.HearRange) " m"))}}{{end}}
+{{if $c.AI.AlertRange}}{{if lt $c.AI.AlertRange 9000.0}}{{template "stat" (dict "k" "Alerts others" "v" (print (num $c.AI.AlertRange) " m"))}}{{end}}{{end}}
+{{if $c.AI.FleeLowHealth}}{{template "stat" (dict "k" "Flees below" "v" (pct $c.AI.FleeLowHealth))}}{{end}}
+{{if $c.AI.AfraidOfFire}}{{template "stat" (dict "k" "Afraid of fire" "v" "Yes")}}{{else if $c.AI.AvoidFire}}{{template "stat" (dict "k" "Avoids fire" "v" "Yes")}}{{end}}
+{{if $c.AI.Sleeping}}{{template "stat" (dict "k" "Sleeps" "v" (print "wakes within " (num $c.AI.WakeupRange) " m"))}}{{end}}
+{{if $c.AI.HuntPlayer}}{{template "stat" (dict "k" "Hunts players" "v" "Yes")}}{{end}}
+{{if $c.AI.PassiveAggressive}}{{template "stat" (dict "k" "Attacks" "v" "only when provoked")}}{{end}}
+{{if $c.AI.MistVision}}{{template "stat" (dict "k" "Sees through mist" "v" "Yes")}}{{end}}
+</dl>
+{{end}}
+{{if or $c.RandomWeapons $c.RandomArmor $c.RandomShields}}<h3>Gear</h3><ul class="chips">{{range $c.RandomWeapons}}<li>{{template "chip" .}}</li>{{end}}{{range $c.RandomArmor}}<li>{{template "chip" .}}</li>{{end}}{{range $c.RandomShields}}<li>{{template "chip" .}}</li>{{end}}</ul>{{end}}
+<h3>Prefab</h3><p class="small muted"><code>{{$c.Prefab}}</code></p>
+</aside>
+</div>
+{{end}}

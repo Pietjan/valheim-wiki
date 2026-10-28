@@ -1,0 +1,22 @@
+{{define "content"}}
+{{$d := .Data}}
+<div class="index-head"><div><p class="eyebrow">Hammer in hand</p><h1>Building</h1><p>{{.Data.Count}} pieces across the build menus, in the order the game lists them.</p></div></div>
+<div class="filters"><input type="search" placeholder="Filter pieces…" data-filter="[data-name]" aria-label="Filter pieces"></div>
+<nav class="toc">{{range $d.Tools}}{{$tool := .Tool}}{{range .Categories}}<a href="#{{slug $tool}}-{{.ID}}">{{if ne $tool "Hammer"}}{{$tool}}: {{end}}{{.Name}}</a>{{end}}{{end}}</nav>
+{{range $d.Tools}}{{$tool := .Tool}}
+<h2 id="{{slug .Tool}}">{{with .ToolThing}}<a href="{{url .URL}}">{{.Name}}</a>{{else}}{{$tool}}{{end}} <span class="count">{{.Count}}</span></h2>
+{{range .Categories}}
+<h3 id="{{slug $tool}}-{{.ID}}" class="group-title">{{.Name}} <span class="count muted small">{{len .Pieces}}</span></h3>
+<ul class="cards compact">
+{{range .Pieces}}{{with thing .Prefab}}<li data-name="{{lower .Name}}"><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="40" height="40">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span></a></li>{{end}}{{end}}
+</ul>
+{{end}}
+{{end}}
+{{if $d.Loose}}
+<h2 id="other">Not in a menu <span class="count">{{len $d.Loose}}</span></h2>
+<p class="muted">Pieces the world places on its own: in ruins, camps and dungeons.</p>
+<ul class="cards compact">
+{{range $d.Loose}}{{with thing .Prefab}}<li data-name="{{lower .Name}}"><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="40" height="40">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span></a></li>{{end}}{{end}}
+</ul>
+{{end}}
+{{end}}

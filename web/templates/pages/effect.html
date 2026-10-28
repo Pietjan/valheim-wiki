@@ -1,0 +1,26 @@
+{{define "content"}}
+{{$d := .Data}}{{$e := $d.Effect}}
+{{template "crumbs" .}}
+{{template "hero" (dict "icon" (iconOf (print "effect:" $e.ID)) "eyebrow" (when $e.GuardianOf "Forsaken power" "Status effect") "title" $e.Name "lede" $e.Tooltip)}}
+<div class="cols">
+<div class="main">
+{{if $e.Stats}}<h2>Numbers</h2>
+<div class="table-wrap"><table class="stats"><tbody>{{range $k := sortedKeys $e.Stats}}<tr><td>{{statName $k}}</td><td class="num">{{statValue $k (index $e.Stats $k)}}</td></tr>{{end}}</tbody></table></div>{{end}}
+{{if $e.Mods}}<h2>Resistances</h2>{{resistHTML $e.Mods}}{{end}}
+{{if $e.Attributes}}<h2>Traits</h2><ul>{{range $e.Attributes}}<li>{{.}}</li>{{end}}</ul>{{end}}
+{{if $d.Granted}}<h2>Granted by</h2><ul class="chips">{{range $d.Granted}}<li>{{template "chip" .Prefab}}<span class="chip-meta">{{if eq .Kind "set"}}full set{{else if eq .Kind "equip"}}equipped{{else if eq .Kind "consume"}}consumed{{else if eq .Kind "attack"}}on hit{{else if eq .Kind "boss"}}trophy at the stones{{end}}</span></li>{{end}}</ul>{{end}}
+</div>
+<aside class="infobox">
+<h3>Effect</h3>
+<dl>
+{{if $e.TTL}}{{template "stat" (dict "k" "Lasts" "v" (secs $e.TTL))}}{{end}}
+{{if $e.Cooldown}}{{template "stat" (dict "k" "Cooldown" "v" (secs $e.Cooldown))}}{{end}}
+{{if $e.Category}}{{template "stat" (dict "k" "Category" "v" $e.Category)}}{{end}}
+{{template "stat" (dict "k" "Kind" "v" $e.Kind)}}
+{{if $e.StartMessage}}{{template "stat" (dict "k" "On start" "v" $e.StartMessage)}}{{end}}
+{{if $e.StopMessage}}{{template "stat" (dict "k" "On end" "v" $e.StopMessage)}}{{end}}
+</dl>
+<h3>Asset</h3><p class="small muted"><code>{{$e.ID}}</code></p>
+</aside>
+</div>
+{{end}}

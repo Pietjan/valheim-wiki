@@ -1,0 +1,33 @@
+{{define "content"}}
+{{$d := .Data}}
+<section class="home-hero">
+  <svg class="mark" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#vegvisir"/></svg>
+  <h1>Vegvísir</h1>
+  <p class="tag">A Valheim wiki read straight from the game's files, that knows where everything is in <em>your</em> world.</p>
+  <form class="home-seed" data-home-seed>
+    <input type="text" name="seed" placeholder="Your world seed, e.g. CXJeyEhsEp" autocomplete="off" spellcheck="false" maxlength="40" aria-label="World seed">
+    <button type="submit" class="btn btn-primary">Open my world</button>
+  </form>
+  <p class="home-seed-hint">The seed is on the world's card in the main menu. Everything is computed in your browser; nothing is uploaded.</p>
+</section>
+
+<div class="biome-strip" aria-label="Biomes">
+{{range $d.Biomes}}<a href="{{url (print "biomes/" .ID "/")}}" style="--biome:{{biomeColor .ID}}">{{.Name}}</a>{{end}}
+</div>
+
+<div class="home-sections">
+  <a class="tile" href="{{url "items/"}}"><svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#star"/></svg><span class="n">{{index $d.Counts "items"}}</span><h3>Items</h3><p>Weapons, armor, food, meads, materials: stats per quality and where each comes from.</p></a>
+  <a class="tile" href="{{url "crafting/"}}"><svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#hammer"/></svg><h3>Crafting</h3><p>Stations level by level, and every smelter, oven and fermenter.</p></a>
+  <a class="tile" href="{{url "building/"}}"><svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#hammer"/></svg><span class="n">{{index $d.Counts "pieces"}}</span><h3>Building</h3><p>The hammer, hoe and cultivator menus with costs, durability and comfort.</p></a>
+  <a class="tile" href="{{url "creatures/"}}"><svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#skull"/></svg><span class="n">{{index $d.Counts "creatures"}}</span><h3>Creatures</h3><p>Health per star, attacks, resistances, drops, taming and spawning rules.</p></a>
+  <a class="tile" href="{{url "locations/"}}"><svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#pin"/></svg><span class="n">{{index $d.Counts "locations"}}</span><h3>Locations</h3><p>Dungeons, ruins, camps and altars: what they hold and how many a world gets.</p></a>
+  <a class="tile" href="{{url "world/"}}"><svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#compass"/></svg><h3>Your world</h3><p>Any seed as a map, with every place the generator sets down.</p></a>
+  <a class="tile" href="{{url "resources/"}}"><svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#leaf"/></svg><span class="n">{{index $d.Counts "resources"}}</span><h3>Resources</h3><p>Bushes, mushrooms, trees, ore and everything else the land gives.</p></a>
+  <a class="tile" href="{{url "effects/"}}"><svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#star"/></svg><span class="n">{{index $d.Counts "effects"}}</span><h3>Status effects</h3><p>Forsaken powers, set bonuses, meads and the weather's touch, with exact numbers.</p></a>
+</div>
+
+<h2 style="margin-top:48px">The Forsaken</h2>
+<ul class="cards round">
+{{range $d.Bosses}}{{with thing .Prefab}}<li><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="56" height="56">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span><span class="card-sub">{{.Sub}}</span></a></li>{{end}}{{end}}
+</ul>
+{{end}}

@@ -1,0 +1,33 @@
+{{define "content"}}
+{{$d := .Data}}{{$r := $d.Resource}}
+{{template "crumbs" .}}
+{{template "hero" (dict "icon" (iconOf $r.Prefab) "eyebrow" (resourceKind $r.Kind) "title" $r.Name "lede" "")}}
+<div class="cols">
+<div class="main">
+{{if $r.Item}}<h2>Gives</h2><ul class="chips"><li>{{template "chipn" (dict "prefab" $r.Item "n" $r.Amount)}}</li></ul>{{end}}
+{{if $r.Drops}}<h2>Drops</h2>{{template "droptable" $r.Drops}}{{end}}
+{{if $r.ExtraDrops}}<h3>Sometimes also</h3>{{template "droptable" $r.ExtraDrops}}{{end}}
+{{if or $r.Log $r.Stub}}<h2>Felling</h2><p>Leaves {{if $r.Stub}}{{template "chip" $r.Stub}}{{end}}{{if $r.Log}} and {{template "chip" $r.Log}}{{end}}.</p>{{end}}
+{{if $r.SubLog}}<p>Splits into {{$r.SubLogs}} × {{template "chip" $r.SubLog}}.</p>{{end}}
+{{if $r.SpawnWhenDestroyed}}<p>Breaking it leaves {{template "chip" $r.SpawnWhenDestroyed}}.</p>{{end}}
+{{with $r.Plant}}<h2>Growing</h2><p>Takes {{secs .GrowTime}}–{{secs .GrowTimeMax}} to grow{{if .GrownPrefabs}} into {{range $i, $g := .GrownPrefabs}}{{if $i}} or {{end}}{{template "chip" $g}}{{end}}{{end}}.</p>{{end}}
+{{if $d.Rules}}<h2>Where it grows</h2>
+<div class="table-wrap"><table><thead><tr><th>Biomes</th><th class="num">Per zone</th><th>Conditions</th></tr></thead><tbody>
+{{range $d.Rules}}<tr><td>{{template "biomes" .Biomes}}{{if ne .BiomeArea "Everything"}}<br><small class="muted">{{lower .BiomeArea}}</small>{{end}}</td><td class="num">{{num .Min}}–{{num .Max}}{{if gt .GroupMax 1}} <small class="muted">in groups of {{.GroupMin}}–{{.GroupMax}}</small>{{end}}</td><td class="small muted">{{if gt .MinAltitude -1000.0}}{{if gt .MinAltitude 0.0}}above {{num .MinAltitude}} m; {{else if lt .MinAltitude 0.0}}from {{num .MinAltitude}} m; {{end}}{{end}}{{if lt .MaxAltitude 1000.0}}below {{num .MaxAltitude}} m; {{end}}{{if .InForest}}in forest; {{end}}{{if .MaxTilt}}{{if lt .MaxTilt 90.0}}slope under {{num .MaxTilt}}°; {{end}}{{end}}{{if .MinVegetation}}vegetation ≥ {{num .MinVegetation}}; {{end}}{{if .MinOceanDepth}}water {{num .MinOceanDepth}}–{{num .MaxOceanDepth}} m deep; {{end}}{{if .MinDistanceFromCenter}}beyond {{metres .MinDistanceFromCenter}}; {{end}}{{if .Source}}{{if hasPrefix .Source "altbiome:"}}only in the {{replace .Source "altbiome:" ""}} variant; {{end}}{{end}}</td></tr>{{end}}
+</tbody></table></div>{{end}}
+{{if $d.Found}}<h2>Found in</h2><ul class="chips">{{range $d.Found}}<li>{{template "chip" (index .Variants 0).Prefab}}</li>{{end}}</ul>{{end}}
+{{template "yourworld" .YourWorld}}
+</div>
+<aside class="infobox">
+<h3>{{resourceKind $r.Kind}}</h3>
+<dl>
+{{if $r.Biomes}}{{template "stat" (dict "k" "Biomes" "v" (join (biomeNames $r.Biomes) ", "))}}{{end}}
+{{if eq $r.Kind "pickable"}}{{template "stat" (dict "k" "Respawns" "v" (when $r.Respawn (mins $r.Respawn) "never"))}}{{end}}
+{{if $r.Health}}{{template "stat" (dict "k" "Health" "v" (num $r.Health))}}{{end}}
+{{if $r.MinToolTier}}{{template "stat" (dict "k" "Tool tier" "v" $r.MinToolTier)}}{{end}}
+{{if $r.Resist}}{{template "stat" (dict "k" "Damage" "v" (resistHTML $r.Resist))}}{{end}}
+</dl>
+<h3>Prefab</h3><p class="small muted"><code>{{$r.Prefab}}</code></p>
+</aside>
+</div>
+{{end}}

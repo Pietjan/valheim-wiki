@@ -1,0 +1,45 @@
+{{define "content"}}
+{{$d := .Data}}{{$p := $d.Piece}}
+{{template "crumbs" .}}
+{{template "hero" (dict "icon" (iconOf $p.Prefab) "eyebrow" (print (category $p.Category) (when $p.Tool (print " · " $p.Tool) "")) "title" $p.Name "lede" $p.Description)}}
+<div class="cols">
+<div class="main">
+{{if $p.Resources}}
+<h2>Cost</h2>
+<div class="recipe"><ul class="chips">{{range $p.Resources}}<li>{{template "chipn" (dict "prefab" .Item "n" .Amount)}}{{if not .Recover}}<span class="chip-meta">not returned</span>{{end}}</li>{{end}}</ul>
+<p class="at">{{if $p.Station}}Needs {{template "chip" $p.Station}} nearby{{else}}No station needed{{end}}{{if $p.Tool}} · built with the {{$p.Tool}}{{end}}</p></div>
+{{end}}
+{{with $d.Converter}}<h2>What it does</h2><p>See <a href="{{thingURL .Prefab}}">{{.Name}}</a> under crafting for its recipes.</p>{{end}}
+{{with $d.Extends}}<h2>Upgrade</h2><p>Raises the level of a nearby <a href="{{thingURL .Prefab}}">{{.Name}}</a> by one.</p>{{end}}
+{{with $p.Container}}<h2>Storage</h2><p>{{.Width}} × {{.Height}} slots{{if .Private}}, private{{end}}.</p>{{if .Loot}}<h3>Starts with</h3>{{template "droptable" .Loot}}{{end}}{{end}}
+{{with $p.Plant}}<h2>Growing</h2><p>Grows in {{secs .GrowTime}} to {{secs .GrowTimeMax}}{{if .NeedCultivated}} on cultivated ground{{end}}{{if .GrowRadius}}, needing {{num .GrowRadius}} m of room{{end}}{{if .Biomes}} in {{join (biomeNames .Biomes) ", "}}{{end}}.</p>{{if .GrownPrefabs}}<ul class="chips">{{range .GrownPrefabs}}<li>{{template "chip" .}}</li>{{end}}</ul>{{end}}{{end}}
+{{with $p.Ship}}<h2>Sailing</h2><dl class="infobox" style="position:static"><div class="stat"><dt>Sail force</dt><dd>{{num .SailForce}}</dd></div><div class="stat"><dt>Rudder speed</dt><dd>{{num .RudderSpeed}}</dd></div><div class="stat"><dt>Rowing force</dt><dd>{{num .BackwardForce}}</dd></div>{{if .Container}}<div class="stat"><dt>Hold</dt><dd>{{.Container.Width}} × {{.Container.Height}}</dd></div>{{end}}{{if .AshlandsReady}}<div class="stat"><dt>Survives the Ashlands sea</dt><dd>Yes</dd></div>{{end}}</dl>{{end}}
+{{with $p.Fireplace}}<h2>Fire</h2><p>{{if .Infinite}}Burns forever.{{else}}Burns {{nameOf .Fuel}}: holds {{num .MaxFuel}}, each lasting {{secs .SecPerFuel}}{{if .StartFuel}}, starting with {{num .StartFuel}}{{end}}.{{end}}</p>{{end}}
+{{with $p.Turret}}<h2>Turret</h2><p>Fires {{range $i, $a := .Ammo}}{{if $i}}, {{end}}{{nameOf $a}}{{end}}; holds {{.MaxAmmo}}, sees {{num .Range}} m, one shot every {{secs .Cooldown}}.</p>{{end}}
+{{with $p.ItemStand}}{{if .GuardianPower}}<h2>Forsaken power</h2><p>Grants {{template "chip" (print "effect:" .GuardianPower)}}.</p>{{end}}{{end}}
+{{if $p.Notes}}<h2>Notes</h2><ul>{{range $p.Notes}}<li>{{.}}</li>{{end}}</ul>{{end}}
+</div>
+<aside class="infobox">
+<h3>Piece</h3>
+<dl>
+{{if $p.Health}}{{template "stat" (dict "k" "Health" "v" (num $p.Health))}}{{end}}
+{{if $p.Material}}{{template "stat" (dict "k" "Material" "v" $p.Material)}}{{end}}
+{{if $p.Comfort}}{{template "stat" (dict "k" "Comfort" "v" (print "+" $p.Comfort (when $p.ComfortGroup (print " (" (lower $p.ComfortGroup) ")") "")))}}{{end}}
+{{if $p.Resist}}{{template "stat" (dict "k" "Damage" "v" (resistHTML $p.Resist))}}{{end}}
+{{if $p.Supports}}{{template "stat" (dict "k" "Bears weight" "v" "Yes")}}{{end}}
+{{if $p.Burnable}}{{template "stat" (dict "k" "Burns" "v" "Yes")}}{{end}}
+{{if $p.NoRoofWear}}{{template "stat" (dict "k" "Weatherproof" "v" "Yes")}}{{end}}
+{{if $p.MinToolTier}}{{template "stat" (dict "k" "Tool tier to break" "v" $p.MinToolTier)}}{{end}}
+{{if $p.Usage}}{{template "stat" (dict "k" "Tags" "v" (join $p.Usage ", "))}}{{end}}
+{{if $p.OnlyBiome}}{{template "stat" (dict "k" "Only in" "v" (join (biomeNames $p.OnlyBiome) ", "))}}{{end}}
+{{if $p.Placement}}{{template "stat" (dict "k" "Placement" "v" (join $p.Placement ", "))}}{{end}}
+{{if $p.Ward}}{{template "stat" (dict "k" "Ward radius" "v" (print (num $p.Ward.Radius) " m"))}}{{end}}
+{{if $p.Portal}}{{template "stat" (dict "k" "Portal" "v" (when $p.Portal.AllowAllItems "carries everything" "no metals"))}}{{end}}
+{{if $p.Bed}}{{template "stat" (dict "k" "Bed" "v" "Yes")}}{{end}}
+{{if $p.Door}}{{if $p.Door.Key}}{{template "stat" (dict "k" "Key" "v" (nameOf $p.Door.Key))}}{{end}}{{end}}
+{{if $p.DLC}}{{template "stat" (dict "k" "DLC" "v" $p.DLC)}}{{end}}
+</dl>
+<h3>Prefab</h3><p class="small muted"><code>{{$p.Prefab}}</code></p>
+</aside>
+</div>
+{{end}}
