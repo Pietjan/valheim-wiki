@@ -50,14 +50,8 @@ func groupOf(it *model.Item) string {
 	return "misc"
 }
 
-// visible is whether an item gets a page: the game shows it somewhere
-// (it has an icon) or something makes it.
-func (s *Site) visible(it *model.Item) bool {
-	if it.Hidden {
-		return len(s.Index.Recipes[it.Prefab]) > 0
-	}
-	return true
-}
+// visible is whether an item gets a page; see Index.Visible.
+func (s *Site) visible(it *model.Item) bool { return s.Index.Visible[it.Prefab] }
 
 // ItemPage is one item's page data.
 type ItemPage struct {

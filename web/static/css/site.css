@@ -219,6 +219,7 @@ code { font: 14px/1.4 var(--mono); background: var(--paper-3); padding: 1px 5px;
 .chip-n { color: var(--accent-2); font-weight: 700; font-variant-numeric: tabular-nums; }
 .chip-meta { color: var(--ink-3); font-size: 14px; }
 .chip-dead { color: var(--ink-3); }
+.chip-still { cursor: default; color: var(--ink-2); }
 .chip.big { font-size: 16px; padding: 4px 12px 4px 4px; }
 .chip.big .chip-icon { width: 36px; height: 36px; }
 

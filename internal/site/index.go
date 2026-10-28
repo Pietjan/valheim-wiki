@@ -52,6 +52,12 @@ type Index struct {
 	// Primary is the biome a creature is filed under: that of its first
 	// ungated world spawn rule.
 	Primary map[string]string
+	// Visible is the items that get a page: something in the game hands
+	// them to the player and they have an icon to be seen by. The rest are
+	// the ItemDrops behind creature attacks, NPC costumes, test gear and
+	// content the game ships but does not yet give out; they keep a Thing
+	// with no URL, to be named and pictured where they come up.
+	Visible map[string]bool
 }
 
 // Thing is one page-worthy entity.
@@ -126,10 +132,10 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 		InChests: map[string][]ChestLink{}, SpawnsOf: map[string][]*model.Spawn{}, Found: map[string][]*model.Location{},
 		EventsOf: map[string][]*model.Event{}, Tamers: map[string][]*model.Creature{}, Effects_: map[string][]EffectLink{},
 		Sets: map[string][]*model.Item{}, StationRecipes: map[string][]*model.Recipe{}, Extends: map[string]*model.Station{},
-		TrophyOf: map[string]string{}, Phases: map[string][]*model.Creature{}, Primary: map[string]string{}}
+		TrophyOf: map[string]string{}, Phases: map[string][]*model.Creature{}, Primary: map[string]string{}, Visible: map[string]bool{}}
 
-	// Items.
-	sl := newSlugger()
+	// Items. Their slugs wait until the end, once what hands them out is
+	// known: the visible ones take the plain names.
 	for _, k := range model.SortedKeys(db.Items) {
 		it := db.Items[k]
 		if it.Prefab == "" {
@@ -139,12 +145,11 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 	}
 	sort.SliceStable(ix.Items, func(i, j int) bool { return ix.Items[i].Name < ix.Items[j].Name })
 	for _, it := range ix.Items {
-		slug := sl.take(it.Name, it.Prefab)
 		icon := ""
 		if hasIcon("items", it.Prefab) {
 			icon = "items/" + it.Prefab
 		}
-		ix.Things[it.Prefab] = &Thing{Kind: "item", Prefab: it.Prefab, Name: it.Name, Slug: slug, URL: "items/" + slug + "/", Icon: icon, Sub: ItemTypeName(it.Type)}
+		ix.Things[it.Prefab] = &Thing{Kind: "item", Prefab: it.Prefab, Name: it.Name, Icon: icon, Sub: ItemTypeName(it.Type)}
 		if it.SetName != "" {
 			ix.Sets[it.SetName] = append(ix.Sets[it.SetName], it)
 		}
@@ -153,7 +158,7 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 		}
 	}
 	// Pieces.
-	sl = newSlugger()
+	sl := newSlugger()
 	for _, k := range model.SortedKeys(db.Pieces) {
 		p := db.Pieces[k]
 		if p.Prefab == "" {
@@ -317,11 +322,14 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 	sort.SliceStable(ix.Creatures, func(i, j int) bool { return ix.Creatures[i].Name < ix.Creatures[j].Name })
 	for _, c := range ix.Creatures {
 		slug := sl.take(c.Name, c.Prefab)
+		// The creature's trophy is its icon: the game's own likeness of
+		// it. The portrait rendered from the model stands in for the
+		// creatures that leave none.
 		icon := ""
-		if hasIcon("creatures", c.Prefab) {
-			icon = "creatures/" + c.Prefab
-		} else if c.Trophy != "" && hasIcon("items", c.Trophy) {
+		if c.Trophy != "" && hasIcon("items", c.Trophy) {
 			icon = "items/" + c.Trophy
+		} else if hasIcon("creatures", c.Prefab) {
+			icon = "creatures/" + c.Prefab
 		}
 		sub := FactionName(c.Faction)
 		if c.Boss {
@@ -566,6 +574,24 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 	for _, ab := range db.AltBiomes {
 		if bi := ix.ByBiome[ab.Biome]; bi != nil {
 			bi.AltBiomes = append(bi.AltBiomes, ab)
+		}
+	}
+	// The items' pages: a recipe in a station's menu, a creature's drop, a
+	// pickable, a trader, a chest or a converter hands the item out, and
+	// it has an icon (or a recipe clears the hidden mark the extractor put
+	// on an iconless ItemDrop). Those take the slugs; the rest get none.
+	sl = newSlugger()
+	for _, it := range ix.Items {
+		p := it.Prefab
+		if it.Hidden && len(ix.Recipes[p]) == 0 {
+			continue
+		}
+		if len(ix.Recipes[p]) > 0 || len(ix.DroppedBy[p]) > 0 || len(ix.Gathered[p]) > 0 ||
+			len(ix.Sold[p]) > 0 || len(ix.InChests[p]) > 0 || len(ix.Converts[p]) > 0 {
+			ix.Visible[p] = true
+			t := ix.Things[p]
+			t.Slug = sl.take(it.Name, p)
+			t.URL = "items/" + t.Slug + "/"
 		}
 	}
 	for _, t := range ix.Things {
