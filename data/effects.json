@@ -1,0 +1,1489 @@
+{
+ "AdrenalineRush": {
+  "id": "AdrenalineRush",
+  "name": "Adrenaline Rush 1",
+  "token": "$se_adrenalinerush 1",
+  "kind": "SE_Stats",
+  "tooltip": "The adrenaline surges through you",
+  "icon": true,
+  "stats": {
+   "damageModifier.All": 1.0499999523162842,
+   "staminaOverTime": 0.20000000298023224,
+   "staminaOverTimeDuration": 10,
+   "staminaRegenMultiplier": 1.2000000476837158
+  }
+ },
+ "AdrenalineRush2": {
+  "id": "AdrenalineRush2",
+  "name": "Adrenaline Rush 2",
+  "token": "$se_adrenalinerush 2",
+  "kind": "SE_Stats",
+  "tooltip": "The adrenaline surges through you",
+  "icon": true,
+  "stats": {
+   "damageModifier.All": 1.100000023841858,
+   "staminaOverTime": 0.25,
+   "staminaOverTimeDuration": 10,
+   "staminaRegenMultiplier": 1.2999999523162842
+  }
+ },
+ "AdrenalineRush3": {
+  "id": "AdrenalineRush3",
+  "name": "Adrenaline Rush 3",
+  "token": "$se_adrenalinerush 3",
+  "kind": "SE_Stats",
+  "tooltip": "The adrenaline surges through you",
+  "icon": true,
+  "stats": {
+   "damageModifier.All": 1.149999976158142,
+   "staminaOverTime": 0.30000001192092896,
+   "staminaOverTimeDuration": 10,
+   "staminaRegenMultiplier": 1.399999976158142
+  }
+ },
+ "AdrenalineRush4": {
+  "id": "AdrenalineRush4",
+  "name": "Adrenaline Rush 4",
+  "token": "$se_adrenalinerush 4",
+  "kind": "SE_Stats",
+  "tooltip": "The adrenaline surges through you",
+  "icon": true,
+  "stats": {
+   "damageModifier.All": 1.25,
+   "staminaOverTime": 0.4000000059604645,
+   "staminaOverTimeDuration": 10,
+   "staminaRegenMultiplier": 1.600000023841858
+  }
+ },
+ "BeltStrength": {
+  "id": "BeltStrength",
+  "name": "Megingjord",
+  "token": "$item_beltstrength",
+  "kind": "SE_Stats",
+  "tooltip": "Increase max carry weight.",
+  "icon": true,
+  "startMessage": "You feel stronger",
+  "stats": {
+   "addMaxCarryWeight": 150
+  }
+ },
+ "Burning": {
+  "id": "Burning",
+  "name": "Burning",
+  "token": "$se_burning_name",
+  "kind": "SE_Burning",
+  "tooltip": "You are on fire!",
+  "icon": true,
+  "ttl": 5,
+  "stats": {
+   "damageInterval": 1
+  }
+ },
+ "CampFire": {
+  "id": "CampFire",
+  "name": "Fire",
+  "token": "$se_fire_name",
+  "kind": "StatusEffect",
+  "tooltip": "Warm from a cozy fire.",
+  "icon": true
+ },
+ "Cold": {
+  "id": "Cold",
+  "name": "Cold",
+  "token": "$se_cold_name",
+  "kind": "SE_Stats",
+  "tooltip": "Lower health and stamina regeneration.",
+  "icon": true,
+  "startMessage": "You feel cold",
+  "stopMessage": "You are getting warmer",
+  "stats": {
+   "eitrRegenMultiplier": 0.75,
+   "healthRegenMultiplier": 0.5,
+   "staminaRegenMultiplier": 0.75
+  }
+ },
+ "CorpseRun": {
+  "id": "CorpseRun",
+  "name": "Corpse run",
+  "token": "$se_corpserun_name",
+  "kind": "SE_Stats",
+  "tooltip": "You can run longer and take significantly less damage from physical attacks.",
+  "icon": true,
+  "ttl": 50,
+  "stats": {
+   "addMaxCarryWeight": 150,
+   "healthPerTick": 5,
+   "jumpStaminaUseModifier": -0.75,
+   "runStaminaDrainModifier": -0.75,
+   "tickInterval": 1
+  },
+  "mods": [
+   {
+    "type": "blunt",
+    "mod": "Resistant"
+   },
+   {
+    "type": "slash",
+    "mod": "Resistant"
+   },
+   {
+    "type": "pierce",
+    "mod": "Resistant"
+   }
+  ]
+ },
+ "Crowned": {
+  "id": "Crowned",
+  "name": "Royalty",
+  "token": "$se_crowned_name",
+  "kind": "StatusEffect",
+  "tooltip": "The creatures of Valheim will not harm the one who has mastered them.",
+  "icon": true,
+  "startMessage": "You pass by unchallenged.",
+  "stopMessage": "$se_crowned_stop"
+ },
+ "Demister": {
+  "id": "Demister",
+  "name": "Wisplight",
+  "token": "$item_demister",
+  "kind": "SE_Demister",
+  "tooltip": "A bound wisp to guide you through the thickest of mists.",
+  "icon": true,
+  "startMessage": "You release the bound wisp",
+  "stats": {
+   "ballAcceleration": 7,
+   "ballFriction": 0.029999999329447746,
+   "ballMaxSpeed": 80,
+   "characterVelocityFactor": 3,
+   "maxDistance": 6,
+   "noiseDistance": 1.5,
+   "noiseDistanceInterior": 0.20000000298023224,
+   "noiseDistanceYScale": 0.4000000059604645,
+   "noiseSpeed": 0.5,
+   "rotationSpeed": 8
+  }
+ },
+ "Encumbered": {
+  "id": "Encumbered",
+  "name": "Encumbered",
+  "token": "$se_encumbered_name",
+  "kind": "StatusEffect",
+  "tooltip": "You are encumbered and cannot run.",
+  "icon": true,
+  "startMessage": "You are carrying too much"
+ },
+ "Freezing": {
+  "id": "Freezing",
+  "name": "Freezing",
+  "token": "$se_freezing_name",
+  "kind": "SE_Stats",
+  "tooltip": "You are freezing. No health regeneration and significantly lowered stamina regeneration.",
+  "icon": true,
+  "startMessage": "You are freezing!",
+  "stopMessage": "You are getting warmer",
+  "stats": {
+   "eitrRegenMultiplier": 0.4000000059604645,
+   "healthPerTick": -1,
+   "healthRegenMultiplier": 0,
+   "staminaRegenMultiplier": 0.4000000059604645,
+   "tickInterval": 1
+  },
+  "mods": [
+   {
+    "type": "fire",
+    "mod": "Resistant"
+   }
+  ]
+ },
+ "Frost": {
+  "id": "Frost",
+  "name": "Frost",
+  "token": "$se_frost_name",
+  "kind": "SE_Frost",
+  "tooltip": "You suffer from hypothermia.",
+  "icon": true,
+  "stats": {
+   "freezeTimeEnemy": 50,
+   "freezeTimePlayer": 15,
+   "minSpeedFactor": 0.10000000149011612
+  }
+ },
+ "GP_Bonemass": {
+  "id": "GP_Bonemass",
+  "name": "Bonemass",
+  "token": "$se_bonemass_name",
+  "kind": "SE_Stats",
+  "tooltip": "The mass takes the brunt of your blows. The effort required to raise your shield lessens, and you can withstand harder hits.",
+  "icon": true,
+  "startMessage": "Bonemass' spirit lives in you now",
+  "ttl": 300,
+  "cooldown": 1200,
+  "stats": {
+   "blockStaminaUseFlatValue": -5,
+   "blockStaminaUseModifier": -1
+  },
+  "mods": [
+   {
+    "type": "blunt",
+    "mod": "SlightlyResistant"
+   },
+   {
+    "type": "slash",
+    "mod": "SlightlyResistant"
+   },
+   {
+    "type": "pierce",
+    "mod": "SlightlyResistant"
+   }
+  ],
+  "guardianOf": "Bonemass"
+ },
+ "GP_Eikthyr": {
+  "id": "GP_Eikthyr",
+  "name": "Eikthyr",
+  "token": "$se_eikthyr_name",
+  "kind": "SE_Stats",
+  "tooltip": "The grace of the mighty stag flows through you. Your ability to move around is improved, be it on land or in water.",
+  "icon": true,
+  "startMessage": "You activate the power of Eikthyr",
+  "ttl": 300,
+  "cooldown": 1200,
+  "stats": {
+   "jumpStaminaUseModifier": -0.6000000238418579,
+   "runStaminaDrainModifier": -0.6000000238418579,
+   "swimStaminaUseModifier": -0.6000000238418579
+  },
+  "guardianOf": "Eikthyr"
+ },
+ "GP_Fader": {
+  "id": "GP_Fader",
+  "name": "Fader",
+  "token": "$se_fader_name",
+  "kind": "SE_Stats",
+  "tooltip": "The Emerald Flame never relents. You shall stand your ground, even when it is aflame, and you shall use all the advantages the battle may offer you.",
+  "icon": true,
+  "startMessage": "The Emerald Flame still burns",
+  "ttl": 300,
+  "cooldown": 1200,
+  "stats": {
+   "adrenalineModifier": 1,
+   "staggerModifier": -0.5
+  },
+  "mods": [
+   {
+    "type": "fire",
+    "mod": "Resistant"
+   }
+  ]
+ },
+ "GP_Moder": {
+  "id": "GP_Moder",
+  "name": "Moder",
+  "token": "$se_moder_name",
+  "kind": "SE_Stats",
+  "tooltip": "The dragon's wings urge you on. You shall always have tailwind while sailing, and you shall swiftly carry heavy burdens, even over the coldest mountains.",
+  "icon": true,
+  "startMessage": "Moder still cries",
+  "ttl": 300,
+  "cooldown": 1200,
+  "attributes": [
+   "SailingPower"
+  ],
+  "stats": {
+   "addMaxCarryWeight": 300,
+   "speedModifier": 0.10000000149011612
+  },
+  "mods": [
+   {
+    "type": "frost",
+    "mod": "Resistant"
+   }
+  ],
+  "guardianOf": "Dragon"
+ },
+ "GP_Queen": {
+  "id": "GP_Queen",
+  "name": "The Queen",
+  "token": "$se_queen_name",
+  "kind": "SE_Stats",
+  "tooltip": "Her Majesty blesses you. In her shadow both stealth and magic may flourish, and no poison shall harm you.",
+  "icon": true,
+  "startMessage": "The Queen's power breaks free",
+  "ttl": 300,
+  "cooldown": 1200,
+  "stats": {
+   "eitrRegenMultiplier": 2,
+   "sneakStaminaUseModifier": -1
+  },
+  "mods": [
+   {
+    "type": "poison",
+    "mod": "Resistant"
+   }
+  ],
+  "guardianOf": "SeekerQueen"
+ },
+ "GP_TheElder": {
+  "id": "GP_TheElder",
+  "name": "The Elder",
+  "token": "$se_theelder_name",
+  "kind": "SE_Stats",
+  "tooltip": "The power of the forest invigorates you. You shall gather its bounties faster, just as you shall regain your own vitality should you lose it.",
+  "icon": true,
+  "startMessage": "The Elder's power surges through you",
+  "ttl": 300,
+  "cooldown": 1200,
+  "stats": {
+   "healthRegenMultiplier": 1.2999999523162842,
+   "percentigeDamageModifiers.chop": 0.6000000238418579,
+   "percentigeDamageModifiers.pickaxe": 0.6000000238418579
+  },
+  "guardianOf": "gd_king"
+ },
+ "GP_Yagluth": {
+  "id": "GP_Yagluth",
+  "name": "Yagluth",
+  "token": "$se_yagluth_name",
+  "kind": "SE_Stats",
+  "tooltip": "The fallen king lends you his might. A king must have the power to vanquish his foes, just as he must be able to support his people.",
+  "icon": true,
+  "startMessage": "The cosmic powers of Yagluth",
+  "ttl": 300,
+  "cooldown": 1200,
+  "stats": {
+   "percentigeDamageModifiers.blunt": 0.10000000149011612,
+   "percentigeDamageModifiers.chop": 0.10000000149011612,
+   "percentigeDamageModifiers.fire": 0.10000000149011612,
+   "percentigeDamageModifiers.frost": 0.10000000149011612,
+   "percentigeDamageModifiers.lightning": 0.10000000149011612,
+   "percentigeDamageModifiers.pickaxe": 0.10000000149011612,
+   "percentigeDamageModifiers.pierce": 0.10000000149011612,
+   "percentigeDamageModifiers.poison": 0.10000000149011612,
+   "percentigeDamageModifiers.slash": 0.10000000149011612,
+   "percentigeDamageModifiers.spirit": 0.10000000149011612,
+   "raiseSkill.All": 0,
+   "skillLevel.Farming": 25
+  },
+  "mods": [
+   {
+    "type": "lightning",
+    "mod": "Resistant"
+   }
+  ],
+  "guardianOf": "GoblinKing"
+ },
+ "GoblinShaman_shield": {
+  "id": "GoblinShaman_shield",
+  "name": "GD Heal",
+  "token": "GD Heal",
+  "kind": "SE_Shield",
+  "ttl": 40,
+  "stats": {
+   "absorbDamage": 100,
+   "absorbDamageWorldLevel": 100,
+   "levelUpSkillOnBreak.": 1
+  }
+ },
+ "GrapplingHook": {
+  "id": "GrapplingHook",
+  "name": "Grappling Hook",
+  "token": "GrapplingHook",
+  "kind": "SE_Stats",
+  "icon": true,
+  "stats": {
+   "fallDamageModifier": -1,
+   "maxMaxFallSpeed": 6
+  }
+ },
+ "Harpooned": {
+  "id": "Harpooned",
+  "name": "Harpooned",
+  "token": "$se_harpooned_name",
+  "kind": "SE_Harpooned",
+  "tooltip": "You have been harpooned.",
+  "icon": true,
+  "stats": {
+   "breakDistance": 8,
+   "forcePower": 2,
+   "maxDistance": 40,
+   "maxLineSlack": 0.30000001192092896,
+   "pullForce": 1,
+   "pullSpeed": 1000,
+   "smoothDistance": 2,
+   "staminaDrain": 0.10000000149011612,
+   "staminaDrainInterval": 0.10000000149011612
+  }
+ },
+ "Immobilized": {
+  "id": "Immobilized",
+  "name": "Immobilized",
+  "token": "$se_immobilized",
+  "kind": "SE_Stats",
+  "tooltip": "You are stuck",
+  "icon": true,
+  "ttl": 5,
+  "stats": {
+   "jumpModifier.x": -1,
+   "jumpModifier.y": -1,
+   "jumpModifier.z": -1,
+   "skillLevel.ElementalMagic": 0,
+   "speedModifier": -1000
+  }
+ },
+ "ImmobilizedAshlands": {
+  "id": "ImmobilizedAshlands",
+  "name": "Immobilized",
+  "token": "$se_immobilized",
+  "kind": "SE_Stats",
+  "tooltip": "You are stuck",
+  "icon": true,
+  "ttl": 10,
+  "stats": {
+   "jumpModifier.x": -1,
+   "jumpModifier.y": -1,
+   "jumpModifier.z": -1,
+   "speedModifier": -1000
+  }
+ },
+ "ImmobilizedLong": {
+  "id": "ImmobilizedLong",
+  "name": "Immobilized",
+  "token": "$se_immobilized",
+  "kind": "SE_Stats",
+  "tooltip": "You are stuck",
+  "icon": true,
+  "ttl": 60,
+  "stats": {
+   "jumpModifier.x": -1,
+   "jumpModifier.y": -1,
+   "jumpModifier.z": -1,
+   "skillLevel.ElementalMagic": 0,
+   "speedModifier": -1000
+  }
+ },
+ "Lightning": {
+  "id": "Lightning",
+  "name": "Lightning",
+  "token": "$se_lightning_name",
+  "kind": "StatusEffect",
+  "tooltip": "Lightning damage.",
+  "icon": true,
+  "ttl": 3
+ },
+ "Poison": {
+  "id": "Poison",
+  "name": "Poison",
+  "token": "$se_poison_name",
+  "kind": "SE_Poison",
+  "tooltip": "Poison damage.",
+  "icon": true,
+  "startMessage": "You have been poisoned",
+  "stats": {
+   "TTLPerDamage": 1,
+   "TTLPerDamagePlayer": 5,
+   "TTLPower": 0.5,
+   "baseTTL": 1,
+   "damageInterval": 1
+  }
+ },
+ "Potion_BugRepellent": {
+  "id": "Potion_BugRepellent",
+  "name": "Anti-Sting Concoction",
+  "token": "$item_mead_bugrepellent",
+  "kind": "SE_Stats",
+  "tooltip": "The fresh scent of this potion will keep away certain unwanted companions.",
+  "icon": true,
+  "ttl": 600
+ },
+ "Potion_LightFoot": {
+  "id": "Potion_LightFoot",
+  "name": "Lightfoot Mead",
+  "token": "$item_mead_lightfoot",
+  "kind": "SE_Stats",
+  "tooltip": "You feel lighter, almost like you could jump all the way to the branches of Yggdrasil itself.",
+  "icon": true,
+  "ttl": 600,
+  "stats": {
+   "jumpModifier.y": 0.20000000298023224,
+   "jumpStaminaUseModifier": -0.30000001192092896
+  }
+ },
+ "Potion_TrollPheromones": {
+  "id": "Potion_TrollPheromones",
+  "name": "Love Potion",
+  "token": "$item_mead_trollpheromones",
+  "kind": "SE_Stats",
+  "tooltip": "All is fair in love and war.",
+  "icon": true,
+  "ttl": 300,
+  "stats": {
+   "pheromoneLevelUpMultiplier": 1.25,
+   "pheromoneMaxInstanceOverride": 2,
+   "pheromoneSpawnChanceOverride": 25,
+   "pheromoneSpawnMinLevel": 2
+  }
+ },
+ "Potion_barleywine": {
+  "id": "Potion_barleywine",
+  "name": "Fire Resistance Barley Wine",
+  "token": "$item_barleywine",
+  "kind": "SE_Stats",
+  "tooltip": "You take less damage from burning.",
+  "icon": true,
+  "startMessage": "You drink the potion",
+  "ttl": 600,
+  "mods": [
+   {
+    "type": "fire",
+    "mod": "Resistant"
+   }
+  ]
+ },
+ "Potion_bzerker": {
+  "id": "Potion_bzerker",
+  "name": "Berserkir Mead",
+  "token": "$item_mead_bzerker",
+  "kind": "SE_Stats",
+  "tooltip": "For a short while, you fight with the ferocity of a mad and frenzied creature.",
+  "icon": true,
+  "ttl": 20,
+  "cooldown": 120,
+  "stats": {
+   "attackStaminaUseModifier": -0.800000011920929,
+   "blockStaminaUseModifier": -0.800000011920929,
+   "dodgeStaminaUseModifier": -0.800000011920929
+  },
+  "mods": [
+   {
+    "type": "slash",
+    "mod": "Weak"
+   },
+   {
+    "type": "blunt",
+    "mod": "Weak"
+   },
+   {
+    "type": "pierce",
+    "mod": "Weak"
+   }
+  ]
+ },
+ "Potion_eitr_lingering": {
+  "id": "Potion_eitr_lingering",
+  "name": "Lingering Eitr Mead",
+  "token": "$item_mead_eitr_lingering",
+  "kind": "SE_Stats",
+  "category": "eitrpotion",
+  "tooltip": "Eitr regeneration over time.",
+  "icon": true,
+  "startMessage": "You drink the potion",
+  "ttl": 300,
+  "stats": {
+   "eitrRegenMultiplier": 1.25
+  }
+ },
+ "Potion_eitr_minor": {
+  "id": "Potion_eitr_minor",
+  "name": "Minor Eitr Mead",
+  "token": "$item_mead_eitr_minor",
+  "kind": "SE_Stats",
+  "category": "eitrpotion",
+  "tooltip": "Eitr over time.",
+  "icon": true,
+  "startMessage": "You drink the potion",
+  "ttl": 120,
+  "stats": {
+   "eitrOverTime": 125,
+   "eitrOverTimeDuration": 10
+  }
+ },
+ "Potion_frostresist": {
+  "id": "Potion_frostresist",
+  "name": "Frost Resistance Mead",
+  "token": "$item_mead_frostres",
+  "kind": "SE_Stats",
+  "tooltip": "You are protected against the cold.",
+  "icon": true,
+  "startMessage": "You drink the potion",
+  "ttl": 600,
+  "mods": [
+   {
+    "type": "frost",
+    "mod": "Resistant"
+   }
+  ]
+ },
+ "Potion_hasty": {
+  "id": "Potion_hasty",
+  "name": "Tonic of Ratatosk",
+  "token": "$item_mead_hasty",
+  "kind": "SE_Stats",
+  "tooltip": "Magic fills you, letting you move quicker than ever before.",
+  "icon": true,
+  "ttl": 600,
+  "stats": {
+   "skillLevel.Run": 10,
+   "speedModifier": 0.15000000596046448
+  }
+ },
+ "Potion_health_lingering": {
+  "id": "Potion_health_lingering",
+  "name": "Lingering Healing Mead",
+  "token": "$item_mead_hp_lingering",
+  "kind": "SE_Stats",
+  "category": "healthpotion",
+  "tooltip": "Health regeneration over time.",
+  "icon": true,
+  "startMessage": "You drink the potion",
+  "ttl": 300,
+  "stats": {
+   "healthRegenMultiplier": 1.25
+  }
+ },
+ "Potion_health_major": {
+  "id": "Potion_health_major",
+  "name": "Major Healing Mead",
+  "token": "$item_mead_hp_major",
+  "kind": "SE_Stats",
+  "category": "healthpotion",
+  "tooltip": "Health over time.",
+  "icon": true,
+  "startMessage": "You drink the potion",
+  "ttl": 120,
+  "stats": {
+   "healthOverTime": 125,
+   "healthOverTimeDuration": 10,
+   "healthOverTimeInterval": 1
+  }
+ },
+ "Potion_health_medium": {
+  "id": "Potion_health_medium",
+  "name": "Medium Healing Mead",
+  "token": "$item_mead_hp_medium",
+  "kind": "SE_Stats",
+  "category": "healthpotion",
+  "tooltip": "Health over time.",
+  "icon": true,
+  "startMessage": "You drink the potion",
+  "ttl": 120,
+  "stats": {
+   "healthOverTime": 75,
+   "healthOverTimeDuration": 10,
+   "healthOverTimeInterval": 1
+  }
+ },
+ "Potion_health_minor": {
+  "id": "Potion_health_minor",
+  "name": "Minor Healing Mead",
+  "token": "$item_mead_hp_minor",
+  "kind": "SE_Stats",
+  "category": "healthpotion",
+  "tooltip": "Health over time.",
+  "icon": true,
+  "startMessage": "You drink the potion",
+  "ttl": 120,
+  "stats": {
+   "healthOverTime": 50,
+   "healthOverTimeDuration": 10,
+   "healthOverTimeInterval": 1
+  }
+ },
+ "Potion_poisonresist": {
+  "id": "Potion_poisonresist",
+  "name": "Poison Resistance Mead",
+  "token": "$item_mead_poisonres",
+  "kind": "SE_Stats",
+  "tooltip": "You take less damage from poison.",
+  "icon": true,
+  "startMessage": "You drink the potion",
+  "ttl": 600,
+  "mods": [
+   {
+    "type": "poison",
+    "mod": "VeryResistant"
+   }
+  ]
+ },
+ "Potion_stamina_lingering": {
+  "id": "Potion_stamina_lingering",
+  "name": "Lingering Stamina Mead",
+  "token": "$item_mead_stamina_lingering",
+  "kind": "SE_Stats",
+  "category": "staminapotion",
+  "tooltip": "Stamina regeneration over time.",
+  "icon": true,
+  "startMessage": "You drink the potion",
+  "ttl": 300,
+  "stats": {
+   "staminaRegenMultiplier": 1.25
+  }
+ },
+ "Potion_stamina_medium": {
+  "id": "Potion_stamina_medium",
+  "name": "Medium Stamina Mead",
+  "token": "$item_mead_stamina_medium",
+  "kind": "SE_Stats",
+  "category": "staminapotion",
+  "tooltip": "Regenerate stamina fast.",
+  "icon": true,
+  "startMessage": "You drink the potion",
+  "ttl": 120,
+  "stats": {
+   "staminaOverTime": 160,
+   "staminaOverTimeDuration": 2
+  }
+ },
+ "Potion_stamina_minor": {
+  "id": "Potion_stamina_minor",
+  "name": "Minor Stamina Mead",
+  "token": "$item_mead_stamina_minor",
+  "kind": "SE_Stats",
+  "category": "staminapotion",
+  "tooltip": "Regenerate stamina fast.",
+  "icon": true,
+  "startMessage": "You drink the potion",
+  "ttl": 120,
+  "stats": {
+   "staminaOverTime": 80,
+   "staminaOverTimeDuration": 2
+  }
+ },
+ "Potion_strength": {
+  "id": "Potion_strength",
+  "name": "Mead of Troll Endurance",
+  "token": "$item_mead_strength",
+  "kind": "SE_Stats",
+  "tooltip": "Incredible strength courses through you, but only for a time...",
+  "icon": true,
+  "ttl": 300,
+  "cooldown": 120,
+  "stats": {
+   "addMaxCarryWeight": 250
+  }
+ },
+ "Potion_swimmer": {
+  "id": "Potion_swimmer",
+  "name": "Draught of Vananidir",
+  "token": "$item_mead_swimmer",
+  "kind": "SE_Stats",
+  "tooltip": "Bring the power of the sea-god with you as you brave the waves.",
+  "icon": true,
+  "ttl": 300,
+  "stats": {
+   "swimStaminaUseModifier": -0.5
+  }
+ },
+ "Potion_tamer": {
+  "id": "Potion_tamer",
+  "name": "Brew of Animal Whispers",
+  "token": "$item_mead_tamer",
+  "kind": "SE_Stats",
+  "tooltip": "Animals will be less reluctant to accept you into their flock.",
+  "icon": true,
+  "ttl": 600,
+  "attributes": [
+   "TamingBoost"
+  ]
+ },
+ "Potion_tasty": {
+  "id": "Potion_tasty",
+  "name": "Tasty Mead",
+  "token": "$item_mead_tasty",
+  "kind": "SE_Stats",
+  "tooltip": "Lower health regeneration, but increased stamina regeneration.",
+  "icon": true,
+  "ttl": 10,
+  "stats": {
+   "healthRegenMultiplier": 0.5,
+   "staminaRegenMultiplier": 2
+  }
+ },
+ "Puke": {
+  "id": "Puke",
+  "name": "Feeling sick",
+  "token": "$se_puke_name",
+  "kind": "SE_Puke",
+  "tooltip": "You don't feel so well and can't hold your food down.",
+  "icon": true,
+  "startMessage": "You feel sick",
+  "ttl": 15,
+  "stats": {
+   "healthPerTick": -1,
+   "healthRegenMultiplier": 0,
+   "removeInterval": 2,
+   "speedModifier": -0.5,
+   "staminaRegenMultiplier": 0,
+   "tickInterval": 2
+  }
+ },
+ "Rested": {
+  "id": "Rested",
+  "name": "Rested",
+  "token": "$se_rested_name",
+  "kind": "SE_Rested",
+  "tooltip": "You feel rested. Health and stamina regeneration are higher.",
+  "icon": true,
+  "stopMessage": "You don't feel rested anymore",
+  "ttl": 1,
+  "stats": {
+   "TTLPerComfortLevel": 60,
+   "baseTTL": 480,
+   "eitrRegenMultiplier": 2,
+   "healthRegenMultiplier": 1.5,
+   "raiseSkill.All": 0.5,
+   "staminaRegenMultiplier": 2
+  }
+ },
+ "Resting": {
+  "id": "Resting",
+  "name": "Resting",
+  "token": "$se_resting_name",
+  "kind": "SE_Cozy",
+  "tooltip": "You are currently resting. Health and stamina regeneration are significantly higher.",
+  "icon": true,
+  "stats": {
+   "delay": 20,
+   "eitrRegenMultiplier": 4,
+   "healthRegenMultiplier": 3,
+   "staminaRegenMultiplier": 4
+  }
+ },
+ "SE_Dvergr_buff": {
+  "id": "SE_Dvergr_buff",
+  "name": "Dvergr power",
+  "token": "$dvergr_buff",
+  "kind": "SE_Stats",
+  "tooltip": "You are infused with a strange Dvergr power which increases your strength.",
+  "icon": true,
+  "ttl": 20,
+  "stats": {
+   "damageModifier.All": 1.2000000476837158,
+   "skillLevel.ElementalMagic": 0
+  }
+ },
+ "SE_Dvergr_heal": {
+  "id": "SE_Dvergr_heal",
+  "name": "Dvergr Heal",
+  "token": "Dvergr Heal",
+  "kind": "SE_Stats",
+  "ttl": 4,
+  "stats": {
+   "healthOverTime": 400,
+   "healthOverTimeInterval": 0.5
+  }
+ },
+ "SE_Greydwarf_shaman_frozen_heal": {
+  "id": "SE_Greydwarf_shaman_frozen_heal",
+  "name": "GD Heal",
+  "token": "GD Heal",
+  "kind": "SE_Stats",
+  "ttl": 4,
+  "stats": {
+   "healthOverTime": 40,
+   "healthOverTimeInterval": 0.5
+  }
+ },
+ "SE_Greydwarf_shaman_heal": {
+  "id": "SE_Greydwarf_shaman_heal",
+  "name": "GD Heal",
+  "token": "GD Heal",
+  "kind": "SE_Stats",
+  "ttl": 4,
+  "stats": {
+   "healthOverTime": 20,
+   "healthOverTimeInterval": 0.5
+  }
+ },
+ "SetEffect_AshlandsMediumArmor": {
+  "id": "SetEffect_AshlandsMediumArmor",
+  "name": "Ask's Endurance",
+  "token": "$se_ashlandsmediumarmorseteffect_name",
+  "kind": "SE_Stats",
+  "tooltip": "A lighter armour lets you move more freely, every move requiring less energy.",
+  "icon": true,
+  "stats": {
+   "attackStaminaUseModifier": -0.20000000298023224,
+   "jumpStaminaUseModifier": -0.10000000149011612,
+   "percentigeDamageModifiers.pierce": 0.10000000149011612,
+   "runStaminaDrainModifier": -0.10000000149011612
+  }
+ },
+ "SetEffect_BerserkerArmor": {
+  "id": "SetEffect_BerserkerArmor",
+  "name": "Berserk",
+  "token": "$se_berserkereffect_name",
+  "kind": "SE_Stats",
+  "tooltip": "Increases damage and regeneration, but weakens you against physical damage.",
+  "icon": true,
+  "stats": {
+   "healthRegenMultiplier": 1.2999999523162842,
+   "percentigeDamageModifiers.chop": 0.10000000149011612,
+   "percentigeDamageModifiers.slash": 0.10000000149011612,
+   "staminaRegenMultiplier": 1.149999976158142
+  },
+  "mods": [
+   {
+    "type": "blunt",
+    "mod": "SlightlyWeak"
+   },
+   {
+    "type": "slash",
+    "mod": "SlightlyWeak"
+   },
+   {
+    "type": "pierce",
+    "mod": "SlightlyWeak"
+   }
+  ]
+ },
+ "SetEffect_BerserkerUndeadArmor": {
+  "id": "SetEffect_BerserkerUndeadArmor",
+  "name": "Vilebone Wrath",
+  "token": "$se_berserker_undead_effect_name",
+  "kind": "SE_Stats",
+  "tooltip": "Increases damage and regeneration, but weakens you against physical damage.",
+  "icon": true,
+  "stats": {
+   "healthRegenMultiplier": 1.2000000476837158,
+   "percentigeDamageModifiers.blunt": 0.20000000298023224,
+   "percentigeDamageModifiers.pierce": 0.20000000298023224,
+   "staminaRegenMultiplier": 1.399999976158142
+  },
+  "mods": [
+   {
+    "type": "blunt",
+    "mod": "SlightlyWeak"
+   },
+   {
+    "type": "slash",
+    "mod": "SlightlyWeak"
+   },
+   {
+    "type": "pierce",
+    "mod": "SlightlyWeak"
+   }
+  ]
+ },
+ "SetEffect_DeepNorthMediumArmor": {
+  "id": "SetEffect_DeepNorthMediumArmor",
+  "name": "Vanguard",
+  "token": "$se_deepnorthmediumarmorseteffect_name",
+  "kind": "SE_Stats",
+  "tooltip": "You feel stronger and faster, ready to strike at your foes!",
+  "icon": true,
+  "stats": {
+   "dodgeStaminaUseModifier": -0.20000000298023224,
+   "healthRegenMultiplier": 1.100000023841858,
+   "percentigeDamageModifiers.pierce": 0.10000000149011612,
+   "runStaminaDrainModifier": -0.10000000149011612,
+   "staminaRegenMultiplier": 1.100000023841858
+  }
+ },
+ "SetEffect_FenringArmor": {
+  "id": "SetEffect_FenringArmor",
+  "name": "Fenris blessing",
+  "token": "$se_fenringseteffect_name",
+  "kind": "SE_Stats",
+  "tooltip": "The Fenris armour makes you quick on your feet so you can pass through fire, and your fists feel the power of the beast.",
+  "icon": true,
+  "stats": {
+   "skillLevel.Unarmed": 15
+  },
+  "mods": [
+   {
+    "type": "fire",
+    "mod": "Resistant"
+   }
+  ]
+ },
+ "SetEffect_FishingHat": {
+  "id": "SetEffect_FishingHat",
+  "name": "Fishing Hat",
+  "token": "$item_helmet_fishinghat",
+  "kind": "SE_Stats",
+  "tooltip": "Vikings want you, fish fear you.",
+  "icon": true,
+  "stats": {
+   "skillLevel.Fishing": 20,
+   "skillLevel.Swim": 20
+  }
+ },
+ "SetEffect_HarvesterArmor": {
+  "id": "SetEffect_HarvesterArmor",
+  "name": "Harvester",
+  "token": "$se_harvesterseteffect_name",
+  "kind": "SE_Stats",
+  "tooltip": "Wearing the right clothes makes the chores easier.",
+  "icon": true,
+  "stats": {
+   "skillLevel.Farming": 25
+  }
+ },
+ "SetEffect_LoxArmor": {
+  "id": "SetEffect_LoxArmor",
+  "name": "Boon of the Lox",
+  "token": "$se_loxseteffect_name",
+  "kind": "SE_Stats",
+  "tooltip": "The fur allows you to blend in with the wilderness and move about unseen.",
+  "icon": true,
+  "stats": {
+   "skillLevel.Bows": 15,
+   "skillLevel.Sneak": 30
+  }
+ },
+ "SetEffect_MageArmor": {
+  "id": "SetEffect_MageArmor",
+  "name": "Eitr-infused",
+  "token": "$se_mageseteffect_name",
+  "kind": "SE_Stats",
+  "tooltip": "You are one with the eitr. (increased regen. + elemental magic skill)",
+  "icon": true,
+  "stats": {
+   "eitrRegenMultiplier": 1.5,
+   "skillLevel.ElementalMagic": 15
+  }
+ },
+ "SetEffect_RootArmor": {
+  "id": "SetEffect_RootArmor",
+  "name": "Improved archery",
+  "token": "$se_rootseteffect_name",
+  "kind": "SE_Stats",
+  "tooltip": "The ancient roots help you focus your bow skill.",
+  "icon": true,
+  "stats": {
+   "skillLevel.Bows": 15
+  }
+ },
+ "SetEffect_TrollArmor": {
+  "id": "SetEffect_TrollArmor",
+  "name": "Sneaky",
+  "token": "$se_trollseteffect_name",
+  "kind": "SE_Stats",
+  "tooltip": "Makes you more sneaky.",
+  "icon": true,
+  "stats": {
+   "skillLevel.Sneak": 15
+  }
+ },
+ "SetEffect_WolfArmor": {
+  "id": "SetEffect_WolfArmor",
+  "name": "Frost resistance",
+  "token": "$se_frostres_name",
+  "kind": "SE_Stats",
+  "tooltip": "You are protected against the cold.",
+  "icon": true,
+  "mods": [
+   {
+    "type": "frost",
+    "mod": "Resistant"
+   }
+  ]
+ },
+ "Shelter": {
+  "id": "Shelter",
+  "name": "Shelter",
+  "token": "$se_shelter_name",
+  "kind": "StatusEffect",
+  "tooltip": "You are sheltered from the weather.",
+  "icon": true,
+  "startMessage": "You are sheltered",
+  "stopMessage": "You are exposed"
+ },
+ "Slimed": {
+  "id": "Slimed",
+  "name": "Slimed",
+  "token": "$se_slimed_name",
+  "kind": "SE_Stats",
+  "icon": true,
+  "ttl": 1,
+  "stats": {
+   "speedModifier": -0.5
+  },
+  "mods": [
+   {
+    "type": "fire",
+    "mod": "VeryWeak"
+   }
+  ]
+ },
+ "SlowFall": {
+  "id": "SlowFall",
+  "name": "Feather fall",
+  "token": "$se_slowfall_name",
+  "kind": "SE_Stats",
+  "tooltip": "What is gravity but an effect of entropy?",
+  "icon": true,
+  "stats": {
+   "fallDamageModifier": -1,
+   "jumpStaminaUseModifier": -0.20000000298023224,
+   "maxMaxFallSpeed": 5
+  }
+ },
+ "Smoked": {
+  "id": "Smoked",
+  "name": "Smoked",
+  "token": "$se_smoked_name",
+  "kind": "SE_Smoke",
+  "tooltip": "Breathing smoke is unhealthy.",
+  "icon": true,
+  "startMessage": "You can't breathe in the smoke!",
+  "stats": {
+   "damage.damage": 2,
+   "damageInterval": 1
+  }
+ },
+ "SoftDeath": {
+  "id": "SoftDeath",
+  "name": "No skill drain",
+  "token": "$se_softdeath_name",
+  "kind": "StatusEffect",
+  "tooltip": "If you die you won't lose any skill points.",
+  "icon": true,
+  "ttl": 600
+ },
+ "Spirit": {
+  "id": "Spirit",
+  "name": "Spirit",
+  "token": "$se_spirit_name",
+  "kind": "SE_Burning",
+  "tooltip": "Extra damage against the undead.",
+  "icon": true,
+  "ttl": 3,
+  "stats": {
+   "damageInterval": 0.5
+  }
+ },
+ "Staff_FrostOrbs": {
+  "id": "Staff_FrostOrbs",
+  "name": "Vengeance Sphere",
+  "token": "$se_frostorbs",
+  "kind": "SE_React",
+  "tooltip": "Should your enemy hurt you, it shall reflect back upon them at once.",
+  "icon": true,
+  "ttl": 120,
+  "stats": {
+   "damagePerLevel.frost": 8,
+   "projectileVelocity": 20,
+   "ttlPerItemLevel": 60
+  }
+ },
+ "Staff_shield": {
+  "id": "Staff_shield",
+  "name": "Magic barrier",
+  "token": "$se_shield",
+  "kind": "SE_Shield",
+  "tooltip": "A magical shield that absorbs damage.",
+  "icon": true,
+  "ttl": 60,
+  "stats": {
+   "absorbDamage": 200,
+   "absorbDamagePerSkillLevel": 5,
+   "absorbDamageWorldLevel": 300,
+   "levelUpSkillOnBreak.BloodMagic": 1,
+   "ttlPerItemLevel": 60
+  }
+ },
+ "Tared": {
+  "id": "Tared",
+  "name": "Tarred",
+  "token": "$se_tared_name",
+  "kind": "SE_Stats",
+  "tooltip": "The sticky tar is slowing you down.",
+  "icon": true,
+  "startMessage": "You are covered in sticky tar",
+  "ttl": 10,
+  "stats": {
+   "speedModifier": -0.5
+  },
+  "mods": [
+   {
+    "type": "fire",
+    "mod": "VeryWeak"
+   }
+  ]
+ },
+ "TrinketBlackDamageHealth": {
+  "id": "TrinketBlackDamageHealth",
+  "name": "Bracelets of the Brave",
+  "token": "$se_trinketblackdamagedealth",
+  "kind": "SE_Stats",
+  "tooltip": "Increased mace damage, and a quick health burst regeneration.",
+  "icon": true,
+  "ttl": 60,
+  "stats": {
+   "healthUpFront": 100,
+   "percentigeDamageModifiers.blunt": 0.10000000149011612,
+   "skillLevel.Clubs": 20
+  }
+ },
+ "TrinketBlackStamina": {
+  "id": "TrinketBlackStamina",
+  "name": "Evasion Mantle",
+  "token": "$se_trinketblackdtamina",
+  "kind": "SE_Stats",
+  "tooltip": "Increased dodge skill and reduced block stamina cost.",
+  "icon": true,
+  "ttl": 120,
+  "stats": {
+   "blockStaminaUseModifier": -0.5,
+   "skillLevel.Dodge": 20,
+   "timedBlockBonus": 0.5
+  }
+ },
+ "TrinketBloodGoldHealth": {
+  "id": "TrinketBloodGoldHealth",
+  "name": "Neckstabber",
+  "token": "$se_trinketbloodgoldhealth",
+  "kind": "SE_Stats",
+  "tooltip": "Health regenerates faster, running and attacking costs less stamina. You also get an instant boost to health and armour.",
+  "icon": true,
+  "ttl": 30,
+  "stats": {
+   "addArmor": 20,
+   "attackStaminaUseModifier": -0.10000000149011612,
+   "healthRegenMultiplier": 1.2000000476837158,
+   "healthUpFront": 100,
+   "runStaminaDrainModifier": -0.10000000149011612
+  }
+ },
+ "TrinketBloodGoldStamina": {
+  "id": "TrinketBloodGoldStamina",
+  "name": "Witch Crown",
+  "token": "$se_trinketbloodgoldstamina",
+  "kind": "SE_Stats",
+  "tooltip": "Health, stamina and eitr regenerate faster, and you get an instant boost to stamina and eitr.",
+  "icon": true,
+  "ttl": 30,
+  "stats": {
+   "eitrRegenMultiplier": 1.100000023841858,
+   "eitrUpFront": 50,
+   "healthRegenMultiplier": 1.100000023841858,
+   "staminaRegenMultiplier": 1.100000023841858,
+   "staminaUpFront": 50
+  }
+ },
+ "TrinketBronzeHealth": {
+  "id": "TrinketBronzeHealth",
+  "name": "Heart of the Forest",
+  "token": "$se_trinketbronzehealth",
+  "kind": "SE_Stats",
+  "tooltip": "Increased health regeneration.",
+  "icon": true,
+  "ttl": 60,
+  "stats": {
+   "healthRegenMultiplier": 1.25
+  }
+ },
+ "TrinketBronzeStamina": {
+  "id": "TrinketBronzeStamina",
+  "name": "Bronze Pendant",
+  "token": "$se_trinketbronzestamina",
+  "kind": "SE_Stats",
+  "tooltip": "Increased stamina regeneration.",
+  "icon": true,
+  "ttl": 60,
+  "stats": {
+   "staminaRegenMultiplier": 1.25
+  }
+ },
+ "TrinketCarapaceEitr": {
+  "id": "TrinketCarapaceEitr",
+  "name": "Pulsating Earrings",
+  "token": "$se_trinketcarapaceeitr",
+  "kind": "SE_Stats",
+  "tooltip": "Increased eitr regeneration.",
+  "icon": true,
+  "ttl": 60,
+  "stats": {
+   "eitrRegenMultiplier": 1.25
+  }
+ },
+ "TrinketChitinSwim": {
+  "id": "TrinketChitinSwim",
+  "name": "Fins of Destiny",
+  "token": "$se_trinketchitinswim",
+  "kind": "SE_Stats",
+  "tooltip": "Reduced swim stamina cost and increased swim speed.",
+  "icon": true,
+  "ttl": 120,
+  "stats": {
+   "swimSpeedModifier": 0.5,
+   "swimStaminaUseModifier": -0.800000011920929
+  }
+ },
+ "TrinketFlametalEitr": {
+  "id": "TrinketFlametalEitr",
+  "name": "Jörmundling",
+  "token": "$se_trinketflametaleitr",
+  "kind": "SE_Stats",
+  "tooltip": "Increased elemental and blood magic skill, and a quick burst of eitr regeneration.",
+  "icon": true,
+  "ttl": 60,
+  "stats": {
+   "eitrUpFront": 100,
+   "skillLevel.BloodMagic": 20,
+   "skillLevel.ElementalMagic": 20
+  }
+ },
+ "TrinketFlametalStaminaHealth": {
+  "id": "TrinketFlametalStaminaHealth",
+  "name": "Brimstone",
+  "token": "$se_trinketflametalstaminahealth",
+  "kind": "SE_Stats",
+  "tooltip": "A quick burst of both health and stamina regeneration.",
+  "icon": true,
+  "ttl": 1,
+  "stats": {
+   "healthUpFront": 100,
+   "staminaUpFront": 100
+  }
+ },
+ "TrinketIronHealth": {
+  "id": "TrinketIronHealth",
+  "name": "Iron Brooch",
+  "token": "$se_trinketironhealth",
+  "kind": "SE_Stats",
+  "tooltip": "Increased armour and a quick burst of health regeneration.",
+  "icon": true,
+  "ttl": 30,
+  "stats": {
+   "addArmor": 20,
+   "healthUpFront": 50
+  }
+ },
+ "TrinketIronStamina": {
+  "id": "TrinketIronStamina",
+  "name": "Nimble Anklet",
+  "token": "$se_trinketironstamina",
+  "kind": "SE_Stats",
+  "tooltip": "Increased run speed and a quick burst of stamina regeneration.",
+  "icon": true,
+  "ttl": 30,
+  "stats": {
+   "speedModifier": 0.15000000596046448,
+   "staminaUpFront": 50
+  }
+ },
+ "TrinketScaleStaminaDamage": {
+  "id": "TrinketScaleStaminaDamage",
+  "name": "Resounding Shackle",
+  "token": "$se_trinketscalestaminadamage",
+  "kind": "SE_Stats",
+  "tooltip": "Increased slash damage and a quick burst of stamina regeneration.",
+  "icon": true,
+  "ttl": 60,
+  "stats": {
+   "percentigeDamageModifiers.slash": 0.10000000149011612,
+   "staminaUpFront": 100
+  }
+ },
+ "TrinketSilverDamage": {
+  "id": "TrinketSilverDamage",
+  "name": "Wolf Sight",
+  "token": "$se_trinketsilverdamage",
+  "kind": "SE_Stats",
+  "tooltip": "Increased bow skill, spear skill, and increased pierce damage.",
+  "icon": true,
+  "ttl": 30,
+  "stats": {
+   "percentigeDamageModifiers.pierce": 0.10000000149011612,
+   "skillLevel.Bows": 20,
+   "skillLevel.Spears": 20
+  }
+ },
+ "TrinketSilverResist": {
+  "id": "TrinketSilverResist",
+  "name": "Crystal Heart",
+  "token": "$se_trinketsilverresist",
+  "kind": "SE_Stats",
+  "tooltip": "Increased resistance against blunt, slash and pierce damage.",
+  "icon": true,
+  "ttl": 50,
+  "mods": [
+   {
+    "type": "blunt",
+    "mod": "SlightlyResistant"
+   },
+   {
+    "type": "slash",
+    "mod": "SlightlyResistant"
+   },
+   {
+    "type": "pierce",
+    "mod": "SlightlyResistant"
+   }
+  ]
+ },
+ "Warm": {
+  "id": "Warm",
+  "name": "Warm",
+  "token": "$se_warm_name",
+  "kind": "SE_Stats",
+  "tooltip": "You are warm.",
+  "icon": true,
+  "startMessage": "You feel warm.",
+  "stats": {
+   "eitrRegenMultiplier": 2,
+   "staminaRegenMultiplier": 2
+  }
+ },
+ "Wet": {
+  "id": "Wet",
+  "name": "Wet",
+  "token": "$se_wet_name",
+  "kind": "SE_Wet",
+  "tooltip": "Lowers your health and stamina regeneration.",
+  "icon": true,
+  "startMessage": "You are wet",
+  "stopMessage": "You are dry again",
+  "ttl": 120,
+  "stats": {
+   "damageInterval": 0.5,
+   "eitrRegenMultiplier": 0.8500000238418579,
+   "healthRegenMultiplier": 0.75,
+   "staminaRegenMultiplier": 0.8500000238418579,
+   "waterDamage": 5
+  },
+  "mods": [
+   {
+    "type": "fire",
+    "mod": "Resistant"
+   },
+   {
+    "type": "frost",
+    "mod": "Weak"
+   },
+   {
+    "type": "lightning",
+    "mod": "Weak"
+   }
+  ]
+ },
+ "WindRun": {
+  "id": "WindRun",
+  "name": "Wind Run",
+  "token": "$se_windrun_name",
+  "kind": "SE_Stats",
+  "tooltip": "Increases run speed and greatly reduced stamina use when running with the wind. Let the wind guide you to victory!",
+  "icon": true,
+  "stats": {
+   "windMovementModifier": 0.25,
+   "windRunStaminaModifier": -1
+  }
+ },
+ "Wishbone": {
+  "id": "Wishbone",
+  "name": "Wishbone",
+  "token": "$se_wishbone_name",
+  "kind": "SE_Finder",
+  "tooltip": "Helps you find hidden things. Move in the direction the pings get more intense.",
+  "icon": true,
+  "startMessage": "You can sense hidden objects",
+  "stats": {
+   "closeFrequency": 0.5,
+   "closerTriggerDistance": 2,
+   "distantFrequency": 5,
+   "furtherTriggerDistance": 4
+  }
+ }
+}

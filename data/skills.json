@@ -1,0 +1,170 @@
+[
+ {
+  "name": "Swords",
+  "id": "Swords",
+  "desc": "Damage with swords.",
+  "icon": true,
+  "step": 1
+ },
+ {
+  "name": "Bows",
+  "id": "Bows",
+  "desc": "Damage with bows.",
+  "icon": true,
+  "step": 1.5
+ },
+ {
+  "name": "Axes",
+  "id": "Axes",
+  "desc": "Damage with axes.",
+  "icon": true,
+  "step": 1
+ },
+ {
+  "name": "Wood Cutting",
+  "id": "WoodCutting",
+  "desc": "Axe damage when hitting trees.",
+  "icon": true,
+  "step": 1
+ },
+ {
+  "name": "Fists",
+  "id": "Unarmed",
+  "desc": "Damage when unarmed.",
+  "icon": true,
+  "step": 1
+ },
+ {
+  "name": "Knives",
+  "id": "Knives",
+  "desc": "Damage with knives.",
+  "icon": true,
+  "step": 1
+ },
+ {
+  "name": "Clubs",
+  "id": "Clubs",
+  "desc": "Damage with clubs.",
+  "icon": true,
+  "step": 1
+ },
+ {
+  "name": "Polearms",
+  "id": "Polearms",
+  "desc": "Damage with polearms.",
+  "icon": true,
+  "step": 1
+ },
+ {
+  "name": "Spears",
+  "id": "Spears",
+  "desc": "Damage with spears.",
+  "icon": true,
+  "step": 1.5
+ },
+ {
+  "name": "Blocking",
+  "id": "Blocking",
+  "desc": "Damage absorbed when blocking with a weapon or shield.",
+  "icon": true,
+  "step": 0.5
+ },
+ {
+  "name": "Pickaxes",
+  "id": "Pickaxes",
+  "desc": "Damage with pickaxes.",
+  "icon": true,
+  "step": 1
+ },
+ {
+  "name": "Jump",
+  "id": "Jump",
+  "desc": "Jump height.",
+  "icon": true,
+  "step": 0.5
+ },
+ {
+  "name": "Sneak",
+  "id": "Sneak",
+  "desc": "Stamina drain and stealthiness when sneaking.",
+  "icon": true,
+  "step": 0.5
+ },
+ {
+  "name": "Run",
+  "id": "Run",
+  "desc": "Speed and stamina drain when running.",
+  "icon": true,
+  "step": 0.20000000298023224
+ },
+ {
+  "name": "Swim",
+  "id": "Swim",
+  "desc": "Stamina drain when swimming.",
+  "icon": true,
+  "step": 0.30000001192092896
+ },
+ {
+  "name": "Riding",
+  "id": "Ride",
+  "desc": "Animal speed and stamina drain.",
+  "icon": true,
+  "step": 0.20000000298023224
+ },
+ {
+  "name": "Elemental Magic",
+  "id": "ElementalMagic",
+  "desc": "Damage and eitr usage when using elemental magic.",
+  "icon": true,
+  "step": 1
+ },
+ {
+  "name": "Blood Magic",
+  "id": "BloodMagic",
+  "desc": "Damage, eitr and health drain when using blood magic.",
+  "icon": true,
+  "step": 1
+ },
+ {
+  "name": "Crossbows",
+  "id": "Crossbows",
+  "desc": "Accuracy and damage with crossbows.",
+  "icon": true,
+  "step": 1
+ },
+ {
+  "name": "Fishing",
+  "id": "Fishing",
+  "desc": "Stamina drain and pull speed when fishing.",
+  "icon": true,
+  "step": 0.25
+ },
+ {
+  "name": "Cooking",
+  "id": "Cooking",
+  "desc": "Cooking speed, serving tray wear and chance for bonus yields.",
+  "icon": true,
+  "step": 0.25
+ },
+ {
+  "name": "Farming",
+  "id": "Farming",
+  "desc": "Stamina use, cultivator wear, harvest radius and chance for bonus yields.",
+  "icon": true,
+  "step": 0.25
+ },
+ {
+  "name": "Crafting",
+  "id": "Crafting",
+  "desc": "Crafting speed, hammer wear and building stamina use.",
+  "icon": true,
+  "step": 0.25
+ },
+ {
+  "name": "Dodge",
+  "id": "Dodge",
+  "desc": "Stamina drain when dodging.",
+  "icon": true,
+  "step": 0.25
+ }
+]

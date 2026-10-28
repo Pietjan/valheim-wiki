@@ -1,0 +1,10 @@
+Extracted 2026-10-28T05:05:08+01:00 by wiki-data from the Valheim client's asset bundles.
+Source: /mnt/c/Program Files (x86)/Steam/steamapps/common/Valheim/valheim_Data/StreamingAssets/SoftRef
+Unity: 6000.0.75f1
+The sprites are Iron Gate's art, cropped from the game's atlases as the game draws them.
+effects: 93 of 93 sprites
+items: 1075 of 1075 sprites
+map: 29 of 29 sprites
+pieces: 688 of 688 sprites
+skills: 24 of 24 sprites
+stations: 10 of 10 sprites

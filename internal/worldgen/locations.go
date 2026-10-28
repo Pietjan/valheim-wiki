@@ -162,6 +162,22 @@ type Existing struct {
 // whose biome map has had its alt biomes rolled, and returns where
 // everything landed. existing may be nil for a new world.
 func (g *Generator) PlaceLocations(m *BiomeMap, rules []*LocationRule, existing *Existing) *Locations {
+	return g.PlaceLocationsWith(m, rules, existing, nil)
+}
+
+// A RuleObserver is told about each rule as the placement loop finishes
+// with it: where the rule stands in the loop's order (index of total, the
+// prioritised rules first as the game runs them), its outcome, and the
+// instances it placed in the order they were placed. The whole loop takes
+// some twenty seconds, most of it in a handful of rules, so a viewer that
+// draws each rule's sites as they land has something to show long before
+// the report. Observing changes nothing: the draws, the order and the
+// result are the same with or without one.
+type RuleObserver func(index, total int, outcome Placement, placed []LocationInstance)
+
+// PlaceLocationsWith is PlaceLocations that reports each rule to observe as
+// it is done. A nil observer is PlaceLocations.
+func (g *Generator) PlaceLocationsWith(m *BiomeMap, rules []*LocationRule, existing *Existing, observe RuleObserver) *Locations {
 	g.ensureRivers()
 
 	locs := &Locations{
@@ -189,8 +205,21 @@ func (g *Generator) PlaceLocations(m *BiomeMap, rules []*LocationRule, existing 
 	sort.SliceStable(ordered, func(i, j int) bool { return ordered[i].Prioritized && !ordered[j].Prioritized })
 
 	areas := make(map[Zone]int)
-	for _, r := range ordered {
-		locs.Report = append(locs.Report, Placement{Rule: r, Placed: g.placeLocation(m, locs, r, areas, generated)})
+	for i, r := range ordered {
+		// What register appended for this prefab while the rule ran is what
+		// the rule placed: a site already built before the loop, or by an
+		// earlier rule sharing the prefab, sits before the mark.
+		mark := len(locs.byPrefab[r.Prefab])
+		outcome := Placement{Rule: r, Placed: g.placeLocation(m, locs, r, areas, generated)}
+		locs.Report = append(locs.Report, outcome)
+		if observe != nil {
+			added := locs.byPrefab[r.Prefab][mark:]
+			placed := make([]LocationInstance, len(added))
+			for j, li := range added {
+				placed[j] = *li
+			}
+			observe(i, len(ordered), outcome, placed)
+		}
 	}
 	return locs
 }

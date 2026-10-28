@@ -13,6 +13,10 @@ type Item struct {
 	// <prefab>_1.png, ...: one per variant, or per quality where they differ.
 	Icons    int `json:"icons,omitempty"`
 	Variants int `json:"variants,omitempty"`
+	// Hidden marks the ItemDrop prefabs a player never holds: creature
+	// attacks, NPC costumes and the like, which have no icon and no
+	// enabled recipe. They stay in the table because creatures name them.
+	Hidden bool `json:"hidden,omitempty"`
 
 	MaxQuality     int     `json:"maxQuality"`
 	Weight         float64 `json:"weight"`
@@ -153,13 +157,16 @@ type Station struct {
 type Converter struct {
 	Prefab        string       `json:"prefab"`
 	Name          string       `json:"name"`
-	Kind          string       `json:"kind"` // smelter, cooking, fermenter, incinerator, beehive, sap, feast, fireplace, turret, shield, trap, wisp
-	Fuel          string       `json:"fuel,omitempty"`
-	Fuels         []string     `json:"fuels,omitempty"`
+	Kind          string       `json:"kind"`            // smelter, cooking, fermenter, incinerator, beehive, sap, feast, fireplace, turret, shield, trap, wisp
+	Fuel          string       `json:"fuel,omitempty"`  // the fuel item; a turret's default ammo
+	Fuels         []string     `json:"fuels,omitempty"` // a shield generator's fuels; a turret's allowed ammo
 	FuelPerItem   float64      `json:"fuelPerItem,omitempty"`
-	SecPerItem    float64      `json:"secPerItem,omitempty"`
+	SecPerItem    float64      `json:"secPerItem,omitempty"` // seconds per product (smelter), per unit (beehive, sap), per spawn (wisp)
+	SecPerFuel    float64      `json:"secPerFuel,omitempty"` // seconds one fuel burns (fireplace, oven)
+	StartFuel     float64      `json:"startFuel,omitempty"`  // fuel a fireplace is built with
+	InfiniteFuel  bool         `json:"infiniteFuel,omitempty"`
 	MaxInput      int          `json:"maxInput,omitempty"`
-	MaxFuel       int          `json:"maxFuel,omitempty"`
+	MaxFuel       int          `json:"maxFuel,omitempty"` // a turret's max ammo
 	RequiresRoof  bool         `json:"requiresRoof,omitempty"`
 	RequiresFire  bool         `json:"requiresFire,omitempty"`
 	Overcooked    string       `json:"overcooked,omitempty"`
@@ -169,7 +176,11 @@ type Converter struct {
 	MaxProduct    int          `json:"maxProduct,omitempty"`
 	Conversions   []Conversion `json:"conversions,omitempty"`
 	Incinerations []Incinerate `json:"incinerations,omitempty"`
-	Notes         []string     `json:"notes,omitempty"`
+	// DefaultResult is what an incinerator makes of anything no
+	// Incinerations row claims: one per DefaultCost items.
+	DefaultResult string   `json:"defaultResult,omitempty"`
+	DefaultCost   int      `json:"defaultCost,omitempty"`
+	Notes         []string `json:"notes,omitempty"`
 }
 
 // Conversion is one ItemConversion.

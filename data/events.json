@@ -1,0 +1,995 @@
+[
+ {
+  "name": "army_eikthyr",
+  "enabled": true,
+  "random": true,
+  "duration": 90,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest"
+  ],
+  "notKeys": [
+   "defeated_eikthyr"
+  ],
+  "notPlayerKeys": [
+   "GP_Eikthyr"
+  ],
+  "notKnownItems": [
+   "PickaxeAntler",
+   "PickaxeBronze",
+   "PickaxeIron",
+   "HardAntler",
+   "TrophyEikthyr"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "Eikthyr rallies the creatures of the forest",
+  "endMessage": "The creatures are calming down",
+  "forceMusic": "CombatEventL1",
+  "spawns": [
+   "event:army_eikthyr/0",
+   "event:army_eikthyr/1"
+  ]
+ },
+ {
+  "name": "army_goblin",
+  "enabled": true,
+  "random": true,
+  "duration": 120,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "plains"
+  ],
+  "requiredKeys": [
+   "defeated_dragon"
+  ],
+  "notKeys": [
+   "defeated_goblinking"
+  ],
+  "requiredKnownItems": [
+   "DragonTear",
+   "TrophyDragonQueen"
+  ],
+  "playerKeysAny": [
+   "$se_moder_name"
+  ],
+  "notPlayerKeys": [
+   "GP_Yagluth"
+  ],
+  "notKnownItems": [
+   "TrophyGoblinKing",
+   "YagluthDrop"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "The horde is attacking!",
+  "endMessage": "The horde is retreating",
+  "forceMusic": "CombatEventL4",
+  "spawns": [
+   "event:army_goblin/0",
+   "event:army_goblin/1",
+   "event:army_goblin/2"
+  ]
+ },
+ {
+  "name": "army_theelder",
+  "enabled": true,
+  "random": true,
+  "duration": 120,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "plains"
+  ],
+  "requiredKeys": [
+   "defeated_eikthyr"
+  ],
+  "notKeys": [
+   "defeated_gdking"
+  ],
+  "requiredKnownItems": [
+   "PickaxeAntler",
+   "PickaxeBronze",
+   "PickaxeIron",
+   "HardAntler",
+   "TrophyEikthyr"
+  ],
+  "playerKeysAny": [
+   "GP_TheElder"
+  ],
+  "notPlayerKeys": [
+   "GP_TheElder"
+  ],
+  "notKnownItems": [
+   "TrophyTheElder",
+   "CryptKey"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "The forest is moving...",
+  "endMessage": "The forest rests again",
+  "forceMusic": "CombatEventL2",
+  "spawns": [
+   "event:army_theelder/0",
+   "event:army_theelder/1",
+   "event:army_theelder/2",
+   "event:army_theelder/3"
+  ]
+ },
+ {
+  "name": "wolves",
+  "enabled": true,
+  "random": true,
+  "duration": 120,
+  "range": 96,
+  "biomes": [
+   "mountain",
+   "plains"
+  ],
+  "requiredKeys": [
+   "defeated_bonemass"
+  ],
+  "requiredKnownItems": [
+   "Wishbone",
+   "TrophyBonemass"
+  ],
+  "playerKeysAny": [
+   "GP_Bonemass"
+  ],
+  "standaloneChance": 100,
+  "startMessage": "You are being hunted...",
+  "endMessage": "The hunt is over",
+  "forceMusic": "CombatEventL3",
+  "spawns": [
+   "event:wolves/0"
+  ]
+ },
+ {
+  "name": "skeletons",
+  "enabled": true,
+  "random": true,
+  "duration": 120,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands"
+  ],
+  "requiredKeys": [
+   "defeated_bonemass"
+  ],
+  "requiredKnownItems": [
+   "TrophyBonemass",
+   "Wishbone"
+  ],
+  "playerKeysAny": [
+   "GP_Bonemass"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "A skeleton surprise!",
+  "endMessage": "The skeletons are tired of fighting",
+  "forceMusic": "CombatEventL3",
+  "spawns": [
+   "event:skeletons/0",
+   "event:skeletons/1"
+  ]
+ },
+ {
+  "name": "army_bonemass",
+  "enabled": true,
+  "random": true,
+  "duration": 150,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains"
+  ],
+  "requiredKeys": [
+   "defeated_gdking"
+  ],
+  "notKeys": [
+   "defeated_bonemass"
+  ],
+  "requiredKnownItems": [
+   "TrophyTheElder",
+   "CryptKey"
+  ],
+  "playerKeysAny": [
+   "GP_TheElder"
+  ],
+  "notPlayerKeys": [
+   "GP_Bonemass"
+  ],
+  "notKnownItems": [
+   "TrophyBonemass",
+   "Wishbone"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "A foul smell from the swamp...",
+  "endMessage": "The smell is gone",
+  "forceEnvironment": "SwampRain",
+  "forceMusic": "CombatEventL3",
+  "spawns": [
+   "event:army_bonemass/0",
+   "event:army_bonemass/1"
+  ]
+ },
+ {
+  "name": "army_moder",
+  "enabled": true,
+  "random": true,
+  "duration": 150,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains"
+  ],
+  "requiredKeys": [
+   "defeated_bonemass"
+  ],
+  "notKeys": [
+   "defeated_dragon"
+  ],
+  "requiredKnownItems": [
+   "TrophyBonemass",
+   "Wishbone"
+  ],
+  "playerKeysAny": [
+   "$se_bonemass_name"
+  ],
+  "notPlayerKeys": [
+   "GP_Moder"
+  ],
+  "notKnownItems": [
+   "TrophyDragonQueen",
+   "DragonTear"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "A cold wind blows from the mountains",
+  "endMessage": "The cold wind is gone",
+  "forceEnvironment": "Snow",
+  "forceMusic": "CombatEventL4",
+  "spawns": [
+   "event:army_moder/0"
+  ]
+ },
+ {
+  "name": "blobs",
+  "enabled": true,
+  "random": true,
+  "duration": 120,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "plains"
+  ],
+  "requiredKeys": [
+   "defeated_bonemass"
+  ],
+  "requiredKnownItems": [
+   "TrophyBonemass",
+   "Wishbone"
+  ],
+  "playerKeysAny": [
+   "GP_Bonemass"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "A foul smell from the swamp...",
+  "endMessage": "The smell is gone",
+  "forceEnvironment": "SwampRain",
+  "forceMusic": "CombatEventL3",
+  "spawns": [
+   "event:blobs/0",
+   "event:blobs/1"
+  ]
+ },
+ {
+  "name": "foresttrolls",
+  "enabled": true,
+  "random": true,
+  "duration": 80,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "plains"
+  ],
+  "requiredKeys": [
+   "KilledTroll",
+   "defeated_gdking"
+  ],
+  "requiredKnownItems": [
+   "TrophyTheElder",
+   "CryptKey"
+  ],
+  "playerKeysAll": [
+   "KilledTroll",
+   "defeated_gdking"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "The ground is shaking",
+  "endMessage": "The shaking begins to fade",
+  "forceMusic": "CombatEventL2",
+  "spawns": [
+   "event:foresttrolls/0"
+  ]
+ },
+ {
+  "name": "surtlings",
+  "enabled": true,
+  "random": true,
+  "duration": 120,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "plains"
+  ],
+  "requiredKeys": [
+   "killed_surtling",
+   "defeated_bonemass"
+  ],
+  "requiredKnownItems": [
+   "TrophyBonemass",
+   "Wishbone"
+  ],
+  "playerKeysAll": [
+   "killed_surtling",
+   "defeated_bonemass"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "There's a smell of sulfur in the air...",
+  "endMessage": "The smell is fading",
+  "forceEnvironment": "Ashrain",
+  "forceMusic": "CombatEventL3",
+  "spawns": [
+   "event:surtlings/0"
+  ]
+ },
+ {
+  "name": "boss_eikthyr",
+  "enabled": true,
+  "random": false,
+  "duration": 0,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "plains"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "forceEnvironment": "Eikthyr",
+  "forceMusic": "boss_eikthyr"
+ },
+ {
+  "name": "boss_bonemass",
+  "enabled": true,
+  "random": false,
+  "duration": 0,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "plains"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "forceEnvironment": "Bonemass",
+  "forceMusic": "boss_bonemass"
+ },
+ {
+  "name": "boss_moder",
+  "enabled": true,
+  "random": false,
+  "duration": 0,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "forceEnvironment": "Moder",
+  "forceMusic": "boss_moder"
+ },
+ {
+  "name": "boss_gdking",
+  "enabled": true,
+  "random": false,
+  "duration": 0,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "forceEnvironment": "GDKing",
+  "forceMusic": "boss_gdking"
+ },
+ {
+  "name": "boss_goblinking",
+  "enabled": true,
+  "random": false,
+  "duration": 0,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "forceEnvironment": "GoblinKing",
+  "forceMusic": "boss_goblinking"
+ },
+ {
+  "name": "ghosts",
+  "enabled": true,
+  "random": true,
+  "duration": 150,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains"
+  ],
+  "requiredKeys": [
+   "defeated_bonemass"
+  ],
+  "requiredKnownItems": [
+   "TrophyBonemass",
+   "Wishbone"
+  ],
+  "playerKeysAny": [
+   "GP_Bonemass"
+  ],
+  "notPlayerKeys": [
+   "GP_Moder"
+  ],
+  "notKnownItems": [
+   "TrophyDragonQueen",
+   "DragonTear"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "You feel a chill down your spine...",
+  "endMessage": "They have been banished, for now...",
+  "forceEnvironment": "Ghosts",
+  "forceMusic": "forestcrypt",
+  "spawns": [
+   "event:ghosts/0",
+   "event:ghosts/1"
+  ]
+ },
+ {
+  "name": "fimbulvinter",
+  "enabled": true,
+  "random": false,
+  "duration": 0,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true
+ },
+ {
+  "name": "boss_frozenking",
+  "enabled": true,
+  "random": false,
+  "duration": 0,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "forceMusic": "boss_frozenking"
+ },
+ {
+  "name": "army_elakingar",
+  "enabled": true,
+  "random": true,
+  "duration": 90,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "deep-north"
+  ],
+  "requiredKeys": [
+   "elakingmole_defeated"
+  ],
+  "notKeys": [
+   "defeated_frozenking_p3"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "They emerge from below...",
+  "endMessage": "They return to their burrows...",
+  "forceMusic": "CombatEventL1",
+  "spawns": [
+   "event:army_elakingar/0",
+   "event:army_elakingar/1",
+   "event:army_elakingar/2"
+  ]
+ },
+ {
+  "name": "army_jotuns",
+  "enabled": true,
+  "random": true,
+  "duration": 90,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "deep-north"
+  ],
+  "requiredKeys": [
+   "jotun_killed"
+  ],
+  "notKeys": [
+   "defeated_frozenking_p3"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "The Jotun have found you",
+  "endMessage": "The Jotun withdraw",
+  "forceMusic": "CombatEventL1",
+  "spawns": [
+   "event:army_jotuns/0",
+   "event:army_jotuns/1"
+  ]
+ },
+ {
+  "name": "gemgoblin",
+  "enabled": false,
+  "random": true,
+  "duration": 90,
+  "range": 96,
+  "biomes": [
+   "black-forest",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north"
+  ],
+  "requiredKeys": [
+   "defeated_fader"
+  ],
+  "notKeys": [
+   "defeated_queen"
+  ],
+  "notPlayerKeys": [
+   "GP_Queen"
+  ],
+  "notKnownItems": [
+   "QueenDrop"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "Get 'em!",
+  "endMessage": "You got 'em",
+  "forceMusic": "CombatEventL1",
+  "spawns": [
+   "event:gemgoblin/0"
+  ]
+ },
+ {
+  "name": "boss_fader",
+  "enabled": true,
+  "random": false,
+  "duration": 0,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "forceEnvironment": "Fader",
+  "forceMusic": "boss_fader"
+ },
+ {
+  "name": "army_charred",
+  "enabled": true,
+  "random": true,
+  "duration": 90,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "black-forest",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north"
+  ],
+  "requiredKeys": [
+   "defeated_queen"
+  ],
+  "notKeys": [
+   "defeated_fader"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "The undead army marches",
+  "endMessage": "The army retreats",
+  "forceMusic": "CombatEventL1",
+  "spawns": [
+   "event:army_charred/0",
+   "event:army_charred/1",
+   "event:army_charred/2"
+  ]
+ },
+ {
+  "name": "army_charredspawners",
+  "enabled": true,
+  "random": true,
+  "duration": 90,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "black-forest",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north"
+  ],
+  "requiredKeys": [
+   "defeated_queen"
+  ],
+  "notKeys": [
+   "defeated_fader"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "The dead have been summoned",
+  "endMessage": "The dead lie still once more",
+  "forceMusic": "CombatEventL1",
+  "spawns": [
+   "event:army_charredspawners/0",
+   "event:army_charredspawners/1"
+  ]
+ },
+ {
+  "name": "boss_queen",
+  "enabled": true,
+  "random": false,
+  "duration": 0,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "forceEnvironment": "Queen",
+  "forceMusic": "boss_queen"
+ },
+ {
+  "name": "army_gjall",
+  "enabled": true,
+  "random": true,
+  "duration": 90,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "mistlands"
+  ],
+  "requiredKeys": [
+   "defeated_goblinking"
+  ],
+  "notKeys": [
+   "defeated_queen"
+  ],
+  "requiredKnownItems": [
+   "YagluthDrop",
+   "Demister",
+   "Wisp"
+  ],
+  "playerKeysAny": [
+   "$se_yagluth_name"
+  ],
+  "notPlayerKeys": [
+   "GP_Queen"
+  ],
+  "notKnownItems": [
+   "QueenDrop"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "What's up, Gjall?!",
+  "endMessage": "Good bye Gjall",
+  "forceMusic": "CombatEventL1",
+  "spawns": [
+   "event:army_gjall/0",
+   "event:army_gjall/1"
+  ]
+ },
+ {
+  "name": "army_seekers",
+  "enabled": true,
+  "random": true,
+  "duration": 90,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "black-forest",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north"
+  ],
+  "requiredKeys": [
+   "defeated_goblinking"
+  ],
+  "notKeys": [
+   "defeated_queen"
+  ],
+  "requiredKnownItems": [
+   "YagluthDrop",
+   "Demister",
+   "Wisp"
+  ],
+  "notPlayerKeys": [
+   "GP_Queen"
+  ],
+  "notKnownItems": [
+   "QueenDrop"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "They sought you out",
+  "endMessage": "The search is over",
+  "forceMusic": "CombatEventL1",
+  "spawns": [
+   "event:army_seekers/0",
+   "event:army_seekers/1",
+   "event:army_seekers/2"
+  ]
+ },
+ {
+  "name": "bats",
+  "enabled": true,
+  "random": true,
+  "duration": 120,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "requiredKeys": [
+   "KilledBat",
+   "defeated_bonemass"
+  ],
+  "playerKeysAll": [
+   "KilledBat",
+   "defeated_bonemass"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "You stirred the cauldron",
+  "endMessage": "The cauldron calms",
+  "forceMusic": "CombatEventL3",
+  "spawns": [
+   "event:bats/0"
+  ]
+ },
+ {
+  "name": "hildirboss1",
+  "enabled": true,
+  "random": true,
+  "duration": 90,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "requiredKeys": [
+   "hildir1"
+  ],
+  "requiredKnownItems": [
+   "chest_hildir1"
+  ],
+  "playerKeysAny": [
+   "BossHildir1"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "She's hot on your tail!",
+  "endMessage": "She got burnt",
+  "forceMusic": "CombatEventL1",
+  "spawns": [
+   "event:hildirboss1/0",
+   "event:hildirboss1/1",
+   "event:hildirboss1/2",
+   "event:hildirboss1/3"
+  ]
+ },
+ {
+  "name": "hildirboss2",
+  "enabled": true,
+  "random": true,
+  "duration": 90,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "requiredKeys": [
+   "hildir2"
+  ],
+  "requiredKnownItems": [
+   "chest_hildir2"
+  ],
+  "playerKeysAny": [
+   "BossHildir2"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "You get the chills...",
+  "endMessage": "You can chill out",
+  "forceMusic": "CombatEventL1",
+  "spawns": [
+   "event:hildirboss2/0",
+   "event:hildirboss2/1",
+   "event:hildirboss2/2"
+  ]
+ },
+ {
+  "name": "hildirboss3",
+  "enabled": true,
+  "random": true,
+  "duration": 90,
+  "nearBaseOnly": true,
+  "range": 96,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "requiredKeys": [
+   "hildir3"
+  ],
+  "requiredKnownItems": [
+   "chest_hildir3"
+  ],
+  "playerKeysAny": [
+   "BossHildir3"
+  ],
+  "standaloneChance": 100,
+  "pauseIfNoPlayerInArea": true,
+  "startMessage": "They were bros, man",
+  "endMessage": "You broke the code...again",
+  "forceMusic": "CombatEventL1",
+  "spawns": [
+   "event:hildirboss3/0",
+   "event:hildirboss3/1",
+   "event:hildirboss3/2"
+  ]
+ }
+]

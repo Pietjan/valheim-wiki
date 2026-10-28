@@ -1,0 +1,334 @@
+[
+ {
+  "id": "meadows",
+  "name": "Meadows",
+  "bit": 1,
+  "color": "#7c9e4a",
+  "mapColor": "#92a75c",
+  "environments": [
+   {
+    "env": "Clear",
+    "weight": 5
+   },
+   {
+    "env": "Clear",
+    "weight": 5
+   },
+   {
+    "env": "Rain",
+    "weight": 0.20000000298023224
+   },
+   {
+    "env": "Misty",
+    "weight": 0.20000000298023224
+   },
+   {
+    "env": "ThunderStorm",
+    "weight": 0.20000000298023224
+   },
+   {
+    "env": "LightRain",
+    "weight": 0.20000000298023224
+   },
+   {
+    "env": "Rain",
+    "weight": 0.20000000298023224
+   },
+   {
+    "env": "Misty",
+    "weight": 0.20000000298023224
+   },
+   {
+    "env": "ThunderStorm",
+    "weight": 0.20000000298023224
+   },
+   {
+    "env": "LightRain",
+    "weight": 0.20000000298023224
+   }
+  ],
+  "music": {
+   "day": "meadows"
+  },
+  "boss": "Eikthyr",
+  "bossLocation": "Eikthyrnir"
+ },
+ {
+  "id": "black-forest",
+  "name": "Black Forest",
+  "bit": 8,
+  "color": "#3b5233",
+  "mapColor": "#6b743f",
+  "environments": [
+   {
+    "env": "DeepForest Mist",
+    "weight": 2
+   },
+   {
+    "env": "DeepForest Mist",
+    "weight": 2
+   },
+   {
+    "env": "Rain",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "Misty",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "ThunderStorm",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "Rain",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "Misty",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "ThunderStorm",
+    "weight": 0.10000000149011612
+   }
+  ],
+  "music": {
+   "day": "blackforest",
+   "night": "blackforest"
+  },
+  "boss": "gd_king",
+  "bossLocation": "GDKing"
+ },
+ {
+  "id": "swamp",
+  "name": "Swamp",
+  "bit": 2,
+  "color": "#5e543d",
+  "mapColor": "#a37258",
+  "environments": [
+   {
+    "env": "SwampRain",
+    "weight": 1
+   },
+   {
+    "env": "SwampRain",
+    "weight": 1
+   }
+  ],
+  "music": {
+   "day": "swamp",
+   "night": "swamp"
+  },
+  "boss": "Bonemass",
+  "bossLocation": "Bonemass"
+ },
+ {
+  "id": "mountain",
+  "name": "Mountain",
+  "bit": 4,
+  "color": "#e2e7ec",
+  "mapColor": "#ffffff",
+  "environments": [
+   {
+    "env": "Snow",
+    "weight": 5
+   },
+   {
+    "env": "Snow",
+    "weight": 5
+   },
+   {
+    "env": "SnowStorm",
+    "weight": 1
+   },
+   {
+    "env": "SnowStorm",
+    "weight": 1
+   }
+  ],
+  "music": {
+   "day": "mountain",
+   "night": "mountain"
+  },
+  "boss": "Dragon",
+  "bossLocation": "Dragonqueen"
+ },
+ {
+  "id": "plains",
+  "name": "Plains",
+  "bit": 16,
+  "color": "#baa860",
+  "mapColor": "#e7ab78",
+  "environments": [
+   {
+    "env": "Heath clear",
+    "weight": 2
+   },
+   {
+    "env": "Heath clear",
+    "weight": 2
+   },
+   {
+    "env": "Misty",
+    "weight": 0.4000000059604645
+   },
+   {
+    "env": "LightRain",
+    "weight": 0.4000000059604645
+   },
+   {
+    "env": "Misty",
+    "weight": 0.4000000059604645
+   },
+   {
+    "env": "LightRain",
+    "weight": 0.4000000059604645
+   }
+  ],
+  "music": {
+   "day": "plains",
+   "night": "plains"
+  },
+  "boss": "GoblinKing",
+  "bossLocation": "GoblinKing"
+ },
+ {
+  "id": "mistlands",
+  "name": "Mistlands",
+  "bit": 512,
+  "color": "#4a4658",
+  "mapColor": "#333333",
+  "environments": [
+   {
+    "env": "Mistlands_clear",
+    "weight": 1.5
+   },
+   {
+    "env": "Mistlands_rain",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "Mistlands_thunder",
+    "weight": 0.10000000149011612
+   }
+  ],
+  "music": {
+   "day": "mistlands",
+   "night": "mistlands"
+  },
+  "boss": "SeekerQueen",
+  "bossLocation": "Mistlands_DvergrBossEntrance1"
+ },
+ {
+  "id": "ashlands",
+  "name": "Ashlands",
+  "bit": 32,
+  "color": "#823e2f",
+  "mapColor": "#7b2020",
+  "environments": [
+   {
+    "env": "Ashlands_ashrain",
+    "weight": 1.5
+   },
+   {
+    "env": "Ashlands_CinderRain",
+    "weight": 0.20000000298023224
+   },
+   {
+    "env": "Ashlands_misty",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "Ashlands_storm",
+    "weight": 0.05000000074505806
+   }
+  ],
+  "music": {
+   "day": "ashlands",
+   "night": "ashlands"
+  },
+  "boss": "Fader",
+  "bossLocation": "FaderLocation"
+ },
+ {
+  "id": "deep-north",
+  "name": "Deep North",
+  "bit": 64,
+  "color": "#c6d6e2",
+  "mapColor": "#ffffff",
+  "environments": [
+   {
+    "env": "Twilight_Snow",
+    "weight": 1
+   },
+   {
+    "env": "Twilight_Clear",
+    "weight": 1
+   },
+   {
+    "env": "Twilight_SnowStorm",
+    "weight": 0.5
+   }
+  ],
+  "music": {
+   "day": "deepnorth",
+   "night": "deepnorth"
+  },
+  "boss": "FrozenKing",
+  "bossLocation": "DN_Bossroom"
+ },
+ {
+  "id": "ocean",
+  "name": "Ocean",
+  "bit": 256,
+  "color": "#2e4f7a",
+  "mapColor": "#ffffff",
+  "environments": [
+   {
+    "env": "Clear",
+    "weight": 1
+   },
+   {
+    "env": "Clear",
+    "weight": 1
+   },
+   {
+    "env": "Rain",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "LightRain",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "Misty",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "ThunderStorm",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "Rain",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "LightRain",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "Misty",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "ThunderStorm",
+    "weight": 0.10000000149011612
+   },
+   {
+    "env": "Ashlands_SeaStorm",
+    "weight": 0.05000000074505806
+   }
+  ]
+ }
+]

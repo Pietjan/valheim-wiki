@@ -186,6 +186,16 @@ func (m *BiomeMap) BiomeSectors(b Biome) []*BiomeSector {
 // SectorAt is WorldGenerator.GetBiomeSector for a world position: the
 // sector under the nearest grid point, clamped to the map.
 func (m *BiomeMap) SectorAt(wx, wz float32) *BiomeSector {
+	p := MapPoint(wx, wz)
+	return m.sector[m.at(int(p.X), int(p.Y))]
+}
+
+// MapPoint is the grid point a world position reads as, clamped to the
+// map: the truncating WorldSpaceToMapSpace that GetBiomeSector and the
+// alt-biome lookups go through, so anything indexed by grid point — the
+// sectors here, or a plane of their ids kept elsewhere — answers for a
+// position the way the game does.
+func MapPoint(wx, wz float32) BiomePoint {
 	gx, gy := worldToMap(wx), worldToMap(wz)
 	if gx < 0 {
 		gx = 0
@@ -199,7 +209,7 @@ func (m *BiomeMap) SectorAt(wx, wz float32) *BiomeSector {
 	if gy >= biomeMapSize {
 		gy = biomeMapSize - 1
 	}
-	return m.sector[m.at(gx, gy)]
+	return BiomePoint{int16(gx), int16(gy)}
 }
 
 func (m *BiomeMap) newSector(b Biome) *BiomeSector {

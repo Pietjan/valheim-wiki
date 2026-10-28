@@ -20,6 +20,7 @@ type Creature struct {
 	WalkSpeed float64     `json:"walkSpeed,omitempty"`
 	RunSpeed  float64     `json:"runSpeed,omitempty"`
 	SwimSpeed float64     `json:"swimSpeed,omitempty"`
+	FlySpeed  float64     `json:"flySpeed,omitempty"` // m_flyFastSpeed, for flyers
 	Flying    bool        `json:"flying,omitempty"`
 	CanSwim   bool        `json:"canSwim,omitempty"`
 	Tolerates []string    `json:"tolerates,omitempty"` // water, fire, smoke, tar
@@ -33,6 +34,7 @@ type Creature struct {
 	Tameable    *TameInfo        `json:"tameable,omitempty"`
 	Procreation *ProcreationInfo `json:"procreation,omitempty"`
 	Growup      *GrowupInfo      `json:"growup,omitempty"`
+	Egg         *GrowupInfo      `json:"egg,omitempty"` // the EggGrow item this hatches from
 	Fish        *FishInfo        `json:"fish,omitempty"`
 	Ragdoll     bool             `json:"-"`
 
@@ -46,7 +48,17 @@ type Creature struct {
 	RandomArmor   []string  `json:"randomArmor,omitempty"`
 	RandomShields []string  `json:"randomShields,omitempty"`
 	RandomSets    []ItemSet `json:"randomSets,omitempty"`
-	NPC           bool      `json:"npc,omitempty"` // Haldor, Hildir, Bog Witch, Munin, Hugin
+	// RandomItems are Humanoid.m_randomItems: each rolled on its own.
+	RandomItems []ItemChance `json:"randomItems,omitempty"`
+	NPC         bool         `json:"npc,omitempty"` // Haldor, Hildir, Bog Witch, Munin, Hugin
+}
+
+// ItemChance is one Humanoid.RandomItem: the chance the creature carries
+// the item (the game keeps it when Random.value > m_chance, so this is
+// 1 - m_chance).
+type ItemChance struct {
+	Item   string  `json:"item"`
+	Chance float64 `json:"chance"`
 }
 
 // CreatureAttack is one of the creature's weapons: an ItemDrop prefab's
@@ -56,7 +68,8 @@ type CreatureAttack struct {
 	Name       string  `json:"name,omitempty"`
 	Damage     Damage  `json:"damage,omitempty"`
 	Knockback  float64 `json:"knockback,omitempty"`
-	Range      float64 `json:"range,omitempty"`
+	Range      float64 `json:"range,omitempty"` // m_aiAttackRange: how close the AI wants to be
+	Reach      float64 `json:"reach,omitempty"` // m_attack.m_attackRange: how far the swing hits
 	Interval   float64 `json:"interval,omitempty"`
 	Type       string  `json:"type,omitempty"`
 	Projectile string  `json:"projectile,omitempty"`
@@ -113,23 +126,30 @@ type TameInfo struct {
 	StartsTamed  bool     `json:"startsTamed,omitempty"`
 	Names        []string `json:"names,omitempty"`
 	LevelUpSkill bool     `json:"levelUpOwnerSkill,omitempty"`
+	Skill        string   `json:"skill,omitempty"` // the owner's skill it trains (Ride)
+	// Unsummon is how far from its owner a summon may stray (0: not a summon).
+	Unsummon float64 `json:"unsummonDistance,omitempty"`
 }
 
 // ProcreationInfo is a Procreation component.
 type ProcreationInfo struct {
-	Offspring         string  `json:"offspring,omitempty"`
-	MaxCreatures      int     `json:"maxCreatures,omitempty"`
-	PregnancyChance   float64 `json:"pregnancyChance,omitempty"`
-	PregnancyDuration float64 `json:"pregnancyDuration,omitempty"`
-	RequiredLove      int     `json:"requiredLovePoints,omitempty"`
-	PartnerRange      float64 `json:"partnerRange,omitempty"`
-	MinOffspringLevel int     `json:"minOffspringLevel,omitempty"`
+	Offspring          string  `json:"offspring,omitempty"`
+	MaxCreatures       int     `json:"maxCreatures,omitempty"`
+	PregnancyChance    float64 `json:"pregnancyChance,omitempty"`
+	PregnancyDuration  float64 `json:"pregnancyDuration,omitempty"`
+	RequiredLove       int     `json:"requiredLovePoints,omitempty"`
+	PartnerRange       float64 `json:"partnerRange,omitempty"`
+	MinOffspringLevel  int     `json:"minOffspringLevel,omitempty"`
+	Partner            string  `json:"partner,omitempty"`            // m_seperatePartner: a different prefab it mates with
+	NoPartnerOffspring string  `json:"noPartnerOffspring,omitempty"` // laid without a partner (eggs)
 }
 
-// GrowupInfo is Growup or EggGrow.
+// GrowupInfo is Growup (a cub that becomes Grown) or EggGrow (an egg
+// item From that hatches into Grown).
 type GrowupInfo struct {
 	GrowTime    float64  `json:"growTime"`
 	Grown       string   `json:"grown,omitempty"`
+	From        string   `json:"from,omitempty"`
 	AltGrown    []string `json:"altGrown,omitempty"`
 	InheritTame bool     `json:"inheritTame,omitempty"`
 	NeedsFire   bool     `json:"needsFire,omitempty"`
@@ -175,6 +195,7 @@ type Spawn struct {
 	RadiusMin                float64  `json:"radiusMin,omitempty"`
 	RadiusMax                float64  `json:"radiusMax,omitempty"`
 	RequiredKey              string   `json:"requiredKey,omitempty"`
+	RequiredEvent            string   `json:"requiredEvent,omitempty"` // m_requiredPersistentEvent
 	Environments             []string `json:"environments,omitempty"`
 	GroupMin                 int      `json:"groupMin,omitempty"`
 	GroupMax                 int      `json:"groupMax,omitempty"`
@@ -215,9 +236,19 @@ type Event struct {
 	RequiredKeys  []string `json:"requiredKeys,omitempty"`
 	NotKeys       []string `json:"notKeys,omitempty"`
 	RequiredItems []string `json:"requiredKnownItems,omitempty"`
-	StartMessage  string   `json:"startMessage,omitempty"`
-	EndMessage    string   `json:"endMessage,omitempty"`
-	ForceEnv      string   `json:"forceEnvironment,omitempty"`
-	ForceMusic    string   `json:"forceMusic,omitempty"`
-	Spawns        []string `json:"spawns,omitempty"` // Spawn IDs
+	// The alternative gates: player keys any/all of which unlock it, keys
+	// that block it, items that block it once known.
+	PlayerKeysAny []string `json:"playerKeysAny,omitempty"`
+	PlayerKeysAll []string `json:"playerKeysAll,omitempty"`
+	NotPlayerKeys []string `json:"notPlayerKeys,omitempty"`
+	NotKnownItems []string `json:"notKnownItems,omitempty"`
+	// Standalone events fire on their own timer instead of the random roll.
+	StandaloneInterval float64  `json:"standaloneInterval,omitempty"`
+	StandaloneChance   float64  `json:"standaloneChance,omitempty"`
+	PauseIfNoPlayer    bool     `json:"pauseIfNoPlayerInArea,omitempty"`
+	StartMessage       string   `json:"startMessage,omitempty"`
+	EndMessage         string   `json:"endMessage,omitempty"`
+	ForceEnv           string   `json:"forceEnvironment,omitempty"`
+	ForceMusic         string   `json:"forceMusic,omitempty"`
+	Spawns             []string `json:"spawns,omitempty"` // Spawn IDs
 }

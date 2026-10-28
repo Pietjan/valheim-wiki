@@ -1,0 +1,797 @@
+[
+ {
+  "name": "grass green",
+  "prefab": "instanced_meadows_grass",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "meadows"
+  ],
+  "amount": 200,
+  "instanced": true,
+  "forestMax": 1,
+  "maxAlt": 1000,
+  "maxTilt": 25,
+  "scaleMin": 1,
+  "scaleMax": 2.299999952316284,
+  "onUncleared": true
+ },
+ {
+  "name": "forest shrubs",
+  "prefab": "instanced_shrub",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "meadows"
+  ],
+  "amount": 8,
+  "instanced": true,
+  "inForest": true,
+  "forestMax": 1.149999976158142,
+  "maxAlt": 1000,
+  "maxTilt": 30,
+  "scaleMin": 1,
+  "scaleMax": 1.5,
+  "onUncleared": true
+ },
+ {
+  "name": "forest shrubs large",
+  "prefab": "clutter_shrub_large",
+  "source": "Backgroundscene",
+  "enabled": false,
+  "biomes": [
+   "meadows"
+  ],
+  "amount": 3,
+  "inForest": true,
+  "forestMax": 1.149999976158142,
+  "maxAlt": 1000,
+  "maxTilt": 30,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true
+ },
+ {
+  "name": "forest groundcover short brown",
+  "prefab": "instanced_forest_groundcover_brown",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "black-forest",
+   "mistlands"
+  ],
+  "amount": 80,
+  "instanced": true,
+  "forestMax": 1,
+  "maxAlt": 1000,
+  "maxTilt": 25,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true
+ },
+ {
+  "name": "forest groundcover",
+  "prefab": "instanced_forest_groundcover",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "black-forest"
+  ],
+  "amount": 50,
+  "instanced": true,
+  "forestMax": 1,
+  "maxAlt": 1000,
+  "maxTilt": 25,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true
+ },
+ {
+  "name": "swampgrass",
+  "prefab": "instanced_swamp_grass",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "swamp"
+  ],
+  "amount": 150,
+  "instanced": true,
+  "forestMax": 1,
+  "maxAlt": 1000,
+  "maxTilt": 25,
+  "scaleMin": 0.800000011920929,
+  "scaleMax": 1,
+  "onUncleared": true
+ },
+ {
+  "name": "heath grass",
+  "prefab": "instanced_heathgrass",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "plains"
+  ],
+  "amount": 200,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 0.5,
+  "maxAlt": 1000,
+  "maxTilt": 30,
+  "scaleMin": 0.699999988079071,
+  "scaleMax": 1.5,
+  "onUncleared": true
+ },
+ {
+  "name": "heath grass green",
+  "prefab": "grasscross_heath_green",
+  "source": "Backgroundscene",
+  "enabled": false,
+  "biomes": [
+   "plains"
+  ],
+  "amount": 150,
+  "forestMax": 1,
+  "minAlt": 1,
+  "maxAlt": 1000,
+  "maxTilt": 30,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true
+ },
+ {
+  "name": "grass green short",
+  "prefab": "instanced_meadows_grass_short",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "meadows"
+  ],
+  "amount": 250,
+  "instanced": true,
+  "forestMax": 1,
+  "maxAlt": 1000,
+  "maxTilt": 25,
+  "scaleMin": 1,
+  "scaleMax": 2,
+  "onUncleared": true
+ },
+ {
+  "name": "heath flowers",
+  "prefab": "instanced_heathflowers",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "plains"
+  ],
+  "amount": 100,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 1,
+  "maxAlt": 1000,
+  "maxTilt": 30,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true
+ },
+ {
+  "name": "small rock1",
+  "prefab": "small_rock1",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "amount": 2,
+  "forestMax": 1,
+  "maxAlt": 1000,
+  "maxTilt": 45,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onCleared": true
+ },
+ {
+  "name": "small rock2",
+  "prefab": "small_rock2",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "amount": 2,
+  "forestMax": 1,
+  "maxAlt": 1000,
+  "maxTilt": 45,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onCleared": true
+ },
+ {
+  "name": "Marsh ormbunke",
+  "prefab": "instanced_swamp_ormbunke",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "swamp"
+  ],
+  "amount": 4,
+  "instanced": true,
+  "forestMax": 1,
+  "maxAlt": 1000,
+  "maxTilt": 18,
+  "scaleMin": 0.5,
+  "scaleMax": 1,
+  "onUncleared": true
+ },
+ {
+  "name": "forest ormbunke",
+  "prefab": "instanced_ormbunke",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "meadows"
+  ],
+  "amount": 30,
+  "instanced": true,
+  "forestMax": 1,
+  "maxAlt": 2,
+  "maxTilt": 18,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true
+ },
+ {
+  "name": "deepforest ormbunke",
+  "prefab": "instanced_ormbunke",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "black-forest"
+  ],
+  "amount": 10,
+  "instanced": true,
+  "forestMax": 1,
+  "maxAlt": 1000,
+  "maxTilt": 18,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true
+ },
+ {
+  "name": "vass",
+  "prefab": "instanced_vass",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "ocean"
+  ],
+  "amount": 40,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": -0.6000000238418579,
+  "maxTilt": 90,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true,
+  "snapToWater": true
+ },
+ {
+  "name": "water lilies",
+  "prefab": "instanced_waterlilies",
+  "source": "Backgroundscene",
+  "enabled": true,
+  "biomes": [
+   "meadows",
+   "black-forest"
+  ],
+  "amount": 40,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": -1.5,
+  "maxAlt": -0.20000000298023224,
+  "maxTilt": 90,
+  "maxOceanDepth": 1,
+  "scaleMin": 0.4000000059604645,
+  "scaleMax": 0.6000000238418579,
+  "onUncleared": true,
+  "snapToWater": true
+ },
+ {
+  "name": "grass green",
+  "prefab": "instanced_meadows_grass",
+  "source": "_GameMain",
+  "enabled": true,
+  "biomes": [
+   "meadows"
+  ],
+  "amount": 200,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 0.4000000059604645,
+  "maxAlt": 1000,
+  "maxTilt": 25,
+  "scaleMin": 1,
+  "scaleMax": 2.299999952316284,
+  "onUncleared": true,
+  "terrainTilt": true
+ },
+ {
+  "name": "meadows shrubs",
+  "prefab": "instanced_shrub",
+  "source": "_GameMain",
+  "enabled": true,
+  "biomes": [
+   "meadows"
+  ],
+  "amount": 8,
+  "instanced": true,
+  "inForest": true,
+  "forestMax": 1.149999976158142,
+  "minAlt": 1,
+  "maxAlt": 1000,
+  "maxTilt": 30,
+  "scaleMin": 1,
+  "scaleMax": 1.5,
+  "onUncleared": true
+ },
+ {
+  "name": "forest shrubs large",
+  "prefab": "clutter_shrub_large",
+  "source": "_GameMain",
+  "enabled": false,
+  "biomes": [
+   "meadows"
+  ],
+  "amount": 3,
+  "inForest": true,
+  "forestMax": 1.149999976158142,
+  "maxAlt": 1000,
+  "maxTilt": 30,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true
+ },
+ {
+  "name": "forest groundcover short brown",
+  "prefab": "instanced_forest_groundcover_brown",
+  "source": "_GameMain",
+  "enabled": true,
+  "biomes": [
+   "black-forest"
+  ],
+  "amount": 80,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 0.5,
+  "maxAlt": 1000,
+  "maxTilt": 25,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true,
+  "terrainTilt": true
+ },
+ {
+  "name": "forest groundcover",
+  "prefab": "instanced_forest_groundcover",
+  "source": "_GameMain",
+  "enabled": true,
+  "biomes": [
+   "black-forest"
+  ],
+  "amount": 50,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 0.5,
+  "maxAlt": 1000,
+  "maxTilt": 25,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true,
+  "terrainTilt": true
+ },
+ {
+  "name": "swampgrass",
+  "prefab": "instanced_swamp_grass",
+  "source": "_GameMain",
+  "enabled": true,
+  "biomes": [
+   "swamp"
+  ],
+  "amount": 150,
+  "instanced": true,
+  "forestMax": 1,
+  "maxAlt": 1000,
+  "maxTilt": 25,
+  "scaleMin": 0.800000011920929,
+  "scaleMax": 1,
+  "onUncleared": true,
+  "terrainTilt": true
+ },
+ {
+  "name": "heath grass",
+  "prefab": "instanced_heathgrass",
+  "source": "_GameMain",
+  "enabled": true,
+  "biomes": [
+   "plains"
+  ],
+  "amount": 200,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 0.5,
+  "maxAlt": 1000,
+  "maxTilt": 30,
+  "scaleMin": 0.699999988079071,
+  "scaleMax": 1.5,
+  "onUncleared": true,
+  "terrainTilt": true
+ },
+ {
+  "name": "heath grass green",
+  "prefab": "grasscross_heath_green",
+  "source": "_GameMain",
+  "enabled": false,
+  "biomes": [
+   "plains"
+  ],
+  "amount": 150,
+  "forestMax": 1,
+  "minAlt": 1,
+  "maxAlt": 1000,
+  "maxTilt": 30,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true,
+  "terrainTilt": true
+ },
+ {
+  "name": "grass green short",
+  "prefab": "instanced_meadows_grass_short",
+  "source": "_GameMain",
+  "enabled": true,
+  "biomes": [
+   "meadows"
+  ],
+  "amount": 250,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 0.30000001192092896,
+  "maxAlt": 1000,
+  "maxTilt": 25,
+  "scaleMin": 1,
+  "scaleMax": 2,
+  "onUncleared": true,
+  "terrainTilt": true
+ },
+ {
+  "name": "heath flowers",
+  "prefab": "instanced_heathflowers",
+  "source": "_GameMain",
+  "enabled": true,
+  "biomes": [
+   "plains"
+  ],
+  "amount": 100,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 1,
+  "maxAlt": 1000,
+  "maxTilt": 30,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true
+ },
+ {
+  "name": "small rock1",
+  "prefab": "instanced_small_rock1",
+  "source": "_GameMain",
+  "enabled": true,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "amount": 15,
+  "instanced": true,
+  "forestMax": 1,
+  "maxAlt": 1000,
+  "maxTilt": 45,
+  "scaleMin": 1,
+  "scaleMax": 2,
+  "onCleared": true,
+  "terrainTilt": true
+ },
+ {
+  "name": "small rock2",
+  "prefab": "small_rock2",
+  "source": "_GameMain",
+  "enabled": false,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "mistlands",
+   "ashlands",
+   "deep-north",
+   "ocean"
+  ],
+  "amount": 2,
+  "forestMax": 1,
+  "maxAlt": 1000,
+  "maxTilt": 45,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onCleared": true,
+  "terrainTilt": true
+ },
+ {
+  "name": "Marsh ormbunke",
+  "prefab": "instanced_swamp_ormbunke",
+  "source": "_GameMain",
+  "enabled": true,
+  "biomes": [
+   "swamp"
+  ],
+  "amount": 4,
+  "instanced": true,
+  "forestMax": 1,
+  "maxAlt": 1000,
+  "maxTilt": 18,
+  "scaleMin": 0.5,
+  "scaleMax": 1,
+  "onUncleared": true,
+  "terrainTilt": true
+ },
+ {
+  "name": "meadows ormbunke",
+  "prefab": "instanced_ormbunke",
+  "source": "_GameMain",
+  "enabled": true,
+  "biomes": [
+   "meadows"
+  ],
+  "amount": 30,
+  "instanced": true,
+  "inForest": true,
+  "forestMax": 1,
+  "minAlt": 1,
+  "maxAlt": 4,
+  "maxTilt": 18,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true,
+  "terrainTilt": true
+ },
+ {
+  "name": "deepforest ormbunke",
+  "prefab": "instanced_ormbunke",
+  "source": "_GameMain",
+  "enabled": true,
+  "biomes": [
+   "black-forest"
+  ],
+  "amount": 10,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 1,
+  "maxAlt": 1000,
+  "maxTilt": 18,
+  "maxOceanDepth": 2,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true,
+  "terrainTilt": true
+ },
+ {
+  "name": "vass",
+  "prefab": "instanced_vass",
+  "source": "_GameMain",
+  "enabled": true,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "swamp",
+   "mountain",
+   "plains",
+   "ocean"
+  ],
+  "amount": 30,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": -1,
+  "maxAlt": -0.10000000149011612,
+  "maxTilt": 90,
+  "scaleMin": 1,
+  "scaleMax": 1.2999999523162842,
+  "onUncleared": true,
+  "snapToWater": true
+ },
+ {
+  "name": "water lilies",
+  "prefab": "instanced_waterlilies",
+  "source": "_GameMain",
+  "enabled": true,
+  "biomes": [
+   "meadows",
+   "black-forest"
+  ],
+  "amount": 40,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": -1.5,
+  "maxAlt": -0.20000000298023224,
+  "maxTilt": 90,
+  "maxOceanDepth": 1,
+  "scaleMin": 0.4000000059604645,
+  "scaleMax": 0.6000000238418579,
+  "onUncleared": true,
+  "snapToWater": true
+ },
+ {
+  "name": "Deep North brush",
+  "prefab": "instanced_forest_groundcover_snow",
+  "source": "_LocationList_DeepNorth",
+  "enabled": true,
+  "biomes": [
+   "deep-north"
+  ],
+  "amount": 30,
+  "instanced": true,
+  "inForest": true,
+  "forestMax": 1,
+  "minAlt": 1,
+  "maxAlt": 1000,
+  "maxTilt": 60,
+  "maxVegetation": 1,
+  "scaleMin": 0.699999988079071,
+  "scaleMax": 2,
+  "onUncleared": true
+ },
+ {
+  "name": "Deep North brush short",
+  "prefab": "instanced_forest_groundcover_snow",
+  "source": "_LocationList_DeepNorth",
+  "enabled": true,
+  "biomes": [
+   "deep-north"
+  ],
+  "amount": 50,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 1,
+  "maxAlt": 1000,
+  "maxTilt": 60,
+  "maxVegetation": 1,
+  "scaleMin": 0.699999988079071,
+  "scaleMax": 2,
+  "onUncleared": true
+ },
+ {
+  "name": "Ashlands grass short",
+  "prefab": "instanced_ashlands_grass_short",
+  "source": "_LocationList_Ashlands",
+  "enabled": true,
+  "biomes": [
+   "ashlands"
+  ],
+  "amount": 50,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 1,
+  "maxAlt": 15,
+  "maxTilt": 30,
+  "maxVegetation": 0.15000000596046448,
+  "scaleMin": 2,
+  "scaleMax": 2,
+  "onUncleared": true
+ },
+ {
+  "name": "Ashlands grass long",
+  "prefab": "instanced_ashlands_grass_long",
+  "source": "_LocationList_Ashlands",
+  "enabled": true,
+  "biomes": [
+   "ashlands"
+  ],
+  "amount": 50,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 1,
+  "maxAlt": 15,
+  "maxTilt": 30,
+  "maxVegetation": 0.15000000596046448,
+  "scaleMin": 2,
+  "scaleMax": 2,
+  "onUncleared": true
+ },
+ {
+  "name": "mistlands moss",
+  "prefab": "instanced_mistlands_grass_short",
+  "source": "_LocationList_Mistlands",
+  "enabled": true,
+  "biomes": [
+   "mistlands"
+  ],
+  "amount": 400,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 0.30000001192092896,
+  "maxAlt": 1000,
+  "maxTilt": 35,
+  "minVegetation": 0.30000001192092896,
+  "maxVegetation": 1,
+  "scaleMin": 2,
+  "scaleMax": 2,
+  "onUncleared": true,
+  "terrainTilt": true
+ },
+ {
+  "name": "mistlands moss",
+  "prefab": "instanced_mistlands_grass_short",
+  "source": "_LocationList_Mistlands",
+  "enabled": true,
+  "biomes": [
+   "mistlands"
+  ],
+  "amount": 400,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 0.30000001192092896,
+  "maxAlt": 1000,
+  "maxTilt": 40,
+  "minVegetation": 0.10000000149011612,
+  "maxVegetation": 0.30000001192092896,
+  "scaleMin": 1,
+  "scaleMax": 1,
+  "onUncleared": true,
+  "terrainTilt": true
+ },
+ {
+  "name": "mistlands rockplant",
+  "prefab": "instanced_mistlands_rockplant",
+  "source": "_LocationList_Mistlands",
+  "enabled": true,
+  "biomes": [
+   "mistlands"
+  ],
+  "amount": 40,
+  "instanced": true,
+  "forestMax": 1,
+  "minAlt": 0.30000001192092896,
+  "maxAlt": 1000,
+  "minTilt": 15,
+  "maxTilt": 45,
+  "scaleMin": 1,
+  "scaleMax": 2,
+  "onUncleared": true,
+  "terrainTilt": true
+ }
+]

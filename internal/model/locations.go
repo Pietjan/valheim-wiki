@@ -43,31 +43,57 @@ type Location struct {
 	MaxDistance            float64  `json:"maxDistance,omitempty"`
 	MinAltitude            float64  `json:"minAltitude,omitempty"`
 	MaxAltitude            float64  `json:"maxAltitude,omitempty"`
-	AltBiome               string   `json:"altBiome,omitempty"` // added by this alt biome
+	// The surround check: the placement also samples the vegetation mask
+	// in Layers rings Distance apart and wants it below the threshold (or
+	// merely better than the average).
+	SurroundCheckVegetation   bool    `json:"surroundCheckVegetation,omitempty"`
+	SurroundCheckDistance     float64 `json:"surroundCheckDistance,omitempty"`
+	SurroundCheckLayers       int     `json:"surroundCheckLayers,omitempty"`
+	SurroundBetterThanAverage bool    `json:"surroundBetterThanAverage,omitempty"`
+	AltBiome                  string  `json:"altBiome,omitempty"` // added by this alt biome
 
 	// The prefab: Location component and contents.
-	HasInterior   bool      `json:"hasInterior,omitempty"`
-	InteriorEnv   string    `json:"interiorEnvironment,omitempty"`
-	NoBuild       bool      `json:"noBuild,omitempty"`
-	DiscoverLabel string    `json:"discoverLabel,omitempty"`
-	EnemyMinLevel int       `json:"enemyMinLevel,omitempty"`
-	EnemyMaxLevel int       `json:"enemyMaxLevel,omitempty"`
-	Dungeon       *Dungeon  `json:"dungeon,omitempty"`
-	Contents      *Contents `json:"contents,omitempty"`
+	HasInterior       bool      `json:"hasInterior,omitempty"`
+	InteriorEnv       string    `json:"interiorEnvironment,omitempty"`
+	NoBuild           bool      `json:"noBuild,omitempty"`
+	NoBuildRadius     float64   `json:"noBuildRadius,omitempty"` // m_noBuildRadiusOverride; 0 = the exterior radius
+	ApplyRandomDamage bool      `json:"applyRandomDamage,omitempty"`
+	DiscoverLabel     string    `json:"discoverLabel,omitempty"`
+	EnemyMinLevel     int       `json:"enemyMinLevel,omitempty"`
+	EnemyMaxLevel     int       `json:"enemyMaxLevel,omitempty"`
+	EnemyLevelUp      float64   `json:"enemyLevelUpChance,omitempty"` // m_enemyLevelUpOverride, percent; 0 = not overridden
+	Dungeon           *Dungeon  `json:"dungeon,omitempty"`
+	Contents          *Contents `json:"contents,omitempty"`
 }
 
-// Dungeon is a DungeonGenerator on a location.
+// Dungeon is a DungeonGenerator on a location: the Dungeon algorithm
+// grows a tree of rooms from an entrance by matching connections; the
+// camp algorithms scatter rooms on a grid or in rings between the camp
+// radii. Themes selects which rooms of the room lists it may use.
 type Dungeon struct {
-	Algorithm        string   `json:"algorithm"` // Dungeon, CampGrid, CampRadial
-	Themes           []string `json:"themes,omitempty"`
-	MinRooms         int      `json:"minRooms,omitempty"`
-	MaxRooms         int      `json:"maxRooms,omitempty"`
-	MinRequiredRooms int      `json:"minRequiredRooms,omitempty"`
-	RequiredRooms    []string `json:"requiredRooms,omitempty"`
-	CampRadiusMin    float64  `json:"campRadiusMin,omitempty"`
-	CampRadiusMax    float64  `json:"campRadiusMax,omitempty"`
-	DoorChance       float64  `json:"doorChance,omitempty"`
-	Doors            []string `json:"doors,omitempty"`
+	Prefab            string   `json:"prefab"`    // the generator's GameObject: DG_ForestCrypt, DG_GoblinCamp, ...
+	Algorithm         string   `json:"algorithm"` // Dungeon, CampGrid, CampRadial
+	Themes            []string `json:"themes,omitempty"`
+	MinRooms          int      `json:"minRooms,omitempty"`
+	MaxRooms          int      `json:"maxRooms,omitempty"`
+	MinRequiredRooms  int      `json:"minRequiredRooms,omitempty"`
+	RequiredRooms     []string `json:"requiredRooms,omitempty"`
+	CampRadiusMin     float64  `json:"campRadiusMin,omitempty"`
+	CampRadiusMax     float64  `json:"campRadiusMax,omitempty"`
+	TileWidth         float64  `json:"tileWidth,omitempty"` // CampGrid cell size
+	GridSize          int      `json:"gridSize,omitempty"`  // CampGrid cells per side
+	SpawnChance       float64  `json:"spawnChance,omitempty"`
+	PerimeterSections int      `json:"perimeterSections,omitempty"`
+	DoorChance        float64  `json:"doorChance,omitempty"`
+	Doors             []Door   `json:"doors,omitempty"`
+}
+
+// Door is one DungeonGenerator.DoorDef: a door prefab placed on the
+// connections of that type, with its own chance when not zero.
+type Door struct {
+	Prefab         string  `json:"prefab"`
+	ConnectionType string  `json:"connectionType,omitempty"`
+	Chance         float64 `json:"chance,omitempty"`
 }
 
 // Contents is what stands in a location or room prefab, counted by kind.
@@ -189,15 +215,25 @@ type ResourceIn struct {
 	Count  int    `json:"count"`
 }
 
-// Room is a dungeon room prefab, with what it holds.
+// Room is a dungeon room prefab, with what it holds. Theme and Enabled
+// are the room list's entry (DungeonDB.RoomData), which is what the
+// generator filters on; the rest is the Room component on the prefab.
 type Room struct {
-	Prefab   string    `json:"prefab"`
-	Theme    string    `json:"theme"`
-	List     string    `json:"list,omitempty"`
-	Enabled  bool      `json:"enabled"`
-	Weight   float64   `json:"weight,omitempty"`
-	Entrance bool      `json:"entrance,omitempty"`
-	EndCap   bool      `json:"endCap,omitempty"`
-	Size     [3]int    `json:"size,omitempty"`
-	Contents *Contents `json:"contents,omitempty"`
+	Prefab  string `json:"prefab"`
+	Theme   string `json:"theme"` // the entry's theme; a mask lists its names joined by "|"
+	List    string `json:"list,omitempty"`
+	Enabled bool   `json:"enabled"`
+	// RoomTheme is the Room component's own theme mask, which can differ
+	// from the entry's.
+	RoomTheme     string    `json:"roomTheme,omitempty"`
+	Weight        float64   `json:"weight,omitempty"`
+	Entrance      bool      `json:"entrance,omitempty"`
+	EndCap        bool      `json:"endCap,omitempty"`
+	Divider       bool      `json:"divider,omitempty"`
+	EndCapPrio    int       `json:"endCapPrio,omitempty"`
+	MinPlaceOrder int       `json:"minPlaceOrder,omitempty"`
+	FaceCenter    bool      `json:"faceCenter,omitempty"` // camp rooms: turned to face the camp centre
+	Perimeter     bool      `json:"perimeter,omitempty"`  // camp rooms: placed on the perimeter ring
+	Size          [3]int    `json:"size,omitempty"`
+	Contents      *Contents `json:"contents,omitempty"`
 }

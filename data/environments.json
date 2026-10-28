@@ -1,0 +1,797 @@
+{
+ "Ashlands_CinderRain": {
+  "name": "Ashlands_CinderRain",
+  "windMin": 0.75,
+  "windMax": 0.699999988079071,
+  "rainCloudAlpha": 1.5,
+  "particles": [
+   "Ashlands_CinderRain"
+  ],
+  "lightIntensityDay": 1.600000023841858,
+  "lightIntensityNight": 0.5,
+  "sunAngle": 45,
+  "source": "_LocationList_Ashlands"
+ },
+ "Ashlands_SeaStorm": {
+  "name": "Ashlands_SeaStorm",
+  "alwaysDark": true,
+  "windMin": 0.800000011920929,
+  "windMax": 1,
+  "rainCloudAlpha": 2,
+  "lightIntensityDay": 0.5,
+  "lightIntensityNight": 0.7699999809265137,
+  "sunAngle": 45,
+  "music": {
+   "day": "sailing_ashlands",
+   "night": "sailing_ashlands"
+  },
+  "source": "_LocationList_Ashlands"
+ },
+ "Ashlands_ashrain": {
+  "name": "Ashlands_ashrain",
+  "windMin": 0.10000000149011612,
+  "windMax": 0.5,
+  "rainCloudAlpha": 1.5,
+  "particles": [
+   "Ashlands_AshRain"
+  ],
+  "lightIntensityDay": 2.200000047683716,
+  "lightIntensityNight": 0.4000000059604645,
+  "sunAngle": 35,
+  "source": "_LocationList_Ashlands"
+ },
+ "Ashlands_ashrain_clear": {
+  "name": "Ashlands_ashrain_clear",
+  "windMin": 0.10000000149011612,
+  "windMax": 0.5,
+  "rainCloudAlpha": 1.5,
+  "particles": [
+   "Ashlands_AshRain"
+  ],
+  "lightIntensityDay": 2.200000047683716,
+  "lightIntensityNight": 0.4000000059604645,
+  "sunAngle": 35,
+  "source": "_LocationList_Ashlands"
+ },
+ "Ashlands_meteorshower": {
+  "name": "Ashlands_meteorshower",
+  "windMin": 0.10000000149011612,
+  "windMax": 0.5,
+  "rainCloudAlpha": 1.5,
+  "particles": [
+   "Ashlands_MeteorShower"
+  ],
+  "lightIntensityDay": 1.2000000476837158,
+  "lightIntensityNight": 1,
+  "sunAngle": 45,
+  "source": "_LocationList_Ashlands"
+ },
+ "Ashlands_misty": {
+  "name": "Ashlands_misty",
+  "windMin": 0.10000000149011612,
+  "windMax": 0.5,
+  "rainCloudAlpha": 1.5,
+  "particles": [
+   "Ashlands_Misty"
+  ],
+  "lightIntensityDay": 1,
+  "lightIntensityNight": 0.6000000238418579,
+  "sunAngle": 20,
+  "source": "_LocationList_Ashlands"
+ },
+ "Ashlands_storm": {
+  "name": "Ashlands_storm",
+  "windMin": 2.5,
+  "windMax": 3,
+  "rainCloudAlpha": 1.5,
+  "particles": [
+   "Ashlands_storm",
+   "AshlandsThunder"
+  ],
+  "lightIntensityDay": 1.5,
+  "lightIntensityNight": 1.5,
+  "sunAngle": 45,
+  "source": "_LocationList_Ashlands"
+ },
+ "Bonemass": {
+  "name": "Bonemass",
+  "wet": true,
+  "coldAtNight": true,
+  "windMin": 0.10000000149011612,
+  "windMax": 0.30000001192092896,
+  "rainCloudAlpha": 1,
+  "particles": [
+   "SlimeRain",
+   "GroundMist"
+  ],
+  "lightIntensityDay": 0.6000000238418579,
+  "lightIntensityNight": 0.4000000059604645,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "Caves": {
+  "name": "Caves",
+  "freezing": true,
+  "cold": true,
+  "alwaysDark": true,
+  "particles": [
+   "env_mountain_cave"
+  ],
+  "lightIntensityDay": 0.10000000149011612,
+  "lightIntensityNight": 0.10000000149011612,
+  "sunAngle": 90,
+  "ambientList": "FrostCaves",
+  "music": {
+   "day": "-",
+   "evening": "-",
+   "morning": "-",
+   "night": "-"
+  },
+  "source": "_LocationList_MountainCaves"
+ },
+ "CavesHildir": {
+  "name": "CavesHildir",
+  "freezing": true,
+  "cold": true,
+  "alwaysDark": true,
+  "particles": [
+   "env_mountain_cave_hildir"
+  ],
+  "lightIntensityDay": 0.10000000149011612,
+  "lightIntensityNight": 0.10000000149011612,
+  "sunAngle": 90,
+  "ambientList": "FrostCaves",
+  "music": {
+   "day": "frostcaveshildir",
+   "evening": "frostcaveshildir",
+   "morning": "frostcaveshildir",
+   "night": "frostcaveshildir"
+  },
+  "source": "_LocationList_MountainCaves"
+ },
+ "Clear": {
+  "name": "Clear",
+  "default": true,
+  "coldAtNight": true,
+  "windMin": 0.10000000149011612,
+  "windMax": 0.6000000238418579,
+  "particles": [
+   "FogClouds"
+  ],
+  "lightIntensityDay": 1.7000000476837158,
+  "lightIntensityNight": 1,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "Crypt": {
+  "name": "Crypt",
+  "alwaysDark": true,
+  "particles": [
+   "InteriorDust"
+  ],
+  "sunAngle": 60,
+  "ambientList": "Crypt",
+  "music": {
+   "day": "forestcrypt",
+   "evening": "-",
+   "morning": "-",
+   "night": "forestcrypt"
+  },
+  "source": "_GameMain"
+ },
+ "CryptHildir": {
+  "name": "CryptHildir",
+  "alwaysDark": true,
+  "particles": [
+   "env_crypthildir"
+  ],
+  "sunAngle": 60,
+  "ambientList": "Crypt",
+  "music": {
+   "day": "forestcrypthildir",
+   "evening": "forestcrypthildir",
+   "morning": "forestcrypthildir",
+   "night": "forestcrypthildir"
+  },
+  "source": "_LocationList_Hildir"
+ },
+ "DN_Bossroom": {
+  "name": "DN_Bossroom",
+  "freezing": true,
+  "freezingAtNight": true,
+  "cold": true,
+  "coldAtNight": true,
+  "alwaysDark": true,
+  "aurora": true,
+  "particles": [
+   "Outland_Sparkles",
+   "InteriorDust_Bossroom"
+  ],
+  "sunAngle": 60,
+  "source": "_LocationList_DeepNorth"
+ },
+ "Darklands_dark": {
+  "name": "Darklands_dark",
+  "cold": true,
+  "coldAtNight": true,
+  "alwaysDark": true,
+  "windMin": 0.10000000149011612,
+  "windMax": 0.6000000238418579,
+  "rainCloudAlpha": 4.489999771118164,
+  "particles": [
+   "Darklands",
+   "GroundMist"
+  ],
+  "lightIntensityDay": 1,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "DeepForest Mist": {
+  "name": "DeepForest Mist",
+  "coldAtNight": true,
+  "windMin": 0.10000000149011612,
+  "windMax": 0.6000000238418579,
+  "particles": [
+   "GroundMist",
+   "FogClouds"
+  ],
+  "lightIntensityDay": 1.5,
+  "lightIntensityNight": 1.2000000476837158,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "Eikthyr": {
+  "name": "Eikthyr",
+  "coldAtNight": true,
+  "alwaysDark": true,
+  "windMin": 0.8999999761581421,
+  "windMax": 1,
+  "rainCloudAlpha": 2,
+  "particles": [
+   "GroundMist",
+   "FogClouds",
+   "OceanMist"
+  ],
+  "lightIntensityDay": 0.5,
+  "lightIntensityNight": 0.7699999809265137,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "Eikthyr_no_lightning": {
+  "name": "Eikthyr_no_lightning",
+  "coldAtNight": true,
+  "alwaysDark": true,
+  "windMin": 0.8999999761581421,
+  "windMax": 1,
+  "rainCloudAlpha": 2,
+  "particles": [
+   "GroundMist",
+   "FogClouds",
+   "OceanMist"
+  ],
+  "lightIntensityDay": 0.5,
+  "lightIntensityNight": 0.7699999809265137,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "Fader": {
+  "name": "Fader",
+  "windMin": 0.10000000149011612,
+  "windMax": 0.5,
+  "rainCloudAlpha": 1.5,
+  "particles": [
+   "Ashlands_FaderFX"
+  ],
+  "lightIntensityDay": 1,
+  "lightIntensityNight": 0.6000000238418579,
+  "sunAngle": 20,
+  "source": "_LocationList_Ashlands"
+ },
+ "GDKing": {
+  "name": "GDKing",
+  "coldAtNight": true,
+  "windMin": 0.10000000149011612,
+  "windMax": 0.30000001192092896,
+  "particles": [
+   "GroundMist",
+   "FogClouds"
+  ],
+  "lightIntensityDay": 1.5,
+  "lightIntensityNight": 1.399999976158142,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "Ghosts": {
+  "name": "Ghosts",
+  "cold": true,
+  "coldAtNight": true,
+  "alwaysDark": true,
+  "lightIntensityDay": 0.699999988079071,
+  "lightIntensityNight": 0.6000000238418579,
+  "sunAngle": 45,
+  "ambientList": "Crypt",
+  "music": {
+   "day": "forestcrypt",
+   "evening": "-",
+   "morning": "-",
+   "night": "forestcrypt"
+  },
+  "source": "_GameMain"
+ },
+ "GoblinKing": {
+  "name": "GoblinKing",
+  "alwaysDark": true,
+  "windMin": 0.5,
+  "windMax": 0.699999988079071,
+  "rainCloudAlpha": 2,
+  "particles": [
+   "GroundMist",
+   "FogClouds",
+   "OceanMist",
+   "MageStorm"
+  ],
+  "lightIntensityDay": 0.6000000238418579,
+  "lightIntensityNight": 1,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "Heath clear": {
+  "name": "Heath clear",
+  "coldAtNight": true,
+  "windMin": 0.4000000059604645,
+  "windMax": 0.800000011920929,
+  "lightIntensityDay": 1.5,
+  "lightIntensityNight": 1,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "InfectedMine": {
+  "name": "InfectedMine",
+  "alwaysDark": true,
+  "particles": [
+   "InfectedMine"
+  ],
+  "sunAngle": 60,
+  "ambientList": "InfectedMine",
+  "music": {
+   "day": "-",
+   "evening": "-",
+   "morning": "-",
+   "night": "-"
+  },
+  "source": "_LocationList_Mistlands"
+ },
+ "JotunInvasion_blackforest": {
+  "name": "JotunInvasion_blackforest",
+  "coldAtNight": true,
+  "windMin": 0.10000000149011612,
+  "windMax": 0.6000000238418579,
+  "particles": [
+   "Snow",
+   "GroundMist",
+   "FogClouds"
+  ],
+  "lightIntensityDay": 1.5,
+  "lightIntensityNight": 1.100000023841858,
+  "sunAngle": 45,
+  "music": {
+   "day": "JotunInvasion",
+   "night": "JotunInvasion"
+  },
+  "source": "_LocationList_DeepNorth"
+ },
+ "JotunInvasion_meadows": {
+  "name": "JotunInvasion_meadows",
+  "freezing": true,
+  "windMin": 0.10000000149011612,
+  "windMax": 0.6000000238418579,
+  "rainCloudAlpha": 0.15000000596046448,
+  "aurora": true,
+  "particles": [
+   "Snow"
+  ],
+  "lightIntensityDay": 1.2999999523162842,
+  "lightIntensityNight": 0.7599999904632568,
+  "sunAngle": 60,
+  "music": {
+   "day": "JotunInvasion",
+   "night": "JotunInvasion"
+  },
+  "source": "_LocationList_DeepNorth"
+ },
+ "JotunInvasion_mistlands": {
+  "name": "JotunInvasion_mistlands",
+  "freezing": true,
+  "windMin": 0.05000000074505806,
+  "windMax": 0.20000000298023224,
+  "rainCloudAlpha": 2,
+  "aurora": true,
+  "particles": [
+   "Snow",
+   "Mistlands"
+  ],
+  "lightIntensityDay": 1.2000000476837158,
+  "lightIntensityNight": 0.4000000059604645,
+  "sunAngle": 60,
+  "music": {
+   "day": "JotunInvasion",
+   "night": "JotunInvasion"
+  },
+  "source": "_LocationList_DeepNorth"
+ },
+ "JotunInvasion_mountain": {
+  "name": "JotunInvasion_mountain",
+  "freezing": true,
+  "windMin": 0.10000000149011612,
+  "windMax": 0.6000000238418579,
+  "rainCloudAlpha": 0.10000000149011612,
+  "aurora": true,
+  "particles": [
+   "Snow"
+  ],
+  "lightIntensityDay": 1.2000000476837158,
+  "lightIntensityNight": 0.4000000059604645,
+  "sunAngle": 45,
+  "music": {
+   "day": "JotunInvasion",
+   "night": "JotunInvasion"
+  },
+  "source": "_LocationList_DeepNorth"
+ },
+ "JotunInvasion_plains": {
+  "name": "JotunInvasion_plains",
+  "freezing": true,
+  "windMin": 0.10000000149011612,
+  "windMax": 0.6000000238418579,
+  "rainCloudAlpha": 0.15000000596046448,
+  "aurora": true,
+  "particles": [
+   "Snow"
+  ],
+  "lightIntensityDay": 0.800000011920929,
+  "lightIntensityNight": 0.4000000059604645,
+  "sunAngle": 60,
+  "music": {
+   "day": "JotunInvasion",
+   "night": "JotunInvasion"
+  },
+  "source": "_LocationList_DeepNorth"
+ },
+ "JotunInvasion_swamp": {
+  "name": "JotunInvasion_swamp",
+  "freezing": true,
+  "windMin": 0.10000000149011612,
+  "windMax": 0.6000000238418579,
+  "rainCloudAlpha": 0.25,
+  "aurora": true,
+  "particles": [
+   "Snow",
+   "GroundMist"
+  ],
+  "lightIntensityDay": 0.8999999761581421,
+  "lightIntensityNight": 0.5,
+  "sunAngle": 45,
+  "music": {
+   "day": "JotunInvasion",
+   "night": "JotunInvasion"
+  },
+  "source": "_LocationList_DeepNorth"
+ },
+ "LightRain": {
+  "name": "LightRain",
+  "wet": true,
+  "coldAtNight": true,
+  "alwaysDark": true,
+  "windMin": 0.10000000149011612,
+  "windMax": 0.6000000238418579,
+  "rainCloudAlpha": 0.30000001192092896,
+  "particles": [
+   "GroundMist",
+   "LightRain",
+   "FogClouds"
+  ],
+  "lightIntensityDay": 0.800000011920929,
+  "lightIntensityNight": 0.8999999761581421,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "Mistlands_clear": {
+  "name": "Mistlands_clear",
+  "coldAtNight": true,
+  "windMin": 0.05000000074505806,
+  "windMax": 0.20000000298023224,
+  "rainCloudAlpha": 2,
+  "particles": [
+   "Mistlands"
+  ],
+  "lightIntensityDay": 1.2000000476837158,
+  "lightIntensityNight": 0.5,
+  "sunAngle": 60,
+  "source": "_LocationList_Mistlands"
+ },
+ "Mistlands_rain": {
+  "name": "Mistlands_rain",
+  "wet": true,
+  "coldAtNight": true,
+  "alwaysDark": true,
+  "windMin": 0.05000000074505806,
+  "windMax": 0.5,
+  "rainCloudAlpha": 2,
+  "particles": [
+   "MistlandsRain",
+   "GroundMist"
+  ],
+  "lightIntensityDay": 0.5,
+  "lightIntensityNight": 0.699999988079071,
+  "sunAngle": 60,
+  "source": "_LocationList_Mistlands"
+ },
+ "Mistlands_thunder": {
+  "name": "Mistlands_thunder",
+  "wet": true,
+  "coldAtNight": true,
+  "alwaysDark": true,
+  "windMin": 0.5,
+  "windMax": 1,
+  "rainCloudAlpha": 2,
+  "particles": [
+   "MistlandsRain",
+   "MistlandsThunder",
+   "GroundMist"
+  ],
+  "lightIntensityDay": 0.5,
+  "lightIntensityNight": 0.800000011920929,
+  "sunAngle": 60,
+  "source": "_LocationList_Mistlands"
+ },
+ "Misty": {
+  "name": "Misty",
+  "coldAtNight": true,
+  "windMin": 0.10000000149011612,
+  "windMax": 0.30000001192092896,
+  "rainCloudAlpha": 1.5,
+  "particles": [
+   "Mist"
+  ],
+  "lightIntensityDay": 1,
+  "lightIntensityNight": 1,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "Moder": {
+  "name": "Moder",
+  "freezing": true,
+  "coldAtNight": true,
+  "windMin": 1,
+  "windMax": 1,
+  "rainCloudAlpha": 2,
+  "particles": [
+   "WhirlWind"
+  ],
+  "lightIntensityDay": 0.699999988079071,
+  "lightIntensityNight": 0.5,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "Morkhalla": {
+  "name": "Morkhalla",
+  "cold": true,
+  "alwaysDark": true,
+  "windMin": 0.05000000074505806,
+  "windMax": 0.10000000149011612,
+  "particles": [
+   "InteriorDust",
+   "Drops"
+  ],
+  "sunAngle": 60,
+  "ambientList": "Morkhalla",
+  "music": {
+   "day": "deepnorth_morkhalla",
+   "evening": "-",
+   "morning": "-",
+   "night": "deepnorth_morkhalla"
+  },
+  "source": "_LocationList_DeepNorth"
+ },
+ "Queen": {
+  "name": "Queen",
+  "alwaysDark": true,
+  "rainCloudAlpha": 2,
+  "lightIntensityDay": 0.6000000238418579,
+  "lightIntensityNight": 0.6000000238418579,
+  "sunAngle": 90,
+  "music": {
+   "day": "boss_queen_ambience",
+   "evening": "boss_queen_ambience",
+   "morning": "boss_queen_ambience",
+   "night": "boss_queen_ambience"
+  },
+  "source": "_LocationList_Mistlands"
+ },
+ "Rain": {
+  "name": "Rain",
+  "wet": true,
+  "coldAtNight": true,
+  "alwaysDark": true,
+  "windMin": 0.5,
+  "windMax": 1,
+  "rainCloudAlpha": 2,
+  "particles": [
+   "GroundMist",
+   "Rain",
+   "FogClouds",
+   "OceanMist"
+  ],
+  "lightIntensityDay": 0.5,
+  "lightIntensityNight": 0.7699999809265137,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "Snow": {
+  "name": "Snow",
+  "freezing": true,
+  "windMin": 0.10000000149011612,
+  "windMax": 0.6000000238418579,
+  "rainCloudAlpha": 0.10000000149011612,
+  "particles": [
+   "Snow"
+  ],
+  "lightIntensityDay": 1.2000000476837158,
+  "lightIntensityNight": 0.4000000059604645,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "SnowStorm": {
+  "name": "SnowStorm",
+  "freezing": true,
+  "coldAtNight": true,
+  "windMin": 1.2999999523162842,
+  "windMax": 2,
+  "rainCloudAlpha": 2,
+  "particles": [
+   "SnowStorm"
+  ],
+  "lightIntensityDay": 0.699999988079071,
+  "lightIntensityNight": 0.20000000298023224,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "SunkenCrypt": {
+  "name": "SunkenCrypt",
+  "alwaysDark": true,
+  "particles": [
+   "InteriorDust"
+  ],
+  "sunAngle": 60,
+  "ambientList": "SunkenCrypt",
+  "music": {
+   "day": "-",
+   "evening": "-",
+   "morning": "-",
+   "night": "-"
+  },
+  "source": "_GameMain"
+ },
+ "SwampRain": {
+  "name": "SwampRain",
+  "wet": true,
+  "coldAtNight": true,
+  "alwaysDark": true,
+  "windMin": 0.10000000149011612,
+  "windMax": 0.30000001192092896,
+  "rainCloudAlpha": 2,
+  "particles": [
+   "LightRain",
+   "GroundMist"
+  ],
+  "lightIntensityDay": 0.6000000238418579,
+  "lightIntensityNight": 0.5,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "TheHollow": {
+  "name": "TheHollow",
+  "alwaysDark": true,
+  "sunAngle": 60,
+  "ambientList": "TheHollow",
+  "music": {
+   "day": "deepnorth_windingtunnels",
+   "evening": "-",
+   "morning": "-",
+   "night": "deepnorth_windingtunnels"
+  },
+  "source": "_LocationList_DeepNorth"
+ },
+ "ThunderStorm": {
+  "name": "ThunderStorm",
+  "wet": true,
+  "coldAtNight": true,
+  "alwaysDark": true,
+  "windMin": 0.800000011920929,
+  "windMax": 1,
+  "rainCloudAlpha": 2,
+  "particles": [
+   "Rain",
+   "GroundMist",
+   "FogClouds",
+   "OceanMist"
+  ],
+  "lightIntensityDay": 0.5,
+  "lightIntensityNight": 0.7699999809265137,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ },
+ "Twilight_Clear": {
+  "name": "Twilight_Clear",
+  "freezing": true,
+  "freezingAtNight": true,
+  "cold": true,
+  "coldAtNight": true,
+  "windMin": 0.20000000298023224,
+  "windMax": 0.6000000238418579,
+  "aurora": true,
+  "particles": [
+   "SlightSnow"
+  ],
+  "lightIntensityDay": 0.8999999761581421,
+  "lightIntensityNight": 0.30000001192092896,
+  "sunAngle": 45,
+  "source": "_LocationList_DeepNorth"
+ },
+ "Twilight_Snow": {
+  "name": "Twilight_Snow",
+  "freezing": true,
+  "freezingAtNight": true,
+  "cold": true,
+  "coldAtNight": true,
+  "snowBuildup": true,
+  "windMin": 0.30000001192092896,
+  "windMax": 0.6000000238418579,
+  "rainCloudAlpha": 0.4000000059604645,
+  "aurora": true,
+  "particles": [
+   "Snow"
+  ],
+  "lightIntensityDay": 0.5,
+  "lightIntensityNight": 0.30000001192092896,
+  "sunAngle": 20,
+  "source": "_LocationList_DeepNorth"
+ },
+ "Twilight_SnowStorm": {
+  "name": "Twilight_SnowStorm",
+  "freezing": true,
+  "freezingAtNight": true,
+  "cold": true,
+  "coldAtNight": true,
+  "snowBuildup": true,
+  "windMin": 1.5,
+  "windMax": 2,
+  "rainCloudAlpha": 1,
+  "aurora": true,
+  "particles": [
+   "SnowStorm"
+  ],
+  "lightIntensityDay": 0.4000000059604645,
+  "lightIntensityNight": 0.4000000059604645,
+  "sunAngle": 18,
+  "source": "_LocationList_DeepNorth"
+ },
+ "nofogts": {
+  "name": "nofogts",
+  "wet": true,
+  "coldAtNight": true,
+  "alwaysDark": true,
+  "windMin": 1,
+  "windMax": 1,
+  "rainCloudAlpha": 2,
+  "particles": [
+   "Rain",
+   "FogClouds",
+   "OceanMist"
+  ],
+  "lightIntensityDay": 0.5,
+  "lightIntensityNight": 0.7699999809265137,
+  "sunAngle": 45,
+  "source": "_GameMain"
+ }
+}

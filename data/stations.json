@@ -1,0 +1,130 @@
+{
+ "UpgradeStation": {
+  "prefab": "UpgradeStation",
+  "name": "Forge of Potential",
+  "icon": true,
+  "upgrader": true,
+  "canRepair": true,
+  "skill": "Crafting",
+  "maxLevel": 1
+ },
+ "blackforge": {
+  "prefab": "blackforge",
+  "name": "Black Forge",
+  "icon": true,
+  "requireRoof": true,
+  "canRepair": true,
+  "skill": "Crafting",
+  "extensions": [
+   "blackforge_ext1",
+   "blackforge_ext2_vise",
+   "blackforge_ext3_metalcutter",
+   "blackforge_ext4_gemcutter",
+   "blackforge_ext5_apron"
+  ],
+  "maxLevel": 6
+ },
+ "forge": {
+  "prefab": "forge",
+  "name": "Forge",
+  "icon": true,
+  "requireRoof": true,
+  "canRepair": true,
+  "skill": "Crafting",
+  "extensions": [
+   "forge_ext1",
+   "forge_ext2",
+   "forge_ext3",
+   "forge_ext4",
+   "forge_ext5",
+   "forge_ext6"
+  ],
+  "maxLevel": 7
+ },
+ "piece_MeadCauldron": {
+  "prefab": "piece_MeadCauldron",
+  "name": "Mead Ketill",
+  "icon": true,
+  "requireFire": true,
+  "canRepair": true,
+  "skill": "Cooking",
+  "maxLevel": 1
+ },
+ "piece_artisanstation": {
+  "prefab": "piece_artisanstation",
+  "name": "Artisan Table",
+  "icon": true,
+  "requireRoof": true,
+  "canRepair": true,
+  "skill": "Crafting",
+  "extensions": [
+   "artisan_ext1"
+  ],
+  "maxLevel": 2
+ },
+ "piece_cauldron": {
+  "prefab": "piece_cauldron",
+  "name": "Cauldron",
+  "icon": true,
+  "requireFire": true,
+  "canRepair": true,
+  "skill": "Cooking",
+  "extensions": [
+   "cauldron_ext1_spice",
+   "cauldron_ext3_butchertable",
+   "cauldron_ext4_pots",
+   "cauldron_ext5_mortarandpestle",
+   "cauldron_ext6_rollingpins",
+   "cauldron_ext7_smoker"
+  ],
+  "maxLevel": 7
+ },
+ "piece_magetable": {
+  "prefab": "piece_magetable",
+  "name": "Galdr Table",
+  "icon": true,
+  "requireRoof": true,
+  "canRepair": true,
+  "skill": "Crafting",
+  "extensions": [
+   "piece_magetable_ext",
+   "piece_magetable_ext2",
+   "piece_magetable_ext3",
+   "piece_magetable_ext4"
+  ],
+  "maxLevel": 5
+ },
+ "piece_preptable": {
+  "prefab": "piece_preptable",
+  "name": "Food Preparation Table",
+  "icon": true,
+  "requireRoof": true,
+  "canRepair": true,
+  "skill": "Cooking",
+  "maxLevel": 1
+ },
+ "piece_stonecutter": {
+  "prefab": "piece_stonecutter",
+  "name": "Stonecutter",
+  "icon": true,
+  "requireRoof": true,
+  "canRepair": true,
+  "skill": "Crafting",
+  "maxLevel": 1
+ },
+ "piece_workbench": {
+  "prefab": "piece_workbench",
+  "name": "Workbench",
+  "icon": true,
+  "requireRoof": true,
+  "canRepair": true,
+  "skill": "Crafting",
+  "extensions": [
+   "piece_workbench_ext1",
+   "piece_workbench_ext2",
+   "piece_workbench_ext3",
+   "piece_workbench_ext4"
+  ],
+  "maxLevel": 5
+ }
+}

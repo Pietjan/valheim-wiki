@@ -1,0 +1,887 @@
+[
+ {
+  "name": "Mushroom",
+  "enabled": true,
+  "biome": "meadows,black-forest",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 500,
+  "minEdge": 66,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "addVegetation": [
+   "pickable_mushroom1",
+   "pickable_mushroom2"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Lantern",
+  "enabled": true,
+  "biome": "meadows,black-forest,swamp,mountain,plains,mistlands,deep-north",
+  "chance": 0.20000000298023224,
+  "minAmount": 3,
+  "maxAmount": 5,
+  "minDistanceFromCenter": 500,
+  "minEdge": 66,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "addVegetation": [
+   "lost_lantern"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Bones",
+  "enabled": true,
+  "biome": "swamp,plains,mistlands",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 2000,
+  "minEdge": 66,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "spawns": [
+   "altbiome:Bones/0"
+  ],
+  "addVegetation": [
+   "large_bones",
+   "large_bones_half01",
+   "large_bones_half02"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Menhir",
+  "enabled": true,
+  "biome": "meadows,plains",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 750,
+  "incompatible": [
+   "Birch Meadows"
+  ],
+  "minEdge": 33,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "spawns": [
+   "altbiome:Menhir/0",
+   "altbiome:Menhir/1"
+  ],
+  "addVegetation": [
+   "rock_7_meadows"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Dark Meadows",
+  "enabled": true,
+  "biome": "meadows",
+  "chance": 0.5,
+  "minAmount": 2,
+  "maxAmount": 5,
+  "minDistanceFromCenter": 1900,
+  "minEdge": 66,
+  "maxEdge": 299,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 2,
+  "blockEnvironments": [
+   "Clear",
+   "LightRain",
+   "DeepForest Mist"
+  ],
+  "spawns": [
+   "altbiome:Dark Meadows/0",
+   "altbiome:Dark Meadows/1"
+  ],
+  "addLocations": [
+   "WoodVillage1"
+  ],
+  "blockLocations": [
+   "WoodFarm1"
+  ],
+  "baseHeightMultiplier": 0.800000011920929,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Peaceful Meadows",
+  "enabled": true,
+  "biome": "meadows",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 2,
+  "minDistanceFromCenter": 1000,
+  "incompatible": [
+   "Bones",
+   "Dark Meadows"
+  ],
+  "minEdge": 99,
+  "maxEdge": 299,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "spawns": [
+   "altbiome:Peaceful Meadows/0",
+   "altbiome:Peaceful Meadows/1",
+   "altbiome:Peaceful Meadows/2"
+  ],
+  "blockSpawns": [
+   "Greyling",
+   "Greydwarf",
+   "Skeleton",
+   "Skeleton_Poison",
+   "Draugr",
+   "Draugr_Elite",
+   "Greydwarf_Shaman",
+   "Greydwarf_Elite",
+   "Neck",
+   "Troll",
+   "Bjorn"
+  ],
+  "addVegetation": [
+   "fireflies"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Dandelion Meadows",
+  "enabled": true,
+  "biome": "meadows",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 500,
+  "minEdge": 66,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "addVegetation": [
+   "pickable_dandelion2",
+   "pickable_dandelion3"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Raspberry Meadows",
+  "enabled": true,
+  "biome": "meadows",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 500,
+  "minEdge": 66,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "addVegetation": [
+   "raspberry_bush2"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Smalltree Meadows",
+  "enabled": true,
+  "biome": "meadows",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 500,
+  "minEdge": 33,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "spawns": [
+   "altbiome:Smalltree Meadows/0",
+   "altbiome:Smalltree Meadows/1"
+  ],
+  "addVegetation": [
+   "beech_small3_meadows",
+   "beech_small4_meadows",
+   "stubbe2_meadows",
+   "bush02_meadows",
+   "shrub_3_meadows",
+   "beech2_meadows"
+  ],
+  "blockVegetation": [
+   "beech1_meadows",
+   "birch1_meadows",
+   "birch2_meadows"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Birch Meadows",
+  "enabled": true,
+  "biome": "meadows",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 500,
+  "minEdge": 66,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "spawns": [
+   "altbiome:Birch Meadows/0"
+  ],
+  "addVegetation": [
+   "birch1_meadows2",
+   "birch2_meadows2",
+   "beech5_meadows",
+   "oak2_meadows"
+  ],
+  "blockVegetation": [
+   "beech1_meadows"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Troll Black Forest",
+  "enabled": true,
+  "biome": "black-forest",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 750,
+  "minEdge": 66,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "spawns": [
+   "altbiome:Troll Black Forest/0"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Root Black Forest",
+  "enabled": true,
+  "biome": "black-forest",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 4,
+  "minDistanceFromCenter": 2000,
+  "incompatible": [
+   "Rock Black Forest",
+   "Kalhygge Black Forest"
+  ],
+  "minEdge": 99,
+  "maxEdge": 299,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "spawns": [
+   "altbiome:Root Black Forest/0",
+   "altbiome:Root Black Forest/1"
+  ],
+  "blockSpawns": [
+   "Skeleton"
+  ],
+  "addVegetation": [
+   "Greydwarf_root1",
+   "Greydwarf_Surprise"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Ruin Black Forest",
+  "enabled": true,
+  "biome": "black-forest",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 5,
+  "minDistanceFromCenter": 500,
+  "minEdge": 33,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "addVegetation": [
+   "stone_wall_2x1_ruin",
+   "stone_wall_1x1_ruin",
+   "stone_wall_ruin",
+   "stone_wall_ruin_2",
+   "ghostskull"
+  ],
+  "addLocations": [
+   "StoneTowerRuins09",
+   "StoneTowerRuins09",
+   "StoneTowerRuins09",
+   "StoneTowerRuins09"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Rock Black Forest",
+  "enabled": true,
+  "biome": "black-forest",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 5,
+  "minDistanceFromCenter": 750,
+  "incompatible": [
+   "Pinetree Black Forest",
+   "Root Black Forest"
+  ],
+  "minEdge": 33,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 2,
+  "addVegetation": [
+   "rock4_blackforest",
+   "rock_3_blackforest",
+   "rock_4_blackforest",
+   "firtree_small_blackforest2",
+   "stubbe_blackforest",
+   "firtree_blackforest2"
+  ],
+  "blockVegetation": [
+   "firtree_many_blackforest",
+   "Pinetree_01_blackforest",
+   "firtree_blackforest"
+  ],
+  "blockLocations": [
+   "TrollCave02"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Pinetree Black Forest",
+  "enabled": true,
+  "biome": "black-forest",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 5,
+  "minDistanceFromCenter": 750,
+  "incompatible": [
+   "Rock Black Forest"
+  ],
+  "minEdge": 33,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 2,
+  "addVegetation": [
+   "Pinetree_01_blackforest"
+  ],
+  "blockVegetation": [
+   "firtree_blackforest",
+   "firtree_many_blackforest",
+   "firtree_small_blackforest"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Blueberry Black Forest",
+  "enabled": true,
+  "biome": "black-forest",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 5,
+  "minDistanceFromCenter": 500,
+  "minEdge": 33,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "addVegetation": [
+   "blueberry_bush1"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Hut Swamp",
+  "enabled": true,
+  "biome": "swamp",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 1500,
+  "incompatible": [
+   "Bog Swamp"
+  ],
+  "minEdge": 33,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "spawns": [
+   "altbiome:Hut Swamp/0"
+  ],
+  "addVegetation": [
+   "swamptree3",
+   "swamptree4",
+   "wooden_path",
+   "wood pole log 4"
+  ],
+  "blockVegetation": [
+   "swamptree1",
+   "swamptree2"
+  ],
+  "addLocations": [
+   "SwampHut1",
+   "SwampHut1",
+   "SwampHut1"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Bog Swamp",
+  "enabled": true,
+  "biome": "swamp",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 5,
+  "minDistanceFromCenter": 1500,
+  "minEdge": 33,
+  "maxEdge": 145,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "spawns": [
+   "altbiome:Bog Swamp/0"
+  ],
+  "addVegetation": [
+   "statue_evil_swamp",
+   "swamptree2_log",
+   "firtree_small_dead_swamp",
+   "swamptree5",
+   "swamptree6"
+  ],
+  "blockVegetation": [
+   "swamptree1",
+   "swamptree2"
+  ],
+  "blockLocations": [
+   "InfestedTree01"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Bat Swamp",
+  "enabled": true,
+  "biome": "swamp",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 2000,
+  "minEdge": 33,
+  "maxEdge": 145,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "spawns": [
+   "altbiome:Bat Swamp/0"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Abomination Swamp",
+  "enabled": true,
+  "biome": "swamp",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 2000,
+  "minEdge": 66,
+  "maxEdge": 145,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "spawns": [
+   "altbiome:Abomination Swamp/0"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Wolf Mountain",
+  "enabled": true,
+  "biome": "mountain",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 5,
+  "minDistanceFromCenter": 2000,
+  "incompatible": [
+   "Drake Mountain",
+   "Fortress Mountain"
+  ],
+  "minEdge": 199,
+  "maxEdge": 299,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 2,
+  "spawns": [
+   "altbiome:Wolf Mountain/0"
+  ],
+  "blockSpawns": [
+   "Skeleton",
+   "Hatchling"
+  ],
+  "addVegetation": [
+   "firtree_mountain2"
+  ],
+  "blockVegetation": [
+   "rock1_mountain",
+   "rock2_mountain"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Drake Mountain",
+  "enabled": true,
+  "biome": "mountain",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 2000,
+  "incompatible": [
+   "Wolf Mountain",
+   "Fortress Mountain"
+  ],
+  "minEdge": 199,
+  "maxEdge": 299,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 2,
+  "spawns": [
+   "altbiome:Drake Mountain/0"
+  ],
+  "blockSpawns": [
+   "Wolf",
+   "Skeleton"
+  ],
+  "addVegetation": [
+   "rock3_mountain_1"
+  ],
+  "blockVegetation": [
+   "firtree_mountain"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Fortress Mountain",
+  "enabled": true,
+  "biome": "mountain",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 2,
+  "minDistanceFromCenter": 2000,
+  "incompatible": [
+   "Wolf Mountain",
+   "Drake Mountain"
+  ],
+  "minEdge": 199,
+  "maxEdge": 299,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 3,
+  "spawns": [
+   "altbiome:Fortress Mountain/0",
+   "altbiome:Fortress Mountain/1"
+  ],
+  "addVegetation": [
+   "stone_wall_ruin",
+   "stone_wall_ruin_2",
+   "rock3_mountain_2"
+  ],
+  "blockVegetation": [
+   "firtree_mountain"
+  ],
+  "addLocations": [
+   "StoneTowerRuins05"
+  ],
+  "blockLocations": [
+   "StoneTowerRuins05"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Lox Plains",
+  "enabled": true,
+  "biome": "plains",
+  "chance": 0.20000000298023224,
+  "minAmount": 0,
+  "maxAmount": 1,
+  "minDistanceFromCenter": 2000,
+  "incompatible": [
+   "Goblin Plains",
+   "Death Plains"
+  ],
+  "minEdge": 99,
+  "maxEdge": 299,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "spawns": [
+   "altbiome:Lox Plains/0"
+  ],
+  "blockSpawns": [
+   "Goblin"
+  ],
+  "blockVegetation": [
+   "birch2_aut_heath"
+  ],
+  "blockLocations": [
+   "GoblinCamp2",
+   "StoneTower1",
+   "StoneTower3"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Goblin Plains",
+  "enabled": true,
+  "biome": "plains",
+  "chance": 0.20000000298023224,
+  "minAmount": 0,
+  "maxAmount": 2,
+  "minDistanceFromCenter": 2000,
+  "incompatible": [
+   "Lox Plains",
+   "Death Plains"
+  ],
+  "minEdge": 66,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 2,
+  "spawns": [
+   "altbiome:Goblin Plains/0"
+  ],
+  "blockSpawns": [
+   "Lox",
+   "Deathsquito"
+  ],
+  "addLocations": [
+   "GoblinCamp2",
+   "WoodHouse1",
+   "WoodHouse1",
+   "WoodHouse1"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Death Plains",
+  "enabled": true,
+  "biome": "plains",
+  "chance": 0.20000000298023224,
+  "minAmount": 0,
+  "maxAmount": 1,
+  "minDistanceFromCenter": 1000,
+  "incompatible": [
+   "Lox Plains",
+   "Goblin Plains"
+  ],
+  "minEdge": 99,
+  "maxEdge": 299,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 2,
+  "spawns": [
+   "altbiome:Death Plains/0"
+  ],
+  "blockSpawns": [
+   "Lox",
+   "Goblin"
+  ],
+  "blockVegetation": [
+   "birch2_aut_heath",
+   "heathrockpillar"
+  ],
+  "addLocations": [
+   "TarPit1",
+   "TarPit2",
+   "TarPit3"
+  ],
+  "blockLocations": [
+   "GoblinCamp2",
+   "StoneTower1",
+   "StoneTower3",
+   "StoneHenge1",
+   "StoneHenge2",
+   "StoneHenge3"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Kalhygge Black Forest",
+  "enabled": true,
+  "biome": "black-forest",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 2,
+  "minDistanceFromCenter": 500,
+  "incompatible": [
+   "Root Black Forest"
+  ],
+  "minEdge": 20,
+  "maxEdge": 80,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "addVegetation": [
+   "stubbe many",
+   "stubbe pine many"
+  ],
+  "blockVegetation": [
+   "firtree_many_blackforest",
+   "firtree_blackforest",
+   "Pinetree_01_blackforest",
+   "firtree_small_blackforest"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Rockless Mistlands",
+  "enabled": true,
+  "biome": "mistlands",
+  "chance": 0.20000000298023224,
+  "minAmount": 2,
+  "maxAmount": 5,
+  "minDistanceFromCenter": 2000,
+  "minEdge": 99,
+  "maxEdge": 599,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "addVegetation": [
+   "cliff_mistlands3",
+   "cliff_mistlands4",
+   "rock_mistlands3",
+   "YggaShoot_small3"
+  ],
+  "blockVegetation": [
+   "cliff_mistlands1",
+   "cliff_mistlands2",
+   "rock_mistlands1"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Trees Mistlands",
+  "enabled": true,
+  "biome": "mistlands",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 5,
+  "minDistanceFromCenter": 2000,
+  "minEdge": 59,
+  "maxEdge": 299,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "addVegetation": [
+   "YggaShoot4",
+   "YggaShoot_small2",
+   "ygga root2"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Swords Mistlands",
+  "enabled": true,
+  "biome": "mistlands",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 2000,
+  "minEdge": 59,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "addVegetation": [
+   "giant_sword1_sea",
+   "giant_sword2_sea",
+   "giant_sword3",
+   "giant_sword4",
+   "giant_helmet3",
+   "giant_helmet4"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "Hare Mistlands",
+  "enabled": true,
+  "biome": "mistlands",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 2000,
+  "minEdge": 59,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "spawns": [
+   "altbiome:Hare Mistlands/0"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ },
+ {
+  "name": "BroodSwarm Mistlands",
+  "enabled": true,
+  "biome": "mistlands",
+  "chance": 0.20000000298023224,
+  "minAmount": 1,
+  "maxAmount": 3,
+  "minDistanceFromCenter": 2000,
+  "minEdge": 59,
+  "maxEdge": 199,
+  "minAvgHeight": 30,
+  "maxAvgHeight": 10000,
+  "levelUpMultiplier": 1,
+  "spawns": [
+   "altbiome:BroodSwarm Mistlands/0"
+  ],
+  "baseHeightMultiplier": 1,
+  "heightMapMultiplier": 1
+ }
+]

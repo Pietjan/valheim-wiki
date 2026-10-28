@@ -1,0 +1,1361 @@
+{
+ "BogWitch_Fire_Pit": {
+  "prefab": "BogWitch_Fire_Pit",
+  "name": "Campfire",
+  "kind": "fireplace",
+  "fuel": "Wood",
+  "secPerFuel": 5000,
+  "startFuel": 10,
+  "infiniteFuel": true
+ },
+ "Candle_resin": {
+  "prefab": "Candle_resin",
+  "name": "Resin Candle",
+  "kind": "fireplace",
+  "fuel": "Resin",
+  "secPerFuel": 5000,
+  "startFuel": 3
+ },
+ "FeastAshlands": {
+  "prefab": "FeastAshlands",
+  "name": "Ashlands Gourmet Bowl",
+  "kind": "feast",
+  "maxProduct": 10
+ },
+ "FeastBlackforest": {
+  "prefab": "FeastBlackforest",
+  "name": "Black Forest Buffet Platter",
+  "kind": "feast",
+  "maxProduct": 10
+ },
+ "FeastDeepNorth": {
+  "prefab": "FeastDeepNorth",
+  "name": "Northern Morning Fare",
+  "kind": "feast",
+  "maxProduct": 10
+ },
+ "FeastMeadows": {
+  "prefab": "FeastMeadows",
+  "name": "Whole Roasted Meadow Boar",
+  "kind": "feast",
+  "maxProduct": 10
+ },
+ "FeastMistlands": {
+  "prefab": "FeastMistlands",
+  "name": "Mushrooms Galore á la Mistlands",
+  "kind": "feast",
+  "maxProduct": 10
+ },
+ "FeastMountains": {
+  "prefab": "FeastMountains",
+  "name": "Hearty Mountain Logger's Stew",
+  "kind": "feast",
+  "maxProduct": 10
+ },
+ "FeastOceans": {
+  "prefab": "FeastOceans",
+  "name": "Sailor's Bounty",
+  "kind": "feast",
+  "maxProduct": 10
+ },
+ "FeastPlains": {
+  "prefab": "FeastPlains",
+  "name": "Plains Pie Picnic",
+  "kind": "feast",
+  "maxProduct": 10
+ },
+ "FeastSwamps": {
+  "prefab": "FeastSwamps",
+  "name": "Swamp Dweller's Delight",
+  "kind": "feast",
+  "maxProduct": 10
+ },
+ "Morkhalla_firepit": {
+  "prefab": "Morkhalla_firepit",
+  "name": "Campfire",
+  "kind": "fireplace",
+  "fuel": "Wood",
+  "secPerFuel": 5000,
+  "startFuel": 10,
+  "infiniteFuel": true
+ },
+ "blastfurnace": {
+  "prefab": "blastfurnace",
+  "name": "Blast Furnace",
+  "kind": "smelter",
+  "fuel": "Coal",
+  "fuelPerItem": 2,
+  "secPerItem": 30,
+  "maxInput": 10,
+  "maxFuel": 20,
+  "conversions": [
+   {
+    "from": "FlametalOreNew",
+    "to": "FlametalNew"
+   },
+   {
+    "from": "BlackMetalScrap",
+    "to": "BlackMetal"
+   },
+   {
+    "from": "FlametalOreNew",
+    "to": "FlametalNew"
+   },
+   {
+    "from": "GoldOre",
+    "to": "Gold"
+   }
+  ]
+ },
+ "bonfire": {
+  "prefab": "bonfire",
+  "name": "Bonfire",
+  "kind": "fireplace",
+  "fuel": "Wood",
+  "secPerFuel": 5000
+ },
+ "charcoal_kiln": {
+  "prefab": "charcoal_kiln",
+  "name": "Charcoal Kiln",
+  "kind": "smelter",
+  "secPerItem": 15,
+  "maxInput": 25,
+  "conversions": [
+   {
+    "from": "Wood",
+    "to": "Coal"
+   },
+   {
+    "from": "FineWood",
+    "to": "Coal"
+   },
+   {
+    "from": "RoundLog",
+    "to": "Coal"
+   }
+  ]
+ },
+ "charred_shieldgenerator": {
+  "prefab": "charred_shieldgenerator",
+  "name": "Shield Generator",
+  "kind": "shield",
+  "maxFuel": 10,
+  "notes": [
+   "Radius 30-30 m",
+   "0.002 fuel per point of damage absorbed"
+  ]
+ },
+ "eitrrefinery": {
+  "prefab": "eitrrefinery",
+  "name": "Eitr Refinery",
+  "kind": "smelter",
+  "fuel": "Sap",
+  "fuelPerItem": 1,
+  "secPerItem": 40,
+  "maxInput": 20,
+  "maxFuel": 20,
+  "conversions": [
+   {
+    "from": "Softtissue",
+    "to": "Eitr"
+   }
+  ]
+ },
+ "fermenter": {
+  "prefab": "fermenter",
+  "name": "Fermenter",
+  "kind": "fermenter",
+  "requiresRoof": true,
+  "duration": 2400,
+  "conversions": [
+   {
+    "from": "MeadBaseHealthMinor",
+    "to": "MeadHealthMinor",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseHealthMedium",
+    "to": "MeadHealthMedium",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseStaminaMinor",
+    "to": "MeadStaminaMinor",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseStaminaMedium",
+    "to": "MeadStaminaMedium",
+    "amount": 6
+   },
+   {
+    "from": "MeadBasePoisonResist",
+    "to": "MeadPoisonResist",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseFrostResist",
+    "to": "MeadFrostResist",
+    "amount": 6
+   },
+   {
+    "from": "BarleyWineBase",
+    "to": "BarleyWine",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseTasty",
+    "to": "MeadTasty",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseHealthMajor",
+    "to": "MeadHealthMajor",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseStaminaLingering",
+    "to": "MeadStaminaLingering",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseEitrMinor",
+    "to": "MeadEitrMinor",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseEitrLingering",
+    "to": "MeadEitrLingering",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseHealthLingering",
+    "to": "MeadHealthLingering",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseBzerker",
+    "to": "MeadBzerker",
+    "amount": 3
+   },
+   {
+    "from": "MeadBaseStrength",
+    "to": "MeadStrength",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseHasty",
+    "to": "MeadHasty",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseLightFoot",
+    "to": "MeadLightfoot",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseSwimmer",
+    "to": "MeadSwimmer",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseTamer",
+    "to": "MeadTamer",
+    "amount": 6
+   },
+   {
+    "from": "MeadBaseBugRepellent",
+    "to": "MeadBugRepellent",
+    "amount": 6
+   }
+  ]
+ },
+ "fire_pit": {
+  "prefab": "fire_pit",
+  "name": "Campfire",
+  "kind": "fireplace",
+  "fuel": "Wood",
+  "secPerFuel": 5000,
+  "startFuel": 1
+ },
+ "fire_pit_haldor": {
+  "prefab": "fire_pit_haldor",
+  "name": "Campfire",
+  "kind": "fireplace",
+  "fuel": "Wood",
+  "secPerFuel": 5000,
+  "startFuel": 10,
+  "infiniteFuel": true
+ },
+ "fire_pit_hildir": {
+  "prefab": "fire_pit_hildir",
+  "name": "Campfire",
+  "kind": "fireplace",
+  "fuel": "Wood",
+  "secPerFuel": 5000,
+  "startFuel": 10,
+  "infiniteFuel": true
+ },
+ "fire_pit_iron": {
+  "prefab": "fire_pit_iron",
+  "name": "Iron Fire Pit",
+  "kind": "fireplace",
+  "fuel": "Wood",
+  "secPerFuel": 5000,
+  "startFuel": 1
+ },
+ "fuling_trap": {
+  "prefab": "fuling_trap",
+  "name": "Trap",
+  "kind": "trap",
+  "secPerItem": 5,
+  "notes": [
+   "Triggered by players"
+  ]
+ },
+ "fuling_turret": {
+  "prefab": "fuling_turret",
+  "name": "Ballista",
+  "kind": "turret",
+  "fuels": [
+   "TurretBolt",
+   "TurretBoltWood"
+  ],
+  "maxFuel": 40,
+  "notes": [
+   "Fires every 2.0 s, range 30 m"
+  ]
+ },
+ "hearth": {
+  "prefab": "hearth",
+  "name": "Hearth",
+  "kind": "fireplace",
+  "fuel": "Wood",
+  "secPerFuel": 5000
+ },
+ "incinerator": {
+  "prefab": "incinerator",
+  "name": "Obliterator",
+  "kind": "incinerator",
+  "incinerations": [
+   {
+    "requirements": [
+     {
+      "item": "TrophyBlob",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyBoar",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyBonemass",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyDeathsquito",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyDeer",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyDragonQueen",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyDraugr",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyDraugrElite",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyDraugrFem",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyEikthyr",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyFenring",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyForestTroll",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyFrostTroll",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyGoblin",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyGoblinBrute",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyGoblinKing",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyGoblinShaman",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyHatchling",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyLeech",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyLox",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyNeck",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophySerpent",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophySGolem",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophySkeleton",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophySkeletonPoison",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophySurtling",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyTheElder",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyWolf",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyWraith",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyGreydwarf",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyGreydwarfBrute",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyGreydwarfShaman",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyGrowth",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyUlv",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyCultist",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyAbomination",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyTick",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophySeeker",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophySeekerBrute",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyGjall",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyDvergr",
+      "amount": 1,
+      "recover": false
+     },
+     {
+      "item": "TrophyHare",
+      "amount": 1,
+      "recover": false
+     }
+    ],
+    "result": "Coal",
+    "amount": 1,
+    "priority": 1,
+    "oneOf": true
+   },
+   {
+    "requirements": [
+     {
+      "item": "ArrowBronze",
+      "amount": 20,
+      "recover": false
+     },
+     {
+      "item": "ArrowFire",
+      "amount": 20,
+      "recover": false
+     },
+     {
+      "item": "ArrowFlint",
+      "amount": 20,
+      "recover": false
+     },
+     {
+      "item": "ArrowFrost",
+      "amount": 20,
+      "recover": false
+     },
+     {
+      "item": "ArrowIron",
+      "amount": 20,
+      "recover": false
+     },
+     {
+      "item": "ArrowNeedle",
+      "amount": 20,
+      "recover": false
+     },
+     {
+      "item": "ArrowObsidian",
+      "amount": 20,
+      "recover": false
+     },
+     {
+      "item": "ArrowPoison",
+      "amount": 20,
+      "recover": false
+     },
+     {
+      "item": "ArrowSilver",
+      "amount": 20,
+      "recover": false
+     },
+     {
+      "item": "ArrowWood",
+      "amount": 20,
+      "recover": false
+     },
+     {
+      "item": "ArrowCarapace",
+      "amount": 20,
+      "recover": false
+     },
+     {
+      "item": "BoltBone",
+      "amount": 20,
+      "recover": false
+     },
+     {
+      "item": "BoltBlackmetal",
+      "amount": 20,
+      "recover": false
+     },
+     {
+      "item": "BoltCarapace",
+      "amount": 20,
+      "recover": false
+     }
+    ],
+    "result": "Coal",
+    "amount": 1,
+    "priority": 1,
+    "oneOf": true
+   },
+   {
+    "requirements": [
+     {
+      "item": "Wood",
+      "amount": 5,
+      "recover": false
+     },
+     {
+      "item": "ElderBark",
+      "amount": 5,
+      "recover": false
+     },
+     {
+      "item": "FineWood",
+      "amount": 5,
+      "recover": false
+     },
+     {
+      "item": "RoundLog",
+      "amount": 5,
+      "recover": false
+     },
+     {
+      "item": "YggdrasilWood",
+      "amount": 5,
+      "recover": false
+     }
+    ],
+    "result": "Coal",
+    "amount": 1,
+    "oneOf": true
+   }
+  ],
+  "defaultResult": "Coal",
+  "defaultCost": 10
+ },
+ "piece_Charred_Balista": {
+  "prefab": "piece_Charred_Balista",
+  "name": "Skugg",
+  "kind": "turret",
+  "fuel": "TurretBoltBone",
+  "fuels": [
+   "TurretBoltBone"
+  ],
+  "notes": [
+   "Fires every 2.0 s, range 40 m"
+  ]
+ },
+ "piece_EternalPyre": {
+  "prefab": "piece_EternalPyre",
+  "name": "Eternal Pyre",
+  "kind": "wisp",
+  "secPerItem": 5,
+  "product": "LuredFaderEmber",
+  "maxProduct": 3,
+  "notes": [
+   "50% chance per interval",
+   "Needs less than 60% cover"
+  ]
+ },
+ "piece_FaderEmbers": {
+  "prefab": "piece_FaderEmbers",
+  "name": "Eternal Pyre",
+  "kind": "wisp",
+  "secPerItem": 5,
+  "product": "LuredFaderEmber",
+  "maxProduct": 3,
+  "notes": [
+   "50% chance per interval",
+   "Needs less than 60% cover"
+  ]
+ },
+ "piece_FrostFoundry": {
+  "prefab": "piece_FrostFoundry",
+  "name": "Frost Foundry",
+  "kind": "cooking",
+  "fuel": "FrozenFuel",
+  "secPerFuel": 10,
+  "maxFuel": 20,
+  "conversions": [
+   {
+    "from": "SwordGoldUncooked",
+    "to": "SwordGold",
+    "time": 50
+   },
+   {
+    "from": "AtgeirGoldUncooked",
+    "to": "AtgeirGold",
+    "time": 50
+   },
+   {
+    "from": "BattleaxeGoldUncooked",
+    "to": "BattleaxeGold",
+    "time": 50
+   },
+   {
+    "from": "AxeGoldUncooked",
+    "to": "AxeGold",
+    "time": 50
+   },
+   {
+    "from": "BowGoldUncooked",
+    "to": "BowGold",
+    "time": 50
+   },
+   {
+    "from": "CrossbowGoldUncooked",
+    "to": "CrossbowGold",
+    "time": 50
+   },
+   {
+    "from": "FistGoldUncooked",
+    "to": "FistGold",
+    "time": 50
+   },
+   {
+    "from": "KnifeGoldUncooked",
+    "to": "KnifeGold",
+    "time": 50
+   },
+   {
+    "from": "SledgeGoldUncooked",
+    "to": "SledgeGold",
+    "time": 50
+   },
+   {
+    "from": "MaceGoldUncooked",
+    "to": "MaceGold",
+    "time": 50
+   },
+   {
+    "from": "SpearGoldUncooked",
+    "to": "SpearGold",
+    "time": 50
+   },
+   {
+    "from": "THSwordGoldUncooked",
+    "to": "THSwordGold",
+    "time": 50
+   },
+   {
+    "from": "ArmorGoldHeavyChestUncooked",
+    "to": "ArmorDeepNorthHeavyChest",
+    "time": 50
+   },
+   {
+    "from": "ArmorGoldHeavyLegsUncooked",
+    "to": "ArmorDeepNorthHeavylegs",
+    "time": 50
+   },
+   {
+    "from": "ArmorGoldHeavyHelmetUncooked",
+    "to": "HelmetDNHeavy",
+    "time": 50
+   },
+   {
+    "from": "ArmorGoldMediumHelmetUncooked",
+    "to": "HelmetDNMediumHood",
+    "time": 50
+   },
+   {
+    "from": "ArmorGoldMediumChestUncooked",
+    "to": "ArmorDeepNorthMediumChest",
+    "time": 50
+   },
+   {
+    "from": "ArmorGoldMediumLegsUncooked",
+    "to": "ArmorDeepNorthMediumlegs",
+    "time": 50
+   },
+   {
+    "from": "ArmorGoldMageLegsUncooked",
+    "to": "ArmorDeepNorthMagelegs",
+    "time": 50
+   },
+   {
+    "from": "ArmorGoldMageChestUncooked",
+    "to": "ArmorDeepNorthMageChest",
+    "time": 50
+   },
+   {
+    "from": "ArmorGoldMageHelmetUncooked",
+    "to": "HelmetDNMage",
+    "time": 50
+   },
+   {
+    "from": "ShieldBucklerGoldUncooked",
+    "to": "ShieldGoldBuckler",
+    "time": 50
+   },
+   {
+    "from": "ShieldRoundGoldUncooked",
+    "to": "ShieldGold",
+    "time": 50
+   },
+   {
+    "from": "ShieldTowerGoldUncooked",
+    "to": "ShieldGoldTower",
+    "time": 50
+   },
+   {
+    "from": "KeysGoldUncooked",
+    "to": "BloodGoldKey",
+    "time": 50
+   },
+   {
+    "from": "StaffSpiritCallerUncooked",
+    "to": "StaffSpiritCaller",
+    "time": 50
+   },
+   {
+    "from": "StaffSpiritCallerUncooked",
+    "to": "StaffSpiritCaller",
+    "time": 50
+   },
+   {
+    "from": "StaffOrbofAhriUncooked",
+    "to": "StaffOrbofAhri",
+    "time": 50
+   },
+   {
+    "from": "StaffFrostOrbsUncooked",
+    "to": "StaffFrostOrbs",
+    "time": 50
+   },
+   {
+    "from": "StaffThunderbloodUncooked",
+    "to": "StaffThunderBlood",
+    "time": 50
+   }
+  ]
+ },
+ "piece_FrostKiln": {
+  "prefab": "piece_FrostKiln",
+  "name": "Frigid Kiln",
+  "kind": "smelter",
+  "fuel": "Ice",
+  "fuelPerItem": 5,
+  "secPerItem": 30,
+  "maxFuel": 25,
+  "conversions": [
+   {
+    "from": "",
+    "to": "FrozenFuel"
+   }
+  ]
+ },
+ "piece_bathtub": {
+  "prefab": "piece_bathtub",
+  "name": "Hot Tub",
+  "kind": "smelter",
+  "fuel": "Wood",
+  "fuelPerItem": 1,
+  "secPerItem": 5000,
+  "maxFuel": 10
+ },
+ "piece_beehive": {
+  "prefab": "piece_beehive",
+  "name": "Beehive",
+  "kind": "beehive",
+  "secPerItem": 1200,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "plains"
+  ],
+  "product": "Honey",
+  "maxProduct": 4,
+  "notes": [
+   "Needs less than 60% cover",
+   "Works in daylight only"
+  ]
+ },
+ "piece_birdnest": {
+  "prefab": "piece_birdnest",
+  "name": "Birds' Nest",
+  "kind": "beehive",
+  "secPerItem": 1200,
+  "biomes": [
+   "meadows",
+   "black-forest",
+   "plains"
+  ],
+  "product": "Feathers",
+  "maxProduct": 4,
+  "notes": [
+   "Needs less than 60% cover",
+   "Works in daylight only"
+  ]
+ },
+ "piece_brazierceiling01": {
+  "prefab": "piece_brazierceiling01",
+  "name": "Hanging Brazier",
+  "kind": "fireplace",
+  "fuel": "Coal",
+  "secPerFuel": 20000,
+  "startFuel": 1
+ },
+ "piece_brazierfloor01": {
+  "prefab": "piece_brazierfloor01",
+  "name": "Standing Brazier",
+  "kind": "fireplace",
+  "fuel": "Coal",
+  "secPerFuel": 20000,
+  "startFuel": 1
+ },
+ "piece_brazierfloor02": {
+  "prefab": "piece_brazierfloor02",
+  "name": "Blue Standing Brazier",
+  "kind": "fireplace",
+  "fuel": "GreydwarfEye",
+  "secPerFuel": 20000,
+  "startFuel": 1
+ },
+ "piece_cookingstation": {
+  "prefab": "piece_cookingstation",
+  "name": "Cooking Station",
+  "kind": "cooking",
+  "requiresFire": true,
+  "overcooked": "Coal",
+  "conversions": [
+   {
+    "from": "RawMeat",
+    "to": "CookedMeat",
+    "time": 25
+   },
+   {
+    "from": "NeckTail",
+    "to": "NeckTailGrilled",
+    "time": 25
+   },
+   {
+    "from": "FishRaw",
+    "to": "FishCooked",
+    "time": 25
+   },
+   {
+    "from": "DeerMeat",
+    "to": "CookedDeerMeat",
+    "time": 25
+   },
+   {
+    "from": "WolfMeat",
+    "to": "CookedWolfMeat",
+    "time": 25
+   },
+   {
+    "from": "ChickenMeat",
+    "to": "CookedChickenMeat",
+    "time": 25
+   },
+   {
+    "from": "HareMeat",
+    "to": "CookedHareMeat",
+    "time": 25
+   },
+   {
+    "from": "BjornMeat",
+    "to": "CookedBjornMeat",
+    "time": 25
+   }
+  ]
+ },
+ "piece_cookingstation_iron": {
+  "prefab": "piece_cookingstation_iron",
+  "name": "Iron Cooking Station",
+  "kind": "cooking",
+  "requiresFire": true,
+  "overcooked": "Coal",
+  "conversions": [
+   {
+    "from": "SerpentMeat",
+    "to": "SerpentMeatCooked",
+    "time": 60
+   },
+   {
+    "from": "LoxMeat",
+    "to": "CookedLoxMeat",
+    "time": 60
+   },
+   {
+    "from": "FishRaw",
+    "to": "FishCooked",
+    "time": 25
+   },
+   {
+    "from": "RawMeat",
+    "to": "CookedMeat",
+    "time": 25
+   },
+   {
+    "from": "NeckTail",
+    "to": "NeckTailGrilled",
+    "time": 25
+   },
+   {
+    "from": "DeerMeat",
+    "to": "CookedDeerMeat",
+    "time": 25
+   },
+   {
+    "from": "WolfMeat",
+    "to": "CookedWolfMeat",
+    "time": 25
+   },
+   {
+    "from": "BugMeat",
+    "to": "CookedBugMeat",
+    "time": 60
+   },
+   {
+    "from": "ChickenMeat",
+    "to": "CookedChickenMeat",
+    "time": 25
+   },
+   {
+    "from": "HareMeat",
+    "to": "CookedHareMeat",
+    "time": 25
+   },
+   {
+    "from": "VoltureMeat",
+    "to": "CookedVoltureMeat",
+    "time": 25
+   },
+   {
+    "from": "AsksvinMeat",
+    "to": "CookedAsksvinMeat",
+    "time": 25
+   },
+   {
+    "from": "BoneMawSerpentMeat",
+    "to": "CookedBoneMawSerpentMeat",
+    "time": 60
+   },
+   {
+    "from": "BjornMeat",
+    "to": "CookedBjornMeat",
+    "time": 25
+   },
+   {
+    "from": "MooseMeat",
+    "to": "CookedMooseMeat",
+    "time": 25
+   }
+  ]
+ },
+ "piece_groundtorch": {
+  "prefab": "piece_groundtorch",
+  "name": "Standing Iron Torch",
+  "kind": "fireplace",
+  "fuel": "Resin",
+  "secPerFuel": 20000,
+  "startFuel": 2
+ },
+ "piece_groundtorch_blue": {
+  "prefab": "piece_groundtorch_blue",
+  "name": "Standing Blue-burning Iron Torch",
+  "kind": "fireplace",
+  "fuel": "GreydwarfEye",
+  "secPerFuel": 20000,
+  "startFuel": 2
+ },
+ "piece_groundtorch_green": {
+  "prefab": "piece_groundtorch_green",
+  "name": "Standing Green-burning Iron Torch",
+  "kind": "fireplace",
+  "fuel": "Guck",
+  "secPerFuel": 20000,
+  "startFuel": 2
+ },
+ "piece_groundtorch_wood": {
+  "prefab": "piece_groundtorch_wood",
+  "name": "Standing Wood Torch",
+  "kind": "fireplace",
+  "fuel": "Resin",
+  "secPerFuel": 10000,
+  "startFuel": 2
+ },
+ "piece_jackoturnip": {
+  "prefab": "piece_jackoturnip",
+  "name": "Jack-o-turnip",
+  "kind": "fireplace",
+  "fuel": "Resin",
+  "secPerFuel": 20000,
+  "startFuel": 2
+ },
+ "piece_oven": {
+  "prefab": "piece_oven",
+  "name": "Stone Oven",
+  "kind": "cooking",
+  "fuel": "Wood",
+  "secPerFuel": 2000,
+  "maxFuel": 10,
+  "overcooked": "Coal",
+  "conversions": [
+   {
+    "from": "LoxPieUncooked",
+    "to": "LoxPie",
+    "time": 50
+   },
+   {
+    "from": "BreadDough",
+    "to": "Bread",
+    "time": 50
+   },
+   {
+    "from": "FishAndBreadUncooked",
+    "to": "FishAndBread",
+    "time": 50
+   },
+   {
+    "from": "MeatPlatterUncooked",
+    "to": "MeatPlatter",
+    "time": 50
+   },
+   {
+    "from": "HoneyGlazedChickenUncooked",
+    "to": "HoneyGlazedChicken",
+    "time": 50
+   },
+   {
+    "from": "MisthareSupremeUncooked",
+    "to": "MisthareSupreme",
+    "time": 50
+   },
+   {
+    "from": "MagicallyStuffedShroomUncooked",
+    "to": "MagicallyStuffedShroom",
+    "time": 50
+   },
+   {
+    "from": "RoastedCrustPieUncooked",
+    "to": "RoastedCrustPie",
+    "time": 50
+   },
+   {
+    "from": "PiquantPieUncooked",
+    "to": "PiquantPie",
+    "time": 50
+   },
+   {
+    "from": "VikingCupcakeUncooked",
+    "to": "VikingCupcake",
+    "time": 50
+   },
+   {
+    "from": "SealBlubber",
+    "to": "CookedSealBlubber",
+    "time": 50
+   },
+   {
+    "from": "OvenPancakeUncooked",
+    "to": "OvenPancake",
+    "time": 50
+   },
+   {
+    "from": "KaleChipsUncooked",
+    "to": "KaleChips",
+    "time": 50
+   },
+   {
+    "from": "BakedPoteitrUncooked",
+    "to": "BakedPoteitr",
+    "time": 50
+   }
+  ]
+ },
+ "piece_sapcollector": {
+  "prefab": "piece_sapcollector",
+  "name": "Sap Extractor",
+  "kind": "sap",
+  "secPerItem": 60,
+  "product": "Sap",
+  "maxProduct": 10,
+  "notes": [
+   "Must be placed on YggdrasilRoot"
+  ]
+ },
+ "piece_shieldgenerator": {
+  "prefab": "piece_shieldgenerator",
+  "name": "Shield Generator",
+  "kind": "shield",
+  "fuels": [
+   "BoneFragments",
+   "CharredBone"
+  ],
+  "maxFuel": 10,
+  "notes": [
+   "Radius 30-30 m",
+   "0.002 fuel per point of damage absorbed"
+  ]
+ },
+ "piece_snowlantern": {
+  "prefab": "piece_snowlantern",
+  "name": "Snow Lantern",
+  "kind": "fireplace",
+  "fuel": "Resin",
+  "secPerFuel": 20000,
+  "startFuel": 2
+ },
+ "piece_spinningwheel": {
+  "prefab": "piece_spinningwheel",
+  "name": "Spinning Wheel",
+  "kind": "smelter",
+  "secPerItem": 30,
+  "maxInput": 40,
+  "requiresRoof": true,
+  "conversions": [
+   {
+    "from": "Flax",
+    "to": "LinenThread"
+   }
+  ]
+ },
+ "piece_trap_troll": {
+  "prefab": "piece_trap_troll",
+  "name": "Trap",
+  "kind": "trap",
+  "secPerItem": 5,
+  "notes": [
+   "Triggered by enemies and players"
+  ]
+ },
+ "piece_turret": {
+  "prefab": "piece_turret",
+  "name": "Ballista",
+  "kind": "turret",
+  "fuels": [
+   "TurretBolt",
+   "TurretBoltWood",
+   "TurretBoltFlametal",
+   "TurretBoltBloodgold"
+  ],
+  "maxFuel": 40,
+  "notes": [
+   "Fires every 2.0 s, range 30 m"
+  ]
+ },
+ "piece_walltorch": {
+  "prefab": "piece_walltorch",
+  "name": "Sconce",
+  "kind": "fireplace",
+  "fuel": "Resin",
+  "secPerFuel": 20000,
+  "startFuel": 2
+ },
+ "piece_wisplure": {
+  "prefab": "piece_wisplure",
+  "name": "Wisp Fountain",
+  "kind": "wisp",
+  "secPerItem": 30,
+  "product": "LuredWisp",
+  "maxProduct": 3,
+  "notes": [
+   "50% chance per interval",
+   "At night only",
+   "Needs less than 60% cover"
+  ]
+ },
+ "smelter": {
+  "prefab": "smelter",
+  "name": "Smelter",
+  "kind": "smelter",
+  "fuel": "Coal",
+  "fuelPerItem": 2,
+  "secPerItem": 30,
+  "maxInput": 10,
+  "maxFuel": 20,
+  "conversions": [
+   {
+    "from": "CopperOre",
+    "to": "Copper"
+   },
+   {
+    "from": "IronOre",
+    "to": "Iron"
+   },
+   {
+    "from": "IronScrap",
+    "to": "Iron"
+   },
+   {
+    "from": "BronzeScrap",
+    "to": "Bronze"
+   },
+   {
+    "from": "TinOre",
+    "to": "Tin"
+   },
+   {
+    "from": "SilverOre",
+    "to": "Silver"
+   },
+   {
+    "from": "CopperScrap",
+    "to": "Copper"
+   }
+  ]
+ },
+ "windmill": {
+  "prefab": "windmill",
+  "name": "Windmill",
+  "kind": "smelter",
+  "secPerItem": 10,
+  "maxInput": 50,
+  "conversions": [
+   {
+    "from": "Barley",
+    "to": "BarleyFlour"
+   },
+   {
+    "from": "OatSeeds",
+    "to": "Oat"
+   },
+   {
+    "from": "Oat",
+    "to": "OatFlour"
+   }
+  ],
+  "notes": [
+   "Wind driven: runs at wind strength 10% and above, faster in stronger wind"
+  ]
+ }
+}

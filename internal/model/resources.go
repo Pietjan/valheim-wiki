@@ -42,7 +42,7 @@ type VegRule struct {
 	Source                string   `json:"source,omitempty"` // list or altbiome
 	Enabled               bool     `json:"enabled"`
 	Biomes                []string `json:"biomes,omitempty"`
-	BiomeArea             string   `json:"biomeArea,omitempty"`
+	BiomeArea             string   `json:"biomeArea,omitempty"` // Edge, Median or Everything
 	Min                   float64  `json:"min"`
 	Max                   float64  `json:"max"`
 	GroupMin              int      `json:"groupMin,omitempty"`
@@ -63,20 +63,47 @@ type VegRule struct {
 	MaxDistanceFromCenter float64  `json:"maxDistanceFromCenter,omitempty"`
 	ScaleMin              float64  `json:"scaleMin,omitempty"`
 	ScaleMax              float64  `json:"scaleMax,omitempty"`
+	RandTilt              float64  `json:"randTilt,omitempty"`
+	GroundTiltChance      float64  `json:"groundTiltChance,omitempty"`
 	BlockCheck            bool     `json:"blockCheck,omitempty"`
+	ForcePlacement        bool     `json:"forcePlacement,omitempty"`
 	SnapToWater           bool     `json:"snapToWater,omitempty"`
+	SnapToStaticSolid     bool     `json:"snapToStaticSolid,omitempty"`
+	GroundOffset          float64  `json:"groundOffset,omitempty"`
+	TerrainDeltaRadius    float64  `json:"terrainDeltaRadius,omitempty"`
+	MinTerrainDelta       float64  `json:"minTerrainDelta,omitempty"`
+	MaxTerrainDelta       float64  `json:"maxTerrainDelta,omitempty"`
+	SurroundCheck         bool     `json:"surroundCheck,omitempty"`
+	SurroundDistance      float64  `json:"surroundDistance,omitempty"`
+	SurroundLayers        int      `json:"surroundLayers,omitempty"`
+	SurroundBetter        float64  `json:"surroundBetter,omitempty"`
 }
 
-// Clutter is a ClutterSystem.Clutter rule (grass and small things).
+// Clutter is a ClutterSystem.Clutter rule (grass and small things):
+// Amount instances per 8 m grass patch where the terrain allows.
 type Clutter struct {
-	Name        string   `json:"name"`
-	Prefab      string   `json:"prefab"`
-	Enabled     bool     `json:"enabled"`
-	Biomes      []string `json:"biomes,omitempty"`
-	Amount      int      `json:"amount,omitempty"`
-	InForest    bool     `json:"inForest,omitempty"`
-	MinAlt      float64  `json:"minAlt,omitempty"`
-	MaxAlt      float64  `json:"maxAlt,omitempty"`
-	MaxTilt     float64  `json:"maxTilt,omitempty"`
-	OnUncleared bool     `json:"onUncleared,omitempty"`
+	Name          string   `json:"name"`
+	Prefab        string   `json:"prefab"`
+	Source        string   `json:"source,omitempty"` // the system or location list it came from
+	Enabled       bool     `json:"enabled"`
+	Biomes        []string `json:"biomes,omitempty"`
+	Amount        int      `json:"amount,omitempty"`
+	Instanced     bool     `json:"instanced,omitempty"`
+	InForest      bool     `json:"inForest,omitempty"`
+	ForestMin     float64  `json:"forestMin,omitempty"`
+	ForestMax     float64  `json:"forestMax,omitempty"`
+	MinAlt        float64  `json:"minAlt,omitempty"`
+	MaxAlt        float64  `json:"maxAlt,omitempty"`
+	MinTilt       float64  `json:"minTilt,omitempty"`
+	MaxTilt       float64  `json:"maxTilt,omitempty"`
+	MinVegetation float64  `json:"minVegetation,omitempty"`
+	MaxVegetation float64  `json:"maxVegetation,omitempty"`
+	MinOceanDepth float64  `json:"minOceanDepth,omitempty"`
+	MaxOceanDepth float64  `json:"maxOceanDepth,omitempty"`
+	ScaleMin      float64  `json:"scaleMin,omitempty"`
+	ScaleMax      float64  `json:"scaleMax,omitempty"`
+	OnUncleared   bool     `json:"onUncleared,omitempty"`
+	OnCleared     bool     `json:"onCleared,omitempty"`
+	SnapToWater   bool     `json:"snapToWater,omitempty"`
+	TerrainTilt   bool     `json:"terrainTilt,omitempty"`
 }
