@@ -270,6 +270,7 @@ func (w *World) Map() *Map {
 				h, _ = w.gen.BiomeHeight(b, wx, wz)
 			}
 			out.Heights[i] = worldmap.EncodeHeight(h)
+			out.Mask[4*i+3] = 255
 			if !inWorld {
 				// Past the edge the raster says no biome and no mask, and
 				// the painter draws the void; the height stays, as the
