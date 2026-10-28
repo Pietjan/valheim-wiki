@@ -181,9 +181,14 @@ func readSap(x *X, cab string, t map[string]any, c *model.Converter) {
 	}
 }
 
-// readFeast: a placed feast serves m_eatStacks helpings of m_foodItem.
+// readFeast: a placed feast serves m_eatStacks helpings of m_foodItem,
+// which is the feast's own ItemDrop when left unset (Feast.Awake falls
+// back to GetComponent<ItemDrop>).
 func readFeast(x *X, cab string, t map[string]any, c *model.Converter) {
 	c.Product = x.itemName(cab, t["m_foodItem"])
+	if c.Product == "" {
+		c.Product = c.Prefab
+	}
 	c.MaxProduct = I(t, "m_eatStacks")
 }
 
@@ -204,7 +209,8 @@ func readShield(x *X, cab string, t map[string]any, c *model.Converter) {
 
 // readTurret: loads m_defaultAmmo or any of m_allowedAmmo, up to
 // m_maxAmmo, and fires every m_attackCooldown seconds at targets within
-// m_viewDistance.
+// m_viewDistance. A turret with m_maxAmmo 0 never runs out (Turret.HasAmmo
+// is true and ShootProjectile spends nothing): the Charred ballista.
 func readTurret(x *X, cab string, t map[string]any, c *model.Converter) {
 	c.Fuel = x.itemName(cab, t["m_defaultAmmo"])
 	for _, a := range L(t, "m_allowedAmmo") {
@@ -215,6 +221,9 @@ func readTurret(x *X, cab string, t map[string]any, c *model.Converter) {
 	c.MaxFuel = I(t, "m_maxAmmo")
 	c.Notes = append(c.Notes,
 		fmt.Sprintf("Fires every %.1f s, range %.0f m", F(t, "m_attackCooldown"), F(t, "m_viewDistance")))
+	if c.MaxFuel == 0 {
+		c.Notes = append(c.Notes, "Does not consume ammo")
+	}
 }
 
 // readWisp: the wisp fountain spawns a wisp with m_spawnChance every
@@ -246,11 +255,13 @@ func readTrap(x *X, cab string, t map[string]any, c *model.Converter) {
 }
 
 // readFireplace: built with m_startFuel of m_fuelItem, holds m_maxFuel,
-// burns one every m_secPerFuel seconds unless m_infiniteFuel.
+// burns one every m_secPerFuel seconds unless m_infiniteFuel. Fireplace
+// serialises m_maxFuel as a float (unlike Smelter's int), so it is read as
+// one.
 func readFireplace(x *X, cab string, t map[string]any, c *model.Converter) {
 	c.Fuel = x.itemName(cab, t["m_fuelItem"])
 	c.StartFuel = F(t, "m_startFuel")
-	c.MaxFuel = I(t, "m_maxFuel")
+	c.MaxFuel = int(F(t, "m_maxFuel"))
 	c.SecPerFuel = F(t, "m_secPerFuel")
 	c.InfiniteFuel = B(t, "m_infiniteFuel")
 }

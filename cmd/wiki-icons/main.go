@@ -32,7 +32,10 @@ const (
 	discSize     = 256
 	portraitSize = 512
 	supersample  = 4
-	exposure     = 1.6
+	// defaultExposure is the scale on the linear light before the ACES
+	// curve; the scene viewer's 2 is for the game's lights, which the
+	// icons soften, see cmd/wiki-icons.
+	defaultExposure = 1.25
 )
 
 // The camera and the sun for each kind of icon. Yaw 45 looks from the
@@ -41,7 +44,7 @@ const (
 // to the camera's upper left so that the faces turned to the viewer are
 // the ones the sun paints.
 var (
-	siteView = render.Options{Yaw: 45, Pitch: 32, Fit: 0.80, SunAzimuth: 35, SunElevation: 50,
+	siteView = render.Options{Yaw: 45, Pitch: 32, Fit: 0.86, SunAzimuth: 35, SunElevation: 50,
 		Size: discSize * supersample, ShadowMap: 1536}
 	creatureView = render.Options{Yaw: 45, Pitch: 15, Fit: 0.80, SunAzimuth: 35, SunElevation: 50,
 		Size: portraitSize * supersample, ShadowMap: 1024}
@@ -63,6 +66,7 @@ func main() {
 	sites := flag.String("sites", "../valheim-world/internal/world/sites.tsv", "valheim-world's location table, for the ground each location digs to (optional)")
 	dungeon := flag.String("dungeon", "../valheim-world/internal/world/dungeon", "valheim-world's dungeon tables, for the camps built from rooms (optional)")
 	workers := flag.Int("workers", runtime.GOMAXPROCS(0), "parallel renders")
+	exposure := flag.Float64("exposure", defaultExposure, "linear light multiplier before the tone curve")
 	flag.Parse()
 	if *meshes == "" {
 		flag.Usage()
@@ -125,7 +129,7 @@ func main() {
 			defer wg.Done()
 			for j := range queue {
 				t := time.Now()
-				tris, err := renderJob(j, *out)
+				tris, err := renderJob(j, *out, *exposure)
 				mu.Lock()
 				if err != nil {
 					failed++
@@ -149,7 +153,7 @@ func main() {
 }
 
 // renderJob draws one prefab and writes its PNGs.
-func renderJob(j job, out string) (tris int, err error) {
+func renderJob(j job, out string, exposure float64) (tris int, err error) {
 	s, err := j.build()
 	if err != nil {
 		return 0, err
@@ -175,6 +179,11 @@ func renderJob(j job, out string) (tris int, err error) {
 	return s.Triangles(), err
 }
 
+// flyers are the materials of the birds a location keeps circling high
+// over it (crows over crypts and ruins, ash crows over the charred
+// ruins): a flock 8 to 45 m up would set the frame, not the building.
+var flyers = map[string]bool{"crow": true, "AshCrow": true}
+
 // siteJobs is one job per '<X>~site.bin', the Dev* test scenes left out.
 func siteJobs(meshes string, mats *render.Manifest, floors map[string]float64) ([]job, error) {
 	files, err := filepath.Glob(filepath.Join(meshes, "*~site.bin"))
@@ -197,7 +206,7 @@ func siteJobs(meshes string, mats *render.Manifest, floors map[string]float64) (
 			if err != nil {
 				return nil, err
 			}
-			s := &render.Scene{Floor: floor}
+			s := &render.Scene{Floor: floor, Omit: flyers}
 			s.Add(m, mats, render.Identity)
 			return s, nil
 		}})
@@ -208,7 +217,9 @@ func siteJobs(meshes string, mats *render.Manifest, floors map[string]float64) (
 // creatureJobs is one job per creature prefab with a mesh: what names.tsv
 // calls an enemy ($enemy_*) or a fish ($animal_fish*), and the people
 // one meets (the traders, the Bog Witch, Odin's ravens) when their mesh
-// exists. Ragdolls are the corpses, not the creatures.
+// exists. Ragdolls are the corpses, not the creatures, and a boss altar
+// (Eikthyrnir, Dragonqueen, GDKing, FaderLocation) that names.tsv files
+// under its boss's token is a location, see isLocation.
 func creatureJobs(meshes, names string, mats *render.Manifest) ([]job, error) {
 	b, err := os.ReadFile(names)
 	if err != nil {
@@ -237,18 +248,52 @@ func creatureJobs(meshes, names string, mats *render.Manifest) ([]job, error) {
 		if err != nil {
 			continue
 		}
+		if loc, err := isLocation(meshes, name); err != nil {
+			return nil, err
+		} else if loc {
+			continue
+		}
 		jobs = append(jobs, job{kind: "creatures", name: name, bytes: st.Size(), build: func() (*render.Scene, error) {
 			m, err := vmsh.Load(path)
 			if err != nil {
 				return nil, err
 			}
-			s := &render.Scene{}
+			s := &render.Scene{Translucent: true}
 			s.Add(m, mats, render.Identity)
 			return s, nil
 		}})
 	}
 	sort.Slice(jobs, func(i, j int) bool { return jobs[i].name < jobs[j].name })
 	return jobs, nil
+}
+
+// isLocation tells a location prefab from a creature of the same name.
+// '<X>.bin' is X with its ZNetView children removed, and '<X>~site.bin'
+// is the whole location, so a location's own plain mesh paints only
+// materials its site mesh paints too; a boss that shares its altar's name
+// (Bonemass, GoblinKing) paints none of them.
+func isLocation(meshes, name string) (bool, error) {
+	site, err := vmsh.Load(filepath.Join(meshes, name+"~site.bin"))
+	if os.IsNotExist(err) {
+		return false, nil
+	}
+	if err != nil {
+		return false, err
+	}
+	plain, err := vmsh.Load(filepath.Join(meshes, name+".bin"))
+	if err != nil {
+		return false, err
+	}
+	paints := map[string]bool{}
+	for _, r := range site.Runs {
+		paints[r.Material] = true
+	}
+	for _, r := range plain.Runs {
+		if !paints[r.Material] {
+			return false, nil
+		}
+	}
+	return true, nil
 }
 
 func fail(err error) {

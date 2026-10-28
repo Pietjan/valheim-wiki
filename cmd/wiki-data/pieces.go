@@ -2,6 +2,7 @@ package main
 
 import (
 	"sort"
+	"strings"
 
 	"github.com/pietjan/valheim-wiki/internal/assets"
 	"github.com/pietjan/valheim-wiki/internal/model"
@@ -17,6 +18,7 @@ import (
 // four PieceTables, the build menus, which say which tool opens each
 // piece and in what order.
 func extractPieces(x *X) error {
+	category := map[string]int{} // prefab -> raw Piece.m_category
 	x.EachMono([]string{"m_resources", "m_icon", "m_category"}, func(cab string, id int64, t map[string]any) {
 		root, g := x.Owner(cab, t)
 		if root == "" || !x.isPrefabRoot(g) {
@@ -26,8 +28,9 @@ func extractPieces(x *X) error {
 			return
 		}
 		x.DB.Pieces[root] = x.readPiece(cab, root, g, t)
+		category[root] = I(t, "m_category")
 	})
-	x.readPieceTables()
+	x.readPieceTables(category)
 	return nil
 }
 
@@ -62,6 +65,11 @@ func (x *X) readPiece(cab, prefab string, g assets.Ref, t map[string]any) *model
 	}
 	if cg := I(t, "m_comfortGroup"); cg > 0 && cg < len(comfortGroupNames) {
 		p.ComfortGroup = comfortGroupNames[cg]
+	}
+	// A description that is one token the game has no English for
+	// (the Sled's, the ancient metal stack's) is no description.
+	if strings.HasPrefix(p.Description, "$") && !strings.ContainsAny(p.Description, " \n") {
+		p.Description = ""
 	}
 	if icon, ok := x.Deref(cab, t["m_icon"]); ok {
 		p.Icon = true
@@ -165,13 +173,15 @@ func (x *X) readPiece(cab, prefab string, g assets.Ref, t map[string]any) *model
 		}
 	}
 	// Lights and demisters sit on a child as often as on the root: the
-	// flame of a torch, the force field of a wisp lure.
+	// flame of a torch, the force field of a wisp lure. Demister
+	// serialises only m_disableForcefieldDelay (its m_forceField is
+	// NonSerialized, found at Awake).
 	x.Walk(g, func(_ int, c assets.Ref) bool {
 		for _, comp := range x.Components(c) {
 			switch {
 			case comp.ClassID == 108:
 				p.Light = true
-			case comp.ClassID == 114 && Has(comp.Tree, "m_forceField", "m_disableForcefieldDelay"):
+			case comp.ClassID == 114 && Has(comp.Tree, "m_disableForcefieldDelay"):
 				p.Demister = true
 			}
 		}
@@ -236,8 +246,15 @@ func (x *X) plantInfo(cab string, t map[string]any) *model.PlantInfo {
 // readPieceTables reads the PieceTable prefabs (_HammerPieceTable and
 // its siblings): the build menu of the tool whose SharedData
 // m_buildPieces points at it. Pieces take the tool of the first table
-// listing them.
-func (x *X) readPieceTables() {
+// listing them, and the category of the tab that table shows them
+// under: Hud pairs m_categories[i] with m_categoryLabels[i], and the
+// labels are what the data means. The feaster's pieces and table were
+// serialised before DeepNorth was inserted at 5 in Piece.PieceCategory
+// (its tabs are 6 "Food", 7 "Mead", 5 "Feasts", and the foods carry 6,
+// the meads 7, the feasts 5), so by the enum's current names the foods
+// would be Feasts, the meads Food and the feasts DeepNorth. category
+// is each piece's raw m_category.
+func (x *X) readPieceTables(category map[string]int) {
 	// Tool items name their table; items are extracted later (or not at
 	// all with -only pieces), so read the ItemDrops directly.
 	tool := map[string]string{}
@@ -255,6 +272,7 @@ func (x *X) readPieceTables() {
 		}
 	})
 	seen := map[string]bool{}
+	tabs := map[string]map[int]string{} // table -> raw category -> name, by label
 	x.EachMono([]string{"m_pieces", "m_categories", "m_categoryLabels"}, func(cab string, id int64, t map[string]any) {
 		root, g := x.Owner(cab, t)
 		if root == "" || !x.isPrefabRoot(g) || seen[root] {
@@ -267,22 +285,59 @@ func (x *X) readPieceTables() {
 				pt.Pieces = append(pt.Pieces, n)
 			}
 		}
-		for _, c := range L(t, "m_categories") {
+		raw := L(t, "m_categories")
+		for _, c := range raw {
 			pt.Categories = append(pt.Categories, pieceCategoryName(int(assets.AsInt64(c))))
 		}
-		for _, l := range Strs(t["m_categoryLabels"]) {
-			pt.Labels = append(pt.Labels, x.Text(l))
+		tabs[root] = map[int]string{}
+		for i, l := range L(t, "m_categoryLabels") {
+			pt.Labels = append(pt.Labels, x.Text(assets.AsString(l)))
+			if n := categoryByLabel(pt.Labels[i]); n != "" && i < len(raw) {
+				tabs[root][int(assets.AsInt64(raw[i]))] = n
+				pt.Categories[i] = n
+			}
 		}
 		x.DB.PieceTables = append(x.DB.PieceTables, pt)
 	})
 	sort.Slice(x.DB.PieceTables, func(i, j int) bool { return x.DB.PieceTables[i].Prefab < x.DB.PieceTables[j].Prefab })
 	for _, pt := range x.DB.PieceTables {
 		for _, name := range pt.Pieces {
-			if p := x.DB.Pieces[name]; p != nil && p.Tool == "" {
-				p.Tool = pt.Tool
+			p := x.DB.Pieces[name]
+			if p == nil || p.Tool != "" {
+				continue
+			}
+			p.Tool = pt.Tool
+			if n, ok := tabs[pt.Prefab][category[name]]; ok {
+				p.Category = n
 			}
 		}
 	}
+}
+
+// categoryByLabel is the category name a build menu tab's English
+// label stands for, or "" for a label it does not know.
+func categoryByLabel(label string) string {
+	switch strings.ToLower(strings.TrimRight(strings.TrimSpace(label), ".")) {
+	case "misc", "miscellaneous":
+		return "Misc"
+	case "crafting":
+		return "Crafting"
+	case "building":
+		return "BuildingWorkbench"
+	case "heavy build", "heavy building":
+		return "BuildingStonecutter"
+	case "furniture":
+		return "Furniture"
+	case "deepnorth", "deep north":
+		return "DeepNorth"
+	case "feast", "feasts":
+		return "Feasts"
+	case "food":
+		return "Food"
+	case "mead", "meads":
+		return "Meads"
+	}
+	return ""
 }
 
 // pieceCategoryName names a Piece.PieceCategory: the tab of the build

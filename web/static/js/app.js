@@ -67,7 +67,7 @@ async function loadIndex() {
   return searchIndex;
 }
 function score(entry, q, words) {
-  const name = entry.N.toLowerCase();
+  const name = entry.n.toLowerCase();
   if (name === q) return 100;
   let s = 0;
   if (name.startsWith(q)) s += 60;
@@ -76,8 +76,8 @@ function score(entry, q, words) {
     if (!w) continue;
     if (name.split(/\s+/).some(n => n.startsWith(w))) s += 20;
     else if (name.includes(w)) s += 8;
-    else if ((entry.T || '').toLowerCase().includes(w)) s += 5;
-    else if ((entry.S || '').toLowerCase().includes(w)) s += 3;
+    else if ((entry.t || '').toLowerCase().includes(w)) s += 5;
+    else if ((entry.s || '').toLowerCase().includes(w)) s += 3;
     else return 0;
   }
   // Short names first among equals.
@@ -92,7 +92,7 @@ function search(index, q, limit = 12) {
     const s = score(e, q, words);
     if (s > 0) out.push([s, e]);
   }
-  out.sort((a, b) => b[0] - a[0] || a[1].N.localeCompare(b[1].N));
+  out.sort((a, b) => b[0] - a[0] || a[1].n.localeCompare(b[1].n));
   return out.slice(0, limit).map(x => x[1]);
 }
 function renderResults(list, results, selected) {
@@ -101,12 +101,12 @@ function renderResults(list, results, selected) {
     const li = document.createElement('li');
     if (i === selected) li.setAttribute('aria-selected', 'true');
     const a = document.createElement('a');
-    a.href = base + e.U;
-    const img = e.I ? `<img src="${base}icons/${e.I}.png" alt="" loading="lazy">` : '<span class="blank"></span>';
+    a.href = base + e.u;
+    const img = e.i ? `<img src="${base}icons/${e.i}.png" alt="" loading="lazy">` : '<span class="blank"></span>';
     a.innerHTML = `${img}<span><span class="r-name"></span><span class="r-sub"></span></span><span class="r-kind"></span>`;
-    a.querySelector('.r-name').textContent = e.N;
-    a.querySelector('.r-sub').textContent = e.S || '';
-    a.querySelector('.r-kind').textContent = e.K;
+    a.querySelector('.r-name').textContent = e.n;
+    a.querySelector('.r-sub').textContent = e.s || '';
+    a.querySelector('.r-kind').textContent = e.k;
     li.appendChild(a);
     list.appendChild(li);
   });
@@ -132,7 +132,7 @@ if (dialog) {
   input.addEventListener('keydown', e => {
     if (e.key === 'ArrowDown') { e.preventDefault(); selected = Math.min(selected + 1, results.length - 1); renderResults(list, results, selected); }
     if (e.key === 'ArrowUp') { e.preventDefault(); selected = Math.max(selected - 1, 0); renderResults(list, results, selected); }
-    if (e.key === 'Enter' && results[selected]) { e.preventDefault(); location.href = base + results[selected].U; }
+    if (e.key === 'Enter' && results[selected]) { e.preventDefault(); location.href = base + results[selected].u; }
   });
   dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
 }

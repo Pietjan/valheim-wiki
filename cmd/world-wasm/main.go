@@ -29,6 +29,7 @@ import (
 	"time"
 
 	"github.com/pietjan/valheim-wiki/cmd/world-wasm/engine"
+	"github.com/pietjan/valheim-wiki/internal/worldmap"
 )
 
 var (
@@ -159,6 +160,10 @@ func open(_ js.Value, args []js.Value) any {
 	m["radius"] = info.Radius
 	m["worldRadius"] = info.WorldRadius
 	m["water"] = info.Water
+	// The height plane's encoding, so the page decodes it with the raster's
+	// own numbers rather than a copy of them.
+	m["heightOffset"] = worldmap.HeightOffset
+	m["heightScale"] = worldmap.HeightScale
 	m["palette"] = bytesJS(info.Palette[:])
 	m["sectorCount"] = info.SectorCount
 	m["altSectorCount"] = info.AltSectorCount

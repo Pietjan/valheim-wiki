@@ -53,6 +53,13 @@ type Scene struct {
 	// Floor is the ground level, metres: what lies under it is buried
 	// and not drawn. Zero unless the location digs.
 	Floor float64
+	// Omit names materials Add leaves out of this scene on top of what
+	// the manifest skips: the crows circling a ruin, say.
+	Omit map[string]bool
+	// Translucent keeps the see-through flat colours, drawn opaque: a
+	// creature made of one (the frost blob) is nothing without it, while
+	// a building reads better without its windows and blocker walls.
+	Translucent bool
 
 	// Min and Max bound the vertices of the kept triangles that stand
 	// above Floor, after Finish.
@@ -90,7 +97,7 @@ func (s *Scene) Add(m *vmsh.Mesh, mats *Manifest, xf Transform) {
 	}
 	for _, r := range m.Runs {
 		mat := mats.Material(r.Material)
-		if mat.Skip {
+		if mat.Skip || s.Omit[r.Material] || (mat.Translucent && !s.Translucent) {
 			continue
 		}
 		first := len(s.idx)

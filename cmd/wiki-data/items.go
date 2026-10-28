@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"strings"
 
 	"github.com/pietjan/valheim-wiki/internal/assets"
 	"github.com/pietjan/valheim-wiki/internal/model"
@@ -133,7 +134,7 @@ func (x *X) readItem(cab, prefab string, g assets.Ref, s map[string]any, idol bo
 	gt := gateFor(typ)
 	it := &model.Item{
 		Prefab:         prefab,
-		Name:           x.NameOf(prefab, S(s, "m_name")),
+		Name:           x.itemDisplayName(prefab, S(s, "m_name")),
 		Token:          S(s, "m_name"),
 		Description:    x.Text(S(s, "m_description")),
 		Type:           typ,
@@ -233,6 +234,24 @@ func (x *X) readItem(cab, prefab string, g assets.Ref, s map[string]any, idol bo
 		}
 	}
 	return it
+}
+
+// itemDisplayName is NameOf, except that a name which came back as the
+// bare prefab (a names.tsv row whose English is only a placeholder, or no
+// row and no translation) yields to the item's own m_name when that
+// localizes cleanly: the Forge of Potential idols are named by three
+// tokens ("$item_upgrader_tier0 $item_upgrader_armor $item_upgrader_name"
+// is "Wooden Protection Idol") and the table lists them under their
+// prefab.
+func (x *X) itemDisplayName(prefab, token string) string {
+	name := x.NameOf(prefab, token)
+	if name != prefab || token == "" {
+		return name
+	}
+	if t := x.Text(token); t != "" && !strings.Contains(t, "$") {
+		return t
+	}
+	return name
 }
 
 // modifiers is the equipped-item stat modifiers, the non-zero ones.

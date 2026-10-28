@@ -29,6 +29,10 @@ type Material struct {
 	// Skip marks what the game does not draw as a surface: teleport quads,
 	// particle sheets, beams of light, blockers.
 	Skip bool
+	// Translucent is a flat see-through colour: crystal windows, blocker
+	// walls, a frost blob's body. The game blends them; a scene draws them
+	// opaque or leaves them out, see Scene.Translucent.
+	Translucent bool
 	// Scale and Offset tile the uv before sampling, as Unity's
 	// mainTextureScale and mainTextureOffset do.
 	Scale, Offset [2]float32
@@ -145,9 +149,7 @@ func (m *Manifest) build(name string) *Material {
 	if e.Texture != "" {
 		mat.Albedo = m.texture(e.Texture)
 	} else if e.Color[3] < 0.5 {
-		// A flat see-through colour: crystal windows, blocker walls. The
-		// game blends them; the icon reads the same without.
-		mat.Skip = true
+		mat.Translucent = true
 	}
 	return mat
 }

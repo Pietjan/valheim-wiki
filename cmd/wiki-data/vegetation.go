@@ -14,7 +14,9 @@ import (
 // AltBiome's m_addVegetation (rules that only apply inside that
 // alternative biome). The grass and small clutter come the same way
 // from ClutterSystem.m_clutter and LocationList.m_clutter. Finally every
-// Resource learns the biomes its enabled rules place it in.
+// Resource learns the biomes its enabled rules place it in; what is
+// only placed by a location, or only appears when something else is
+// felled or shattered (logs, stubs, rock fragments), keeps none.
 func extractVegetation(x *X) error {
 	type listRef struct {
 		cab   string
@@ -29,11 +31,13 @@ func extractVegetation(x *X) error {
 	})
 	sort.SliceStable(lists, func(i, j int) bool { return lists[i].order < lists[j].order })
 
-	// ZoneSystem itself: m_locationLists beside m_vegetation.
-	x.EachMono([]string{"m_vegetation", "m_locationLists"}, func(cab string, id int64, t map[string]any) {
-		root, _ := x.Owner(cab, t)
-		x.addVegRules(cab, root, t["m_vegetation"])
-	})
+	// ZoneSystem itself: m_locationLists beside m_vegetation. The
+	// bundles hold the component twice, on the _ZoneSystem prefab and
+	// on its instance under _GameMain, which is the one the game runs;
+	// the game has one ZoneSystem, so only that one is read.
+	if z, ok := x.systemComponent("m_vegetation", "m_locationLists"); ok {
+		x.addVegRules(z.cab, z.root, z.tree["m_vegetation"])
+	}
 	for _, l := range lists {
 		x.addVegRules(l.cab, l.name, l.tree["m_vegetation"])
 	}
@@ -44,10 +48,11 @@ func extractVegetation(x *X) error {
 		}
 	})
 
-	x.EachMono([]string{"m_clutter", "m_grassPatchSize"}, func(cab string, id int64, t map[string]any) {
-		root, _ := x.Owner(cab, t)
-		x.addClutter(cab, root, t["m_clutter"])
-	})
+	// ClutterSystem: the one under _GameMain is the game's; the main
+	// menu's Backgroundscene has another with its own list.
+	if c, ok := x.systemComponent("m_clutter", "m_grassPatchSize"); ok {
+		x.addClutter(c.cab, c.root, c.tree["m_clutter"])
+	}
 	for _, l := range lists {
 		x.addClutter(l.cab, l.name, l.tree["m_clutter"])
 	}
@@ -61,6 +66,29 @@ func extractVegetation(x *X) error {
 		r.Biomes = unionBiomes(r.Biomes, v.Biomes)
 	}
 	return nil
+}
+
+// systemRef is one MonoBehaviour on a system prefab.
+type systemRef struct {
+	cab, root string
+	tree      map[string]any
+}
+
+// systemComponent is the one MonoBehaviour with the fields the game
+// runs: the one under _GameMain when the bundles hold several (the
+// standalone system prefab, the main menu's background scene), else
+// the first loaded.
+func (x *X) systemComponent(fields ...string) (systemRef, bool) {
+	var found []systemRef
+	x.EachMono(fields, func(cab string, id int64, t map[string]any) {
+		root, _ := x.Owner(cab, t)
+		found = append(found, systemRef{cab, root, t})
+	})
+	sort.SliceStable(found, func(i, j int) bool { return found[i].root == "_GameMain" && found[j].root != "_GameMain" })
+	if len(found) == 0 {
+		return systemRef{}, false
+	}
+	return found[0], true
 }
 
 // addVegRules appends a List<ZoneSystem.ZoneVegetation>.

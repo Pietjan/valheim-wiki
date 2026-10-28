@@ -7,7 +7,7 @@ type Piece struct {
 	Token       string   `json:"token,omitempty"`
 	Description string   `json:"desc,omitempty"`
 	Icon        bool     `json:"icon,omitempty"`
-	Category    string   `json:"category"` // Misc, Crafting, BuildingWorkbench, BuildingStonecutter, Furniture, DeepNorth, Feasts, Food, Meads
+	Category    string   `json:"category"` // the tab of the tool's build menu: Misc, Crafting, BuildingWorkbench, BuildingStonecutter, Furniture, DeepNorth, Feasts, Food, Meads
 	Usage       []string `json:"usage,omitempty"`
 	Tool        string   `json:"tool,omitempty"` // the item whose PieceTable lists it: Hammer, Hoe, Cultivator, FeasterTable
 	Enabled     bool     `json:"enabled"`

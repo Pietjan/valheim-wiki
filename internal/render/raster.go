@@ -252,8 +252,8 @@ func (sm *shadowMap) lit(p [3]float64) float64 {
 
 // uvAt is the material's tiled uv at a point of a triangle.
 func (s *Scene) uvAt(a, b, c uint32, w0, w1, w2 float32, mat *Material) (u, v float32) {
-	u = (w0*s.uv[a*2] + w1*s.uv[b*2] + w2*s.uv[c*2]) * mat.Scale[0] + mat.Offset[0]
-	v = (w0*s.uv[a*2+1] + w1*s.uv[b*2+1] + w2*s.uv[c*2+1]) * mat.Scale[1] + mat.Offset[1]
+	u = (w0*s.uv[a*2]+w1*s.uv[b*2]+w2*s.uv[c*2])*mat.Scale[0] + mat.Offset[0]
+	v = (w0*s.uv[a*2+1]+w1*s.uv[b*2+1]+w2*s.uv[c*2+1])*mat.Scale[1] + mat.Offset[1]
 	return u, v
 }
 

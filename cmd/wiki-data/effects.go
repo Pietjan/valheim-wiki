@@ -10,17 +10,17 @@ import (
 	"github.com/pietjan/valheim-wiki/internal/model"
 )
 
-// guardianPowers maps each forsaken power to the boss whose trophy grants
-// it at the sacrificial stones.
+// guardianPowers maps each forsaken power (the GP_* StatusEffect assets)
+// to the boss whose trophy grants it at the sacrificial stones. A GP_*
+// asset missing here is reported so the table can be extended.
 var guardianPowers = map[string]string{
-	"GP_Eikthyr":   "Eikthyr",
-	"GP_TheElder":  "gd_king",
-	"GP_Bonemass":  "Bonemass",
-	"GP_Moder":     "Dragon",
-	"GP_Yagluth":   "GoblinKing",
-	"GP_Queen":     "SeekerQueen",
-	"GP_Ashlands":  "Fader",
-	"GP_DeepNorth": "FrozenKing",
+	"GP_Eikthyr":  "Eikthyr",
+	"GP_TheElder": "gd_king",
+	"GP_Bonemass": "Bonemass",
+	"GP_Moder":    "Dragon",
+	"GP_Yagluth":  "GoblinKing",
+	"GP_Queen":    "SeekerQueen",
+	"GP_Fader":    "Fader",
 }
 
 // effectAttributes names StatusEffect.StatusAttribute's bits.
@@ -77,6 +77,11 @@ var effectSkip = map[string]bool{
 	"m_prefab": true, "m_spawnObj": true, "m_ballPrefab": true, "m_statusEffect": true,
 	"m_pingEffectNear": true, "m_pingEffectMed": true, "m_pingEffectFar": true, "m_upgradeEffect": true,
 	"m_offset": true, "m_offsetInterior": true,
+	// SE_Demister: how the wisp ball flies, not what the effect does (the
+	// demisting radius is on the ball prefab).
+	"m_ballAcceleration": true, "m_ballMaxSpeed": true, "m_ballFriction": true, "m_noiseDistance": true,
+	"m_noiseDistanceInterior": true, "m_noiseDistanceYScale": true, "m_noiseSpeed": true,
+	"m_characterVelocityFactor": true, "m_rotationSpeed": true,
 }
 
 // effectDefaults are the numeric fields whose default is not zero and
@@ -150,6 +155,8 @@ func extractEffects(x *X) error {
 			} else {
 				fmt.Fprintf(os.Stderr, "    effects: %s: boss prefab %s not loaded\n", name, boss)
 			}
+		} else if strings.HasPrefix(name, "GP_") {
+			fmt.Fprintf(os.Stderr, "    effects: %s: forsaken power with no boss in guardianPowers\n", name)
 		}
 		x.DB.Effects[name] = e
 	})
@@ -196,7 +203,7 @@ func effectStats(t map[string]any) map[string]float64 {
 			for dt, f := range Damage(v) {
 				out[name+"."+dt] = f
 			}
-		case []any, string:
+		case []any, string, bool:
 			continue
 		default:
 			f := assets.AsFloat(v)
@@ -211,9 +218,12 @@ func effectStats(t map[string]any) map[string]float64 {
 	if F(t, "m_healthOverTime") == 0 {
 		delete(out, "healthOverTimeInterval")
 	}
+	// A pair does nothing with the skill left at None (SE_Stats.ModifySkillLevel
+	// and ModifyRaiseSkill, SE_Shield.OnDamaged all test for None first) or
+	// with a zero modifier; a damage modifier of 1 is the default no-op.
 	for _, p := range skillPairs {
 		skill, mod := I(t, p[0]), F(t, p[1])
-		if skill == 0 && mod == 0 {
+		if skill == 0 || mod == 0 {
 			continue
 		}
 		if p[0] == "m_modifyAttackSkill" && mod == 1 {

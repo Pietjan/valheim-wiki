@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World dev page</title>
+<style>
+  :root { color-scheme: dark; }
+  html, body { margin: 0; height: 100%; background: #0b0d12; color: #e8dcc0; font: 14px/1.4 system-ui, sans-serif; }
+  body { display: grid; grid-template-rows: auto auto 1fr auto; height: 100vh; }
+  header { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; padding: 8px 12px; border-bottom: 1px solid #2a2d36; }
+  header input[type=text] { font: inherit; padding: 4px 8px; background: #161922; color: inherit; border: 1px solid #3a3f4d; border-radius: 4px; width: 14ch; }
+  header button { font: inherit; padding: 4px 10px; background: #2c3140; color: inherit; border: 1px solid #3a3f4d; border-radius: 4px; cursor: pointer; }
+  header label { display: inline-flex; gap: 4px; align-items: center; white-space: nowrap; }
+  #progress { padding: 4px 12px; font-family: ui-monospace, monospace; font-size: 12px; color: #b9ad8f; border-bottom: 1px solid #2a2d36; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #progress b { color: #e8dcc0; }
+  #progress .bar { display: inline-block; vertical-align: middle; width: 160px; height: 6px; background: #1d2029; margin: 0 8px; border-radius: 3px; overflow: hidden; }
+  #progress .bar i { display: block; height: 100%; background: #7aa35a; width: 0; }
+  main { position: relative; min-height: 200px; }
+  #map { position: absolute; inset: 0; }
+  #mini { position: absolute; right: 10px; top: 10px; width: 160px; height: 160px; border: 1px solid #3a3f4d; border-radius: 4px; background: #0b0d12; z-index: 2; }
+  footer { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; padding: 6px 12px; border-top: 1px solid #2a2d36; font-family: ui-monospace, monospace; font-size: 12px; min-height: 3.2em; }
+  footer div { white-space: pre-wrap; }
+  .k { color: #8fb3d9; }
+</style>
+</head>
+<body>
+<header>
+  <label>Seed <input id="seed" type="text" value="CXJeyEhsEp" spellcheck="false"></label>
+  <button id="open">Open</button>
+  <button id="forget" title="Forget the remembered seed">Forget</button>
+  <span id="engine" class="k"></span>
+  <span style="flex:1"></span>
+  <label><input type="checkbox" id="l-bosses" checked> bosses</label>
+  <label><input type="checkbox" id="l-traders" checked> traders</label>
+  <label><input type="checkbox" id="l-dungeons" checked> dungeons</label>
+  <label><input type="checkbox" id="l-other"> everything else</label>
+  <label><input type="checkbox" id="l-outlines" checked> sector outlines</label>
+  <label><input type="checkbox" id="l-labels" checked> sector names (zoom &gt; 3)</label>
+  <label>Rule <input id="rule" type="text" placeholder="prefab filter" spellcheck="false" style="width:12ch"></label>
+</header>
+<div id="progress">idle</div>
+<main>
+  <div id="map"></div>
+  <canvas id="mini" width="160" height="160" title="drawMiniMap"></canvas>
+</main>
+<footer>
+  <div id="click">click the map</div>
+  <div id="stats"></div>
+</footer>
+<script type="module">
+import { World, drawMiniMap, bearing, formatDistance, seedFromPage, setSeed, clearSeed } from '../static/js/world.js';
+import { WorldMap } from '../static/js/worldmap.js';
+
+const $ = id => document.getElementById(id);
+const BOSSES = new Set(['Eikthyrnir', 'GDKing', 'Bonemass', 'Dragonqueen', 'GoblinKing', 'Mistlands_DvergrBossEntrance1', 'FaderLocation', 'DN_Bossroom']);
+const TRADERS = new Set(['Vendor_BlackForest', 'Hildir_camp', 'BogWitch_Camp']);
+const DUNGEONS = new Set(['Crypt2', 'Crypt3', 'Crypt4', 'SunkenCrypt4', 'TrollCave02', 'MountainCave02', 'Mistlands_DvergrTownEntrance1', 'Mistlands_DvergrTownEntrance2', 'Hildir_cave', 'Hildir_crypt', 'Hildir_plainsfortress', 'GoblinCamp2', 'CharredFortress', 'AncientUpgradeStation']);
+const ICONS = '../../assets/icons/map/';
+
+const map = new WorldMap($('map'), { assetsBase: '../static/' });
+window.worldMap = map;
+map.onView(v => {
+  $('stats').textContent = `zoom ${v.zoom.toFixed(2)}  centre ${v.cx.toFixed(0)}, ${v.cz.toFixed(0)}  ${v.mpp.toFixed(2)} m/px  paint ${map.lastPaintMs.toFixed(1)} ms` + (handle ? `  sites ${handle.sites().length}` : '');
+});
+
+let handle = null;
+let unsub = [];
+const t = {};
+
+function kindOf(s) {
+  if (s.prefab === 'StartTemple') return 'start';
+  if (BOSSES.has(s.prefab) || BOSSES.has(s.rule)) return 'boss';
+  if (TRADERS.has(s.prefab)) return 'trader';
+  if (DUNGEONS.has(s.prefab)) return 'dungeon';
+  return 'other';
+}
+const COLOUR = { start: '#ffffff', boss: '#f06a6a', trader: '#f0c060', dungeon: '#7fb6ff', other: '#9aa7b8' };
+const PRIORITY = { start: 100, boss: 90, trader: 80, dungeon: 20, other: 0 };
+const ICON = { start: ICONS + 'mapicon_start.png', trader: ICONS + 'mapicon_trader.png', boss: ICONS + 'mapicon_boss.png' };
+
+function applyFilter() {
+  const on = { boss: $('l-bosses').checked, trader: $('l-traders').checked, dungeon: $('l-dungeons').checked, other: $('l-other').checked, start: true };
+  const rule = $('rule').value.trim().toLowerCase();
+  map.setFilter(m => rule ? (m.data.prefab.toLowerCase().includes(rule) || m.data.rule.toLowerCase().includes(rule)) : on[m.kind]);
+}
+for (const id of ['l-bosses', 'l-traders', 'l-dungeons', 'l-other']) $(id).addEventListener('change', applyFilter);
+$('rule').addEventListener('input', applyFilter);
+$('l-outlines').addEventListener('change', e => map.setSectorOutlines(e.target.checked));
+$('l-labels').addEventListener('change', e => map.setSectorLabels(e.target.checked));
+
+let markerTimer = 0;
+function refreshMarkers() {
+  clearTimeout(markerTimer);
+  markerTimer = setTimeout(() => {
+    const sites = handle.sites();
+    map.setMarkers(sites.map(s => {
+      const kind = kindOf(s);
+      return { x: s.x, z: s.z, kind, color: COLOUR[kind], priority: PRIORITY[kind], img: ICON[kind] || null, size: ICON[kind] ? 26 : 8, label: `${s.prefab} (${s.rule})`, data: s };
+    }));
+    applyFilter();
+    drawMini();
+  }, 120);
+}
+
+function drawMini() {
+  const canvas = $('mini');
+  const start = handle.start();
+  const markers = [{ x: start.x, z: start.z, color: '#fff' }];
+  for (const s of handle.byPrefab('Vendor_BlackForest')) markers.push({ x: s.x, z: s.z, color: COLOUR.trader });
+  for (const s of handle.sites()) if (BOSSES.has(s.prefab)) markers.push({ x: s.x, z: s.z, color: COLOUR.boss, size: 3 });
+  const t0 = performance.now();
+  drawMiniMap(canvas, handle, { markers });
+  t.mini = performance.now() - t0;
+}
+
+function open(seed) {
+  for (const off of unsub) off();
+  unsub = [];
+  t.open = performance.now();
+  handle = World.open(seed, { mapSize: 1024 });
+  window.world = handle;
+  map.setWorld(handle);
+  map.setMarkers([]);
+  const bar = v => `<span class="bar"><i style="width:${Math.round(v * 100)}%"></i></span>`;
+  unsub.push(handle.on('progress', p => {
+    const since = ((performance.now() - t.open) / 1000).toFixed(1);
+    const frac = p.total ? p.index / p.total : 0;
+    $('progress').innerHTML = `<b>${seed}</b> ${p.phase} ${bar(frac)} ${p.index}/${p.total} rules, ${p.placed} sites · engine ${p.elapsed} ms · page ${since} s`;
+  }));
+  unsub.push(handle.on('info', info => { t.info = performance.now() - t.open; $('engine').textContent = `engine ${info.engine} · seed #${info.seedNumber}`; }));
+  unsub.push(handle.on('map', () => { t.map = performance.now() - t.open; drawMini(); }));
+  unsub.push(handle.on('sectors', s => { t.sectors = performance.now() - t.open; }));
+  unsub.push(handle.on('sites', () => refreshMarkers()));
+  unsub.push(handle.on('done', d => {
+    t.done = performance.now() - t.open;
+    refreshMarkers();
+    const start = handle.start();
+    const crypt = handle.near(start.x, start.z, 1, 'Crypt2')[0];
+    const haldor = handle.near(start.x, start.z, 1, 'Vendor_BlackForest')[0];
+    const line = (name, s) => s ? `${name}: ${formatDistance(s.distance)} ${bearing(start.x, start.z, s.x, s.z)} of start (${s.x.toFixed(0)}, ${s.z.toFixed(0)})` : `${name}: none`;
+    $('progress').innerHTML = `<b>${seed}</b> done${d.cached ? ' (from cache)' : ''}: ${d.placed} sites, ${d.report.length} rules, engine ${d.took} ms, page ${(t.done / 1000).toFixed(1)} s (info ${t.info | 0}, map ${t.map | 0}, sectors ${t.sectors | 0} ms) · ${line('Crypt2', crypt)} · ${line('Haldor', haldor)} · Crypt2 ${handle.countOf('Crypt2')}/${handle.wantedOf('Crypt2')}`;
+    window.devTimings = Object.assign({}, t, { cached: d.cached, placed: d.placed, rules: d.report.length });
+  }));
+  unsub.push(handle.on('error', e => { $('progress').textContent = `error: ${e.message}`; }));
+}
+
+map.onClick(async ({ x, z, marker }) => {
+  if (!handle) return;
+  const t0 = performance.now();
+  const p = await handle.point(x, z);
+  const ms = (performance.now() - t0).toFixed(1);
+  const parts = [`(${x.toFixed(0)}, ${z.toFixed(0)})`, p.ok ? `${p.biome} h=${p.height.toFixed(1)}${p.depth ? ` depth=${p.depth.toFixed(1)}` : ''}${p.forest ? ' forest' : ''}` : 'outside the world'];
+  if (p.sector && p.sector.length) parts.push(`sector: ${p.sector.join(', ')}`);
+  if (marker) parts.push(`marker: ${marker.label} y=${marker.data.y.toFixed(1)}`);
+  const start = handle.start();
+  parts.push(`${formatDistance(Math.hypot(x - start.x, z - start.z))} ${bearing(start.x, start.z, x, z)} of start`);
+  parts.push(`point() ${ms} ms`);
+  $('click').textContent = parts.join('  ·  ');
+});
+
+$('open').addEventListener('click', () => { const s = $('seed').value.trim(); if (s) { setSeed(s); open(s); } });
+$('seed').addEventListener('keydown', e => { if (e.key === 'Enter') $('open').click(); });
+$('forget').addEventListener('click', () => { clearSeed(); $('progress').textContent = 'seed forgotten'; });
+window.addEventListener('vegvisir:seed', e => { if (e.detail.seed) $('seed').value = e.detail.seed; });
+
+const initial = seedFromPage() || 'CXJeyEhsEp';
+$('seed').value = initial;
+open(initial);
+</script>
+</body>
+</html>
