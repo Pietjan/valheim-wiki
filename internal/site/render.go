@@ -35,10 +35,10 @@ type Crumb struct {
 
 // YourWorld is the seed layer's hook for a page.
 type YourWorld struct {
-	Kind    string   // location, biome, creature, item, boss, trader
-	Prefabs []string // location prefabs to count/find
-	Biomes  []string // biomes to find
-	Label   string
+	Kind    string   `json:"kind"`              // location, biome, creature, item, boss, trader
+	Prefabs []string `json:"prefabs,omitempty"` // location prefabs to count/find
+	Biomes  []string `json:"biomes,omitempty"`  // biomes to find
+	Label   string   `json:"label,omitempty"`
 }
 
 // loadTemplates parses the layout and partials once, then each page
