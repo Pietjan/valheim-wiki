@@ -93,7 +93,20 @@ func extractLocations(x *X) error {
 		}
 	})
 
+	dropped := 0
 	for _, r := range rules {
+		// A rule whose SoftReference is unassigned (all-zero GUID) is a
+		// legacy entry: SetupLocations registers a rule only when it is
+		// enabled or its prefab is valid, so a disabled one without a
+		// prefab never exists in the game, whatever stale m_prefabName it
+		// still carries (Castle, TrollCave, SunkenCrypt1, ...).
+		if guid := assetGUID(M(r.rule, "m_prefab")); guid == "" || guid == strings.Repeat("0", 32) {
+			if !B(r.rule, "m_enable") {
+				dropped++
+				continue
+			}
+			fmt.Printf("    enabled rule %q in %s has no prefab assigned; keeping its cached name %q\n", S(r.rule, "m_name"), r.list, S(r.rule, "m_prefabName"))
+		}
 		prefab := x.softPrefab(guids, M(r.rule, "m_prefab"), S(r.rule, "m_prefabName"))
 		if prefab == "" {
 			fmt.Printf("    rule %q in %s has no prefab\n", S(r.rule, "m_name"), r.list)
@@ -110,9 +123,11 @@ func extractLocations(x *X) error {
 		x.DB.Locations[prefab] = loc
 	}
 
+	fmt.Printf("    %d disabled rules without a prefab dropped, as the game does\n", dropped)
+
 	for _, prefab := range model.SortedKeys(x.DB.Locations) {
 		loc := x.DB.Locations[prefab]
-		root, ok := x.Roots[prefab]
+		root, ok := x.locationRoot(prefab)
 		if !ok {
 			fmt.Printf("    %s: prefab not loaded\n", prefab)
 		} else {
@@ -147,7 +162,7 @@ func readRule(r map[string]any, prefab string) *model.Location {
 		Prefab:                    prefab,
 		Enabled:                   B(r, "m_enable"),
 		Biomes:                    Biomes(I(r, "m_biome")),
-		BiomeArea:                 BiomeArea(I(r, "m_biomeArea")),
+		BiomeArea:                 locBiomeArea(I(r, "m_biomeArea")),
 		Quantity:                  I(r, "m_quantity"),
 		Prioritized:               B(r, "m_prioritized"),
 		CenterFirst:               B(r, "m_centerFirst"),
@@ -180,12 +195,44 @@ func readRule(r map[string]any, prefab string) *model.Location {
 		SurroundCheckVegetation:   B(r, "m_surroundCheckVegetation"),
 		SurroundCheckDistance:     F(r, "m_surroundCheckDistance"),
 		SurroundCheckLayers:       I(r, "m_surroundCheckLayers"),
-		SurroundBetterThanAverage: B(r, "m_surroundBetterThanAverage"),
+		SurroundBetterThanAverage: F(r, "m_surroundBetterThanAverage"),
 	}
 	if name := S(r, "m_name"); name != prefab {
 		loc.Rule = name
 	}
 	return loc
+}
+
+// locBiomeArea names a ZoneLocation.m_biomeArea. The game tests it as a
+// mask against the zone's area (Edge = 1 or Median = 2): the serialised
+// values are 1, 2, 3, 6, 7 and -1 (every bit), and 0, which matches no
+// zone, so that rule is never placed (GoblinCamp2_1).
+func locBiomeArea(v int) string {
+	switch v & 3 {
+	case 1:
+		return "Edge"
+	case 2:
+		return "Median"
+	case 3:
+		return "Everything"
+	}
+	return "None"
+}
+
+// locationRoot is the prefab's root with the Location component. A
+// name may be held by several roots (the Bonemass location and the
+// Bonemass creature), so the component decides, not the load order.
+func (x *X) locationRoot(prefab string) (assets.Ref, bool) {
+	for _, g := range x.RootsAll[prefab] {
+		if _, ok := x.Find(g, "m_exteriorRadius", "m_clearArea"); ok {
+			return g, true
+		}
+	}
+	g, ok := x.Roots[prefab]
+	if ok {
+		fmt.Printf("    %s: no root with a Location component; reading %s as is\n", prefab, x.Name(g))
+	}
+	return g, ok
 }
 
 // readLocationPrefab fills what the prefab itself says.

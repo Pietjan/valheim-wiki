@@ -1,5 +1,5 @@
 # Builds the site with Go and publishes it to GitHub Pages on every push
-# to master. The game data and icons are committed (extracted locally by
+# to main. The game data and icons are committed (extracted locally by
 # `make data` and `make icons`; the runner has no game client), so the
 # build needs only Go: the generator, and the seed engine for WebAssembly.
 name: pages

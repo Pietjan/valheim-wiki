@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"regexp"
 	"sort"
 	"strings"
@@ -25,7 +26,11 @@ import (
 // into it.
 func (x *X) contentsOf(root assets.Ref) *model.Contents {
 	c := &model.Contents{}
-	x.walkContents(root, 0, c, true)
+	w := &contentsWalk{}
+	x.walkContents(root, 0, c, true, w)
+	if c.Offering != nil && w.standPrefix != "" {
+		x.offeringStands(c.Offering, w)
+	}
 	if emptyContents(c) {
 		return nil
 	}
@@ -33,17 +38,56 @@ func (x *X) contentsOf(root assets.Ref) *model.Contents {
 	return c
 }
 
+// contentsWalk carries what one walk needs to resolve at its end.
+type contentsWalk struct {
+	standPrefix string      // OfferingBowl.m_itemStandPrefix when the altar uses item stands
+	stands      []itemStand // every ItemStand seen, resolved against the prefix afterwards
+}
+
+// itemStand is an ItemStand in the prefab: its name and the single item
+// it accepts, when it accepts exactly one.
+type itemStand struct {
+	name string
+	item string
+}
+
+// offeringStands fills an item-stand altar's Item and Count from the
+// stands whose name starts with the bowl's prefix, as
+// OfferingBowl.FindItemStands matches them: Moder's three dragoneggcup
+// stands take a DragonEgg each, Yagluth's five goblinking_totemholder a
+// GoblinTotem each.
+func (x *X) offeringStands(o *model.Offering, w *contentsWalk) {
+	o.Stands = true
+	n := 0
+	item := ""
+	for _, s := range w.stands {
+		if !strings.HasPrefix(s.name, w.standPrefix) {
+			continue
+		}
+		n++
+		if item == "" {
+			item = s.item
+		}
+	}
+	if n > 0 {
+		o.Count = n
+	}
+	if o.Item == "" {
+		o.Item = item
+	}
+}
+
 // emptyContents is whether nothing was counted.
 func emptyContents(c *model.Contents) bool {
 	return len(c.Chests) == 0 && len(c.Spawners) == 0 && len(c.Nests) == 0 && len(c.Pickables) == 0 &&
 		len(c.Loot) == 0 && len(c.Runestones) == 0 && len(c.Vegvisirs) == 0 && c.Offering == nil &&
-		len(c.Creatures) == 0 && len(c.Pieces) == 0 && len(c.Resources) == 0 && !c.Portal
+		len(c.Creatures) == 0 && len(c.Traders) == 0 && len(c.Pieces) == 0 && len(c.Resources) == 0 && !c.Portal
 }
 
 // walkContents visits g with the RandomSpawn chance inherited from its
 // ancestors (0 when none) and recurses. isRoot skips the prefab root's
 // own Location/Room components.
-func (x *X) walkContents(g assets.Ref, chance float64, c *model.Contents, isRoot bool) {
+func (x *X) walkContents(g assets.Ref, chance float64, c *model.Contents, isRoot bool, w *contentsWalk) {
 	comps := x.Components(g)
 	mono := func(fields ...string) (map[string]any, bool) {
 		for _, cm := range comps {
@@ -67,15 +111,15 @@ func (x *X) walkContents(g assets.Ref, chance float64, c *model.Contents, isRoot
 		if _, ok := mono("m_algorithm", "m_themes"); ok {
 			return // an interior: rooms are their own prefabs
 		}
-		x.countContents(g, comps, mono, chance, c)
+		x.countContents(g, comps, mono, chance, c, w)
 	}
 	for _, ch := range x.Children(g) {
-		x.walkContents(ch, chance, c, false)
+		x.walkContents(ch, chance, c, false, w)
 	}
 }
 
 // countContents adds what one GameObject's components make it.
-func (x *X) countContents(g assets.Ref, comps []Component, mono func(...string) (map[string]any, bool), chance float64, c *model.Contents) {
+func (x *X) countContents(g assets.Ref, comps []Component, mono func(...string) (map[string]any, bool), chance float64, c *model.Contents, w *contentsWalk) {
 	cab := g.Cab
 	name := baseName(x.Name(g))
 	_, isPiece := mono("m_resources", "m_icon", "m_category")
@@ -101,7 +145,17 @@ func (x *X) countContents(g assets.Ref, comps []Component, mono func(...string) 
 	if t, ok := mono("m_amount", "m_itemPrefab", "m_respawnTimeMinutes"); ok { // Pickable
 		addPickable(c, model.PickableIn{Prefab: name, Item: x.GameObjectName(cab, t["m_itemPrefab"]), Amount: I(t, "m_amount"), Count: 1, Chance: chance})
 	} else if t, ok := mono("m_itemPrefab", "m_randomItemPrefabs"); ok { // PickableItem
-		addPickable(c, model.PickableIn{Prefab: name, Item: x.GameObjectName(cab, t["m_itemPrefab"]), Amount: I(t, "m_stack"), Count: 1, Chance: chance})
+		p := model.PickableIn{Prefab: name, Item: x.GameObjectName(cab, t["m_itemPrefab"]), Amount: I(t, "m_stack"), Count: 1, Chance: chance}
+		if p.Item == "" { // SetupRandomPrefab: one of the list, equally likely
+			for _, r := range L(t, "m_randomItemPrefabs") {
+				rm := assets.AsMap(r)
+				if item := x.GameObjectName(cab, rm["m_itemPrefab"]); item != "" {
+					p.Random = append(p.Random, model.RandomPick{Item: item, Min: I(rm, "m_stackMin"), Max: I(rm, "m_stackMax")})
+				}
+			}
+			p.Amount = 0
+		}
+		addPickable(c, p)
 	}
 	if t, ok := mono("m_items", "m_respawnTimeMinuts"); ok { // LootSpawner
 		addLoot(c, model.LootIn{Prefab: name, Count: 1, Loot: x.DropTable(cab, M(t, "m_items")), Respawn: F(t, "m_respawnTimeMinuts")})
@@ -133,9 +187,22 @@ func (x *X) countContents(g assets.Ref, comps []Component, mono func(...string) 
 			Item: x.GameObjectName(cab, t["m_bossItem"]), Count: I(t, "m_bossItems"),
 			Boss: x.GameObjectName(cab, t["m_bossPrefab"]), SetsKey: S(t, "m_setGlobalKey"),
 		}
+		if B(t, "m_useItemStands") {
+			w.standPrefix = S(t, "m_itemStandPrefix")
+		}
+	}
+	if t, ok := mono("m_attachOther", "m_autoAttach"); ok { // ItemStand
+		st := itemStand{name: x.Name(g)}
+		if items := L(t, "m_supportedItems"); len(items) == 1 {
+			st.item = x.GameObjectName(cab, items[0])
+		}
+		w.stands = append(w.stands, st)
 	}
 	if _, ok := mono("m_health", "m_faction"); ok { // Character
 		addCreature(c, model.CreatureIn{Creature: name, Count: 1, Chance: chance})
+	}
+	if _, ok := mono("m_items", "m_standRange"); ok { // Trader
+		addTrader(c, name)
 	}
 	if _, ok := mono("m_allowAllItems", "m_activationRange"); ok { // TeleportWorld
 		c.Portal = true
@@ -224,8 +291,7 @@ func addNest(c *model.Contents, e model.Nest) {
 func addPickable(c *model.Contents, e model.PickableIn) {
 	for i := range c.Pickables {
 		k := c.Pickables[i]
-		k.Count = e.Count
-		if k == e {
+		if k.Prefab == e.Prefab && k.Item == e.Item && k.Amount == e.Amount && k.Chance == e.Chance && fmt.Sprint(k.Random) == fmt.Sprint(e.Random) {
 			c.Pickables[i].Count++
 			return
 		}
@@ -274,6 +340,15 @@ func addCreature(c *model.Contents, e model.CreatureIn) {
 	c.Creatures = append(c.Creatures, e)
 }
 
+func addTrader(c *model.Contents, prefab string) {
+	for _, t := range c.Traders {
+		if t == prefab {
+			return
+		}
+	}
+	c.Traders = append(c.Traders, prefab)
+}
+
 func addPiece(c *model.Contents, prefab string) {
 	for i := range c.Pieces {
 		if c.Pieces[i].Prefab == prefab {
@@ -312,6 +387,7 @@ func sortContents(c *model.Contents) {
 	sort.SliceStable(c.Loot, func(i, j int) bool {
 		return byCount(c.Loot[i].Count, c.Loot[j].Count, c.Loot[i].Prefab, c.Loot[j].Prefab)
 	})
+	sort.Strings(c.Traders)
 	sort.SliceStable(c.Creatures, func(i, j int) bool {
 		return byCount(c.Creatures[i].Count, c.Creatures[j].Count, c.Creatures[i].Creature, c.Creatures[j].Creature)
 	})

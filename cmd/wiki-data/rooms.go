@@ -60,7 +60,7 @@ func extractRooms(x *X) error {
 				List:    list,
 				Enabled: B(em, "m_enabled"),
 			}
-			if g, ok := x.Roots[prefab]; ok {
+			if g, ok := x.roomRoot(prefab); ok {
 				x.readRoomPrefab(g, room)
 			} else {
 				fmt.Printf("    room %s not loaded\n", prefab)
@@ -69,6 +69,21 @@ func extractRooms(x *X) error {
 		}
 	}
 	return nil
+}
+
+// roomRoot is the prefab's root with the Room component, when several
+// roots share the name (see locationRoot).
+func (x *X) roomRoot(prefab string) (assets.Ref, bool) {
+	for _, g := range x.RootsAll[prefab] {
+		if _, ok := x.Find(g, "m_size", "m_theme", "m_endCap"); ok {
+			return g, true
+		}
+	}
+	g, ok := x.Roots[prefab]
+	if ok {
+		fmt.Printf("    %s: no root with a Room component; reading %s as is\n", prefab, x.Name(g))
+	}
+	return g, ok
 }
 
 // readRoomPrefab fills the Room component and the contents.

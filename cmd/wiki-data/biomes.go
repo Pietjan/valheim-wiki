@@ -95,6 +95,7 @@ func extractBiomes(x *X) error {
 	}
 	x.EachMono([]string{"m_dayLengthSec", "m_environments", "m_biomes"}, func(cab string, id int64, t map[string]any) {
 		root, _ := x.Owner(cab, t)
+		fmt.Printf("DEBUG EnvMan root=%q cab=%s id=%d envs=%d biomes=%d\n", root, cab, id, len(L(t, "m_environments")), len(L(t, "m_biomes")))
 		envSetups(cab, t["m_environments"], root)
 		biomeEnvs(t["m_biomes"])
 	})

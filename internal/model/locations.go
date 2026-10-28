@@ -13,7 +13,7 @@ type Location struct {
 	MapIcon string `json:"mapIcon,omitempty"` // the game's own sprite (mapicon_trader, ...)
 
 	Biomes                 []string `json:"biomes,omitempty"`
-	BiomeArea              string   `json:"biomeArea,omitempty"`
+	BiomeArea              string   `json:"biomeArea,omitempty"` // Edge, Median, Everything; None = never placed
 	Quantity               int      `json:"quantity"`
 	Prioritized            bool     `json:"prioritized,omitempty"`
 	CenterFirst            bool     `json:"centerFirst,omitempty"`
@@ -44,12 +44,12 @@ type Location struct {
 	MinAltitude            float64  `json:"minAltitude,omitempty"`
 	MaxAltitude            float64  `json:"maxAltitude,omitempty"`
 	// The surround check: the placement also samples the vegetation mask
-	// in Layers rings Distance apart and wants it below the threshold (or
-	// merely better than the average).
+	// in Layers rings Distance apart and wants the point's own vegetation
+	// below average + BetterThanAverage * (best - average), 0..1.
 	SurroundCheckVegetation   bool    `json:"surroundCheckVegetation,omitempty"`
 	SurroundCheckDistance     float64 `json:"surroundCheckDistance,omitempty"`
 	SurroundCheckLayers       int     `json:"surroundCheckLayers,omitempty"`
-	SurroundBetterThanAverage bool    `json:"surroundBetterThanAverage,omitempty"`
+	SurroundBetterThanAverage float64 `json:"surroundBetterThanAverage,omitempty"`
 	AltBiome                  string  `json:"altBiome,omitempty"` // added by this alt biome
 
 	// The prefab: Location component and contents.
@@ -107,6 +107,7 @@ type Contents struct {
 	Vegvisirs  []Vegvisir   `json:"vegvisirs,omitempty"`
 	Offering   *Offering    `json:"offering,omitempty"`
 	Creatures  []CreatureIn `json:"creatures,omitempty"` // creatures standing in the prefab directly
+	Traders    []string     `json:"traders,omitempty"`   // Trader NPCs (Haldor, Hildir, BogWitch) standing in the prefab
 	Pieces     []PieceIn    `json:"pieces,omitempty"`    // notable pieces: beds, portals, stations, ...
 	Resources  []ResourceIn `json:"resources,omitempty"` // trees, rocks, destructibles with drops
 	Portal     bool         `json:"portal,omitempty"`
@@ -153,13 +154,23 @@ type NestEntry struct {
 	MaxLevel int     `json:"maxLevel,omitempty"`
 }
 
-// PickableIn is a Pickable inside a prefab.
+// PickableIn is a Pickable (or PickableItem) inside a prefab. A
+// PickableItem without a fixed Item picks one of Random, each equally
+// likely, with a stack between its Min and Max.
 type PickableIn struct {
-	Prefab string  `json:"prefab"`
-	Item   string  `json:"item,omitempty"`
-	Amount int     `json:"amount,omitempty"`
-	Count  int     `json:"count"`
-	Chance float64 `json:"chance,omitempty"`
+	Prefab string       `json:"prefab"`
+	Item   string       `json:"item,omitempty"`
+	Amount int          `json:"amount,omitempty"`
+	Count  int          `json:"count"`
+	Chance float64      `json:"chance,omitempty"`
+	Random []RandomPick `json:"random,omitempty"`
+}
+
+// RandomPick is one PickableItem.RandomItem.
+type RandomPick struct {
+	Item string `json:"item"`
+	Min  int    `json:"min"`
+	Max  int    `json:"max"`
 }
 
 // LootIn is a LootSpawner.
@@ -188,12 +199,16 @@ type Vegvisir struct {
 	Count     int      `json:"count"`
 }
 
-// Offering is an OfferingBowl: the altar's summoning.
+// Offering is an OfferingBowl: the altar's summoning. Item and Count are
+// what the bowl takes from the inventory, or, for an altar with item
+// stands (Moder's egg cups, Yagluth's totem holders), the stands' item
+// and how many stands there are.
 type Offering struct {
 	Item    string `json:"item"`
 	Count   int    `json:"count"`
 	Boss    string `json:"boss"`
 	SetsKey string `json:"setsKey,omitempty"`
+	Stands  bool   `json:"stands,omitempty"` // placed on item stands, not offered from the inventory
 }
 
 // CreatureIn is a creature placed directly in a prefab.
