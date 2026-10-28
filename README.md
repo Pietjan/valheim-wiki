@@ -35,7 +35,10 @@ WebAssembly, run in a Web Worker and cached per seed in IndexedDB. The
 biome map, the rivers and every placement rule are reproduced; a world
 takes about half a minute the first time. The World page draws it as the
 game's map or as terrain in 3D, where the ground is re-sampled from the
-generator at a few metres as the camera comes down.
+generator at a few metres as the camera comes down, and the trees, rocks
+and buildings the zone build stands there appear, placed as the game
+places them (`internal/scene`, from valheim-world) and drawn from the
+game's own models (`make models`, from valheim-npc's extraction).
 
 ## Building it
 

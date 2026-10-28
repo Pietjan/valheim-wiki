@@ -272,6 +272,88 @@ func (w *World) modify(t *TerrainTile, sites []Site) {
 	t.Paint = paint
 }
 
+// ApplyModifiers reshapes a height grid the way the sites reshape the
+// ground: n samples a side, cell metres apart, sample (0, 0) at originX,
+// originZ with x growing east along a row and z growing north down the
+// rows when northUp is false, or south when it is true (the map raster's
+// order). The same levelling and smoothing as modify, over the sites
+// within reach, so a close-up of the ground shows a camp's flattened
+// floor where its model stands.
+func (w *World) ApplyModifiers(h []float32, n int, originX, originZ, cell float64, northUp bool) {
+	minX := originX
+	minZ, maxZ := originZ, originZ+float64(n-1)*cell
+	if northUp {
+		minZ, maxZ = originZ-float64(n-1)*cell, originZ
+	}
+	span := float64(n-1)*cell/2 + 48
+	cx, cz := minX+float64(n-1)*cell/2, (minZ+maxZ)/2
+	var ops []placedOp
+	for _, s := range w.list {
+		if math.Abs(float64(s.X)-cx) > span || math.Abs(float64(s.Z)-cz) > span {
+			continue
+		}
+		for _, p := range w.opsOf(s) {
+			r := p.reach()
+			if p.X+r < minX || p.X-r > minX+float64(n-1)*cell || p.Z+r < minZ || p.Z-r > maxZ {
+				continue
+			}
+			ops = append(ops, p)
+		}
+	}
+	if len(ops) == 0 {
+		return
+	}
+	sortOps(ops)
+	row := func(z float64) float64 {
+		if northUp {
+			return (originZ - z) / cell
+		}
+		return (z - originZ) / cell
+	}
+	for _, p := range ops {
+		vx := int(math.Floor((p.X-minX)/cell + 0.5))
+		vz := int(math.Floor(row(p.Z) + 0.5))
+		if p.Op.LevelRadius > 0 {
+			rv := float64(p.Op.LevelRadius) / cell
+			c := int(math.Ceil(rv))
+			for iz := vz - c; iz <= vz+c; iz++ {
+				for ix := vx - c; ix <= vx+c; ix++ {
+					if ix < 0 || iz < 0 || ix >= n || iz >= n {
+						continue
+					}
+					if !p.Op.Square && math.Hypot(float64(ix-vx), float64(iz-vz)) > rv {
+						continue
+					}
+					h[iz*n+ix] = float32(p.Target)
+				}
+			}
+		}
+		if p.Op.SmoothRadius > 0 {
+			rv := float64(p.Op.SmoothRadius) / cell
+			c := int(math.Ceil(rv))
+			for iz := vz - c; iz <= vz+c; iz++ {
+				for ix := vx - c; ix <= vx+c; ix++ {
+					if ix < 0 || iz < 0 || ix >= n || iz >= n {
+						continue
+					}
+					d := math.Hypot(float64(ix-vx), float64(iz-vz))
+					if d > rv || rv == 0 {
+						continue
+					}
+					f := d / rv
+					if p.Op.SmoothPower == 3 {
+						f = f * f * f
+					} else {
+						f = math.Pow(f, float64(p.Op.SmoothPower))
+					}
+					hh := float64(h[iz*n+ix])
+					h[iz*n+ix] = float32(hh + (p.Target-hh)*(1-f))
+				}
+			}
+		}
+	}
+}
+
 // GroundAt is the ground as the game builds it: the tile's heights with
 // every site's modifiers applied, read between vertices on the triangles
 // the game's mesh has.

@@ -26,7 +26,8 @@ const MaxTileSide = 512
 
 // Tile samples the generator on a grid, for the 3D view's close-ups.
 // Past the world's edge the height is the generator's open sea and the
-// biome is none, as the map raster has it.
+// biome is none, as the map raster has it. Once the world is placed, the
+// sites' terrain modifiers reshape the tile as they do the game's ground.
 func (w *World) Tile(cx, cz, span float64, n int) *Tile {
 	if n < 2 {
 		n = 2
@@ -57,6 +58,9 @@ func (w *World) Tile(cx, cz, span float64, n int) *Tile {
 			r, g, bl := worldmap.MaskColor(w.gen, wx, wz, h, b)
 			t.Mask[4*k], t.Mask[4*k+1], t.Mask[4*k+2], t.Mask[4*k+3] = r, g, bl, 255
 		}
+	}
+	if sc := w.Scene(); sc != nil {
+		sc.ApplyModifiers(t.Heights, n, cx-span/2+cell/2, cz+span/2-cell/2, cell, true)
 	}
 	return t
 }

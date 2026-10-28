@@ -1,4 +1,144 @@
 {
+ "18___Default.001": {
+  "texture": "Skeleton_d_6deb7e1170f2b111.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.5882350206375122,
+   0.5882350206375122,
+   0.5882350206375122,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard"
+ },
+ "Altar_mat": {
+  "texture": "Altar_d_724c4313b7029aa6.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7279411554336548,
+   0.7279411554336548,
+   0.7279411554336548,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.17800000309944153
+ },
+ "Altarfader_mat": {
+  "texture": "altarfader_d_348960d6dd18817f.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.07999999821186066
+ },
+ "ArcheryTarget_mat": {
+  "texture": "ArcheryTarget_d_6f0160ea200df39d.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.20999999344348907
+ },
+ "AshCrow": {
+  "texture": "crow_d_ac5c3967335b548f.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.2980000078678131
+ },
+ "AshWood_mat": {
+  "texture": "BlackWood_d_7725d75f462ddd5f.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.11299999803304672
+ },
+ "AshlandsRockTest2_mat": {
+  "texture": "AshlandsRockTEST_d_7dc346173fea0fa2.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.18299999833106995
+ },
  "AshlandsRockTest_mat": {
   "texture": "AshlandsRock_d_47b01a6fa0c88b06.jpg",
   "scale": [
@@ -120,6 +260,26 @@
   "shader": "Custom/Piece",
   "glossiness": 0.15000000596046448
  },
+ "Banner_Dvergr_mat": {
+  "texture": "DvergerBanners_d_5235e3c094a3148d.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.843999981880188,
+  "shader": "Standard TwoSided",
+  "glossiness": 0.10000000149011612
+ },
  "Bark3-2": {
   "texture": "Bark3-2_1fcec38c244ec1c7.jpg",
   "scale": [
@@ -140,6 +300,249 @@
   "shader": "Standard",
   "glossiness": 0.17000000178813934
  },
+ "BedSimple_Mat": {
+  "texture": "BedSimple_d_a83789e871509afa.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8014705777168274,
+   0.7773289084434509,
+   0.6423550844192505,
+   1
+  ],
+  "cutoff": 0.5410000085830688,
+  "cutout": true,
+  "shader": "Custom/Piece"
+ },
+ "BellHolder_Mat": {
+  "texture": "BellHolder_d_10117e847336ac2e.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5
+ },
+ "Bench_Mat": {
+  "texture": "Bench_d_72db48e7b4fed50a.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7058823108673096,
+   0.703161895275116,
+   0.6072664260864258,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.05700000002980232
+ },
+ "BigRock": {
+  "texture": "PetRock_nothing_d_bd9347a6e3baf6d.jpg",
+  "scale": [
+   20,
+   20
+  ],
+  "offset": [
+   -0.30000001192092896,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.5
+ },
+ "BlackIce_Mat": {
+  "texture": "blackice_d_78d80ca9fda37db9.jpg",
+  "scale": [
+   8,
+   8
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.7730000019073486
+ },
+ "BlackMetalChest_mat": {
+  "texture": "BlackMetalChest_D_85af387aadf85d42.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.30000001192092896
+ },
+ "BogWitchHutCurtains2_mat": {
+  "texture": "bogwitch_hut_curtains2_d_50e00a59a5d63078.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.7360000014305115,
+  "cutout": true,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.0560000017285347
+ },
+ "BogWitchHutCurtains_mat": {
+  "texture": "bogwitch_hut_curtains_d_abe7133ac5aa9246.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.7360000014305115,
+  "cutout": true,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.039000000804662704
+ },
+ "BogWitch_mat": {
+  "texture": "BogWitch_d_fa82fd4c03ca082a.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.3330000042915344,
+  "shader": "Custom/Creature",
+  "glossiness": 0.16099999845027924
+ },
+ "BogwitchHutRoof_mat": {
+  "texture": "bogwitch_hut_roof_d_3c5744bc02d7d709.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.2750000059604645
+ },
+ "BogwitchHut_mat": {
+  "texture": "bogwitch_hut_d_93f7d4cd9cc6d8c0.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.2750000059604645
+ },
+ "Boletus_Yellow": {
+  "texture": "Boletus_edulis_yellow_d_2775ddbb48a2ac32.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5
+ },
  "Boletus_edulis": {
   "texture": "Boletus_edulis_d_c90e4bafec60ed14.jpg",
   "scale": [
@@ -159,6 +562,27 @@
   "cutoff": 0.5,
   "shader": "Standard",
   "glossiness": 0.2199999988079071
+ },
+ "Brazier_Mat": {
+  "texture": "Brazier02_d_dede692b0227bac8.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.33000001311302185,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.3100000023841858
  },
  "Bush01": {
   "texture": "Bush01_d_5f238a0aa9a20673.png",
@@ -366,6 +790,26 @@
   "shader": "Custom/Piece",
   "glossiness": 0.12999999523162842
  },
+ "Chair_Mat": {
+  "texture": "Chair_d_86e14f580bc1d0d4.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7058823108673096,
+   0.703161895275116,
+   0.6072664260864258,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.05700000002980232
+ },
  "Charred_mat": {
   "texture": "Charred_d_c2543093fee6d510.jpg",
   "scale": [
@@ -407,6 +851,165 @@
   "shader": "Custom/Vegetation",
   "glossiness": 0.20999999344348907
  },
+ "CrateContentOpaque_mat": {
+  "texture": "Crate_d_4e8d553da4ba6018.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.4099999964237213
+ },
+ "Crate_Content": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.801886796951294,
+   0.5439574122428894,
+   0.12482201308012009,
+   1
+  ],
+  "cutoff": 1,
+  "shader": "Custom/Flow",
+  "glossiness": 0.8299999833106995
+ },
+ "Crate_mat": {
+  "texture": "Crate_d_4e8d553da4ba6018.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.4099999964237213
+ },
+ "Creep_ball_mat": {
+  "texture": "creep_d_2a47832cda4817e9.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Bonemass",
+  "glossiness": 0.5
+ },
+ "Creep_mat": {
+  "texture": "creep_d_2a47832cda4817e9.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Bonemass",
+  "glossiness": 0.5
+ },
+ "Curvedrock_mat": {
+  "texture": "curvedrock_d_e3d5cdb8e7570277.jpg",
+  "scale": [
+   4,
+   4
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.33000001311302185
+ },
+ "Curvedrock_snow_mat": {
+  "texture": "curvedrock_d_e3d5cdb8e7570277.jpg",
+  "scale": [
+   4,
+   4
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.33000001311302185
+ },
+ "Curvedrock_snow_small_mat": {
+  "texture": "curvedrock_d_e3d5cdb8e7570277.jpg",
+  "scale": [
+   2,
+   2
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.33000001311302185
+ },
  "Dandelion": {
   "texture": "Dandelion_c484dfd86966351a.jpg",
   "scale": [
@@ -425,6 +1028,266 @@
   ],
   "cutoff": 0.14000000059604645,
   "shader": "Standard"
+ },
+ "DarkWood_mat": {
+  "texture": "DarkWoodBeams_d_66e400da80f3112a.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.25
+ },
+ "DearMeatRotten": {
+  "texture": "DeerMeat_Rotten_942271a5d80318e0.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.8259999752044678
+ },
+ "Default-Material": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5
+ },
+ "DragonLocation_mat": {
+  "texture": "DragonLocation_d_7c05594daf12357b.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.30000001192092896
+ },
+ "DraugrPile_mat": {
+  "texture": "DraugrPile_d_ae1de548bf071a93.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.5600000023841858
+ },
+ "DvergrCrate_mat": {
+  "texture": "dvergrcrate_d_4375a26e3330a682.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature"
+ },
+ "DvergrTownLanternWorn_mat": {
+  "texture": "DvergrTownLanternWorn_d_10a2558f8e9ffd99.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5
+ },
+ "DvergrTownLantern_mat": {
+  "texture": "DvergrTownLantern_d_e464b8c6e166de3b.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   1,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5
+ },
+ "DvergrTownPiecesWornCreep_Mat": {
+  "texture": "DvergrTownPieces_d_acd26a634c11dd02.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.07999999821186066
+ },
+ "DvergrTownPiecesWorn_Mat": {
+  "texture": "DvergrTownPiecesBroken_d_428e8415efdd2e67.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.07999999821186066
+ },
+ "DvergrTownPieces_Mat": {
+  "texture": "DvergrTownPieces_d_acd26a634c11dd02.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.07999999821186066
+ },
+ "Dyrnwyn_Shattered_mat": {
+  "texture": "Dyrnwynl_Shattered_d_4ad04a295b08d0a1.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5
+ },
+ "FingerRock": {
+  "texture": "FingerRock_d_b73c6f35496276dd.jpg",
+  "scale": [
+   4,
+   4
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8676470518112183,
+   0.8676470518112183,
+   0.8676470518112183,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.2160000056028366
  },
  "Fir_Snow_Branch_Mat": {
   "texture": "Pine_tree_snow_d_1f39dfc95433d49.png",
@@ -548,6 +1411,105 @@
   "cutoff": 0.5,
   "shader": "Custom/StaticRock"
  },
+ "Flametal_Mat": {
+  "texture": "Flametal_d_5e2e0692011385e3.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.37299999594688416
+ },
+ "ForgeCoals_mat": {
+  "texture": "Forge_d_d544b90f76089871.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.0820000022649765
+ },
+ "Forge_mat": {
+  "texture": "Forge_d_d544b90f76089871.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.6196078658103943,
+   0.6196078658103943,
+   0.6196078658103943,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece"
+ },
+ "FrostTrollBloodGold_mat": {
+  "texture": "bloodgold_d_e9c9685dddbcddae.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8088235259056091,
+   0.8088235259056091,
+   0.8088235259056091,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.4300000071525574
+ },
+ "FrostTrollmat": {
+  "texture": "frosttroll_d_9ed50aa560354935.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.28999999165534973,
+  "shader": "Custom/Creature",
+  "glossiness": 0.23999999463558197
+ },
  "FrozenGD_mat": {
   "texture": "FrozenGD_d_7c201051a4dc33db.jpg",
   "scale": [
@@ -568,6 +1530,85 @@
   "shader": "Custom/Creature",
   "glossiness": 0.11999999731779099
  },
+ "FrozenKingGate_mat": {
+  "texture": "FrozenKingGate_d_8bc63f2e1f585c66.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.40299999713897705
+ },
+ "FrozenKingGate_nonoise_mat": {
+  "texture": "FrozenKingGate_d_8bc63f2e1f585c66.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.40299999713897705
+ },
+ "FrozenKing_Mist_mat": {
+  "texture": "Frost_mist_d_4fc68cb0e42e7e2d.jpg",
+  "scale": [
+   2,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0,
+   0.6738169193267822,
+   1,
+   1
+  ],
+  "cutoff": 0.18299999833106995,
+  "shader": "Custom/Flow"
+ },
+ "FrozenKing_mat": {
+  "texture": "FrozenKing_d_976a25f2b5973a41.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.18299999833106995,
+  "shader": "Standard TwoSided",
+  "glossiness": 0.2150000035762787
+ },
  "GDSpawner_mat": {
   "texture": "GDSpawner_d_fd72b4b2c86551b9.jpg",
   "scale": [
@@ -587,6 +1628,26 @@
   "cutoff": 0.20999999344348907,
   "shader": "Custom/Creature",
   "glossiness": 0.10999999940395355
+ },
+ "Gemstone_mat": {
+  "texture": "Gemstones_d_67d14eacb9d102b3.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5849999785423279
  },
  "Ghost_mat": {
   "texture": "Ghost_d_ecf0835fc3142f52.jpg",
@@ -645,6 +1706,729 @@
   "shader": "Custom/StaticRock",
   "glossiness": 0.20000000298023224
  },
+ "GoblinVillage": {
+  "texture": "GoblinVillage_d_684956e8c2652641.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.10000000149011612
+ },
+ "GoblinVillageStairs": {
+  "texture": "GoblinVillage_Stairs_d_ce41820dc8cfac1e.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.1379999965429306
+ },
+ "GoblinVillage_Banner": {
+  "texture": "GoblinVillage_d_684956e8c2652641.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.2199999988079071,
+  "cutout": true,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.10000000149011612
+ },
+ "GoblinVillage_Cloth": {
+  "texture": "GoblinVillage_d_684956e8c2652641.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.2199999988079071,
+  "cutout": true,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.10000000149011612
+ },
+ "Grill_mat": {
+  "texture": "Grill_d_c06975da5acb924e.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.33000001311302185
+ },
+ "Guardstone_OdenGlow_mat": {
+  "texture": "OdenStatue_d_d81cf1c2d10b6720.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.6359999775886536,
+  "shader": "Standard",
+  "glossiness": 0.19499999284744263
+ },
+ "Guardstone_Oden_marble": {
+  "texture": "marble_d_ddb8f4b87b8f760f.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.5
+ },
+ "Haldor_mat": {
+  "texture": "Haldor_d_bb4c372cc510f191.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.2800000011920929,
+  "shader": "Custom/Creature",
+  "glossiness": 0.10999999940395355
+ },
+ "Hats1_mat": {
+  "texture": "Hats1_d_d795fabc3bf505b7.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.10999999940395355
+ },
+ "Hats2_mat": {
+  "texture": "Hats2_d_6d7beb5fe7b6c0cd.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.10999999940395355
+ },
+ "HildirBody_mat": {
+  "texture": "HildirBody_d_c62bd9c1bdb22963.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.2199999988079071
+ },
+ "HildirChest1_mat": {
+  "texture": "HildirChest1_d_ff0498c602ee703b.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.5
+ },
+ "HildirChest2_mat": {
+  "texture": "HildirChest2_d_9347c3b193345c43.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.5
+ },
+ "HildirChest3_mat": {
+  "texture": "HildirChest3_d_50538ccbd1b5426b.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.5
+ },
+ "HildirDivan_mat": {
+  "texture": "HildirDivan_d_b8320ca4a41f0d8b.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.20999999344348907
+ },
+ "HildirFabrics1_mat": {
+  "texture": "HildirFabrics1_d_a64bb545c9f10ce2.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.15000000596046448
+ },
+ "HildirFabrics2_mat": {
+  "texture": "HildirFabrics2_d_456d292a5a48c1d5.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.15000000596046448
+ },
+ "HildirFabrics3_mat": {
+  "texture": "HildirFabrics1_d_a64bb545c9f10ce2.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.15000000596046448
+ },
+ "HildirFabrics4_mat": {
+  "texture": "HildirFabrics1_d_a64bb545c9f10ce2.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.15000000596046448
+ },
+ "HildirFabrics5_mat": {
+  "texture": "HildirFabrics1_d_a64bb545c9f10ce2.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.15000000596046448
+ },
+ "HildirFabrics6_mat": {
+  "texture": "HildirFabrics1_d_a64bb545c9f10ce2.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.6832402348518372,
+   0.20630116760730743,
+   0.7169811725616455,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.15000000596046448
+ },
+ "HildirFabrics7_mat": {
+  "texture": "HildirFabrics1_d_a64bb545c9f10ce2.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.15000000596046448
+ },
+ "HildirFabrics9_mat": {
+  "texture": "HildirFabrics1_d_a64bb545c9f10ce2.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.5377358198165894,
+   0.5377358198165894,
+   0.5377358198165894,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.15000000596046448
+ },
+ "HildirFirepit_m": {
+  "texture": "Hildir_Firepit_d_331d98edd25ff292.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5
+ },
+ "HildirFlowerGirland_mat": {
+  "texture": "HildirProps_d_c403000ee5d8a910.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.18700000643730164,
+  "cutout": true,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.10000000149011612
+ },
+ "HildirProps_mat": {
+  "texture": "HildirProps_d_c403000ee5d8a910.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.11999999731779099
+ },
+ "HildirTentCloth_mat": {
+  "texture": "HildirTent_d_97d78df01dbdad1b.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.18700000643730164,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.10000000149011612
+ },
+ "HildirTent_mat": {
+  "texture": "HildirTent_d_97d78df01dbdad1b.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.23999999463558197
+ },
+ "HildirWgon_Mat": {
+  "texture": "HildirWagon_d_4a1c2a394c36a86e.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.20999999344348907
+ },
+ "HildirsLox": {
+  "texture": "HildirLox_d_4882617ed006a72b.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.7799999713897705,
+  "shader": "Custom/Creature",
+  "glossiness": 0.23999999463558197
+ },
+ "IceSpike": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7352941036224365,
+   0.4054930508136749,
+   0.7261962294578552,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.18400000035762787
+ },
+ "Icelake_mat": {
+  "texture": "Icelake_d_d39825f33817536.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 1
+ },
+ "Idol_mat": {
+  "texture": "Idol_d_bf81d6ce9febfbeb.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5
+ },
+ "JotunStatuesBig_mat": {
+  "texture": "JotunStatuesBig_d_cb358b280f939171.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.2199999988079071
+ },
+ "JotunStatues_mat": {
+  "texture": "JotunStatues_d_b37f64e49fe0a603.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.2199999988079071
+ },
+ "Kvastur_mat": {
+  "texture": "Kvastur_d_95b8a90bc8a638d7.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.3330000042915344,
+  "shader": "Custom/Creature",
+  "glossiness": 0.16099999845027924
+ },
  "LingonBush_mat": {
   "texture": "lingon_d_3fed12056ae41cc9.png",
   "scale": [
@@ -685,6 +2469,165 @@
   "cutout": true,
   "shader": "Custom/Vegetation",
   "glossiness": 0.27000001072883606
+ },
+ "LogBench_mat": {
+  "texture": "LogBench_d_ba4991bbbf47c23f.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.04899999871850014
+ },
+ "LoxMeatRotten": {
+  "texture": "LoxMeat_Rotten_21c1fa132636a942.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.800000011920929
+ },
+ "Material.008": {
+  "texture": "morkhalla_rubble_1_d_f706fa6f47b56f45.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard"
+ },
+ "MeadCauldron_MAT": {
+  "texture": "meadcauldron_d_d0d303d2eef805ff.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.47999998927116394
+ },
+ "MemorialCoal_mat": {
+  "texture": "memorialcoal_d_971d9779890567fc.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.1599999964237213
+ },
+ "MemorialStone_Large_mat": {
+  "texture": "MemorialStone_large_d_cd65b88822e664fb.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "MemorialStone_Medium_mat": {
+  "texture": "MemorialStone_medium_d_f3b4a9d9c0ecf67c.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "MemorialStone_small_mat": {
+  "texture": "MemorialStone_small_d_1dc71338890423a2.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
  },
  "MistlandsMushrooms_balls": {
   "texture": "MistlandsShrooms_d_9672aba6d6bcc09e.png",
@@ -728,6 +2671,206 @@
   "shader": "Custom/Vegetation",
   "glossiness": 0.18000000715255737
  },
+ "MoltenCore_mat": {
+  "texture": "BlackCore_d_8733241831dea900.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.13300000131130219
+ },
+ "MorkHallaEyes_mat": {
+  "texture": "MorkhallaEyes_d_248f56210785426d.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.5
+ },
+ "Morkhalla_Wood_Metal": {
+  "texture": "morkhallawoodmetal_d_a2003cb1fccb7fd1.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.125
+ },
+ "Morkhalla_chest_stone": {
+  "texture": "jotun_stonechest_d_3689fc93348e7236.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.04500000178813934
+ },
+ "Morkhalla_gate_stone": {
+  "texture": "jotun_gate_d_403fcaee6f6b010b.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.04500000178813934
+ },
+ "Morkhalla_rockslab_floor_mat": {
+  "texture": "morkhallawall_d_f000c8e02a6d27e3.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.6253148317337036,
+   0.6274510025978088,
+   0.6666666865348816,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.5
+ },
+ "Morkhalla_rockslab_mat": {
+  "texture": "morkhallawall_d_f000c8e02a6d27e3.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.30000001192092896
+ },
+ "Morkhalla_rockslab_pillar_mat": {
+  "texture": "morkhallapillar02_d_85c4a3e0fc71119b.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0.10000000149011612,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.4000000059604645
+ },
+ "Morkhalla_rockslab_stair_mat": {
+  "texture": "morkhallawall_d_f000c8e02a6d27e3.jpg",
+  "scale": [
+   0.5,
+   0.5
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.6253148317337036,
+   0.6274510025978088,
+   0.6666666865348816,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.5
+ },
+ "NestRock": {
+  "texture": "gouacherock_big_e1f81a1424ae7cd5.jpg",
+  "scale": [
+   2,
+   2
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.33000001311302185
+ },
  "ObsidianRock_mat": {
   "texture": "ObsidanRock_d_f6ef6a3c30d32e19.jpg",
   "scale": [
@@ -766,6 +2909,26 @@
   "cutoff": 0.5,
   "shader": "Standard",
   "glossiness": 0.5
+ },
+ "Pillar_mat": {
+  "texture": "pillar_d_56e325b4f9d2b94c.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.33000001311302185
  },
  "Pillar_snow_mat": {
   "texture": "pillar_d_56e325b4f9d2b94c.jpg",
@@ -1032,6 +3195,46 @@
   "shader": "Standard",
   "glossiness": 0.19300000369548798
  },
+ "RoofShingles": {
+  "texture": "DarkWoodBeams_d_66e400da80f3112a.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.25
+ },
+ "Scaledwall_mat": {
+  "texture": "Scaledwall2x2_d_1186b33107f12752.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.23999999463558197
+ },
  "Shoot_Leaf_mat": {
   "texture": "ShootLeaf_d_12d5b57018de28f2.png",
   "scale": [
@@ -1071,6 +3274,126 @@
   ],
   "shader": "Custom/Vegetation",
   "glossiness": 0.10000000149011612
+ },
+ "Skeleton": {
+  "texture": "Skeleton_d_6deb7e1170f2b111.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.23999999463558197
+ },
+ "SmallGrave_Fader_Mat": {
+  "texture": "smallGrave_Fader_d_fa643193f87738fc.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.20999999344348907,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.10999999940395355
+ },
+ "Spices_mat": {
+  "texture": "spices_d_ce75c9bd2ddf43e1.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.23000000417232513
+ },
+ "Spices_mat2": {
+  "texture": "spices2_d_2bf9447b3dcc3386.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.23000000417232513
+ },
+ "Stalagtite_mat": {
+  "texture": "stalagtite_d_3bc61052812ba489.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7647058963775635,
+   0.742214560508728,
+   0.742214560508728,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.33000001311302185
+ },
+ "StatuesThorFreya_mat": {
+  "texture": "StatuesThorFreya_d_340c81c98a2395f2.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5
  },
  "StumpHut_mat": {
   "texture": "StumpHut_d_833316d478f929fa.jpg",
@@ -1112,6 +3435,206 @@
   "shader": "Standard",
   "glossiness": 0.11999999731779099
  },
+ "Sulfur_mat": {
+  "texture": "Sulfur_rockl_d_af3c320117fca04b.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.019999999552965164
+ },
+ "Table_Mat": {
+  "texture": "Table_d_c4c67607376cdacc.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7058823108673096,
+   0.703161895275116,
+   0.6072664260864258,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.05700000002980232
+ },
+ "Tanningrack_mat": {
+  "texture": "Tanningrack_d_ad2459767ae865.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8867924213409424,
+   0.8867924213409424,
+   0.8867924213409424,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.25
+ },
+ "Tradaerrune_Mat": {
+  "texture": "TraderRunestone_d_c9d9eeeee5c8b909.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "TraderChest_Mat": {
+  "texture": "TraderChest_d_2d7bd915df9ab987.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard"
+ },
+ "TraderTent": {
+  "texture": "TraderTent_d_fe8a41889f194b78.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.18700000643730164,
+  "shader": "Standard",
+  "glossiness": 0.10000000149011612
+ },
+ "TraderTent_cloth": {
+  "texture": "TraderTent_d_fe8a41889f194b78.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.18700000643730164,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.10000000149011612
+ },
+ "Turnip": {
+  "texture": "Turnip_54aa69ecbdbfdffd.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.845588207244873,
+   0.845588207244873,
+   0.845588207244873,
+   1
+  ],
+  "cutoff": 0.4000000059604645,
+  "cutout": true,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.550000011920929
+ },
+ "TwitcherSpawner_Elite_mat": {
+  "texture": "Twitcher_Spawner_Elite_d_bb60783340ca2795.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.20999999344348907,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.10999999940395355
+ },
+ "TwitcherSpawner_mat": {
+  "texture": "Twitcher_Spawner_d_7a9ba6942d32fb16.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.20999999344348907,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.10999999940395355
+ },
  "TwitcherSpawner_unlit_mat": {
   "texture": "Twitcher_Spawner_d_7a9ba6942d32fb16.jpg",
   "scale": [
@@ -1132,6 +3655,286 @@
   "shader": "Custom/StaticRock",
   "glossiness": 0.10999999940395355
  },
+ "VinesBranch_Ashlands_mat": {
+  "texture": "VineLeaves_458a2fb7e95c455d.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.20200000703334808,
+  "cutout": true,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.12300000339746475
+ },
+ "VinesBranch_mat": {
+  "texture": "VineLeaves_458a2fb7e95c455d.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.20200000703334808,
+  "cutout": true,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.12300000339746475
+ },
+ "Vines_Mat": {
+  "texture": "VineLeaves_458a2fb7e95c455d.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7308333516120911,
+   1,
+   0.5249999761581421,
+   1
+  ],
+  "cutoff": 0.41200000047683716,
+  "cutout": true,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.15399999916553497
+ },
+ "Vines_ashlands_mat": {
+  "texture": "VineLeaves_458a2fb7e95c455d.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8679245114326477,
+   0,
+   0.27749595046043396,
+   1
+  ],
+  "cutoff": 0.41200000047683716,
+  "cutout": true,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.15399999916553497
+ },
+ "Workbench_mat": {
+  "texture": "WorkBench_d_28463a6c78c4c879.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.6176470518112183,
+   0.6176470518112183,
+   0.6176470518112183,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece"
+ },
+ "adze": {
+  "texture": "adze_d_47d85a09ac0fbf5e.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5910000205039978
+ },
+ "altar": {
+  "texture": "altar_d_ba553e511b9abec8.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.20000000298023224
+ },
+ "ancient_gemstone_black_mat": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.07843128591775894,
+   0,
+   0.07843128591775894,
+   0.9803921580314636
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.699999988079071
+ },
+ "ancient_gemstone_green_mat": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0,
+   0.501960813999176,
+   0.3921568691730499,
+   0.8823529481887817
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.699999988079071
+ },
+ "ancient_gemstone_orange_mat": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   0.3921568691730499,
+   0,
+   0.8823529481887817
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.699999988079071
+ },
+ "ancient_gemstone_purple_mat": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.501960813999176,
+   0,
+   0.501960813999176,
+   0.8823529481887817
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.699999988079071
+ },
+ "ancientseed": {
+  "texture": "seed_d_8bbda8d083392226.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.6499999761581421
+ },
+ "ashwoodbed_mat": {
+  "texture": "ashlandsbed_d_aad8087fe5c1cc5e.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.33000001311302185
+ },
+ "asksvincarrion_mat": {
+  "texture": "asksvincarrion_d_17b056e5ea169c23.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5
+ },
  "barnacle": {
   "texture": "barnacle_d_739aa1dba339b45e.jpg",
   "scale": [
@@ -1151,6 +3954,48 @@
   "cutoff": 0.5,
   "shader": "Custom/StaticRock",
   "glossiness": 0.4950000047683716
+ },
+ "barrel_iron": {
+  "texture": "barrellDiffuse_7d89e4f101c0e4b.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.20000000298023224
+ },
+ "barrelplayer_mat": {
+  "texture": "barrel_d_c47bb38e016d9fdd.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.23499999940395355
  },
  "beech_bark": {
   "texture": "beech_bark_93e56751e1293a48.png",
@@ -1234,6 +4079,25 @@
   "cutout": true,
   "shader": "Custom/Vegetation"
  },
+ "beehive": {
+  "texture": "beehive_d_8458de8260f91d4d.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard"
+ },
  "birch_bark": {
   "texture": "birch_bark_ef05d6588fb1112d.png",
   "scale": [
@@ -1294,6 +4158,106 @@
   "cutout": true,
   "shader": "Custom/Vegetation"
  },
+ "bjornrug_mat": {
+  "texture": "BjornRug_d_2dec28f804e72f63.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Rug",
+  "glossiness": 0.13199999928474426
+ },
+ "blackmarble": {
+  "texture": "marble_d_ddb8f4b87b8f760f.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.5
+ },
+ "blackmarble_creep": {
+  "texture": "marble_d_ddb8f4b87b8f760f.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.4000000059604645
+ },
+ "blackmetalscrap": {
+  "texture": "armorscrap_d_7772340bedba088.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.04827586188912392,
+   0.4117646813392639,
+   0,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.6399999856948853
+ },
+ "blob_morgenhole": {
+  "texture": "blob_d_54c4c6d10bd4c0a4.jpg",
+  "scale": [
+   3,
+   3
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Blob",
+  "glossiness": 0.753000020980835
+ },
  "blueberry": {
   "texture": "blueberry_fc9e4903610e8dba.jpg",
   "scale": [
@@ -1314,6 +4278,284 @@
   "shader": "Standard",
   "glossiness": 0.593999981880188
  },
+ "bogwitch_props_mat": {
+  "texture": "bogwitch_props_d_80bc38cfde1057e3.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.5460000038146973
+ },
+ "bogwitch_soup_mat": {
+  "scale": [
+   0.5,
+   0.5
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   0.6121190190315247,
+   0,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/FlowOpaque"
+ },
+ "bogwitch_talisman_mat": {
+  "texture": "bogwitch_props_d_80bc38cfde1057e3.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.5460000038146973
+ },
+ "bogwitchbarrel_mat": {
+  "texture": "barrel_d_c47bb38e016d9fdd.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.790566086769104,
+   1,
+   0.790566086769104,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.335999995470047
+ },
+ "bogwitchingredients_mat": {
+  "texture": "bogwitchingredients_d_cdeda53faf4f3b20.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.20999999344348907
+ },
+ "bogwitchpotions2_mat": {
+  "texture": "bogwitchpotions2_d_ca874f09f5d82367.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5809999704360962,
+  "shader": "Custom/Creature",
+  "glossiness": 0.23399999737739563
+ },
+ "bogwitchpotions_mat": {
+  "texture": "bogwitchpotions_d_a3e6b53b6f10edd8.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5809999704360962,
+  "shader": "Custom/Creature",
+  "glossiness": 0.2619999945163727
+ },
+ "bossstone_bonemass": {
+  "texture": "bossstone_bonemass_d_650e39b2a3f92e57.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "bossstone_dragonqueen_mat": {
+  "texture": "bossstone_dragonqueen_d_8848518ecbc613b5.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "bossstone_eikthyr": {
+  "texture": "bossstone_eikthyr_d_5a4f3a2113e8fe57.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "bossstone_metal": {
+  "texture": "rock_fcd6c25f16eff376.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.6700000166893005
+ },
+ "bossstone_theelder": {
+  "texture": "bossstone_theelder_d_6bf1a4d6fe77369a.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "bossstone_yagluth_mat": {
+  "texture": "YaglythStone_d_cf472638f0319f32.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "bowl": {
+  "scale": [
+   2,
+   2
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   0.7955374717712402,
+   0.5367647409439087,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.7099999785423279
+ },
  "branch": {
   "texture": "acacia_trunk01_2cb3c4c692e8a625.jpg",
   "scale": [
@@ -1332,6 +4574,86 @@
   ],
   "cutoff": 0.5,
   "shader": "Standard"
+ },
+ "bzerkermushroom_mat": {
+  "texture": "bzerkermushroom_d_1ed006ea0f22385f.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.27799999713897705
+ },
+ "candle_mat": {
+  "texture": "candle_d_55aa4c3ea6877c21.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5
+ },
+ "carrot": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   0.5376267433166504,
+   0.30882352590560913,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.07999999821186066
+ },
+ "carrot_blast": {
+  "texture": "carrotblast_72e23816764af6da.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.4428632855415344,
+   0.6397058963775635,
+   0.25400087237358093,
+   1
+  ],
+  "cutoff": 0.4000000059604645,
+  "cutout": true,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.10000000149011612
  },
  "carrot_flower": {
   "texture": "CarrotFlower_d_513bb225ab759e8a.png",
@@ -1354,6 +4676,45 @@
   "shader": "Custom/Vegetation",
   "glossiness": 0.10000000149011612
  },
+ "cauldron_chain": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.5220588445663452,
+   0.5220588445663452,
+   0.5220588445663452,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.5199999809265137
+ },
+ "cave_ice": {
+  "texture": "icewall_d_5e3e168014efd87d.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.6473684310913086,
+   0.8999999761581421,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.5
+ },
  "cloudberry": {
   "texture": "cloudberry_d_35bab27d974b5918.jpg",
   "scale": [
@@ -1373,6 +4734,438 @@
   "cutoff": 0.5,
   "shader": "Standard",
   "glossiness": 0.7799999713897705
+ },
+ "coppingblock": {
+  "texture": "Pine_tree_log_texture_3a8187791468985.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard"
+ },
+ "corestand": {
+  "texture": "(Wood 26) tree bark seamless texture 2048x2048_e5d0e9aa573307cb.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7720588445663452,
+   0.7720588445663452,
+   0.7720588445663452,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.7110000252723694
+ },
+ "corgihare": {
+  "texture": "rock_med_ea48f5d5f663bb4a.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.3100000023841858
+ },
+ "cpR_furniture_lite": {
+  "texture": "cpR_furniture_lite_cpR_furniture_lite_AlbedoTransparency_8b86d0d2959ccdce.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.9264705777168274,
+   0.7545191049575806,
+   0.5177335739135742,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.30000001192092896
+ },
+ "crow": {
+  "texture": "crow_d_ac5c3967335b548f.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.2980000078678131
+ },
+ "deerhide_rug": {
+  "texture": "hide01_80d6de51cbdc1259.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7426470518112183,
+   0.7426470518112183,
+   0.7426470518112183,
+   1
+  ],
+  "cutoff": 0.7400000095367432,
+  "shader": "Custom/Rug",
+  "glossiness": 0.19900000095367432
+ },
+ "dirt": {
+  "texture": "rock_a_dif_f3e35184c4d63754.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7647058963775635,
+   0.7647058963775635,
+   0.7647058963775635,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.0820000022649765
+ },
+ "dirtwall": {
+  "texture": "dirtfloor_d_128a21a19bcf577f.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7279411554336548,
+   0.7111084461212158,
+   0.6958261132240295,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.27000001072883606
+ },
+ "door_wood": {
+  "texture": "Planks5c_low_8a5887c108179c1c.jpg",
+  "scale": [
+   -0.5600000023841858,
+   0.11999999731779099
+  ],
+  "offset": [
+   0,
+   0.014000000432133675
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.18000000715255737
+ },
+ "dragonegg": {
+  "texture": "dragonegg_d_a332f64a19576707.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.6299999952316284
+ },
+ "dragonhead": {
+  "texture": "Planks5c_low_8a5887c108179c1c.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.25
+ },
+ "draugrmaterial": {
+  "texture": "draugr_diffuse_dc757efd24f2ce13.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.23000000417232513
+ },
+ "dvergr_copper": {
+  "texture": "anvil_374a98634bbceec6.jpg",
+  "scale": [
+   0.75,
+   0.75
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   0.7546653151512146,
+   0.5661764740943909,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece"
+ },
+ "dvergr_metal": {
+  "texture": "anvil_374a98634bbceec6.jpg",
+  "scale": [
+   1.25,
+   1.25
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   0.7529411911964417,
+   0.5647059082984924,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock"
+ },
+ "dvergr_metal_furnmiture": {
+  "texture": "anvil_374a98634bbceec6.jpg",
+  "scale": [
+   1.25,
+   1.25
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   0.7529411911964417,
+   0.5647059082984924,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock"
+ },
+ "dvergr_metal_furnmiture_worn": {
+  "texture": "anvil_374a98634bbceec6.jpg",
+  "scale": [
+   1.25,
+   1.25
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   0.7529411911964417,
+   0.5647059082984924,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock"
+ },
+ "dvergrchest_mat": {
+  "texture": "dvergrchestWorn_d_135ff346d8a0d160.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.5
+ },
+ "dvergrdoorWorn_mat": {
+  "texture": "dvergrdoorworn_d_5f0fe6f40b594846.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece"
+ },
+ "exirt_portal": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/LitParticles",
+  "glossiness": 0.5
+ },
+ "eye_blue": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.2959558963775635,
+   0.4800689220428467,
+   0.875,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 1
+ },
+ "fangspear": {
+  "texture": "fangspear_d_19058ee6d4ec7b09.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "shader": "Custom/Creature",
+  "glossiness": 0.20000000298023224
+ },
+ "fermenter": {
+  "texture": "fermenter_d_3b2ac71df3de5ddf.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7720588445663452,
+   0.7720588445663452,
+   0.7720588445663452,
+   1
+  ],
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.17900000512599945
  },
  "fi_village_catacombs": {
   "texture": "fi_village_catacombs_hd_2_c6d75f683f250a25.jpg",
@@ -1394,6 +5187,126 @@
   "shader": "Standard",
   "glossiness": 0.30000001192092896
  },
+ "fi_village_catacombs_roots": {
+  "texture": "fi_village_catacombs_hd_2_c6d75f683f250a25.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.30000001192092896
+ },
+ "fi_village_containers": {
+  "texture": "fi_village_containers_hd_5c5f96c6ad1fa31d.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.1289999932050705
+ },
+ "fi_village_forge": {
+  "texture": "fi_village_forge_hd_aa82cdad816f1652.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.2809999883174896
+ },
+ "fi_village_kitchen_cauldron": {
+  "texture": "cauldron_pewder_d_e006303dc792b26d.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.3709999918937683
+ },
+ "fi_village_lighting": {
+  "texture": "fi_village_lighting_1bb1adbc812dfae5.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5299999713897705
+ },
+ "fi_village_metal": {
+  "texture": "fi_village_catacombs_hd_2_c6d75f683f250a25.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.5590000152587891
+ },
  "fi_village_shields": {
   "texture": "fi_village_shields_hd_bb9a8e8e87400163.jpg",
   "scale": [
@@ -1413,6 +5326,83 @@
   "cutoff": 0.5,
   "shader": "Standard (Specular setup)",
   "glossiness": 0.6290000081062317
+ },
+ "fi_village_wood": {
+  "texture": "fi_village_wood_hd_bac50bf39ddfe343.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard"
+ },
+ "finewood_log": {
+  "texture": "finewood_d_c3f471055099cfd3.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece"
+ },
+ "fireplace_ash": {
+  "texture": "acacia_leaves01_437a6fc07f69f7c0.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0,
+   0,
+   0,
+   1
+  ],
+  "cutoff": 0.20100000500679016,
+  "shader": "Standard TwoSided",
+  "glossiness": 0.1940000057220459
+ },
+ "fireplace_ash_glowing_blue": {
+  "texture": "acacia_leaves01_437a6fc07f69f7c0.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0,
+   0,
+   0,
+   1
+  ],
+  "cutoff": 0.4099999964237213,
+  "shader": "Standard TwoSided"
  },
  "flint": {
   "texture": "flint_2331b98d29a77b11.jpg",
@@ -1434,6 +5424,26 @@
   "shader": "Standard",
   "glossiness": 0.7020000219345093
  },
+ "giant_brain": {
+  "texture": "giant_brain_d_101c5a79f7a527df.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.6647731065750122,
+   0.7358490228652954,
+   0.48940902948379517,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.38999998569488525
+ },
  "giant_skeleton_exterior": {
   "texture": "(Wood 26) tree bark seamless texture 2048x2048_e5d0e9aa573307cb.jpg",
   "scale": [
@@ -1454,6 +5464,85 @@
   "shader": "Custom/StaticRock",
   "glossiness": 0.27399998903274536
  },
+ "giant_skeleton_interior": {
+  "texture": "marble_d_ddb8f4b87b8f760f.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.699999988079071
+ },
+ "glowing_coal_blue": {
+  "texture": "iron_94c5250c185b8301.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.27941179275512695,
+   0.2732482850551605,
+   0.2732482850551605,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard"
+ },
+ "greydwarf": {
+  "texture": "greydrawrf_diffuse_cf44f04c39f47693.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Creature",
+  "glossiness": 0.11999999731779099
+ },
+ "gucksack": {
+  "texture": "gucksack_d_f9d96ceb3e03fd48.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.19300000369548798
+ },
  "heathrock": {
   "texture": "heathrock_d_9e446381e564a305.jpg",
   "scale": [
@@ -1473,6 +5562,65 @@
   "cutoff": 0.5,
   "shader": "Custom/StaticRock",
   "glossiness": 0.2800000011920929
+ },
+ "helmet_iron_mat": {
+  "texture": "helmet_iron_d_1c49786a14d8751a.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "shader": "Custom/Creature",
+  "glossiness": 0.1599999964237213
+ },
+ "highrock": {
+  "texture": "gouacherock_big_e1f81a1424ae7cd5.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.33000001311302185
+ },
+ "hugeskull": {
+  "texture": "huge_skull_d_e2f6b52e124751fd.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.25
  },
  "ice": {
   "scale": [
@@ -1511,6 +5659,85 @@
   "cutoff": 0.5,
   "shader": "Custom/StaticRock",
   "glossiness": 0.20999999344348907
+ },
+ "ice_frozenship_mat": {
+  "texture": "ice_frozenship_d_dc7b896b06c8e84b.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.6473684310913086,
+   0.8999999761581421,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.5
+ },
+ "icefimbulwinter_mat": {
+  "scale": [
+   8,
+   8
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.6823529601097107,
+   0.8098196983337402,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.20999999344348907
+ },
+ "jute_carpet": {
+  "texture": "jutecarpet_d_adb4c62ad0696e6d.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.8999999761581421,
+  "shader": "Custom/Rug",
+  "glossiness": 0.10000000149011612
+ },
+ "jute_carpet_l2": {
+  "texture": "jutecarpet02_d_4634a833ee5cebee.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.8999999761581421,
+  "shader": "Custom/Rug",
+  "glossiness": 0.10000000149011612
  },
  "kale_veg_mat": {
   "texture": "kale_d_c9c90d82305673a9.png",
@@ -1613,6 +5840,26 @@
   "shader": "Custom/StaticRock",
   "glossiness": 0.25999999046325684
  },
+ "logwall": {
+  "texture": "Pine_tree_log_wall_dce95d5410d1894f.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7941176295280457,
+   0.7941176295280457,
+   0.7941176295280457,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.19499999284744263
+ },
  "logwall_broken": {
   "texture": "Pine_tree_log_wall_worn_1f3af04445478ecc.jpg",
   "scale": [
@@ -1631,6 +5878,86 @@
   ],
   "cutoff": 0.5,
   "shader": "Custom/Piece"
+ },
+ "lox": {
+  "texture": "Halstein_d_217aeb28687838c4.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.6990000009536743,
+  "shader": "Custom/Creature",
+  "glossiness": 0.25999999046325684
+ },
+ "memorial_altar_glow_mat": {
+  "texture": "MemorialAltar_D_24351de95f6c7d47.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5
+ },
+ "memorialaltar_mat": {
+  "texture": "MemorialAltar_D_24351de95f6c7d47.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.09200000017881393
+ },
+ "metalwall": {
+  "texture": "metalwall_15a08e48ff1aaeba.jpg",
+  "scale": [
+   2,
+   2
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.6274510025978088,
+   0.6274510025978088,
+   0.6274510025978088,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.5120000243186951
  },
  "mistlands_cliff": {
   "texture": "gouacherock_big_e1f81a1424ae7cd5.jpg",
@@ -1651,6 +5978,211 @@
   "cutoff": 0.5,
   "shader": "Custom/StaticRock",
   "glossiness": 0.30000001192092896
+ },
+ "mistlands_cliff_dungeon": {
+  "texture": "gouacherock_big_e1f81a1424ae7cd5.jpg",
+  "scale": [
+   2,
+   2
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.25471699237823486,
+   0.25471699237823486,
+   0.25471699237823486,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.33000001311302185
+ },
+ "morkhalla_banner1_mat": {
+  "texture": "morkhalla_banner1_d_8f3c0749d9739e66.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.10000000149011612
+ },
+ "morkhalla_banner2_mat": {
+  "texture": "morkhalla_banner2_d_4dee97c9bf616a7a.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.11100000143051147
+ },
+ "morkhalla_banner_stone_mat": {
+  "texture": "morkhalla_banner1_d_8f3c0749d9739e66.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.10000000149011612
+ },
+ "morkhalla_rubble_mat": {
+  "texture": "morkhalla_rubble_1_d_f706fa6f47b56f45.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.2370000034570694
+ },
+ "morkhalla_rug_corner1_mat": {
+  "texture": "morkhalla_rug4_d_d7597c91056fee91.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.20000000298023224
+ },
+ "morkhalla_rug_middle_mat": {
+  "texture": "morkhalla_rug1_d_ece018c0b22fc342.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.20000000298023224
+ },
+ "morkhalla_web_mat": {
+  "texture": "morkhalla_web_ae8d9aabca04f48e.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7490196228027344,
+   0.7490196228027344,
+   0.7490196228027344,
+   1
+  ],
+  "shader": "Particles/Standard Surface2",
+  "glossiness": 0.12999999523162842
+ },
+ "morkhalla_web_tunnel_mat": {
+  "texture": "morkhalla_web_tunnel_51d5aa4b5533977d.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7490196228027344,
+   0.7490196228027344,
+   0.7490196228027344,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Particles/Standard Surface2",
+  "glossiness": 0.12999999523162842
+ },
+ "morkhallafurniture_mat": {
+  "texture": "morkhallafurniture_d_bcc1f335a06e42d8.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.17000000178813934
  },
  "mudpile": {
   "texture": "mudpile_d_9271d4befbe24703.jpg",
@@ -1691,6 +6223,25 @@
   "cutoff": 0.5,
   "shader": "Standard",
   "glossiness": 0.6399999856948853
+ },
+ "new_charcoalkilnmat": {
+  "texture": "newcharcoalkiln_d_944836062ad1731b.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "shader": "Custom/Piece",
+  "glossiness": 0.3109999895095825
  },
  "oak_bark": {
   "texture": "oak_bark_f3f63312051db249.png",
@@ -1892,6 +6443,303 @@
   "shader": "Custom/StaticRock",
   "glossiness": 1
  },
+ "roundlog_new": {
+  "texture": "Pine_tree_log_wall_dce95d5410d1894f.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7450980544090271,
+   0.7450980544090271,
+   0.7450980544090271,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece"
+ },
+ "rug_fur": {
+  "texture": "rug_fur_97120091161a45cd.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5199999809265137,
+  "shader": "Custom/Rug"
+ },
+ "rug_fur_l2": {
+  "texture": "rug_fur_top_cd0b595186fdc6fd.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.9191176295280457,
+   0.9191176295280457,
+   0.9191176295280457,
+   1
+  ],
+  "cutoff": 0.15000000596046448,
+  "shader": "Custom/Rug",
+  "glossiness": 0.10000000149011612
+ },
+ "runestone": {
+  "texture": "runestone_d_ad2e0258d1a0c3ea.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "runestone_ashlands": {
+  "texture": "runestone_ashlands_d_b80c9056516f3d77.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "runetablet": {
+  "texture": "runetablet_d_716568148106a0d0.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "runetablet_ashlands": {
+  "texture": "runetablet_d_716568148106a0d0.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "runetablet_plains": {
+  "texture": "runetablet_d_716568148106a0d0.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "runetablet_vegvisir": {
+  "texture": "runetablet_vegvisir_d_e1dfb54d5d9166ee.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "runetablet_vegvisir_ashlands": {
+  "texture": "runetablet_vegvisir_d_e1dfb54d5d9166ee.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "runetablet_vegvisir_sword": {
+  "texture": "runetablet_sword_d_a36c6264d9dfd582.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8823529481887817,
+   0.8823529481887817,
+   0.8823529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "sail_frozen": {
+  "texture": "sail_frozen_d_169052d4a75a0b8.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.1940000057220459
+ },
+ "shieldwood": {
+  "texture": "shieldwood_d_5b0cf46b36eccbc7.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.9117646813392639,
+   0.9117646813392639,
+   0.9117646813392639,
+   1
+  ],
+  "shader": "Custom/Creature",
+  "glossiness": 0.20000000298023224
+ },
+ "ship_frozen_mat": {
+  "texture": "ship_frozen_d_f571e7b024816795.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.20000000298023224
+ },
+ "ship_mat": {
+  "texture": "ship_diffuse_ece4bdb0f1afef7f.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard"
+ },
  "shrub": {
   "texture": "shrub_2_fe30be552fb585fa.png",
   "scale": [
@@ -1934,6 +6782,85 @@
   "shader": "Custom/Vegetation",
   "glossiness": 0.3199999928474426
  },
+ "skull_mudwater": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.1764705777168274,
+   0.1764705777168274,
+   0.1764705777168274,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Water",
+  "glossiness": 0.949999988079071
+ },
+ "smallboat": {
+  "texture": "boat_d_82d959e69e83c616.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8161764740943909,
+   0.8161764740943909,
+   0.8161764740943909,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.20000000298023224
+ },
+ "smallboat_worn": {
+  "texture": "boat_worn_d_376254df9ac50bf4.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.5802488923072815,
+   0.652180552482605,
+   0.5807449221611023,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.20000000298023224
+ },
+ "smeltermat": {
+  "texture": "smelter_a40c841fe13498dc.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.25
+ },
  "smokepuff_mat": {
   "texture": "Smokepuff_d_8a1c8eb1c3474aea.jpg",
   "scale": [
@@ -1973,6 +6900,86 @@
   "cutoff": 0.5,
   "shader": "Standard",
   "glossiness": 0.5
+ },
+ "socket": {
+  "texture": "stone_256_d_6f310a7ffaa2b7cc.jpg",
+  "scale": [
+   0.5,
+   0.5
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.33000001311302185
+ },
+ "spear": {
+  "texture": "Planks1c_bc6cf63ddbd8aaaa.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7573529481887817,
+   0.7573529481887817,
+   0.7573529481887817,
+   1
+  ],
+  "shader": "Custom/Creature",
+  "glossiness": 0.18000000715255737
+ },
+ "spiralstariworn_mat": {
+  "texture": "spiralstairworn_d_86259733e9fd7e95.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.17000000178813934
+ },
+ "stake": {
+  "texture": "stakewall_d_8547a2a5389695aa.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.20999999344348907
  },
  "statue1": {
   "texture": "diffuse_6a607378010885bd.jpg",
@@ -2014,6 +7021,126 @@
   "shader": "Custom/StaticRock",
   "glossiness": 0.23000000417232513
  },
+ "stone_huge": {
+  "texture": "rock_256_365766e537520359.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8676470518112183,
+   0.8676470518112183,
+   0.8676470518112183,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.2160000056028366
+ },
+ "stone_large": {
+  "texture": "rock_med_ea48f5d5f663bb4a.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8676470518112183,
+   0.8676470518112183,
+   0.8676470518112183,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.2160000056028366
+ },
+ "stone_large_interior": {
+  "texture": "rock_med_ea48f5d5f663bb4a.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8676470518112183,
+   0.8676470518112183,
+   0.8676470518112183,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.2160000056028366
+ },
+ "stone_large_interior_hildir": {
+  "texture": "rock_med_hildir_85c41d715aefe60d.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8676470518112183,
+   0.8676470518112183,
+   0.8676470518112183,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.2160000056028366
+ },
+ "stone_mat": {
+  "texture": "stone_a87eaaed3e59aada.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7900000214576721,
+   0.7900000214576721,
+   0.7900000214576721,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.15000000596046448
+ },
+ "stone_mat_4x2": {
+  "texture": "stone_a87eaaed3e59aada.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7900000214576721,
+   0.7900000214576721,
+   0.7900000214576721,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.15000000596046448
+ },
  "stone_mat_worn": {
   "texture": "stone_a87eaaed3e59aada.jpg",
   "scale": [
@@ -2033,6 +7160,327 @@
   "cutoff": 0.5,
   "shader": "Custom/Piece",
   "glossiness": 0.17399999499320984
+ },
+ "stone_pile": {
+  "texture": "rock_low_d626c29e25c5988d.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.779411792755127,
+   0.779411792755127,
+   0.779411792755127,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.20000000298023224
+ },
+ "stone_stairs": {
+  "texture": "stone_a87eaaed3e59aada.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.10000000149011612
+ },
+ "stoneblock": {
+  "texture": "stoneblock_d_5e271b21a3b00006.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7132352590560913,
+   0.7132352590560913,
+   0.7132352590560913,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.23000000417232513
+ },
+ "stonechest": {
+  "texture": "stonechest_d_8f2248bf108f125d.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7132352590560913,
+   0.6527621746063232,
+   0.5978589653968811,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock"
+ },
+ "stonechest_plains": {
+  "texture": "stonechest_d_8f2248bf108f125d.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7132352590560913,
+   0.6527621746063232,
+   0.5978589653968811,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock"
+ },
+ "stonefloor": {
+  "texture": "stonefloor_d_ae620a39b8663c8f.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.25
+ },
+ "stonefloor_2x2": {
+  "texture": "stonefloor_2x2_d_2efa7189900e728.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7573529481887817,
+   0.7573529481887817,
+   0.7573529481887817,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.20000000298023224
+ },
+ "stonekit_stone_mat": {
+  "texture": "stone_hard_13649279b2ade49b.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.3235294222831726,
+   0.3235294222831726,
+   0.3235294222831726,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.3100000023841858
+ },
+ "stonekit_village_cathedral_base": {
+  "texture": "fi_village_cathedral_hd_7d57de6811143e18.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.3014705777168274,
+   0.2992538809776306,
+   0.2992538809776306,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.36399999260902405
+ },
+ "stonepillar": {
+  "texture": "stonepillar_d_bd1d2b1a6e3785b9.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7132352590560913,
+   0.7132352590560913,
+   0.7132352590560913,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.25
+ },
+ "stones": {
+  "texture": "stone_256_d_6f310a7ffaa2b7cc.jpg",
+  "scale": [
+   0.5,
+   0.5
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.33000001311302185
+ },
+ "stonewall": {
+  "texture": "stonewall_775a2791e54239ad.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7647058963775635,
+   0.742214560508728,
+   0.742214560508728,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.10000000149011612
+ },
+ "straw": {
+  "texture": "straw_60ee1bbaa99469e0.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.625,
+   0.625,
+   0.625,
+   1
+  ],
+  "cutoff": 0.9200000166893005,
+  "shader": "Custom/Decal"
+ },
+ "straw_roof": {
+  "texture": "straw_roof_690cd78603a24be7.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7867647409439087,
+   0.7867647409439087,
+   0.7867647409439087,
+   1
+  ],
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.20000000298023224
+ },
+ "straw_roof_alpha": {
+  "texture": "straw_roof_690cd78603a24be7.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.75,
+   0.75,
+   0.75,
+   1
+  ],
+  "cutoff": 0.6899999976158142,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.20000000298023224
+ },
+ "straw_roof_corner_alpha": {
+  "texture": "straw_roof_corner_4e1155b415495f20.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.75,
+   0.75,
+   0.75,
+   1
+  ],
+  "cutoff": 0.6899999976158142,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.33000001311302185
  },
  "stump": {
   "texture": "stump_699173493077292a.jpg",
@@ -2071,6 +7519,106 @@
   ],
   "cutoff": 0.5,
   "shader": "Custom/StaticRock"
+ },
+ "sunkenkit_stone_mat_interior 1": {
+  "texture": "stone_sunken_6b7f883fdcfa0b11.jpg",
+  "scale": [
+   1,
+   2
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.38235294818878174,
+   0.38235294818878174,
+   0.38235294818878174,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.33000001311302185
+ },
+ "sunkenkit_stone_mat_interior 2": {
+  "texture": "stone_sunken_6b7f883fdcfa0b11.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.38235294818878174,
+   0.38235294818878174,
+   0.38235294818878174,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.33000001311302185
+ },
+ "sunkenkit_stone_mat_interior 3": {
+  "texture": "stone_sunken_6b7f883fdcfa0b11.jpg",
+  "scale": [
+   3,
+   4
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.38235294818878174,
+   0.38235294818878174,
+   0.38235294818878174,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.33000001311302185
+ },
+ "sunkenkit_stone_mat_interior 4": {
+  "texture": "stone_sunken_6b7f883fdcfa0b11.jpg",
+  "scale": [
+   2,
+   2
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.38235294818878174,
+   0.38235294818878174,
+   0.38235294818878174,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/StaticRock",
+  "glossiness": 0.33000001311302185
+ },
+ "surtlingcore": {
+  "texture": "core_d_12123aa4910ede78.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.16176468133926392,
+   0.16176468133926392,
+   0.16176468133926392,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.41200000047683716
  },
  "swampplant2": {
   "texture": "swampplant2_d_c0c31e3ff3820dab.png",
@@ -2153,6 +7701,26 @@
   "shader": "Custom/Vegetation",
   "glossiness": 0.14000000059604645
  },
+ "swamptree2_barkInfested": {
+  "texture": "olivetree_trunk01_de55b79530a93c39.jpg",
+  "scale": [
+   2,
+   2
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Vegetation",
+  "glossiness": 0.14000000059604645
+ },
  "swamptree2_branch": {
   "texture": "deadbranch_ece924b86ef5f88f.png",
   "scale": [
@@ -2194,6 +7762,141 @@
   "shader": "Custom/Vegetation",
   "glossiness": 0.14000000059604645
  },
+ "tarlump": {
+  "scale": [
+   1.2000000476837158,
+   0.699999988079071
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0,
+   0,
+   0,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.8299999833106995
+ },
+ "tarlump_big": {
+  "scale": [
+   2.5,
+   1.4500000476837158
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0,
+   0,
+   0,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.8299999833106995
+ },
+ "tointerior_portal": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0,
+   0,
+   0,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/LitParticles"
+ },
+ "torch": {
+  "texture": "ground_torch_01_fec15c740d3d19be.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.22100000083446503
+ },
+ "torch_copper": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.8629999756813049,
+   0.6297449469566345,
+   0.4505367577075958,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.27000001072883606
+ },
+ "torch_wood": {
+  "texture": "Planks5c_low_8a5887c108179c1c.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.23999999463558197
+ },
+ "turnip": {
+  "texture": "turnip_90f1ea894ba4f9d5.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.7132352590560913,
+   0.7132352590560913,
+   0.7132352590560913,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.20999999344348907
+ },
  "turnip_flower": {
   "texture": "TurnipFlower_d_9697d0d826c8728d.png",
   "scale": [
@@ -2234,6 +7937,243 @@
   "cutoff": 0.5,
   "shader": "Custom/StaticRock",
   "glossiness": 0.27000001072883606
+ },
+ "upgradebench_mat": {
+  "texture": "upgradebench_d_36904a27fddbe652.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.125
+ },
+ "vagon": {
+  "texture": "Vagon_d_6cf4c111ce6a0bd7.jpg",
+  "scale": [
+   2,
+   2
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard"
+ },
+ "voltureegg": {
+  "texture": "voltureegg_d_94fd21bb724da9d8.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Standard",
+  "glossiness": 0.5
+ },
+ "volturenest_mat": {
+  "texture": "volturenest_d_2f9006ee64ecc5a1.png",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.800000011920929,
+  "cutout": true,
+  "shader": "Custom/Piece",
+  "glossiness": 0.1899999976158142
+ },
+ "water_hottub": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.1764705777168274,
+   0.1764705777168274,
+   0.1764705777168274,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Water",
+  "glossiness": 0.9399999976158142
+ },
+ "water_interior": {
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.1764705777168274,
+   0.1764705777168274,
+   0.1764705777168274,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Water",
+  "glossiness": 0.949999988079071
+ },
+ "weapons1": {
+  "texture": "weapons_12bc9b94e58d2393.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "shader": "Custom/Creature",
+  "glossiness": 0.20000000298023224
+ },
+ "wood_pile": {
+  "texture": "woodpile_diffuse_54ec296408ece96.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   0.6470588445663452,
+   0.6470588445663452,
+   0.6470588445663452,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece"
+ },
+ "woodchest": {
+  "texture": "woodchest_d_44a66803e80ac38d.jpg",
+  "scale": [
+   1,
+   1
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.3799999952316284
+ },
+ "woodpole": {
+  "texture": "Planks5c_low_8a5887c108179c1c.jpg",
+  "scale": [
+   0.30000001192092896,
+   0.12999999523162842
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.18000000715255737
+ },
+ "woodpole2": {
+  "texture": "Planks5c_low_8a5887c108179c1c.jpg",
+  "scale": [
+   0.6299999952316284,
+   0.12999999523162842
+  ],
+  "offset": [
+   0,
+   0
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.18000000715255737
+ },
+ "woodwall": {
+  "texture": "Planks5c_low_8a5887c108179c1c.jpg",
+  "scale": [
+   -0.5600000023841858,
+   0.11999999731779099
+  ],
+  "offset": [
+   0,
+   0.014000000432133675
+  ],
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "cutoff": 0.5,
+  "shader": "Custom/Piece",
+  "glossiness": 0.25
  },
  "woodwall_worn": {
   "texture": "Planks5c_worn_758efa000a14a412.jpg",

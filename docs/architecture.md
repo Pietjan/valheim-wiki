@@ -120,7 +120,15 @@ worker → page: {type:'info', seed, seedNumber, radius, worldRadius, water}
                {type:'done', report:[{rule, prefab, wanted, placed}], took}
 page → worker: {type:'point', x, z}  → {type:'point', x, z, biome, height, depth, forest, sector:[names]}
 page → worker: {type:'tile', cx, cz, span, n}  → {type:'tile', n, cx, cz, span, heights:Float32Array /*metres*/, biomes:Uint8Array, mask:Uint8Array /*RGBA*/}   // a close-up grid, row zero north, for the 3D view
+page → worker: {type:'zone', zx, zz}  → {type:'zone', names:[prefab...], kinds:[...], ids:Uint16Array, data:Float32Array /*x,y,z,qx,qy,qz,qw,scale per place*/}   // what stands in a 64 m zone: the sites' models and the vegetation
 ```
+
+The first zone of a cached world costs the engine its biome map once
+(progress phase `scene`); the worker hands it the record's sites
+(`adoptSites`). `internal/scene` is valheim-world's zone build, ported:
+the vegetation rules and placement loop draw for draw, the placement ray
+against the prefabs' colliders and the sites' solids, the sites' clear
+areas and terrain modifiers (which also reshape the close-up tiles).
 
 `web/static/js/world.js` wraps this: `World.open(seed)` returns a handle
 with `onMap`, `onSites`, `onDone` callbacks and `sites()`, `near(x,z,n)`,
@@ -137,7 +145,14 @@ around the camera's target (`tile`, 2400 m and 600 m at 320 samples a
 side), each fading to its parent along its edge while the parent sinks
 under it, a depth-tinted sea plane, a sky, and the map's marker overlay
 projected onto the ground. `?view=3d&x=&z=&zoom=&yaw=&pitch=` deep-links
-a camera; the "Your world" panels link there.
+a camera; the "Your world" panels link there. Under a kilometre and a
+half it draws what stands in the zones around the target: `models.js`
+reads the pack under `web/static/models/` — the vegetation meshes as
+extracted (VMSH), the sites packed as VMSQ by `cmd/wiki-models` (quantised,
+deduplicated, clustered under a 1.8 MB cap; the largest ruins are left
+out), their materials and shrunk textures — and the view draws them
+instanced with alpha-to-coverage cutouts, foliage thinned about the
+camera.
 
 ## Style
 

@@ -474,13 +474,21 @@ uniform float uCutoff;
 uniform vec2 uScale, uOffset;
 uniform vec3 uCamera, uSun, uFog;
 uniform float uFogK;
+uniform float uThin;            // metres about the camera within which foliage thins away, 0 for none
 void main() {
   vec4 c = uColor;
   if (uHasTex == 1) c = texture(uTex, vUV * uScale + uOffset) * uColor;
   float alpha = 1.0;
+  float dist = distance(uCamera, vWorld);
   if (uCutout == 1) {
     if (c.a < uCutoff * 0.6) discard;
     alpha = smoothstep(uCutoff * 0.6, uCutoff * 1.2, c.a);
+    if (uThin > 0.0) {
+      // Leaves about the camera go, so a crown it sits in does not fill
+      // the screen; the alpha drives the coverage.
+      alpha *= smoothstep(uThin * 0.4, uThin, dist);
+      if (alpha < 0.02) discard;
+    }
   }
   vec3 n = normalize(vNrm);
   if (!gl_FrontFacing) n = -n;
@@ -488,7 +496,6 @@ void main() {
   vec3 sunColour = vec3(1.0, 0.95, 0.86);
   vec3 skyColour = vec3(0.55, 0.65, 0.82);
   vec3 lit = c.rgb * (sunColour * lambert * 0.95 + skyColour * (0.22 + 0.12 * max(n.y, 0.0)));
-  float dist = distance(uCamera, vWorld);
   lit = mix(lit, uFog, 1.0 - exp(-dist * uFogK));
   outColor = vec4(pow(max(lit, 0.0), vec3(1.0 / 2.2)), alpha);
 }`;
@@ -698,7 +705,8 @@ export class World3D {
 
     this.modelsBase = modelsBase == null ? new URL('../models/', import.meta.url).href : String(modelsBase).replace(/\/?$/, '/');
     this.models = null;
-    this.zones = new Map();      // 'zx,zz' → {zx, zz, status, byModel: Map(name → Float32Array)}
+    this.zones = new Map();      // 'zx,zz' → {zx, zz, status, byModel: Map(name → {kind, arr: Float32Array})}
+    this.showKinds = { vegetation: true, location: true };
     this.zoneInflight = 0;
     this.instancesDirty = true;
     this.visibleZoneKey = '';
@@ -844,6 +852,14 @@ export class World3D {
     this._settleTarget();
     this.invalidate();
     this._viewChanged();
+  }
+
+  // setVegetation shows or hides the trees, rocks and bushes; the sites'
+  // models stay.
+  setVegetation(on) {
+    this.showKinds.vegetation = !!on;
+    this.instancesDirty = true;
+    this.invalidate();
   }
 
   // setHidden pauses drawing while the view is not shown.
@@ -1308,11 +1324,15 @@ export class World3D {
       counts.set(name, (counts.get(name) || 0) + 1);
     }
     const fill = new Map();
-    for (const [name, c] of counts) { zone.byModel.set(name, new Float32Array(c * 8)); fill.set(name, 0); }
+    for (const [name, c] of counts) {
+      zone.byModel.set(name, { kind: z.kinds[z.names.indexOf(name)], arr: new Float32Array(c * 8) });
+      fill.set(name, 0);
+    }
     for (let i = 0; i < n; i++) {
       const name = z.names[z.ids[i]];
-      const arr = zone.byModel.get(name);
-      if (!arr) continue;
+      const entry = zone.byModel.get(name);
+      if (!entry) continue;
+      const arr = entry.arr;
       const k = fill.get(name);
       const o = i * 8;
       arr[k] = z.data[o]; arr[k + 1] = z.data[o + 1]; arr[k + 2] = z.data[o + 2]; arr[k + 3] = z.data[o + 7];
@@ -1350,10 +1370,11 @@ export class World3D {
       this.instancesDirty = false;
       // Merge the visible zones' instances per model and upload them.
       const merged = new Map();
-      for (const z of vis.list) for (const [name, arr] of z.byModel) {
+      for (const z of vis.list) for (const [name, entry] of z.byModel) {
+        if (!this.showKinds[entry.kind]) continue;
         let list = merged.get(name);
         if (!list) merged.set(name, list = []);
-        list.push(arr);
+        list.push(entry.arr);
       }
       for (const m of this.models.models.values()) if (m && m.vao) m.instances = 0;
       for (const [name, arrays] of merged) {
@@ -1402,6 +1423,7 @@ export class World3D {
         }
         gl.uniform1i(u.uCutout, mat.cutout ? 1 : 0);
         gl.uniform1f(u.uCutoff, mat.cutoff);
+        gl.uniform1f(u.uThin, mat.foliage ? Math.max(6, Math.min(45, this.distance * 0.35)) : 0);
         gl.uniform2f(u.uScale, mat.scale[0], mat.scale[1]);
         gl.uniform2f(u.uOffset, mat.offset[0], mat.offset[1]);
         gl.drawElementsInstanced(gl.TRIANGLES, r.count, gl.UNSIGNED_INT, r.first * 4, m.instances);

@@ -441,6 +441,9 @@ dialog::backdrop { background: rgba(20, 12, 6, .55); backdrop-filter: blur(3px);
 .world-relief { display: flex; align-items: center; gap: 8px; margin: 10px 0 0; font-size: 13px; color: var(--night-ink-2); }
 .world-relief input { flex: 1; accent-color: #dfa258; min-width: 0; }
 .world-relief output { font-variant-numeric: tabular-nums; min-width: 3ch; text-align: right; color: var(--night-ink); }
+.world-trees { display: flex; align-items: center; gap: 8px; margin: 8px 0 0; font-size: 13px; color: var(--night-ink-2); cursor: pointer; }
+.world-trees input { accent-color: #dfa258; }
+.world-trees .muted { color: var(--night-ink-3, #8a7f70); }
 .world-hint { font-size: 12px; color: var(--night-ink-2); margin: 8px 0 0; line-height: 1.45; }
 @media (max-width: 760px) {
   .world-ui { left: 8px; right: 8px; top: 8px; width: auto; }

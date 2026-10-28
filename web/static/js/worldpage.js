@@ -39,6 +39,8 @@ async function init(root) {
   const reliefRow = $('[data-world-relief-row]', root);
   const reliefInput = $('[data-world-relief]', root);
   const reliefOut = $('[data-world-relief-out]', root);
+  const treesRow = $('[data-world-trees-row]', root);
+  const treesInput = $('[data-world-trees]', root);
   const compass = $('[data-world-compass]', root);
   const hint = $('[data-world-hint]', root);
 
@@ -59,6 +61,7 @@ async function init(root) {
     box3d.className = 'world-3d';
     root.insertBefore(box3d, root.querySelector('.world-ui'));
     view3d = new World3D(box3d, { relief: +reliefInput.value || 2 });
+    view3d.setVegetation(treesInput.checked);
     root.view3d = view3d;
     if (handle) view3d.setWorld(handle);
     view3d.setMarkers(markers);
@@ -93,6 +96,7 @@ async function init(root) {
     mode = next;
     for (const b of modeButtons) b.setAttribute('aria-pressed', b.dataset.worldMode === mode ? 'true' : 'false');
     reliefRow.hidden = mode !== '3d';
+    treesRow.hidden = mode !== '3d';
     hint.hidden = mode !== '3d';
     compass.classList.toggle('is-live', mode === '3d');
     applyFilter();
@@ -105,6 +109,7 @@ async function init(root) {
     reliefOut.textContent = '×' + (+reliefInput.value).toFixed(1).replace(/\.0$/, '');
     if (view3d) view3d.setRelief(+reliefInput.value);
   });
+  treesInput.addEventListener('change', () => { if (view3d) view3d.setVegetation(treesInput.checked); });
   compass.addEventListener('click', () => { if (mode === '3d' && view3d) view3d.lookAt(view3d.tx, view3d.tz, { yaw: 0, pitch: 55 }); });
   const catalogue = await (await fetch(base + 'world/locations.json')).json();
   const byPrefab = new Map(catalogue.map(l => [l.prefab, l]));

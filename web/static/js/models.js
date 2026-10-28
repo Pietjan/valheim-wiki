@@ -14,7 +14,10 @@
 // repeating), tint, and whether it cuts out by alpha. The frame is the
 // game's: x east, y up, z north, as the places the engine hands out.
 
-const MAGIC = 0x48534d56;
+const FOLIAGE = /leaf|leaves|foliage|needle|branch|twig|bush|shrub|fern|crown|canopy|moss|vine|ivy/i;
+
+const MAGIC = 0x48534d56;        // VMSH: the extractor's float meshes
+const MAGIC_Q = 0x51534d56;      // VMSQ: a site packed by cmd/wiki-models
 
 // Shaders that draw no lit surface: particles, beams, decals. Their runs
 // are left out, as the icon renderer leaves them out.
@@ -24,7 +27,9 @@ const SKIP_SHADER = /^(Unlit\/BeaconBeam|Custom\/LitParticles|Custom\/WaterMask|
 // the snapped parts, and from version 4 the texture coordinates.
 export function decode(buf) {
   const view = new DataView(buf);
-  if (view.getUint32(0, true) !== MAGIC) throw new Error('not a VMSH file');
+  const magic = view.getUint32(0, true);
+  if (magic === MAGIC_Q) return decodeQ(buf, view);
+  if (magic !== MAGIC) throw new Error('not a VMSH file');
   const version = view.getUint32(4, true);
   const nv = view.getUint32(8, true), ni = view.getUint32(12, true);
   const positions = new Float32Array(buf.slice(16, 16 + nv * 12));
@@ -57,6 +62,45 @@ export function decode(buf) {
     uvs = new Float32Array(buf.slice(at, at + nv * 8));
   }
   return { positions, indices, runs, parts, uvs };
+}
+
+// decodeQ reads a packed site: quantised positions over the bounds,
+// sixteen-bit texture coordinates, indices sixteen bits wide where the
+// vertices allow.
+function decodeQ(buf, view) {
+  const nv = view.getUint32(8, true), ni = view.getUint32(12, true), nr = view.getUint32(16, true);
+  const min = [view.getFloat32(20, true), view.getFloat32(24, true), view.getFloat32(28, true)];
+  const scale = [view.getFloat32(32, true), view.getFloat32(36, true), view.getFloat32(40, true)];
+  let at = 44;
+  const q = new Uint16Array(buf.slice(at, at + nv * 6));
+  at += nv * 6;
+  const positions = new Float32Array(nv * 3);
+  for (let i = 0; i < nv * 3; i += 3) {
+    positions[i] = min[0] + q[i] / 65535 * scale[0];
+    positions[i + 1] = min[1] + q[i + 1] / 65535 * scale[1];
+    positions[i + 2] = min[2] + q[i + 2] / 65535 * scale[2];
+  }
+  const qu = new Int16Array(buf.slice(at, at + nv * 4));
+  at += nv * 4;
+  const uvs = new Float32Array(nv * 2);
+  for (let i = 0; i < nv * 2; i++) uvs[i] = qu[i] / 2048;
+  let indices;
+  if (nv > 65535) {
+    indices = new Uint32Array(buf.slice(at, at + ni * 4));
+    at += ni * 4;
+  } else {
+    indices = new Uint32Array(new Uint16Array(buf.slice(at, at + ni * 2)));
+    at += ni * 2;
+  }
+  const runs = [];
+  const text = new TextDecoder();
+  for (let i = 0; i < nr; i++) {
+    const first = view.getUint32(at, true), count = view.getUint32(at + 4, true), len = view.getUint32(at + 8, true);
+    at += 12;
+    runs.push({ first, count, material: text.decode(new Uint8Array(buf, at, len)) });
+    at += len;
+  }
+  return { positions, indices, runs, parts: [], uvs };
 }
 
 // normals are the area-weighted sum of the face normals over shared
@@ -169,7 +213,9 @@ export class ModelStore {
       const base = r.material.split('#')[0];
       const entry = this.materials[base] || null;
       if (entry && entry.shader && SKIP_SHADER.test(entry.shader)) continue;
-      runs.push({ first: r.first, count: r.count, material: this._material(base, entry) });
+      const material = this._material(base, entry);
+      if (material.cutout && !material.foliage && FOLIAGE.test(r.material)) material.foliage = true;
+      runs.push({ first: r.first, count: r.count, material });
     }
     // The bounds and the sphere about the origin, for culling.
     let minY = Infinity, maxY = -Infinity, r2 = 0;
@@ -185,7 +231,7 @@ export class ModelStore {
 
   // _material resolves one material entry to what the draw needs.
   _material(name, entry) {
-    const mat = { name, tex: null, color: [1, 1, 1, 1], cutout: false, cutoff: 0.5, scale: [1, 1], offset: [0, 0], tone: toneOf(name) };
+    const mat = { name, tex: null, color: [1, 1, 1, 1], cutout: false, cutoff: 0.5, scale: [1, 1], offset: [0, 0], tone: toneOf(name), foliage: false };
     if (!entry) return mat;
     if (entry.color) mat.color = entry.color.map(toLinear);
     mat.cutout = !!entry.cutout;
@@ -193,6 +239,9 @@ export class ModelStore {
     if (entry.scale) mat.scale = entry.scale;
     if (entry.offset) mat.offset = entry.offset;
     if (entry.texture) mat.tex = this._texture(entry.texture);
+    // Leaves and needles: what the view thins out around the camera, so a
+    // crown does not fill the screen when the camera is in it.
+    mat.foliage = mat.cutout && FOLIAGE.test(name);
     return mat;
   }
 

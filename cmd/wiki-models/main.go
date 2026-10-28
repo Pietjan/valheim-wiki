@@ -6,7 +6,8 @@
 //
 //	wiki-models -meshes ../valheim-npc/meshes -out web/static/models
 //
-// Writes <out>/<prefab>.bin (the VMSH file as extracted), <out>/textures/
+// Writes <out>/<prefab>.bin (the VMSH file as extracted for a vegetation
+// prefab; a site packed as VMSQ, see sites.go), <out>/textures/
 // (each texture used, downscaled to -max a side; PNG where a material
 // cuts it out, with its transparent texels bled so the filtering does not
 // fringe, JPEG otherwise), <out>/materials.json (the entries those meshes
@@ -61,7 +62,7 @@ func main() {
 	meshes := flag.String("meshes", "../valheim-npc/meshes", "valheim-npc's meshes directory")
 	out := flag.String("out", "web/static/models", "where to write")
 	maxSide := flag.Int("max", 512, "a texture's longest side, pixels")
-	sites := flag.Bool("sites", false, "include the locations' whole-site models")
+	sites := flag.Bool("sites", true, "include the locations' whole-site models, packed")
 	flag.Parse()
 
 	manifest := map[string]entry{}
@@ -78,7 +79,7 @@ func main() {
 	if *sites {
 		seen := map[string]bool{}
 		for _, r := range worldgen.DefaultLocationRules() {
-			if !seen[r.Prefab] {
+			if !seen[r.Prefab] && r.Quantity > 0 {
 				seen[r.Prefab] = true
 				names = append(names, r.Prefab+scene.SiteSuffix)
 			}
@@ -93,7 +94,7 @@ func main() {
 	used := map[string]*material{} // material name → entry written
 	textures := map[string]bool{}  // texture file → needs alpha (cutout)
 	var total int64
-	missing := 0
+	missing, over := 0, 0
 	for _, name := range names {
 		src := filepath.Join(*meshes, name+".bin")
 		m, err := vmsh.Load(src)
@@ -104,8 +105,14 @@ func main() {
 		if len(m.Idx) == 0 {
 			continue
 		}
-		data, err := os.ReadFile(src)
-		if err != nil {
+		var data []byte
+		if strings.HasSuffix(name, scene.SiteSuffix) {
+			if data = packSite(m); data == nil {
+				over++
+				log.Printf("%s: over the cap at every grid, left out", name)
+				continue
+			}
+		} else if data, err = os.ReadFile(src); err != nil {
 			log.Fatal(err)
 		}
 		if err := os.WriteFile(filepath.Join(*out, name+".bin"), data, 0o644); err != nil {
@@ -189,8 +196,8 @@ func main() {
 	}
 	write("materials.json", used)
 	write("index.json", map[string]any{"models": index, "textures": len(outName)})
-	fmt.Printf("%d models (%.1f MB), %d textures (%.1f MB), %d materials; %d prefabs without a mesh\n",
-		len(index), float64(total)/1e6, len(outName), float64(texBytes)/1e6, len(used), missing)
+	fmt.Printf("%d models (%.1f MB), %d textures (%.1f MB), %d materials; %d prefabs without a mesh, %d sites over the cap\n",
+		len(index), float64(total)/1e6, len(outName), float64(texBytes)/1e6, len(used), missing, over)
 }
 
 func decode(path string) (*image.NRGBA, error) {

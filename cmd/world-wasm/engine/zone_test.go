@@ -80,3 +80,28 @@ func TestAdoptSites(t *testing.T) {
 		}
 	}
 }
+
+// A placed world's tile shows the start temple's flattened floor: the
+// ground under it is level where the raw generator is not.
+func TestTileModified(t *testing.T) {
+	w, _ := world(t)
+	raw, _ := New(testSeed, 0)
+	const n = 64
+	a, b := raw.Tile(0, 0, 64, n), w.Tile(0, 0, 64, n)
+	changed := 0
+	for i := range a.Heights {
+		if a.Heights[i] != b.Heights[i] {
+			changed++
+		}
+	}
+	if changed == 0 {
+		t.Fatal("the temple's modifiers left the tile as the generator made it")
+	}
+	// The levelled middle is flat.
+	mid := b.Heights[(n/2)*n+n/2]
+	for _, d := range []int{-3, 3} {
+		if math.Abs(float64(b.Heights[(n/2+d)*n+n/2+d]-mid)) > 0.01 {
+			t.Fatalf("the floor is not level: %v vs %v", b.Heights[(n/2+d)*n+n/2+d], mid)
+		}
+	}
+}
