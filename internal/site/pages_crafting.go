@@ -225,8 +225,8 @@ func (s *Site) pagesBuilding() error {
 		var order []string
 		for _, pp := range pt.Pieces {
 			p := s.DB.Pieces[pp]
-			if p == nil || !p.Enabled {
-				continue
+			if p == nil || !p.Enabled || p.Category == "All" {
+				continue // the hammer's repair and remove modes are not pieces
 			}
 			if _, ok := byCat[p.Category]; !ok {
 				order = append(order, p.Category)
@@ -257,7 +257,7 @@ func (s *Site) pagesBuilding() error {
 	}
 	for _, p := range ix.Pieces {
 		t := ix.Things[p.Prefab]
-		if t == nil || t.Kind != "piece" {
+		if t == nil || t.Kind != "piece" || p.Category == "All" {
 			continue
 		}
 		pg := &PiecePage{Piece: p, Thing: t, Table: tableByTool[p.Tool], Station: s.DB.Stations[p.Station], Extends: ix.Extends[p.Prefab], Converter: s.DB.Converters[p.Prefab]}

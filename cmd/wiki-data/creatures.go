@@ -17,10 +17,6 @@ var factionNames = []string{"Players", "AnimalsVeg", "ForestMonsters", "Undead",
 // attackTypeNames in Attack.AttackType order (Attack.cs).
 var attackTypeNames = []string{"Horizontal", "Vertical", "Projectile", "None", "Area", "TriggerProjectile"}
 
-// npcPrefabs are the humans with a Character that are people, not
-// monsters: the traders and Odin's ravens.
-var npcPrefabs = map[string]bool{"Haldor": true, "Hildir": true, "BogWitch": true, "Munin": true, "Hugin": true}
-
 // tameSkillNames is Skills.SkillType for Tameable.m_levelUpOwnerSkill:
 // the owner skill a mount trains.
 var tameSkillNames = map[int]string{0: "", 1: "Swords", 2: "Knives", 3: "Clubs", 4: "Polearms", 5: "Spears", 6: "Blocking", 7: "Axes", 8: "Bows", 9: "ElementalMagic", 10: "BloodMagic", 11: "Unarmed", 12: "Pickaxes", 13: "WoodCutting", 14: "Crossbows", 100: "Jump", 101: "Sneak", 102: "Run", 103: "Swim", 104: "Fishing", 105: "Cooking", 106: "Farming", 107: "Crafting", 108: "Dodge", 110: "Ride", 999: "All"}
@@ -28,7 +24,9 @@ var tameSkillNames = map[int]string{0: "", 1: "Swords", 2: "Knives", 3: "Clubs",
 // extractCreatures reads every prefab root that carries a Character
 // (Humanoid and Player are subclasses with the same fields) into a
 // model.Creature, plus the Fish prefabs, which have no Character but are
-// the bestiary's fish. Ragdolls and the Player prefab are skipped.
+// the bestiary's fish. Ragdolls and the Player prefab are skipped. The
+// traders (Haldor, Hildir, BogWitch) and Odin's ravens have no Character
+// and so are not creatures; the traders extractor has them.
 //
 // A prefab name may be held by several roots (the model prefab a
 // character was built from often shares its name: Boar, Lox, Hildir), so
@@ -121,7 +119,6 @@ func (x *X) creature(name string, g assets.Ref, ch Component) *model.Creature {
 		Flying:    B(t, "m_flying"),
 		CanSwim:   B(t, "m_canSwim"),
 		Stagger:   F(t, "m_staggerDamageFactor"),
-		NPC:       npcPrefabs[name],
 	}
 	if c.Flying {
 		c.FlySpeed = F(t, "m_flyFastSpeed")

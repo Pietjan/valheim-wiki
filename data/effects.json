@@ -151,16 +151,7 @@
   "icon": true,
   "startMessage": "You release the bound wisp",
   "stats": {
-   "ballAcceleration": 7,
-   "ballFriction": 0.029999999329447746,
-   "ballMaxSpeed": 80,
-   "characterVelocityFactor": 3,
-   "maxDistance": 6,
-   "noiseDistance": 1.5,
-   "noiseDistanceInterior": 0.20000000298023224,
-   "noiseDistanceYScale": 0.4000000059604645,
-   "noiseSpeed": 0.5,
-   "rotationSpeed": 8
+   "maxDistance": 6
   }
  },
  "Encumbered": {
@@ -274,7 +265,8 @@
     "type": "fire",
     "mod": "Resistant"
    }
-  ]
+  ],
+  "guardianOf": "Fader"
  },
  "GP_Moder": {
   "id": "GP_Moder",
@@ -361,7 +353,6 @@
    "percentigeDamageModifiers.poison": 0.10000000149011612,
    "percentigeDamageModifiers.slash": 0.10000000149011612,
    "percentigeDamageModifiers.spirit": 0.10000000149011612,
-   "raiseSkill.All": 0,
    "skillLevel.Farming": 25
   },
   "mods": [
@@ -380,8 +371,7 @@
   "ttl": 40,
   "stats": {
    "absorbDamage": 100,
-   "absorbDamageWorldLevel": 100,
-   "levelUpSkillOnBreak.": 1
+   "absorbDamageWorldLevel": 100
   }
  },
  "GrapplingHook": {
@@ -426,7 +416,6 @@
    "jumpModifier.x": -1,
    "jumpModifier.y": -1,
    "jumpModifier.z": -1,
-   "skillLevel.ElementalMagic": 0,
    "speedModifier": -1000
   }
  },
@@ -457,7 +446,6 @@
    "jumpModifier.x": -1,
    "jumpModifier.y": -1,
    "jumpModifier.z": -1,
-   "skillLevel.ElementalMagic": 0,
    "speedModifier": -1000
   }
  },
@@ -857,8 +845,7 @@
   "icon": true,
   "ttl": 20,
   "stats": {
-   "damageModifier.All": 1.2000000476837158,
-   "skillLevel.ElementalMagic": 0
+   "damageModifier.All": 1.2000000476837158
   }
  },
  "SE_Dvergr_heal": {

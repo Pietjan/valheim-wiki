@@ -307,6 +307,7 @@
    "meadows",
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 4,
   "interval": 100,
   "chance": 50,
@@ -335,6 +336,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 4,
   "interval": 150,
   "chance": 50,
@@ -364,6 +366,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 6,
   "interval": 100,
   "chance": 50,
@@ -395,6 +398,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 8,
   "interval": 30,
   "chance": 100,
@@ -432,6 +436,7 @@
    "plains",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 5,
   "interval": 120,
   "chance": 50,
@@ -463,6 +468,7 @@
    "black-forest",
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 5,
   "interval": 120,
   "chance": 50,
@@ -494,6 +500,7 @@
    "black-forest",
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 4,
   "interval": 120,
   "chance": 50,
@@ -523,6 +530,7 @@
   "biomes": [
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 120,
   "chance": 50,
@@ -552,6 +560,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 10,
   "interval": 80,
   "chance": 50,
@@ -581,6 +590,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 10,
   "interval": 80,
   "chance": 60,
@@ -610,6 +620,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 7,
   "interval": 80,
   "chance": 60,
@@ -639,6 +650,7 @@
   "biomes": [
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 10,
   "interval": 80,
   "chance": 50,
@@ -668,6 +680,7 @@
   "biomes": [
    "mistlands"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 5,
   "interval": 60,
   "chance": 50,
@@ -698,6 +711,7 @@
    "mistlands",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 8,
   "interval": 80,
   "chance": 40,
@@ -727,6 +741,7 @@
   "biomes": [
    "deep-north"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 10,
   "interval": 70,
   "chance": 60,
@@ -756,6 +771,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 10,
   "interval": 80,
   "chance": 60,
@@ -785,6 +801,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 120,
   "chance": 30,
@@ -813,6 +830,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 2000,
   "chance": 15,
@@ -841,6 +859,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 2000,
   "chance": 20,
@@ -869,6 +888,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 120,
   "chance": 30,
@@ -898,6 +918,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 6,
   "interval": 60,
   "chance": 100,
@@ -926,6 +947,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 120,
   "chance": 50.599998474121094,
@@ -984,6 +1006,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 120,
   "chance": 50.599998474121094,
@@ -1013,6 +1036,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 120,
   "chance": 50.599998474121094,
@@ -1046,6 +1070,7 @@
    "mountain",
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 300,
   "chance": 25,
@@ -1078,6 +1103,7 @@
    "mountain",
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 300,
   "chance": 5,
@@ -1112,6 +1138,7 @@
    "black-forest",
    "mountain"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 3000,
   "chance": 5,
@@ -1142,6 +1169,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 60,
   "chance": 50.599998474121094,
@@ -1170,6 +1198,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 200,
   "chance": 50,
@@ -1199,6 +1228,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 300,
   "chance": 50,
@@ -1230,6 +1260,7 @@
    "swamp",
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 3000,
   "chance": 10,
@@ -1261,6 +1292,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 4000,
   "chance": 5,
@@ -1290,6 +1322,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 4000,
   "chance": 25,
@@ -1319,6 +1352,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 4,
   "interval": 120,
   "chance": 50,
@@ -1348,6 +1382,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 4,
   "interval": 400,
   "chance": 25,
@@ -1407,6 +1442,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 40,
   "chance": 30,
@@ -1435,6 +1471,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 500,
   "chance": 20,
@@ -1464,6 +1501,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 10,
   "interval": 200,
   "chance": 50,
@@ -1493,6 +1531,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 120,
   "chance": 20,
@@ -1522,6 +1561,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 5,
   "interval": 60,
   "chance": 33,
@@ -1550,6 +1590,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 1000,
   "chance": 33,
@@ -1578,6 +1619,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 1000,
   "chance": 20,
@@ -1606,6 +1648,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 1000,
   "chance": 5,
@@ -1635,6 +1678,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 500,
   "chance": 20,
@@ -1664,6 +1708,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 200,
   "chance": 30,
@@ -1693,6 +1738,7 @@
   "biomes": [
    "mountain"
   ],
+  "biomeArea": "Median",
   "maxSpawned": 1,
   "interval": 120,
   "chance": 25.600000381469727,
@@ -1722,6 +1768,7 @@
   "biomes": [
    "mountain"
   ],
+  "biomeArea": "Median",
   "maxSpawned": 2,
   "interval": 120,
   "chance": 25.600000381469727,
@@ -1751,6 +1798,7 @@
   "biomes": [
    "mountain"
   ],
+  "biomeArea": "Median",
   "maxSpawned": 6,
   "interval": 120,
   "chance": 50,
@@ -1779,6 +1827,7 @@
   "biomes": [
    "mountain"
   ],
+  "biomeArea": "Median",
   "maxSpawned": 3,
   "interval": 400,
   "chance": 25.600000381469727,
@@ -1807,6 +1856,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 4,
   "interval": 20,
   "chance": 100,
@@ -1835,6 +1885,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 10,
   "interval": 16,
   "chance": 100,
@@ -2125,6 +2176,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 1000,
   "chance": 20,
@@ -2309,6 +2361,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 400,
   "chance": 20,
@@ -2339,6 +2392,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 4,
   "interval": 200,
   "chance": 40,
@@ -2369,6 +2423,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 4,
   "interval": 700,
   "chance": 15,
@@ -2430,6 +2485,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 400,
   "chance": 15,
@@ -2460,6 +2516,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "interval": 4,
   "chance": 80,
   "radiusMin": 0.10000000149011612,
@@ -2523,6 +2580,7 @@
    "mountain",
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 3000,
   "chance": 5,
@@ -2557,6 +2615,7 @@
    "mountain",
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 3000,
   "chance": 5,
@@ -2767,6 +2826,7 @@
   "biomes": [
    "deep-north"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 120,
   "chance": 15,
@@ -2795,6 +2855,7 @@
   "biomes": [
    "deep-north"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 120,
   "chance": 10,
@@ -2823,6 +2884,7 @@
   "biomes": [
    "deep-north"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 3000,
   "chance": 5,
@@ -2853,6 +2915,7 @@
   "biomes": [
    "deep-north"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 3000,
   "chance": 5,
@@ -2878,11 +2941,15 @@
   "id": "_SpawnList_DeepNorth/10",
   "name": "Giant Troll",
   "prefab": "Spawner_TrollFrost",
+  "creatures": [
+   "TrollFrost"
+  ],
   "source": "world:_SpawnList_DeepNorth",
   "enabled": true,
   "biomes": [
    "deep-north"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 1500,
   "chance": 15,
@@ -2913,6 +2980,7 @@
   "biomes": [
    "deep-north"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 1000,
   "chance": 12,
@@ -3134,6 +3202,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 20,
   "chance": 100,
@@ -3171,6 +3240,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 20,
   "chance": 100,
@@ -3208,6 +3278,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 8,
   "interval": 10,
   "chance": 58.20000076293945,
@@ -3245,6 +3316,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 20,
   "chance": 47,
@@ -3282,6 +3354,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 20,
   "chance": 47,
@@ -3319,6 +3392,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 6,
   "interval": 5,
   "chance": 100,
@@ -3354,6 +3428,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 4,
   "interval": 5,
   "chance": 100,
@@ -3389,6 +3464,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 5,
   "chance": 100,
@@ -3425,6 +3501,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 5,
   "chance": 100,
@@ -3454,6 +3531,7 @@
    "mountain",
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 6,
   "interval": 2,
   "chance": 100,
@@ -3490,6 +3568,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 20,
   "interval": 10,
   "chance": 100,
@@ -3527,6 +3606,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 15,
   "chance": 54,
@@ -3564,6 +3644,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 5,
   "chance": 100,
@@ -3601,6 +3682,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 6,
   "interval": 5,
   "chance": 100,
@@ -3638,6 +3720,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 10,
   "chance": 100,
@@ -3671,6 +3754,7 @@
    "swamp",
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 5,
   "interval": 2,
   "chance": 100,
@@ -3708,6 +3792,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 10,
   "chance": 100,
@@ -3745,6 +3830,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 20,
   "chance": 100,
@@ -3781,6 +3867,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 4,
   "interval": 2,
   "chance": 100,
@@ -3818,6 +3905,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 10,
   "chance": 100,
@@ -3856,6 +3944,7 @@
    "deep-north",
    "ocean"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 10,
   "chance": 100,
@@ -4197,6 +4286,10 @@
   "id": "event:army_charredspawners/0",
   "name": "Charred Spawner",
   "prefab": "Spawner_CharredStone_event",
+  "creatures": [
+   "Charred_Twitcher",
+   "Charred_Melee"
+  ],
   "source": "event:army_charredspawners",
   "enabled": true,
   "biomes": [
@@ -4890,6 +4983,7 @@
    "plains",
    "mistlands"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 400,
   "chance": 25,
@@ -4918,6 +5012,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 300,
   "chance": 25,
@@ -4947,6 +5042,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 300,
   "chance": 25,
@@ -4976,6 +5072,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 2,
   "interval": 120,
   "chance": 50,
@@ -5035,6 +5132,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 15,
   "interval": 150,
   "chance": 50,
@@ -5064,6 +5162,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 10,
   "interval": 100,
   "chance": 50,
@@ -5092,6 +5191,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 1,
   "interval": 300,
   "chance": 10,
@@ -5120,6 +5220,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 6,
   "interval": 100,
   "chance": 50,
@@ -5151,6 +5252,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 8,
   "interval": 30,
   "chance": 100,
@@ -5185,6 +5287,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 5,
   "interval": 100,
   "chance": 50,
@@ -5274,6 +5377,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 3,
   "interval": 120,
   "chance": 50.599998474121094,
@@ -5303,6 +5407,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "None",
   "maxSpawned": 3,
   "interval": 300,
   "chance": 30,
@@ -5361,6 +5466,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 10,
   "interval": 100,
   "chance": 5,
@@ -5417,6 +5523,7 @@
   "biomes": [
    "mountain"
   ],
+  "biomeArea": "Median",
   "maxSpawned": 8,
   "interval": 120,
   "chance": 50,
@@ -5445,6 +5552,7 @@
   "biomes": [
    "mountain"
   ],
+  "biomeArea": "Median",
   "maxSpawned": 4,
   "interval": 120,
   "chance": 25.600000381469727,
@@ -5474,6 +5582,7 @@
   "biomes": [
    "mountain"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 10,
   "interval": 300,
   "chance": 25,
@@ -5502,6 +5611,7 @@
   "biomes": [
    "mountain"
   ],
+  "biomeArea": "Median",
   "maxSpawned": 1,
   "interval": 120,
   "chance": 25.600000381469727,
@@ -5531,6 +5641,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 15,
   "interval": 1000,
   "chance": 10,
@@ -5560,6 +5671,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 5,
   "interval": 60,
   "chance": 33,
@@ -5588,6 +5700,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "maxSpawned": 5,
   "interval": 500,
   "chance": 20,

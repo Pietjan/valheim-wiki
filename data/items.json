@@ -30445,7 +30445,7 @@
  },
  "Upgrader0Armor": {
   "prefab": "Upgrader0Armor",
-  "name": "Upgrader0Armor",
+  "name": "Wooden Protection Idol",
   "token": "$item_upgrader_tier0 $item_upgrader_armor $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30463,7 +30463,7 @@
  },
  "Upgrader0Weapon": {
   "prefab": "Upgrader0Weapon",
-  "name": "Upgrader0Weapon",
+  "name": "Wooden Battle Idol",
   "token": "$item_upgrader_tier0 $item_upgrader_weapon $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30481,7 +30481,7 @@
  },
  "Upgrader1Armor": {
   "prefab": "Upgrader1Armor",
-  "name": "Upgrader1Armor",
+  "name": "Bronze Protection Idol",
   "token": "$item_upgrader_tier1 $item_upgrader_armor $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30499,7 +30499,7 @@
  },
  "Upgrader1Weapon": {
   "prefab": "Upgrader1Weapon",
-  "name": "Upgrader1Weapon",
+  "name": "Bronze Battle Idol",
   "token": "$item_upgrader_tier1 $item_upgrader_weapon $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30517,7 +30517,7 @@
  },
  "Upgrader2Armor": {
   "prefab": "Upgrader2Armor",
-  "name": "Upgrader2Armor",
+  "name": "Iron Protection Idol",
   "token": "$item_upgrader_tier2 $item_upgrader_armor $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30535,7 +30535,7 @@
  },
  "Upgrader2Weapon": {
   "prefab": "Upgrader2Weapon",
-  "name": "Upgrader2Weapon",
+  "name": "Iron Battle Idol",
   "token": "$item_upgrader_tier2 $item_upgrader_weapon $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30553,7 +30553,7 @@
  },
  "Upgrader3Armor": {
   "prefab": "Upgrader3Armor",
-  "name": "Upgrader3Armor",
+  "name": "Silver Protection Idol",
   "token": "$item_upgrader_tier3 $item_upgrader_armor $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30571,7 +30571,7 @@
  },
  "Upgrader3Weapon": {
   "prefab": "Upgrader3Weapon",
-  "name": "Upgrader3Weapon",
+  "name": "Silver Battle Idol",
   "token": "$item_upgrader_tier3 $item_upgrader_weapon $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30589,7 +30589,7 @@
  },
  "Upgrader4Armor": {
   "prefab": "Upgrader4Armor",
-  "name": "Upgrader4Armor",
+  "name": "Black Metal Protection Idol",
   "token": "$item_upgrader_tier4 $item_upgrader_armor $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30607,7 +30607,7 @@
  },
  "Upgrader4Weapon": {
   "prefab": "Upgrader4Weapon",
-  "name": "Upgrader4Weapon",
+  "name": "Black Metal Battle Idol",
   "token": "$item_upgrader_tier4 $item_upgrader_weapon $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30625,7 +30625,7 @@
  },
  "Upgrader5Armor": {
   "prefab": "Upgrader5Armor",
-  "name": "Upgrader5Armor",
+  "name": "Black Marble Protection Idol",
   "token": "$item_upgrader_tier5 $item_upgrader_armor $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30643,7 +30643,7 @@
  },
  "Upgrader5Weapon": {
   "prefab": "Upgrader5Weapon",
-  "name": "Upgrader5Weapon",
+  "name": "Black Marble Battle Idol",
   "token": "$item_upgrader_tier5 $item_upgrader_weapon $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30661,7 +30661,7 @@
  },
  "Upgrader6Armor": {
   "prefab": "Upgrader6Armor",
-  "name": "Upgrader6Armor",
+  "name": "Flametal Protection Idol",
   "token": "$item_upgrader_tier6 $item_upgrader_armor $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30679,7 +30679,7 @@
  },
  "Upgrader6Weapon": {
   "prefab": "Upgrader6Weapon",
-  "name": "Upgrader6Weapon",
+  "name": "Flametal Battle Idol",
   "token": "$item_upgrader_tier6 $item_upgrader_weapon $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30697,7 +30697,7 @@
  },
  "Upgrader7Armor": {
   "prefab": "Upgrader7Armor",
-  "name": "Upgrader7Armor",
+  "name": "Bloodgold Protection Idol",
   "token": "$item_upgrader_tier7 $item_upgrader_armor $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",
@@ -30715,7 +30715,7 @@
  },
  "Upgrader7Weapon": {
   "prefab": "Upgrader7Weapon",
-  "name": "Upgrader7Weapon",
+  "name": "Bloodgold Battle Idol",
   "token": "$item_upgrader_tier7 $item_upgrader_weapon $item_upgrader_name",
   "desc": "This mysterious idol is brimming with the potential of the gods. It could grant a powerful boon, or demand a great sacrifice.",
   "type": "Material",

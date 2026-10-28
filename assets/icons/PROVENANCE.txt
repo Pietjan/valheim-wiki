@@ -1,4 +1,4 @@
-Extracted 2026-10-28T05:05:08+01:00 by wiki-data from the Valheim client's asset bundles.
+Extracted 2026-10-28T05:46:20+01:00 by wiki-data from the Valheim client's asset bundles.
 Source: /mnt/c/Program Files (x86)/Steam/steamapps/common/Valheim/valheim_Data/StreamingAssets/SoftRef
 Unity: 6000.0.75f1
 The sprites are Iron Gate's art, cropped from the game's atlases as the game draws them.

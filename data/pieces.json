@@ -387,7 +387,7 @@
   "token": "$item_bakedpoteitr",
   "desc": "Neither boiled nor mashed nor in a stew. Still delicious though!",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -416,7 +416,7 @@
   "token": "$item_barleywine",
   "desc": "Fortifies you against fire.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -592,7 +592,7 @@
   "token": "$item_blacksoup",
   "desc": "A perfect balance of sweetness and acidity.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -621,7 +621,7 @@
   "token": "$item_bloodpudding",
   "desc": "It's bloody tasty.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -650,7 +650,7 @@
   "token": "$item_blueberries",
   "desc": "Tiny but tasty.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -679,7 +679,7 @@
   "token": "$item_boarjerky",
   "desc": "Lean and salty.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -746,7 +746,7 @@
   "token": "$item_bread",
   "desc": "A tasty loaf of bread.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -890,7 +890,7 @@
   "token": "$item_carrot",
   "desc": "An orange treat.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -919,7 +919,7 @@
   "token": "$item_carrotsoup",
   "desc": "A warm tasty soup made of mostly carrots.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1076,7 +1076,7 @@
   "token": "$item_cloudberries",
   "desc": "The gold of the forest.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1105,7 +1105,7 @@
   "token": "$item_asksvin_meat_cooked",
   "desc": "This meat has a potent and mature flavour, but is very tasty when grilled right.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1134,7 +1134,7 @@
   "token": "$item_bjorn_meat_cooked",
   "desc": "Tastes like victory.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1163,7 +1163,7 @@
   "token": "$item_bonemawmeat_cooked",
   "desc": "The boiling sea did nothing to this meat, but grilling it over the fire has given it a delightful crisp.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1192,7 +1192,7 @@
   "token": "$item_bug_meat_cooked",
   "desc": "Succulent white meat. A true delicacy.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1221,7 +1221,7 @@
   "token": "$item_chicken_meat_cooked",
   "desc": "It tastes like chicken.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1250,7 +1250,7 @@
   "token": "$item_deer_meat_cooked",
   "desc": "All that running paid off.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1279,7 +1279,7 @@
   "token": "$item_egg_cooked",
   "desc": "Sunny side up!",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1308,7 +1308,7 @@
   "token": "$item_hare_meat_cooked",
   "desc": "Stringy but flavorful.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1337,7 +1337,7 @@
   "token": "$item_loxmeat_cooked",
   "desc": "A great hunk of tender meat, food fit for Valhalla!",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1366,7 +1366,7 @@
   "token": "$item_boar_meat_cooked",
   "desc": "An earthly taste.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1395,7 +1395,7 @@
   "token": "$item_moose_meat_cooked",
   "desc": "This meat is lean yet full of flavour.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1424,7 +1424,7 @@
   "token": "$item_blubber_cooked",
   "desc": "A chewy meat, with an aftertaste of remorse.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1453,7 +1453,7 @@
   "token": "$item_volture_meat_cooked",
   "desc": "A chewy and somewhat dry meat. Some seasoning would probably make it taste better, but it'll fill your stomach regardless.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1482,7 +1482,7 @@
   "token": "$item_wolf_meat_cooked",
   "desc": "A wild taste.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1511,7 +1511,7 @@
   "token": "$item_deerstew",
   "desc": "Fall-apart tender.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1540,7 +1540,7 @@
   "token": "$item_eyescream",
   "desc": "Crispy cool and creamy.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1569,7 +1569,7 @@
   "token": "$item_feastashlands",
   "desc": "It's hard to tell whether the steam coming off of this dish is because it's freshly cooked or because of the asksvin meat in it. Either way, the spiced meat together with the vineberries and fiddlehead sprouts is so delicious that it doesn't matter!",
   "icon": true,
-  "category": "DeepNorth",
+  "category": "Feasts",
   "usage": [
    "Feasts"
   ],
@@ -1599,7 +1599,7 @@
   "token": "$item_feastblackforest",
   "desc": "You won't be able to resist this platter of delights from the Black Forest! Venison sirloin steaks are served together with spiced thistles and carrots, and the whole meal is tied together with delicious jams. Just have one more bite!",
   "icon": true,
-  "category": "DeepNorth",
+  "category": "Feasts",
   "usage": [
    "Feasts"
   ],
@@ -1629,7 +1629,7 @@
   "token": "$item_feastdeepnorth",
   "desc": "Warming and filling, this meal will sustain you even during the coldest of days. Porridge and pancakes pair well with jams and sausages, making it hard not to come back for a second helping!",
   "icon": true,
-  "category": "DeepNorth",
+  "category": "Feasts",
   "usage": [
    "Feasts"
   ],
@@ -1659,7 +1659,7 @@
   "token": "$item_feastmeadows",
   "desc": "A boar that has been roasted to perfection, glazed and served atop a bed of greens, with additional cuts of meat on the side. A feast like this is sure to fill your stomach and brighten your day!",
   "icon": true,
-  "category": "DeepNorth",
+  "category": "Feasts",
   "usage": [
    "Feasts"
   ],
@@ -1689,7 +1689,7 @@
   "token": "$item_feastmistlands",
   "desc": "The time has come for mushroom enthusiasts to rejoice! Try different kinds of mushrooms, mushroom marinated seeker meat and mushroom-filled misthare, and don't miss out on the tasty sap dressing.",
   "icon": true,
-  "category": "DeepNorth",
+  "category": "Feasts",
   "usage": [
    "Feasts"
   ],
@@ -1719,7 +1719,7 @@
   "token": "$item_feastmountains",
   "desc": "Gather around this steaming pot full of deliciousness and warm yourselves up again after a day out in the cold. The usually tough and chewey wolf meat has become tender enough to practically melt in your mouth, and the onions and carrots are made even tastier with exciting spices.",
   "icon": true,
-  "category": "DeepNorth",
+  "category": "Feasts",
   "usage": [
    "Feasts"
   ],
@@ -1749,7 +1749,7 @@
   "token": "$item_feastoceans",
   "desc": "Fish, fish, and more fish! And also serpent meat, cut to look like fish! Explore the flavours of the Ocean, along with some grilled greens for those still practicing their sea legs.",
   "icon": true,
-  "category": "DeepNorth",
+  "category": "Feasts",
   "usage": [
    "Feasts"
   ],
@@ -1779,7 +1779,7 @@
   "token": "$item_feastplains",
   "desc": "There's nothing plain about this feast! Enjoy pies and loaves fresh from the oven, both sweet and savoury, and experience the culinary equivalent of a hug.",
   "icon": true,
-  "category": "DeepNorth",
+  "category": "Feasts",
   "usage": [
    "Feasts"
   ],
@@ -1809,7 +1809,7 @@
   "token": "$item_feastswamps",
   "desc": "Who knew that leeches were edible? With the correct preparation (lots of cooking and lots of seasoning) you will be able to serve them in this feast for the culinary brave. For those who have a sensitive stomach, there are also tasty skewers of sausages and turnips on the side.",
   "icon": true,
-  "category": "DeepNorth",
+  "category": "Feasts",
   "usage": [
    "Feasts"
   ],
@@ -1839,7 +1839,7 @@
   "token": "$item_fiddleheadfern",
   "desc": "Veggies with a twist!",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1868,7 +1868,7 @@
   "token": "$item_fierysvinstew",
   "desc": "This musty stew is a necessity on every adventurer's menu.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -1981,7 +1981,7 @@
   "token": "$item_fishandbread",
   "desc": "Bounty from both land and sea.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -2010,7 +2010,7 @@
   "token": "$item_fish_cooked",
   "desc": "A tasty side of smoked fish.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -2039,7 +2039,7 @@
   "token": "$item_fishsoup",
   "desc": "Swimming with flavour!",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -2068,7 +2068,7 @@
   "token": "$item_fishwraps",
   "desc": "Bread and fish, what more to wish?",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -2122,7 +2122,7 @@
   "token": "$item_honey",
   "desc": "Sweet and tasty.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -2151,7 +2151,7 @@
   "token": "$item_honeyglazedchicken",
   "desc": "Grilled to perfection. Makes both eyes and mouths water.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -2180,7 +2180,7 @@
   "token": "$item_kale",
   "desc": "A versatile leafy green.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -2209,7 +2209,7 @@
   "token": "$item_kalechips",
   "desc": "Crispy greens!",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -2325,7 +2325,7 @@
   "name": "Lingonberries",
   "token": "$item_lingonberries",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -2354,7 +2354,7 @@
   "token": "$item_lingondricka",
   "desc": "Pairs well with most foods.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -2383,7 +2383,7 @@
   "token": "$item_loxpie",
   "desc": "Break the crust to release a cloud of fragrant steam. Delicious!",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -2412,7 +2412,7 @@
   "token": "$item_magicallystuffedmushroom",
   "desc": "Bursting with magical flavour.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -2441,7 +2441,7 @@
   "token": "$item_marinatedgreens",
   "desc": "It's spicy, it's chewy, it's sweet… This mad dish tickles your tongue as well as your mind.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -2470,7 +2470,7 @@
   "token": "$item_mashedmeat",
   "desc": "Leftover meat can actually be pretty tasty if you just mash it right!",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -2499,7 +2499,7 @@
   "token": "$item_mead_bugrepellent",
   "desc": "The perfect drink for a day in the Plains.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2529,7 +2529,7 @@
   "token": "$item_mead_bzerker",
   "desc": "Something poisonous stirs within, brewed to the point where its potential can finally be harnessed. But be careful to let the beast out...",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2559,7 +2559,7 @@
   "token": "$item_mead_eitr_lingering",
   "desc": "Increases eitr regeneration.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2590,7 +2590,7 @@
   "token": "$item_mead_eitr_minor",
   "desc": "Restores eitr.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2621,7 +2621,7 @@
   "token": "$item_mead_frostres",
   "desc": "Protects against the cold.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2652,7 +2652,7 @@
   "token": "$item_mead_hasty",
   "desc": "The squirrel must be quick on its feet as it runs up and down the trunk of the world tree. Although it no longer visits Valheim, there are still those who remember it...",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2682,7 +2682,7 @@
   "token": "$item_mead_hp_lingering",
   "desc": "Increases health regeneration.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2712,7 +2712,7 @@
   "token": "$item_mead_hp_major",
   "desc": "Restores health.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2742,7 +2742,7 @@
   "token": "$item_mead_hp_medium",
   "desc": "Restores health.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2772,7 +2772,7 @@
   "token": "$item_mead_hp_minor",
   "desc": "Restores health.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2802,7 +2802,7 @@
   "token": "$item_mead_lightfoot",
   "desc": "This bottle is full, yet it feels like it weighs almost nothing at all.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2832,7 +2832,7 @@
   "token": "$item_mead_poisonres",
   "desc": "Fortifies you against poison.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2863,7 +2863,7 @@
   "token": "$item_mead_stamina_lingering",
   "desc": "Increases stamina regeneration.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2894,7 +2894,7 @@
   "token": "$item_mead_stamina_medium",
   "desc": "Restores stamina.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2925,7 +2925,7 @@
   "token": "$item_mead_stamina_minor",
   "desc": "Restores stamina.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2956,7 +2956,7 @@
   "token": "$item_mead_strength",
   "desc": "What creature can carry more than a troll? Why, a viking with this drink of course!",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -2986,7 +2986,7 @@
   "token": "$item_mead_swimmer",
   "desc": "You feel invigorated just by holding this, as the ocean beckons you to come for a swim.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -3016,7 +3016,7 @@
   "token": "$item_mead_tamer",
   "desc": "It smells like a pigsty. Likely the taste won't be much better.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -3046,7 +3046,7 @@
   "token": "$item_mead_tasty",
   "desc": "The nectar of the Gods, divine mead.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -3076,7 +3076,7 @@
   "token": "$item_mead_trollpheromones",
   "desc": "An intense musk permeates the air around this bottle.",
   "icon": true,
-  "category": "Food",
+  "category": "Meads",
   "usage": [
    "Meads"
   ],
@@ -3106,7 +3106,7 @@
   "token": "$item_meatplatter",
   "desc": "Battle fuel.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -3135,7 +3135,7 @@
   "token": "$item_meatballsmashedpoteitr",
   "desc": "It doesn't get more iconic than this!",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -3164,7 +3164,7 @@
   "token": "$item_mincemeatsauce",
   "desc": "Chunks of goodness in a thick gravy.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -3193,7 +3193,7 @@
   "token": "$item_mistharesupreme",
   "desc": "One of life's Great Pleasures.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -3222,7 +3222,7 @@
   "token": "$item_moosekebab",
   "desc": "A convenient meal, often favoured by travelling merchants.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -3501,7 +3501,7 @@
   "token": "$item_mushroomcommon",
   "desc": "Bounty of the forest.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -3530,7 +3530,7 @@
   "token": "$item_mushroom_bzerker",
   "desc": "Some say you can eat everything you find in the forest. That is not the case with this mushroom.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Misc"
   ],
@@ -3559,7 +3559,7 @@
   "token": "$item_jotunpuffs",
   "desc": "Swollen with magic, these golden orbs bubble from the ground where the Jotun fell.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -3588,7 +3588,7 @@
   "token": "$item_magecap",
   "desc": "The delicate blue magecaps crackle like nerve-endings with sorcerous vitality.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -3617,7 +3617,7 @@
   "token": "$item_mushroomomelette",
   "desc": "A delicious omelette with an earthy aftertaste.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -3646,7 +3646,7 @@
   "token": "$item_smokepuff",
   "desc": "Hopefully it tastes better after cooking.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -3675,7 +3675,7 @@
   "token": "$item_mushroomyellow",
   "desc": "An energetic glowing mushroom.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -3705,7 +3705,7 @@
   "token": "$item_necktailgrilled",
   "desc": "This savoury, charcoal-grilled meat has a slight aroma of seaweed and grass.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -3949,7 +3949,7 @@
   "token": "$item_oat",
   "desc": "Tasty grains, to be used as they are or to be ground into flour.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -3978,7 +3978,7 @@
   "token": "$item_oatmilk",
   "desc": "Tastes like innovation.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -4007,7 +4007,7 @@
   "token": "$item_oatmeallingonberryjam",
   "desc": "Served with a generous helping of lingonberry jam.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -4036,7 +4036,7 @@
   "token": "$item_onion",
   "desc": "A crunchy and spicy taste.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -4065,7 +4065,7 @@
   "token": "$item_onionsoup",
   "desc": "Deliciously rich.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -4094,7 +4094,7 @@
   "token": "$item_ovenpancake",
   "desc": "Warm and fluffy.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -4123,7 +4123,7 @@
   "token": "$item_pancakes",
   "desc": "Was there ever a more comforting food?",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -5440,7 +5440,7 @@
   "token": "$item_piquantpie",
   "desc": "It takes some time and effort to make this pie, but the taste is well worth it.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -5588,7 +5588,7 @@
   "token": "$item_poteitr",
   "desc": "The possibilities are practically endless. Who wouldn't want a taste?",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -5617,7 +5617,7 @@
   "token": "$item_pukeberries",
   "desc": "Allows the consumer to quickly evacuate any misplaced meal and start anew.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Misc"
   ],
@@ -5646,7 +5646,7 @@
   "token": "$item_pulledbear",
   "desc": "Tender meat cooked for hours upon hours, until it practically falls apart.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -5675,7 +5675,7 @@
   "token": "$item_queensjam",
   "desc": "That classic tasty blend of raspberries and blueberries.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -5782,7 +5782,7 @@
   "token": "$item_raspberries",
   "desc": "Sweet and delicious.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -5811,7 +5811,7 @@
   "token": "$item_roastedcrustpie",
   "desc": "This dessert keeps you going all day long.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -5840,7 +5840,7 @@
   "token": "$item_meat_rotten",
   "desc": "There are maggots crawling in the meat. It smells awful.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Misc"
   ],
@@ -5869,7 +5869,7 @@
   "token": "$item_royaljelly",
   "desc": "Jelly fit for kings and queens.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -5898,7 +5898,7 @@
   "token": "$item_salad",
   "desc": "Fresh, crisp leaves.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -5927,7 +5927,7 @@
   "token": "$item_sausages",
   "desc": "Links of savory, smoked meat.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -5956,7 +5956,7 @@
   "token": "$item_scorchingmedley",
   "desc": "A varied diet is important, so why not try this vegetarian option?",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -5985,7 +5985,7 @@
   "token": "$item_sealsoup",
   "desc": "A warm and tasty meal, best enjoyed on a cold day.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -6014,7 +6014,7 @@
   "token": "$item_seekeraspic",
   "desc": "A quivering jelly with a taste like gentle electricity.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -6043,7 +6043,7 @@
   "token": "$item_serpentmeatcooked",
   "desc": "A cooked slice of sea serpent. Smells good.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -6072,7 +6072,7 @@
   "token": "$item_serpentstew",
   "desc": "Smells of honey and serpent...",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -6101,7 +6101,7 @@
   "token": "$item_shocklatesmoothie",
   "desc": "Wakes you up!",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -6130,7 +6130,7 @@
   "token": "$item_sizzlingberrybroth",
   "desc": "This soup settles in your stomach with an almost tingly sensation.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -6157,7 +6157,6 @@
   "prefab": "Sled",
   "name": "Sled",
   "token": "$tool_sled",
-  "desc": "$tool_sled_description",
   "icon": true,
   "category": "Misc",
   "usage": [
@@ -6223,7 +6222,7 @@
   "token": "$item_smokedfish",
   "desc": "Fish prepared in the most delicious way.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -6252,7 +6251,7 @@
   "token": "$item_smokedmoosemeat",
   "desc": "The smoke only adds to the wild flavour.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -6281,7 +6280,7 @@
   "token": "$item_sparklingshroomshake",
   "desc": "Perhaps it's not the best flavour to start the day with, but it will give you the boost you need.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -6310,7 +6309,7 @@
   "token": "$item_spicymarmalade",
   "desc": "Sugary honey perfectly balanced with tangy fronds and tart berries.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -9612,7 +9611,7 @@
   "token": "$item_turnipstew",
   "desc": "Nutritious and restorative.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -9641,7 +9640,7 @@
   "token": "$item_vikingcupcake",
   "desc": "A sweet and tasty treat, to celebrate a feat!",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -9941,7 +9940,7 @@
   "token": "$item_vineberry",
   "desc": "These juicy berries are both sour and sweet.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -9970,7 +9969,7 @@
   "token": "$item_wolfjerky",
   "desc": "Chewy and full of flavor.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -9999,7 +9998,7 @@
   "token": "$item_wolf_skewer",
   "desc": "Dripping with taste.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -10028,7 +10027,7 @@
   "token": "$item_yggdrasilporridge",
   "desc": "Made with sap from the great tree. Even a mouthful imparts a warm glow to your whole body.",
   "icon": true,
-  "category": "Feasts",
+  "category": "Food",
   "usage": [
    "Food"
   ],
@@ -11884,7 +11883,6 @@
   "prefab": "bar_ancientmetal_stack",
   "name": "bar_ancientmetal_stack",
   "token": "$piece_ancientmetalstack",
-  "desc": "$piece_ancientmetalstack_description",
   "icon": true,
   "category": "Misc",
   "usage": [
@@ -20527,7 +20525,8 @@
    "noInWater",
    "notOnTiltingSurface"
   ],
-  "light": true
+  "light": true,
+  "demister": true
  },
  "piece_FairylightGarland": {
   "prefab": "piece_FairylightGarland",
@@ -25590,7 +25589,8 @@
    "allowedInDungeons",
    "notOnTiltingSurface"
   ],
-  "light": true
+  "light": true,
+  "demister": true
  },
  "piece_groundtorch_wood": {
   "prefab": "piece_groundtorch_wood",
@@ -28346,7 +28346,8 @@
    "noInWater",
    "notOnTiltingSurface"
   ],
-  "light": true
+  "light": true,
+  "demister": true
  },
  "piece_workbench": {
   "prefab": "piece_workbench",

@@ -16,6 +16,10 @@ var heightmapExtrasNames = []string{"", "Menu", "Flat"}
 // vegetation and locations inside it. Their spawn rules go into the DB's
 // spawns with Source "altbiome:<name>".
 func extractAltBiomes(x *X) error {
+	guids, err := softGUIDs(x.SoftRef)
+	if err != nil {
+		return err
+	}
 	seen := map[string]bool{}
 	x.EachMono([]string{"m_alts"}, func(cab string, id int64, t map[string]any) {
 		for _, e := range L(t, "m_alts") {
@@ -25,14 +29,15 @@ func extractAltBiomes(x *X) error {
 				continue
 			}
 			seen[name] = true
-			x.DB.AltBiomes = append(x.DB.AltBiomes, x.altBiome(cab, m))
+			x.DB.AltBiomes = append(x.DB.AltBiomes, x.altBiome(cab, m, guids))
 		}
 	})
 	return nil
 }
 
-// altBiome reads one AltBiome.
-func (x *X) altBiome(cab string, m map[string]any) *model.AltBiome {
+// altBiome reads one AltBiome. guids is the SoftRef manifest's asset
+// GUID -> path table, which resolves the added locations' prefabs.
+func (x *X) altBiome(cab string, m map[string]any, guids map[string]string) *model.AltBiome {
 	name := S(m, "m_name")
 	biomes := Biomes(I(m, "m_biome"))
 	a := &model.AltBiome{
@@ -78,6 +83,11 @@ func (x *X) altBiome(cab string, m map[string]any) *model.AltBiome {
 	}
 	// Vegetation rules are known by their rule name (what m_blockVegetationNames
 	// quotes); locations by their prefab, the key of the locations table.
+	// A location rule's prefab is its m_prefab SoftReference resolved
+	// through the manifest, as the locations extractor does: the cached
+	// m_prefabName is stale on the alt biome rules (WoodVillage2's says
+	// WoodVillage1, TarPit1_1's says TarPit1). A disabled rule with no
+	// prefab assigned is a legacy entry the game never registers.
 	for _, e := range L(m, "m_addVegetation") {
 		if n := S(assets.AsMap(e), "m_name"); n != "" {
 			a.AddVegetation = append(a.AddVegetation, n)
@@ -85,11 +95,10 @@ func (x *X) altBiome(cab string, m map[string]any) *model.AltBiome {
 	}
 	for _, e := range L(m, "m_addLocations") {
 		em := assets.AsMap(e)
-		n := S(em, "m_prefabName")
-		if n == "" {
-			n = S(em, "m_name")
+		if guid := assetGUID(M(em, "m_prefab")); (guid == "" || guid == strings.Repeat("0", 32)) && !B(em, "m_enable") {
+			continue
 		}
-		if n != "" {
+		if n := x.softPrefab(guids, M(em, "m_prefab"), S(em, "m_prefabName")); n != "" {
 			a.AddLocations = append(a.AddLocations, n)
 		}
 	}

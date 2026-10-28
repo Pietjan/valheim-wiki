@@ -6,7 +6,8 @@
   "fuel": "Wood",
   "secPerFuel": 5000,
   "startFuel": 10,
-  "infiniteFuel": true
+  "infiniteFuel": true,
+  "maxFuel": 10
  },
  "Candle_resin": {
   "prefab": "Candle_resin",
@@ -14,60 +15,70 @@
   "kind": "fireplace",
   "fuel": "Resin",
   "secPerFuel": 5000,
-  "startFuel": 3
+  "startFuel": 3,
+  "maxFuel": 3
  },
  "FeastAshlands": {
   "prefab": "FeastAshlands",
   "name": "Ashlands Gourmet Bowl",
   "kind": "feast",
+  "product": "FeastAshlands",
   "maxProduct": 10
  },
  "FeastBlackforest": {
   "prefab": "FeastBlackforest",
   "name": "Black Forest Buffet Platter",
   "kind": "feast",
+  "product": "FeastBlackforest",
   "maxProduct": 10
  },
  "FeastDeepNorth": {
   "prefab": "FeastDeepNorth",
   "name": "Northern Morning Fare",
   "kind": "feast",
+  "product": "FeastDeepNorth",
   "maxProduct": 10
  },
  "FeastMeadows": {
   "prefab": "FeastMeadows",
   "name": "Whole Roasted Meadow Boar",
   "kind": "feast",
+  "product": "FeastMeadows",
   "maxProduct": 10
  },
  "FeastMistlands": {
   "prefab": "FeastMistlands",
   "name": "Mushrooms Galore á la Mistlands",
   "kind": "feast",
+  "product": "FeastMistlands",
   "maxProduct": 10
  },
  "FeastMountains": {
   "prefab": "FeastMountains",
   "name": "Hearty Mountain Logger's Stew",
   "kind": "feast",
+  "product": "FeastMountains",
   "maxProduct": 10
  },
  "FeastOceans": {
   "prefab": "FeastOceans",
   "name": "Sailor's Bounty",
   "kind": "feast",
+  "product": "FeastOceans",
   "maxProduct": 10
  },
  "FeastPlains": {
   "prefab": "FeastPlains",
   "name": "Plains Pie Picnic",
   "kind": "feast",
+  "product": "FeastPlains",
   "maxProduct": 10
  },
  "FeastSwamps": {
   "prefab": "FeastSwamps",
   "name": "Swamp Dweller's Delight",
   "kind": "feast",
+  "product": "FeastSwamps",
   "maxProduct": 10
  },
  "Morkhalla_firepit": {
@@ -77,7 +88,8 @@
   "fuel": "Wood",
   "secPerFuel": 5000,
   "startFuel": 10,
-  "infiniteFuel": true
+  "infiniteFuel": true,
+  "maxFuel": 10
  },
  "blastfurnace": {
   "prefab": "blastfurnace",
@@ -112,7 +124,8 @@
   "name": "Bonfire",
   "kind": "fireplace",
   "fuel": "Wood",
-  "secPerFuel": 5000
+  "secPerFuel": 5000,
+  "maxFuel": 10
  },
  "charcoal_kiln": {
   "prefab": "charcoal_kiln",
@@ -276,7 +289,8 @@
   "kind": "fireplace",
   "fuel": "Wood",
   "secPerFuel": 5000,
-  "startFuel": 1
+  "startFuel": 1,
+  "maxFuel": 10
  },
  "fire_pit_haldor": {
   "prefab": "fire_pit_haldor",
@@ -285,7 +299,8 @@
   "fuel": "Wood",
   "secPerFuel": 5000,
   "startFuel": 10,
-  "infiniteFuel": true
+  "infiniteFuel": true,
+  "maxFuel": 10
  },
  "fire_pit_hildir": {
   "prefab": "fire_pit_hildir",
@@ -294,7 +309,8 @@
   "fuel": "Wood",
   "secPerFuel": 5000,
   "startFuel": 10,
-  "infiniteFuel": true
+  "infiniteFuel": true,
+  "maxFuel": 10
  },
  "fire_pit_iron": {
   "prefab": "fire_pit_iron",
@@ -302,7 +318,8 @@
   "kind": "fireplace",
   "fuel": "Wood",
   "secPerFuel": 5000,
-  "startFuel": 1
+  "startFuel": 1,
+  "maxFuel": 10
  },
  "fuling_trap": {
   "prefab": "fuling_trap",
@@ -331,7 +348,8 @@
   "name": "Hearth",
   "kind": "fireplace",
   "fuel": "Wood",
-  "secPerFuel": 5000
+  "secPerFuel": 5000,
+  "maxFuel": 20
  },
  "incinerator": {
   "prefab": "incinerator",
@@ -679,7 +697,8 @@
    "TurretBoltBone"
   ],
   "notes": [
-   "Fires every 2.0 s, range 40 m"
+   "Fires every 2.0 s, range 40 m",
+   "Does not consume ammo"
   ]
  },
  "piece_EternalPyre": {
@@ -930,7 +949,8 @@
   "kind": "fireplace",
   "fuel": "Coal",
   "secPerFuel": 20000,
-  "startFuel": 1
+  "startFuel": 1,
+  "maxFuel": 5
  },
  "piece_brazierfloor01": {
   "prefab": "piece_brazierfloor01",
@@ -938,7 +958,8 @@
   "kind": "fireplace",
   "fuel": "Coal",
   "secPerFuel": 20000,
-  "startFuel": 1
+  "startFuel": 1,
+  "maxFuel": 5
  },
  "piece_brazierfloor02": {
   "prefab": "piece_brazierfloor02",
@@ -946,7 +967,8 @@
   "kind": "fireplace",
   "fuel": "GreydwarfEye",
   "secPerFuel": 20000,
-  "startFuel": 1
+  "startFuel": 1,
+  "maxFuel": 5
  },
  "piece_cookingstation": {
   "prefab": "piece_cookingstation",
@@ -1087,7 +1109,8 @@
   "kind": "fireplace",
   "fuel": "Resin",
   "secPerFuel": 20000,
-  "startFuel": 2
+  "startFuel": 2,
+  "maxFuel": 6
  },
  "piece_groundtorch_blue": {
   "prefab": "piece_groundtorch_blue",
@@ -1095,7 +1118,8 @@
   "kind": "fireplace",
   "fuel": "GreydwarfEye",
   "secPerFuel": 20000,
-  "startFuel": 2
+  "startFuel": 2,
+  "maxFuel": 6
  },
  "piece_groundtorch_green": {
   "prefab": "piece_groundtorch_green",
@@ -1103,7 +1127,8 @@
   "kind": "fireplace",
   "fuel": "Guck",
   "secPerFuel": 20000,
-  "startFuel": 2
+  "startFuel": 2,
+  "maxFuel": 6
  },
  "piece_groundtorch_wood": {
   "prefab": "piece_groundtorch_wood",
@@ -1111,7 +1136,8 @@
   "kind": "fireplace",
   "fuel": "Resin",
   "secPerFuel": 10000,
-  "startFuel": 2
+  "startFuel": 2,
+  "maxFuel": 4
  },
  "piece_jackoturnip": {
   "prefab": "piece_jackoturnip",
@@ -1119,7 +1145,8 @@
   "kind": "fireplace",
   "fuel": "Resin",
   "secPerFuel": 20000,
-  "startFuel": 2
+  "startFuel": 2,
+  "maxFuel": 6
  },
  "piece_oven": {
   "prefab": "piece_oven",
@@ -1233,7 +1260,8 @@
   "kind": "fireplace",
   "fuel": "Resin",
   "secPerFuel": 20000,
-  "startFuel": 2
+  "startFuel": 2,
+  "maxFuel": 6
  },
  "piece_spinningwheel": {
   "prefab": "piece_spinningwheel",
@@ -1279,7 +1307,8 @@
   "kind": "fireplace",
   "fuel": "Resin",
   "secPerFuel": 20000,
-  "startFuel": 2
+  "startFuel": 2,
+  "maxFuel": 6
  },
  "piece_wisplure": {
   "prefab": "piece_wisplure",

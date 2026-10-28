@@ -11,26 +11,6 @@
     "weight": 5
    },
    {
-    "env": "Clear",
-    "weight": 5
-   },
-   {
-    "env": "Rain",
-    "weight": 0.20000000298023224
-   },
-   {
-    "env": "Misty",
-    "weight": 0.20000000298023224
-   },
-   {
-    "env": "ThunderStorm",
-    "weight": 0.20000000298023224
-   },
-   {
-    "env": "LightRain",
-    "weight": 0.20000000298023224
-   },
-   {
     "env": "Rain",
     "weight": 0.20000000298023224
    },
@@ -65,22 +45,6 @@
     "weight": 2
    },
    {
-    "env": "DeepForest Mist",
-    "weight": 2
-   },
-   {
-    "env": "Rain",
-    "weight": 0.10000000149011612
-   },
-   {
-    "env": "Misty",
-    "weight": 0.10000000149011612
-   },
-   {
-    "env": "ThunderStorm",
-    "weight": 0.10000000149011612
-   },
-   {
     "env": "Rain",
     "weight": 0.10000000149011612
    },
@@ -110,10 +74,6 @@
    {
     "env": "SwampRain",
     "weight": 1
-   },
-   {
-    "env": "SwampRain",
-    "weight": 1
    }
   ],
   "music": {
@@ -133,14 +93,6 @@
    {
     "env": "Snow",
     "weight": 5
-   },
-   {
-    "env": "Snow",
-    "weight": 5
-   },
-   {
-    "env": "SnowStorm",
-    "weight": 1
    },
    {
     "env": "SnowStorm",
@@ -164,18 +116,6 @@
    {
     "env": "Heath clear",
     "weight": 2
-   },
-   {
-    "env": "Heath clear",
-    "weight": 2
-   },
-   {
-    "env": "Misty",
-    "weight": 0.4000000059604645
-   },
-   {
-    "env": "LightRain",
-    "weight": 0.4000000059604645
    },
    {
     "env": "Misty",
@@ -288,26 +228,6 @@
    {
     "env": "Clear",
     "weight": 1
-   },
-   {
-    "env": "Clear",
-    "weight": 1
-   },
-   {
-    "env": "Rain",
-    "weight": 0.10000000149011612
-   },
-   {
-    "env": "LightRain",
-    "weight": 0.10000000149011612
-   },
-   {
-    "env": "Misty",
-    "weight": 0.10000000149011612
-   },
-   {
-    "env": "ThunderStorm",
-    "weight": 0.10000000149011612
    },
    {
     "env": "Rain",

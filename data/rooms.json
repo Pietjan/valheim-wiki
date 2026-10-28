@@ -1171,7 +1171,39 @@
     {
      "prefab": "Pickable_SunkenCryptRandom",
      "count": 6,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 30
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 3,
+       "max": 10
+      },
+      {
+       "item": "AmberPearl",
+       "min": 2,
+       "max": 5
+      },
+      {
+       "item": "WitheredBone",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WitheredBone",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "vegvisirs": [
@@ -1361,7 +1393,39 @@
     {
      "prefab": "Pickable_SunkenCryptRandom",
      "count": 1,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 30
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 3,
+       "max": 10
+      },
+      {
+       "item": "AmberPearl",
+       "min": 2,
+       "max": 5
+      },
+      {
+       "item": "WitheredBone",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WitheredBone",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ]
   }
@@ -1571,7 +1635,39 @@
     {
      "prefab": "Pickable_SunkenCryptRandom",
      "count": 4,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 30
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 3,
+       "max": 10
+      },
+      {
+       "item": "AmberPearl",
+       "min": 2,
+       "max": 5
+      },
+      {
+       "item": "WitheredBone",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WitheredBone",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -1779,7 +1875,39 @@
     {
      "prefab": "Pickable_SunkenCryptRandom",
      "count": 5,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 30
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 3,
+       "max": 10
+      },
+      {
+       "item": "AmberPearl",
+       "min": 2,
+       "max": 5
+      },
+      {
+       "item": "WitheredBone",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WitheredBone",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -1987,7 +2115,39 @@
     {
      "prefab": "Pickable_SunkenCryptRandom",
      "count": 5,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 30
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 3,
+       "max": 10
+      },
+      {
+       "item": "AmberPearl",
+       "min": 2,
+       "max": 5
+      },
+      {
+       "item": "WitheredBone",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WitheredBone",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "vegvisirs": [
@@ -2171,7 +2331,39 @@
     {
      "prefab": "Pickable_SunkenCryptRandom",
      "count": 5,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 30
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 3,
+       "max": 10
+      },
+      {
+       "item": "AmberPearl",
+       "min": 2,
+       "max": 5
+      },
+      {
+       "item": "WitheredBone",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WitheredBone",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -2479,7 +2671,29 @@
     {
      "prefab": "Pickable_ForestCryptRandom",
      "count": 2,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 20
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 1,
+       "max": 5
+      },
+      {
+       "item": "AmberPearl",
+       "min": 1,
+       "max": 3
+      }
+     ]
     }
    ],
    "resources": [
@@ -2828,7 +3042,29 @@
     {
      "prefab": "Pickable_ForestCryptRandom",
      "count": 4,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 20
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 1,
+       "max": 5
+      },
+      {
+       "item": "AmberPearl",
+       "min": 1,
+       "max": 3
+      }
+     ]
     },
     {
      "prefab": "Pickable_ForestCryptRemains01",
@@ -3024,7 +3260,29 @@
     {
      "prefab": "Pickable_ForestCryptRandom",
      "count": 6,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 20
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 1,
+       "max": 5
+      },
+      {
+       "item": "AmberPearl",
+       "min": 1,
+       "max": 3
+      }
+     ]
     },
     {
      "prefab": "Pickable_SurtlingCoreStand",
@@ -3223,7 +3481,29 @@
     {
      "prefab": "Pickable_ForestCryptRandom",
      "count": 6,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 20
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 1,
+       "max": 5
+      },
+      {
+       "item": "AmberPearl",
+       "min": 1,
+       "max": 3
+      }
+     ]
     },
     {
      "prefab": "Pickable_SurtlingCoreStand",
@@ -3377,7 +3657,29 @@
     {
      "prefab": "Pickable_ForestCryptRandom",
      "count": 7,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 20
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 1,
+       "max": 5
+      },
+      {
+       "item": "AmberPearl",
+       "min": 1,
+       "max": 3
+      }
+     ]
     },
     {
      "prefab": "Pickable_SurtlingCoreStand",
@@ -3539,7 +3841,29 @@
     {
      "prefab": "Pickable_ForestCryptRandom",
      "count": 6,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 20
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 1,
+       "max": 5
+      },
+      {
+       "item": "AmberPearl",
+       "min": 1,
+       "max": 3
+      }
+     ]
     },
     {
      "prefab": "Pickable_SurtlingCoreStand",
@@ -3605,7 +3929,29 @@
     {
      "prefab": "Pickable_ForestCryptRandom",
      "count": 9,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 20
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 1,
+       "max": 5
+      },
+      {
+       "item": "AmberPearl",
+       "min": 1,
+       "max": 3
+      }
+     ]
     }
    ],
    "resources": [
@@ -4903,7 +5249,14 @@
     {
      "prefab": "Pickable_Item",
      "count": 3,
-     "chance": 0.2
+     "chance": 0.2,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 3,
+       "max": 9
+      }
+     ]
     },
     {
      "prefab": "Pickable_ForestCryptRemains01",
@@ -5002,7 +5355,19 @@
     {
      "prefab": "Pickable_MountainCaveRandom",
      "count": 1,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "WolfClaw",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WolfHairBundle",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -5055,7 +5420,19 @@
     {
      "prefab": "Pickable_MountainCaveRandom",
      "count": 1,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "WolfClaw",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WolfHairBundle",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -5085,7 +5462,19 @@
     {
      "prefab": "Pickable_MountainCaveRandom",
      "count": 1,
-     "chance": 0.66
+     "chance": 0.66,
+     "random": [
+      {
+       "item": "WolfClaw",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WolfHairBundle",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ]
   }
@@ -5484,7 +5873,19 @@
     {
      "prefab": "Pickable_MountainCaveRandom",
      "count": 1,
-     "chance": 0.66
+     "chance": 0.66,
+     "random": [
+      {
+       "item": "WolfClaw",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WolfHairBundle",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ]
   }
@@ -5938,12 +6339,36 @@
     },
     {
      "prefab": "Pickable_MountainCaveRandom",
-     "count": 2
+     "count": 2,
+     "random": [
+      {
+       "item": "WolfClaw",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WolfHairBundle",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MountainCaveRandom",
      "count": 2,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "WolfClaw",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WolfHairBundle",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -6053,12 +6478,36 @@
     },
     {
      "prefab": "Pickable_MountainCaveRandom",
-     "count": 2
+     "count": 2,
+     "random": [
+      {
+       "item": "WolfClaw",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WolfHairBundle",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MountainCaveRandom",
      "count": 2,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "WolfClaw",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WolfHairBundle",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -6168,7 +6617,19 @@
     },
     {
      "prefab": "Pickable_MountainCaveRandom",
-     "count": 2
+     "count": 2,
+     "random": [
+      {
+       "item": "WolfClaw",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WolfHairBundle",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -6226,7 +6687,19 @@
     {
      "prefab": "Pickable_MountainCaveRandom",
      "count": 1,
-     "chance": 0.66
+     "chance": 0.66,
+     "random": [
+      {
+       "item": "WolfClaw",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WolfHairBundle",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -6307,7 +6780,19 @@
     {
      "prefab": "Pickable_MountainCaveRandom",
      "count": 2,
-     "chance": 0.66
+     "chance": 0.66,
+     "random": [
+      {
+       "item": "WolfClaw",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WolfHairBundle",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -6455,7 +6940,19 @@
     },
     {
      "prefab": "Pickable_MountainCaveRandom",
-     "count": 1
+     "count": 1,
+     "random": [
+      {
+       "item": "WolfClaw",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WolfHairBundle",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -6618,7 +7115,19 @@
     {
      "prefab": "Pickable_MountainCaveRandom",
      "count": 1,
-     "chance": 0.66
+     "chance": 0.66,
+     "random": [
+      {
+       "item": "WolfClaw",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WolfHairBundle",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -6691,7 +7200,19 @@
     {
      "prefab": "Pickable_MountainCaveRandom",
      "count": 1,
-     "chance": 0.66
+     "chance": 0.66,
+     "random": [
+      {
+       "item": "WolfClaw",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "WolfHairBundle",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -17556,22 +18077,110 @@
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
-     "count": 4
+     "count": 4,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 4,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 4,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 4,
-     "chance": 0.25
+     "chance": 0.25,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Morkhalla_Eye5_gemstone",
@@ -17823,22 +18432,110 @@
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
-     "count": 7
+     "count": 7,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 7,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 7,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 7,
-     "chance": 0.25
+     "chance": 0.25,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -18154,22 +18851,110 @@
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
-     "count": 6
+     "count": 6,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 6,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 6,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 6,
-     "chance": 0.25
+     "chance": 0.25,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Morkhalla_Eye5_gemstone",
@@ -18507,22 +19292,110 @@
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
-     "count": 2
+     "count": 2,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.25
+     "chance": 0.25,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Morkhalla_Eye5_gemstone",
@@ -18960,22 +19833,110 @@
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 3,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 3,
-     "chance": 0.25
+     "chance": 0.25,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.375
+     "chance": 0.375,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.125
+     "chance": 0.125,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Morkhalla_Eye5_gemstone",
@@ -18997,12 +19958,56 @@
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
-     "count": 1
+     "count": 1,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 1,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -19322,22 +20327,110 @@
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
-     "count": 2
+     "count": 2,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.25
+     "chance": 0.25,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Morkhalla_Eye5_gemstone",
@@ -19675,22 +20768,110 @@
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
-     "count": 4
+     "count": 4,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 4,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 4,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 4,
-     "chance": 0.25
+     "chance": 0.25,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Morkhalla_Eye5_gemstone",
@@ -20320,22 +21501,110 @@
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
-     "count": 4
+     "count": 4,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 4,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 4,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 4,
-     "chance": 0.25
+     "chance": 0.25,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Morkhalla_Eye5_gemstone",
@@ -20691,22 +21960,110 @@
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
-     "count": 2
+     "count": 2,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.25
+     "chance": 0.25,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -21026,22 +22383,110 @@
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
-     "count": 6
+     "count": 6,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 6,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 6,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 6,
-     "chance": 0.25
+     "chance": 0.25,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Morkhalla_Eye5_gemstone",
@@ -21470,22 +22915,110 @@
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
-     "count": 2
+     "count": 2,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.75
+     "chance": 0.75,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.25
+     "chance": 0.25,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Morkhalla_Eye5_gemstone",
@@ -22804,7 +24337,29 @@
     {
      "prefab": "Pickable_ForestCryptRandom",
      "count": 2,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 20
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 1,
+       "max": 5
+      },
+      {
+       "item": "AmberPearl",
+       "min": 1,
+       "max": 3
+      }
+     ]
     }
    ],
    "resources": [

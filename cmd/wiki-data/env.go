@@ -555,9 +555,11 @@ func (x *X) Requirements(cab string, v any) []model.Requirement {
 // Biomes expands a Heightmap.Biome mask.
 func Biomes(mask int) []string { return model.BiomesOf(mask) }
 
-// BiomeArea names Heightmap.BiomeArea.
+// BiomeArea names a Heightmap.BiomeArea mask the way the game tests it:
+// Edge is bit 1, Median bit 2, and anything with both (3, 7, -1) is
+// Everything. A mask with neither never places.
 func BiomeArea(v int) string {
-	switch v {
+	switch v & 3 {
 	case 1:
 		return "Edge"
 	case 2:
@@ -565,7 +567,7 @@ func BiomeArea(v int) string {
 	case 3:
 		return "Everything"
 	}
-	return ""
+	return "None"
 }
 
 // WantSprite asks the icon pass to write a sprite as

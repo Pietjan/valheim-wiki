@@ -111,7 +111,7 @@
    "altbiome:Dark Meadows/1"
   ],
   "addLocations": [
-   "WoodVillage1"
+   "WoodVillage2"
   ],
   "blockLocations": [
    "WoodFarm1"
@@ -331,10 +331,10 @@
    "ghostskull"
   ],
   "addLocations": [
-   "StoneTowerRuins09",
-   "StoneTowerRuins09",
-   "StoneTowerRuins09",
-   "StoneTowerRuins09"
+   "StoneTowerRuins07_sunk",
+   "StoneTowerRuins08_sunk",
+   "StoneTowerRuins09_sunk",
+   "StoneTowerRuins10_sunk"
   ],
   "baseHeightMultiplier": 1,
   "heightMapMultiplier": 1
@@ -451,9 +451,9 @@
    "swamptree2"
   ],
   "addLocations": [
-   "SwampHut1",
-   "SwampHut1",
-   "SwampHut1"
+   "SwampHut1_1",
+   "SwampHut2_1",
+   "SwampHut3_1"
   ],
   "baseHeightMultiplier": 1,
   "heightMapMultiplier": 1
@@ -626,7 +626,7 @@
    "firtree_mountain"
   ],
   "addLocations": [
-   "StoneTowerRuins05"
+   "StoneTowerRuins05_leet"
   ],
   "blockLocations": [
    "StoneTowerRuins05"
@@ -693,10 +693,10 @@
    "Deathsquito"
   ],
   "addLocations": [
-   "GoblinCamp2",
-   "WoodHouse1",
-   "WoodHouse1",
-   "WoodHouse1"
+   "GoblinCamp2_1",
+   "GoblinHut01",
+   "GoblinHut02",
+   "GoblinHut03"
   ],
   "baseHeightMultiplier": 1,
   "heightMapMultiplier": 1
@@ -730,9 +730,9 @@
    "heathrockpillar"
   ],
   "addLocations": [
-   "TarPit1",
-   "TarPit2",
-   "TarPit3"
+   "TarPit1_1",
+   "TarPit2_1",
+   "TarPit3_1"
   ],
   "blockLocations": [
    "GoblinCamp2",

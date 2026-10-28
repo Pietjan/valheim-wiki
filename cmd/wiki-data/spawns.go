@@ -17,8 +17,9 @@ import (
 // biomes, whose rules the events and altbiomes extractors append.
 //
 // Afterwards every creature's Biomes is the union of the biomes its
-// enabled world rules name; creatures with no world rule keep an empty
-// list for the locations pass to fill.
+// enabled world rules name, counting a rule that spawns a spawner prefab
+// (Spawner_TrollFrost) for the creature it spawns; creatures with no
+// world rule keep an empty list.
 func extractSpawns(x *X) error {
 	seen := map[string]bool{}
 	x.EachMono([]string{"m_spawners", "m_biomeFolded"}, func(cab string, id int64, t map[string]any) {
@@ -39,11 +40,13 @@ func extractSpawns(x *X) error {
 		if !s.Enabled || !strings.HasPrefix(s.Source, "world:") {
 			continue
 		}
-		if biomes[s.Prefab] == nil {
-			biomes[s.Prefab] = map[string]bool{}
-		}
-		for _, b := range s.Biomes {
-			biomes[s.Prefab][b] = true
+		for _, prefab := range append([]string{s.Prefab}, s.Creatures...) {
+			if biomes[prefab] == nil {
+				biomes[prefab] = map[string]bool{}
+			}
+			for _, b := range s.Biomes {
+				biomes[prefab][b] = true
+			}
 		}
 	}
 	for prefab, set := range biomes {
@@ -64,7 +67,9 @@ func extractSpawns(x *X) error {
 // spawnData reads one SpawnSystem.SpawnData. m_spawnChance is a percent;
 // altitude is height above sea level; tilt is the ground slope in
 // degrees; m_overrideLevelupChance is -1 where the default 10% per level
-// applies. Nil when the rule names no prefab.
+// applies. Nil when the rule names no prefab. A prefab that is a
+// CreatureSpawner or SpawnArea rather than a creature (Spawner_TrollFrost,
+// Spawner_CharredStone_event) has what it spawns in Creatures.
 func (x *X) spawnData(cab string, m map[string]any, id, source string) *model.Spawn {
 	prefab := x.GameObjectName(cab, m["m_prefab"])
 	if prefab == "" {
@@ -74,6 +79,7 @@ func (x *X) spawnData(cab string, m map[string]any, id, source string) *model.Sp
 		ID:                       id,
 		Name:                     S(m, "m_name"),
 		Prefab:                   prefab,
+		Creatures:                x.spawnedBy(prefab),
 		Source:                   source,
 		Enabled:                  B(m, "m_enabled"),
 		Biomes:                   Biomes(I(m, "m_biome")),
@@ -113,6 +119,27 @@ func (x *X) spawnData(cab string, m map[string]any, id, source string) *model.Sp
 		CanSpawnCloseToPlayer:    B(m, "m_canSpawnCloseToPlayer"),
 		InsidePlayerBase:         B(m, "m_insidePlayerBase"),
 	}
+}
+
+// spawnedBy is what a spawner prefab spawns: the CreatureSpawner's
+// creature or the SpawnArea's roster, in weight order. Nil for a prefab
+// that is neither (a creature, a projectile, an effect).
+func (x *X) spawnedBy(prefab string) []string {
+	g, ok := x.Roots[prefab]
+	if !ok {
+		return nil
+	}
+	if sp := SpawnerOf(x, g); sp != nil {
+		return []string{sp.Creature}
+	}
+	if n := NestOf(x, g); n != nil {
+		var out []string
+		for _, e := range n.Creatures {
+			out = append(out, e.Creature)
+		}
+		return out
+	}
+	return nil
 }
 
 // spawnList reads a List<SpawnSystem.SpawnData> into the DB, giving each

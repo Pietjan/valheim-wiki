@@ -774,6 +774,9 @@
      "count": 1
     }
    ],
+   "traders": [
+    "BogWitch"
+   ],
    "resources": [
     {
      "prefab": "shrub_2",
@@ -792,6 +795,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "Median",
   "quantity": 5,
   "prioritized": true,
   "minDistanceFromSimilar": 3000,
@@ -806,24 +810,21 @@
   "maxDistance": 10000,
   "maxAltitude": 2,
   "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
- "Castle": {
-  "prefab": "Castle",
-  "name": "Castle",
-  "kind": "castle",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "quantity": 200,
-  "randomRotation": true,
-  "maxTerrainDelta": 3,
-  "maxVegetation": 1,
-  "forestMin": 1,
-  "forestMax": 5,
-  "minAltitude": 1,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
+  "surroundCheckLayers": 2,
+  "contents": {
+   "runestones": [
+    {
+     "prefab": "RuneStone_Bonemass",
+     "text": "COOK THEIR REMAINS",
+     "count": 1
+    }
+   ],
+   "offering": {
+    "item": "WitheredBone",
+    "count": 10,
+    "boss": "Bonemass"
+   }
+  }
  },
  "CharredFortress": {
   "prefab": "CharredFortress",
@@ -835,6 +836,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "prioritized": true,
   "group": "FaderBoss",
@@ -1640,6 +1642,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "quantity": 30,
   "group": "towerruins",
   "minDistanceFromSimilar": 100,
@@ -1689,6 +1692,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "quantity": 30,
   "group": "towerruins",
   "minDistanceFromSimilar": 100,
@@ -1772,6 +1776,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "quantity": 40,
   "randomRotation": true,
   "exteriorRadius": 12,
@@ -1802,6 +1807,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "quantity": 30,
   "minDistanceFromSimilar": 500,
   "randomRotation": true,
@@ -1974,6 +1980,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "quantity": 200,
   "minDistanceFromSimilar": 128,
   "randomRotation": true,
@@ -2728,6 +2735,7 @@
   "kind": "dev-combat-ring",
   "list": "_ZoneSystem",
   "enabled": false,
+  "biomeArea": "None",
   "quantity": 0,
   "contents": {
    "chests": [
@@ -4804,7 +4812,24 @@
     {
      "prefab": "Pickable_DolmenTreasure",
      "count": 1,
-     "chance": 0.1
+     "chance": 0.1,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 2,
+       "max": 15
+      },
+      {
+       "item": "AmberPearl",
+       "min": 1,
+       "max": 3
+      },
+      {
+       "item": "Amber",
+       "min": 1,
+       "max": 5
+      }
+     ]
     },
     {
      "prefab": "Pickable_ForestCryptRemains01",
@@ -4864,7 +4889,24 @@
     {
      "prefab": "Pickable_DolmenTreasure",
      "count": 1,
-     "chance": 0.2
+     "chance": 0.2,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 2,
+       "max": 15
+      },
+      {
+       "item": "AmberPearl",
+       "min": 1,
+       "max": 3
+      },
+      {
+       "item": "Amber",
+       "min": 1,
+       "max": 5
+      }
+     ]
     },
     {
      "prefab": "Pickable_ForestCryptRemains01",
@@ -4924,7 +4966,24 @@
     {
      "prefab": "Pickable_DolmenTreasure",
      "count": 1,
-     "chance": 0.3
+     "chance": 0.3,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 2,
+       "max": 15
+      },
+      {
+       "item": "AmberPearl",
+       "min": 1,
+       "max": 3
+      },
+      {
+       "item": "Amber",
+       "min": 1,
+       "max": 5
+      }
+     ]
     },
     {
      "prefab": "Pickable_ForestCryptRemains01",
@@ -4986,9 +5045,10 @@
     }
    ],
    "offering": {
-    "item": "",
-    "count": 0,
-    "boss": "Dragon"
+    "item": "DragonEgg",
+    "count": 3,
+    "boss": "Dragon",
+    "stands": true
    }
   }
  },
@@ -5148,14 +5208,15 @@
    "offering": {
     "item": "Bell",
     "count": 3,
-    "boss": "Fader"
+    "boss": "Fader",
+    "stands": true
    }
   }
  },
  "FimbulLocation01": {
   "prefab": "FimbulLocation01",
-  "name": "Fimbul Location01",
-  "kind": "fimbul-location01",
+  "name": "Malicious Ice",
+  "kind": "malicious-ice",
   "list": "_LocationList_DeepNorth",
   "enabled": false,
   "biomeArea": "Everything",
@@ -5275,23 +5336,6 @@
    ]
   }
  },
- "Fort1": {
-  "prefab": "Fort1",
-  "name": "Fort1",
-  "kind": "fort1",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "quantity": 0,
-  "randomRotation": true,
-  "maxTerrainDelta": 5,
-  "maxVegetation": 1,
-  "forestMin": 1,
-  "forestMax": 5,
-  "minAltitude": 1,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
  "FortressRuins": {
   "prefab": "FortressRuins",
   "name": "Fortress ruins",
@@ -5301,6 +5345,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "quantity": 100,
   "groupMax": "zigg",
   "maxDistanceFromSimilar": 70,
@@ -5429,6 +5474,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Median",
   "quantity": 4,
   "prioritized": true,
   "minDistanceFromSimilar": 3000,
@@ -5460,25 +5506,6 @@
    }
   }
  },
- "GoblinCamp1": {
-  "prefab": "GoblinCamp1",
-  "name": "Goblin Camp1",
-  "kind": "goblin-camp1",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "plains"
-  ],
-  "quantity": 200,
-  "randomRotation": true,
-  "maxTerrainDelta": 3,
-  "maxVegetation": 1,
-  "forestMax": 1,
-  "minAltitude": 1,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
  "GoblinCamp2": {
   "prefab": "GoblinCamp2",
   "name": "Fuling village",
@@ -5488,6 +5515,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 200,
   "minDistanceFromSimilar": 250,
   "exteriorRadius": 30,
@@ -5536,6 +5564,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "None",
   "quantity": 5,
   "exteriorRadius": 30,
   "clearArea": true,
@@ -5584,6 +5613,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 30,
   "randomRotation": true,
   "exteriorRadius": 6,
@@ -5620,6 +5650,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 30,
   "randomRotation": true,
   "exteriorRadius": 7,
@@ -5751,6 +5782,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "randomRotation": true,
   "exteriorRadius": 12,
@@ -5926,8 +5958,9 @@
    ],
    "offering": {
     "item": "GoblinTotem",
-    "count": 3,
-    "boss": "GoblinKing"
+    "count": 5,
+    "boss": "GoblinKing",
+    "stands": true
    }
   }
  },
@@ -5940,6 +5973,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "Median",
   "quantity": 200,
   "randomRotation": true,
   "exteriorRadius": 12.039999961853027,
@@ -6171,50 +6205,10 @@
    ]
   }
  },
- "Greydwarf_camp2": {
-  "prefab": "Greydwarf_camp2",
-  "name": "Greydwarf camp2",
-  "kind": "greydwarf-camp2",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "black-forest"
-  ],
-  "quantity": 50,
-  "randomRotation": true,
-  "maxTerrainDelta": 3,
-  "maxVegetation": 1,
-  "inForest": true,
-  "forestMax": 1,
-  "minAltitude": 1,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
- "Greydwarf_camp3": {
-  "prefab": "Greydwarf_camp3",
-  "name": "Greydwarf camp3",
-  "kind": "greydwarf-camp3",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "black-forest"
-  ],
-  "quantity": 100,
-  "randomRotation": true,
-  "maxTerrainDelta": 3,
-  "maxVegetation": 1,
-  "inForest": true,
-  "forestMax": 1,
-  "minAltitude": 1,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
  "HalfBurried_ForestCrypt": {
   "prefab": "HalfBurried_ForestCrypt",
-  "name": "Half Burried Forest Crypt",
-  "kind": "half-burried-forest-crypt",
+  "name": "Half-buried Burial Chambers",
+  "kind": "half-buried-burial-chambers",
   "list": "_LocationList_DeepNorth",
   "enabled": false,
   "biomes": [
@@ -6299,6 +6293,9 @@
      "pinName": "Smouldering Tomb",
      "count": 1
     }
+   ],
+   "traders": [
+    "Hildir"
    ]
   }
  },
@@ -6526,8 +6523,8 @@
  "HotSpring1": {
   "prefab": "HotSpring1",
   "rule": "hotspring",
-  "name": "Hot Spring1",
-  "kind": "hot-spring1",
+  "name": "Hot spring",
+  "kind": "hot-spring",
   "list": "_LocationList_DeepNorth",
   "enabled": false,
   "biomes": [
@@ -6554,8 +6551,8 @@
  "HotSpring2": {
   "prefab": "HotSpring2",
   "rule": "hotspring2",
-  "name": "Hot Spring2",
-  "kind": "hot-spring2",
+  "name": "Hot spring",
+  "kind": "hot-spring",
   "list": "_LocationList_DeepNorth",
   "enabled": false,
   "biomes": [
@@ -6584,8 +6581,8 @@
  "HotSpring3": {
   "prefab": "HotSpring3",
   "rule": "hotspring3",
-  "name": "Hot Spring3",
-  "kind": "hot-spring3",
+  "name": "Hot spring",
+  "kind": "hot-spring",
   "list": "_LocationList_DeepNorth",
   "enabled": false,
   "biomes": [
@@ -6610,26 +6607,6 @@
   "surroundCheckDistance": 20,
   "surroundCheckLayers": 2,
   "applyRandomDamage": true
- },
- "Hugintest": {
-  "prefab": "Hugintest",
-  "name": "Hugintest",
-  "kind": "hugintest",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "meadows"
-  ],
-  "biomeArea": "Everything",
-  "quantity": 0,
-  "randomRotation": true,
-  "maxTerrainDelta": 2,
-  "maxVegetation": 1,
-  "forestMax": 1,
-  "minAltitude": -1000,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
  },
  "IcePond1": {
   "prefab": "IcePond1",
@@ -6712,7 +6689,15 @@
   "maxAltitude": 1000,
   "surroundCheckVegetation": true,
   "surroundCheckDistance": 30,
-  "surroundCheckLayers": 2
+  "surroundCheckLayers": 2,
+  "contents": {
+   "resources": [
+    {
+     "prefab": "LeviathanLava",
+     "count": 1
+    }
+   ]
+  }
  },
  "LumberCamp": {
   "prefab": "LumberCamp",
@@ -9338,26 +9323,6 @@
    ]
   }
  },
- "MountainCave01": {
-  "prefab": "MountainCave01",
-  "name": "Mountain Cave01",
-  "kind": "mountain-cave01",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "mountain"
-  ],
-  "biomeArea": "Everything",
-  "quantity": 500,
-  "randomRotation": true,
-  "maxTerrainDelta": 20,
-  "maxVegetation": 1,
-  "forestMax": 1,
-  "minAltitude": 100,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
  "MountainCave02": {
   "prefab": "MountainCave02",
   "name": "Frost Caves",
@@ -10262,44 +10227,6 @@
    "perimeterSections": 8
   }
  },
- "Pillar1": {
-  "prefab": "Pillar1",
-  "name": "Pillar1",
-  "kind": "pillar1",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "black-forest"
-  ],
-  "quantity": 0,
-  "randomRotation": true,
-  "maxTerrainDelta": 3,
-  "maxVegetation": 1,
-  "forestMax": 1,
-  "minAltitude": 1,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
- "Pillar2": {
-  "prefab": "Pillar2",
-  "name": "Pillar2",
-  "kind": "pillar2",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "black-forest"
-  ],
-  "quantity": 0,
-  "randomRotation": true,
-  "maxTerrainDelta": 3,
-  "maxVegetation": 1,
-  "forestMax": 1,
-  "minAltitude": 1,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
  "PlaceofMystery1": {
   "prefab": "PlaceofMystery1",
   "name": "Mysterious Location",
@@ -10609,6 +10536,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "quantity": 200,
   "randomRotation": true,
   "exteriorRadius": 10.699999809265137,
@@ -10725,6 +10653,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "quantity": 200,
   "randomRotation": true,
   "exteriorRadius": 9.890000343322754,
@@ -10867,6 +10796,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 50,
   "group": "Goblintower",
   "minDistanceFromSimilar": 512,
@@ -10977,6 +10907,7 @@
   "biomes": [
    "ashlands"
   ],
+  "biomeArea": "Everything",
   "quantity": 70,
   "group": "Runestones",
   "minDistanceFromSimilar": 128,
@@ -11179,6 +11110,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "Everything",
   "quantity": 50,
   "group": "Runestones",
   "minDistanceFromSimilar": 128,
@@ -11223,6 +11155,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "quantity": 25,
   "group": "Runestones",
   "minDistanceFromSimilar": 128,
@@ -11599,7 +11532,24 @@
     {
      "prefab": "Pickable_DolmenTreasure",
      "count": 1,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 2,
+       "max": 15
+      },
+      {
+       "item": "AmberPearl",
+       "min": 1,
+       "max": 3
+      },
+      {
+       "item": "Amber",
+       "min": 1,
+       "max": 5
+      }
+     ]
     },
     {
      "prefab": "Pickable_ForestCryptRemains01",
@@ -11720,7 +11670,29 @@
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 5,
-     "chance": 0.45
+     "chance": 0.45,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_ForestCryptRemains01",
@@ -11928,7 +11900,29 @@
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 2,
-     "chance": 0.25
+     "chance": 0.25,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     },
     {
      "prefab": "Pickable_ForestCryptRemains01",
@@ -11947,7 +11941,29 @@
     {
      "prefab": "Pickable_MorkHallaTreasure",
      "count": 1,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "AncientGemstoneBlack",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstonePurple",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneGreen",
+       "min": 1,
+       "max": 1
+      },
+      {
+       "item": "AncientGemstoneOrange",
+       "min": 1,
+       "max": 1
+      }
+     ]
     }
    ],
    "resources": [
@@ -12632,6 +12648,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 25,
   "minDistanceFromSimilar": 200,
   "randomRotation": true,
@@ -12655,6 +12672,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 5,
   "group": "Stonehenge",
   "minDistanceFromSimilar": 1000,
@@ -12758,6 +12776,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 5,
   "group": "Stonehenge",
   "minDistanceFromSimilar": 1000,
@@ -12851,6 +12870,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 5,
   "group": "Stonehenge",
   "minDistanceFromSimilar": 1000,
@@ -12954,6 +12974,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 5,
   "group": "Stonehenge",
   "minDistanceFromSimilar": 1000,
@@ -13002,6 +13023,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "group": "Stonehenge",
   "minDistanceFromSimilar": 500,
@@ -13050,6 +13072,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "group": "Stonehenge",
   "minDistanceFromSimilar": 500,
@@ -13065,25 +13088,6 @@
   "surroundCheckLayers": 2,
   "applyRandomDamage": true
  },
- "StoneHouse1": {
-  "prefab": "StoneHouse1",
-  "name": "Stone House1",
-  "kind": "stone-house1",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "black-forest"
-  ],
-  "quantity": 0,
-  "randomRotation": true,
-  "maxTerrainDelta": 3,
-  "maxVegetation": 1,
-  "forestMax": 1,
-  "minAltitude": 1,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
  "StoneHouse1_heath": {
   "prefab": "StoneHouse1_heath",
   "name": "Stone house",
@@ -13093,6 +13097,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 0,
   "randomRotation": true,
   "exteriorRadius": 6,
@@ -13193,25 +13198,6 @@
    ]
   }
  },
- "StoneHouse2": {
-  "prefab": "StoneHouse2",
-  "name": "Stone House2",
-  "kind": "stone-house2",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "black-forest"
-  ],
-  "quantity": 0,
-  "randomRotation": true,
-  "maxTerrainDelta": 3,
-  "maxVegetation": 1,
-  "forestMax": 1,
-  "minAltitude": 1,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
  "StoneHouse2_heath": {
   "prefab": "StoneHouse2_heath",
   "name": "Stone house",
@@ -13221,6 +13207,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 0,
   "randomRotation": true,
   "exteriorRadius": 6,
@@ -13256,6 +13243,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "quantity": 200,
   "randomRotation": true,
   "exteriorRadius": 6,
@@ -13358,6 +13346,7 @@
   "biomes": [
    "black-forest"
   ],
+  "biomeArea": "Everything",
   "quantity": 200,
   "randomRotation": true,
   "exteriorRadius": 7,
@@ -13384,25 +13373,6 @@
    ]
   }
  },
- "StoneHouse5": {
-  "prefab": "StoneHouse5",
-  "name": "Stone House5",
-  "kind": "stone-house5",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "black-forest"
-  ],
-  "quantity": 0,
-  "randomRotation": true,
-  "maxTerrainDelta": 3,
-  "maxVegetation": 1,
-  "forestMax": 1,
-  "minAltitude": 1,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
  "StoneHouse5_heath": {
   "prefab": "StoneHouse5_heath",
   "name": "Stone house",
@@ -13412,6 +13382,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 0,
   "randomRotation": true,
   "exteriorRadius": 7,
@@ -13510,6 +13481,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 50,
   "group": "Goblintower",
   "minDistanceFromSimilar": 512,
@@ -13642,26 +13614,6 @@
    ]
   }
  },
- "StoneTower2": {
-  "prefab": "StoneTower2",
-  "name": "Stone Tower2",
-  "kind": "stone-tower2",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "plains"
-  ],
-  "quantity": 100,
-  "minDistanceFromSimilar": 500,
-  "randomRotation": true,
-  "maxTerrainDelta": 3,
-  "maxVegetation": 1,
-  "forestMax": 1,
-  "minAltitude": 1,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
  "StoneTower3": {
   "prefab": "StoneTower3",
   "name": "Stone tower",
@@ -13671,6 +13623,7 @@
   "biomes": [
    "plains"
   ],
+  "biomeArea": "Everything",
   "quantity": 50,
   "group": "Goblintower",
   "minDistanceFromSimilar": 512,
@@ -13794,26 +13747,6 @@
     }
    ]
   }
- },
- "StoneTower4": {
-  "prefab": "StoneTower4",
-  "name": "Stone Tower4",
-  "kind": "stone-tower4",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "plains"
-  ],
-  "quantity": 100,
-  "minDistanceFromSimilar": 500,
-  "randomRotation": true,
-  "maxTerrainDelta": 3,
-  "maxVegetation": 1,
-  "forestMax": 1,
-  "minAltitude": 1,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
  },
  "StoneTowerRuins03": {
   "prefab": "StoneTowerRuins03",
@@ -15399,63 +15332,6 @@
    ]
   }
  },
- "SunkenCrypt1": {
-  "prefab": "SunkenCrypt1",
-  "name": "Sunken Crypt1",
-  "kind": "sunken-crypt1",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "swamp"
-  ],
-  "quantity": 0,
-  "randomRotation": true,
-  "maxTerrainDelta": 4,
-  "maxVegetation": 1,
-  "forestMax": 1,
-  "minAltitude": -1,
-  "maxAltitude": 2,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
- "SunkenCrypt2": {
-  "prefab": "SunkenCrypt2",
-  "name": "Sunken Crypt2",
-  "kind": "sunken-crypt2",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "swamp"
-  ],
-  "quantity": 0,
-  "randomRotation": true,
-  "maxTerrainDelta": 4,
-  "maxVegetation": 1,
-  "forestMax": 1,
-  "minAltitude": -1,
-  "maxAltitude": 2,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
- "SunkenCrypt3": {
-  "prefab": "SunkenCrypt3",
-  "name": "Sunken Crypt3",
-  "kind": "sunken-crypt3",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "swamp"
-  ],
-  "quantity": 0,
-  "randomRotation": true,
-  "maxTerrainDelta": 4,
-  "maxVegetation": 1,
-  "forestMax": 1,
-  "minAltitude": -1,
-  "maxAltitude": 2,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
  "SunkenCrypt4": {
   "prefab": "SunkenCrypt4",
   "name": "Sunken Crypts",
@@ -16417,6 +16293,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "Median",
   "quantity": 30,
   "group": "SwampRuin",
   "minDistanceFromSimilar": 256,
@@ -16613,6 +16490,7 @@
   "biomes": [
    "swamp"
   ],
+  "biomeArea": "Median",
   "quantity": 30,
   "group": "SwampRuin",
   "minDistanceFromSimilar": 256,
@@ -17213,8 +17091,9 @@
  "TheDarkestHole": {
   "prefab": "TheDarkestHole",
   "rule": "darkesthole",
-  "name": "The Darkest Hole",
-  "kind": "the-darkest-hole",
+  "name": "The Hole",
+  "token": "$location_darkesthole",
+  "kind": "the-hole",
   "list": "_LocationList_DeepNorth",
   "enabled": false,
   "biomes": [
@@ -17338,6 +17217,7 @@
   "maxAltitude": 1000,
   "surroundCheckDistance": 32,
   "surroundCheckLayers": 5,
+  "surroundBetterThanAverage": 0.800000011920929,
   "hasInterior": true,
   "interiorEnvironment": "TheHollow",
   "applyRandomDamage": true,
@@ -17545,27 +17425,6 @@
    ]
   }
  },
- "TrollCave": {
-  "prefab": "TrollCave",
-  "name": "Troll Cave",
-  "kind": "troll-cave",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "biomes": [
-   "black-forest"
-  ],
-  "biomeArea": "Median",
-  "quantity": 100,
-  "slopeRotation": true,
-  "minTerrainDelta": 5,
-  "maxTerrainDelta": 10,
-  "maxVegetation": 1,
-  "forestMax": 1,
-  "minAltitude": 1,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
- },
  "TrollCave02": {
   "prefab": "TrollCave02",
   "name": "Troll Cave",
@@ -17714,7 +17573,29 @@
     {
      "prefab": "Pickable_ForestCryptRandom",
      "count": 9,
-     "chance": 0.5
+     "chance": 0.5,
+     "random": [
+      {
+       "item": "Coins",
+       "min": 5,
+       "max": 20
+      },
+      {
+       "item": "Ruby",
+       "min": 1,
+       "max": 2
+      },
+      {
+       "item": "Amber",
+       "min": 1,
+       "max": 5
+      },
+      {
+       "item": "AmberPearl",
+       "min": 1,
+       "max": 3
+      }
+     ]
     },
     {
      "prefab": "Pickable_ForestCryptRemains01",
@@ -17768,7 +17649,12 @@
   "maxAltitude": 1000,
   "surroundCheckDistance": 20,
   "surroundCheckLayers": 2,
-  "noBuild": true
+  "noBuild": true,
+  "contents": {
+   "traders": [
+    "Haldor"
+   ]
+  }
  },
  "VoltureNest": {
   "prefab": "VoltureNest",
@@ -17914,6 +17800,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 10,
   "group": "woodvillage",
   "minDistanceFromSimilar": 128,
@@ -17962,6 +17849,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "randomRotation": true,
   "exteriorRadius": 8,
@@ -18060,6 +17948,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "randomRotation": true,
   "exteriorRadius": 8,
@@ -18158,6 +18047,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "randomRotation": true,
   "exteriorRadius": 8,
@@ -18256,6 +18146,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "randomRotation": true,
   "exteriorRadius": 6,
@@ -18363,6 +18254,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "randomRotation": true,
   "exteriorRadius": 9,
@@ -18483,6 +18375,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "randomRotation": true,
   "exteriorRadius": 8,
@@ -18564,6 +18457,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "randomRotation": true,
   "exteriorRadius": 10,
@@ -18603,6 +18497,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "randomRotation": true,
   "exteriorRadius": 8,
@@ -18624,6 +18519,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "randomRotation": true,
   "exteriorRadius": 8,
@@ -18645,6 +18541,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "randomRotation": true,
   "exteriorRadius": 8,
@@ -18725,6 +18622,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "randomRotation": true,
   "exteriorRadius": 8,
@@ -18823,6 +18721,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "randomRotation": true,
   "exteriorRadius": 10,
@@ -18855,6 +18754,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 20,
   "randomRotation": true,
   "exteriorRadius": 8,
@@ -18953,6 +18853,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 15,
   "group": "woodvillage",
   "minDistanceFromSimilar": 256,
@@ -19004,6 +18905,7 @@
   "biomes": [
    "meadows"
   ],
+  "biomeArea": "Everything",
   "quantity": 15,
   "group": "woodvillage",
   "minDistanceFromSimilar": 256,
@@ -19046,22 +18948,5 @@
     }
    ]
   }
- },
- "xmastree": {
-  "prefab": "xmastree",
-  "name": "xmastree",
-  "kind": "xmastree",
-  "list": "_ZoneSystem",
-  "enabled": false,
-  "quantity": 0,
-  "randomRotation": true,
-  "maxTerrainDelta": 3,
-  "maxVegetation": 1,
-  "forestMin": 1,
-  "forestMax": 5,
-  "minAltitude": 1,
-  "maxAltitude": 1000,
-  "surroundCheckDistance": 20,
-  "surroundCheckLayers": 2
  }
 }

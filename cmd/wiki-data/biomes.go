@@ -93,14 +93,32 @@ func extractBiomes(x *X) error {
 			}
 		}
 	}
+	// The bundles hold the EnvMan twice with the same tables: on _GameMain,
+	// which the game runs, and on a standalone _Environment prefab. Read
+	// the _GameMain one only, or the biome weights would double up.
+	type envMan struct {
+		cab  string
+		root string
+		tree map[string]any
+	}
+	var envMans []envMan
 	x.EachMono([]string{"m_dayLengthSec", "m_environments", "m_biomes"}, func(cab string, id int64, t map[string]any) {
 		root, _ := x.Owner(cab, t)
-		fmt.Printf("DEBUG EnvMan root=%q cab=%s id=%d envs=%d biomes=%d\n", root, cab, id, len(L(t, "m_environments")), len(L(t, "m_biomes")))
-		envSetups(cab, t["m_environments"], root)
-		biomeEnvs(t["m_biomes"])
+		envMans = append(envMans, envMan{cab, root, t})
 	})
+	sort.SliceStable(envMans, func(i, j int) bool { return envMans[i].root == "_GameMain" && envMans[j].root != "_GameMain" })
+	if len(envMans) > 0 {
+		em := envMans[0]
+		envSetups(em.cab, em.tree["m_environments"], em.root)
+		biomeEnvs(em.tree["m_biomes"])
+	}
+	seen := map[string]bool{}
 	x.EachMono([]string{"m_locations", "m_environments", "m_biomeEnvironments"}, func(cab string, id int64, t map[string]any) {
 		root, _ := x.Owner(cab, t)
+		if seen[root] {
+			return
+		}
+		seen[root] = true
 		envSetups(cab, t["m_environments"], root)
 		biomeEnvs(t["m_biomeEnvironments"])
 	})

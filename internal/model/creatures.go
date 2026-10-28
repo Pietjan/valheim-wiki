@@ -50,7 +50,10 @@ type Creature struct {
 	RandomSets    []ItemSet `json:"randomSets,omitempty"`
 	// RandomItems are Humanoid.m_randomItems: each rolled on its own.
 	RandomItems []ItemChance `json:"randomItems,omitempty"`
-	NPC         bool         `json:"npc,omitempty"` // Haldor, Hildir, Bog Witch, Munin, Hugin
+	// NPC is reserved for a Character that is a person rather than a
+	// monster. No such prefab exists in the current bundles: the traders
+	// and Odin's ravens carry no Character, so wiki-data never sets it.
+	NPC bool `json:"npc,omitempty"`
 }
 
 // ItemChance is one Humanoid.RandomItem: the chance the creature carries
@@ -181,9 +184,14 @@ type ItemSet struct {
 
 // Spawn is one SpawnSystem.SpawnData: the world's rule for a creature.
 type Spawn struct {
-	ID                       string   `json:"id"`
-	Name                     string   `json:"name"`
-	Prefab                   string   `json:"prefab"`
+	ID     string `json:"id"`
+	Name   string `json:"name"`
+	Prefab string `json:"prefab"`
+	// Creatures is what a Prefab that is not itself a creature spawns: a
+	// CreatureSpawner's creature (Spawner_TrollFrost -> TrollFrost) or a
+	// SpawnArea's roster (Spawner_CharredStone_event). Empty when Prefab
+	// is the creature.
+	Creatures                []string `json:"creatures,omitempty"`
 	Source                   string   `json:"source"` // "world:<list>", "event:<name>", "location:<prefab>", "area:<prefab>", "altbiome:<name>"
 	Enabled                  bool     `json:"enabled"`
 	Biomes                   []string `json:"biomes,omitempty"`

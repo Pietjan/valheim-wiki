@@ -163,8 +163,8 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 	}
 	sort.SliceStable(ix.Pieces, func(i, j int) bool { return ix.Pieces[i].Name < ix.Pieces[j].Name })
 	for _, p := range ix.Pieces {
-		if _, taken := ix.Things[p.Prefab]; taken {
-			continue
+		if _, taken := ix.Things[p.Prefab]; taken || p.Category == "All" {
+			continue // "All" holds the hammer's repair and remove modes
 		}
 		slug := sl.take(p.Name, p.Prefab)
 		icon := ""
@@ -273,6 +273,45 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 	for _, c := range ix.Creatures {
 		if _, ok := ix.Primary[c.Prefab]; !ok && len(c.Biomes) > 0 {
 			ix.Primary[c.Prefab] = c.Biomes[0]
+		}
+	}
+	// A creature met only inside places (Bonemass, Surtling in a fire
+	// hole) takes the biomes of those places.
+	locBiomes := func(prefab string) []string {
+		var out []string
+		for _, l := range db.Locations {
+			if l.Contents == nil || !l.Enabled {
+				continue
+			}
+			hit := false
+			for _, sp := range l.Contents.Spawners {
+				hit = hit || sp.Creature == prefab
+			}
+			for _, cr := range l.Contents.Creatures {
+				hit = hit || cr.Creature == prefab
+			}
+			for _, n := range l.Contents.Nests {
+				for _, e := range n.Creatures {
+					hit = hit || e.Creature == prefab
+				}
+			}
+			if hit {
+				for _, b := range l.Biomes {
+					if !contains(out, b) {
+						out = append(out, b)
+					}
+				}
+			}
+		}
+		sortBiomes(out)
+		return out
+	}
+	for _, c := range ix.Creatures {
+		if len(c.Biomes) == 0 {
+			c.Biomes = locBiomes(c.Prefab)
+			if _, ok := ix.Primary[c.Prefab]; !ok && len(c.Biomes) > 0 {
+				ix.Primary[c.Prefab] = c.Biomes[0]
+			}
 		}
 	}
 	sort.SliceStable(ix.Creatures, func(i, j int) bool { return ix.Creatures[i].Name < ix.Creatures[j].Name })
