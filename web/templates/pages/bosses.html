@@ -8,7 +8,7 @@
   <div class="hero-text"><p class="eyebrow">{{if $c.Biomes}}{{join (biomeNames $c.Biomes) ", "}}{{end}}</p><h2 style="margin:0"><a href="{{thingURL $c.Prefab}}">{{$c.Name}}</a></h2><p class="lede" style="font-size:16px">{{num $c.Health}} hp{{with .Trophy}} · drops <a href="{{thingURL .Prefab}}">{{.Name}}</a>{{end}}</p></div>
 </div>
 <ul class="chips">
-{{if .Altar}}<li>{{template "chip" .Altar.Prefab}}<span class="chip-meta">altar</span></li>{{end}}
+{{if .Altar}}<li>{{template "chip" (print "loc:" .Altar.Prefab)}}<span class="chip-meta">altar</span></li>{{end}}
 {{if .Offering}}<li>{{template "chipn" (dict "prefab" .Offering.Item "n" .Offering.Count)}}<span class="chip-meta">offering</span></li>{{end}}
 {{with .Power}}<li>{{template "chip" (print "effect:" .ID)}}<span class="chip-meta">power</span></li>{{end}}
 </ul>

@@ -271,7 +271,7 @@ func (s *Site) pagesLocations() error {
 		for _, v := range k.Variants {
 			prefabs = append(prefabs, v.Prefab)
 		}
-		t := ix.Things[k.Variants[0].Prefab]
+		t := ix.Things["loc:"+k.Variants[0].Prefab]
 		page := &Page{Site: s, Title: k.Name, Description: k.Name + " in Valheim: which biome, how many per world, what lives and lies inside, and where to find one in your world.", Section: "locations", Path: "locations/" + k.Slug + "/", Icon: s.absIcon(t.Icon),
 			Crumbs: []Crumb{{"Locations", "locations/"}, {k.Name, ""}}, Data: pg, YourWorld: &YourWorld{Kind: "location", Prefabs: prefabs, Label: strings.ToLower(k.Name)}}
 		if err := s.write(page.Path, "location", page); err != nil {

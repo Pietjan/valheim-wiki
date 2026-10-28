@@ -15,7 +15,7 @@
 <div class="table-wrap"><table><thead><tr><th>Biomes</th><th class="num">Per zone</th><th>Conditions</th></tr></thead><tbody>
 {{range $d.Rules}}<tr><td>{{template "biomes" .Biomes}}{{if ne .BiomeArea "Everything"}}<br><small class="muted">{{lower .BiomeArea}}</small>{{end}}</td><td class="num">{{num .Min}}–{{num .Max}}{{if gt .GroupMax 1}} <small class="muted">in groups of {{.GroupMin}}–{{.GroupMax}}</small>{{end}}</td><td class="small muted">{{if gt .MinAltitude -1000.0}}{{if gt .MinAltitude 0.0}}above {{num .MinAltitude}} m; {{else if lt .MinAltitude 0.0}}from {{num .MinAltitude}} m; {{end}}{{end}}{{if lt .MaxAltitude 1000.0}}below {{num .MaxAltitude}} m; {{end}}{{if .InForest}}in forest; {{end}}{{if .MaxTilt}}{{if lt .MaxTilt 90.0}}slope under {{num .MaxTilt}}°; {{end}}{{end}}{{if .MinVegetation}}vegetation ≥ {{num .MinVegetation}}; {{end}}{{if .MinOceanDepth}}water {{num .MinOceanDepth}}–{{num .MaxOceanDepth}} m deep; {{end}}{{if .MinDistanceFromCenter}}beyond {{metres .MinDistanceFromCenter}}; {{end}}{{if .Source}}{{if hasPrefix .Source "altbiome:"}}only in the {{replace .Source "altbiome:" ""}} variant; {{end}}{{end}}</td></tr>{{end}}
 </tbody></table></div>{{end}}
-{{if $d.Found}}<h2>Found in</h2><ul class="chips">{{range $d.Found}}<li>{{template "chip" (index .Variants 0).Prefab}}</li>{{end}}</ul>{{end}}
+{{if $d.Found}}<h2>Found in</h2><ul class="chips">{{range $d.Found}}<li>{{template "chip" (print "loc:" (index .Variants 0).Prefab)}}</li>{{end}}</ul>{{end}}
 {{template "yourworld" .YourWorld}}
 </div>
 <aside class="infobox">

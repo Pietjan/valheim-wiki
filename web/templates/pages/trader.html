@@ -4,7 +4,7 @@
 {{template "hero" (dict "icon" (iconOf $t.Prefab) "round" true "eyebrow" "Trader" "title" $t.Name "lede" "")}}
 <div class="cols">
 <div class="main">
-{{with $d.Kind}}<p>Found at {{template "chip" (index .Variants 0).Prefab}}, which the map marks once you come near.</p>{{end}}
+{{with $d.Kind}}<p>Found at {{template "chip" (print "loc:" (index .Variants 0).Prefab)}}, which the map marks once you come near.</p>{{end}}
 <h2>Wares</h2>
 <div class="table-wrap"><table><thead><tr><th>Item</th><th class="num">Price</th><th>Available</th></tr></thead><tbody>
 {{range $t.Items}}<tr><td>{{template "chipn" (dict "prefab" .Item "n" (when (gt .Stack 1) .Stack ""))}}</td><td class="num">{{.Price}} coins</td><td class="muted small">{{if .RequiredKey}}after {{keyName .RequiredKey}}{{else}}always{{end}}</td></tr>{{end}}

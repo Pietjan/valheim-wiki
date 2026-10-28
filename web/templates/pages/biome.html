@@ -2,12 +2,12 @@
 {{$d := .Data}}{{$b := $d.Biome}}
 {{template "crumbs" .}}
 <div class="biome-hero" style="--biome:{{biomeColor $b.ID}}"></div>
-<header class="hero"><div class="hero-text"><p class="eyebrow">Biome</p><h1>{{$b.Name}}</h1>{{with $d.Boss}}<p class="lede">Ruled by <a href="{{thingURL .Prefab}}">{{.Name}}</a>{{with $d.BossLocation}}, whose altar is {{template "chip" .Prefab}}{{end}}.</p>{{end}}</div></header>
+<header class="hero"><div class="hero-text"><p class="eyebrow">Biome</p><h1>{{$b.Name}}</h1>{{with $d.Boss}}<p class="lede">Ruled by <a href="{{thingURL .Prefab}}">{{.Name}}</a>{{with $d.BossLocation}}, whose altar is {{template "chip" (print "loc:" .Prefab)}}{{end}}.</p>{{end}}</div></header>
 <div class="braid" aria-hidden="true"></div>
 <div class="cols">
 <div class="main">
 {{if $d.Creatures}}<h2>Creatures <span class="count">{{len $d.Creatures}}</span></h2><ul class="cards round compact">{{range $d.Creatures}}{{with thing .Prefab}}<li><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="40" height="40">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span></a></li>{{end}}{{end}}</ul>{{end}}
-{{if $d.Kinds}}<h2>Places <span class="count">{{len $d.Kinds}}</span></h2><ul class="cards round compact">{{range $d.Kinds}}{{with thing (index .Variants 0).Prefab}}<li><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="40" height="40">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span></a></li>{{end}}{{end}}</ul>{{end}}
+{{if $d.Kinds}}<h2>Places <span class="count">{{len $d.Kinds}}</span></h2><ul class="cards round compact">{{range $d.Kinds}}{{with thing (print "loc:" (index .Variants 0).Prefab)}}<li><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="40" height="40">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span></a></li>{{end}}{{end}}</ul>{{end}}
 {{if $d.Materials}}<h2>Materials <span class="count">{{len $d.Materials}}</span></h2><p class="muted small">What its creatures drop and its land gives.</p><ul class="chips">{{range $d.Materials}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
 {{if $d.Pickables}}<h2>Growing here</h2><ul class="chips">{{range $d.Pickables}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
 {{if $d.Trees}}<h2>Trees</h2><ul class="chips">{{range $d.Trees}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}

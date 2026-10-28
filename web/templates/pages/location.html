@@ -30,7 +30,7 @@
 {{if $c}}
 {{if $c.Pickables}}<h2>Pickables</h2><ul class="chips">{{range $c.Pickables}}<li>{{template "chipn" (dict "prefab" .Prefab "n" .Count)}}</li>{{end}}</ul>{{end}}
 {{if $c.Resources}}<h2>Resources</h2><ul class="chips">{{range $c.Resources}}<li>{{template "chipn" (dict "prefab" .Prefab "n" .Count)}}</li>{{end}}</ul>{{end}}
-{{if $c.Vegvisirs}}<h2>Vegvisir</h2><p>A runestone here reveals {{range $i, $v := $c.Vegvisirs}}{{if $i}}, {{end}}{{range $j, $l := $v.Locations}}{{if $j}}, {{end}}{{template "chip" $l}}{{end}}{{end}} on the map.</p>{{end}}
+{{if $c.Vegvisirs}}<h2>Vegvisir</h2><p>A runestone here reveals {{range $i, $v := $c.Vegvisirs}}{{if $i}}, {{end}}{{range $j, $l := $v.Locations}}{{if $j}}, {{end}}{{template "chip" (print "loc:" $l)}}{{end}}{{end}} on the map.</p>{{end}}
 {{if $c.Runestones}}<h2>Runestones</h2>{{range $c.Runestones}}<blockquote class="note">{{if .Label}}<b>{{.Label}}</b><br>{{end}}{{if .Text}}{{nl2br .Text}}{{end}}{{range .Texts}}<p>{{.}}</p>{{end}}</blockquote>{{end}}{{end}}
 {{if $c.Pieces}}<h2>Built here</h2><ul class="chips">{{range $c.Pieces}}<li>{{template "chipn" (dict "prefab" .Prefab "n" .Count)}}</li>{{end}}</ul>{{end}}
 {{end}}

@@ -485,7 +485,14 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 			kd.Icon = l.Prefab
 		}
 		ix.KindOf[l.Prefab] = kd
-		ix.Things[l.Prefab] = &Thing{Kind: "location", Prefab: l.Prefab, Name: l.Name, Slug: ks, URL: "locations/" + ks + "/", Icon: locIcon(hasIcon, l.Prefab), Sub: strings.Join(biomeNames(l.Biomes), ", ")}
+		// A boss altar shares its prefab name with the boss (Bonemass,
+		// GoblinKing): the location is always reachable as "loc:<prefab>",
+		// and under the bare name only when nothing else holds it.
+		lt := &Thing{Kind: "location", Prefab: l.Prefab, Name: l.Name, Slug: ks, URL: "locations/" + ks + "/", Icon: locIcon(hasIcon, l.Prefab), Sub: strings.Join(biomeNames(l.Biomes), ", ")}
+		ix.Things["loc:"+l.Prefab] = lt
+		if _, taken := ix.Things[l.Prefab]; !taken {
+			ix.Things[l.Prefab] = lt
+		}
 		if l.Contents != nil {
 			for _, ch := range l.Contents.Chests {
 				if ch.Loot == nil {

@@ -67,7 +67,7 @@
 {{if $d.Sold}}<h3>Sold by</h3>
 <ul class="chips">{{range $d.Sold}}<li>{{template "chip" .Trader.Prefab}}<span class="chip-meta">{{.Item.Price}} coins{{if gt .Item.Stack 1}} for {{.Item.Stack}}{{end}}{{if .Item.RequiredKey}} · after {{keyName .Item.RequiredKey}}{{end}}</span></li>{{end}}</ul>{{end}}
 {{if $d.Chests}}<h3>Found in chests</h3>
-<ul class="chips">{{range $d.Chests}}<li>{{template "chip" .Location.Prefab}}<span class="chip-meta">{{.Entry.Min}}{{if ne .Entry.Min .Entry.Max}}–{{.Entry.Max}}{{end}}</span></li>{{end}}</ul>{{end}}
+<ul class="chips">{{range $d.Chests}}<li>{{template "chip" (print "loc:" .Location.Prefab)}}<span class="chip-meta">{{.Entry.Min}}{{if ne .Entry.Min .Entry.Max}}–{{.Entry.Max}}{{end}}</span></li>{{end}}</ul>{{end}}
 {{end}}
 
 {{if or $d.UsedIn $d.Builds $d.Consumed $d.Tamers}}
