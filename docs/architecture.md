@@ -116,7 +116,7 @@ worker → page: {type:'info', seed, seedNumber, radius, worldRadius, water}
                {type:'map', size, heights:Uint16Array, biomes:Uint8Array, mask:Uint8Array /*RGBA*/}
                {type:'sectors', ids:Uint16Array, list:[{id, biome, names:[...], x, z}]}
                {type:'rivers', rivers:[[x0,z0,x1,z1,wmin,wmax]...], streams:[...]}
-               {type:'sites', rule, prefab, placed:[[x,z,y]...], index, total}   // streamed per rule as placed, prioritized rules first
+               {type:'sites', rule, prefab, xyz:Float32Array, index, total}   // streamed per rule as placed, prioritized rules first; world.js unpacks to {x,z,y}
                {type:'done', report:[{rule, prefab, wanted, placed}], took}
 page → worker: {type:'point', x, z}  → {type:'point', x, z, biome, height, depth, forest, sector:[names]}
 ```

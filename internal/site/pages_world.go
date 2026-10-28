@@ -181,6 +181,9 @@ func (s *Site) pagesLocations() error {
 	}
 	for _, k := range ix.KindList {
 		pg := &KindPage{Kind: k, Main: k.Variants[0], Contents: mergeContents(k.Variants)}
+		if pg.Contents != nil {
+			pg.Contents.Pickables = s.mergeByName(pg.Contents.Pickables)
+		}
 		for _, v := range k.Variants {
 			if v.Quantity > pg.Main.Quantity {
 				pg.Main = v
@@ -522,4 +525,24 @@ func (s *Site) pagesResources() error {
 		}
 	}
 	return nil
+}
+
+// mergeByName folds pickables that read the same (the crypt's three
+// "Skeletal Remains" prefabs) into one row.
+func (s *Site) mergeByName(in []model.PickableIn) []model.PickableIn {
+	var out []model.PickableIn
+	index := map[string]int{}
+	for _, p := range in {
+		name := p.Prefab
+		if t := s.Index.Things[p.Prefab]; t != nil {
+			name = t.Name
+		}
+		if i, ok := index[name]; ok {
+			out[i].Count += p.Count
+			continue
+		}
+		index[name] = len(out)
+		out = append(out, p)
+	}
+	return out
 }

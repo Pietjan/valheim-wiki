@@ -63,6 +63,9 @@ type Thing struct {
 	URL    string
 	Icon   string // icon URL or ""
 	Sub    string // a short type line
+	// Hint tells two things of one name apart: the prefab, shown small
+	// beside the name when the slug had to carry it.
+	Hint string
 }
 
 // Kind groups location variants under one page.
@@ -517,6 +520,11 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 	for _, ab := range db.AltBiomes {
 		if bi := ix.ByBiome[ab.Biome]; bi != nil {
 			bi.AltBiomes = append(bi.AltBiomes, ab)
+		}
+	}
+	for _, t := range ix.Things {
+		if t.Slug != Slug(t.Name) && t.Slug != "" && Slug(t.Name) != "" {
+			t.Hint = t.Prefab
 		}
 	}
 	return ix
