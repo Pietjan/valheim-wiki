@@ -8,7 +8,7 @@ Without a seed it is a complete wiki; with one it is a wiki of your
 world.
 
 Published at https://pietjan.github.io/valheim-wiki/ on every push to
-`master`.
+`main`.
 
 ## What is in it
 
