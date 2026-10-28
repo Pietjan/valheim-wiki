@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"regexp"
 	"runtime/debug"
 	"sort"
 	"strings"
@@ -200,7 +201,21 @@ func (x *X) readNames() {
 }
 
 // Text localizes a string: every $token becomes English.
-func (x *X) Text(s string) string { return strings.TrimSpace(localize(x.Strings, s)) }
+func (x *X) Text(s string) string { return strings.TrimSpace(StripRichText(localize(x.Strings, s))) }
+
+// richTag is a Unity rich-text tag in a localised string: <color=orange>,
+// </color>, <b>, <size=20>. The wiki sets its own type.
+var richTag = regexp.MustCompile(`</?(color|b|i|size|u|s|sup|sub|align|link|sprite)(=[^>]*)?>`)
+
+// StripRichText drops the rich-text tags from a game string.
+func StripRichText(s string) string { return richTag.ReplaceAllString(s, "") }
+
+// MiniBoss is whether a creature's name as the game writes it is in
+// orange: the game's mark for Hildir's quarry and the Ashlands' lords,
+// bosses without an altar.
+func (x *X) MiniBoss(token string) bool {
+	return strings.Contains(localize(x.Strings, token), "<color=orange>")
+}
 
 // NameOf is the English name for a prefab: the hand-kept table first,
 // then the token given, then the prefab name spaced out.

@@ -10,8 +10,11 @@ type Creature struct {
 	// Icon is whether assets/icons/creatures/<prefab>.png was rendered.
 	Icon bool `json:"icon,omitempty"`
 
-	Boss      bool   `json:"boss,omitempty"`
-	BossOrder int    `json:"bossOrder,omitempty"`
+	Boss      bool `json:"boss,omitempty"`
+	BossOrder int  `json:"bossOrder,omitempty"`
+	// MiniBoss is a boss without an altar — Hildir's quarry, the
+	// Ashlands' lords — whose name the game writes in orange.
+	MiniBoss  bool   `json:"miniBoss,omitempty"`
 	DefeatKey string `json:"defeatKey,omitempty"`
 	BossEvent string `json:"bossEvent,omitempty"`
 

@@ -27,6 +27,7 @@ type CreaturePage struct {
 	Summoner  []*model.Item // staffs or items that summon it
 	Kinds     []*Kind       // location kinds it is found in
 	Phases    []*model.Creature
+	RaidForm  *model.Creature // the copy a raid sends, at half health
 }
 
 // StarRow is health and drop chance at one star level.
@@ -49,11 +50,13 @@ func (s *Site) pagesCreatures() error {
 	// Groups: bosses first, then by first biome, then the rest.
 	var groups []BestiaryGroup
 	byBiome := map[string][]*model.Creature{}
-	var bosses, npcs, rest []*model.Creature
+	var bosses, minis, npcs, rest []*model.Creature
 	for _, c := range ix.Creatures {
 		switch {
 		case c.Boss && c.BossOrder > 0:
 			bosses = append(bosses, c)
+		case c.MiniBoss:
+			minis = append(minis, c)
 		case c.NPC:
 			npcs = append(npcs, c)
 		case ix.Primary[c.Prefab] != "":
@@ -65,6 +68,9 @@ func (s *Site) pagesCreatures() error {
 	}
 	sort.Slice(bosses, func(i, j int) bool { return bosses[i].BossOrder < bosses[j].BossOrder })
 	groups = append(groups, BestiaryGroup{"bosses", "Forsaken", bosses})
+	if len(minis) > 0 {
+		groups = append(groups, BestiaryGroup{"minibosses", "Mini bosses", minis})
+	}
 	for _, b := range model.Biomes {
 		if cs := byBiome[b]; len(cs) > 0 {
 			groups = append(groups, BestiaryGroup{b, model.BiomeName[b], cs})
@@ -124,7 +130,7 @@ func (s *Site) pagesCreatures() error {
 
 func (s *Site) creaturePage(c *model.Creature) *CreaturePage {
 	ix := s.Index
-	pg := &CreaturePage{Creature: c, Thing: ix.Things[c.Prefab], Spawns: ix.SpawnsOf[c.Prefab], Found: ix.Found[c.Prefab], Events: ix.EventsOf[c.Prefab], Phases: ix.Phases[c.Prefab]}
+	pg := &CreaturePage{Creature: c, Thing: ix.Things[c.Prefab], Spawns: ix.SpawnsOf[c.Prefab], Found: ix.Found[c.Prefab], Events: ix.EventsOf[c.Prefab], Phases: ix.Phases[c.Prefab], RaidForm: ix.RaidForm[c.Prefab]}
 	if c.AI != nil {
 		pg.Lede = c.AI.SpawnMessage
 	}

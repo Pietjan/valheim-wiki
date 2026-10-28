@@ -1,7 +1,7 @@
 {{define "content"}}
 {{$d := .Data}}{{$c := $d.Creature}}
 {{template "crumbs" .}}
-{{template "hero" (dict "icon" (iconOf $c.Prefab) "round" true "eyebrow" (when $c.Boss (print "Forsaken · " (when $c.BossOrder (print "boss " $c.BossOrder) "")) (faction $c.Faction)) "title" $c.Name "lede" $d.Lede)}}
+{{template "hero" (dict "icon" (iconOf $c.Prefab) "round" true "eyebrow" (when $c.Boss (print "Forsaken · " (when $c.BossOrder (print "boss " $c.BossOrder) "")) (when $c.MiniBoss (print "Mini boss · " (faction $c.Faction)) (faction $c.Faction))) "title" $c.Name "lede" $d.Lede)}}
 <div class="cols">
 <div class="main">
 
@@ -14,6 +14,7 @@
 <h2>Health</h2>
 <div class="health-stars">{{range $d.Stars}}<span><span class="s">{{if .Stars}}{{.Stars}}{{else}}no star{{end}}</span>{{num .Health}} hp</span>{{end}}{{range $i, $p := $d.Phases}}<span><span class="s">phase {{add $i 2}}</span>{{num $p.Health}} hp</span>{{end}}</div>
 {{if $d.Phases}}<p class="small muted">The fight has {{add (len $d.Phases) 1}} phases, each a form with its own health and attacks.</p>{{end}}
+{{with $d.RaidForm}}<p class="small muted">The raid sends a lesser copy: {{num .Health}} hp, and no chest.</p>{{end}}
 {{if not $c.Boss}}<p class="small muted">Each star doubles the drops and adds a level of health and damage. World level and player count scale these further.</p>{{end}}
 
 {{if $c.Attacks}}

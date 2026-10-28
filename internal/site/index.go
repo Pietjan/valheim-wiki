@@ -52,6 +52,10 @@ type Index struct {
 	// Primary is the biome a creature is filed under: that of its first
 	// ungated world spawn rule.
 	Primary map[string]string
+	// RaidForm is the copy of a mini boss a raid sends — Skeleton_Hildir_nochest
+	// for Skeleton_Hildir, at half the health and without the chest — filed
+	// under the mini boss rather than listed on its own.
+	RaidForm map[string]*model.Creature
 	// Visible is the items that get a page: something in the game hands
 	// them to the player and they have an icon to be seen by. The rest are
 	// the ItemDrops behind creature attacks, NPC costumes, test gear and
@@ -132,7 +136,7 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 		InChests: map[string][]ChestLink{}, SpawnsOf: map[string][]*model.Spawn{}, Found: map[string][]*model.Location{},
 		EventsOf: map[string][]*model.Event{}, Tamers: map[string][]*model.Creature{}, Effects_: map[string][]EffectLink{},
 		Sets: map[string][]*model.Item{}, StationRecipes: map[string][]*model.Recipe{}, Extends: map[string]*model.Station{},
-		TrophyOf: map[string]string{}, Phases: map[string][]*model.Creature{}, Primary: map[string]string{}, Visible: map[string]bool{}}
+		TrophyOf: map[string]string{}, Phases: map[string][]*model.Creature{}, Primary: map[string]string{}, Visible: map[string]bool{}, RaidForm: map[string]*model.Creature{}}
 
 	// Items. Their slugs wait until the end, once what hands them out is
 	// known: the visible ones take the plain names.
@@ -254,6 +258,10 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 			}
 			continue
 		}
+		if base, ok := strings.CutSuffix(k, "_nochest"); ok && db.Creatures[base] != nil {
+			ix.RaidForm[base] = c
+			continue
+		}
 		ix.Creatures = append(ix.Creatures, c)
 	}
 	// The biome a creature is filed under: its first world spawn rule
@@ -348,6 +356,12 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 			}
 		}
 	}
+	// A raid form answers to its mini boss's page.
+	for base, c := range ix.RaidForm {
+		if t := ix.Things[base]; t != nil {
+			ix.Things[c.Prefab] = &Thing{Kind: "creature", Prefab: c.Prefab, Name: t.Name, Slug: t.Slug, URL: t.URL, Icon: t.Icon, Sub: "raid form", Hint: "raid"}
+		}
+	}
 	for _, sp := range db.Spawns {
 		ix.SpawnsOf[sp.Prefab] = append(ix.SpawnsOf[sp.Prefab], sp)
 	}
@@ -361,6 +375,11 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 			if sp := spawnByID[id]; sp != nil && !seen[sp.Prefab] {
 				seen[sp.Prefab] = true
 				ix.EventsOf[sp.Prefab] = append(ix.EventsOf[sp.Prefab], ev)
+				// A raid form's raid is its mini boss's.
+				if base, ok := strings.CutSuffix(sp.Prefab, "_nochest"); ok && db.Creatures[base] != nil && !seen[base] {
+					seen[base] = true
+					ix.EventsOf[base] = append(ix.EventsOf[base], ev)
+				}
 			}
 		}
 	}

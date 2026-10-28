@@ -27196,7 +27196,7 @@
   "prefab": "piece_remove_feaster",
   "name": "Remove",
   "token": "$hud_remove",
-  "desc": "\u003ccolor=yellow\u003eOnce a feast has been eaten of, it won't return any resources if dismantled.\u003c/color\u003e",
+  "desc": "Once a feast has been eaten of, it won't return any resources if dismantled.",
   "icon": true,
   "category": "All",
   "usage": [

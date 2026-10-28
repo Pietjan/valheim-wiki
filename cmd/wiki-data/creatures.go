@@ -109,6 +109,7 @@ func (x *X) creature(name string, g assets.Ref, ch Component) *model.Creature {
 		Faction:   factionName(I(t, "m_faction")),
 		Boss:      B(t, "m_boss"),
 		BossOrder: I(t, "m_bossOrder"),
+		MiniBoss:  x.MiniBoss(S(t, "m_name")),
 		DefeatKey: S(t, "m_defeatSetGlobalKey"),
 		BossEvent: S(t, "m_bossEvent"),
 		Health:    F(t, "m_health"),

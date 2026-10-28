@@ -3954,9 +3954,10 @@
  },
  "Charred_Melee_Dyrnwyn": {
   "prefab": "Charred_Melee_Dyrnwyn",
-  "name": "\u003ccolor=orange\u003eLord Reto\u003c/color\u003e",
+  "name": "Lord Reto",
   "token": "$enemy_charred_melee_Dyrnwyn",
   "faction": "Demon",
+  "miniBoss": true,
   "health": 2500,
   "resist": [
    {
@@ -7888,9 +7889,10 @@
  },
  "Fenring_Cultist_Hildir": {
   "prefab": "Fenring_Cultist_Hildir",
-  "name": "\u003ccolor=orange\u003eGeirrhafa\u003c/color\u003e",
+  "name": "Geirrhafa",
   "token": "$enemy_fenringcultist_hildir",
   "faction": "MountainMonsters",
+  "miniBoss": true,
   "defeatKey": "BossHildir2",
   "health": 3700,
   "resist": [
@@ -8010,9 +8012,10 @@
  },
  "Fenring_Cultist_Hildir_nochest": {
   "prefab": "Fenring_Cultist_Hildir_nochest",
-  "name": "\u003ccolor=orange\u003eGeirrhafa\u003c/color\u003e",
+  "name": "Geirrhafa",
   "token": "$enemy_fenringcultist_hildir",
   "faction": "MountainMonsters",
+  "miniBoss": true,
   "defeatKey": "BossHildir2",
   "health": 1850,
   "resist": [
@@ -10083,9 +10086,10 @@
  },
  "GoblinBruteBros": {
   "prefab": "GoblinBruteBros",
-  "name": "\u003ccolor=orange\u003eZil \u0026 Thungr\u003c/color\u003e",
+  "name": "Zil \u0026 Thungr",
   "token": "$enemy_goblinbrute_hildircombined",
   "faction": "PlainsMonsters",
+  "miniBoss": true,
   "defeatKey": "BossHildir3",
   "health": 4200,
   "resist": [
@@ -10222,9 +10226,10 @@
  },
  "GoblinBruteBros_nochest": {
   "prefab": "GoblinBruteBros_nochest",
-  "name": "\u003ccolor=orange\u003eZil \u0026 Thungr\u003c/color\u003e",
+  "name": "Zil \u0026 Thungr",
   "token": "$enemy_goblinbrute_hildircombined",
   "faction": "PlainsMonsters",
+  "miniBoss": true,
   "defeatKey": "BossHildir3",
   "health": 2100,
   "resist": [
@@ -10361,9 +10366,10 @@
  },
  "GoblinBrute_Hildir": {
   "prefab": "GoblinBrute_Hildir",
-  "name": "\u003ccolor=orange\u003eThungr\u003c/color\u003e ",
+  "name": "Thungr",
   "token": "$enemy_goblinbrute_hildir",
   "faction": "PlainsMonsters",
+  "miniBoss": true,
   "health": 800,
   "resist": [
    {
@@ -10897,9 +10903,10 @@
  },
  "GoblinShaman_Hildir": {
   "prefab": "GoblinShaman_Hildir",
-  "name": "\u003ccolor=orange\u003eZil\u003c/color\u003e ",
+  "name": "Zil",
   "token": "$enemy_goblin_hildir",
   "faction": "PlainsMonsters",
+  "miniBoss": true,
   "health": 2400,
   "resist": [
    {
@@ -11013,9 +11020,10 @@
  },
  "GoblinShaman_Hildir_nochest": {
   "prefab": "GoblinShaman_Hildir_nochest",
-  "name": "\u003ccolor=orange\u003eZil\u003c/color\u003e ",
+  "name": "Zil",
   "token": "$enemy_goblin_hildir",
   "faction": "PlainsMonsters",
+  "miniBoss": true,
   "health": 1200,
   "resist": [
    {
@@ -15746,9 +15754,10 @@
  },
  "Skeleton_Hildir": {
   "prefab": "Skeleton_Hildir",
-  "name": "\u003ccolor=orange\u003eBrenna\u003c/color\u003e",
+  "name": "Brenna",
   "token": "$enemy_skeletonfire",
   "faction": "Undead",
+  "miniBoss": true,
   "defeatKey": "BossHildir1",
   "health": 1200,
   "resist": [
@@ -15855,9 +15864,10 @@
  },
  "Skeleton_Hildir_nochest": {
   "prefab": "Skeleton_Hildir_nochest",
-  "name": "\u003ccolor=orange\u003eBrenna\u003c/color\u003e",
+  "name": "Brenna",
   "token": "$enemy_skeletonfire",
   "faction": "Undead",
+  "miniBoss": true,
   "defeatKey": "BossHildir1",
   "health": 600,
   "resist": [
