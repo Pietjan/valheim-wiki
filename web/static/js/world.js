@@ -68,12 +68,12 @@ function dispatch(m) {
     engineVersion = m.version;
     return;
   }
-  if (m.type === 'point' || (m.type === 'error' && m.id !== undefined)) {
+  if (m.type === 'point' || m.type === 'tile' || (m.type === 'error' && m.id !== undefined)) {
     const p = points.get(m.id);
     if (p) {
       points.delete(m.id);
-      if (m.type === 'point') p.resolve(m);
-      else p.reject(new Error(m.message));
+      if (m.type === 'error') p.reject(new Error(m.message));
+      else p.resolve(m);
     }
     return;
   }
@@ -264,6 +264,19 @@ class Handle {
     return new Promise((resolve, reject) => {
       points.set(id, { resolve, reject });
       getWorker().postMessage({ type: 'point', seed: this.seed, x: +x, z: +z, id });
+    });
+  }
+
+  // tile asks the engine for a close-up of the ground: n samples a side
+  // over span metres centred on cx, cz, row zero north, as {n, cx, cz,
+  // span, heights: Float32Array (metres), biomes: Uint8Array, mask:
+  // Uint8Array RGBA}. Half a second or so for 320 a side; the requests
+  // queue behind an open in progress.
+  tile(cx, cz, span, n = 256) {
+    const id = ++pointID;
+    return new Promise((resolve, reject) => {
+      points.set(id, { resolve, reject });
+      getWorker().postMessage({ type: 'tile', seed: this.seed, cx: +cx, cz: +cz, span: +span, n: n | 0, id });
     });
   }
 

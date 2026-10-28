@@ -430,11 +430,23 @@ dialog::backdrop { background: rgba(20, 12, 6, .55); backdrop-filter: blur(3px);
 .world-empty > div { pointer-events: auto; max-width: 440px; padding: 28px 30px; background: rgba(21,17,14,.9); border: 1px solid rgba(223,162,88,.3); border-radius: 12px; }
 .world-empty h2 { font-size: 30px; margin: 0 0 8px; color: #f0bb75; }
 .world-empty p { color: var(--night-ink-2); }
-.world-compass { position: absolute; right: 14px; top: 14px; z-index: 5; width: 44px; height: 44px; color: rgba(255, 230, 190, .55); }
+.world-compass { position: absolute; right: 14px; top: 14px; z-index: 5; width: 44px; height: 44px; color: rgba(255, 230, 190, .55); transition: transform .15s linear; }
+.world-compass.is-live { cursor: pointer; color: rgba(255, 230, 190, .85); }
+.world-3d { position: absolute; inset: 0; z-index: 2; }
+.world-3d[hidden] { display: none; }
+.world-3d canvas:focus-visible { outline: 2px solid #dfa258; outline-offset: -2px; }
+.world-mode { display: inline-flex; margin: 10px 0 0; border: 1px solid rgba(223, 162, 88, .4); border-radius: 999px; overflow: hidden; }
+.world-mode button { appearance: none; background: none; border: 0; color: var(--night-ink-2); font: inherit; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; padding: 5px 14px; cursor: pointer; }
+.world-mode button[aria-pressed=true] { background: #dfa258; color: #1a1208; }
+.world-relief { display: flex; align-items: center; gap: 8px; margin: 10px 0 0; font-size: 13px; color: var(--night-ink-2); }
+.world-relief input { flex: 1; accent-color: #dfa258; min-width: 0; }
+.world-relief output { font-variant-numeric: tabular-nums; min-width: 3ch; text-align: right; color: var(--night-ink); }
+.world-hint { font-size: 12px; color: var(--night-ink-2); margin: 8px 0 0; line-height: 1.45; }
 @media (max-width: 760px) {
   .world-ui { left: 8px; right: 8px; top: 8px; width: auto; }
   .world-layers { max-height: 24vh; }
   .world-legend { display: none; }
+  .world-hint { display: none; }
 }
 
 /* print */

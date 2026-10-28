@@ -9,6 +9,7 @@
 //	open(seed, mapSize)              computes a world, streaming it out through vegvisirEmit
 //	adopt(seed, mapSize, size, ids, names)   a cached world's sector plane, so point() can name sectors
 //	point(seed, x, z)                one position's biome, height, depth, forest and sector
+//	tile(seed, cx, cz, span, n)      a close-up grid of the ground, for the 3D view
 //
 // open runs to completion inside the call — twenty-odd seconds — and
 // hands each message to the worker's vegvisirEmit(message, transfer) as
@@ -52,6 +53,7 @@ func main() {
 	api.Set("open", js.FuncOf(open))
 	api.Set("adopt", js.FuncOf(adopt))
 	api.Set("point", js.FuncOf(point))
+	api.Set("tile", js.FuncOf(tile))
 	global.Set("vegvisirWorld", api)
 	if ready := global.Get("vegvisirReady"); ready.Type() == js.TypeFunction {
 		ready.Invoke()
@@ -243,15 +245,40 @@ func adopt(_ js.Value, args []js.Value) any {
 	return nil
 }
 
+// world is the current world for a seed: the open or adopted one, else
+// a fresh one with nothing built, which answers heights and biomes but
+// names no sectors.
+func world(seed string) (*engine.World, error) {
+	if current != nil && current.Seed() == seed {
+		return current, nil
+	}
+	w, err := engine.New(seed, 0)
+	if err != nil {
+		return nil, err
+	}
+	current = w
+	return w, nil
+}
+
+// tile samples a close-up of the ground: {n, heights: Float32Array,
+// biomes: Uint8Array, mask: Uint8Array RGBA}, row zero north, or {error}.
+func tile(_ js.Value, args []js.Value) any {
+	w, err := world(args[0].String())
+	if err != nil {
+		return map[string]any{"error": err.Error()}
+	}
+	t := w.Tile(args[1].Float(), args[2].Float(), args[3].Float(), intArg(args, 4))
+	return map[string]any{
+		"n": t.N, "cx": t.CX, "cz": t.CZ, "span": t.Span,
+		"heights": float32JS(t.Heights), "biomes": bytesJS(t.Biomes), "mask": bytesJS(t.Mask),
+	}
+}
+
 // point answers for one position of a seed.
 func point(_ js.Value, args []js.Value) any {
 	seed := args[0].String()
-	if current == nil || current.Seed() != seed {
-		w, err := engine.New(seed, 0)
-		if err != nil {
-			return map[string]any{"error": err.Error()}
-		}
-		current = w
+	if _, err := world(seed); err != nil {
+		return map[string]any{"error": err.Error()}
 	}
 	p := current.Point(args[1].Float(), args[2].Float())
 	out := map[string]any{"x": p.X, "z": p.Z, "ok": p.OK, "biome": p.Biome, "height": nil, "depth": p.Depth, "forest": p.Forest, "sector": nil}

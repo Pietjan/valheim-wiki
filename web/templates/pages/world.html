@@ -10,13 +10,19 @@
         <button type="submit" class="btn">Open</button>
       </form>
       <p class="world-status" data-world-status></p>
+      <div class="world-mode" role="group" aria-label="View">
+        <button type="button" data-world-mode="map" aria-pressed="true">Map</button>
+        <button type="button" data-world-mode="3d" aria-pressed="false">3D</button>
+      </div>
+      <label class="world-relief" data-world-relief-row hidden><span>Relief</span><input type="range" min="1" max="4" step="0.5" value="2" data-world-relief aria-label="Vertical exaggeration"><output data-world-relief-out>×2</output></label>
+      <p class="world-hint" data-world-hint hidden>Drag to move, right-drag or shift-drag to turn and tilt, scroll to zoom, double-click to fly in. The ground sharpens as you come down.</p>
       <h3>Find</h3>
       <input type="search" placeholder="Filter places…" data-world-filter aria-label="Filter places">
       <ul class="world-layers" data-world-layers></ul>
     </div>
   </div>
-  <svg class="world-compass" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-width="1"/><path d="M22 4l5 18-5 18-5-18z" fill="currentColor" opacity=".6"/><text x="22" y="15" text-anchor="middle" font-size="9" fill="#1a1208" font-family="Norse, serif" font-weight="700">N</text></svg>
+  <svg class="world-compass" data-world-compass viewBox="0 0 44 44" role="img" aria-label="North"><circle cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-width="1"/><path d="M22 4l5 18-5 18-5-18z" fill="currentColor" opacity=".6"/><text x="22" y="15" text-anchor="middle" font-size="9" fill="#1a1208" font-family="Norse, serif" font-weight="700">N</text></svg>
   <div class="world-legend" data-world-legend></div>
-  <div class="world-empty" data-world-empty><div><h2>Any seed, as a map</h2><p>Type a world seed above. The biomes, rivers and every place the generator sets down are computed in your browser in about half a minute, and kept for next time.</p></div></div>
+  <div class="world-empty" data-world-empty><div><h2>Any seed, as a map</h2><p>Type a world seed above. The biomes, rivers and every place the generator sets down are computed in your browser in about half a minute, and kept for next time. Then fly over it in 3D.</p></div></div>
 </div>
 {{end}}

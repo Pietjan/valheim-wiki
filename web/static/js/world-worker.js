@@ -6,6 +6,7 @@
 //   {type:'init', base}                   the URL of web/static/world/, with its slash
 //   {type:'open', seed, mapSize}          compute, or replay from the cache
 //   {type:'point', seed, x, z, id}        one position; answered with the same id
+//   {type:'tile', seed, cx, cz, span, n, id}   a close-up grid of the ground, for the 3D view
 //
 // and gets back the protocol of docs/architecture.md, relayed message by
 // message as the engine emits it: info, map, sectors, rivers, sites (one per
@@ -52,6 +53,9 @@ self.onmessage = e => {
         break;
       case 'point':
         point(m);
+        break;
+      case 'tile':
+        tile(m);
         break;
       default:
         self.postMessage({ type: 'error', message: `world-worker: unknown message type ${m.type}` });
@@ -216,6 +220,22 @@ async function point(m) {
       return;
     }
     self.postMessage(Object.assign({ type: 'point', id: m.id, seed: m.seed }, p));
+  } catch (err) {
+    fail(m.seed, 0, err, { id: m.id });
+  }
+}
+
+// tile answers a close-up: the engine's typed arrays, transferred.
+async function tile(m) {
+  try {
+    const api = await engine();
+    const t = api.tile(String(m.seed), +m.cx, +m.cz, +m.span, m.n | 0);
+    if (!t || t.error) {
+      fail(m.seed, 0, new Error(t ? t.error : 'tile: no answer'), { id: m.id });
+      return;
+    }
+    self.postMessage({ type: 'tile', id: m.id, seed: m.seed, n: t.n, cx: t.cx, cz: t.cz, span: t.span, heights: t.heights, biomes: t.biomes, mask: t.mask },
+      [t.heights.buffer, t.biomes.buffer, t.mask.buffer]);
   } catch (err) {
     fail(m.seed, 0, err, { id: m.id });
   }

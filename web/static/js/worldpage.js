@@ -1,8 +1,9 @@
-// The World page: any seed as a map. The engine runs in a worker
-// (world.js), the painter is the game's own map shader (worldmap.js);
-// this file wires them to the page: the seed form, progress, the layer
-// list built from the site's location catalogue, the click popover and
-// the URL (?seed=&x=&z=&zoom=).
+// The World page: any seed as a map, or in three dimensions. The engine
+// runs in a worker (world.js), the painter is the game's own map shader
+// (worldmap.js) or the terrain view (world3d.js, loaded when first asked
+// for); this file wires them to the page: the seed form, progress, the
+// layer list built from the site's location catalogue, the map/3D switch,
+// the click popover and the URL (?seed=&x=&z=&zoom=&view=3d&yaw=&pitch=).
 
 import { World } from './world.js';
 import { WorldMap } from './worldmap.js';
@@ -34,11 +35,77 @@ async function init(root) {
   const layersEl = $('[data-world-layers]', root);
   const legend = $('[data-world-legend]', root);
   const empty = $('[data-world-empty]', root);
+  const modeButtons = Array.from(root.querySelectorAll('[data-world-mode]'));
+  const reliefRow = $('[data-world-relief-row]', root);
+  const reliefInput = $('[data-world-relief]', root);
+  const reliefOut = $('[data-world-relief-out]', root);
+  const compass = $('[data-world-compass]', root);
+  const hint = $('[data-world-hint]', root);
 
   legend.innerHTML = BIOMES.map(([, n, c]) => `<span><i style="background:${c}"></i>${n}</span>`).join('');
 
   const params = new URLSearchParams(location.search);
   const map = new WorldMap(canvas, { assetsBase: base + 'static/' });
+
+  // The 3D view, made on first use in its own box over the map's canvases.
+  let mode = 'map';
+  let view3d = null;
+  let box3d = null;
+  const active = () => (mode === '3d' && view3d) ? view3d : map;
+  async function make3D() {
+    if (view3d) return view3d;
+    const { World3D } = await import('./world3d.js');
+    box3d = document.createElement('div');
+    box3d.className = 'world-3d';
+    root.insertBefore(box3d, root.querySelector('.world-ui'));
+    view3d = new World3D(box3d, { relief: +reliefInput.value || 2 });
+    root.view3d = view3d;
+    if (handle) view3d.setWorld(handle);
+    view3d.setMarkers(markers);
+    view3d.onClick(onClick);
+    view3d.onView(v => {
+      compass.style.transform = `rotate(${-v.yaw}deg)`;
+      const p = minPriority();
+      if (p !== lastPri) { lastPri = p; applyFilter(); }
+    });
+    return view3d;
+  }
+  async function setMode(next, { animate = true } = {}) {
+    if (next === mode) return;
+    closePopover();
+    if (next === '3d') {
+      await make3D();
+      const v = map.view;
+      view3d.setHidden(false);
+      view3d.lookAt(v.cx, v.cz, { zoom: v.zoom, animate: false });
+      box3d.hidden = false;
+      map.glCanvas.style.visibility = 'hidden';
+      map.overlay.style.visibility = 'hidden';
+    } else {
+      const v = view3d.view;
+      map.centerOn(v.cx, v.cz, v.zoom);
+      box3d.hidden = true;
+      view3d.setHidden(true);
+      map.glCanvas.style.visibility = '';
+      map.overlay.style.visibility = '';
+      compass.style.transform = '';
+    }
+    mode = next;
+    for (const b of modeButtons) b.setAttribute('aria-pressed', b.dataset.worldMode === mode ? 'true' : 'false');
+    reliefRow.hidden = mode !== '3d';
+    hint.hidden = mode !== '3d';
+    compass.classList.toggle('is-live', mode === '3d');
+    applyFilter();
+    const u = new URL(location.href);
+    if (mode === '3d') u.searchParams.set('view', '3d'); else u.searchParams.delete('view');
+    history.replaceState(null, '', u);
+  }
+  for (const b of modeButtons) b.addEventListener('click', () => setMode(b.dataset.worldMode));
+  reliefInput.addEventListener('input', () => {
+    reliefOut.textContent = '×' + (+reliefInput.value).toFixed(1).replace(/\.0$/, '');
+    if (view3d) view3d.setRelief(+reliefInput.value);
+  });
+  compass.addEventListener('click', () => { if (mode === '3d' && view3d) view3d.lookAt(view3d.tx, view3d.tz, { yaw: 0, pitch: 55 }); });
   const catalogue = await (await fetch(base + 'world/locations.json')).json();
   const byPrefab = new Map(catalogue.map(l => [l.prefab, l]));
   const kinds = new Map(); // kind slug -> {name, cat, icon, url, prefabs:Set, count}
@@ -74,16 +141,19 @@ async function init(root) {
   // dungeons and camps come in at 2x, the rest at 5x, so the overview
   // reads as a map and not as a rash. A name typed in the filter shows
   // its places at any zoom.
-  const minPriority = () => map.zoom < 2 ? 90 : map.zoom < 5 ? 60 : 0;
+  const zoomNow = () => active().zoom;
+  const minPriority = () => zoomNow() < 2 ? 90 : zoomNow() < 5 ? 60 : 0;
   const applyFilter = () => {
     const q = filterInput.value.trim().toLowerCase();
     const minPri = minPriority();
-    map.setFilter(m => {
+    const fn = m => {
       const k = m.data.kindObj;
       if (q) return k.name.toLowerCase().includes(q) || m.data.prefab.toLowerCase().includes(q);
       if (kindOn.has(k.slug)) return kindOn.get(k.slug);
       return catOn[k.cat] && m.priority >= minPri;
-    });
+    };
+    map.setFilter(fn);
+    if (view3d) view3d.setFilter(fn);
     paintLayers();
   };
   filterInput.addEventListener('input', applyFilter);
@@ -96,7 +166,8 @@ async function init(root) {
       const ks = [...kinds.values()].filter(k => k.cat === c.id && k.count > 0).sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
       if (!ks.length) continue;
       const head = document.createElement('li');
-      const gated = catOn[c.id] && (c.id === 'dungeon' || c.id === 'camp' ? map.zoom < 2 : c.id === 'ruin' || c.id === 'runestone' || c.id === 'other' ? map.zoom < 5 : false);
+      const z = zoomNow();
+      const gated = catOn[c.id] && (c.id === 'dungeon' || c.id === 'camp' ? z < 2 : c.id === 'ruin' || c.id === 'runestone' || c.id === 'other' ? z < 5 : false);
       head.innerHTML = `<label><input type="checkbox" ${catOn[c.id] ? 'checked' : ''}><b style="color:${c.color}">${c.name}</b><span class="n">${gated ? 'zoom in · ' : ''}${ks.reduce((n, k) => n + k.count, 0)}</span></label>`;
       head.querySelector('input').addEventListener('change', ev => { catOn[c.id] = ev.target.checked; for (const k of ks) kindOn.delete(k.slug); applyFilter(); });
       layersEl.appendChild(head);
@@ -124,6 +195,7 @@ async function init(root) {
       markers.push({ x: s.x, z: s.z, img: l.icon ? base + 'icons/' + l.icon + '.png' : null, size: c.size, kind: l.kind, color: c.color, label: l.name, priority: l.pri, data: { prefab: s.prefab, kindObj: k, loc: l, site: s } });
     }
     map.setMarkers(markers);
+    if (view3d) view3d.setMarkers(markers);
     applyFilter();
   }
 
@@ -144,6 +216,7 @@ async function init(root) {
     closePopover();
     handle = World.open(seed);
     map.setWorld(handle);
+    if (view3d) view3d.setWorld(handle);
     setStatus('Reading the seed…', 0);
     handle.on('info', info => { setStatus(`World ${info.seedNumber}. Drawing the biomes…`, 0.05); });
     handle.on('map', () => setStatus('Placing the world…', 0.15));
@@ -162,16 +235,26 @@ async function init(root) {
       const n = handle.sites().length;
       setStatus(`${n} places in this world.`);
       const x = parseFloat(params.get('x')), z = parseFloat(params.get('z')), zoom = parseFloat(params.get('zoom'));
+      const yaw = parseFloat(params.get('yaw')), pitch = parseFloat(params.get('pitch'));
       if (!Number.isNaN(x) && !Number.isNaN(z)) {
         map.centerOn(x, z, Number.isNaN(zoom) ? 8 : zoom);
         params.delete('x'); params.delete('z'); params.delete('zoom');
+      }
+      if (params.get('view') === '3d') {
+        params.delete('view');
+        setMode('3d').then(() => {
+          if (!Number.isNaN(x) && !Number.isNaN(z)) {
+            view3d.lookAt(x, z, { zoom: Number.isNaN(zoom) ? 8 : zoom, yaw: Number.isNaN(yaw) ? 0 : yaw, pitch: Number.isNaN(pitch) ? 45 : pitch, animate: false });
+          }
+        });
       }
     });
   }
 
   function closePopover() { if (popover) { popover.remove(); popover = null; } }
 
-  map.onClick(async ({ x, z, marker }) => {
+  map.onClick(onClick);
+  async function onClick({ x, z, marker }) {
     closePopover();
     const start = handle ? handle.start() : { x: 0, z: 0 };
     const d = World.formatDistance(World.distance(start, { x, z }));
@@ -190,14 +273,16 @@ async function init(root) {
     pop.querySelector('.close').addEventListener('click', closePopover);
     root.appendChild(pop);
     popover = pop;
+    const v = active();
     place();
     function place() {
-      const p = map.worldToScreen(x, z);
+      const p = v.worldToScreen(x, z);
       pop.style.left = p.x + 'px';
       pop.style.top = p.y + 'px';
+      if (p.visible === false) pop.style.display = 'none'; else pop.style.display = '';
     }
-    const off = map.onView(() => { if (popover === pop) place(); else off(); });
-  });
+    const off = v.onView(() => { if (popover === pop) place(); else off(); });
+  }
 
   if (seedNow) open(seedNow);
 }

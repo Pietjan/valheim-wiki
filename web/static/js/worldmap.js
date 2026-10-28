@@ -769,7 +769,7 @@ class Painter {
 
 // Marker images by URL, loaded once; a load redraws every map waiting on it.
 const imageCache = new Map();
-function markerImage(src, onload) {
+export function markerImage(src, onload) {
   let entry = imageCache.get(src);
   if (!entry) {
     const img = new Image();
@@ -1075,71 +1075,12 @@ export class WorldMap {
     let hovered = null;
     for (const v of drawn) {
       if (this.hover && v.m === this.hover.m) { hovered = v; continue; }
-      this._drawMarker(ctx, v, false);
+      drawMarkerDisc(ctx, v, false);
     }
     if (hovered) {
-      this._drawMarker(ctx, hovered, true);
-      this._drawLabel(ctx, hovered);
+      drawMarkerDisc(ctx, hovered, true);
+      drawMarkerLabel(ctx, hovered, this.width);
     }
-  }
-
-  _drawMarker(ctx, v, lifted) {
-    const { m, sx, sy } = v;
-    const r = v.r * (lifted ? 1.25 : 1);
-    const img = m.imgEntry && !m.imgEntry.failed && m.img && m.img.complete && m.img.naturalWidth > 0 ? m.img : null;
-    if (img) {
-      ctx.save();
-      ctx.beginPath();
-      ctx.arc(sx, sy, r, 0, Math.PI * 2);
-      ctx.closePath();
-      ctx.clip();
-      ctx.drawImage(img, sx - r, sy - r, 2 * r, 2 * r);
-      ctx.restore();
-      ctx.beginPath();
-      ctx.arc(sx, sy, r, 0, Math.PI * 2);
-      ctx.lineWidth = lifted ? 3 : 2;
-      ctx.strokeStyle = lifted ? '#ffffff' : m.color;
-      ctx.stroke();
-      if (lifted) {
-        ctx.beginPath();
-        ctx.arc(sx, sy, r + 3, 0, Math.PI * 2);
-        ctx.lineWidth = 2;
-        ctx.strokeStyle = m.color;
-        ctx.stroke();
-      }
-    } else {
-      // A dot: the colour inside a dark ring, the marker's own ring when lifted.
-      const rd = Math.max(2.5, Math.min(r, 7));
-      ctx.beginPath();
-      ctx.arc(sx, sy, rd, 0, Math.PI * 2);
-      ctx.fillStyle = m.color;
-      ctx.fill();
-      ctx.lineWidth = lifted ? 2 : 1;
-      ctx.strokeStyle = lifted ? '#ffffff' : 'rgba(0, 0, 0, 0.75)';
-      ctx.stroke();
-    }
-  }
-
-  _drawLabel(ctx, v) {
-    const label = v.m.label || v.m.kind || '';
-    if (!label) return;
-    ctx.font = '13px system-ui, sans-serif';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'bottom';
-    const w = ctx.measureText(label).width + 12;
-    const h = 20;
-    let x = v.sx, y = v.sy - v.r * 1.25 - 8;
-    if (y - h < 2) y = v.sy + v.r * 1.25 + 8 + h;
-    x = Math.max(w / 2 + 2, Math.min(this.width - w / 2 - 2, x));
-    ctx.fillStyle = 'rgba(12, 12, 16, 0.88)';
-    roundRect(ctx, x - w / 2, y - h, w, h, 4);
-    ctx.fill();
-    ctx.strokeStyle = v.m.color;
-    ctx.lineWidth = 1;
-    roundRect(ctx, x - w / 2 + 0.5, y - h + 0.5, w - 1, h - 1, 4);
-    ctx.stroke();
-    ctx.fillStyle = '#f2e9d6';
-    ctx.fillText(label, x, y - 4);
   }
 
   // The marker under a CSS-pixel position, nearest first, or null.
@@ -1309,6 +1250,69 @@ export class WorldMap {
 
 function clampZoom(z) { return Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, +z || MIN_ZOOM)); }
 
+// drawMarkerDisc draws one marker at v.sx, v.sy with radius v.r: its image
+// clipped round inside a ring of its colour, or a dot without one; lifted
+// is the hovered look. Shared with the 3D view.
+export function drawMarkerDisc(ctx, v, lifted) {
+  const { m, sx, sy } = v;
+  const r = v.r * (lifted ? 1.25 : 1);
+  const img = m.imgEntry && !m.imgEntry.failed && m.img && m.img.complete && m.img.naturalWidth > 0 ? m.img : null;
+  if (img) {
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(sx, sy, r, 0, Math.PI * 2);
+    ctx.closePath();
+    ctx.clip();
+    ctx.drawImage(img, sx - r, sy - r, 2 * r, 2 * r);
+    ctx.restore();
+    ctx.beginPath();
+    ctx.arc(sx, sy, r, 0, Math.PI * 2);
+    ctx.lineWidth = lifted ? 3 : 2;
+    ctx.strokeStyle = lifted ? '#ffffff' : m.color;
+    ctx.stroke();
+    if (lifted) {
+      ctx.beginPath();
+      ctx.arc(sx, sy, r + 3, 0, Math.PI * 2);
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = m.color;
+      ctx.stroke();
+    }
+  } else {
+    // A dot: the colour inside a dark ring, the marker's own ring when lifted.
+    const rd = Math.max(2.5, Math.min(r, 7));
+    ctx.beginPath();
+    ctx.arc(sx, sy, rd, 0, Math.PI * 2);
+    ctx.fillStyle = m.color;
+    ctx.fill();
+    ctx.lineWidth = lifted ? 2 : 1;
+    ctx.strokeStyle = lifted ? '#ffffff' : 'rgba(0, 0, 0, 0.75)';
+    ctx.stroke();
+  }
+}
+
+// drawMarkerLabel writes the marker's name above it, kept within width.
+export function drawMarkerLabel(ctx, v, width) {
+  const label = v.m.label || v.m.kind || '';
+  if (!label) return;
+  ctx.font = '13px system-ui, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'bottom';
+  const w = ctx.measureText(label).width + 12;
+  const h = 20;
+  let x = v.sx, y = v.sy - v.r * 1.25 - 8;
+  if (y - h < 2) y = v.sy + v.r * 1.25 + 8 + h;
+  x = Math.max(w / 2 + 2, Math.min(width - w / 2 - 2, x));
+  ctx.fillStyle = 'rgba(12, 12, 16, 0.88)';
+  roundRect(ctx, x - w / 2, y - h, w, h, 4);
+  ctx.fill();
+  ctx.strokeStyle = v.m.color;
+  ctx.lineWidth = 1;
+  roundRect(ctx, x - w / 2 + 0.5, y - h + 0.5, w - 1, h - 1, 4);
+  ctx.stroke();
+  ctx.fillStyle = '#f2e9d6';
+  ctx.fillText(label, x, y - 4);
+}
+
 function roundRect(ctx, x, y, w, h, r) {
   ctx.beginPath();
   ctx.moveTo(x + r, y);
@@ -1321,8 +1325,8 @@ function roundRect(ctx, x, y, w, h, r) {
 
 // declutter keeps, by priority, the markers that do not sit on one already
 // kept: a hash grid of cells the size of a marker, a kept marker claiming
-// the cells its disc touches.
-function declutter(visible) {
+// the cells its disc touches. Shared with the 3D view.
+export function declutter(visible) {
   const sorted = visible.slice().sort((a, b) => b.m.priority - a.m.priority || b.r - a.r);
   const cell = 10;
   const taken = new Map();   // cell key → kept entries in it

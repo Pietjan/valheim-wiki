@@ -5,7 +5,7 @@ viewer that runs in the browser: type your world's seed and every page
 gains a *Your world* panel saying where the nearest troll cave is, how
 far the trader stands from spawn, which biomes border your meadows.
 Without a seed it is a complete wiki; with one it is a wiki of your
-world.
+world, with a map of it and a 3D view to fly over.
 
 Published at https://pietjan.github.io/valheim-wiki/ on every push to
 `main`.
@@ -33,7 +33,9 @@ The seed viewer is `cmd/world-wasm`: the generator port from
 [valheim-world](https://github.com/pietjan/valheim-world) compiled to
 WebAssembly, run in a Web Worker and cached per seed in IndexedDB. The
 biome map, the rivers and every placement rule are reproduced; a world
-takes about half a minute the first time.
+takes about half a minute the first time. The World page draws it as the
+game's map or as terrain in 3D, where the ground is re-sampled from the
+generator at a few metres as the camera comes down.
 
 ## Building it
 

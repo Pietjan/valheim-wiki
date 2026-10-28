@@ -119,6 +119,7 @@ worker → page: {type:'info', seed, seedNumber, radius, worldRadius, water}
                {type:'sites', rule, prefab, xyz:Float32Array, index, total}   // streamed per rule as placed, prioritized rules first; world.js unpacks to {x,z,y}
                {type:'done', report:[{rule, prefab, wanted, placed}], took}
 page → worker: {type:'point', x, z}  → {type:'point', x, z, biome, height, depth, forest, sector:[names]}
+page → worker: {type:'tile', cx, cz, span, n}  → {type:'tile', n, cx, cz, span, heights:Float32Array /*metres*/, biomes:Uint8Array, mask:Uint8Array /*RGBA*/}   // a close-up grid, row zero north, for the 3D view
 ```
 
 `web/static/js/world.js` wraps this: `World.open(seed)` returns a handle
@@ -128,6 +129,15 @@ engine version so a seed is computed once per browser.
 `web/static/js/worldmap.js` paints the map (WebGL2, the game's own map
 shader with the textures under `web/static/map/`, a procedural fallback
 without them) and draws round site icons over it.
+`web/static/js/world3d.js` is the same world in three dimensions, loaded
+when the World page's 3D switch is first used: the height raster as an
+instanced-patch terrain (no vertex buffers; heights read from an R32F
+texture by `gl_VertexID`), two nested close-up tiles the engine samples
+around the camera's target (`tile`, 2400 m and 600 m at 320 samples a
+side), each fading to its parent along its edge while the parent sinks
+under it, a depth-tinted sea plane, a sky, and the map's marker overlay
+projected onto the ground. `?view=3d&x=&z=&zoom=&yaw=&pitch=` deep-links
+a camera; the "Your world" panels link there.
 
 ## Style
 

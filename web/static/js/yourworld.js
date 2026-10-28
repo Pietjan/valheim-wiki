@@ -75,6 +75,7 @@ async function render(el, body, hook, handle, seed, base) {
   const markers = [];
   let focus = { x: start.x, z: start.z, span: 4000 };
   const link = (x, z, text) => `<a href="${base}world/?seed=${encodeURIComponent(seed)}&x=${Math.round(x)}&z=${Math.round(z)}&zoom=12">${text}</a>`;
+  const link3d = (x, z) => `<a href="${base}world/?seed=${encodeURIComponent(seed)}&x=${Math.round(x)}&z=${Math.round(z)}&zoom=14&view=3d&pitch=35" title="Fly there in 3D">3D</a>`;
 
   if (sites.length) {
     const near = sites.slice(0, 5);
@@ -86,7 +87,7 @@ async function render(el, body, hook, handle, seed, base) {
       const c = cat.byPrefab.get(s.prefab);
       const li = document.createElement('li');
       const icon = c && c.icon ? `<img src="${base}icons/${c.icon}.png" alt="">` : '';
-      li.innerHTML = `${icon}<span>${c ? c.name : s.prefab}</span><span class="d">${World.formatDistance(s.d)} ${s.b} · ${link(s.x, s.z, 'map')}</span>`;
+      li.innerHTML = `${icon}<span>${c ? c.name : s.prefab}</span><span class="d">${World.formatDistance(s.d)} ${s.b} · ${link(s.x, s.z, 'map')} · ${link3d(s.x, s.z)}</span>`;
       ul.appendChild(li);
       markers.push({ x: s.x, z: s.z, color: CAT_COLOR[c?.cat] || '#f0bb75' });
     }
@@ -110,7 +111,7 @@ async function render(el, body, hook, handle, seed, base) {
     found.sort((a, b) => a.d - b.d);
     if (found.length) {
       const f = found[0];
-      left.innerHTML = `<div class="yw-big">${World.formatDistance(f.d)}</div><div class="yw-sub">to the nearest ${biomeName(f.biome)}, ${f.b} of spawn ${link(f.x, f.z, '· map')}</div>`;
+      left.innerHTML = `<div class="yw-big">${World.formatDistance(f.d)}</div><div class="yw-sub">to the nearest ${biomeName(f.biome)}, ${f.b} of spawn · ${link(f.x, f.z, 'map')} · ${link3d(f.x, f.z)}</div>`;
       const ul = document.createElement('ul');
       ul.className = 'yw-rows';
       for (const g of found) {
