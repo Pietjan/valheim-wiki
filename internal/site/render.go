@@ -93,8 +93,9 @@ func (s *Site) funcs() template.FuncMap {
 			if it := s.DB.Items[prefab]; it != nil {
 				return it.Name
 			}
-			return prefab
+			return Pretty(prefab)
 		},
+		"pretty": Pretty,
 		"iconOf": func(prefab string) string {
 			if t := s.Index.Things[prefab]; t != nil && t.Icon != "" {
 				return s.URL("icons/" + t.Icon + ".png")

@@ -7,7 +7,7 @@
 <section class="group" data-group="{{.ID}}">
 <h2 id="{{.ID}}" class="group-title">{{.Name}} <span class="count">{{len .Creatures}}</span></h2>
 <ul class="cards round">
-{{range .Creatures}}{{$c := .}}{{with thing .Prefab}}<li data-name="{{lower .Name}}"><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="56" height="56">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}{{if .Hint}} <small class="muted">{{.Hint}}</small>{{end}}</span><span class="card-sub">{{num $c.Health}} hp{{if $c.Tameable}} · tameable{{end}}</span></a></li>{{end}}{{end}}
+{{range .Creatures}}{{$c := .}}{{with thing .Prefab}}<li data-name="{{lower .Name}}"><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="56" height="56">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}{{if .Hint}} <small class="muted">{{.Hint}}</small>{{end}}</span><span class="card-sub">{{if $c.Fish}}fish{{else}}{{num $c.Health}} hp{{end}}{{if $c.Tameable}} · tameable{{end}}</span></a></li>{{end}}{{end}}
 </ul>
 </section>
 {{end}}

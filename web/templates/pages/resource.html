@@ -9,7 +9,7 @@
 {{if $r.ExtraDrops}}<h3>Sometimes also</h3>{{template "droptable" $r.ExtraDrops}}{{end}}
 {{if or $r.Log $r.Stub}}<h2>Felling</h2><p>Leaves {{if $r.Stub}}{{template "chip" $r.Stub}}{{end}}{{if $r.Log}} and {{template "chip" $r.Log}}{{end}}.</p>{{end}}
 {{if $r.SubLog}}<p>Splits into {{$r.SubLogs}} × {{template "chip" $r.SubLog}}.</p>{{end}}
-{{if $r.SpawnWhenDestroyed}}<p>Breaking it leaves {{template "chip" $r.SpawnWhenDestroyed}}.</p>{{end}}
+{{if $r.SpawnWhenDestroyed}}{{with thing $r.SpawnWhenDestroyed}}<p>Breaking it leaves {{template "chip" $r.SpawnWhenDestroyed}}.</p>{{end}}{{end}}
 {{with $r.Plant}}<h2>Growing</h2><p>Takes {{secs .GrowTime}}–{{secs .GrowTimeMax}} to grow{{if .GrownPrefabs}} into {{range $i, $g := .GrownPrefabs}}{{if $i}} or {{end}}{{template "chip" $g}}{{end}}{{end}}.</p>{{end}}
 {{if $d.Rules}}<h2>Where it grows</h2>
 <div class="table-wrap"><table><thead><tr><th>Biomes</th><th class="num">Per zone</th><th>Conditions</th></tr></thead><tbody>

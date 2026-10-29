@@ -108,3 +108,49 @@ func itoa(i int) string {
 	}
 	return string(b)
 }
+
+// prettyOverrides names the few prefabs the game leaves unnamed where
+// splitting the prefab would read wrong.
+var prettyOverrides = map[string]string{
+	"Deer_White":          "White Deer",
+	"ArmorStand_Male":     "Armour Stand (male)",
+	"ArmorStand_Female":   "Armour Stand (female)",
+	"MemorialStone_Large": "Memorial Stone (large)",
+}
+
+// Pretty is a readable name for a prefab the game gives none: the
+// override when there is one, "Spirit Wolf" for a spiritcaller's summon,
+// else the prefab's words split at underscores and capital letters, with
+// the effect and spawner prefixes dropped.
+func Pretty(prefab string) string {
+	if n, ok := prettyOverrides[prefab]; ok {
+		return n
+	}
+	if base, ok := strings.CutSuffix(prefab, "_spiritcaller"); ok {
+		return "Spirit " + Pretty(base)
+	}
+	s := prefab
+	for _, pre := range []string{"vfx_", "sfx_", "fx_"} {
+		s = strings.TrimPrefix(s, pre)
+	}
+	if rest, ok := strings.CutPrefix(s, "Spawner_"); ok {
+		return Pretty(rest) + " spawner"
+	}
+	var b strings.Builder
+	prev := rune(0)
+	for i, r := range s {
+		switch {
+		case r == '_':
+			b.WriteByte(' ')
+		case i > 0 && unicode.IsUpper(r) && unicode.IsLower(prev):
+			b.WriteByte(' ')
+			b.WriteRune(r)
+		case i == 0:
+			b.WriteRune(unicode.ToUpper(r))
+		default:
+			b.WriteRune(r)
+		}
+		prev = r
+	}
+	return strings.Join(strings.Fields(b.String()), " ")
+}

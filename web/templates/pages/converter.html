@@ -12,7 +12,7 @@
 {{if $c.Conversions}}
 <h2>What it makes</h2>
 <div class="table-wrap"><table><thead><tr><th>From</th><th></th><th>To</th>{{if eq $c.Kind "fermenter"}}<th class="num">Yield</th>{{end}}{{if eq $c.Kind "cooking"}}<th>Time</th>{{end}}</tr></thead><tbody>
-{{range $c.Conversions}}<tr><td>{{template "chip" .From}}</td><td class="muted">→</td><td>{{template "chip" .To}}</td>{{if eq $c.Kind "fermenter"}}<td class="num">{{.Amount}}</td>{{end}}{{if eq $c.Kind "cooking"}}<td>{{secs .Time}}</td>{{end}}</tr>{{end}}
+{{range $c.Conversions}}<tr><td>{{if .From}}{{template "chip" .From}}{{else}}<span class="muted">nothing</span>{{end}}</td><td class="muted">→</td><td>{{template "chip" .To}}</td>{{if eq $c.Kind "fermenter"}}<td class="num">{{.Amount}}</td>{{end}}{{if eq $c.Kind "cooking"}}<td>{{secs .Time}}</td>{{end}}</tr>{{end}}
 </tbody></table></div>
 {{end}}
 {{if $c.Incinerations}}

@@ -160,6 +160,27 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 		Sets: map[string][]*model.Item{}, StationRecipes: map[string][]*model.Recipe{}, Extends: map[string]*model.Station{},
 		TrophyOf: map[string]string{}, Phases: map[string][]*model.Creature{}, Primary: map[string]string{}, Visible: map[string]bool{}, RaidForm: map[string]*model.Creature{}, KeyUses: map[string]*KeyUse{}}
 
+	// Whatever the game leaves named by its prefab gets a readable name.
+	for k, c := range db.Creatures {
+		if c.Name == "" || c.Name == k || c.Name == c.Prefab {
+			c.Name = Pretty(k)
+		}
+	}
+	for k, p := range db.Pieces {
+		if p.Name == "" || p.Name == k {
+			p.Name = Pretty(k)
+		}
+	}
+	for k, r := range db.Resources {
+		if r.Name == "" || r.Name == k {
+			r.Name = Pretty(k)
+		}
+	}
+	for k, it := range db.Items {
+		if it.Name == "" || (it.Name == k && strings.Contains(k, "_")) {
+			it.Name = Pretty(k)
+		}
+	}
 	// Items. Their slugs wait until the end, once what hands them out is
 	// known: the visible ones take the plain names.
 	for _, k := range model.SortedKeys(db.Items) {
@@ -614,6 +635,9 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 		ix.Things["biome:"+b.ID] = &Thing{Kind: "biome", Prefab: b.ID, Name: b.Name, Slug: b.ID, URL: "biomes/" + b.ID + "/", Sub: "Biome"}
 	}
 	for _, c := range ix.Creatures {
+		if c.Summoned {
+			continue // a staff's summon lives where its caster does
+		}
 		for _, b := range c.Biomes {
 			if bi := ix.ByBiome[b]; bi != nil {
 				bi.Creatures = append(bi.Creatures, c)
