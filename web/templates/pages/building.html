@@ -12,11 +12,5 @@
 </ul>
 {{end}}
 {{end}}
-{{if $d.Loose}}
-<h2 id="other">Not in a menu <span class="count">{{len $d.Loose}}</span></h2>
-<p class="muted">Pieces the world places on its own: in ruins, camps and dungeons.</p>
-<ul class="cards compact">
-{{range $d.Loose}}{{with thing .Prefab}}<li data-name="{{lower .Name}}"><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="40" height="40">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}{{if .Hint}} <small class="muted">{{.Hint}}</small>{{end}}</span></a></li>{{end}}{{end}}
-</ul>
-{{end}}
+
 {{end}}
