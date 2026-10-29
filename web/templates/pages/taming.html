@@ -1,0 +1,13 @@
+{{define "content"}}
+{{$d := .Data}}
+{{template "crumbs" .}}
+<div class="index-head"><div><p class="eyebrow">Guide</p><h1>Taming and breeding</h1><p>A wild animal is tamed by being fed, out of sight, until the timer runs down; it eats only what is listed, and the taming mead halves the wait. Tame pairs breed when fed and close, up to a crowd; the young grow in the time given. Chickens hatch from an egg kept warm by a fire under a roof.</p></div></div>
+<h2>Tamed in the wild</h2>
+<div class="table-wrap"><table><thead><tr><th>Creature</th><th>Biome</th><th class="num">Taming</th><th class="num">Fed for</th><th>Eats</th><th>Breeding</th><th>Rides</th></tr></thead><tbody>
+{{range $d.Wild}}{{$c := .Creature}}<tr><td>{{template "chip" $c.Prefab}}</td><td>{{if .Biome}}{{template "biome" .Biome}}{{end}}</td><td class="num">{{secs $c.Tameable.TamingTime}}</td><td class="num">{{secs $c.Tameable.FedDuration}}</td><td><ul class="chips">{{range .Eats}}<li>{{template "chip" .}}</li>{{end}}</ul></td><td class="small">{{with $c.Procreation}}{{if .NoPartnerOffspring}}lays {{template "chip" .NoPartnerOffspring}} every {{secs .PregnancyDuration}} when fed, {{else}}{{pct .PregnancyChance}} a check after {{.RequiredLove}} feedings together, {{secs .PregnancyDuration}} to birth, {{end}}up to {{.MaxCreatures}} nearby{{end}}{{with .Offspring}}; {{template "chip" .Prefab}}{{end}}{{with .Lays}}; lays {{template "chip" .Prefab}}{{end}}{{if .GrowTime}} grows up in {{secs .GrowTime}}{{end}}</td><td>{{with .Saddle}}{{template "chip" .Prefab}}{{else}}<span class="muted">–</span>{{end}}</td></tr>{{end}}
+</tbody></table></div>
+{{if $d.Raised}}<h2>Hatched and raised</h2>
+<div class="table-wrap"><table><thead><tr><th>Creature</th><th>From</th><th class="num">Time</th><th>Eats</th><th>Breeding</th></tr></thead><tbody>
+{{range $d.Raised}}{{$c := .Creature}}<tr><td>{{template "chip" $c.Prefab}}</td><td>{{with .Egg}}{{template "chip" .Prefab}}{{else}}{{with .Young}}{{template "chip" .Prefab}}{{end}}{{end}}</td><td class="num">{{if .EggTime}}{{secs .EggTime}} to hatch{{else if .GrowTime}}{{secs .GrowTime}} to grow{{end}}</td><td><ul class="chips">{{range .Eats}}<li>{{template "chip" .}}</li>{{end}}</ul></td><td class="small">{{with $c.Procreation}}{{if .NoPartnerOffspring}}lays {{template "chip" .NoPartnerOffspring}} every {{secs .PregnancyDuration}} when fed, {{else}}{{pct .PregnancyChance}} a check, {{secs .PregnancyDuration}} to birth, {{end}}up to {{.MaxCreatures}} nearby{{end}}</td></tr>{{end}}
+</tbody></table></div>{{end}}
+{{end}}

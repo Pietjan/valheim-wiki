@@ -1,0 +1,9 @@
+{{define "content"}}
+{{$d := .Data}}
+{{template "crumbs" .}}
+<div class="index-head"><div><p class="eyebrow">Guide</p><h1>Meads and potions</h1><p>A mead is brewed from its base at the cauldron and left two days in the fermenter, six to a batch. By what each does, and the biome by which it can first be brewed; the words are the game's own.</p></div></div>
+{{$group := ""}}
+{{range $d}}{{if ne .Group $group}}{{if $group}}</tbody></table></div>{{end}}{{$group = .Group}}<h2>{{.Group}}</h2><div class="table-wrap"><table><thead><tr><th>Mead</th><th>Biome</th><th>Effect</th><th class="num">Lasts</th></tr></thead><tbody>{{end}}
+<tr><td>{{template "chip" .Item.Prefab}}</td><td>{{if .Biome}}{{template "biome" .Biome}}{{end}}</td><td class="small"><a href="{{thingURL (print "effect:" .Effect.ID)}}">{{if .Effect.Tooltip}}{{.Effect.Tooltip}}{{else}}{{.Effect.Name}}{{end}}</a></td><td class="num">{{if .Effect.TTL}}{{secs .Effect.TTL}}{{end}}</td></tr>
+{{end}}{{if $group}}</tbody></table></div>{{end}}
+{{end}}

@@ -1,0 +1,23 @@
+{{define "content"}}
+{{$d := .Data}}
+{{template "crumbs" .}}
+<div class="index-head"><div><p class="eyebrow">Guide</p><h1>Progression</h1><p>Biome by biome, what each one opens: the stations and materials first had there, who lives there, the boss, and the raids its defeat sets loose. The food, gear and comfort to have by then link to their guides.</p></div></div>
+{{range $d}}{{$b := .Biome}}
+<section class="food-stage" id="{{.Biome}}">
+<h2 class="group-title">{{template "biome" .Biome}}{{with .Boss}} <span class="muted small">· <a href="{{url "guides/bosses/"}}#{{slug .Name}}">{{.Name}}</a></span>{{end}}</h2>
+<div class="boss-prep">
+<div>
+{{if .Stations}}<h3>Build</h3><ul class="chips">{{range .Stations}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
+{{if .Materials}}<h3>New materials</h3><ul class="chips">{{range .Materials}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
+{{if .NewMeads}}<h3>New meads</h3><ul class="chips">{{range .NewMeads}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
+</div>
+<div>
+{{if .Creatures}}<h3>Who lives here</h3><ul class="chips">{{range .Creatures}}<li>{{template "chip" .Prefab}}<span class="chip-meta">{{num .Health}} hp</span></li>{{end}}</ul>{{end}}
+{{if .NewTames}}<h3>Tameable</h3><ul class="chips">{{range .NewTames}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
+{{if .Raids}}<h3>Raids after the boss</h3><ul class="chips">{{range .Raids}}<li><a class="chip" href="{{url "events/"}}#{{slug .Name}}"><span class="chip-name" style="padding-left:8px">{{if .StartMessage}}{{.StartMessage}}{{else}}{{.Name}}{{end}}</span></a></li>{{end}}</ul>{{end}}
+<h3>Have by now</h3><p class="small">{{with .Food}}{{range .Combos}}{{if eq .ID "health"}}<a href="{{url "guides/food/"}}#{{$b}}">Food</a>: {{num .Health}} hp · {{num .Stamina}} stamina{{end}}{{end}}{{end}}{{with .Gear}} · <a href="{{url "guides/gear/"}}#{{.Biome}}">Gear</a>: {{num .ArmorTotal}} armour{{end}} · <a href="{{url "guides/comfort/"}}#{{.Biome}}">Comfort</a> {{.Comfort}}</p>
+</div>
+</div>
+</section>
+{{end}}
+{{end}}

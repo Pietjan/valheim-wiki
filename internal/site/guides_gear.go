@@ -379,6 +379,9 @@ func (s *Site) pagesGuideSet() error {
 		Section:     "guides", Path: "guides/comfort/", Crumbs: []Crumb{{"Guides", "guides/"}, {"Comfort", ""}}, Data: s.comfortGuide()}); err != nil {
 		return err
 	}
+	if err := s.pagesGuideMore(); err != nil {
+		return err
+	}
 	return s.write("guides/", "guides", &Page{Site: s, Title: "Guides",
 		Description: "What the numbers add up to: the best food, gear and comfort in every biome of Valheim, and what to bring to each boss.",
 		Section:     "guides", Path: "guides/", Data: nil})
