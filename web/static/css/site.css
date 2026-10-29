@@ -404,7 +404,10 @@ dialog::backdrop { background: rgba(20, 12, 6, .55); backdrop-filter: blur(3px);
   background: linear-gradient(135deg, color-mix(in srgb, var(--biome) 90%, #000), var(--biome)); box-shadow: var(--shadow); }
 .biome-banner::after { content: ""; position: absolute; inset: 0; background: url(../ui/woodpanel_400_tileable.png) center/400px; mix-blend-mode: overlay; opacity: .18; pointer-events: none; }
 .biome-banner h1 { position: relative; color: #fff; font-size: clamp(30px, 6vw, 56px); letter-spacing: .06em; text-transform: uppercase; text-align: center; text-shadow: 0 2px 8px rgba(0,0,0,.7), 0 0 28px rgba(0,0,0,.5); margin: 0; line-height: 1; }
-.braid-line { position: relative; width: min(620px, 90%); height: 21px; background: #e2c06a; filter: drop-shadow(0 1px 2px rgba(0,0,0,.7));
+/* The mask would clip a shadow on the element itself, so the braid is
+   drawn by a child and the shadow cast by the parent. */
+.braid-line { position: relative; width: min(620px, 90%); height: 21px; filter: drop-shadow(0 3px 5px rgba(0,0,0,.75)) drop-shadow(0 1px 1px rgba(0,0,0,.5)); }
+.braid-line::before { content: ""; position: absolute; inset: 0; background: #e2c06a;
   -webkit-mask: url(../ui/BraidLineHorisontalMedium.png) center / auto 100% no-repeat; mask: url(../ui/BraidLineHorisontalMedium.png) center / auto 100% no-repeat; }
 .braid-line:last-child { transform: scaleY(-1); }
 @media (max-width: 640px) { .biome-banner { min-height: 120px; padding: 18px 12px; gap: 0; } .braid-line { height: 14px; } }
