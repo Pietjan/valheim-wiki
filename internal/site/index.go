@@ -415,6 +415,9 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 		spawnByID[sp.ID] = sp
 	}
 	for _, ev := range db.Events {
+		if !ev.Random || !ev.Enabled {
+			continue // the boss fights and Fimbulvinter are events, not raids
+		}
 		seen := map[string]bool{}
 		for _, id := range ev.Spawns {
 			if sp := spawnByID[id]; sp != nil && !seen[sp.Prefab] {
@@ -653,6 +656,9 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 		}
 	}
 	for _, ev := range db.Events {
+		if !ev.Random || !ev.Enabled {
+			continue // the boss fights and Fimbulvinter are events, not raids
+		}
 		for _, b := range ev.Biomes {
 			if bi := ix.ByBiome[b]; bi != nil {
 				bi.Events = append(bi.Events, ev)

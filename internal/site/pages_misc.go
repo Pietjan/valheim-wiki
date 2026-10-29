@@ -97,8 +97,8 @@ func (s *Site) pagesEvents() error {
 	}
 	var views []EventView
 	for _, e := range s.DB.Events {
-		if !e.Enabled {
-			continue
+		if !e.Enabled || !e.Random {
+			continue // the boss fights and Fimbulvinter are events, not raids
 		}
 		v := EventView{Event: e}
 		seen := map[string]bool{}
