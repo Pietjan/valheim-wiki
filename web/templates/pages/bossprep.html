@@ -1,0 +1,23 @@
+{{define "content"}}
+{{$d := .Data}}
+{{template "crumbs" .}}
+<div class="index-head"><div><p class="eyebrow">Guide</p><h1>Boss preparation</h1><p>The Forsaken in order. For each: what it shrugs off and what it fears, the weapons of its biome that hit it hardest once its resistances are counted, the armour and the food you can have by then, the offering, and the power its trophy grants.</p></div></div>
+{{range $d}}{{$b := .}}{{$c := .Creature}}
+<section class="panel" id="{{slug $c.Name}}">
+<h2 style="margin:0 0 6px">{{template "chip" $c.Prefab}} <span class="muted small">{{num $c.Health}} hp{{if .Biome}} · {{template "biome" .Biome}}{{end}}</span></h2>
+<div class="boss-prep">
+<div>
+{{if .Weak}}<h3>Weak to</h3><p>{{join .Weak ", "}}</p>{{end}}
+{{if .Resists}}<h3>Resists or ignores</h3><p>{{join .Resists ", "}}</p>{{end}}
+{{if .Weapons}}<h3>Bring</h3><ul class="chips">{{range .Weapons}}<li>{{template "chip" .Item.Prefab}}<span class="chip-meta">{{.Detail}}</span></li>{{end}}</ul>{{end}}
+{{with .Armor}}{{if .Armor}}<h3>Wear</h3><ul class="chips">{{range .Armor}}<li>{{template "chip" .Item.Prefab}}</li>{{end}}{{with .Shield}}<li>{{template "chip" .Item.Prefab}}</li>{{end}}</ul><p class="small muted">{{num .ArmorTotal}} armour together.</p>{{end}}{{end}}
+</div>
+<div>
+{{if .Food}}<h3>Eat</h3>{{range .Food}}{{if or (eq .ID "health") (eq .ID "balanced")}}<p class="small muted" style="margin:6px 0 2px">{{.Label}}: {{num .Health}} hp · {{num .Stamina}} stamina</p><ul class="chips">{{range .Foods}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}{{end}}{{end}}
+{{with .Offering}}<h3>Summon</h3><p>{{template "chipn" (dict "prefab" .Item "n" .Count)}}{{with $b.Altar}} at {{template "chip" (print "loc:" .Prefab)}}{{end}}</p>{{end}}
+{{with .Power}}<h3>Power</h3><p><a href="{{thingURL (print "effect:" .ID)}}">{{.Name}}</a>: {{.Tooltip}}</p>{{end}}
+</div>
+</div>
+</section>
+{{end}}
+{{end}}

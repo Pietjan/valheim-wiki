@@ -158,3 +158,22 @@ camera.
 
 Go only for tooling; no node toolchain. html/template, hand-written CSS
 and vanilla JS modules. Commit messages without AI attribution.
+
+## Guides
+
+`internal/site/guides.go` and `guides_gear.go` derive the guide pages
+under `/guides/`. Everything hangs on one notion, the *stage* of a thing:
+the biome by which it can be had, as an index into `model.Biomes` with the
+ocean counted as the Black Forest. A `stager` memoises it: an item is as
+early as the earliest creature that drops it (its first ungated spawn, the
+place it stands in, the egg it hatches from or the young it grew from),
+pickable that gives it (wild by the vegetation rules, planted via its
+sapling's seed, or standing in a location or dungeon room by theme),
+trader that sells it (after its key's boss), chest or converter; a recipe
+is as late as its station and its latest ingredient; a piece as late as
+its materials. A few items the extraction gives no source for are pinned
+in `stageOverrides`. The food guide enumerates every three foods available
+at a stage for the most health, stamina, eitr and balance; the gear guide
+takes the best armour per slot and weapon per skill at top quality; the
+boss guide scales each weapon's damage by the boss's modifiers; the
+comfort guide counts one piece per comfort group.

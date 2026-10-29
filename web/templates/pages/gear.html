@@ -1,0 +1,14 @@
+{{define "content"}}
+{{$d := .Data}}
+{{template "crumbs" .}}
+<div class="index-head"><div><p class="eyebrow">Guide</p><h1>Best gear by biome</h1><p>For each biome, the armour set with the most armour you can have made by then, the shield that blocks most, and the hardest-hitting weapon of every skill, all at their top quality. Damage is the weapon's own, before skill and the target's resistances; see the <a href="{{url "guides/bosses/"}}">boss pages</a> for those.</p></div></div>
+{{range $d.Stages}}
+<section class="food-stage" id="{{.Biome}}">
+<h2 class="group-title">{{template "biome" .Biome}}</h2>
+{{if .Armor}}<h3>Armour</h3><div class="gear-set"><ul class="chips">{{range .Armor}}<li>{{template "chip" .Item.Prefab}}<span class="chip-meta">{{.Slot}} · {{.Detail}}</span></li>{{end}}{{with .Shield}}<li>{{template "chip" .Item.Prefab}}<span class="chip-meta">{{.Detail}}</span></li>{{end}}</ul><span class="gear-total">{{num .ArmorTotal}} armour · {{num1 .Weight}} weight{{if .Movement}} · {{signedPct .Movement}} speed{{end}}</span></div>{{end}}
+{{if .Weapons}}<h3>Weapons</h3><div class="table-wrap"><table><thead><tr><th>Skill</th><th>Weapon</th><th class="num">Damage</th><th>By type</th></tr></thead><tbody>
+{{range .Weapons}}<tr><td>{{.Slot}}</td><td>{{template "chip" .Item.Prefab}}</td><td class="num">{{num .Value}}</td><td class="small muted">{{.Detail}}</td></tr>{{end}}
+</tbody></table></div>{{end}}
+</section>
+{{end}}
+{{end}}

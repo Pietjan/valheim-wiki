@@ -42,6 +42,11 @@ type Site struct {
 	// iconSets is what icons exist on disk: kind -> name -> true.
 	iconSets map[string]map[string]bool
 	built    time.Time
+	// The guides, built on first use, and the stager they share; see
+	// guides.go and guides_gear.go.
+	food   *FoodGuide
+	gear   *GearGuide
+	stages *stager
 }
 
 // Build renders everything.
@@ -82,6 +87,7 @@ func Build(cfg Config) error {
 		{"effects", s.pagesEffects},
 		{"traders", s.pagesTraders},
 		{"events", s.pagesEvents},
+		{"guides", s.pagesGuides},
 		{"world", s.pageWorld},
 		{"search", s.pageSearch},
 		{"about", s.pageAbout},

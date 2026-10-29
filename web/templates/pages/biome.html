@@ -21,6 +21,8 @@
 <div class="table-wrap"><table><thead><tr><th>Variant</th><th class="num">Chance</th><th class="num">Per world</th><th>Conditions</th></tr></thead><tbody>
 {{range $d.AltBiomes}}{{if .Enabled}}<tr><td>{{.Name}}{{if .Label}} <span class="muted small">({{.Label}})</span>{{end}}</td><td class="num">{{pct .Chance}}</td><td class="num">{{.MinAmount}}–{{.MaxAmount}}</td><td class="small muted">{{if .MinDistanceFromCenter}}≥ {{metres .MinDistanceFromCenter}} out; {{end}}{{if .RequireNeighbor}}beside {{join (biomeNames .RequireNeighbor) "/"}}; {{end}}{{if .NotNeighbor}}not beside {{join (biomeNames .NotNeighbor) "/"}}; {{end}}{{if .ForceEnv}}always {{.ForceEnv}}; {{end}}</td></tr>{{end}}{{end}}
 </tbody></table></div>{{end}}
+{{with $d.Food}}{{if .Combos}}<h2>What to eat here</h2><p class="muted small">The best three foods together out of everything you can have by {{biomeName .Biome}}. <a href="{{url "guides/food/"}}">Every biome →</a></p>
+<div class="meals">{{range .Combos}}<div class="meal"><div class="meal-head"><b>{{.Label}}</b><span class="meal-stats">{{num .Health}} hp · {{num .Stamina}} stamina{{if .Eitr}} · {{num .Eitr}} eitr{{end}} · +{{num1 .Regen}}/tick</span></div><ul class="chips">{{range .Foods}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul></div>{{end}}</div>{{end}}{{end}}
 {{template "yourworld" .YourWorld}}
 </div>
 <aside class="infobox">

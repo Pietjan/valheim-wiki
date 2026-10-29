@@ -7,6 +7,10 @@ far the trader stands from spawn, which biomes border your meadows.
 Without a seed it is a complete wiki; with one it is a wiki of your
 world, with a map of it and a 3D view to fly over.
 
+Guides add the numbers up: the best food, gear and comfort in every
+biome and what to bring to each boss, each worked out from the recipes,
+the stations they need and where every ingredient first comes from.
+
 Published at https://pietjan.github.io/valheim-wiki/ on every push to
 `main`.
 

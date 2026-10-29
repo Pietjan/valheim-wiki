@@ -1,0 +1,11 @@
+{{define "content"}}
+{{$d := .Data}}
+{{template "crumbs" .}}
+<div class="index-head"><div><p class="eyebrow">Guide</p><h1>Comfort and rest</h1><p>Comfort is counted once per kind of furniture: two chairs are no better than one, but a chair, a table and a rug add up. For each biome, the most comfort a base can reach with what can be built by then, the pieces that give it, and how long the rested bonus then lasts: eight minutes, and a minute more for every level of comfort.</p></div></div>
+{{range $d}}
+<section class="food-stage" id="{{.Biome}}">
+<h2 class="group-title">{{template "biome" .Biome}} <span class="count">comfort {{.Total}} · rested {{.Rested}}</span></h2>
+<ul class="chips">{{range .Pieces}}<li>{{template "chip" .Prefab}}<span class="chip-meta">+{{.Comfort}}{{if .ComfortGroup}} · {{lower .ComfortGroup}}{{end}}</span></li>{{end}}</ul>
+</section>
+{{end}}
+{{end}}

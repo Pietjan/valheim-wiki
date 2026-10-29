@@ -19,6 +19,7 @@ type BiomePage struct {
 	Rocks        []*model.Resource
 	Other        []*model.Resource
 	Thing        *Thing
+	Food         *FoodStage // the best meals by this stage, see guides.go
 }
 
 // EnvView is one weather with its share.
@@ -34,7 +35,7 @@ func (s *Site) pagesBiomes() error {
 	var pages []*BiomePage
 	for _, b := range s.DB.Biomes {
 		bi := ix.ByBiome[b.ID]
-		pg := &BiomePage{BiomeIndex: bi, Thing: ix.Things["biome:"+b.ID]}
+		pg := &BiomePage{BiomeIndex: bi, Thing: ix.Things["biome:"+b.ID], Food: s.foodGuide().ByBiome[b.ID]}
 		pg.Boss = s.DB.Creatures[b.Boss]
 		pg.BossLocation = s.DB.Locations[b.BossLocation]
 		// Weather: merge duplicate entries, share by weight.
