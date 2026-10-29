@@ -398,8 +398,16 @@ dialog::backdrop { background: rgba(20, 12, 6, .55); backdrop-filter: blur(3px);
 .portrait { width: 100%; max-width: 300px; aspect-ratio: 1; object-fit: contain; display: block; margin: 0 auto 12px; }
 
 /* ---------- biome page ---------- */
-.biome-hero { height: 140px; border-radius: var(--radius); background: linear-gradient(135deg, color-mix(in srgb, var(--biome) 90%, #000), var(--biome)); margin: 0 0 24px; position: relative; overflow: hidden; border: 1px solid rgba(0,0,0,.2); }
-.biome-hero::after { content: ""; position: absolute; inset: 0; background: url(../ui/woodpanel_400_tileable.png) center/400px; mix-blend-mode: overlay; opacity: .18; }
+/* The biome's name as the game announces it on entry: white Norse on
+   black between the game's own braid ends, picked out in gold. */
+.biome-banner { display: flex; align-items: center; justify-content: center; gap: clamp(10px, 3vw, 28px); min-height: 150px; padding: 26px 20px; margin: 0 0 24px; border-radius: var(--radius); position: relative; overflow: hidden; border: 1px solid rgba(0,0,0,.4);
+  background: radial-gradient(ellipse at center, #141210 0%, #070707 70%), #070707; box-shadow: var(--shadow); }
+.biome-banner::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at center, color-mix(in srgb, var(--biome) 35%, transparent), transparent 70%); opacity: .35; pointer-events: none; }
+.biome-banner h1 { position: relative; color: #fff; font-size: clamp(30px, 6vw, 56px); letter-spacing: .06em; text-transform: uppercase; text-align: center; text-shadow: 0 2px 8px rgba(0,0,0,.8), 0 0 24px rgba(0,0,0,.6); margin: 0; line-height: 1; }
+.braid-end { position: relative; flex: 0 1 213px; height: 16px; min-width: 60px; background: #d8b45c; opacity: .95; filter: drop-shadow(0 1px 2px rgba(0,0,0,.8)); }
+.braid-l { -webkit-mask: url(../ui/BraidLineHorisontalMediumHalfL.png) right center / auto 100% no-repeat; mask: url(../ui/BraidLineHorisontalMediumHalfL.png) right center / auto 100% no-repeat; }
+.braid-r { -webkit-mask: url(../ui/BraidLineHorisontalMediumHalfR.png) left center / auto 100% no-repeat; mask: url(../ui/BraidLineHorisontalMediumHalfR.png) left center / auto 100% no-repeat; }
+@media (max-width: 640px) { .biome-banner { min-height: 110px; padding: 20px 12px; } .braid-end { display: none; } }
 
 /* ---------- location page ---------- */
 .variants { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }

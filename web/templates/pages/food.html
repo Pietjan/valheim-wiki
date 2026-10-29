@@ -1,10 +1,10 @@
 {{define "content"}}
 {{$d := .Data}}
 {{template "crumbs" .}}
-<div class="index-head"><div><p class="eyebrow">Guide</p><h1>Best food by biome</h1><p>You can eat three foods at once. For each biome, in the order you meet them, these are the three to carry out of everything the game can have handed you by then: the most health, the most stamina, the most eitr once there is any, and the best of health and stamina together. Worked out from the recipes, the stations they need, and where every ingredient first drops, grows, sells or lies in a chest.</p></div></div>
+<div class="index-head"><div><p class="eyebrow">Guide</p><h1>Best food by biome</h1><p>You can eat three foods at once. For each biome, in the order you meet them, these are the three to carry out of everything the game can have handed you by then, the earlier biomes' foods included, so a stew from the Swamp keeps its place until something better comes: the most health, the most stamina, the most eitr once there is any, and the best of health and stamina together. Worked out from the recipes, the stations they need, and where every ingredient first drops, grows, sells or lies in a chest.</p></div></div>
 {{range $d.Stages}}
 <section class="food-stage" id="{{.Biome}}">
-<h2 class="group-title">{{template "biome" .Biome}} <span class="count">{{.Count}} foods</span></h2>
+<h2 class="group-title">{{template "biome" .Biome}} <span class="count">{{.Count}} foods by now</span></h2>
 {{if .Combos}}<div class="meals">{{range .Combos}}<div class="meal"><div class="meal-head"><b>{{.Label}}</b><span class="meal-stats">{{num .Health}} hp · {{num .Stamina}} stamina{{if .Eitr}} · {{num .Eitr}} eitr{{end}} · +{{num1 .Regen}} hp/tick · {{secs .Duration}}</span></div><ul class="chips">{{range .Foods}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul></div>{{end}}</div>{{else}}<p class="muted">Not enough food yet to fill three slots.</p>{{end}}
 {{if .New}}<p class="muted small" style="margin-top:12px">New here:</p><ul class="chips">{{range .New}}<li>{{template "chip" .Prefab}}<span class="chip-meta">{{if .Food}}{{num .Food}} hp{{end}}{{if .FoodStamina}} · {{num .FoodStamina}} st{{end}}{{if .FoodEitr}} · {{num .FoodEitr}} eitr{{end}}</span></li>{{end}}</ul>{{end}}
 </section>
