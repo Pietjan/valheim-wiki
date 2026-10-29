@@ -1,7 +1,7 @@
 {{define "content"}}
 {{$d := .Data}}{{$b := $d.Biome}}
 {{template "crumbs" .}}
-<div class="biome-banner" style="--biome:{{biomeColor $b.ID}}"><span class="braid-end braid-l" aria-hidden="true"></span><h1>{{$b.Name}}</h1><span class="braid-end braid-r" aria-hidden="true"></span></div>
+<div class="biome-banner" style="--biome:{{biomeColor $b.ID}}"><span class="braid-line" aria-hidden="true"></span><h1>{{$b.Name}}</h1><span class="braid-line" aria-hidden="true"></span></div>
 <header class="hero"><div class="hero-text"><p class="eyebrow">Biome</p>{{with $d.Boss}}<p class="lede">Ruled by <a href="{{thingURL .Prefab}}">{{.Name}}</a>{{with $d.BossLocation}}, whose altar is {{template "chip" (print "loc:" .Prefab)}}{{end}}.</p>{{end}}</div></header>
 <div class="braid" aria-hidden="true"></div>
 <div class="cols">
