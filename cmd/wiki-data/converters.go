@@ -75,9 +75,26 @@ func extractConverters(x *X) error {
 				return // a copy in a later bundle
 			}
 			k.read(x, cab, t, c)
+			c.Conversions = uniqueConversions(c.Conversions)
 		})
 	}
 	return nil
+}
+
+// uniqueConversions drops an entry the list repeats: the blast furnace
+// and the frost foundry each carry one conversion twice, to no effect
+// in the game, which takes the first match.
+func uniqueConversions(list []model.Conversion) []model.Conversion {
+	seen := map[model.Conversion]bool{}
+	out := list[:0]
+	for _, c := range list {
+		if seen[c] {
+			continue
+		}
+		seen[c] = true
+		out = append(out, c)
+	}
+	return out
 }
 
 // itemName is the prefab behind a PPtr to an ItemDrop component.

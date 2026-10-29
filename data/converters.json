@@ -110,10 +110,6 @@
     "to": "BlackMetal"
    },
    {
-    "from": "FlametalOreNew",
-    "to": "FlametalNew"
-   },
-   {
     "from": "GoldOre",
     "to": "Gold"
    }
@@ -856,11 +852,6 @@
    {
     "from": "KeysGoldUncooked",
     "to": "BloodGoldKey",
-    "time": 50
-   },
-   {
-    "from": "StaffSpiritCallerUncooked",
-    "to": "StaffSpiritCaller",
     "time": 50
    },
    {

@@ -22,36 +22,38 @@ import (
 	"github.com/pietjan/valheim-wiki/internal/model"
 )
 
-// extractor fills one domain of the DB.
+// extractor fills one domain of the DB. clear empties what it fills, so
+// a partial run (-only) replaces that domain rather than adding to it.
 type extractor struct {
-	name string
-	run  func(x *X) error
+	name  string
+	run   func(x *X) error
+	clear func(db *model.DB)
 }
 
 // extractors in run order. Items first because almost everything else
 // names items; locations and rooms last because they count what the
 // earlier passes defined.
 var extractors = []extractor{
-	{"items", extractItems},
-	{"recipes", extractRecipes},
-	{"stations", extractStations},
-	{"converters", extractConverters},
-	{"traders", extractTraders},
-	{"pieces", extractPieces},
-	{"effects", extractEffects},
-	{"skills", extractSkills},
-	{"creatures", extractCreatures},
-	{"spawns", extractSpawns},
-	{"events", extractEvents},
-	{"resources", extractResources},
-	{"vegetation", extractVegetation},
-	{"biomes", extractBiomes},
-	{"altbiomes", extractAltBiomes},
-	{"locations", extractLocations},
-	{"rooms", extractRooms},
-	{"names", fillNames},
-	{"achievements", extractAchievements},
-	{"icons", extractIcons},
+	{"items", extractItems, func(db *model.DB) { db.Items = map[string]*model.Item{} }},
+	{"recipes", extractRecipes, func(db *model.DB) { db.Recipes = nil }},
+	{"stations", extractStations, func(db *model.DB) { db.Stations = map[string]*model.Station{} }},
+	{"converters", extractConverters, func(db *model.DB) { db.Converters = map[string]*model.Converter{} }},
+	{"traders", extractTraders, func(db *model.DB) { db.Traders = nil }},
+	{"pieces", extractPieces, func(db *model.DB) { db.Pieces, db.PieceTables = map[string]*model.Piece{}, nil }},
+	{"effects", extractEffects, func(db *model.DB) { db.Effects = map[string]*model.Effect{} }},
+	{"skills", extractSkills, func(db *model.DB) { db.Skills = nil }},
+	{"creatures", extractCreatures, func(db *model.DB) { db.Creatures = map[string]*model.Creature{} }},
+	{"spawns", extractSpawns, func(db *model.DB) { db.Spawns = nil }},
+	{"events", extractEvents, func(db *model.DB) { db.Events = nil }},
+	{"resources", extractResources, func(db *model.DB) { db.Resources = map[string]*model.Resource{} }},
+	{"vegetation", extractVegetation, func(db *model.DB) { db.Vegetation, db.Clutter = nil, nil }},
+	{"biomes", extractBiomes, func(db *model.DB) { db.Biomes, db.Environments = nil, map[string]*model.Env{} }},
+	{"altbiomes", extractAltBiomes, func(db *model.DB) { db.AltBiomes = nil }},
+	{"locations", extractLocations, func(db *model.DB) { db.Locations = map[string]*model.Location{} }},
+	{"rooms", extractRooms, func(db *model.DB) { db.Rooms = nil }},
+	{"names", fillNames, nil},
+	{"achievements", extractAchievements, func(db *model.DB) { db.Achievements = nil }},
+	{"icons", extractIcons, func(db *model.DB) { db.Icons = map[string][]string{} }},
 }
 
 func main() {
@@ -121,6 +123,9 @@ func run(softRef, dataDir, out, iconDir, game, only string, icons bool, probe, p
 			continue
 		}
 		t := time.Now()
+		if e.clear != nil {
+			e.clear(x.DB)
+		}
 		if err := e.run(x); err != nil {
 			return fmt.Errorf("%s: %w", e.name, err)
 		}
