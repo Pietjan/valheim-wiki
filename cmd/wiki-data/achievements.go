@@ -17,7 +17,25 @@ import (
 func extractAchievements(x *X) error {
 	x.DB.Achievements = nil
 	byToken := map[string]string{}
-	resolve := func(token string) string { return byToken[strings.ToLower(token)] }
+	// A token no thing carries any more — the achievement list keeps a
+	// few old ones — is tried as a prefab name with its separators dropped:
+	// $item_battleaxe_gold is BattleaxeGold.
+	byFlat := map[string]string{}
+	flat := func(s string) string {
+		return strings.ToLower(strings.NewReplacer("_", "", "-", "", " ", "").Replace(s))
+	}
+	for _, k := range model.SortedKeys(x.DB.Items) {
+		byFlat["item"+flat(k)] = k
+	}
+	for _, k := range model.SortedKeys(x.DB.Pieces) {
+		byFlat["piece"+flat(k)] = k
+	}
+	resolve := func(token string) string {
+		if p := byToken[strings.ToLower(token)]; p != "" {
+			return p
+		}
+		return byFlat[flat(strings.TrimPrefix(token, "$"))]
+	}
 	// Pieces and items first, creatures last and the plainest prefab of a
 	// token winning, so $enemy_draugr is Draugr and not a raid's copy.
 	for _, k := range model.SortedKeys(x.DB.Pieces) {

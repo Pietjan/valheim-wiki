@@ -79,6 +79,15 @@ func (s *Site) pagesAchievements() error {
 		v.PickedUp = s.resolveNeeds(a.PickedUp)
 		v.Caught = s.resolveNeeds(a.Caught)
 		v.Pieces = s.resolveNeeds(a.Pieces)
+		if a.Dynamic {
+			// The game rebuilds a dynamic list from its tables when it runs,
+			// so an entry naming nothing that exists is not a requirement.
+			v.Crafts = known(v.Crafts)
+			v.Eaten = known(v.Eaten)
+			v.PickedUp = known(v.PickedUp)
+			v.Pieces = known(v.Pieces)
+			v.Kills = known(v.Kills)
+		}
 		for _, id := range a.Others {
 			if t := ix.Things["ach:"+id]; t != nil {
 				v.Others = append(v.Others, t)
@@ -89,4 +98,15 @@ func (s *Site) pagesAchievements() error {
 	return s.write("achievements/", "achievements", &Page{Site: s, Title: "Achievements",
 		Description: "Every achievement in Valheim and exactly what unlocks it, from the client's own definitions: the bosses, creatures, dishes, items and pieces each one counts.",
 		Section:     "achievements", Path: "achievements/", Data: views})
+}
+
+// known keeps the needs that name something the wiki has.
+func known(list []NeedView) []NeedView {
+	out := list[:0:0]
+	for _, v := range list {
+		if v.Thing != nil || v.Need.Prefab != "" {
+			out = append(out, v)
+		}
+	}
+	return out
 }

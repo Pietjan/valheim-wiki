@@ -3568,6 +3568,7 @@
    },
    {
     "token": "$item_battleaxe_gold",
+    "prefab": "BattleaxeGold",
     "name": "item battleaxe gold"
    },
    {
@@ -5561,6 +5562,7 @@
    },
    {
     "token": "$item_battleaxe_gold",
+    "prefab": "BattleaxeGold",
     "name": "item battleaxe gold"
    },
    {
