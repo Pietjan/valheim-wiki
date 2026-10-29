@@ -400,14 +400,14 @@ dialog::backdrop { background: rgba(20, 12, 6, .55); backdrop-filter: blur(3px);
 /* ---------- biome page ---------- */
 /* The biome's name as the game announces it on entry: a braid above and
    below, the name in white Norse between, over the biome's own colour. */
-.biome-banner { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; min-height: 160px; padding: 26px 20px; margin: 0 0 24px; border-radius: var(--radius); position: relative; overflow: hidden; border: 1px solid rgba(0,0,0,.2);
+.biome-banner { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 160px; padding: 26px 20px; margin: 0 0 24px; border-radius: var(--radius); position: relative; overflow: hidden; border: 1px solid rgba(0,0,0,.2);
   background: linear-gradient(135deg, color-mix(in srgb, var(--biome) 90%, #000), var(--biome)); box-shadow: var(--shadow); }
 .biome-banner::after { content: ""; position: absolute; inset: 0; background: url(../ui/woodpanel_400_tileable.png) center/400px; mix-blend-mode: overlay; opacity: .18; pointer-events: none; }
 .biome-banner h1 { position: relative; color: #fff; font-size: clamp(30px, 6vw, 56px); letter-spacing: .06em; text-transform: uppercase; text-align: center; text-shadow: 0 2px 8px rgba(0,0,0,.7), 0 0 28px rgba(0,0,0,.5); margin: 0; line-height: 1; }
-.braid-line { position: relative; width: min(504px, 86%); height: 17px; background: #e2c06a; filter: drop-shadow(0 1px 2px rgba(0,0,0,.7));
+.braid-line { position: relative; width: min(620px, 90%); height: 21px; background: #e2c06a; filter: drop-shadow(0 1px 2px rgba(0,0,0,.7));
   -webkit-mask: url(../ui/BraidLineHorisontalMedium.png) center / auto 100% no-repeat; mask: url(../ui/BraidLineHorisontalMedium.png) center / auto 100% no-repeat; }
 .braid-line:last-child { transform: scaleY(-1); }
-@media (max-width: 640px) { .biome-banner { min-height: 120px; padding: 18px 12px; gap: 10px; } .braid-line { height: 12px; } }
+@media (max-width: 640px) { .biome-banner { min-height: 120px; padding: 18px 12px; gap: 0; } .braid-line { height: 14px; } }
 
 /* ---------- location page ---------- */
 .variants { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
