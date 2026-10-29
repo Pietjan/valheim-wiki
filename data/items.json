@@ -8292,6 +8292,10 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "Mistile"
+   ],
+   "maxSummoned": 9,
    "animation": "attack_protect",
    "stamina": 15,
    "height": 1.7999999523162842,
@@ -10310,6 +10314,9 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "Fader_Fissure_AOE"
+   ],
    "animation": "attack_Fissure",
    "stamina": 20,
    "height": 2,
@@ -10349,6 +10356,9 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "Fader_Fissure_AOE"
+   ],
    "animation": "attack_Fissure",
    "stamina": 20,
    "height": 2,
@@ -10527,6 +10537,9 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "projectile_meteor_fader"
+   ],
    "animation": "taunt",
    "stamina": 20,
    "range": -60,
@@ -10559,6 +10572,9 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "projectile_meteor_fader"
+   ],
    "animation": "taunt",
    "stamina": 20,
    "range": -60,
@@ -10739,6 +10755,9 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "Fader_WallOfFire_AOE"
+   ],
    "animation": "attack_WallOfFire",
    "stamina": 20,
    "range": 10,
@@ -13258,6 +13277,9 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "projectile_spikes_frozenking"
+   ],
    "animation": "attack_spike_rain",
    "stamina": 20,
    "height": 0.5,
@@ -13289,6 +13311,10 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "Tendril"
+   ],
+   "maxSummoned": 30,
    "animation": "spawn",
    "stamina": 20,
    "height": 0.5,
@@ -13836,6 +13862,9 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "projectile_meteor"
+   ],
    "animation": "cast1",
    "stamina": 20,
    "range": -30,
@@ -26769,6 +26798,10 @@
   "backstab": 1,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "Troll_Summoned"
+   ],
+   "maxSummoned": 2,
    "animation": "staff_trollsummon",
    "eitr": 120,
    "healthPct": 60,
@@ -26856,6 +26889,10 @@
   "backstab": 1,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "Skeleton_Friendly"
+   ],
+   "maxSummoned": 10,
    "animation": "staff_summon",
    "eitr": 100,
    "healthPct": 40,
@@ -26897,6 +26934,13 @@
   "backstab": 1,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "Bjorn_spiritcaller",
+    "Moose_spiritcaller",
+    "Wolf_spiritcaller",
+    "Boar_spiritcaller"
+   ],
+   "maxSummoned": 10,
    "animation": "staff_summon",
    "eitr": 100,
    "healthPct": 40,
@@ -31378,6 +31422,9 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "aspect_Fader_Fissure_AOE"
+   ],
    "animation": "attack_Fissure",
    "stamina": 20,
    "height": 2,
@@ -31491,6 +31538,9 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "aspect_Fader_WallOfFire_AOE"
+   ],
    "animation": "attack_WallOfFire",
    "stamina": 20,
    "range": 10,
@@ -32121,6 +32171,10 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "Aspect_TentaRoot"
+   ],
+   "maxSummoned": 30,
    "animation": "spawn",
    "stamina": 20,
    "height": 0.5,
@@ -32809,6 +32863,11 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "Skeleton",
+    "Blob"
+   ],
+   "maxSummoned": 8,
    "animation": "spawn",
    "stamina": 20,
    "height": 0.5,
@@ -33449,6 +33508,10 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "Charred_Twitcher_Summoned"
+   ],
+   "maxSummoned": 10,
    "animation": "attack_fireaoe",
    "range": 1,
    "height": 2,
@@ -34346,6 +34409,10 @@
   "backstab": 4,
   "attack": {
    "type": "Projectile",
+   "summons": [
+    "TentaRoot"
+   ],
+   "maxSummoned": 30,
    "animation": "spawn",
    "stamina": 20,
    "height": 0.5,

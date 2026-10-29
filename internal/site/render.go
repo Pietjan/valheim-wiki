@@ -152,7 +152,19 @@ func (s *Site) funcs() template.FuncMap {
 		"nl2br": func(s string) template.HTML {
 			return template.HTML(strings.ReplaceAll(template.HTMLEscapeString(s), "\n", "<br>"))
 		},
-		"safe":  func(s string) template.HTML { return template.HTML(s) },
+		"safe": func(s string) template.HTML { return template.HTML(s) },
+		// summonLinks is the linked names of summoned creatures.
+		"summonLinks": func(prefabs []string) []string {
+			out := make([]string, 0, len(prefabs))
+			for _, p := range prefabs {
+				if t := s.Index.Things[p]; t != nil && t.URL != "" {
+					out = append(out, `<a href="`+template.HTMLEscapeString(s.URL(t.URL))+`">`+template.HTMLEscapeString(t.Name)+`</a>`)
+				} else {
+					out = append(out, template.HTMLEscapeString(p))
+				}
+			}
+			return out
+		},
 		"slug":  Slug,
 		"stars": func(q int) string { return strings.Repeat("★", q) },
 		"json": func(v any) template.JS {

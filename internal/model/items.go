@@ -88,30 +88,34 @@ type Item struct {
 
 // Attack is one of SharedData's two Attack blocks.
 type Attack struct {
-	Type              string  `json:"type"` // Horizontal, Vertical, Projectile, None, Area, TriggerProjectile
-	Animation         string  `json:"animation,omitempty"`
-	Stamina           float64 `json:"stamina,omitempty"`
-	Eitr              float64 `json:"eitr,omitempty"`
-	Health            float64 `json:"health,omitempty"`
-	HealthPct         float64 `json:"healthPct,omitempty"`
-	DrawStamina       float64 `json:"drawStamina,omitempty"`
-	Range             float64 `json:"range,omitempty"`
-	Height            float64 `json:"height,omitempty"`
-	Angle             float64 `json:"angle,omitempty"`
-	RayWidth          float64 `json:"rayWidth,omitempty"`
-	DamageMultiplier  float64 `json:"damageMultiplier,omitempty"`
-	ForceMultiplier   float64 `json:"forceMultiplier,omitempty"`
-	StaggerMultiplier float64 `json:"staggerMultiplier,omitempty"`
-	ChainLevels       int     `json:"chainLevels,omitempty"`
-	LastChainMult     float64 `json:"lastChainMult,omitempty"`
-	Projectile        string  `json:"projectile,omitempty"`
-	Projectiles       int     `json:"projectiles,omitempty"`
-	Bursts            int     `json:"bursts,omitempty"`
-	ProjectileVel     float64 `json:"projectileVel,omitempty"`
-	Accuracy          float64 `json:"accuracy,omitempty"`
-	Reload            float64 `json:"reload,omitempty"`
-	Harvest           bool    `json:"harvest,omitempty"`
-	ConsumesItem      bool    `json:"consumesItem,omitempty"`
+	Type string `json:"type"` // Horizontal, Vertical, Projectile, None, Area, TriggerProjectile
+	// Summons is what a summoning staff's projectile stands up — its
+	// SpawnAbility's prefabs — and MaxSummoned how many may stand at once.
+	Summons           []string `json:"summons,omitempty"`
+	MaxSummoned       int      `json:"maxSummoned,omitempty"`
+	Animation         string   `json:"animation,omitempty"`
+	Stamina           float64  `json:"stamina,omitempty"`
+	Eitr              float64  `json:"eitr,omitempty"`
+	Health            float64  `json:"health,omitempty"`
+	HealthPct         float64  `json:"healthPct,omitempty"`
+	DrawStamina       float64  `json:"drawStamina,omitempty"`
+	Range             float64  `json:"range,omitempty"`
+	Height            float64  `json:"height,omitempty"`
+	Angle             float64  `json:"angle,omitempty"`
+	RayWidth          float64  `json:"rayWidth,omitempty"`
+	DamageMultiplier  float64  `json:"damageMultiplier,omitempty"`
+	ForceMultiplier   float64  `json:"forceMultiplier,omitempty"`
+	StaggerMultiplier float64  `json:"staggerMultiplier,omitempty"`
+	ChainLevels       int      `json:"chainLevels,omitempty"`
+	LastChainMult     float64  `json:"lastChainMult,omitempty"`
+	Projectile        string   `json:"projectile,omitempty"`
+	Projectiles       int      `json:"projectiles,omitempty"`
+	Bursts            int      `json:"bursts,omitempty"`
+	ProjectileVel     float64  `json:"projectileVel,omitempty"`
+	Accuracy          float64  `json:"accuracy,omitempty"`
+	Reload            float64  `json:"reload,omitempty"`
+	Harvest           bool     `json:"harvest,omitempty"`
+	ConsumesItem      bool     `json:"consumesItem,omitempty"`
 }
 
 // Upgrader is what a Forge of Potential attempt paid with this idol rolls

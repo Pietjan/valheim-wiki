@@ -174,11 +174,14 @@ func (s *Site) creaturePage(c *model.Creature) *CreaturePage {
 		}
 	}
 	for _, it := range ix.Items {
-		if it.Hidden {
+		if it.Hidden || it.Attack == nil {
 			continue
 		}
-		if it.Projectile != "" && strings.Contains(strings.ToLower(it.Projectile), strings.ToLower(c.Prefab)) {
-			pg.Summoner = append(pg.Summoner, it)
+		for _, p := range it.Attack.Summons {
+			if p == c.Prefab {
+				pg.Summoner = append(pg.Summoner, it)
+				break
+			}
 		}
 	}
 	seen := map[*Kind]bool{}

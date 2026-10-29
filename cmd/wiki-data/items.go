@@ -314,6 +314,18 @@ func (x *X) readAttack(cab string, a map[string]any) *model.Attack {
 		at.Bursts = I(a, "m_projectileBursts")
 		at.ProjectileVel = F(a, "m_projectileVel")
 		at.Accuracy = F(a, "m_projectileAccuracy")
+		// A summoning staff's "projectile" is a SpawnAbility: what it
+		// stands up, and how many at once.
+		if g, ok := x.Deref(cab, a["m_attackProjectile"]); ok {
+			if sa, ok := x.Find(g, "m_spawnPrefab", "m_maxSpawned"); ok {
+				for _, ref := range L(sa.Tree, "m_spawnPrefab") {
+					if n := x.GameObjectName(sa.Ref.Cab, ref); n != "" {
+						at.Summons = append(at.Summons, n)
+					}
+				}
+				at.MaxSummoned = I(sa.Tree, "m_maxSpawned")
+			}
+		}
 	}
 	if B(a, "m_requiresReload") {
 		at.Reload = F(a, "m_reloadTime")
