@@ -273,6 +273,16 @@ table.stats td:first-child { color: var(--ink-2); }
 .gear-set { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
 .gear-total { color: var(--ink-2); font-size: 14px; }
 .guide-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin: 20px 0; }
+.ach-list { display: grid; gap: 14px; }
+.ach-head { display: flex; gap: 16px; align-items: flex-start; }
+.ach-icon { width: 64px; height: 64px; flex: none; border-radius: 12px; background: #1b1511; object-fit: contain; }
+.ach-head h2 { font-size: 24px; margin: 2px 0 2px; }
+.ach-desc { margin: 0 0 6px; color: var(--ink-2); }
+.ach-tags { margin: 0; display: flex; gap: 6px; flex-wrap: wrap; }
+.ach-tags .tag { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); border: 1px solid var(--line); border-radius: 999px; padding: 2px 8px; }
+.ach h3 { margin: 12px 0 6px; font-size: 16px; }
+.ach-more { margin: 12px 0 0; }
+.ach-more summary { cursor: pointer; font-family: var(--display); font-size: 16px; margin-bottom: 6px; }
 .boss-prep { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
 .boss-prep > div { min-width: 0; }
 .boss-prep h3 { margin: 10px 0 4px; }

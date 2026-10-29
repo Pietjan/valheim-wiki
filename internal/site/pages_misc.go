@@ -142,7 +142,7 @@ func (s *Site) pageHome() error {
 		}
 	}
 	sort.Slice(bosses, func(i, j int) bool { return bosses[i].BossOrder < bosses[j].BossOrder })
-	d := &HomeData{Counts: map[string]int{"items": visible, "pieces": len(ix.Pieces), "creatures": len(ix.Creatures), "locations": len(ix.KindList), "effects": len(ix.Effects), "resources": len(ix.Resources)}, Biomes: s.DB.Biomes, Bosses: bosses}
+	d := &HomeData{Counts: map[string]int{"items": visible, "pieces": len(ix.Pieces), "creatures": len(ix.Creatures), "locations": len(ix.KindList), "effects": len(ix.Effects), "resources": len(ix.Resources), "achievements": len(s.DB.Achievements)}, Biomes: s.DB.Biomes, Bosses: bosses}
 	return s.write("", "home", &Page{Site: s, Title: "", Description: "Vegvísir is a Valheim wiki generated from the game's own data, with a seed viewer that shows where everything is in your world.", Section: "home", Path: "", Data: d})
 }
 

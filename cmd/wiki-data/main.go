@@ -50,6 +50,7 @@ var extractors = []extractor{
 	{"locations", extractLocations},
 	{"rooms", extractRooms},
 	{"names", fillNames},
+	{"achievements", extractAchievements},
 	{"icons", extractIcons},
 }
 
@@ -103,6 +104,13 @@ func run(softRef, dataDir, out, iconDir, game, only string, icons bool, probe, p
 	for _, n := range strings.Split(only, ",") {
 		if n = strings.TrimSpace(n); n != "" {
 			want[n] = true
+		}
+	}
+	// A partial run starts from the data as written, so the extractors
+	// left out keep their files; each extractor replaces its own output.
+	if len(want) > 0 {
+		if db, err := model.Read(out); err == nil {
+			x.DB = db
 		}
 	}
 	for _, e := range extractors {

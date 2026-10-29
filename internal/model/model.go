@@ -47,6 +47,8 @@ type DB struct {
 	Vegetation []*VegRule           `json:"vegetation"`
 	Clutter    []*Clutter           `json:"clutter"`
 
+	Achievements []*Achievement `json:"achievements"`
+
 	// Icons lists every sprite written under assets/icons/<kind>/<name>.png.
 	Icons map[string][]string `json:"icons"`
 }
@@ -81,7 +83,8 @@ func (db *DB) files() map[string]any {
 		"locations.json": &db.Locations, "rooms.json": &db.Rooms, "biomes.json": &db.Biomes,
 		"environments.json": &db.Environments, "altbiomes.json": &db.AltBiomes,
 		"resources.json": &db.Resources, "vegetation.json": &db.Vegetation, "clutter.json": &db.Clutter,
-		"icons.json": &db.Icons,
+		"achievements.json": &db.Achievements,
+		"icons.json":        &db.Icons,
 	}
 }
 

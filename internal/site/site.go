@@ -88,6 +88,7 @@ func Build(cfg Config) error {
 		{"traders", s.pagesTraders},
 		{"events", s.pagesEvents},
 		{"guides", s.pagesGuides},
+		{"achievements", s.pagesAchievements},
 		{"world", s.pageWorld},
 		{"search", s.pageSearch},
 		{"about", s.pageAbout},

@@ -177,3 +177,16 @@ at a stage for the most health, stamina, eitr and balance; the gear guide
 takes the best armour per slot and weapon per skill at top quality; the
 boss guide scales each weapon's damage by the boss's modifiers; the
 comfort guide counts one piece per comfort group.
+
+## Achievements
+
+The client's achievements live in the `Achievements1` prefab: an
+`m_achievements` list of assets, each with a name and description token,
+an icon, flags (secret, difficulty, dynamically populated) and trigger
+lists that name things by localisation token — `$enemy_eikthyr`,
+`$item_trophy_abomination`, `$piece_woodwall` — plus `m_statTrigger`
+entries by PlayerStatType number. `cmd/wiki-data/achievements.go` reads
+them after the creatures, items and pieces, resolving tokens to prefabs,
+into `data/achievements.json`; the site renders one page with an anchor
+per achievement. Running the extractor with `-only` now starts from the
+data as written, so a partial run keeps the other files.

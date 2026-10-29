@@ -1,0 +1,8471 @@
+[
+ {
+  "id": "AllBosses",
+  "name": "The Viking",
+  "desc": "Defeat all bosses on any difficulty.",
+  "icon": true,
+  "difficulty": 1,
+  "kills": [
+   {
+    "token": "$enemy_eikthyr",
+    "prefab": "Eikthyr",
+    "name": "Eikthyr"
+   },
+   {
+    "token": "$enemy_gdking",
+    "prefab": "gd_king",
+    "name": "The Elder"
+   },
+   {
+    "token": "$enemy_bonemass",
+    "prefab": "Bonemass",
+    "name": "Bonemass"
+   },
+   {
+    "token": "$enemy_dragon",
+    "prefab": "Dragon",
+    "name": "Moder"
+   },
+   {
+    "token": "$enemy_goblinking",
+    "prefab": "GoblinKing",
+    "name": "Yagluth"
+   },
+   {
+    "token": "$enemy_seekerqueen",
+    "prefab": "SeekerQueen",
+    "name": "The Queen"
+   },
+   {
+    "token": "$enemy_fader",
+    "prefab": "Fader",
+    "name": "Fader"
+   },
+   {
+    "token": "$enemy_frozenking_p3",
+    "prefab": "FrozenKing_p3",
+    "name": "Kall Fimbulbringer"
+   }
+  ]
+ },
+ {
+  "id": "AllBossesHard",
+  "name": "The Toughest Viking",
+  "desc": "Defeat all bosses on hard difficulty.",
+  "icon": true,
+  "difficulty": 7,
+  "kills": [
+   {
+    "token": "$enemy_eikthyr",
+    "prefab": "Eikthyr",
+    "name": "Eikthyr"
+   },
+   {
+    "token": "$enemy_gdking",
+    "prefab": "gd_king",
+    "name": "The Elder"
+   },
+   {
+    "token": "$enemy_bonemass",
+    "prefab": "Bonemass",
+    "name": "Bonemass"
+   },
+   {
+    "token": "$enemy_dragon",
+    "prefab": "Dragon",
+    "name": "Moder"
+   },
+   {
+    "token": "$enemy_goblinking",
+    "prefab": "GoblinKing",
+    "name": "Yagluth"
+   },
+   {
+    "token": "$enemy_seekerqueen",
+    "prefab": "SeekerQueen",
+    "name": "The Queen"
+   },
+   {
+    "token": "$enemy_fader",
+    "prefab": "Fader",
+    "name": "Fader"
+   },
+   {
+    "token": "$enemy_frozenking_p3",
+    "prefab": "FrozenKing_p3",
+    "name": "Kall Fimbulbringer"
+   }
+  ]
+ },
+ {
+  "id": "AllBossesNormal",
+  "name": "The Tough Viking",
+  "desc": "Defeat all bosses on normal difficulty or higher.",
+  "icon": true,
+  "difficulty": 6,
+  "kills": [
+   {
+    "token": "$enemy_eikthyr",
+    "prefab": "Eikthyr",
+    "name": "Eikthyr"
+   },
+   {
+    "token": "$enemy_gdking",
+    "prefab": "gd_king",
+    "name": "The Elder"
+   },
+   {
+    "token": "$enemy_bonemass",
+    "prefab": "Bonemass",
+    "name": "Bonemass"
+   },
+   {
+    "token": "$enemy_dragon",
+    "prefab": "Dragon",
+    "name": "Moder"
+   },
+   {
+    "token": "$enemy_goblinking",
+    "prefab": "GoblinKing",
+    "name": "Yagluth"
+   },
+   {
+    "token": "$enemy_seekerqueen",
+    "prefab": "SeekerQueen",
+    "name": "The Queen"
+   },
+   {
+    "token": "$enemy_fader",
+    "prefab": "Fader",
+    "name": "Fader"
+   },
+   {
+    "token": "$enemy_frozenking_p3",
+    "prefab": "FrozenKing_p3",
+    "name": "Kall Fimbulbringer"
+   }
+  ]
+ },
+ {
+  "id": "AllBuildPieces",
+  "name": "The Carpenter",
+  "desc": "Build everything.",
+  "icon": true,
+  "difficulty": 1,
+  "dynamic": true,
+  "pieces": [
+   {
+    "token": "$piece_repair",
+    "prefab": "piece_repair",
+    "name": "Repair"
+   },
+   {
+    "token": "$piece_woodwallquarter",
+    "prefab": "wood_wall_quarter",
+    "name": "Wood Wall 1x1"
+   },
+   {
+    "token": "$piece_woodwallhalf",
+    "prefab": "wood_wall_half",
+    "name": "Wood Wall Half"
+   },
+   {
+    "token": "$piece_woodwall",
+    "prefab": "woodwall",
+    "name": "Wood Wall"
+   },
+   {
+    "token": "$piece_woodwallroof",
+    "prefab": "wood_wall_roof",
+    "name": "Wood Wall 26°"
+   },
+   {
+    "token": "$piece_woodwallroof45",
+    "prefab": "wood_wall_roof_45",
+    "name": "Wood Wall 45°"
+   },
+   {
+    "token": "$piece_woodwallroof67",
+    "prefab": "wood_wall_roof_67_a",
+    "name": "Wood Wall 67°"
+   },
+   {
+    "token": "$piece_woodwallroof_upsidedown",
+    "prefab": "wood_wall_roof_upsidedown",
+    "name": "Wood Wall 26° (Inverted)"
+   },
+   {
+    "token": "$piece_woodwallroof45_upsidedown",
+    "prefab": "wood_wall_roof_45_upsidedown",
+    "name": "Wood Wall 45° (Inverted)"
+   },
+   {
+    "token": "$piece_woodwallroof67upsidedown",
+    "prefab": "wood_wall_roof_67_upsidedown",
+    "name": "Wood Wall 67° (Inverted)"
+   },
+   {
+    "token": "$piece_woodfloor1x1",
+    "prefab": "wood_floor_1x1",
+    "name": "Wood Floor 1x1"
+   },
+   {
+    "token": "$piece_woodfloor2x2",
+    "prefab": "dvergrprops_wood_floor",
+    "name": "Wood Floor 2x2"
+   },
+   {
+    "token": "$piece_woodpole",
+    "prefab": "wood_pole",
+    "name": "Wood Pole 1 m"
+   },
+   {
+    "token": "$piece_woodpole2",
+    "prefab": "wood_pole2",
+    "name": "Wood Pole 2 m"
+   },
+   {
+    "token": "$piece_woodbeam1",
+    "prefab": "wood_beam_1",
+    "name": "Wood Beam 1 m"
+   },
+   {
+    "token": "$piece_woodbeam2",
+    "prefab": "wood_beam",
+    "name": "Wood Beam 2 m"
+   },
+   {
+    "token": "$piece_woodbeam26",
+    "prefab": "wood_beam_26",
+    "name": "Wood Beam 26°"
+   },
+   {
+    "token": "$piece_woodbeam45",
+    "prefab": "wood_beam_45",
+    "name": "Wood Beam 45°"
+   },
+   {
+    "token": "$piece_woodbeam67",
+    "prefab": "wood_beam_67",
+    "name": "Wood Beam 67°"
+   },
+   {
+    "token": "$piece_woodwallrooftop",
+    "prefab": "wood_wall_roof_top",
+    "name": "Wood Roof Cross 26°"
+   },
+   {
+    "token": "$piece_woodwallrooftop45",
+    "prefab": "wood_wall_roof_top_45",
+    "name": "Wood Roof Cross 45°"
+   },
+   {
+    "token": "$piece_woodwallrooftop67",
+    "prefab": "wood_wall_roof_top_67",
+    "name": "Wood Roof Cross 67°"
+   },
+   {
+    "token": "$piece_woodroof26",
+    "prefab": "wood_roof",
+    "name": "Thatch Roof 26°"
+   },
+   {
+    "token": "$piece_woodroof45",
+    "prefab": "wood_roof_45",
+    "name": "Thatch Roof 45°"
+   },
+   {
+    "token": "$piece_woodroof67",
+    "prefab": "wood_roof_67",
+    "name": "Thatch Roof 67°"
+   },
+   {
+    "token": "$piece_woodrooficorner",
+    "prefab": "wood_roof_icorner",
+    "name": "Thatch Roof Inner Corner 26°"
+   },
+   {
+    "token": "$piece_woodrooficorner45",
+    "prefab": "wood_roof_icorner_45",
+    "name": "Thatch Roof Inner Corner 45°"
+   },
+   {
+    "token": "$piece_woodrooficorner67",
+    "prefab": "wood_roof_icorner_67",
+    "name": "Thatch Roof Inner Corner 67°"
+   },
+   {
+    "token": "$piece_woodroofocorner",
+    "prefab": "wood_roof_ocorner",
+    "name": "Thatch Roof Outer Corner 26°"
+   },
+   {
+    "token": "$piece_woodroofocorner45",
+    "prefab": "wood_roof_ocorner_45",
+    "name": "Thatch Roof Outer Corner 45°"
+   },
+   {
+    "token": "$piece_woodroofocorner67",
+    "prefab": "wood_roof_ocorner_67",
+    "name": "Thatch Roof Outer Corner 67°"
+   },
+   {
+    "token": "$piece_woodrooftop",
+    "prefab": "wood_roof_top",
+    "name": "Thatch Roof Ridge 26°"
+   },
+   {
+    "token": "$piece_woodrooftop45",
+    "prefab": "wood_roof_top_45",
+    "name": "Thatch Roof Ridge 45°"
+   },
+   {
+    "token": "$piece_woodrooftop67",
+    "prefab": "wood_roof_top_67",
+    "name": "Thatch Roof Ridge 67°"
+   },
+   {
+    "token": "$piece_wooddoor",
+    "prefab": "wood_door",
+    "name": "Wood Door"
+   },
+   {
+    "token": "$piece_woodgate",
+    "prefab": "wood_gate",
+    "name": "Wood Gate"
+   },
+   {
+    "token": "$piece_woodwindowshutter",
+    "prefab": "wood_window",
+    "name": "Wood Shutter"
+   },
+   {
+    "token": "$piece_wooddragon",
+    "prefab": "wood_dragon1",
+    "name": "Wood Dragon Adornment"
+   },
+   {
+    "token": "$piece_woodfence",
+    "prefab": "wood_fence",
+    "name": "Roundpole Fence"
+   },
+   {
+    "token": "$piece_woodstair",
+    "prefab": "dvergrprops_wood_stair",
+    "name": "Wood Stairs"
+   },
+   {
+    "token": "$piece_woodstepladder",
+    "prefab": "wood_stepladder",
+    "name": "Wood Ladder"
+   },
+   {
+    "token": "$piece_stakewall",
+    "prefab": "stake_wall",
+    "name": "Stakewall"
+   },
+   {
+    "token": "$piece_sharpstakes",
+    "prefab": "piece_sharpstakes",
+    "name": "Sharp Stakes"
+   },
+   {
+    "token": "$piece_logpole2",
+    "prefab": "wood_pole_log",
+    "name": "Log Pole 2 m"
+   },
+   {
+    "token": "$piece_logpole4",
+    "prefab": "wood_pole_log_4",
+    "name": "Log Pole 4 m"
+   },
+   {
+    "token": "$piece_logbeam2",
+    "prefab": "wood_wall_log",
+    "name": "Log Beam 2 m"
+   },
+   {
+    "token": "$piece_logbeam4",
+    "prefab": "wood_wall_log_4x0.5",
+    "name": "Log Beam 4 m"
+   },
+   {
+    "token": "$piece_woodlog26",
+    "prefab": "wood_log_26",
+    "name": "Log Beam 26°"
+   },
+   {
+    "token": "$piece_woodlog45",
+    "prefab": "wood_log_45",
+    "name": "Log Beam 45°"
+   },
+   {
+    "token": "$piece_stonewall1x1",
+    "prefab": "Ashlands_Arch1",
+    "name": "Stone Wall 1x1"
+   },
+   {
+    "token": "$piece_stonewall2x1",
+    "prefab": "stone_wall_2x1",
+    "name": "Stone Wall 2x1"
+   },
+   {
+    "token": "$piece_stonewall4x2",
+    "prefab": "stone_wall_4x2",
+    "name": "Stone Wall 4x2"
+   },
+   {
+    "token": "$piece_stonefloor2x2",
+    "prefab": "stone_floor_2x2",
+    "name": "Stone Floor 2x2"
+   },
+   {
+    "token": "$piece_stonepillar",
+    "prefab": "stone_pillar",
+    "name": "Stone Pillar"
+   },
+   {
+    "token": "$piece_stonearch",
+    "prefab": "stone_arch",
+    "name": "Stone Arch"
+   },
+   {
+    "token": "$piece_stonestair",
+    "prefab": "stone_stair",
+    "name": "Stone Stair"
+   },
+   {
+    "token": "$piece_woodironpole",
+    "prefab": "woodiron_pole",
+    "name": "Wood Iron Pole"
+   },
+   {
+    "token": "$piece_woodironbeam",
+    "prefab": "woodiron_beam",
+    "name": "Wood Iron Beam"
+   },
+   {
+    "token": "$piece_woodironbeam_26",
+    "prefab": "woodiron_beam_26",
+    "name": "Wood Iron Beam 26°"
+   },
+   {
+    "token": "$piece_woodironbeam_45",
+    "prefab": "woodiron_beam_45",
+    "name": "Wood Iron Beam 45°"
+   },
+   {
+    "token": "$piece_ironfloorSmall",
+    "prefab": "iron_floor_1x1",
+    "name": "Cage Floor 1x1"
+   },
+   {
+    "token": "$piece_ironfloor",
+    "prefab": "iron_floor_2x2",
+    "name": "Cage Floor 2x2"
+   },
+   {
+    "token": "$piece_ironwallSmall",
+    "prefab": "iron_wall_1x1",
+    "name": "Cage Wall 1x1"
+   },
+   {
+    "token": "$piece_ironwall",
+    "prefab": "iron_wall_2x2",
+    "name": "Cage Wall 2x2"
+   },
+   {
+    "token": "$piece_irongate",
+    "prefab": "iron_grate",
+    "name": "Iron Gate"
+   },
+   {
+    "token": "$piece_darkwooddecowall",
+    "prefab": "darkwood_decowall",
+    "name": "Carved Darkwood Divider"
+   },
+   {
+    "token": "$piece_darkwoodpole",
+    "prefab": "darkwood_pole",
+    "name": "Darkwood Pole 2m"
+   },
+   {
+    "token": "$piece_darkwoodpole4",
+    "prefab": "darkwood_pole4",
+    "name": "Darkwood Pole 4m"
+   },
+   {
+    "token": "$piece_darkwoodbeam",
+    "prefab": "darkwood_beam",
+    "name": "Darkwood Beam 2 m"
+   },
+   {
+    "token": "$piece_darkwoodbeam4",
+    "prefab": "darkwood_beam4x4",
+    "name": "Darkwood Beam 4 m"
+   },
+   {
+    "token": "$piece_darkwoodbeam_26",
+    "prefab": "darkwood_beam_26",
+    "name": "Darkwood Beam 26°"
+   },
+   {
+    "token": "$piece_darkwoodbeam_45",
+    "prefab": "darkwood_beam_45",
+    "name": "Darkwood Beam 45°"
+   },
+   {
+    "token": "$piece_darkwoodarch",
+    "prefab": "darkwood_arch",
+    "name": "Darkwood Arch"
+   },
+   {
+    "token": "$piece_darkwoodroof26",
+    "prefab": "darkwood_roof",
+    "name": "Shingle Roof 26°"
+   },
+   {
+    "token": "$piece_darkwoodroof45",
+    "prefab": "darkwood_roof_45",
+    "name": "Shingle Roof 45°"
+   },
+   {
+    "token": "$piece_darkwoodroof67",
+    "prefab": "darkwood_roof_67",
+    "name": "Shingle Roof 67°"
+   },
+   {
+    "token": "$piece_darkwoodrooficorner",
+    "prefab": "darkwood_roof_icorner",
+    "name": "Shingle Roof Inner Corner 26°"
+   },
+   {
+    "token": "$piece_darkwoodrooficorner45",
+    "prefab": "darkwood_roof_icorner_45",
+    "name": "Shingle Roof Inner Corner 45°"
+   },
+   {
+    "token": "$piece_darkwoodrooficorner67",
+    "prefab": "darkwood_roof_icorner_67",
+    "name": "Shingle Roof Inner Corner 67°"
+   },
+   {
+    "token": "$piece_darkwoodroofocorner",
+    "prefab": "darkwood_roof_ocorner",
+    "name": "Shingle Roof Outer Corner 26°"
+   },
+   {
+    "token": "$piece_darkwoodroofocorner45",
+    "prefab": "darkwood_roof_ocorner_45",
+    "name": "Shingle Roof Outer Corner 45°"
+   },
+   {
+    "token": "$piece_darkwoodroofocorner67",
+    "prefab": "darkwood_roof_ocorner_67",
+    "name": "Shingle Roof Outer Corner 67°"
+   },
+   {
+    "token": "$piece_darkwoodrooftop",
+    "prefab": "darkwood_roof_top",
+    "name": "Shingle Roof Ridge 26°"
+   },
+   {
+    "token": "$piece_darkwoodrooftop45",
+    "prefab": "darkwood_roof_top_45",
+    "name": "Shingle Roof Ridge 45°"
+   },
+   {
+    "token": "$piece_darkwoodrooftop67",
+    "prefab": "darkwood_roof_top_67",
+    "name": "Shingle Roof Ridge 67°"
+   },
+   {
+    "token": "$piece_darkwoodgate",
+    "prefab": "darkwood_gate",
+    "name": "Darkwood Gate"
+   },
+   {
+    "token": "$piece_darkwoodraven",
+    "prefab": "darkwood_raven",
+    "name": "Raven Adornment"
+   },
+   {
+    "token": "$piece_darkwoodwolf",
+    "prefab": "darkwood_wolf",
+    "name": "Wolf Adornment"
+   },
+   {
+    "token": "$piece_blackmarble1x1",
+    "prefab": "blackmarble_1x1",
+    "name": "Black Marble 1x1x1"
+   },
+   {
+    "token": "$piece_blackmarble2x1x1",
+    "prefab": "blackmarble_2x1x1",
+    "name": "Black Marble 2x1x1"
+   },
+   {
+    "token": "$piece_blackmarble2x2x2",
+    "prefab": "blackmarble_2x2x2",
+    "name": "Black Marble 2x2x2"
+   },
+   {
+    "token": "$piece_blackmarble_floor",
+    "prefab": "blackmarble_floor",
+    "name": "Black Marble Floor"
+   },
+   {
+    "token": "$piece_blackmarble_floor_triangle",
+    "prefab": "blackmarble_floor_triangle",
+    "name": "Black Marble Floor Triangle"
+   },
+   {
+    "token": "$piece_blackmarble_base1",
+    "prefab": "blackmarble_base_1",
+    "name": "Black Marble Plinth"
+   },
+   {
+    "token": "$piece_blackmarble_basecorner",
+    "prefab": "blackmarble_basecorner",
+    "name": "Black Marble Plinth Corner"
+   },
+   {
+    "token": "$piece_blackmarble_tip",
+    "prefab": "blackmarble_tip",
+    "name": "Black Marble Quarter Spire"
+   },
+   {
+    "token": "$piece_blackmarble_out1",
+    "prefab": "blackmarble_creep_slope_inverted_1x1x2",
+    "name": "Black Marble Cornice"
+   },
+   {
+    "token": "$piece_blackmarble_outcorner",
+    "prefab": "blackmarble_outcorner",
+    "name": "Black Marble Cornice Corner"
+   },
+   {
+    "token": "$piece_blackmarble_column_1",
+    "prefab": "blackmarble_column_1",
+    "name": "Black Marble Column Small"
+   },
+   {
+    "token": "$piece_blackmarble_column_2",
+    "prefab": "blackmarble_column_2",
+    "name": "Black Marble Column Wide"
+   },
+   {
+    "token": "$piece_blackmarble_arch",
+    "prefab": "blackmarble_arch",
+    "name": "Black Marble Arch"
+   },
+   {
+    "token": "$piece_blackmarble_stair",
+    "prefab": "blackmarble_creep_stair",
+    "name": "Black Marble Stair"
+   },
+   {
+    "token": "$piece_crystalwall1x1",
+    "prefab": "crystal_wall_1x1",
+    "name": "Crystal Wall 1x1"
+   },
+   {
+    "token": "$piece_dvergr_metal_wall",
+    "prefab": "piece_dvergr_metal_wall_2x2",
+    "name": "Dvergr Metal Wall"
+   },
+   {
+    "token": "$piece_dvergr_stake_wall",
+    "prefab": "piece_dvergr_stake_wall",
+    "name": "Dvergr Stakewall"
+   },
+   {
+    "token": "$piece_dvergr_sharpstakes",
+    "prefab": "piece_dvergr_sharpstakes",
+    "name": "Dvergr Sharp Stakes"
+   },
+   {
+    "token": "$piece_hexagonalgate",
+    "prefab": "piece_hexagonal_door",
+    "name": "Hexagonal Gate"
+   },
+   {
+    "token": "$piece_dvergr_spiralstair",
+    "prefab": "piece_dvergr_spiralstair",
+    "name": "Dvergr Spiral Staircase Left"
+   },
+   {
+    "token": "$piece_dvergr_spiralstair_right",
+    "prefab": "piece_dvergr_spiralstair_right",
+    "name": "Dvergr Spiral Staircase Right"
+   },
+   {
+    "token": "$piece_ashwood_quarterwall",
+    "prefab": "ashwood_quarterwall_1x1",
+    "name": "Ashwood Quarter Wall"
+   },
+   {
+    "token": "$piece_ashwood_halfwall",
+    "prefab": "ashwood_halfwall_1x2",
+    "name": "Ashwood Half Wall"
+   },
+   {
+    "token": "$piece_ashwood_wall",
+    "prefab": "ashwood_wall_2x2",
+    "name": "Ashwood Wall"
+   },
+   {
+    "token": "$piece_ashwood_archedwall",
+    "prefab": "ashwood_wall_arch",
+    "name": "Ashwood Arched Wall"
+   },
+   {
+    "token": "$piece_ashwood_decowall",
+    "prefab": "ashwood_decowall_2x2",
+    "name": "Ashwood Decorative Wall"
+   },
+   {
+    "token": "$piece_ashwood_decowall_divider",
+    "prefab": "ashwood_decowall_divider",
+    "name": "Ashwood Divider"
+   },
+   {
+    "token": "$piece_ashwood_decowall_tree",
+    "prefab": "ashwood_decowall_tree",
+    "name": "Ashwood Decorative Window"
+   },
+   {
+    "token": "$piece_ashwoodwallroof_26",
+    "prefab": "ashwood_wall_roof_26",
+    "name": "Ashwood Wall 26°"
+   },
+   {
+    "token": "$piece_ashwoodwallroof_26_upsidedown",
+    "prefab": "ashwood_wall_roof_26_upsidedown",
+    "name": "Ashwood Wall 26° (Inverted)"
+   },
+   {
+    "token": "$piece_ashwoodwallroof_45",
+    "prefab": "ashwood_wall_roof_45",
+    "name": "Ashwood Wall 45°"
+   },
+   {
+    "token": "$piece_ashwoodwallroof_45_upsidedown",
+    "prefab": "ashwood_wall_roof_45_upsidedown",
+    "name": "Ashwood Wall 45° (Inverted)"
+   },
+   {
+    "token": "$piece_ashwoodwallroof67",
+    "prefab": "ashwood_wall_roof_67_a",
+    "name": "Ashwood Wall 67°"
+   },
+   {
+    "token": "$piece_ashwoodwallroof67upsidedown",
+    "prefab": "ashwood_wall_roof_67_upsidedown",
+    "name": "Ashwood Wall 67° (Inverted)"
+   },
+   {
+    "token": "$piece_ashwood_floor_1x1",
+    "prefab": "ashwood_floor_1x1",
+    "name": "Ashwood Floor 1x1"
+   },
+   {
+    "token": "$piece_ashwood_floor_2x2",
+    "prefab": "ashwood_floor_2x2",
+    "name": "Ashwood Floor 2x2"
+   },
+   {
+    "token": "$piece_ashwood_floor_deco",
+    "prefab": "ashwood_deco_floor",
+    "name": "Ashwood Decorative Floor"
+   },
+   {
+    "token": "$piece_ashwoodarch_big",
+    "prefab": "ashwood_arch_big",
+    "name": "Ashwood Arch"
+   },
+   {
+    "token": "$piece_ashwood_pole_1m",
+    "prefab": "ashwood_pole_1m",
+    "name": "Ashwood Pole 1 m"
+   },
+   {
+    "token": "$piece_ashwood_pole_2m",
+    "prefab": "ashwood_pole_2m",
+    "name": "Ashwood Pole 2 m"
+   },
+   {
+    "token": "$piece_ashwood_beam_1m",
+    "prefab": "ashwood_beam_1m",
+    "name": "Ashwood Beam 1 m"
+   },
+   {
+    "token": "$piece_ashwood_beam_2m",
+    "prefab": "ashwood_beam_2m",
+    "name": "Ashwood Beam 2 m"
+   },
+   {
+    "token": "$piece_ashwoodbeam26",
+    "prefab": "ashwood_wall_beam_26",
+    "name": "Ashwood Beam 26°"
+   },
+   {
+    "token": "$piece_ashwoodbeam45",
+    "prefab": "ashwood_wall_beam_45",
+    "name": "Ashwood Beam 45°"
+   },
+   {
+    "token": "$piece_ashwoodbeam67",
+    "prefab": "ashwood_wall_beam_67",
+    "name": "Ashwood Beam 67°"
+   },
+   {
+    "token": "$piece_ashwoodcross26",
+    "prefab": "ashwood_wall_cross_26",
+    "name": "Ashwood Roof Cross 26°"
+   },
+   {
+    "token": "$piece_ashwoodcross45",
+    "prefab": "ashwood_wall_cross_45",
+    "name": "Ashwood Roof Cross 45°"
+   },
+   {
+    "token": "$piece_ashwoodwallrooftop67",
+    "prefab": "ashwood_wall_cross_67",
+    "name": "Ashwood Roof Cross 67°"
+   },
+   {
+    "token": "$piece_ashwood_door",
+    "prefab": "ashwood_door",
+    "name": "Ashwood Door"
+   },
+   {
+    "token": "$piece_ashwoodstair",
+    "prefab": "ashwood_stair",
+    "name": "Ashwood Stair"
+   },
+   {
+    "token": "$piece_BlackwoodStakewall",
+    "prefab": "piece_stakewall_blackwood",
+    "name": "Ashwood Stakewall"
+   },
+   {
+    "token": "$piece_grausten_wall1x2",
+    "prefab": "Piece_grausten_wall_1x2",
+    "name": "Grausten Wall 1x2"
+   },
+   {
+    "token": "$piece_grausten_wall2x2",
+    "prefab": "Piece_grausten_wall_2x2",
+    "name": "Grausten Wall 2x2"
+   },
+   {
+    "token": "$piece_grausten_window2x2",
+    "prefab": "Piece_grausten_window_2x2",
+    "name": "Grausten Window 2x2"
+   },
+   {
+    "token": "$piece_grausten_wall4x2",
+    "prefab": "Piece_grausten_wall_4x2",
+    "name": "Grausten Wall 4x2"
+   },
+   {
+    "token": "$piece_grausten_window4x2",
+    "prefab": "Piece_grausten_window_4x2",
+    "name": "Grausten Window 4x2"
+   },
+   {
+    "token": "$piece_grausten_wallarch",
+    "prefab": "Piece_grausten_wall_arch",
+    "name": "Grausten Wall Arch"
+   },
+   {
+    "token": "$piece_grausten_wallarchinv",
+    "prefab": "Piece_grausten_wall_arch_inverted",
+    "name": "Grausten Wall Arch (Inverted)"
+   },
+   {
+    "token": "$piece_grausten_floor1x1",
+    "prefab": "Piece_grausten_floor_1x1",
+    "name": "Grausten Floor 1x1"
+   },
+   {
+    "token": "$piece_grausten_floor2x2",
+    "prefab": "Piece_grausten_floor_2x2",
+    "name": "Grausten Floor 2x2"
+   },
+   {
+    "token": "$piece_grausten_floor4x4",
+    "prefab": "Piece_grausten_floor_4x4",
+    "name": "Grausten Floor 4x4"
+   },
+   {
+    "token": "$piece_grausten_pillarsmall",
+    "prefab": "Piece_grausten_pillarbase_small",
+    "name": "Grausten Small Pillar"
+   },
+   {
+    "token": "$piece_grausten_pillarmedium",
+    "prefab": "Piece_grausten_pillarbase_medium",
+    "name": "Grausten Medium Pillar"
+   },
+   {
+    "token": "$piece_grausten_beamsmall",
+    "prefab": "Piece_grausten_pillarbeam_small",
+    "name": "Grausten Small Beam"
+   },
+   {
+    "token": "$piece_grausten_beammedium",
+    "prefab": "Piece_grausten_pillarbeam_medium",
+    "name": "Grausten Medium Beam"
+   },
+   {
+    "token": "$piece_grausten_pillartapered",
+    "prefab": "Piece_grausten_pillarbase_tapered",
+    "name": "Grausten Tapered Pillar"
+   },
+   {
+    "token": "$piece_grausten_pillartaperedinverted",
+    "prefab": "Piece_grausten_pillarbase_tapered_inverted",
+    "name": "Grausten Tapered Pillar (Inverted)"
+   },
+   {
+    "token": "$piece_grausten_archsmall",
+    "prefab": "Piece_grausten_pillar_arch_small",
+    "name": "Grausten Small Arch"
+   },
+   {
+    "token": "$piece_grausten_archmedium",
+    "prefab": "Piece_grausten_pillar_arch",
+    "name": "Grausten Medium Arch"
+   },
+   {
+    "token": "$piece_grausten_roof45",
+    "prefab": "piece_grausten_roof_45",
+    "name": "Grausten Roof"
+   },
+   {
+    "token": "$piece_grausten_roof45_corner",
+    "prefab": "piece_grausten_roof_45_corner",
+    "name": "Grausten Roof Corner"
+   },
+   {
+    "token": "$piece_grausten_roof45_corner2",
+    "prefab": "piece_grausten_roof_45_corner2",
+    "name": "Grausten Roof Corner"
+   },
+   {
+    "token": "$piece_grausten_roof45_arch",
+    "prefab": "piece_grausten_roof_45_arch",
+    "name": "Grausten Arched Roof"
+   },
+   {
+    "token": "$piece_grausten_roof45_archcorner",
+    "prefab": "piece_grausten_roof_45_arch_corner",
+    "name": "Grausten Arched Roof Corner"
+   },
+   {
+    "token": "$piece_grausten_roof45_archcorner2",
+    "prefab": "piece_grausten_roof_45_arch_corner2",
+    "name": "Grausten Arched Roof Corner"
+   },
+   {
+    "token": "$piece_grausten_stair",
+    "prefab": "piece_grausten_stonestair",
+    "name": "Grausten Stairs"
+   },
+   {
+    "token": "$piece_grausten_stoneladder",
+    "prefab": "Piece_grausten_stone_ladder",
+    "name": "Grausten Steep Stairs"
+   },
+   {
+    "token": "$piece_flametal_pillar",
+    "prefab": "Piece_flametal_pillar",
+    "name": "Flametal Pillar"
+   },
+   {
+    "token": "$piece_flametal_beam",
+    "prefab": "Piece_flametal_beam",
+    "name": "Flametal Beam"
+   },
+   {
+    "token": "$piece_flametalgate",
+    "prefab": "flametal_gate",
+    "name": "Flametal Gate"
+   },
+   {
+    "token": "$piece_stave_wall",
+    "prefab": "stave_wall_2x2",
+    "name": "Timber Wall"
+   },
+   {
+    "token": "$piece_stave_pole_2m",
+    "prefab": "stave_pole_2m",
+    "name": "Timber Pole 2m"
+   },
+   {
+    "token": "$piece_stave_pole_4m",
+    "prefab": "stave_pole_4m",
+    "name": "Timber Pole 4m"
+   },
+   {
+    "token": "$piece_stavebeam2",
+    "prefab": "stave_beam_2m",
+    "name": "Timber Beam 2m"
+   },
+   {
+    "token": "$piece_stavebeam4",
+    "prefab": "stave_beam_4m",
+    "name": "Timber Beam 4m"
+   },
+   {
+    "token": "$piece_stavebeam26",
+    "prefab": "stave_beam_26",
+    "name": "Timber Beam 26°"
+   },
+   {
+    "token": "$piece_stavebeam45",
+    "prefab": "stave_beam_45",
+    "name": "Timber Beam 45°"
+   },
+   {
+    "token": "$piece_stavebeam67",
+    "prefab": "stave_beam_67",
+    "name": "Timber Beam 67°"
+   },
+   {
+    "token": "$piece_stavecross26",
+    "prefab": "stave_wall_cross_26",
+    "name": "Timber Roof Cross 26°"
+   },
+   {
+    "token": "$piece_stavecross45",
+    "prefab": "stave_wall_cross_45",
+    "name": "Timber Roof Cross 45°"
+   },
+   {
+    "token": "$piece_stavewallrooftop67",
+    "prefab": "stave_wall_cross_67",
+    "name": "Timber Roof Cross 67°"
+   },
+   {
+    "token": "$piece_deco_stave_wall",
+    "prefab": "stave_deco_wall_2x2",
+    "name": "Lathed Timber Wall"
+   },
+   {
+    "token": "$piece_stave_deco_pole_2m",
+    "prefab": "stave_deco_pole_2m",
+    "name": "Decorated Timber Pole 2m"
+   },
+   {
+    "token": "$piece_stave_deco_beam_2m",
+    "prefab": "stave_deco_beam_2m",
+    "name": "Decorated Timber Beam 2m"
+   },
+   {
+    "token": "$piece_stavedecobeam26",
+    "prefab": "stave_deco_beam_26",
+    "name": "Decorated Timber Beam 26°"
+   },
+   {
+    "token": "$piece_stavedecobeam45",
+    "prefab": "stave_deco_beam_45",
+    "name": "Decorated Timber Beam 45°"
+   },
+   {
+    "token": "$piece_stavedecobeam67",
+    "prefab": "stave_deco_beam_67",
+    "name": "Decorated Timber Beam 67°"
+   },
+   {
+    "token": "$piece_scale_quarterwall",
+    "prefab": "scale_quarterwall_1x1",
+    "name": "Scalewood Quarter Wall"
+   },
+   {
+    "token": "$piece_scale_halfwall",
+    "prefab": "scale_halfwall_1x2",
+    "name": "Scalewood Half Wall"
+   },
+   {
+    "token": "$piece_scale_wall",
+    "prefab": "scale_wall_2x2",
+    "name": "Scalewood Wall"
+   },
+   {
+    "token": "$piece_scale_26",
+    "prefab": "scale_wall_roof_26",
+    "name": "Scalewood Wall 26° Left"
+   },
+   {
+    "token": "$piece_scale_26_flipped",
+    "prefab": "scale_wall_roof_26_flipped",
+    "name": "Scalewood Wall 26° Right"
+   },
+   {
+    "token": "$piece_scale_45",
+    "prefab": "scale_wall_roof_45",
+    "name": "Scalewood Wall 45° Left"
+   },
+   {
+    "token": "$piece_scale_45_flipped",
+    "prefab": "scale_wall_roof_45_flipped",
+    "name": "Scalewood Wall 45° Right"
+   },
+   {
+    "token": "$piece_scale_67",
+    "prefab": "scale_wall_roof_67",
+    "name": "Scalewood Wall 67° Left"
+   },
+   {
+    "token": "$piece_scale_67_flipped",
+    "prefab": "scale_wall_roof_67_flipped",
+    "name": "Scalewood Wall 67° Right"
+   },
+   {
+    "token": "$piece_scale_26_upsidedown",
+    "prefab": "scale_wall_roof_26_upsidedown",
+    "name": "Scalewood Wall 26° Right (Inverted)"
+   },
+   {
+    "token": "$piece_scale_26_upsidedown_flipped",
+    "prefab": "scale_wall_roof_26_upsidedown_flipped",
+    "name": "Scalewood Wall 26° Left (Inverted)"
+   },
+   {
+    "token": "$piece_scale_45_upsidedown",
+    "prefab": "scale_wall_roof_45_upsidedown",
+    "name": "Scalewood Wall 45° Right (Inverted)"
+   },
+   {
+    "token": "$piece_scale_45_upsidedown_flipped",
+    "prefab": "scale_wall_roof_45_upsidedown_flipped",
+    "name": "Scalewood Wall 45° Left (Inverted)"
+   },
+   {
+    "token": "$piece_scale_67_upsidedown",
+    "prefab": "scale_wall_roof_67_upsidedown",
+    "name": "Scalewood Wall 67° Right (Inverted)"
+   },
+   {
+    "token": "$piece_scale_67_upsidedown_flipped",
+    "prefab": "scale_wall_roof_67_upsidedown_flipped",
+    "name": "Scalewood Wall 67° Left (Inverted)"
+   },
+   {
+    "token": "$piece_drawbridge",
+    "name": "Drawbridge"
+   },
+   {
+    "token": "$piece_icecube",
+    "prefab": "piece_icecube",
+    "name": "Ice Block"
+   },
+   {
+    "token": "$piece_cookingstation",
+    "prefab": "piece_cookingstation",
+    "name": "Cooking Station"
+   },
+   {
+    "token": "$piece_cookingstation_iron",
+    "prefab": "piece_cookingstation_iron",
+    "name": "Iron Cooking Station"
+   },
+   {
+    "token": "$piece_workbench",
+    "prefab": "piece_workbench",
+    "name": "Workbench"
+   },
+   {
+    "token": "$piece_workbench_ext1",
+    "prefab": "piece_workbench_ext1",
+    "name": "Chopping Block"
+   },
+   {
+    "token": "$piece_workbench_ext2",
+    "prefab": "piece_workbench_ext2",
+    "name": "Tanning Rack"
+   },
+   {
+    "token": "$piece_workbench_ext3",
+    "prefab": "piece_workbench_ext3",
+    "name": "Adze"
+   },
+   {
+    "token": "$piece_workbench_ext4",
+    "prefab": "piece_workbench_ext4",
+    "name": "Tool Shelf"
+   },
+   {
+    "token": "$piece_cauldron",
+    "prefab": "piece_cauldron",
+    "name": "Cauldron"
+   },
+   {
+    "token": "$piece_cauldron_ext1_spice",
+    "prefab": "cauldron_ext1_spice",
+    "name": "Spice Rack"
+   },
+   {
+    "token": "$piece_cauldron_ext3_butchertable",
+    "prefab": "cauldron_ext3_butchertable",
+    "name": "Butcher's Table"
+   },
+   {
+    "token": "$piece_cauldron_ext4_pans",
+    "prefab": "cauldron_ext4_pots",
+    "name": "Pots and Pans"
+   },
+   {
+    "token": "$piece_cauldron_ext5_mortarandpestle",
+    "prefab": "cauldron_ext5_mortarandpestle",
+    "name": "Mortar and Pestle"
+   },
+   {
+    "token": "$piece_cauldron_ext6_rollingpins",
+    "prefab": "cauldron_ext6_rollingpins",
+    "name": "Rolling Pins and Cutting Boards"
+   },
+   {
+    "token": "$piece_cauldron_ext7_smoker",
+    "prefab": "cauldron_ext7_smoker",
+    "name": "Smoker"
+   },
+   {
+    "token": "$piece_forge",
+    "prefab": "forge",
+    "name": "Forge"
+   },
+   {
+    "token": "$piece_forge_ext1",
+    "prefab": "forge_ext1",
+    "name": "Forge Bellows"
+   },
+   {
+    "token": "$piece_forge_ext2",
+    "prefab": "forge_ext2",
+    "name": "Anvils"
+   },
+   {
+    "token": "$piece_forge_ext3",
+    "prefab": "forge_ext3",
+    "name": "Grinding Wheel"
+   },
+   {
+    "token": "$piece_forge_ext4",
+    "prefab": "forge_ext4",
+    "name": "Smith's Anvil"
+   },
+   {
+    "token": "$piece_forge_ext5",
+    "prefab": "forge_ext5",
+    "name": "Forge Cooler"
+   },
+   {
+    "token": "$piece_forge_ext6",
+    "prefab": "forge_ext6",
+    "name": "Forge Tool Rack"
+   },
+   {
+    "token": "$piece_artisanstation",
+    "prefab": "piece_artisanstation",
+    "name": "Artisan Table"
+   },
+   {
+    "token": "$piece_artisan_ext1",
+    "prefab": "artisan_ext1",
+    "name": "Artisan Press"
+   },
+   {
+    "token": "$piece_blackforge",
+    "prefab": "blackforge",
+    "name": "Black Forge"
+   },
+   {
+    "token": "$piece_blackforge_ext1",
+    "prefab": "blackforge_ext1",
+    "name": "Black Forge Cooler"
+   },
+   {
+    "token": "$piece_blackforge_ext2",
+    "prefab": "blackforge_ext2_vise",
+    "name": "Vice"
+   },
+   {
+    "token": "$piece_blackforge_ext3",
+    "prefab": "blackforge_ext3_metalcutter",
+    "name": "Metal Cutter"
+   },
+   {
+    "token": "$piece_blackforge_ext4",
+    "prefab": "blackforge_ext4_gemcutter",
+    "name": "Gem Cutter"
+   },
+   {
+    "token": "$piece_blackforge_ext5",
+    "prefab": "blackforge_ext5_apron",
+    "name": "Smith's Aprons"
+   },
+   {
+    "token": "$piece_magetable",
+    "prefab": "piece_magetable",
+    "name": "Galdr Table"
+   },
+   {
+    "token": "$piece_magetable_ext",
+    "prefab": "piece_magetable_ext",
+    "name": "Rune Table"
+   },
+   {
+    "token": "$piece_magetable_ext2",
+    "prefab": "piece_magetable_ext2",
+    "name": "Unfading Candles"
+   },
+   {
+    "token": "$piece_magetable_ext3",
+    "prefab": "piece_magetable_ext3",
+    "name": "Feathery Wreath"
+   },
+   {
+    "token": "$piece_magetable_ext4",
+    "prefab": "piece_magetable_ext4",
+    "name": "Standing Loom"
+   },
+   {
+    "token": "$piece_preptable",
+    "prefab": "piece_preptable",
+    "name": "Food Preparation Table"
+   },
+   {
+    "token": "$piece_meadcauldron",
+    "prefab": "piece_MeadCauldron",
+    "name": "Mead Ketill"
+   },
+   {
+    "token": "$piece_fermenter",
+    "prefab": "fermenter",
+    "name": "Fermenter"
+   },
+   {
+    "token": "$piece_oven",
+    "prefab": "piece_oven",
+    "name": "Stone Oven"
+   },
+   {
+    "token": "$piece_windmill",
+    "prefab": "windmill",
+    "name": "Windmill"
+   },
+   {
+    "token": "$piece_stonecutter",
+    "prefab": "piece_stonecutter",
+    "name": "Stonecutter"
+   },
+   {
+    "token": "$piece_spinningwheel",
+    "prefab": "piece_spinningwheel",
+    "name": "Spinning Wheel"
+   },
+   {
+    "token": "$piece_frostfoundry",
+    "prefab": "piece_FrostFoundry",
+    "name": "Frost Foundry"
+   },
+   {
+    "token": "$piece_smelter",
+    "prefab": "smelter",
+    "name": "Smelter"
+   },
+   {
+    "token": "$piece_charcoalkiln",
+    "prefab": "charcoal_kiln",
+    "name": "Charcoal Kiln"
+   },
+   {
+    "token": "$piece_blastfurnace",
+    "prefab": "blastfurnace",
+    "name": "Blast Furnace"
+   },
+   {
+    "token": "$piece_eitrrefinery",
+    "prefab": "eitrrefinery",
+    "name": "Eitr Refinery"
+   },
+   {
+    "token": "$piece_frostkiln",
+    "prefab": "piece_FrostKiln",
+    "name": "Frigid Kiln"
+   },
+   {
+    "token": "$piece_sapcollector",
+    "prefab": "piece_sapcollector",
+    "name": "Sap Extractor"
+   },
+   {
+    "token": "$piece_beehive",
+    "prefab": "piece_beehive",
+    "name": "Beehive"
+   },
+   {
+    "token": "$piece_wisplure",
+    "prefab": "piece_wisplure",
+    "name": "Wisp Fountain"
+   },
+   {
+    "token": "$piece_faderember",
+    "prefab": "piece_EternalPyre",
+    "name": "Eternal Pyre"
+   },
+   {
+    "token": "$piece_incinerator",
+    "prefab": "incinerator",
+    "name": "Obliterator"
+   },
+   {
+    "token": "$piece_bed",
+    "prefab": "bed",
+    "name": "Bed"
+   },
+   {
+    "token": "$piece_bed02",
+    "prefab": "piece_bed02",
+    "name": "Dragon Bed"
+   },
+   {
+    "token": "$piece_ashwood_bed",
+    "prefab": "ashwood_bed",
+    "name": "Ashwood Bed"
+   },
+   {
+    "token": "$piece_throne01",
+    "prefab": "piece_throne01",
+    "name": "Raven Throne"
+   },
+   {
+    "token": "$piece_stonethrone",
+    "prefab": "piece_throne02",
+    "name": "Stone Throne"
+   },
+   {
+    "token": "$piece_blackmarble_throne",
+    "prefab": "piece_blackmarble_throne",
+    "name": "Black Marble Throne"
+   },
+   {
+    "token": "$piece_bone_throne",
+    "prefab": "piece_bone_throne",
+    "name": "Bone Throne"
+   },
+   {
+    "token": "$piece_moose_throne",
+    "prefab": "piece_moose_throne",
+    "name": "Antler Throne"
+   },
+   {
+    "token": "$piece_stool",
+    "prefab": "piece_chair",
+    "name": "Stool"
+   },
+   {
+    "token": "$piece_chair",
+    "prefab": "piece_chair02",
+    "name": "Wood Chair"
+   },
+   {
+    "token": "$piece_darkwoodchair",
+    "prefab": "piece_chair03",
+    "name": "Darkwood Chair"
+   },
+   {
+    "token": "$piece_chair_runed",
+    "prefab": "piece_chair_runed",
+    "name": "Carved Chair"
+   },
+   {
+    "token": "$piece_benchlog",
+    "prefab": "piece_logbench01",
+    "name": "Sitting Log"
+   },
+   {
+    "token": "$piece_bench01",
+    "prefab": "piece_bench01",
+    "name": "Wood Bench"
+   },
+   {
+    "token": "$piece_blackmarble_bench",
+    "prefab": "piece_blackmarble_bench",
+    "name": "Black Marble Bench"
+   },
+   {
+    "token": "$piece_blackwoodbench01",
+    "prefab": "piece_blackwood_bench01",
+    "name": "Ashwood Bench"
+   },
+   {
+    "token": "$piece_bench_runed",
+    "prefab": "piece_bench_runed",
+    "name": "Carved Bench"
+   },
+   {
+    "token": "$piece_table",
+    "prefab": "piece_table",
+    "name": "Table"
+   },
+   {
+    "token": "$piece_table_oak",
+    "prefab": "piece_table_oak",
+    "name": "Long Heavy Table"
+   },
+   {
+    "token": "$piece_table_round",
+    "prefab": "piece_table_round",
+    "name": "Round Table"
+   },
+   {
+    "token": "$piece_blackmarble_table",
+    "prefab": "piece_blackmarble_table",
+    "name": "Black Marble Table"
+   },
+   {
+    "token": "$piece_table_runed",
+    "prefab": "piece_table_runed",
+    "name": "Long Carved Table"
+   },
+   {
+    "token": "$piece_table_runed_small",
+    "prefab": "piece_table_runed_small",
+    "name": "Square Carved Table"
+   },
+   {
+    "token": "$piece_chestwood",
+    "prefab": "piece_chest_wood",
+    "name": "Chest"
+   },
+   {
+    "token": "$piece_chest",
+    "prefab": "piece_chest",
+    "name": "Reinforced Chest"
+   },
+   {
+    "token": "$piece_chestprivate",
+    "prefab": "piece_chest_private",
+    "name": "Personal Chest"
+   },
+   {
+    "token": "$piece_chestbarrel",
+    "prefab": "loot_deepNorth_Granary",
+    "name": "Barrel"
+   },
+   {
+    "token": "$piece_chesttreasure",
+    "prefab": "piece_chest_treasure",
+    "name": "Treasure Chest"
+   },
+   {
+    "token": "$piece_chestblackmetal",
+    "prefab": "piece_chest_blackmetal",
+    "name": "Black Metal Chest"
+   },
+   {
+    "token": "$piece_chestgrausten",
+    "prefab": "piece_chest_grausten",
+    "name": "Grausten Chest"
+   },
+   {
+    "token": "$piece_pot_medium_green",
+    "prefab": "piece_pot1",
+    "name": "Medium Green Pot"
+   },
+   {
+    "token": "$piece_pot_large_green",
+    "prefab": "piece_pot2",
+    "name": "Large Green Pot"
+   },
+   {
+    "token": "$piece_pot_small_green",
+    "prefab": "piece_pot3",
+    "name": "Small Green Pot"
+   },
+   {
+    "token": "$piece_chestwarderobe",
+    "prefab": "piece_chest_warderobe",
+    "name": "Wardrobe"
+   },
+   {
+    "token": "$piece_yuleklapp",
+    "prefab": "piece_gift1",
+    "name": "Yuleklapp"
+   },
+   {
+    "token": "$piece_yuleklapp",
+    "prefab": "piece_gift1",
+    "name": "Yuleklapp"
+   },
+   {
+    "token": "$piece_yuleklapp",
+    "prefab": "piece_gift1",
+    "name": "Yuleklapp"
+   },
+   {
+    "token": "$tool_cart",
+    "prefab": "Cart",
+    "name": "Cart"
+   },
+   {
+    "token": "$piece_armorstand",
+    "prefab": "ArmorStand",
+    "name": "Armour Stand"
+   },
+   {
+    "token": "$piece_itemstand",
+    "prefab": "itemstand",
+    "name": "Item Stand"
+   },
+   {
+    "token": "$piece_itemstand",
+    "prefab": "itemstand",
+    "name": "Item Stand"
+   },
+   {
+    "token": "$piece_sign",
+    "prefab": "sign",
+    "name": "Sign"
+   },
+   {
+    "token": "$piece_firepit",
+    "prefab": "BogWitch_Fire_Pit",
+    "name": "Campfire"
+   },
+   {
+    "token": "$piece_firepit_iron",
+    "prefab": "fire_pit_iron",
+    "name": "Iron Fire Pit"
+   },
+   {
+    "token": "$piece_hearth",
+    "prefab": "hearth",
+    "name": "Hearth"
+   },
+   {
+    "token": "$piece_bonfire",
+    "prefab": "bonfire",
+    "name": "Bonfire"
+   },
+   {
+    "token": "$piece_groundtorchwood",
+    "prefab": "piece_groundtorch_wood",
+    "name": "Standing Wood Torch"
+   },
+   {
+    "token": "$piece_groundtorch",
+    "prefab": "piece_groundtorch",
+    "name": "Standing Iron Torch"
+   },
+   {
+    "token": "$piece_groundtorchblue",
+    "prefab": "piece_groundtorch_blue",
+    "name": "Standing Blue-burning Iron Torch"
+   },
+   {
+    "token": "$piece_groundtorchgreen",
+    "prefab": "piece_groundtorch_green",
+    "name": "Standing Green-burning Iron Torch"
+   },
+   {
+    "token": "$piece_groundtorchdemister",
+    "prefab": "piece_groundtorch_mist",
+    "name": "Wisp Torch"
+   },
+   {
+    "token": "$piece_candle",
+    "prefab": "Candle_resin",
+    "name": "Resin Candle"
+   },
+   {
+    "token": "$piece_dvergr_lantern",
+    "prefab": "piece_dvergr_lantern",
+    "name": "Dvergr Wall Lantern"
+   },
+   {
+    "token": "$piece_dvergr_lantern_pole",
+    "prefab": "piece_dvergr_lantern_pole",
+    "name": "Dvergr Pole Lantern"
+   },
+   {
+    "token": "$piece_brazierfloor01",
+    "prefab": "piece_brazierfloor01",
+    "name": "Standing Brazier"
+   },
+   {
+    "token": "$piece_brazierfloor02",
+    "prefab": "piece_brazierfloor02",
+    "name": "Blue Standing Brazier"
+   },
+   {
+    "token": "$piece_brazierceiling01",
+    "prefab": "piece_brazierceiling01",
+    "name": "Hanging Brazier"
+   },
+   {
+    "token": "$piece_lavalantern",
+    "prefab": "piece_Lavalantern",
+    "name": "Lava Lantern"
+   },
+   {
+    "token": "$piece_hoodedlantern",
+    "prefab": "piece_hoodedlantern",
+    "name": "Hooded Lantern"
+   },
+   {
+    "token": "$piece_jackoturnip",
+    "prefab": "piece_jackoturnip",
+    "name": "Jack-o-turnip"
+   },
+   {
+    "token": "$piece_snowlantern",
+    "prefab": "piece_snowlantern",
+    "name": "Snow Lantern"
+   },
+   {
+    "token": "$piece_sconce",
+    "prefab": "piece_walltorch",
+    "name": "Sconce"
+   },
+   {
+    "token": "$piece_rug_deer",
+    "prefab": "rug_deer",
+    "name": "Deer Rug"
+   },
+   {
+    "token": "$piece_rug_bjorn",
+    "prefab": "rug_Bjorn",
+    "name": "Bearskin Rug"
+   },
+   {
+    "token": "$piece_rug_wolf",
+    "prefab": "rug_wolf",
+    "name": "Wolf Rug"
+   },
+   {
+    "token": "$piece_rug_lox",
+    "prefab": "rug_fur",
+    "name": "Lox Rug"
+   },
+   {
+    "token": "$piece_rug_straw",
+    "prefab": "rug_straw",
+    "name": "Straw"
+   },
+   {
+    "token": "$piece_rug_hare",
+    "prefab": "rug_hare",
+    "name": "Hare Rug"
+   },
+   {
+    "token": "$piece_rug_asksvin",
+    "prefab": "rug_asksvin",
+    "name": "Asksvin Rug"
+   },
+   {
+    "token": "$piece_rug_seal",
+    "prefab": "rug_seal",
+    "name": "Sealskin Rug"
+   },
+   {
+    "token": "$piece_rug_moose",
+    "prefab": "rug_moose",
+    "name": "Moose Hide Carpet"
+   },
+   {
+    "token": "$piece_jute_carpet",
+    "prefab": "jute_carpet",
+    "name": "Red Jute Carpet"
+   },
+   {
+    "token": "$piece_juteblue_carpet",
+    "prefab": "jute_carpet_blue",
+    "name": "Blue Jute Carpet"
+   },
+   {
+    "token": "$piece_clothdoor",
+    "prefab": "piece_cloth_hanging_door",
+    "name": "Red Jute Curtain"
+   },
+   {
+    "token": "$piece_hanging_cloth_blue1",
+    "prefab": "piece_cloth_hanging_door_blue",
+    "name": "Blue Jute Drapes"
+   },
+   {
+    "token": "$piece_hanging_cloth_blue2",
+    "prefab": "piece_cloth_hanging_door_blue2",
+    "name": "Blue Jute Curtain"
+   },
+   {
+    "token": "$piece_banner01",
+    "prefab": "piece_banner01",
+    "name": "Black Banner"
+   },
+   {
+    "token": "$piece_banner02",
+    "prefab": "piece_banner02",
+    "name": "Blue Banner"
+   },
+   {
+    "token": "$piece_banner03",
+    "prefab": "piece_banner03",
+    "name": "White and Red Striped Banner"
+   },
+   {
+    "token": "$piece_banner04",
+    "prefab": "piece_banner04",
+    "name": "Red Banner"
+   },
+   {
+    "token": "$piece_banner05",
+    "prefab": "piece_banner05",
+    "name": "Green Banner"
+   },
+   {
+    "token": "$piece_banner06",
+    "prefab": "piece_banner06",
+    "name": "Blue, Red and White Banner"
+   },
+   {
+    "token": "$piece_banner07",
+    "prefab": "piece_banner07",
+    "name": "White and Blue Striped Banner"
+   },
+   {
+    "token": "$piece_banner08",
+    "prefab": "piece_banner08",
+    "name": "Yellow Banner"
+   },
+   {
+    "token": "$piece_banner09",
+    "prefab": "piece_banner09",
+    "name": "Purple Banner"
+   },
+   {
+    "token": "$piece_banner10",
+    "prefab": "piece_banner10",
+    "name": "Orange Banner"
+   },
+   {
+    "token": "$piece_banner11",
+    "prefab": "piece_banner11",
+    "name": "White Banner"
+   },
+   {
+    "token": "$piece_celebrationgarland",
+    "prefab": "piece_CelebrationGarland",
+    "name": "Flower Garland"
+   },
+   {
+    "token": "$piece_fairylightgarland",
+    "prefab": "piece_FairylightGarland",
+    "name": "Fey Lights"
+   },
+   {
+    "token": "$piece_maypole",
+    "prefab": "piece_maypole",
+    "name": "Maypole"
+   },
+   {
+    "token": "$piece_mistletoe",
+    "prefab": "piece_mistletoe",
+    "name": "Mistletoe"
+   },
+   {
+    "token": "$piece_yulecrown",
+    "prefab": "piece_xmascrown",
+    "name": "Yule Wreath"
+   },
+   {
+    "token": "$piece_yulegarland",
+    "prefab": "piece_xmasgarland",
+    "name": "Yule Garland"
+   },
+   {
+    "token": "$piece_yuletree",
+    "prefab": "piece_xmastree",
+    "name": "Yule Tree"
+   },
+   {
+    "token": "$piece_woodstack",
+    "prefab": "wood_stack",
+    "name": "Wood Stack"
+   },
+   {
+    "token": "$piece_woodfinestack",
+    "prefab": "wood_fine_stack",
+    "name": "Finewood Stack"
+   },
+   {
+    "token": "$piece_woodcorestack",
+    "prefab": "wood_core_stack",
+    "name": "Corewood Stack"
+   },
+   {
+    "token": "$piece_yggdrasilstack",
+    "prefab": "wood_yggdrasil_stack",
+    "name": "Yggdrasil Wood Stack"
+   },
+   {
+    "token": "$piece_blackwoodstack",
+    "prefab": "blackwood_stack",
+    "name": "Ashwood Stack"
+   },
+   {
+    "token": "$piece_woodfroststack",
+    "prefab": "wood_frost_stack",
+    "name": "Timberwood Stack"
+   },
+   {
+    "token": "$piece_stonepile",
+    "prefab": "stone_pile",
+    "name": "Stone Pile"
+   },
+   {
+    "token": "$piece_flintpile",
+    "prefab": "flint_pile",
+    "name": "Flint Pile"
+   },
+   {
+    "token": "$piece_marblepile",
+    "prefab": "Morkhalla_Stonepile",
+    "name": "Black Marble Pile"
+   },
+   {
+    "token": "$piece_graustenpile",
+    "prefab": "grausten_pile",
+    "name": "Grausten Pile"
+   },
+   {
+    "token": "$piece_tinbarstack",
+    "prefab": "bar_tin_stack",
+    "name": "Tin Stack"
+   },
+   {
+    "token": "$piece_copperbarstack",
+    "prefab": "bar_copper_stack",
+    "name": "Copper Stack"
+   },
+   {
+    "token": "$piece_bronzebarstack",
+    "prefab": "bar_bronze_stack",
+    "name": "Bronze Stack"
+   },
+   {
+    "token": "$piece_ironbarstack",
+    "prefab": "bar_iron_stack",
+    "name": "Iron Stack"
+   },
+   {
+    "token": "$piece_silverbarstack",
+    "prefab": "bar_silver_stack",
+    "name": "Silver Stack"
+   },
+   {
+    "token": "$piece_blackmetalbarstack",
+    "prefab": "bar_blackmetal_stack",
+    "name": "Black Metal Stack"
+   },
+   {
+    "token": "$piece_flametalbarstack",
+    "prefab": "bar_flametal_stack",
+    "name": "Flametal Stack"
+   },
+   {
+    "token": "$piece_bloodgoldbarstack",
+    "prefab": "bar_gold_stack",
+    "name": "Bloodgold Stack"
+   },
+   {
+    "token": "$piece_coalpile",
+    "prefab": "coal_pile",
+    "name": "Coal Pile"
+   },
+   {
+    "token": "$piece_bonestack",
+    "prefab": "bone_stack",
+    "name": "Bone Stack"
+   },
+   {
+    "token": "$piece_skullpile",
+    "prefab": "skull_pile",
+    "name": "Pile of Skulls"
+   },
+   {
+    "token": "$piece_treasure_stack",
+    "prefab": "treasure_stack",
+    "name": "Coin Stack"
+   },
+   {
+    "token": "$piece_treasure_pile",
+    "prefab": "treasure_pile",
+    "name": "Coin Pile"
+   },
+   {
+    "token": "$piece_asksvinskeleton",
+    "prefab": "piece_asksvinskeleton",
+    "name": "Asksvin Skeleton"
+   },
+   {
+    "token": "$piece_portal",
+    "prefab": "portal",
+    "name": "Portal"
+   },
+   {
+    "token": "$piece_portal_stone",
+    "prefab": "portal_stone",
+    "name": "Portal – Stone"
+   },
+   {
+    "token": "$ship_raft",
+    "prefab": "Raft",
+    "name": "Raft"
+   },
+   {
+    "token": "$ship_karve",
+    "prefab": "Karve",
+    "name": "Karve"
+   },
+   {
+    "token": "$ship_longship",
+    "prefab": "VikingShip",
+    "name": "Longship"
+   },
+   {
+    "token": "$ship_longship_ashlands",
+    "prefab": "VikingShip_Ashlands",
+    "name": "Drakkar"
+   },
+   {
+    "token": "$piece_bathtub",
+    "prefab": "piece_bathtub",
+    "name": "Hot Tub"
+   },
+   {
+    "token": "$piece_barber",
+    "prefab": "piece_barber",
+    "name": "Barber Station"
+   },
+   {
+    "token": "$piece_cartographytable",
+    "prefab": "piece_cartographytable",
+    "name": "Cartography Table"
+   },
+   {
+    "token": "$piece_trainingdummy",
+    "prefab": "piece_TrainingDummy",
+    "name": "T.W.I.G."
+   },
+   {
+    "token": "$piece_archerytarget",
+    "prefab": "piece_ArcheryTarget",
+    "name": "Archery Target"
+   },
+   {
+    "token": "$piece_guardstone",
+    "prefab": "dverger_guardstone",
+    "name": "Ward"
+   },
+   {
+    "token": "$piece_shieldgenerator",
+    "prefab": "charred_shieldgenerator",
+    "name": "Shield Generator"
+   },
+   {
+    "token": "$piece_trap",
+    "prefab": "fuling_trap",
+    "name": "Trap"
+   },
+   {
+    "token": "$piece_turret",
+    "prefab": "fuling_turret",
+    "name": "Ballista"
+   },
+   {
+    "token": "$tool_batteringram",
+    "prefab": "BatteringRam",
+    "name": "Battering Ram"
+   },
+   {
+    "token": "$tool_catapult",
+    "prefab": "Catapult",
+    "name": "Catapult"
+   }
+  ]
+ },
+ {
+  "id": "AllFoodCooked",
+  "name": "The Master Chef",
+  "desc": "Cook every kind of dish.",
+  "icon": true,
+  "difficulty": 1,
+  "dynamic": true,
+  "crafts": [
+   {
+    "token": "$item_bakedpoteitr_uncooked",
+    "prefab": "BakedPoteitrUncooked",
+    "name": "Unbaked Poteitr"
+   },
+   {
+    "token": "$item_blacksoup",
+    "prefab": "BlackSoup",
+    "name": "Black Soup"
+   },
+   {
+    "token": "$item_bloodpudding",
+    "prefab": "BloodPudding",
+    "name": "Blood Pudding"
+   },
+   {
+    "token": "$item_boarjerky",
+    "prefab": "BoarJerky",
+    "name": "Boar Jerky"
+   },
+   {
+    "token": "$item_breaddough",
+    "prefab": "BreadDough",
+    "name": "Bread Dough"
+   },
+   {
+    "token": "$item_carrotsoup",
+    "prefab": "CarrotSoup",
+    "name": "Carrot Soup"
+   },
+   {
+    "token": "$item_egg_cooked",
+    "prefab": "CookedEgg",
+    "name": "Cooked Egg"
+   },
+   {
+    "token": "$item_deerstew",
+    "prefab": "DeerStew",
+    "name": "Deer Stew"
+   },
+   {
+    "token": "$item_eyescream",
+    "prefab": "Eyescream",
+    "name": "Eyescream"
+   },
+   {
+    "token": "$item_fierysvinstew",
+    "prefab": "FierySvinstew",
+    "name": "Fiery Svinstew"
+   },
+   {
+    "token": "$item_fish_raw",
+    "prefab": "FishAnglerRaw",
+    "name": "Raw Fish"
+   },
+   {
+    "token": "$item_fishandbreaduncooked",
+    "prefab": "FishAndBreadUncooked",
+    "name": "Uncooked Fish 'n' Bread"
+   },
+   {
+    "token": "$item_sealsoup",
+    "prefab": "SealSoup",
+    "name": "Seal Meat Soup"
+   },
+   {
+    "token": "$item_fishwraps",
+    "prefab": "FishWraps",
+    "name": "Fish Wraps"
+   },
+   {
+    "token": "$item_honeyglazedchickenuncooked",
+    "prefab": "HoneyGlazedChickenUncooked",
+    "name": "Uncooked Honey Glazed Chicken"
+   },
+   {
+    "token": "$item_kalechips_uncooked",
+    "prefab": "KaleChipsUncooked",
+    "name": "Raw Kale Chips"
+   },
+   {
+    "token": "$item_lingondricka",
+    "prefab": "Lingondricka",
+    "name": "Lingonberry Juice"
+   },
+   {
+    "token": "$item_loxpie_uncooked",
+    "prefab": "LoxPieUncooked",
+    "name": "Unbaked Lox Pie"
+   },
+   {
+    "token": "$item_magicallystuffedmushroomuncooked",
+    "prefab": "MagicallyStuffedShroomUncooked",
+    "name": "Uncooked Stuffed Mushroom"
+   },
+   {
+    "token": "$item_marinatedgreens",
+    "prefab": "MarinatedGreens",
+    "name": "Marinated Greens"
+   },
+   {
+    "token": "$item_mashedmeat",
+    "prefab": "MashedMeat",
+    "name": "Mashed Meat"
+   },
+   {
+    "token": "$item_meatballsmashedpoteitr",
+    "prefab": "MeatballsMashedPoteitr",
+    "name": "Meatballs and Poteitr"
+   },
+   {
+    "token": "$item_meatplatteruncooked",
+    "prefab": "MeatPlatterUncooked",
+    "name": "Uncooked Meat Platter"
+   },
+   {
+    "token": "$item_mincemeatsauce",
+    "prefab": "MinceMeatSauce",
+    "name": "Minced Meat Sauce"
+   },
+   {
+    "token": "$item_mistharesupremeuncooked",
+    "prefab": "MisthareSupremeUncooked",
+    "name": "Uncooked Misthare Supreme"
+   },
+   {
+    "token": "$item_moosekebab",
+    "prefab": "MooseKebab",
+    "name": "Meat In Bread"
+   },
+   {
+    "token": "$item_mushroomomelette",
+    "prefab": "MushroomOmelette",
+    "name": "Mushroom Omelette"
+   },
+   {
+    "token": "$item_oatmeallingonberryjam",
+    "prefab": "OatmealLingonberryJam",
+    "name": "Oatmeal"
+   },
+   {
+    "token": "$item_oatmilk",
+    "prefab": "OatMilk",
+    "name": "Oat Milk"
+   },
+   {
+    "token": "$item_onionsoup",
+    "prefab": "OnionSoup",
+    "name": "Onion Soup"
+   },
+   {
+    "token": "$item_ovenpancake_uncooked",
+    "prefab": "OvenPancakeUncooked",
+    "name": "Oven Pancake Batter"
+   },
+   {
+    "token": "$item_pancakes",
+    "prefab": "Pancakes",
+    "name": "Pancakes"
+   },
+   {
+    "token": "$item_piquantpie_uncooked",
+    "prefab": "PiquantPieUncooked",
+    "name": "Uncooked Piquant Pie"
+   },
+   {
+    "token": "$item_queensjam",
+    "prefab": "QueensJam",
+    "name": "Queen's Jam"
+   },
+   {
+    "token": "$item_roastedcrustpie_uncooked",
+    "prefab": "RoastedCrustPieUncooked",
+    "name": "Uncooked Roasted Crust Pie"
+   },
+   {
+    "token": "$item_salad",
+    "prefab": "Salad",
+    "name": "Salad"
+   },
+   {
+    "token": "$item_sausages",
+    "prefab": "Sausages",
+    "name": "Sausages"
+   },
+   {
+    "token": "$item_scorchingmedley",
+    "prefab": "ScorchingMedley",
+    "name": "Scorching Medley"
+   },
+   {
+    "token": "$item_sealsoup",
+    "prefab": "SealSoup",
+    "name": "Seal Meat Soup"
+   },
+   {
+    "token": "$item_seekeraspic",
+    "prefab": "SeekerAspic",
+    "name": "Seeker Aspic"
+   },
+   {
+    "token": "$item_serpentstew",
+    "prefab": "SerpentStew",
+    "name": "Serpent Stew"
+   },
+   {
+    "token": "$item_shocklatesmoothie",
+    "prefab": "ShocklateSmoothie",
+    "name": "Muckshake"
+   },
+   {
+    "token": "$item_sizzlingberrybroth",
+    "prefab": "SizzlingBerryBroth",
+    "name": "Sizzling Berry Broth"
+   },
+   {
+    "token": "$item_smokedfish",
+    "prefab": "SmokedFish",
+    "name": "Smoked Fish"
+   },
+   {
+    "token": "$item_smokedmoosemeat",
+    "prefab": "SmokedMooseMeat",
+    "name": "Smoked Moose Meat"
+   },
+   {
+    "token": "$item_sparklingshroomshake",
+    "prefab": "SparklingShroomshake",
+    "name": "Sparkling Shroomshake"
+   },
+   {
+    "token": "$item_spicymarmalade",
+    "prefab": "SpicyMarmalade",
+    "name": "Spicy Marmalade"
+   },
+   {
+    "token": "$item_turnipstew",
+    "prefab": "TurnipStew",
+    "name": "Turnip Stew"
+   },
+   {
+    "token": "$item_vikingcupcake_uncooked",
+    "prefab": "VikingCupcakeUncooked",
+    "name": "Unbaked Sweetbread"
+   },
+   {
+    "token": "$item_wolfjerky",
+    "prefab": "WolfJerky",
+    "name": "Wolf Jerky"
+   },
+   {
+    "token": "$item_wolf_skewer",
+    "prefab": "WolfMeatSkewer",
+    "name": "Wolf Skewer"
+   },
+   {
+    "token": "$item_yggdrasilporridge",
+    "prefab": "YggdrasilPorridge",
+    "name": "Yggdrasil Porridge"
+   },
+   {
+    "token": "$item_boar_meat_cooked",
+    "prefab": "CookedMeat",
+    "name": "Cooked Boar Meat"
+   },
+   {
+    "token": "$item_necktailgrilled",
+    "prefab": "NeckTailGrilled",
+    "name": "Grilled Neck Tail"
+   },
+   {
+    "token": "$item_fish_cooked",
+    "prefab": "FishCooked",
+    "name": "Cooked Fish"
+   },
+   {
+    "token": "$item_deer_meat_cooked",
+    "prefab": "CookedDeerMeat",
+    "name": "Cooked Deer Meat"
+   },
+   {
+    "token": "$item_wolf_meat_cooked",
+    "prefab": "CookedWolfMeat",
+    "name": "Cooked Wolf Meat"
+   },
+   {
+    "token": "$item_chicken_meat_cooked",
+    "prefab": "CookedChickenMeat",
+    "name": "Cooked Chicken Meat"
+   },
+   {
+    "token": "$item_hare_meat_cooked",
+    "prefab": "CookedHareMeat",
+    "name": "Cooked Hare Meat"
+   },
+   {
+    "token": "$item_bjorn_meat_cooked",
+    "prefab": "CookedBjornMeat",
+    "name": "Cooked Bear Meat"
+   },
+   {
+    "token": "$item_serpentmeatcooked",
+    "prefab": "SerpentMeatCooked",
+    "name": "Cooked Serpent Meat"
+   },
+   {
+    "token": "$item_loxmeat_cooked",
+    "prefab": "CookedLoxMeat",
+    "name": "Cooked Lox Meat"
+   },
+   {
+    "token": "$item_bug_meat_cooked",
+    "prefab": "CookedBugMeat",
+    "name": "Cooked Seeker Meat"
+   },
+   {
+    "token": "$item_volture_meat_cooked",
+    "prefab": "CookedVoltureMeat",
+    "name": "Cooked Volture Meat"
+   },
+   {
+    "token": "$item_asksvin_meat_cooked",
+    "prefab": "CookedAsksvinMeat",
+    "name": "Cooked Asksvin Tail"
+   },
+   {
+    "token": "$item_bonemawmeat_cooked",
+    "prefab": "CookedBoneMawSerpentMeat",
+    "name": "Cooked Bonemaw Meat"
+   },
+   {
+    "token": "$item_moose_meat_cooked",
+    "prefab": "CookedMooseMeat",
+    "name": "Cooked Moose Meat"
+   },
+   {
+    "token": "$item_loxpie",
+    "prefab": "LoxPie",
+    "name": "Lox Meat Pie"
+   },
+   {
+    "token": "$item_bread",
+    "prefab": "Bread",
+    "name": "Bread"
+   },
+   {
+    "token": "$item_fishandbread",
+    "prefab": "FishAndBread",
+    "name": "Fish 'n' Bread"
+   },
+   {
+    "token": "$item_meatplatter",
+    "prefab": "MeatPlatter",
+    "name": "Meat Platter"
+   },
+   {
+    "token": "$item_honeyglazedchicken",
+    "prefab": "HoneyGlazedChicken",
+    "name": "Honey Glazed Chicken"
+   },
+   {
+    "token": "$item_mistharesupreme",
+    "prefab": "MisthareSupreme",
+    "name": "Misthare Supreme"
+   },
+   {
+    "token": "$item_magicallystuffedmushroom",
+    "prefab": "MagicallyStuffedShroom",
+    "name": "Stuffed Mushroom"
+   },
+   {
+    "token": "$item_roastedcrustpie",
+    "prefab": "RoastedCrustPie",
+    "name": "Roasted Crust Pie"
+   },
+   {
+    "token": "$item_piquantpie",
+    "prefab": "PiquantPie",
+    "name": "Piquant Pie"
+   },
+   {
+    "token": "$item_vikingcupcake",
+    "prefab": "VikingCupcake",
+    "name": "Frosted Sweetbread"
+   },
+   {
+    "token": "$item_blubber_cooked",
+    "prefab": "CookedSealBlubber",
+    "name": "Cooked Seal Blubber"
+   },
+   {
+    "token": "$item_ovenpancake",
+    "prefab": "OvenPancake",
+    "name": "Oven Pancake"
+   },
+   {
+    "token": "$item_kalechips",
+    "prefab": "KaleChips",
+    "name": "Kale Chips"
+   },
+   {
+    "token": "$item_bakedpoteitr",
+    "prefab": "BakedPoteitr",
+    "name": "Baked Poteitr"
+   }
+  ]
+ },
+ {
+  "id": "AllFoodEaten",
+  "name": "The Gourmet",
+  "desc": "Eat every kind of edible item.",
+  "icon": true,
+  "difficulty": 1,
+  "dynamic": true,
+  "eaten": [
+   {
+    "token": "$item_bakedpoteitr",
+    "prefab": "BakedPoteitr",
+    "name": "Baked Poteitr"
+   },
+   {
+    "token": "$item_blacksoup",
+    "prefab": "BlackSoup",
+    "name": "Black Soup"
+   },
+   {
+    "token": "$item_bloodpudding",
+    "prefab": "BloodPudding",
+    "name": "Blood Pudding"
+   },
+   {
+    "token": "$item_blueberries",
+    "prefab": "Blueberries",
+    "name": "Blueberries"
+   },
+   {
+    "token": "$item_boarjerky",
+    "prefab": "BoarJerky",
+    "name": "Boar Jerky"
+   },
+   {
+    "token": "$item_bread",
+    "prefab": "Bread",
+    "name": "Bread"
+   },
+   {
+    "token": "$item_carrot",
+    "prefab": "Carrot",
+    "name": "Carrot"
+   },
+   {
+    "token": "$item_carrotsoup",
+    "prefab": "CarrotSoup",
+    "name": "Carrot Soup"
+   },
+   {
+    "token": "$item_cloudberries",
+    "prefab": "Cloudberry",
+    "name": "Cloudberries"
+   },
+   {
+    "token": "$item_asksvin_meat_cooked",
+    "prefab": "CookedAsksvinMeat",
+    "name": "Cooked Asksvin Tail"
+   },
+   {
+    "token": "$item_bjorn_meat_cooked",
+    "prefab": "CookedBjornMeat",
+    "name": "Cooked Bear Meat"
+   },
+   {
+    "token": "$item_bonemawmeat_cooked",
+    "prefab": "CookedBoneMawSerpentMeat",
+    "name": "Cooked Bonemaw Meat"
+   },
+   {
+    "token": "$item_bug_meat_cooked",
+    "prefab": "CookedBugMeat",
+    "name": "Cooked Seeker Meat"
+   },
+   {
+    "token": "$item_chicken_meat_cooked",
+    "prefab": "CookedChickenMeat",
+    "name": "Cooked Chicken Meat"
+   },
+   {
+    "token": "$item_deer_meat_cooked",
+    "prefab": "CookedDeerMeat",
+    "name": "Cooked Deer Meat"
+   },
+   {
+    "token": "$item_egg_cooked",
+    "prefab": "CookedEgg",
+    "name": "Cooked Egg"
+   },
+   {
+    "token": "$item_hare_meat_cooked",
+    "prefab": "CookedHareMeat",
+    "name": "Cooked Hare Meat"
+   },
+   {
+    "token": "$item_loxmeat_cooked",
+    "prefab": "CookedLoxMeat",
+    "name": "Cooked Lox Meat"
+   },
+   {
+    "token": "$item_boar_meat_cooked",
+    "prefab": "CookedMeat",
+    "name": "Cooked Boar Meat"
+   },
+   {
+    "token": "$item_moose_meat_cooked",
+    "prefab": "CookedMooseMeat",
+    "name": "Cooked Moose Meat"
+   },
+   {
+    "token": "$item_blubber_cooked",
+    "prefab": "CookedSealBlubber",
+    "name": "Cooked Seal Blubber"
+   },
+   {
+    "token": "$item_wolf_meat_cooked",
+    "prefab": "CookedWolfMeat",
+    "name": "Cooked Wolf Meat"
+   },
+   {
+    "token": "$item_volture_meat_cooked",
+    "prefab": "CookedVoltureMeat",
+    "name": "Cooked Volture Meat"
+   },
+   {
+    "token": "$item_deerstew",
+    "prefab": "DeerStew",
+    "name": "Deer Stew"
+   },
+   {
+    "token": "$item_eyescream",
+    "prefab": "Eyescream",
+    "name": "Eyescream"
+   },
+   {
+    "token": "$item_feastashlands",
+    "prefab": "FeastAshlands",
+    "name": "Ashlands Gourmet Bowl"
+   },
+   {
+    "token": "$item_feastblackforest",
+    "prefab": "FeastBlackforest",
+    "name": "Black Forest Buffet Platter"
+   },
+   {
+    "token": "$item_feastdeepnorth",
+    "prefab": "FeastDeepNorth",
+    "name": "Northern Morning Fare"
+   },
+   {
+    "token": "$item_feastmeadows",
+    "prefab": "FeastMeadows",
+    "name": "Whole Roasted Meadow Boar"
+   },
+   {
+    "token": "$item_feastmistlands",
+    "prefab": "FeastMistlands",
+    "name": "Mushrooms Galore á la Mistlands"
+   },
+   {
+    "token": "$item_feastmountains",
+    "prefab": "FeastMountains",
+    "name": "Hearty Mountain Logger's Stew"
+   },
+   {
+    "token": "$item_feastoceans",
+    "prefab": "FeastOceans",
+    "name": "Sailor's Bounty"
+   },
+   {
+    "token": "$item_feastplains",
+    "prefab": "FeastPlains",
+    "name": "Plains Pie Picnic"
+   },
+   {
+    "token": "$item_feastswamps",
+    "prefab": "FeastSwamps",
+    "name": "Swamp Dweller's Delight"
+   },
+   {
+    "token": "$item_fiddleheadfern",
+    "prefab": "Fiddleheadfern",
+    "name": "Fiddlehead"
+   },
+   {
+    "token": "$item_fierysvinstew",
+    "prefab": "FierySvinstew",
+    "name": "Fiery Svinstew"
+   },
+   {
+    "token": "$item_fishandbread",
+    "prefab": "FishAndBread",
+    "name": "Fish 'n' Bread"
+   },
+   {
+    "token": "$item_fish_cooked",
+    "prefab": "FishCooked",
+    "name": "Cooked Fish"
+   },
+   {
+    "token": "$item_fishsoup",
+    "prefab": "FishSoup",
+    "name": "Fish Soup"
+   },
+   {
+    "token": "$item_fishwraps",
+    "prefab": "FishWraps",
+    "name": "Fish Wraps"
+   },
+   {
+    "token": "$item_glowworm",
+    "prefab": "GlowWorm",
+    "name": "Luminous Larva"
+   },
+   {
+    "token": "$item_honey",
+    "prefab": "Honey",
+    "name": "Honey"
+   },
+   {
+    "token": "$item_honeyglazedchicken",
+    "prefab": "HoneyGlazedChicken",
+    "name": "Honey Glazed Chicken"
+   },
+   {
+    "token": "$item_kale",
+    "prefab": "Kale",
+    "name": "Kale"
+   },
+   {
+    "token": "$item_kalechips",
+    "prefab": "KaleChips",
+    "name": "Kale Chips"
+   },
+   {
+    "token": "$item_lingonberries",
+    "prefab": "Lingonberry",
+    "name": "Lingonberries"
+   },
+   {
+    "token": "$item_lingondricka",
+    "prefab": "Lingondricka",
+    "name": "Lingonberry Juice"
+   },
+   {
+    "token": "$item_loxpie",
+    "prefab": "LoxPie",
+    "name": "Lox Meat Pie"
+   },
+   {
+    "token": "$item_magicallystuffedmushroom",
+    "prefab": "MagicallyStuffedShroom",
+    "name": "Stuffed Mushroom"
+   },
+   {
+    "token": "$item_marinatedgreens",
+    "prefab": "MarinatedGreens",
+    "name": "Marinated Greens"
+   },
+   {
+    "token": "$item_mashedmeat",
+    "prefab": "MashedMeat",
+    "name": "Mashed Meat"
+   },
+   {
+    "token": "$item_meatballsmashedpoteitr",
+    "prefab": "MeatballsMashedPoteitr",
+    "name": "Meatballs and Poteitr"
+   },
+   {
+    "token": "$item_meatplatter",
+    "prefab": "MeatPlatter",
+    "name": "Meat Platter"
+   },
+   {
+    "token": "$item_mincemeatsauce",
+    "prefab": "MinceMeatSauce",
+    "name": "Minced Meat Sauce"
+   },
+   {
+    "token": "$item_mistharesupreme",
+    "prefab": "MisthareSupreme",
+    "name": "Misthare Supreme"
+   },
+   {
+    "token": "$item_moosekebab",
+    "prefab": "MooseKebab",
+    "name": "Meat In Bread"
+   },
+   {
+    "token": "$item_mushroomcommon",
+    "prefab": "Mushroom",
+    "name": "Mushroom"
+   },
+   {
+    "token": "$item_mushroomblue",
+    "prefab": "MushroomBlue",
+    "name": "Blue Mushroom"
+   },
+   {
+    "token": "$item_jotunpuffs",
+    "prefab": "MushroomJotunPuffs",
+    "name": "Jotun Puffs"
+   },
+   {
+    "token": "$item_magecap",
+    "prefab": "MushroomMagecap",
+    "name": "Magecap"
+   },
+   {
+    "token": "$item_mushroomomelette",
+    "prefab": "MushroomOmelette",
+    "name": "Mushroom Omelette"
+   },
+   {
+    "token": "$item_smokepuff",
+    "prefab": "MushroomSmokePuff",
+    "name": "Smoke Puff"
+   },
+   {
+    "token": "$item_mushroomyellow",
+    "prefab": "MushroomYellow",
+    "name": "Yellow Mushroom"
+   },
+   {
+    "token": "$item_necktailgrilled",
+    "prefab": "NeckTailGrilled",
+    "name": "Grilled Neck Tail"
+   },
+   {
+    "token": "$item_oat",
+    "prefab": "Oat",
+    "name": "Oats"
+   },
+   {
+    "token": "$item_oatmeallingonberryjam",
+    "prefab": "OatmealLingonberryJam",
+    "name": "Oatmeal"
+   },
+   {
+    "token": "$item_oatmilk",
+    "prefab": "OatMilk",
+    "name": "Oat Milk"
+   },
+   {
+    "token": "$item_onion",
+    "prefab": "Onion",
+    "name": "Onion"
+   },
+   {
+    "token": "$item_onionsoup",
+    "prefab": "OnionSoup",
+    "name": "Onion Soup"
+   },
+   {
+    "token": "$item_ovenpancake",
+    "prefab": "OvenPancake",
+    "name": "Oven Pancake"
+   },
+   {
+    "token": "$item_pancakes",
+    "prefab": "Pancakes",
+    "name": "Pancakes"
+   },
+   {
+    "token": "$item_piquantpie",
+    "prefab": "PiquantPie",
+    "name": "Piquant Pie"
+   },
+   {
+    "token": "$item_poteitr",
+    "prefab": "Poteitr",
+    "name": "Poteitr"
+   },
+   {
+    "token": "$item_feastdeepnorth",
+    "prefab": "FeastDeepNorth",
+    "name": "Northern Morning Fare"
+   },
+   {
+    "token": "$item_queensjam",
+    "prefab": "QueensJam",
+    "name": "Queen's Jam"
+   },
+   {
+    "token": "$item_raspberries",
+    "prefab": "Raspberry",
+    "name": "Raspberries"
+   },
+   {
+    "token": "$item_roastedcrustpie",
+    "prefab": "RoastedCrustPie",
+    "name": "Roasted Crust Pie"
+   },
+   {
+    "token": "$item_royaljelly",
+    "prefab": "RoyalJelly",
+    "name": "Royal Jelly"
+   },
+   {
+    "token": "$item_salad",
+    "prefab": "Salad",
+    "name": "Salad"
+   },
+   {
+    "token": "$item_sausages",
+    "prefab": "Sausages",
+    "name": "Sausages"
+   },
+   {
+    "token": "$item_scorchingmedley",
+    "prefab": "ScorchingMedley",
+    "name": "Scorching Medley"
+   },
+   {
+    "token": "$item_sealsoup",
+    "prefab": "SealSoup",
+    "name": "Seal Meat Soup"
+   },
+   {
+    "token": "$item_seekeraspic",
+    "prefab": "SeekerAspic",
+    "name": "Seeker Aspic"
+   },
+   {
+    "token": "$item_serpentmeatcooked",
+    "prefab": "SerpentMeatCooked",
+    "name": "Cooked Serpent Meat"
+   },
+   {
+    "token": "$item_serpentstew",
+    "prefab": "SerpentStew",
+    "name": "Serpent Stew"
+   },
+   {
+    "token": "$item_shocklatesmoothie",
+    "prefab": "ShocklateSmoothie",
+    "name": "Muckshake"
+   },
+   {
+    "token": "$item_sizzlingberrybroth",
+    "prefab": "SizzlingBerryBroth",
+    "name": "Sizzling Berry Broth"
+   },
+   {
+    "token": "$item_smokedfish",
+    "prefab": "SmokedFish",
+    "name": "Smoked Fish"
+   },
+   {
+    "token": "$item_smokedmoosemeat",
+    "prefab": "SmokedMooseMeat",
+    "name": "Smoked Moose Meat"
+   },
+   {
+    "token": "$item_sparklingshroomshake",
+    "prefab": "SparklingShroomshake",
+    "name": "Sparkling Shroomshake"
+   },
+   {
+    "token": "$item_spicymarmalade",
+    "prefab": "SpicyMarmalade",
+    "name": "Spicy Marmalade"
+   },
+   {
+    "token": "$item_turnipstew",
+    "prefab": "TurnipStew",
+    "name": "Turnip Stew"
+   },
+   {
+    "token": "$item_vikingcupcake",
+    "prefab": "VikingCupcake",
+    "name": "Frosted Sweetbread"
+   },
+   {
+    "token": "$item_vineberry",
+    "prefab": "Vineberry",
+    "name": "Vineberry Cluster"
+   },
+   {
+    "token": "$item_wolfjerky",
+    "prefab": "WolfJerky",
+    "name": "Wolf Jerky"
+   },
+   {
+    "token": "$item_wolf_skewer",
+    "prefab": "WolfMeatSkewer",
+    "name": "Wolf Skewer"
+   },
+   {
+    "token": "$item_yggdrasilporridge",
+    "prefab": "YggdrasilPorridge",
+    "name": "Yggdrasil Porridge"
+   }
+  ]
+ },
+ {
+  "id": "AllItemCraft",
+  "name": "The Artisan",
+  "desc": "Craft every kind of item.",
+  "icon": true,
+  "difficulty": 1,
+  "dynamic": true,
+  "crafts": [
+   {
+    "token": "$item_chest_berserker",
+    "prefab": "ArmorBerserkerChest",
+    "name": "Patterns of the Bear"
+   },
+   {
+    "token": "$item_legs_berserker",
+    "prefab": "ArmorBerserkerLegs",
+    "name": "Loincloth of the Bear"
+   },
+   {
+    "token": "$item_chest_berserker_undead",
+    "prefab": "ArmorBerserkerUndeadChest",
+    "name": "Vilebone Cage"
+   },
+   {
+    "token": "$item_legs_berserker_undead",
+    "prefab": "ArmorBerserkerUndeadLegs",
+    "name": "Vilebone Drapes"
+   },
+   {
+    "token": "$item_chest_bronze",
+    "prefab": "ArmorBronzeChest",
+    "name": "Bronze Plate Tunic"
+   },
+   {
+    "token": "$item_legs_bronze",
+    "prefab": "ArmorBronzeLegs",
+    "name": "Bronze Plate Leggings"
+   },
+   {
+    "token": "$item_chest_carapace",
+    "prefab": "ArmorCarapaceChest",
+    "name": "Carapace Breastplate"
+   },
+   {
+    "token": "$item_legs_carapace",
+    "prefab": "ArmorCarapaceLegs",
+    "name": "Carapace Greaves"
+   },
+   {
+    "token": "$item_chest_dress1",
+    "prefab": "ArmorDress1",
+    "name": "Plain Brown Dress"
+   },
+   {
+    "token": "$item_chest_dress10",
+    "prefab": "ArmorDress10",
+    "name": "Simple Undyed Dress"
+   },
+   {
+    "token": "$item_chest_dress2",
+    "prefab": "ArmorDress2",
+    "name": "Brown Dress with Shawl"
+   },
+   {
+    "token": "$item_chest_dress3",
+    "prefab": "ArmorDress3",
+    "name": "Brown Dress with Beads"
+   },
+   {
+    "token": "$item_chest_dress4",
+    "prefab": "ArmorDress4",
+    "name": "Plain Blue Dress"
+   },
+   {
+    "token": "$item_chest_dress5",
+    "prefab": "ArmorDress5",
+    "name": "Blue Dress with Shawl"
+   },
+   {
+    "token": "$item_chest_dress6",
+    "prefab": "ArmorDress6",
+    "name": "Blue Dress with Beads"
+   },
+   {
+    "token": "$item_chest_dress7",
+    "prefab": "ArmorDress7",
+    "name": "Plain Yellow Dress"
+   },
+   {
+    "token": "$item_chest_dress8",
+    "prefab": "ArmorDress8",
+    "name": "Yellow Dress with Shawl"
+   },
+   {
+    "token": "$item_chest_dress9",
+    "prefab": "ArmorDress9",
+    "name": "Yellow Dress with Beads"
+   },
+   {
+    "token": "$item_chest_fenris",
+    "prefab": "ArmorFenringChest",
+    "name": "Fenris Coat"
+   },
+   {
+    "token": "$item_legs_fenris",
+    "prefab": "ArmorFenringLegs",
+    "name": "Fenris Leggings"
+   },
+   {
+    "token": "$item_chest_flametal",
+    "prefab": "ArmorFlametalChest",
+    "name": "Flametal Breastplate"
+   },
+   {
+    "token": "$item_legs_flametal",
+    "prefab": "ArmorFlametalLegs",
+    "name": "Flametal Greaves"
+   },
+   {
+    "token": "$item_chest_gold",
+    "name": "item chest gold"
+   },
+   {
+    "token": "$item_chest_heavy_gold_uncooked",
+    "prefab": "ArmorGoldHeavyChestUncooked",
+    "name": "Cast: Breastplate of the Protector"
+   },
+   {
+    "token": "$item_legs_gold",
+    "name": "item legs gold"
+   },
+   {
+    "token": "$item_legs_heavy_gold_uncooked",
+    "prefab": "ArmorGoldHeavyLegsUncooked",
+    "name": "Cast: Trousers of the Protector"
+   },
+   {
+    "token": "$item_chest_mage_deepnorth",
+    "prefab": "ArmorDeepNorthMageChest",
+    "name": "Robes of the Caller"
+   },
+   {
+    "token": "$item_chest_mage_gold_uncooked",
+    "prefab": "ArmorGoldMageChestUncooked",
+    "name": "Cast: Robes of the Caller"
+   },
+   {
+    "token": "$item_legs_mage_deepnorth",
+    "prefab": "ArmorDeepNorthMagelegs",
+    "name": "Trousers of the Caller"
+   },
+   {
+    "token": "$item_legs_mage_gold_uncooked",
+    "prefab": "ArmorGoldMageLegsUncooked",
+    "name": "Cast: Trousers of the Caller"
+   },
+   {
+    "token": "$item_chest_medium_deepnorth",
+    "prefab": "ArmorDeepNorthMediumChest",
+    "name": "Chestpiece of the Vanguard"
+   },
+   {
+    "token": "$item_chest_medium_gold_uncooked",
+    "prefab": "ArmorGoldMediumChestUncooked",
+    "name": "Cast: Chestpiece of the Vanguard"
+   },
+   {
+    "token": "$item_legs_medium_deepnorth",
+    "prefab": "ArmorDeepNorthMediumlegs",
+    "name": "Trousers of the Vanguard"
+   },
+   {
+    "token": "$item_legs_medium_gold_uncooked",
+    "prefab": "ArmorGoldMediumLegsUncooked",
+    "name": "Cast: Trousers of the Vanguard"
+   },
+   {
+    "token": "$item_chest_harvester1",
+    "prefab": "ArmorHarvester1",
+    "name": "Harvest Tunic"
+   },
+   {
+    "token": "$item_chest_harvester2",
+    "prefab": "ArmorHarvester2",
+    "name": "Harvest Dress"
+   },
+   {
+    "token": "$item_chest_iron",
+    "prefab": "ArmorIronChest",
+    "name": "Iron Scale Mail"
+   },
+   {
+    "token": "$item_legs_iron",
+    "prefab": "ArmorIronLegs",
+    "name": "Iron Greaves"
+   },
+   {
+    "token": "$item_chest_leather",
+    "prefab": "ArmorLeatherChest",
+    "name": "Leather Tunic"
+   },
+   {
+    "token": "$item_legs_leather",
+    "prefab": "ArmorLeatherLegs",
+    "name": "Leather Trousers"
+   },
+   {
+    "token": "$item_chest_mage",
+    "prefab": "ArmorMageChest",
+    "name": "Eitr-weave Robe"
+   },
+   {
+    "token": "$item_chest_mage_ashlands",
+    "prefab": "ArmorMageChest_Ashlands",
+    "name": "Robes of Embla"
+   },
+   {
+    "token": "$item_legs_mage",
+    "prefab": "ArmorMageLegs",
+    "name": "Eitr-weave Trousers"
+   },
+   {
+    "token": "$item_legs_mage_ashlands",
+    "prefab": "ArmorMageLegs_Ashlands",
+    "name": "Trousers of Embla"
+   },
+   {
+    "token": "$item_chest_medium_ashlands",
+    "prefab": "ArmorAshlandsMediumChest",
+    "name": "Breastplate of Ask"
+   },
+   {
+    "token": "$item_legs_medium_ashlands",
+    "prefab": "ArmorAshlandsMediumlegs",
+    "name": "Trousers of Ask"
+   },
+   {
+    "token": "$item_chest_pcuirass",
+    "prefab": "ArmorPaddedCuirass",
+    "name": "Padded Cuirass"
+   },
+   {
+    "token": "$item_legs_pgreaves",
+    "prefab": "ArmorPaddedGreaves",
+    "name": "Padded Greaves"
+   },
+   {
+    "token": "$item_chest_rags",
+    "prefab": "ArmorRagsChest",
+    "name": "Rag Tunic"
+   },
+   {
+    "token": "$item_legs_rags",
+    "prefab": "ArmorRagsLegs",
+    "name": "Rag Trousers"
+   },
+   {
+    "token": "$item_chest_root",
+    "prefab": "ArmorRootChest",
+    "name": "Root Harnesk"
+   },
+   {
+    "token": "$item_legs_root",
+    "prefab": "ArmorRootLegs",
+    "name": "Root Leggings"
+   },
+   {
+    "token": "$item_chest_trollleather",
+    "prefab": "ArmorTrollLeatherChest",
+    "name": "Troll Leather Tunic"
+   },
+   {
+    "token": "$item_legs_trollleather",
+    "prefab": "ArmorTrollLeatherLegs",
+    "name": "Troll Leather Trousers"
+   },
+   {
+    "token": "$item_chest_tunic1",
+    "prefab": "ArmorTunic1",
+    "name": "Plain Blue Tunic"
+   },
+   {
+    "token": "$item_chest_tunic10",
+    "prefab": "ArmorTunic10",
+    "name": "Simple Undyed Tunic"
+   },
+   {
+    "token": "$item_chest_tunic2",
+    "prefab": "ArmorTunic2",
+    "name": "Blue Tunic with Cape"
+   },
+   {
+    "token": "$item_chest_tunic3",
+    "prefab": "ArmorTunic3",
+    "name": "Blue Tunic with Beads"
+   },
+   {
+    "token": "$item_chest_tunic4",
+    "prefab": "ArmorTunic4",
+    "name": "Plain Red Tunic"
+   },
+   {
+    "token": "$item_chest_tunic5",
+    "prefab": "ArmorTunic5",
+    "name": "Red Tunic with Cape"
+   },
+   {
+    "token": "$item_chest_tunic6",
+    "prefab": "ArmorTunic6",
+    "name": "Red Tunic with Beads"
+   },
+   {
+    "token": "$item_chest_tunic7",
+    "prefab": "ArmorTunic7",
+    "name": "Plain Yellow Tunic"
+   },
+   {
+    "token": "$item_chest_tunic8",
+    "prefab": "ArmorTunic8",
+    "name": "Yellow Tunic with Cape"
+   },
+   {
+    "token": "$item_chest_tunic9",
+    "prefab": "ArmorTunic9",
+    "name": "Yellow Tunic with Beads"
+   },
+   {
+    "token": "$item_chest_wolf",
+    "prefab": "ArmorWolfChest",
+    "name": "Wolf Hide Chestpiece"
+   },
+   {
+    "token": "$item_legs_wolf",
+    "prefab": "ArmorWolfLegs",
+    "name": "Wolf Hide Trousers"
+   },
+   {
+    "token": "$item_arrow_bloodgold",
+    "prefab": "ArrowBloodGold",
+    "name": "Bloodgold Arrow"
+   },
+   {
+    "token": "$item_arrow_bronze",
+    "prefab": "ArrowBronze",
+    "name": "Bronzehead Arrow"
+   },
+   {
+    "token": "$item_arrow_carapace",
+    "prefab": "ArrowCarapace",
+    "name": "Carapace Arrow"
+   },
+   {
+    "token": "$item_arrow_charred",
+    "prefab": "ArrowCharred",
+    "name": "Charred Arrow"
+   },
+   {
+    "token": "$item_arrow_fire",
+    "prefab": "ArrowFire",
+    "name": "Fire Arrow"
+   },
+   {
+    "token": "$item_arrow_flint",
+    "prefab": "ArrowFlint",
+    "name": "Flinthead Arrow"
+   },
+   {
+    "token": "$item_arrow_frost",
+    "prefab": "ArrowFrost",
+    "name": "Frost Arrow"
+   },
+   {
+    "token": "$item_arrow_iron",
+    "prefab": "ArrowIron",
+    "name": "Ironhead Arrow"
+   },
+   {
+    "token": "$item_arrow_needle",
+    "prefab": "ArrowNeedle",
+    "name": "Needle Arrow"
+   },
+   {
+    "token": "$item_arrow_obsidian",
+    "prefab": "ArrowObsidian",
+    "name": "Obsidian Arrow"
+   },
+   {
+    "token": "$item_arrow_poison",
+    "prefab": "ArrowPoison",
+    "name": "Poison Arrow"
+   },
+   {
+    "token": "$item_arrow_silver",
+    "prefab": "ArrowSilver",
+    "name": "Silver Arrow"
+   },
+   {
+    "token": "$item_arrow_wood",
+    "prefab": "ArrowWood",
+    "name": "Wood Arrow"
+   },
+   {
+    "token": "$item_atgeir_blackmetal",
+    "prefab": "AtgeirBlackmetal",
+    "name": "Black Metal Atgeir"
+   },
+   {
+    "token": "$item_atgeir_bronze",
+    "prefab": "AtgeirBronze",
+    "name": "Bronze Atgeir"
+   },
+   {
+    "token": "$item_atgeir_gold",
+    "prefab": "AtgeirGold",
+    "name": "Nord Atgeir"
+   },
+   {
+    "token": "$item_atgeir_gold_bloodlightning",
+    "prefab": "AtgeirGold_BloodLightning",
+    "name": "Thunderblood Atgeir"
+   },
+   {
+    "token": "$item_atgeir_gold_frostfire",
+    "prefab": "AtgeirGold_FrostFire",
+    "name": "Frostfire Atgeir"
+   },
+   {
+    "token": "$item_atgeir_gold_uncooked",
+    "prefab": "AtgeirGoldUncooked",
+    "name": "Cast: Nord Atgeir"
+   },
+   {
+    "token": "$item_atgeir_himminafl",
+    "prefab": "AtgeirHimminAfl",
+    "name": "Himminafl"
+   },
+   {
+    "token": "$item_atgeir_iron",
+    "prefab": "AtgeirIron",
+    "name": "Iron Atgeir"
+   },
+   {
+    "token": "$item_atgeir_wood",
+    "prefab": "AtgeirWood",
+    "name": "Wooden Atgeir"
+   },
+   {
+    "token": "$item_axe_berzerkr",
+    "prefab": "AxeBerzerkr",
+    "name": "Berserkir Axes"
+   },
+   {
+    "token": "$item_axe_berzerkr_blood",
+    "prefab": "AxeBerzerkrBlood",
+    "name": "Bleeding Berserkir Axes"
+   },
+   {
+    "token": "$item_axe_berzerkr_lightning",
+    "prefab": "AxeBerzerkrLightning",
+    "name": "Thundering Berserkir Axes"
+   },
+   {
+    "token": "$item_axe_berzerkr_nature",
+    "prefab": "AxeBerzerkrNature",
+    "name": "Primal Berserkir Axes"
+   },
+   {
+    "token": "$item_axe_blackmetal",
+    "prefab": "AxeBlackMetal",
+    "name": "Black Metal Axe"
+   },
+   {
+    "token": "$item_axe_bronze",
+    "prefab": "AxeBronze",
+    "name": "Bronze Axe"
+   },
+   {
+    "token": "$item_axe_early",
+    "prefab": "AxeEarly",
+    "name": "Early Axes"
+   },
+   {
+    "token": "$item_axe_flint",
+    "prefab": "AxeFlint",
+    "name": "Flint Axe"
+   },
+   {
+    "token": "$item_axe_gold",
+    "prefab": "AxeGold",
+    "name": "Nord Axe"
+   },
+   {
+    "token": "$item_axe_gold_bloodlightning",
+    "prefab": "AxeGold_BloodLightning",
+    "name": "Thunderblood Axe"
+   },
+   {
+    "token": "$item_axe_gold_frostfire",
+    "prefab": "AxeGold_FrostFire",
+    "name": "Frostfire Axe"
+   },
+   {
+    "token": "$item_axe_gold_uncooked",
+    "prefab": "AxeGoldUncooked",
+    "name": "Cast: Nord Axe"
+   },
+   {
+    "token": "$item_axe_iron",
+    "prefab": "AxeIron",
+    "name": "Iron Axe"
+   },
+   {
+    "token": "$item_axe_jotunbane",
+    "prefab": "AxeJotunBane",
+    "name": "Jotun Bane"
+   },
+   {
+    "token": "$item_axe_stone",
+    "prefab": "AxeStone",
+    "name": "Stone Axe"
+   },
+   {
+    "token": "$item_axe_wood",
+    "prefab": "AxeWood",
+    "name": "Wooden Axe"
+   },
+   {
+    "token": "$item_bakedpoteitr_uncooked",
+    "prefab": "BakedPoteitrUncooked",
+    "name": "Unbaked Poteitr"
+   },
+   {
+    "token": "$item_barleywinebase",
+    "prefab": "BarleyWineBase",
+    "name": "Barley Wine Base: Fire Resistance"
+   },
+   {
+    "token": "$item_battleaxe",
+    "prefab": "Battleaxe",
+    "name": "Battleaxe"
+   },
+   {
+    "token": "$item_battleaxe_blackmetal",
+    "prefab": "BattleaxeBlackmetal",
+    "name": "Black Metal Battleaxe"
+   },
+   {
+    "token": "$item_battleaxe_crystal",
+    "prefab": "BattleaxeCrystal",
+    "name": "Crystal Battleaxe"
+   },
+   {
+    "token": "$item_battleaxe_skullsplittur",
+    "prefab": "BattleaxeSkullSplittur",
+    "name": "Skull Splittur"
+   },
+   {
+    "token": "$item_battleaxe_gold",
+    "name": "item battleaxe gold"
+   },
+   {
+    "token": "$item_axe2h_gold_bloodlightning",
+    "prefab": "BattleaxeGold_BloodLightning",
+    "name": "Thunderblood Greataxe"
+   },
+   {
+    "token": "$item_axe2h_gold_frostfire",
+    "prefab": "BattleaxeGold_FrostFire",
+    "name": "Frostfire Greataxe"
+   },
+   {
+    "token": "$item_battleaxe_gold_uncooked",
+    "prefab": "BattleaxeGoldUncooked",
+    "name": "Cast: Nord Greataxe"
+   },
+   {
+    "token": "$item_battleaxe_wood",
+    "prefab": "BattleaxeWood",
+    "name": "Wooden Battleaxe"
+   },
+   {
+    "token": "$item_bell",
+    "prefab": "Bell",
+    "name": "Bell"
+   },
+   {
+    "token": "$item_blacksoup",
+    "prefab": "BlackSoup",
+    "name": "Black Soup"
+   },
+   {
+    "token": "$item_keys_gold_uncooked",
+    "prefab": "KeysGoldUncooked",
+    "name": "Cast: Intricate Key"
+   },
+   {
+    "token": "$item_bloodpudding",
+    "prefab": "BloodPudding",
+    "name": "Blood Pudding"
+   },
+   {
+    "token": "$item_boarjerky",
+    "prefab": "BoarJerky",
+    "name": "Boar Jerky"
+   },
+   {
+    "token": "$item_bolt_blackmetal",
+    "prefab": "BoltBlackmetal",
+    "name": "Black Metal Bolt"
+   },
+   {
+    "token": "$item_bolt_bloodgold",
+    "prefab": "BoltBloodGold",
+    "name": "Bloodgold Bolt"
+   },
+   {
+    "token": "$item_bolt_bone",
+    "prefab": "BoltBone",
+    "name": "Bone Bolt"
+   },
+   {
+    "token": "$item_bolt_carapace",
+    "prefab": "BoltCarapace",
+    "name": "Carapace Bolt"
+   },
+   {
+    "token": "$item_bolt_charred",
+    "prefab": "BoltCharred",
+    "name": "Charred Bolt"
+   },
+   {
+    "token": "$item_bolt_iron",
+    "prefab": "BoltIron",
+    "name": "Iron Bolt"
+   },
+   {
+    "token": "$item_bilebomb",
+    "prefab": "BombBile",
+    "name": "Bile Bomb"
+   },
+   {
+    "token": "$item_bombblob_frost",
+    "prefab": "BombBlob_Frost",
+    "name": "Blob Bomb: Frost"
+   },
+   {
+    "token": "$item_bombblob_lava",
+    "prefab": "BombBlob_Lava",
+    "name": "Blob Bomb: Lava"
+   },
+   {
+    "token": "$item_bombblob_morkhalla",
+    "prefab": "BombBlob_Morkhalla",
+    "name": "Blob Bomb: Pulp"
+   },
+   {
+    "token": "$item_bombblob_poison",
+    "prefab": "BombBlob_Poison",
+    "name": "Blob Bomb: Poison"
+   },
+   {
+    "token": "$item_bombblob_poisonelite",
+    "prefab": "BombBlob_PoisonElite",
+    "name": "Blob Bomb: Elite Poison"
+   },
+   {
+    "token": "$item_bombblob_tar",
+    "prefab": "BombBlob_Tar",
+    "name": "Blob Bomb: Tar"
+   },
+   {
+    "token": "$item_bomb_dynamite",
+    "prefab": "BombDynamite",
+    "name": "Ember Charge"
+   },
+   {
+    "token": "$item_lavabomb",
+    "prefab": "BombLava",
+    "name": "Basalt Bomb"
+   },
+   {
+    "token": "$item_oozebomb",
+    "prefab": "BombOoze",
+    "name": "Ooze Bomb"
+   },
+   {
+    "token": "$item_catapult_ammo",
+    "prefab": "BombSiege",
+    "name": "Explosive Payload"
+   },
+   {
+    "token": "$item_smokebomb",
+    "prefab": "BombSmoke",
+    "name": "Smoke Bomb"
+   },
+   {
+    "token": "$item_bow",
+    "prefab": "Bow",
+    "name": "Crude Bow"
+   },
+   {
+    "token": "$item_bow_ashlands",
+    "prefab": "BowAshlands",
+    "name": "Ash Fang"
+   },
+   {
+    "token": "$item_bow_ashlandsblood",
+    "prefab": "BowAshlandsBlood",
+    "name": "Blood Fang"
+   },
+   {
+    "token": "$item_bow_ashlandsstorm",
+    "prefab": "BowAshlandsStorm",
+    "name": "Storm Fang"
+   },
+   {
+    "token": "$item_bow_ashlandsroot",
+    "prefab": "BowAshlandsRoot",
+    "name": "Root Fang"
+   },
+   {
+    "token": "$item_bow_draugrfang",
+    "prefab": "BowDraugrFang",
+    "name": "Draugr Fang"
+   },
+   {
+    "token": "$item_bow_finewood",
+    "prefab": "BowFineWood",
+    "name": "Finewood Bow"
+   },
+   {
+    "token": "$item_bow_gold",
+    "prefab": "BowGold",
+    "name": "Nord Bow"
+   },
+   {
+    "token": "$item_bow_gold_bloodlightning",
+    "prefab": "BowGold_BloodLightning",
+    "name": "Thunderblood Bow"
+   },
+   {
+    "token": "$item_bow_gold_frostfire",
+    "prefab": "BowGold_FrostFire",
+    "name": "Frostfire Bow"
+   },
+   {
+    "token": "$item_bow_gold_uncooked",
+    "prefab": "BowGoldUncooked",
+    "name": "Cast: Nord Bow"
+   },
+   {
+    "token": "$item_bow_huntsman",
+    "prefab": "BowHuntsman",
+    "name": "Huntsman Bow"
+   },
+   {
+    "token": "$item_bow_snipesnap",
+    "prefab": "BowSpineSnap",
+    "name": "Spinesnap"
+   },
+   {
+    "token": "$item_breaddough",
+    "prefab": "BreadDough",
+    "name": "Bread Dough"
+   },
+   {
+    "token": "$item_bronze",
+    "prefab": "Bronze",
+    "name": "Bronze"
+   },
+   {
+    "token": "$item_bronze",
+    "prefab": "Bronze",
+    "name": "Bronze"
+   },
+   {
+    "token": "$item_bronzenails",
+    "prefab": "BronzeNails",
+    "name": "Bronze Nails"
+   },
+   {
+    "token": "$item_cape_ash",
+    "prefab": "CapeAsh",
+    "name": "Ashen Cape"
+   },
+   {
+    "token": "$item_cape_asksvin",
+    "prefab": "CapeAsksvin",
+    "name": "Asksvin Cloak"
+   },
+   {
+    "token": "$item_cape_deepnorth",
+    "prefab": "CapeDeepNorth",
+    "name": "Moose Hide Cape"
+   },
+   {
+    "token": "$item_cape_deepnorth_mage",
+    "prefab": "CapeDeepNorthMage",
+    "name": "Cape of the Caller"
+   },
+   {
+    "token": "$item_cape_deerhide",
+    "prefab": "CapeDeerHide",
+    "name": "Deer Hide Cape"
+   },
+   {
+    "token": "$item_cape_feather",
+    "prefab": "CapeFeather",
+    "name": "Feather Cape"
+   },
+   {
+    "token": "$item_cape_linen",
+    "prefab": "CapeLinen",
+    "name": "Linen Cape"
+   },
+   {
+    "token": "$item_cape_lox",
+    "prefab": "CapeLox",
+    "name": "Lox Cape"
+   },
+   {
+    "token": "$item_cape_odin",
+    "prefab": "CapeOdin",
+    "name": "Cape of Oden"
+   },
+   {
+    "token": "$item_cape_trollhide",
+    "prefab": "CapeTrollHide",
+    "name": "Troll Hide Cape"
+   },
+   {
+    "token": "$item_cape_wolf",
+    "prefab": "CapeWolf",
+    "name": "Wolf Fur Cape"
+   },
+   {
+    "token": "$item_carrotsoup",
+    "prefab": "CarrotSoup",
+    "name": "Carrot Soup"
+   },
+   {
+    "token": "$item_catapult_bloodgold_ammo",
+    "prefab": "Catapult_Ammo_BloodGold",
+    "name": "Bloodgold Payload"
+   },
+   {
+    "token": "$item_catapult_training_ammo",
+    "prefab": "Catapult_ammo",
+    "name": "Grausten Payload"
+   },
+   {
+    "token": "$item_ceramicplate",
+    "prefab": "CeramicPlate",
+    "name": "Ceramic Plate"
+   },
+   {
+    "token": "$item_club",
+    "prefab": "Club",
+    "name": "Club"
+   },
+   {
+    "token": "$item_egg_cooked",
+    "prefab": "CookedEgg",
+    "name": "Cooked Egg"
+   },
+   {
+    "token": "$item_crossbow_arbalest",
+    "prefab": "CrossbowArbalest",
+    "name": "Arbalest"
+   },
+   {
+    "token": "$item_crossbow_gold",
+    "prefab": "CrossbowGold",
+    "name": "Nord Crossbow"
+   },
+   {
+    "token": "$item_crossbow_bloodlightning_gold",
+    "prefab": "CrossbowGold_BloodLightning",
+    "name": "Thunderblood Crossbow"
+   },
+   {
+    "token": "$item_crossbow_frostfire_gold",
+    "prefab": "CrossbowGold_FrostFire",
+    "name": "Frostfire Crossbow"
+   },
+   {
+    "token": "$item_crossbow_gold_uncooked",
+    "prefab": "CrossbowGoldUncooked",
+    "name": "Cast: Nord Crossbow"
+   },
+   {
+    "token": "$item_crossbow_ripper",
+    "prefab": "CrossbowRipper",
+    "name": "Ripper"
+   },
+   {
+    "token": "$item_crossbow_ripper_blood",
+    "prefab": "CrossbowRipperBlood",
+    "name": "Wound Ripper"
+   },
+   {
+    "token": "$item_crossbow_ripper_lightning",
+    "prefab": "CrossbowRipperLightning",
+    "name": "Storm Ripper"
+   },
+   {
+    "token": "$item_crossbow_ripper_nature",
+    "prefab": "CrossbowRipperNature",
+    "name": "Root Ripper"
+   },
+   {
+    "token": "$item_cultivator",
+    "prefab": "Cultivator",
+    "name": "Cultivator"
+   },
+   {
+    "token": "$item_deerstew",
+    "prefab": "DeerStew",
+    "name": "Deer Stew"
+   },
+   {
+    "token": "$item_demister",
+    "prefab": "Demister",
+    "name": "Wisplight"
+   },
+   {
+    "token": "$item_dvergrkey",
+    "prefab": "DvergrKey",
+    "name": "Sealbreaker"
+   },
+   {
+    "token": "$item_eyescream",
+    "prefab": "Eyescream",
+    "name": "Eyescream"
+   },
+   {
+    "token": "$item_feastashlands",
+    "prefab": "FeastAshlands",
+    "name": "Ashlands Gourmet Bowl"
+   },
+   {
+    "token": "$item_feastblackforest",
+    "prefab": "FeastBlackforest",
+    "name": "Black Forest Buffet Platter"
+   },
+   {
+    "token": "$item_feastdeepnorth",
+    "prefab": "FeastDeepNorth",
+    "name": "Northern Morning Fare"
+   },
+   {
+    "token": "$item_feaster",
+    "prefab": "Feaster",
+    "name": "Serving Tray"
+   },
+   {
+    "token": "$item_feastmeadows",
+    "prefab": "FeastMeadows",
+    "name": "Whole Roasted Meadow Boar"
+   },
+   {
+    "token": "$item_feastmistlands",
+    "prefab": "FeastMistlands",
+    "name": "Mushrooms Galore á la Mistlands"
+   },
+   {
+    "token": "$item_feastmountains",
+    "prefab": "FeastMountains",
+    "name": "Hearty Mountain Logger's Stew"
+   },
+   {
+    "token": "$item_feastoceans",
+    "prefab": "FeastOceans",
+    "name": "Sailor's Bounty"
+   },
+   {
+    "token": "$item_feastplains",
+    "prefab": "FeastPlains",
+    "name": "Plains Pie Picnic"
+   },
+   {
+    "token": "$item_feastswamps",
+    "prefab": "FeastSwamps",
+    "name": "Swamp Dweller's Delight"
+   },
+   {
+    "token": "$item_fierysvinstew",
+    "prefab": "FierySvinstew",
+    "name": "Fiery Svinstew"
+   },
+   {
+    "token": "$item_fireworkrocket_blue",
+    "prefab": "FireworksRocket_Blue",
+    "name": "Blue Fireworks"
+   },
+   {
+    "token": "$item_fireworkrocket_cyan",
+    "prefab": "FireworksRocket_Cyan",
+    "name": "Cyan Fireworks"
+   },
+   {
+    "token": "$item_fireworkrocket_green",
+    "prefab": "FireworksRocket_Green",
+    "name": "Green Fireworks"
+   },
+   {
+    "token": "$item_fireworkrocket_purple",
+    "prefab": "FireworksRocket_Purple",
+    "name": "Purple Fireworks"
+   },
+   {
+    "token": "$item_fireworkrocket_red",
+    "prefab": "FireworksRocket_Red",
+    "name": "Red Fireworks"
+   },
+   {
+    "token": "$item_fireworkrocket_yellow",
+    "prefab": "FireworksRocket_Yellow",
+    "name": "Yellow Fireworks"
+   },
+   {
+    "token": "$item_fish_raw",
+    "prefab": "FishAnglerRaw",
+    "name": "Raw Fish"
+   },
+   {
+    "token": "$item_fishandbreaduncooked",
+    "prefab": "FishAndBreadUncooked",
+    "name": "Uncooked Fish 'n' Bread"
+   },
+   {
+    "token": "$item_fishingbait_ashlands",
+    "prefab": "FishingBaitAshlands",
+    "name": "Hot Fishing Bait"
+   },
+   {
+    "token": "$item_fishingbait_cave",
+    "prefab": "FishingBaitCave",
+    "name": "Cold Fishing Bait"
+   },
+   {
+    "token": "$item_fishingbait_deepnorth",
+    "prefab": "FishingBaitDeepNorth",
+    "name": "Frosty Fishing Bait"
+   },
+   {
+    "token": "$item_fishingbait_forest",
+    "prefab": "FishingBaitForest",
+    "name": "Mossy Fishing Bait"
+   },
+   {
+    "token": "$item_fishingbait_mistlands",
+    "prefab": "FishingBaitMistlands",
+    "name": "Misty Fishing Bait"
+   },
+   {
+    "token": "$item_fishingbait_ocean",
+    "prefab": "FishingBaitOcean",
+    "name": "Heavy Fishing Bait"
+   },
+   {
+    "token": "$item_fishingbait_plains",
+    "prefab": "FishingBaitPlains",
+    "name": "Stingy Fishing Bait"
+   },
+   {
+    "token": "$item_fishingbait_swamp",
+    "prefab": "FishingBaitSwamp",
+    "name": "Sticky Fishing Bait"
+   },
+   {
+    "token": "$item_sealsoup",
+    "prefab": "SealSoup",
+    "name": "Seal Meat Soup"
+   },
+   {
+    "token": "$item_fishwraps",
+    "prefab": "FishWraps",
+    "name": "Fish Wraps"
+   },
+   {
+    "token": "$item_fistweapon_bjorn",
+    "prefab": "FistBjornClaw",
+    "name": "Paws of the Bear"
+   },
+   {
+    "token": "$item_fistweapon_fenris",
+    "prefab": "FistFenrirClaw",
+    "name": "Flesh Rippers"
+   },
+   {
+    "token": "$item_fistweapon_gold_bloodlightning",
+    "prefab": "FistGold_BloodLightning",
+    "name": "Thunderblood Knucklechains"
+   },
+   {
+    "token": "$item_fistweapon_frostfire_gold",
+    "prefab": "FistGold_FrostFire",
+    "name": "Frostfire Knucklechains"
+   },
+   {
+    "token": "$item_fistweapon_bjorn_undead",
+    "prefab": "FistBjornUndeadClaw",
+    "name": "Vilebone Maulclaws"
+   },
+   {
+    "token": "$item_fistweapon_gold",
+    "prefab": "FistGold",
+    "name": "Nord Knucklechains"
+   },
+   {
+    "token": "$item_fistweapon_gold_uncooked",
+    "prefab": "FistGoldUncooked",
+    "name": "Cast: Nord Knucklechains"
+   },
+   {
+    "token": "$item_graplinghook",
+    "prefab": "GrapplingHook",
+    "name": "Grappling Hook"
+   },
+   {
+    "token": "$item_hammer",
+    "prefab": "Hammer",
+    "name": "Hammer"
+   },
+   {
+    "token": "$item_helmet_berserker",
+    "prefab": "HelmetBerserkerHood",
+    "name": "Headdress of the Bear"
+   },
+   {
+    "token": "$item_helmet_berserker_undead",
+    "prefab": "HelmetBerserkerUndead",
+    "name": "Vilebone Visage"
+   },
+   {
+    "token": "$item_helmet_bronze",
+    "prefab": "FW_HelmetBronze",
+    "name": "Bronze Helmet"
+   },
+   {
+    "token": "$item_helmet_carapace",
+    "prefab": "HelmetCarapace",
+    "name": "Carapace Helmet"
+   },
+   {
+    "token": "$item_helmet_celebration",
+    "prefab": "HelmetCelebration",
+    "name": "Celebratory Cap"
+   },
+   {
+    "token": "$item_helmet_drake",
+    "prefab": "HelmetDrake",
+    "name": "Drake Helmet"
+   },
+   {
+    "token": "$item_helmet_fenris",
+    "prefab": "HelmetFenring",
+    "name": "Fenris Hood"
+   },
+   {
+    "token": "$item_helmet_fishinghat",
+    "prefab": "HelmetFishingHat",
+    "name": "Fishing Hat"
+   },
+   {
+    "token": "$item_helmet_flametal",
+    "prefab": "HelmetFlametal",
+    "name": "Flametal Helmet"
+   },
+   {
+    "token": "$item_helmet_heavy_deepnorth",
+    "prefab": "HelmetDNHeavy",
+    "name": "Helmet of the Protector"
+   },
+   {
+    "token": "$item_helmet_mage_deepnorth",
+    "prefab": "HelmetDNMage",
+    "name": "Headdress of the Caller"
+   },
+   {
+    "token": "$item_helmet_mage_gold_uncooked",
+    "prefab": "ArmorGoldMageHelmetUncooked",
+    "name": "Cast: Headdress of the Caller"
+   },
+   {
+    "token": "$item_helmet_medium_deepnorth",
+    "prefab": "HelmetDNMediumHood",
+    "name": "Hood of the Vanguard"
+   },
+   {
+    "token": "$item_helmet_medium_gold_uncooked",
+    "prefab": "ArmorGoldMediumHelmetUncooked",
+    "name": "Cast: Hood of the Vanguard"
+   },
+   {
+    "token": "$item_helmet_heavy_gold_uncooked",
+    "prefab": "ArmorGoldHeavyHelmetUncooked",
+    "name": "Cast: Helmet of the Protector"
+   },
+   {
+    "token": "$item_helmet_hat1",
+    "prefab": "HelmetHat1",
+    "name": "Blue Tied Headscarf"
+   },
+   {
+    "token": "$item_helmet_hat10",
+    "prefab": "HelmetHat10",
+    "name": "Simple Purple Cap"
+   },
+   {
+    "token": "$item_helmet_hat2",
+    "prefab": "HelmetHat2",
+    "name": "Green Twisted Headscarf"
+   },
+   {
+    "token": "$item_helmet_hat3",
+    "prefab": "HelmetHat3",
+    "name": "Brown Fur Cap"
+   },
+   {
+    "token": "$item_helmet_hat4",
+    "prefab": "HelmetHat4",
+    "name": "Extravagant Green Cap"
+   },
+   {
+    "token": "$item_helmet_hat5",
+    "prefab": "HelmetHat5",
+    "name": "Simple Red Cap"
+   },
+   {
+    "token": "$item_helmet_hat6",
+    "prefab": "HelmetHat6",
+    "name": "Yellow Tied Headscarf"
+   },
+   {
+    "token": "$item_helmet_hat7",
+    "prefab": "HelmetHat7",
+    "name": "Red Twisted Headscarf"
+   },
+   {
+    "token": "$item_helmet_hat8",
+    "prefab": "HelmetHat8",
+    "name": "Grey Fur Cap"
+   },
+   {
+    "token": "$item_helmet_hat9",
+    "prefab": "HelmetHat9",
+    "name": "Extravagant Orange Cap"
+   },
+   {
+    "token": "$item_helmet_iron",
+    "prefab": "HelmetIron",
+    "name": "Iron Helmet"
+   },
+   {
+    "token": "$item_helmet_leather",
+    "prefab": "HelmetLeather",
+    "name": "Leather Helmet"
+   },
+   {
+    "token": "$item_helmet_mage",
+    "prefab": "HelmetMage",
+    "name": "Eitr-weave Hood"
+   },
+   {
+    "token": "$item_helmet_mage_ashlands",
+    "prefab": "HelmetMage_Ashlands",
+    "name": "Hood of Embla"
+   },
+   {
+    "token": "$item_helmet_medium_ashlands",
+    "prefab": "HelmetAshlandsMediumHood",
+    "name": "Hood of Ask"
+   },
+   {
+    "token": "$item_helmet_midsummercrown",
+    "prefab": "HelmetMidsummerCrown",
+    "name": "Midsummer Crown"
+   },
+   {
+    "token": "$item_helmet_odin",
+    "prefab": "HelmetOdin",
+    "name": "Hood of Oden"
+   },
+   {
+    "token": "$item_helmet_padded",
+    "prefab": "HelmetPadded",
+    "name": "Padded Helmet"
+   },
+   {
+    "token": "$item_helmet_witchhat",
+    "prefab": "HelmetPointyHat",
+    "name": "Pointy Hat"
+   },
+   {
+    "token": "$item_helmet_root",
+    "prefab": "HelmetRoot",
+    "name": "Root Mask"
+   },
+   {
+    "token": "$item_helmet_strawhat",
+    "prefab": "HelmetStrawHat",
+    "name": "Straw Hat"
+   },
+   {
+    "token": "$item_helmet_trollleather",
+    "prefab": "HelmetTrollLeather",
+    "name": "Troll Leather Hood"
+   },
+   {
+    "token": "$item_hoe",
+    "prefab": "Hoe",
+    "name": "Hoe"
+   },
+   {
+    "token": "$item_honeyglazedchickenuncooked",
+    "prefab": "HoneyGlazedChickenUncooked",
+    "name": "Uncooked Honey Glazed Chicken"
+   },
+   {
+    "token": "$item_ironnails",
+    "prefab": "IronNails",
+    "name": "Iron Nails"
+   },
+   {
+    "token": "$item_kalechips_uncooked",
+    "prefab": "KaleChipsUncooked",
+    "name": "Raw Kale Chips"
+   },
+   {
+    "token": "$item_knife_blackmetal",
+    "prefab": "KnifeBlackMetal",
+    "name": "Black Metal Knife"
+   },
+   {
+    "token": "$item_knife_butcher",
+    "prefab": "KnifeButcher",
+    "name": "Butcher Knife"
+   },
+   {
+    "token": "$item_knife_chitin",
+    "prefab": "KnifeChitin",
+    "name": "Abyssal Razor"
+   },
+   {
+    "token": "$item_knife_copper",
+    "prefab": "KnifeCopper",
+    "name": "Copper Knife"
+   },
+   {
+    "token": "$item_knife_flint",
+    "prefab": "KnifeFlint",
+    "name": "Flint Knife"
+   },
+   {
+    "token": "$item_knife_gold",
+    "prefab": "KnifeGold",
+    "name": "Nord Dagger"
+   },
+   {
+    "token": "$item_knife_gold_bloodlightning",
+    "prefab": "KnifeGold_BloodLightning",
+    "name": "Thunderblood Dagger"
+   },
+   {
+    "token": "$item_knife_gold_frostfire",
+    "prefab": "KnifeGold_FrostFire",
+    "name": "Frostfire Dagger"
+   },
+   {
+    "token": "$item_knife_gold_uncooked",
+    "prefab": "KnifeGoldUncooked",
+    "name": "Cast: Nord Dagger"
+   },
+   {
+    "token": "$item_knife_silver",
+    "prefab": "FW_KnifeSilver",
+    "name": "Silver Knife"
+   },
+   {
+    "token": "$item_knife_skollandhati",
+    "prefab": "FW_KnifeSkollAndHati",
+    "name": "Skoll and Hati"
+   },
+   {
+    "token": "$item_knife_void",
+    "prefab": "KnifeVoid",
+    "name": "Voidcaller"
+   },
+   {
+    "token": "$item_knife_wood",
+    "prefab": "KnifeWood",
+    "name": "Wooden Knife"
+   },
+   {
+    "token": "$item_lantern",
+    "prefab": "Lantern",
+    "name": "Dvergr Lantern"
+   },
+   {
+    "token": "$item_lingondricka",
+    "prefab": "Lingondricka",
+    "name": "Lingonberry Juice"
+   },
+   {
+    "token": "$item_loxpie_uncooked",
+    "prefab": "LoxPieUncooked",
+    "name": "Unbaked Lox Pie"
+   },
+   {
+    "token": "$item_mace_bronze",
+    "prefab": "MaceBronze",
+    "name": "Bronze Mace"
+   },
+   {
+    "token": "$item_mace_eldner",
+    "prefab": "MaceEldner",
+    "name": "Flametal Mace"
+   },
+   {
+    "token": "$item_mace_eldner_blood",
+    "prefab": "MaceEldnerBlood",
+    "name": "Bloodgeon"
+   },
+   {
+    "token": "$item_mace_eldner_lightning",
+    "prefab": "MaceEldnerLightning",
+    "name": "Storm Star"
+   },
+   {
+    "token": "$item_mace_eldner_nature",
+    "prefab": "MaceEldnerNature",
+    "name": "Klossen"
+   },
+   {
+    "token": "$item_mace_gold",
+    "prefab": "MaceGold",
+    "name": "Nord Mace"
+   },
+   {
+    "token": "$item_mace_gold_bloodlightning",
+    "prefab": "MaceGold_BloodLightning",
+    "name": "Thunderblood Mace"
+   },
+   {
+    "token": "$item_mace_gold_frostfire",
+    "prefab": "MaceGold_FrostFire",
+    "name": "Frostfire Mace"
+   },
+   {
+    "token": "$item_mace_gold_uncooked",
+    "prefab": "MaceGoldUncooked",
+    "name": "Cast: Nord Mace"
+   },
+   {
+    "token": "$item_mace_iron",
+    "prefab": "MaceIron",
+    "name": "Iron Mace"
+   },
+   {
+    "token": "$item_mace_needle",
+    "prefab": "MaceNeedle",
+    "name": "Porcupine"
+   },
+   {
+    "token": "$item_mace_silver",
+    "prefab": "MaceSilver",
+    "name": "Frostner"
+   },
+   {
+    "token": "$item_mace_wood",
+    "prefab": "MaceWood",
+    "name": "Wooden Mace"
+   },
+   {
+    "token": "$item_magicallystuffedmushroomuncooked",
+    "prefab": "MagicallyStuffedShroomUncooked",
+    "name": "Uncooked Stuffed Mushroom"
+   },
+   {
+    "token": "$item_marinatedgreens",
+    "prefab": "MarinatedGreens",
+    "name": "Marinated Greens"
+   },
+   {
+    "token": "$item_mashedmeat",
+    "prefab": "MashedMeat",
+    "name": "Mashed Meat"
+   },
+   {
+    "token": "$item_meadbasebugrepellent",
+    "prefab": "MeadBaseBugRepellent",
+    "name": "Mead Base: Anti-Sting"
+   },
+   {
+    "token": "$item_meadbasebzerker",
+    "prefab": "MeadBaseBzerker",
+    "name": "Mead base: Berserkir"
+   },
+   {
+    "token": "$item_meadbaseeitr_lingering",
+    "prefab": "MeadBaseEitrLingering",
+    "name": "Mead Base: Lingering Eitr"
+   },
+   {
+    "token": "$item_meadbaseeitr",
+    "prefab": "MeadBaseEitrMinor",
+    "name": "Mead Base: Minor Eitr"
+   },
+   {
+    "token": "$item_meadbasefrostresist",
+    "prefab": "MeadBaseFrostResist",
+    "name": "Mead Base: Frost Resistance"
+   },
+   {
+    "token": "$item_meadbasehasty",
+    "prefab": "MeadBaseHasty",
+    "name": "Mead base: Ratatosk"
+   },
+   {
+    "token": "$item_meadbasehealth_lingering",
+    "prefab": "MeadBaseHealthLingering",
+    "name": "Mead Base: Lingering Health"
+   },
+   {
+    "token": "$item_meadbasehealth_major",
+    "prefab": "MeadBaseHealthMajor",
+    "name": "Mead Base: Major Healing"
+   },
+   {
+    "token": "$item_meadbasehealth_medium",
+    "prefab": "MeadBaseHealthMedium",
+    "name": "Mead Base: Medium Healing"
+   },
+   {
+    "token": "$item_meadbasehealth",
+    "prefab": "MeadBaseHealthMinor",
+    "name": "Mead Base: Minor Healing"
+   },
+   {
+    "token": "$item_meadbaselightfoot",
+    "prefab": "MeadBaseLightFoot",
+    "name": "Mead Base: Lightfoot"
+   },
+   {
+    "token": "$item_meadbasepoisonresist",
+    "prefab": "MeadBasePoisonResist",
+    "name": "Mead Base: Poison Resistance"
+   },
+   {
+    "token": "$item_meadbasestamina_lingering",
+    "prefab": "MeadBaseStaminaLingering",
+    "name": "Mead Base: Lingering Stamina"
+   },
+   {
+    "token": "$item_meadbasestamina_medium",
+    "prefab": "MeadBaseStaminaMedium",
+    "name": "Mead Base: Medium Stamina"
+   },
+   {
+    "token": "$item_meadbasestamina",
+    "prefab": "MeadBaseStaminaMinor",
+    "name": "Mead Base: Minor Stamina"
+   },
+   {
+    "token": "$item_meadbasestrength",
+    "prefab": "MeadBaseStrength",
+    "name": "Mead Base: Troll Endurance"
+   },
+   {
+    "token": "$item_meadbaseswimmer",
+    "prefab": "MeadBaseSwimmer",
+    "name": "Mead Base: Vananidir"
+   },
+   {
+    "token": "$item_meadbasetamer",
+    "prefab": "MeadBaseTamer",
+    "name": "Mead Base: Animal Whispers"
+   },
+   {
+    "token": "$item_meadbasetasty",
+    "prefab": "MeadBaseTasty",
+    "name": "Mead Base: Tasty"
+   },
+   {
+    "token": "$item_meatballsmashedpoteitr",
+    "prefab": "MeatballsMashedPoteitr",
+    "name": "Meatballs and Poteitr"
+   },
+   {
+    "token": "$item_meatplatteruncooked",
+    "prefab": "MeatPlatterUncooked",
+    "name": "Uncooked Meat Platter"
+   },
+   {
+    "token": "$item_mechanicalspring",
+    "prefab": "MechanicalSpring",
+    "name": "Mechanical Spring"
+   },
+   {
+    "token": "$item_mincemeatsauce",
+    "prefab": "MinceMeatSauce",
+    "name": "Minced Meat Sauce"
+   },
+   {
+    "token": "$item_mistharesupremeuncooked",
+    "prefab": "MisthareSupremeUncooked",
+    "name": "Uncooked Misthare Supreme"
+   },
+   {
+    "token": "$item_moosekebab",
+    "prefab": "MooseKebab",
+    "name": "Meat In Bread"
+   },
+   {
+    "token": "$item_mushroomomelette",
+    "prefab": "MushroomOmelette",
+    "name": "Mushroom Omelette"
+   },
+   {
+    "token": "$item_oatmeallingonberryjam",
+    "prefab": "OatmealLingonberryJam",
+    "name": "Oatmeal"
+   },
+   {
+    "token": "$item_oatmilk",
+    "prefab": "OatMilk",
+    "name": "Oat Milk"
+   },
+   {
+    "token": "$item_onionsoup",
+    "prefab": "OnionSoup",
+    "name": "Onion Soup"
+   },
+   {
+    "token": "$item_ovenpancake_uncooked",
+    "prefab": "OvenPancakeUncooked",
+    "name": "Oven Pancake Batter"
+   },
+   {
+    "token": "$item_pancakes",
+    "prefab": "Pancakes",
+    "name": "Pancakes"
+   },
+   {
+    "token": "$item_pickaxe_antler",
+    "prefab": "PickaxeAntler",
+    "name": "Antler Pickaxe"
+   },
+   {
+    "token": "$item_pickaxe_blackmetal",
+    "prefab": "PickaxeBlackMetal",
+    "name": "Black Metal Pickaxe"
+   },
+   {
+    "token": "$item_pickaxe_bronze",
+    "prefab": "PickaxeBronze",
+    "name": "Bronze Pickaxe"
+   },
+   {
+    "token": "$item_pickaxe_iron",
+    "prefab": "PickaxeIron",
+    "name": "Iron Pickaxe"
+   },
+   {
+    "token": "$item_pickaxe_stone",
+    "prefab": "PickaxeStone",
+    "name": "Stone Pickaxe"
+   },
+   {
+    "token": "$item_piquantpie_uncooked",
+    "prefab": "PiquantPieUncooked",
+    "name": "Uncooked Piquant Pie"
+   },
+   {
+    "token": "$item_mead_hp_minor",
+    "prefab": "MeadHealthMinor",
+    "name": "Minor Healing Mead"
+   },
+   {
+    "token": "$item_mead_stamina_minor",
+    "prefab": "MeadStaminaMinor",
+    "name": "Minor Stamina Mead"
+   },
+   {
+    "token": "$item_queensjam",
+    "prefab": "QueensJam",
+    "name": "Queen's Jam"
+   },
+   {
+    "token": "$item_roastedcrustpie_uncooked",
+    "prefab": "RoastedCrustPieUncooked",
+    "name": "Uncooked Roasted Crust Pie"
+   },
+   {
+    "token": "$item_saddleasksvin",
+    "prefab": "SaddleAsksvin",
+    "name": "Asksvin Saddle"
+   },
+   {
+    "token": "$item_saddlemoose",
+    "prefab": "SaddleMoose",
+    "name": "Moose Saddle"
+   },
+   {
+    "token": "$item_saddlelox",
+    "prefab": "SaddleLox",
+    "name": "Lox Saddle"
+   },
+   {
+    "token": "$item_salad",
+    "prefab": "Salad",
+    "name": "Salad"
+   },
+   {
+    "token": "$item_sausages",
+    "prefab": "Sausages",
+    "name": "Sausages"
+   },
+   {
+    "token": "$item_scorchingmedley",
+    "prefab": "ScorchingMedley",
+    "name": "Scorching Medley"
+   },
+   {
+    "token": "$item_scythe",
+    "prefab": "Scythe",
+    "name": "Scythe"
+   },
+   {
+    "token": "$item_sealsoup",
+    "prefab": "SealSoup",
+    "name": "Seal Meat Soup"
+   },
+   {
+    "token": "$item_seekeraspic",
+    "prefab": "SeekerAspic",
+    "name": "Seeker Aspic"
+   },
+   {
+    "token": "$item_serpentstew",
+    "prefab": "SerpentStew",
+    "name": "Serpent Stew"
+   },
+   {
+    "token": "$item_sharpeningstone",
+    "prefab": "SharpeningStone",
+    "name": "Sharpening Stone"
+   },
+   {
+    "token": "$item_shield_banded",
+    "prefab": "ShieldBanded",
+    "name": "Banded Shield"
+   },
+   {
+    "token": "$item_shield_blackmetal",
+    "prefab": "ShieldBlackmetal",
+    "name": "Black Metal Shield"
+   },
+   {
+    "token": "$item_shield_blackmetal_tower",
+    "prefab": "FW_ShieldBlackmetalTower",
+    "name": "Black Metal Tower Shield"
+   },
+   {
+    "token": "$item_shield_bonetower",
+    "prefab": "ShieldBoneTower",
+    "name": "Bone Tower Shield"
+   },
+   {
+    "token": "$item_shield_bronzebuckler",
+    "prefab": "ShieldBronzeBuckler",
+    "name": "Bronze Buckler"
+   },
+   {
+    "token": "$item_shield_goldbuckler",
+    "prefab": "ShieldGoldBuckler",
+    "name": "Nord Buckler"
+   },
+   {
+    "token": "$item_shield_buckler_gold_uncooked",
+    "prefab": "ShieldBucklerGoldUncooked",
+    "name": "Cast: Nord Buckler"
+   },
+   {
+    "token": "$item_shield_carapace",
+    "prefab": "ShieldCarapace",
+    "name": "Carapace Shield"
+   },
+   {
+    "token": "$item_shield_carapacebuckler",
+    "prefab": "ShieldCarapaceBuckler",
+    "name": "Carapace Buckler"
+   },
+   {
+    "token": "$item_shieldcore",
+    "prefab": "ShieldCore",
+    "name": "Shield Core"
+   },
+   {
+    "token": "$item_shield_flametal",
+    "prefab": "ShieldFlametal",
+    "name": "Flametal Shield"
+   },
+   {
+    "token": "$item_shield_flametal_tower",
+    "prefab": "ShieldFlametalTower",
+    "name": "Flametal Tower Shield"
+   },
+   {
+    "token": "$item_shield_ironbuckler",
+    "prefab": "ShieldIronBuckler",
+    "name": "Iron Buckler"
+   },
+   {
+    "token": "$item_shield_iron_square",
+    "prefab": "ShieldIronSquare",
+    "name": "Iron Shield"
+   },
+   {
+    "token": "$item_shield_iron_tower",
+    "prefab": "ShieldIronTower",
+    "name": "Iron Tower Shield"
+   },
+   {
+    "token": "$item_shield_gold",
+    "prefab": "ShieldGold",
+    "name": "Nord Shield"
+   },
+   {
+    "token": "$item_shield_round_gold_uncooked",
+    "prefab": "ShieldRoundGoldUncooked",
+    "name": "Cast: Nord Shield"
+   },
+   {
+    "token": "$item_shield_serpentscale",
+    "prefab": "ShieldSerpentscale",
+    "name": "Serpent Scale Shield"
+   },
+   {
+    "token": "$item_shield_silver",
+    "prefab": "ShieldSilver",
+    "name": "Silver Shield"
+   },
+   {
+    "token": "$item_shield_gold_tower",
+    "prefab": "ShieldGoldTower",
+    "name": "Nord Greatshield"
+   },
+   {
+    "token": "$item_shield_tower_gold_uncooked",
+    "prefab": "ShieldTowerGoldUncooked",
+    "name": "Cast: Nord Greatshield"
+   },
+   {
+    "token": "$item_shield_wood",
+    "prefab": "ShieldWood",
+    "name": "Wood Shield"
+   },
+   {
+    "token": "$item_shield_woodtower",
+    "prefab": "ShieldWoodTower",
+    "name": "Wood Tower Shield"
+   },
+   {
+    "token": "$item_shocklatesmoothie",
+    "prefab": "ShocklateSmoothie",
+    "name": "Muckshake"
+   },
+   {
+    "token": "$item_sizzlingberrybroth",
+    "prefab": "SizzlingBerryBroth",
+    "name": "Sizzling Berry Broth"
+   },
+   {
+    "token": "$item_sledge_demolisher",
+    "prefab": "SledgeDemolisher",
+    "name": "Demolisher"
+   },
+   {
+    "token": "$item_sledge_gold",
+    "prefab": "SledgeGold",
+    "name": "Nord Sledge"
+   },
+   {
+    "token": "$item_mace2h_gold_bloodlightning",
+    "prefab": "SledgeGold_BloodLightning",
+    "name": "Thunderblood Sledge"
+   },
+   {
+    "token": "$item_mace2h_gold_frostfire",
+    "prefab": "SledgeGold_FrostFire",
+    "name": "Frostfire Sledge"
+   },
+   {
+    "token": "$item_sledge_gold_uncooked",
+    "prefab": "SledgeGoldUncooked",
+    "name": "Cast: Nord Sledge"
+   },
+   {
+    "token": "$item_sledge_iron",
+    "prefab": "SledgeIron",
+    "name": "Iron Sledge"
+   },
+   {
+    "token": "$item_stagbreaker",
+    "prefab": "SledgeStagbreaker",
+    "name": "Stagbreaker"
+   },
+   {
+    "token": "$item_sledge_wood",
+    "prefab": "SledgeWood",
+    "name": "Wooden Sledge"
+   },
+   {
+    "token": "$item_smokedfish",
+    "prefab": "SmokedFish",
+    "name": "Smoked Fish"
+   },
+   {
+    "token": "$item_smokedmoosemeat",
+    "prefab": "SmokedMooseMeat",
+    "name": "Smoked Moose Meat"
+   },
+   {
+    "token": "$item_snowball",
+    "prefab": "Snowball",
+    "name": "Snowball"
+   },
+   {
+    "token": "$item_snowshovel",
+    "prefab": "Shovel",
+    "name": "Snow Shovel"
+   },
+   {
+    "token": "$item_sparklingshroomshake",
+    "prefab": "SparklingShroomshake",
+    "name": "Sparkling Shroomshake"
+   },
+   {
+    "token": "$item_spear_bronze",
+    "prefab": "SpearBronze",
+    "name": "Bronze Spear"
+   },
+   {
+    "token": "$item_spear_carapace",
+    "prefab": "SpearCarapace",
+    "name": "Carapace Spear"
+   },
+   {
+    "token": "$item_spear_chitin",
+    "prefab": "SpearChitin",
+    "name": "Abyssal Harpoon"
+   },
+   {
+    "token": "$item_spear_ancientbark",
+    "prefab": "SpearElderbark",
+    "name": "Ancient Bark Spear"
+   },
+   {
+    "token": "$item_spear_flint",
+    "prefab": "SpearFlint",
+    "name": "Flint Spear"
+   },
+   {
+    "token": "$item_spear_gold",
+    "prefab": "SpearGold",
+    "name": "Nord Spear"
+   },
+   {
+    "token": "$item_spear_gold_bloodlightning",
+    "prefab": "SpearGold_BloodLightning",
+    "name": "Thunderblood Spear"
+   },
+   {
+    "token": "$item_spear_gold_frostfire",
+    "prefab": "SpearGold_FrostFire",
+    "name": "Frostfire Spear"
+   },
+   {
+    "token": "$item_spear_gold_uncooked",
+    "prefab": "SpearGoldUncooked",
+    "name": "Cast: Nord Spear"
+   },
+   {
+    "token": "$item_spear_splitner",
+    "prefab": "SpearSplitner",
+    "name": "Splitnir"
+   },
+   {
+    "token": "$item_spear_splitner_blood",
+    "prefab": "SpearSplitner_Blood",
+    "name": "Splitnir the Bleeding"
+   },
+   {
+    "token": "$item_spear_splitner_lightning",
+    "prefab": "SpearSplitner_Lightning",
+    "name": "Splitnir the Storming"
+   },
+   {
+    "token": "$item_spear_splitner_nature",
+    "prefab": "SpearSplitner_Nature",
+    "name": "Splitnir the Primal"
+   },
+   {
+    "token": "$item_spear_wolffang",
+    "prefab": "SpearWolfFang",
+    "name": "Fang Spear"
+   },
+   {
+    "token": "$item_spear_wood",
+    "prefab": "SpearWood",
+    "name": "Wooden Spear"
+   },
+   {
+    "token": "$item_spicymarmalade",
+    "prefab": "SpicyMarmalade",
+    "name": "Spicy Marmalade"
+   },
+   {
+    "token": "$item_staffclusterbomb",
+    "prefab": "StaffClusterbomb",
+    "name": "Staff of Fracturing"
+   },
+   {
+    "token": "$item_stafffireball",
+    "prefab": "FW_StaffFireball",
+    "name": "Staff of Embers"
+   },
+   {
+    "token": "$item_frostorbs_uncooked",
+    "prefab": "StaffFrostOrbsUncooked",
+    "name": "Cast: Northern Vengeance"
+   },
+   {
+    "token": "$item_staff_frostorbs",
+    "prefab": "StaffFrostOrbs",
+    "name": "Northern Vengeance"
+   },
+   {
+    "token": "$item_staffgreenroots",
+    "prefab": "StaffGreenRoots",
+    "name": "Staff of the Wild"
+   },
+   {
+    "token": "$item_stafficeshards",
+    "prefab": "StaffIceShards",
+    "name": "Staff of Frost"
+   },
+   {
+    "token": "$item_staff_lightning",
+    "prefab": "FW_StaffLightning",
+    "name": "Dundr"
+   },
+   {
+    "token": "$item_staff_orbofahri_uncooked",
+    "prefab": "StaffOrbofAhriUncooked",
+    "name": "Cast: Echo Spike"
+   },
+   {
+    "token": "$item_staff_orbofahri",
+    "prefab": "StaffOrbofAhri",
+    "name": "Echo Spike"
+   },
+   {
+    "token": "$item_staffredtroll",
+    "prefab": "StaffRedTroll",
+    "name": "Trollstav"
+   },
+   {
+    "token": "$item_staffshield",
+    "prefab": "StaffShield",
+    "name": "Staff of Protection"
+   },
+   {
+    "token": "$item_staffskeleton",
+    "prefab": "StaffSkeleton",
+    "name": "Dead Raiser"
+   },
+   {
+    "token": "$item_staff_spiritcaller_uncooked",
+    "prefab": "StaffSpiritCallerUncooked",
+    "name": "Cast: Spirit Caller"
+   },
+   {
+    "token": "$item_staff_spiritcaller",
+    "prefab": "StaffSpiritCaller",
+    "name": "Spirit Caller"
+   },
+   {
+    "token": "$item_staff_thunderblood_uncooked",
+    "prefab": "StaffThunderbloodUncooked",
+    "name": "Cast: Lightning Strike"
+   },
+   {
+    "token": "$item_staff_thunderblood",
+    "prefab": "StaffThunderBlood",
+    "name": "Lightning Strike"
+   },
+   {
+    "token": "$item_sword_blackmetal",
+    "prefab": "FW_SwordBlackmetal",
+    "name": "Black Metal Sword"
+   },
+   {
+    "token": "$item_sword_bronze",
+    "prefab": "SwordBronze",
+    "name": "Bronze Sword"
+   },
+   {
+    "token": "$item_sword_dyrnwyn",
+    "prefab": "SwordDyrnwyn",
+    "name": "Dyrnwyn"
+   },
+   {
+    "token": "$item_sword_gold",
+    "prefab": "SwordGold",
+    "name": "Nord Sword"
+   },
+   {
+    "token": "$item_sword_gold_bloodlightning",
+    "prefab": "SwordGold_BloodLightning",
+    "name": "Thunderblood Sword"
+   },
+   {
+    "token": "$item_sword_gold_frostfire",
+    "prefab": "SwordGold_FrostFire",
+    "name": "Frostfire Sword"
+   },
+   {
+    "token": "$item_sword_gold_uncooked",
+    "prefab": "SwordGoldUncooked",
+    "name": "Cast: Nord Sword"
+   },
+   {
+    "token": "$item_sword_iron",
+    "prefab": "SwordIron",
+    "name": "Iron Sword"
+   },
+   {
+    "token": "$item_sword_krom",
+    "prefab": "THSwordKrom",
+    "name": "Krom"
+   },
+   {
+    "token": "$item_sword_mistwalker",
+    "prefab": "SwordMistwalker",
+    "name": "Mistwalker"
+   },
+   {
+    "token": "$item_sword_niedhogg",
+    "prefab": "SwordNiedhogg",
+    "name": "Nidhögg"
+   },
+   {
+    "token": "$item_sword_niedhogg_blood",
+    "prefab": "SwordNiedhoggBlood",
+    "name": "Nidhögg the Bleeding"
+   },
+   {
+    "token": "$item_sword_niedhogg_lightning",
+    "prefab": "SwordNiedhoggLightning",
+    "name": "Nidhögg the Thundering"
+   },
+   {
+    "token": "$item_sword_niedhogg_nature",
+    "prefab": "SwordNiedhoggNature",
+    "name": "Nidhögg the Primal"
+   },
+   {
+    "token": "$item_sword_silver",
+    "prefab": "SwordSilver",
+    "name": "Silver Sword"
+   },
+   {
+    "token": "$item_sword_slayer",
+    "prefab": "THSwordSlayer",
+    "name": "Slayer"
+   },
+   {
+    "token": "$item_sword_slayer_blood",
+    "prefab": "THSwordSlayerBlood",
+    "name": "Brutal Slayer"
+   },
+   {
+    "token": "$item_sword_slayer_lightning",
+    "prefab": "THSwordSlayerLightning",
+    "name": "Scourging Slayer"
+   },
+   {
+    "token": "$item_sword_slayer_nature",
+    "prefab": "THSwordSlayerNature",
+    "name": "Primal Slayer"
+   },
+   {
+    "token": "$item_sword_wood",
+    "prefab": "SwordWood",
+    "name": "Wooden Sword"
+   },
+   {
+    "token": "$item_tankard",
+    "prefab": "Tankard",
+    "name": "Tankard"
+   },
+   {
+    "token": "$item_tankard_anniversary",
+    "prefab": "TankardAnniversary",
+    "name": "Horn of Celebration"
+   },
+   {
+    "token": "$item_tankard_odin",
+    "prefab": "TankardOdin",
+    "name": "Mead Horn of Oden"
+   },
+   {
+    "token": "$item_sword2h_gold",
+    "prefab": "THSwordGold",
+    "name": "Nord Greatsword"
+   },
+   {
+    "token": "$item_sword2h_gold_bloodlightning",
+    "prefab": "THSwordGold_BloodLightning",
+    "name": "Thunderblood Greatsword"
+   },
+   {
+    "token": "$item_sword2h_gold_frostfire",
+    "prefab": "THSwordGold_FrostFire",
+    "name": "Frostfire Greatsword"
+   },
+   {
+    "token": "$item_sword2h_gold_uncooked",
+    "prefab": "THSwordGoldUncooked",
+    "name": "Cast: Nord Greatsword"
+   },
+   {
+    "token": "$item_sword_wood_2h",
+    "prefab": "THSwordWood",
+    "name": "Wooden Greatsword"
+   },
+   {
+    "token": "$item_torch",
+    "prefab": "Torch",
+    "name": "Torch"
+   },
+   {
+    "token": "$item_torchmist",
+    "prefab": "TorchMist",
+    "name": "item torchmist"
+   },
+   {
+    "token": "$item_trinketblackdamagedealth",
+    "prefab": "TrinketBlackDamageHealth",
+    "name": "Bracelets of the Brave"
+   },
+   {
+    "token": "$item_trinketblackdtamina",
+    "prefab": "TrinketBlackStamina",
+    "name": "Evasion Mantle"
+   },
+   {
+    "token": "$item_trinketbloodgoldhealth",
+    "prefab": "TrinketBloodGoldHealth",
+    "name": "Neckstabber"
+   },
+   {
+    "token": "$item_trinketbloodgoldstamina",
+    "prefab": "TrinketBloodGoldStamina",
+    "name": "Witch Crown"
+   },
+   {
+    "token": "$item_trinketbronzehealth",
+    "prefab": "TrinketBronzeHealth",
+    "name": "Heart of the Forest"
+   },
+   {
+    "token": "$item_trinketbronzestamina",
+    "prefab": "TrinketBronzeStamina",
+    "name": "Bronze Pendant"
+   },
+   {
+    "token": "$item_trinketcarapaceeitr",
+    "prefab": "TrinketCarapaceEitr",
+    "name": "Pulsating Earrings"
+   },
+   {
+    "token": "$item_trinketchitinswim",
+    "prefab": "TrinketChitinSwim",
+    "name": "Fins of Destiny"
+   },
+   {
+    "token": "$item_trinketflametaleitr",
+    "prefab": "TrinketFlametalEitr",
+    "name": "Jörmundling"
+   },
+   {
+    "token": "$item_trinketflametalstaminahealth",
+    "prefab": "TrinketFlametalStaminaHealth",
+    "name": "Brimstone"
+   },
+   {
+    "token": "$item_trinketironhealth",
+    "prefab": "TrinketIronHealth",
+    "name": "Iron Brooch"
+   },
+   {
+    "token": "$item_trinketironstamina",
+    "prefab": "TrinketIronStamina",
+    "name": "Nimble Anklet"
+   },
+   {
+    "token": "$item_trinketscalestaminadamage",
+    "prefab": "TrinketScaleStaminaDamage",
+    "name": "Resounding Shackle"
+   },
+   {
+    "token": "$item_trinketsilverdamage",
+    "prefab": "TrinketSilverDamage",
+    "name": "Wolf Sight"
+   },
+   {
+    "token": "$item_trinketsilverresist",
+    "prefab": "TrinketSilverResist",
+    "name": "Crystal Heart"
+   },
+   {
+    "token": "$item_turnipstew",
+    "prefab": "TurnipStew",
+    "name": "Turnip Stew"
+   },
+   {
+    "token": "$item_turretbolt",
+    "prefab": "TurretBolt",
+    "name": "Black Metal Missile"
+   },
+   {
+    "token": "$item_turretbolt_bloodgold",
+    "prefab": "TurretBoltBloodgold",
+    "name": "Bloodgold Missile"
+   },
+   {
+    "token": "$item_turretbolt_flametal",
+    "prefab": "TurretBoltFlametal",
+    "name": "Flametal Missile"
+   },
+   {
+    "token": "$item_turretboltwood",
+    "prefab": "TurretBoltWood",
+    "name": "Wooden Missile"
+   },
+   {
+    "token": "$item_vikingcupcake_uncooked",
+    "prefab": "VikingCupcakeUncooked",
+    "name": "Unbaked Sweetbread"
+   },
+   {
+    "token": "$item_wolfjerky",
+    "prefab": "WolfJerky",
+    "name": "Wolf Jerky"
+   },
+   {
+    "token": "$item_wolf_skewer",
+    "prefab": "WolfMeatSkewer",
+    "name": "Wolf Skewer"
+   },
+   {
+    "token": "$item_yggdrasilporridge",
+    "prefab": "YggdrasilPorridge",
+    "name": "Yggdrasil Porridge"
+   }
+  ]
+ },
+ {
+  "id": "AllMiniBosses",
+  "name": "Odin is Pleased",
+  "desc": "Defeat all minibosses.",
+  "icon": true,
+  "difficulty": 1,
+  "kills": [
+   {
+    "token": "$enemy_fenringcultist_hildir",
+    "prefab": "Fenring_Cultist_Hildir",
+    "name": "Geirrhafa"
+   },
+   {
+    "token": "$enemy_skeletonfire",
+    "prefab": "Skeleton_Hildir",
+    "name": "Brenna"
+   },
+   {
+    "token": "$enemy_charred_melee_Dyrnwyn",
+    "prefab": "Charred_Melee_Dyrnwyn",
+    "name": "Lord Reto"
+   },
+   {
+    "token": "$enemy_goblinbrute_hildircombined",
+    "prefab": "GoblinBruteBros",
+    "name": "Zil \u0026 Thungr"
+   },
+   {
+    "token": "$enemy_goblin_hildir",
+    "prefab": "GoblinShaman_Hildir",
+    "name": "Zil"
+   }
+  ]
+ },
+ {
+  "id": "AllWeaponCraft",
+  "name": "The Blacksmith",
+  "desc": "Craft every kind of weapon.",
+  "icon": true,
+  "difficulty": 1,
+  "dynamic": true,
+  "crafts": [
+   {
+    "token": "$item_atgeir_blackmetal",
+    "prefab": "AtgeirBlackmetal",
+    "name": "Black Metal Atgeir"
+   },
+   {
+    "token": "$item_atgeir_bronze",
+    "prefab": "AtgeirBronze",
+    "name": "Bronze Atgeir"
+   },
+   {
+    "token": "$item_atgeir_gold",
+    "prefab": "AtgeirGold",
+    "name": "Nord Atgeir"
+   },
+   {
+    "token": "$item_atgeir_gold_bloodlightning",
+    "prefab": "AtgeirGold_BloodLightning",
+    "name": "Thunderblood Atgeir"
+   },
+   {
+    "token": "$item_atgeir_gold_frostfire",
+    "prefab": "AtgeirGold_FrostFire",
+    "name": "Frostfire Atgeir"
+   },
+   {
+    "token": "$item_atgeir_himminafl",
+    "prefab": "AtgeirHimminAfl",
+    "name": "Himminafl"
+   },
+   {
+    "token": "$item_atgeir_iron",
+    "prefab": "AtgeirIron",
+    "name": "Iron Atgeir"
+   },
+   {
+    "token": "$item_atgeir_wood",
+    "prefab": "AtgeirWood",
+    "name": "Wooden Atgeir"
+   },
+   {
+    "token": "$item_axe_berzerkr",
+    "prefab": "AxeBerzerkr",
+    "name": "Berserkir Axes"
+   },
+   {
+    "token": "$item_axe_berzerkr_blood",
+    "prefab": "AxeBerzerkrBlood",
+    "name": "Bleeding Berserkir Axes"
+   },
+   {
+    "token": "$item_axe_berzerkr_lightning",
+    "prefab": "AxeBerzerkrLightning",
+    "name": "Thundering Berserkir Axes"
+   },
+   {
+    "token": "$item_axe_berzerkr_nature",
+    "prefab": "AxeBerzerkrNature",
+    "name": "Primal Berserkir Axes"
+   },
+   {
+    "token": "$item_axe_blackmetal",
+    "prefab": "AxeBlackMetal",
+    "name": "Black Metal Axe"
+   },
+   {
+    "token": "$item_axe_bronze",
+    "prefab": "AxeBronze",
+    "name": "Bronze Axe"
+   },
+   {
+    "token": "$item_axe_early",
+    "prefab": "AxeEarly",
+    "name": "Early Axes"
+   },
+   {
+    "token": "$item_axe_flint",
+    "prefab": "AxeFlint",
+    "name": "Flint Axe"
+   },
+   {
+    "token": "$item_axe_gold",
+    "prefab": "AxeGold",
+    "name": "Nord Axe"
+   },
+   {
+    "token": "$item_axe_gold_bloodlightning",
+    "prefab": "AxeGold_BloodLightning",
+    "name": "Thunderblood Axe"
+   },
+   {
+    "token": "$item_axe_gold_frostfire",
+    "prefab": "AxeGold_FrostFire",
+    "name": "Frostfire Axe"
+   },
+   {
+    "token": "$item_axe_iron",
+    "prefab": "AxeIron",
+    "name": "Iron Axe"
+   },
+   {
+    "token": "$item_axe_jotunbane",
+    "prefab": "AxeJotunBane",
+    "name": "Jotun Bane"
+   },
+   {
+    "token": "$item_axe_stone",
+    "prefab": "AxeStone",
+    "name": "Stone Axe"
+   },
+   {
+    "token": "$item_axe_wood",
+    "prefab": "AxeWood",
+    "name": "Wooden Axe"
+   },
+   {
+    "token": "$item_battleaxe",
+    "prefab": "Battleaxe",
+    "name": "Battleaxe"
+   },
+   {
+    "token": "$item_battleaxe_blackmetal",
+    "prefab": "BattleaxeBlackmetal",
+    "name": "Black Metal Battleaxe"
+   },
+   {
+    "token": "$item_battleaxe_crystal",
+    "prefab": "BattleaxeCrystal",
+    "name": "Crystal Battleaxe"
+   },
+   {
+    "token": "$item_battleaxe_skullsplittur",
+    "prefab": "BattleaxeSkullSplittur",
+    "name": "Skull Splittur"
+   },
+   {
+    "token": "$item_battleaxe_gold",
+    "name": "item battleaxe gold"
+   },
+   {
+    "token": "$item_axe2h_gold_bloodlightning",
+    "prefab": "BattleaxeGold_BloodLightning",
+    "name": "Thunderblood Greataxe"
+   },
+   {
+    "token": "$item_axe2h_gold_frostfire",
+    "prefab": "BattleaxeGold_FrostFire",
+    "name": "Frostfire Greataxe"
+   },
+   {
+    "token": "$item_battleaxe_wood",
+    "prefab": "BattleaxeWood",
+    "name": "Wooden Battleaxe"
+   },
+   {
+    "token": "$item_bilebomb",
+    "prefab": "BombBile",
+    "name": "Bile Bomb"
+   },
+   {
+    "token": "$item_bombblob_frost",
+    "prefab": "BombBlob_Frost",
+    "name": "Blob Bomb: Frost"
+   },
+   {
+    "token": "$item_bombblob_lava",
+    "prefab": "BombBlob_Lava",
+    "name": "Blob Bomb: Lava"
+   },
+   {
+    "token": "$item_bombblob_morkhalla",
+    "prefab": "BombBlob_Morkhalla",
+    "name": "Blob Bomb: Pulp"
+   },
+   {
+    "token": "$item_bombblob_poison",
+    "prefab": "BombBlob_Poison",
+    "name": "Blob Bomb: Poison"
+   },
+   {
+    "token": "$item_bombblob_poisonelite",
+    "prefab": "BombBlob_PoisonElite",
+    "name": "Blob Bomb: Elite Poison"
+   },
+   {
+    "token": "$item_bombblob_tar",
+    "prefab": "BombBlob_Tar",
+    "name": "Blob Bomb: Tar"
+   },
+   {
+    "token": "$item_bomb_dynamite",
+    "prefab": "BombDynamite",
+    "name": "Ember Charge"
+   },
+   {
+    "token": "$item_lavabomb",
+    "prefab": "BombLava",
+    "name": "Basalt Bomb"
+   },
+   {
+    "token": "$item_oozebomb",
+    "prefab": "BombOoze",
+    "name": "Ooze Bomb"
+   },
+   {
+    "token": "$item_smokebomb",
+    "prefab": "BombSmoke",
+    "name": "Smoke Bomb"
+   },
+   {
+    "token": "$item_bow",
+    "prefab": "Bow",
+    "name": "Crude Bow"
+   },
+   {
+    "token": "$item_bow_ashlands",
+    "prefab": "BowAshlands",
+    "name": "Ash Fang"
+   },
+   {
+    "token": "$item_bow_ashlandsblood",
+    "prefab": "BowAshlandsBlood",
+    "name": "Blood Fang"
+   },
+   {
+    "token": "$item_bow_ashlandsstorm",
+    "prefab": "BowAshlandsStorm",
+    "name": "Storm Fang"
+   },
+   {
+    "token": "$item_bow_ashlandsroot",
+    "prefab": "BowAshlandsRoot",
+    "name": "Root Fang"
+   },
+   {
+    "token": "$item_bow_draugrfang",
+    "prefab": "BowDraugrFang",
+    "name": "Draugr Fang"
+   },
+   {
+    "token": "$item_bow_finewood",
+    "prefab": "BowFineWood",
+    "name": "Finewood Bow"
+   },
+   {
+    "token": "$item_bow_gold",
+    "prefab": "BowGold",
+    "name": "Nord Bow"
+   },
+   {
+    "token": "$item_bow_gold_bloodlightning",
+    "prefab": "BowGold_BloodLightning",
+    "name": "Thunderblood Bow"
+   },
+   {
+    "token": "$item_bow_gold_frostfire",
+    "prefab": "BowGold_FrostFire",
+    "name": "Frostfire Bow"
+   },
+   {
+    "token": "$item_bow_huntsman",
+    "prefab": "BowHuntsman",
+    "name": "Huntsman Bow"
+   },
+   {
+    "token": "$item_bow_snipesnap",
+    "prefab": "BowSpineSnap",
+    "name": "Spinesnap"
+   },
+   {
+    "token": "$item_club",
+    "prefab": "Club",
+    "name": "Club"
+   },
+   {
+    "token": "$item_crossbow_arbalest",
+    "prefab": "CrossbowArbalest",
+    "name": "Arbalest"
+   },
+   {
+    "token": "$item_crossbow_gold",
+    "prefab": "CrossbowGold",
+    "name": "Nord Crossbow"
+   },
+   {
+    "token": "$item_crossbow_bloodlightning_gold",
+    "prefab": "CrossbowGold_BloodLightning",
+    "name": "Thunderblood Crossbow"
+   },
+   {
+    "token": "$item_crossbow_frostfire_gold",
+    "prefab": "CrossbowGold_FrostFire",
+    "name": "Frostfire Crossbow"
+   },
+   {
+    "token": "$item_crossbow_ripper",
+    "prefab": "CrossbowRipper",
+    "name": "Ripper"
+   },
+   {
+    "token": "$item_crossbow_ripper_blood",
+    "prefab": "CrossbowRipperBlood",
+    "name": "Wound Ripper"
+   },
+   {
+    "token": "$item_crossbow_ripper_lightning",
+    "prefab": "CrossbowRipperLightning",
+    "name": "Storm Ripper"
+   },
+   {
+    "token": "$item_crossbow_ripper_nature",
+    "prefab": "CrossbowRipperNature",
+    "name": "Root Ripper"
+   },
+   {
+    "token": "$item_fistweapon_bjorn",
+    "prefab": "FistBjornClaw",
+    "name": "Paws of the Bear"
+   },
+   {
+    "token": "$item_fistweapon_fenris",
+    "prefab": "FistFenrirClaw",
+    "name": "Flesh Rippers"
+   },
+   {
+    "token": "$item_fistweapon_gold_bloodlightning",
+    "prefab": "FistGold_BloodLightning",
+    "name": "Thunderblood Knucklechains"
+   },
+   {
+    "token": "$item_fistweapon_frostfire_gold",
+    "prefab": "FistGold_FrostFire",
+    "name": "Frostfire Knucklechains"
+   },
+   {
+    "token": "$item_fistweapon_bjorn_undead",
+    "prefab": "FistBjornUndeadClaw",
+    "name": "Vilebone Maulclaws"
+   },
+   {
+    "token": "$item_fistweapon_gold",
+    "prefab": "FistGold",
+    "name": "Nord Knucklechains"
+   },
+   {
+    "token": "$item_graplinghook",
+    "prefab": "GrapplingHook",
+    "name": "Grappling Hook"
+   },
+   {
+    "token": "$item_knife_blackmetal",
+    "prefab": "KnifeBlackMetal",
+    "name": "Black Metal Knife"
+   },
+   {
+    "token": "$item_knife_butcher",
+    "prefab": "KnifeButcher",
+    "name": "Butcher Knife"
+   },
+   {
+    "token": "$item_knife_chitin",
+    "prefab": "KnifeChitin",
+    "name": "Abyssal Razor"
+   },
+   {
+    "token": "$item_knife_copper",
+    "prefab": "KnifeCopper",
+    "name": "Copper Knife"
+   },
+   {
+    "token": "$item_knife_flint",
+    "prefab": "KnifeFlint",
+    "name": "Flint Knife"
+   },
+   {
+    "token": "$item_knife_gold",
+    "prefab": "KnifeGold",
+    "name": "Nord Dagger"
+   },
+   {
+    "token": "$item_knife_gold_bloodlightning",
+    "prefab": "KnifeGold_BloodLightning",
+    "name": "Thunderblood Dagger"
+   },
+   {
+    "token": "$item_knife_gold_frostfire",
+    "prefab": "KnifeGold_FrostFire",
+    "name": "Frostfire Dagger"
+   },
+   {
+    "token": "$item_knife_silver",
+    "prefab": "FW_KnifeSilver",
+    "name": "Silver Knife"
+   },
+   {
+    "token": "$item_knife_skollandhati",
+    "prefab": "FW_KnifeSkollAndHati",
+    "name": "Skoll and Hati"
+   },
+   {
+    "token": "$item_knife_void",
+    "prefab": "KnifeVoid",
+    "name": "Voidcaller"
+   },
+   {
+    "token": "$item_knife_wood",
+    "prefab": "KnifeWood",
+    "name": "Wooden Knife"
+   },
+   {
+    "token": "$item_lantern",
+    "prefab": "Lantern",
+    "name": "Dvergr Lantern"
+   },
+   {
+    "token": "$item_mace_bronze",
+    "prefab": "MaceBronze",
+    "name": "Bronze Mace"
+   },
+   {
+    "token": "$item_mace_eldner",
+    "prefab": "MaceEldner",
+    "name": "Flametal Mace"
+   },
+   {
+    "token": "$item_mace_eldner_blood",
+    "prefab": "MaceEldnerBlood",
+    "name": "Bloodgeon"
+   },
+   {
+    "token": "$item_mace_eldner_lightning",
+    "prefab": "MaceEldnerLightning",
+    "name": "Storm Star"
+   },
+   {
+    "token": "$item_mace_eldner_nature",
+    "prefab": "MaceEldnerNature",
+    "name": "Klossen"
+   },
+   {
+    "token": "$item_mace_gold",
+    "prefab": "MaceGold",
+    "name": "Nord Mace"
+   },
+   {
+    "token": "$item_mace_gold_bloodlightning",
+    "prefab": "MaceGold_BloodLightning",
+    "name": "Thunderblood Mace"
+   },
+   {
+    "token": "$item_mace_gold_frostfire",
+    "prefab": "MaceGold_FrostFire",
+    "name": "Frostfire Mace"
+   },
+   {
+    "token": "$item_mace_iron",
+    "prefab": "MaceIron",
+    "name": "Iron Mace"
+   },
+   {
+    "token": "$item_mace_needle",
+    "prefab": "MaceNeedle",
+    "name": "Porcupine"
+   },
+   {
+    "token": "$item_mace_silver",
+    "prefab": "MaceSilver",
+    "name": "Frostner"
+   },
+   {
+    "token": "$item_mace_wood",
+    "prefab": "MaceWood",
+    "name": "Wooden Mace"
+   },
+   {
+    "token": "$item_pickaxe_antler",
+    "prefab": "PickaxeAntler",
+    "name": "Antler Pickaxe"
+   },
+   {
+    "token": "$item_pickaxe_blackmetal",
+    "prefab": "PickaxeBlackMetal",
+    "name": "Black Metal Pickaxe"
+   },
+   {
+    "token": "$item_pickaxe_bronze",
+    "prefab": "PickaxeBronze",
+    "name": "Bronze Pickaxe"
+   },
+   {
+    "token": "$item_pickaxe_iron",
+    "prefab": "PickaxeIron",
+    "name": "Iron Pickaxe"
+   },
+   {
+    "token": "$item_pickaxe_stone",
+    "prefab": "PickaxeStone",
+    "name": "Stone Pickaxe"
+   },
+   {
+    "token": "$item_scythe",
+    "prefab": "Scythe",
+    "name": "Scythe"
+   },
+   {
+    "token": "$item_sledge_demolisher",
+    "prefab": "SledgeDemolisher",
+    "name": "Demolisher"
+   },
+   {
+    "token": "$item_sledge_gold",
+    "prefab": "SledgeGold",
+    "name": "Nord Sledge"
+   },
+   {
+    "token": "$item_mace2h_gold_bloodlightning",
+    "prefab": "SledgeGold_BloodLightning",
+    "name": "Thunderblood Sledge"
+   },
+   {
+    "token": "$item_mace2h_gold_frostfire",
+    "prefab": "SledgeGold_FrostFire",
+    "name": "Frostfire Sledge"
+   },
+   {
+    "token": "$item_sledge_iron",
+    "prefab": "SledgeIron",
+    "name": "Iron Sledge"
+   },
+   {
+    "token": "$item_stagbreaker",
+    "prefab": "SledgeStagbreaker",
+    "name": "Stagbreaker"
+   },
+   {
+    "token": "$item_sledge_wood",
+    "prefab": "SledgeWood",
+    "name": "Wooden Sledge"
+   },
+   {
+    "token": "$item_snowball",
+    "prefab": "Snowball",
+    "name": "Snowball"
+   },
+   {
+    "token": "$item_snowshovel",
+    "prefab": "Shovel",
+    "name": "Snow Shovel"
+   },
+   {
+    "token": "$item_spear_bronze",
+    "prefab": "SpearBronze",
+    "name": "Bronze Spear"
+   },
+   {
+    "token": "$item_spear_carapace",
+    "prefab": "SpearCarapace",
+    "name": "Carapace Spear"
+   },
+   {
+    "token": "$item_spear_chitin",
+    "prefab": "SpearChitin",
+    "name": "Abyssal Harpoon"
+   },
+   {
+    "token": "$item_spear_ancientbark",
+    "prefab": "SpearElderbark",
+    "name": "Ancient Bark Spear"
+   },
+   {
+    "token": "$item_spear_flint",
+    "prefab": "SpearFlint",
+    "name": "Flint Spear"
+   },
+   {
+    "token": "$item_spear_gold",
+    "prefab": "SpearGold",
+    "name": "Nord Spear"
+   },
+   {
+    "token": "$item_spear_gold_bloodlightning",
+    "prefab": "SpearGold_BloodLightning",
+    "name": "Thunderblood Spear"
+   },
+   {
+    "token": "$item_spear_gold_frostfire",
+    "prefab": "SpearGold_FrostFire",
+    "name": "Frostfire Spear"
+   },
+   {
+    "token": "$item_spear_splitner",
+    "prefab": "SpearSplitner",
+    "name": "Splitnir"
+   },
+   {
+    "token": "$item_spear_splitner_blood",
+    "prefab": "SpearSplitner_Blood",
+    "name": "Splitnir the Bleeding"
+   },
+   {
+    "token": "$item_spear_splitner_lightning",
+    "prefab": "SpearSplitner_Lightning",
+    "name": "Splitnir the Storming"
+   },
+   {
+    "token": "$item_spear_splitner_nature",
+    "prefab": "SpearSplitner_Nature",
+    "name": "Splitnir the Primal"
+   },
+   {
+    "token": "$item_spear_wolffang",
+    "prefab": "SpearWolfFang",
+    "name": "Fang Spear"
+   },
+   {
+    "token": "$item_spear_wood",
+    "prefab": "SpearWood",
+    "name": "Wooden Spear"
+   },
+   {
+    "token": "$item_staffclusterbomb",
+    "prefab": "StaffClusterbomb",
+    "name": "Staff of Fracturing"
+   },
+   {
+    "token": "$item_stafffireball",
+    "prefab": "FW_StaffFireball",
+    "name": "Staff of Embers"
+   },
+   {
+    "token": "$item_staff_frostorbs",
+    "prefab": "StaffFrostOrbs",
+    "name": "Northern Vengeance"
+   },
+   {
+    "token": "$item_staffgreenroots",
+    "prefab": "StaffGreenRoots",
+    "name": "Staff of the Wild"
+   },
+   {
+    "token": "$item_stafficeshards",
+    "prefab": "StaffIceShards",
+    "name": "Staff of Frost"
+   },
+   {
+    "token": "$item_staff_lightning",
+    "prefab": "FW_StaffLightning",
+    "name": "Dundr"
+   },
+   {
+    "token": "$item_staff_orbofahri",
+    "prefab": "StaffOrbofAhri",
+    "name": "Echo Spike"
+   },
+   {
+    "token": "$item_staffredtroll",
+    "prefab": "StaffRedTroll",
+    "name": "Trollstav"
+   },
+   {
+    "token": "$item_staffshield",
+    "prefab": "StaffShield",
+    "name": "Staff of Protection"
+   },
+   {
+    "token": "$item_staffskeleton",
+    "prefab": "StaffSkeleton",
+    "name": "Dead Raiser"
+   },
+   {
+    "token": "$item_staff_spiritcaller",
+    "prefab": "StaffSpiritCaller",
+    "name": "Spirit Caller"
+   },
+   {
+    "token": "$item_staff_thunderblood",
+    "prefab": "StaffThunderBlood",
+    "name": "Lightning Strike"
+   },
+   {
+    "token": "$item_sword_blackmetal",
+    "prefab": "FW_SwordBlackmetal",
+    "name": "Black Metal Sword"
+   },
+   {
+    "token": "$item_sword_bronze",
+    "prefab": "SwordBronze",
+    "name": "Bronze Sword"
+   },
+   {
+    "token": "$item_sword_dyrnwyn",
+    "prefab": "SwordDyrnwyn",
+    "name": "Dyrnwyn"
+   },
+   {
+    "token": "$item_sword_gold",
+    "prefab": "SwordGold",
+    "name": "Nord Sword"
+   },
+   {
+    "token": "$item_sword_gold_bloodlightning",
+    "prefab": "SwordGold_BloodLightning",
+    "name": "Thunderblood Sword"
+   },
+   {
+    "token": "$item_sword_gold_frostfire",
+    "prefab": "SwordGold_FrostFire",
+    "name": "Frostfire Sword"
+   },
+   {
+    "token": "$item_sword_iron",
+    "prefab": "SwordIron",
+    "name": "Iron Sword"
+   },
+   {
+    "token": "$item_sword_krom",
+    "prefab": "THSwordKrom",
+    "name": "Krom"
+   },
+   {
+    "token": "$item_sword_mistwalker",
+    "prefab": "SwordMistwalker",
+    "name": "Mistwalker"
+   },
+   {
+    "token": "$item_sword_niedhogg",
+    "prefab": "SwordNiedhogg",
+    "name": "Nidhögg"
+   },
+   {
+    "token": "$item_sword_niedhogg_blood",
+    "prefab": "SwordNiedhoggBlood",
+    "name": "Nidhögg the Bleeding"
+   },
+   {
+    "token": "$item_sword_niedhogg_lightning",
+    "prefab": "SwordNiedhoggLightning",
+    "name": "Nidhögg the Thundering"
+   },
+   {
+    "token": "$item_sword_niedhogg_nature",
+    "prefab": "SwordNiedhoggNature",
+    "name": "Nidhögg the Primal"
+   },
+   {
+    "token": "$item_sword_silver",
+    "prefab": "SwordSilver",
+    "name": "Silver Sword"
+   },
+   {
+    "token": "$item_sword_slayer",
+    "prefab": "THSwordSlayer",
+    "name": "Slayer"
+   },
+   {
+    "token": "$item_sword_slayer_blood",
+    "prefab": "THSwordSlayerBlood",
+    "name": "Brutal Slayer"
+   },
+   {
+    "token": "$item_sword_slayer_lightning",
+    "prefab": "THSwordSlayerLightning",
+    "name": "Scourging Slayer"
+   },
+   {
+    "token": "$item_sword_slayer_nature",
+    "prefab": "THSwordSlayerNature",
+    "name": "Primal Slayer"
+   },
+   {
+    "token": "$item_sword_wood",
+    "prefab": "SwordWood",
+    "name": "Wooden Sword"
+   },
+   {
+    "token": "$item_tankard",
+    "prefab": "Tankard",
+    "name": "Tankard"
+   },
+   {
+    "token": "$item_tankard_anniversary",
+    "prefab": "TankardAnniversary",
+    "name": "Horn of Celebration"
+   },
+   {
+    "token": "$item_tankard_odin",
+    "prefab": "TankardOdin",
+    "name": "Mead Horn of Oden"
+   },
+   {
+    "token": "$item_sword2h_gold",
+    "prefab": "THSwordGold",
+    "name": "Nord Greatsword"
+   },
+   {
+    "token": "$item_sword2h_gold_bloodlightning",
+    "prefab": "THSwordGold_BloodLightning",
+    "name": "Thunderblood Greatsword"
+   },
+   {
+    "token": "$item_sword2h_gold_frostfire",
+    "prefab": "THSwordGold_FrostFire",
+    "name": "Frostfire Greatsword"
+   },
+   {
+    "token": "$item_sword_wood_2h",
+    "prefab": "THSwordWood",
+    "name": "Wooden Greatsword"
+   },
+   {
+    "token": "$item_torch",
+    "prefab": "Torch",
+    "name": "Torch"
+   },
+   {
+    "token": "$item_torchmist",
+    "prefab": "TorchMist",
+    "name": "item torchmist"
+   }
+  ]
+ },
+ {
+  "id": "Arrived",
+  "name": "I Have Arrived!",
+  "desc": "Enter the tenth world.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 151,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "BigFish",
+  "name": "A Catch Worthy of Njord",
+  "desc": "Catch a four star fish.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 165,
+    "amount": 0
+   },
+   {
+    "stat": 166,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "Boss1Eikthyr",
+  "name": "Eikthyr",
+  "desc": "Defeat the Lightning Stag.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "kills": [
+   {
+    "token": "$enemy_eikthyr",
+    "prefab": "Eikthyr",
+    "name": "Eikthyr"
+   }
+  ]
+ },
+ {
+  "id": "Boss2Elder",
+  "name": "The Elder",
+  "desc": "Defeat the Living Forest.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "kills": [
+   {
+    "token": "$enemy_gdking",
+    "prefab": "gd_king",
+    "name": "The Elder"
+   }
+  ]
+ },
+ {
+  "id": "Boss3Bonemass",
+  "name": "Bonemass",
+  "desc": "Defeat the Writhing Dead.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "kills": [
+   {
+    "token": "$enemy_bonemass",
+    "prefab": "Bonemass",
+    "name": "Bonemass"
+   }
+  ]
+ },
+ {
+  "id": "Boss4Moder",
+  "name": "Moder",
+  "desc": "Defeat the Dragon Mother.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "kills": [
+   {
+    "token": "$enemy_dragon",
+    "prefab": "Dragon",
+    "name": "Moder"
+   }
+  ]
+ },
+ {
+  "id": "Boss5Yagluth",
+  "name": "Yagluth",
+  "desc": "Defeat the Twisted Soul.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "kills": [
+   {
+    "token": "$enemy_goblinking",
+    "prefab": "GoblinKing",
+    "name": "Yagluth"
+   }
+  ]
+ },
+ {
+  "id": "Boss6Queen",
+  "name": "The Seeker Queen",
+  "desc": "Defeat the Crawling Matriarch.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "kills": [
+   {
+    "token": "$enemy_seekerqueen",
+    "prefab": "SeekerQueen",
+    "name": "The Queen"
+   }
+  ]
+ },
+ {
+  "id": "Boss7Fader",
+  "name": "Fader",
+  "desc": "Defeat the Emerald Flame.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "kills": [
+   {
+    "token": "$enemy_fader",
+    "prefab": "Fader",
+    "name": "Fader"
+   }
+  ]
+ },
+ {
+  "id": "Boss8FrozenKing",
+  "name": "Kall Fimbulbringer",
+  "desc": "Defeat the Shackled One.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "kills": [
+   {
+    "token": "$enemy_frozenking_p3",
+    "prefab": "FrozenKing_p3",
+    "name": "Kall Fimbulbringer"
+   }
+  ]
+ },
+ {
+  "id": "BuildDyrnwyn",
+  "name": "The Chosen One",
+  "desc": "Assemble Dyrnwyn.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "crafts": [
+   {
+    "token": "$item_sword_dyrnwyn",
+    "prefab": "SwordDyrnwyn",
+    "name": "Dyrnwyn"
+   }
+  ]
+ },
+ {
+  "id": "BuildHigh",
+  "name": "Mighty Halls",
+  "desc": "Raise a very tall structure.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 130,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "BuildHighWorld",
+  "name": "Top of the World",
+  "desc": "Build something very high up.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 131,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "BuildHouse",
+  "name": "The Homesteader",
+  "desc": "Build a house.",
+  "icon": true,
+  "difficulty": 1,
+  "lenient": true,
+  "stats": [
+   {
+    "stat": 174,
+    "amount": 0
+   },
+   {
+    "stat": 175,
+    "amount": 0
+   },
+   {
+    "stat": 176,
+    "amount": 0
+   },
+   {
+    "stat": 178,
+    "amount": 0
+   },
+   {
+    "stat": 179,
+    "amount": 0
+   },
+   {
+    "stat": 181,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "BuildVillage",
+  "name": "The Architect",
+  "desc": "Build a village.",
+  "icon": true,
+  "difficulty": 1,
+  "lenient": true,
+  "stats": [
+   {
+    "stat": 173,
+    "amount": 0
+   },
+   {
+    "stat": 174,
+    "amount": 0
+   },
+   {
+    "stat": 175,
+    "amount": 0
+   },
+   {
+    "stat": 176,
+    "amount": 0
+   },
+   {
+    "stat": 177,
+    "amount": 0
+   },
+   {
+    "stat": 178,
+    "amount": 0
+   },
+   {
+    "stat": 179,
+    "amount": 0
+   },
+   {
+    "stat": 180,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "ChildOfOdin",
+  "name": "Child of Odin",
+  "desc": "Embody the spirits of the Toughest Viking, Master Hunter, Survivor and Pathfinder.",
+  "icon": true,
+  "difficulty": 1,
+  "others": [
+   "ExploreNSEWNoMap",
+   "AllBossesHard",
+   "KillAllCreaturesHard",
+   "GrindDays"
+  ]
+ },
+ {
+  "id": "DeathByAllTypes",
+  "name": "Are You Alright?",
+  "desc": "Die in every way possible.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 56,
+    "amount": 0
+   },
+   {
+    "stat": 58,
+    "amount": 0
+   },
+   {
+    "stat": 59,
+    "amount": 0
+   },
+   {
+    "stat": 60,
+    "amount": 0
+   },
+   {
+    "stat": 61,
+    "amount": 0
+   },
+   {
+    "stat": 62,
+    "amount": 0
+   },
+   {
+    "stat": 63,
+    "amount": 0
+   },
+   {
+    "stat": 65,
+    "amount": 0
+   },
+   {
+    "stat": 68,
+    "amount": 0
+   },
+   {
+    "stat": 71,
+    "amount": 0
+   },
+   {
+    "stat": 73,
+    "amount": 0
+   },
+   {
+    "stat": 105,
+    "amount": 0
+   },
+   {
+    "stat": 107,
+    "amount": 0
+   },
+   {
+    "stat": 108,
+    "amount": 0
+   },
+   {
+    "stat": 203,
+    "amount": 0
+   },
+   {
+    "stat": 204,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "DeathByObliterator",
+  "name": "Obliterated",
+  "desc": "You stood a bit too close.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 108,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "DeathByTree",
+  "name": "Accidents Happen",
+  "desc": "Get killed by a tree.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 68,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "DeathByTreeAll",
+  "name": "That Can't Be an Accident",
+  "desc": "Get killed by every kind of tree.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 199,
+    "amount": 0
+   },
+   {
+    "stat": 200,
+    "amount": 0
+   },
+   {
+    "stat": 201,
+    "amount": 0
+   },
+   {
+    "stat": 202,
+    "amount": 0
+   },
+   {
+    "stat": 193,
+    "amount": 0
+   },
+   {
+    "stat": 194,
+    "amount": 0
+   },
+   {
+    "stat": 195,
+    "amount": 0
+   },
+   {
+    "stat": 196,
+    "amount": 0
+   },
+   {
+    "stat": 197,
+    "amount": 0
+   },
+   {
+    "stat": 198,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "ExploreNSEW",
+  "name": "The Explorer",
+  "desc": "Travel far in all four directions.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 138,
+    "amount": 0
+   },
+   {
+    "stat": 139,
+    "amount": 0
+   },
+   {
+    "stat": 140,
+    "amount": 0
+   },
+   {
+    "stat": 141,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "ExploreNSEWNoMap",
+  "name": "The Pathfinder",
+  "desc": "Travel far in all four directions, without using a map.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 142,
+    "amount": 0
+   },
+   {
+    "stat": 143,
+    "amount": 0
+   },
+   {
+    "stat": 144,
+    "amount": 0
+   },
+   {
+    "stat": 145,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "FindAllTrophies",
+  "name": "The Trophy Collector",
+  "desc": "Collect all trophies.",
+  "icon": true,
+  "difficulty": 1,
+  "dynamic": true,
+  "pickedUp": [
+   {
+    "token": "$item_trophy_abomination",
+    "prefab": "TrophyAbomination",
+    "name": "Abomination Trophy"
+   },
+   {
+    "token": "$item_trophy_asksvin",
+    "prefab": "TrophyAsksvin",
+    "name": "Asksvin Trophy"
+   },
+   {
+    "token": "$item_trophy_barka",
+    "prefab": "TrophyBarka",
+    "name": "Barka Trophy"
+   },
+   {
+    "token": "$item_trophy_bjorn",
+    "prefab": "TrophyBjorn",
+    "name": "Bear Trophy"
+   },
+   {
+    "token": "$item_trophy_bjorn_undead",
+    "prefab": "TrophyBjornUndead",
+    "name": "Vile Trophy"
+   },
+   {
+    "token": "$item_trophy_blob",
+    "prefab": "TrophyBlob",
+    "name": "Blob Trophy"
+   },
+   {
+    "token": "$item_trophy_blob_frost",
+    "prefab": "TrophyBlob_Frost",
+    "name": "Frost Blob Trophy"
+   },
+   {
+    "token": "$item_trophy_blob_lava",
+    "prefab": "TrophyBlob_Lava",
+    "name": "Lava Blob Trophy"
+   },
+   {
+    "token": "$item_trophy_blob_morkhalla",
+    "prefab": "TrophyBlob_Morkhalla",
+    "name": "Pulp Trophy"
+   },
+   {
+    "token": "$item_trophy_boar",
+    "prefab": "TrophyBoar",
+    "name": "Boar Trophy"
+   },
+   {
+    "token": "$item_trophy_bonemass",
+    "prefab": "TrophyBonemass",
+    "name": "Bonemass Trophy"
+   },
+   {
+    "token": "$item_trophy_bonemaw",
+    "prefab": "TrophyBonemawSerpent",
+    "name": "Bonemaw Trophy"
+   },
+   {
+    "token": "$item_trophy_charredarcher",
+    "prefab": "TrophyCharredArcher",
+    "name": "Marksman Trophy"
+   },
+   {
+    "token": "$item_trophy_charredmage",
+    "prefab": "TrophyCharredMage",
+    "name": "Warlock Trophy"
+   },
+   {
+    "token": "$item_trophy_charredmelee",
+    "prefab": "TrophyCharredMelee",
+    "name": "Warrior Trophy"
+   },
+   {
+    "token": "$item_trophy_cultist",
+    "prefab": "TrophyCultist",
+    "name": "Cultist Trophy"
+   },
+   {
+    "token": "$item_trophy_cultist_hildir",
+    "prefab": "TrophyCultist_Hildir",
+    "name": "Geirrhafa Trophy"
+   },
+   {
+    "token": "$item_trophy_deathsquito",
+    "prefab": "TrophyDeathsquito",
+    "name": "Deathsquito Trophy"
+   },
+   {
+    "token": "$item_trophy_deer",
+    "prefab": "TrophyDeer",
+    "name": "Deer Trophy"
+   },
+   {
+    "token": "$item_trophy_dragonqueen",
+    "prefab": "TrophyDragonQueen",
+    "name": "Moder Trophy"
+   },
+   {
+    "token": "$item_trophy_draugr",
+    "prefab": "TrophyDraugr",
+    "name": "Draugr Trophy"
+   },
+   {
+    "token": "$item_trophy_draugrelite",
+    "prefab": "TrophyDraugrElite",
+    "name": "Draugr Elite Trophy"
+   },
+   {
+    "token": "$item_trophy_draugr",
+    "prefab": "TrophyDraugr",
+    "name": "Draugr Trophy"
+   },
+   {
+    "token": "$item_trophy_dvergr",
+    "prefab": "TrophyDvergr",
+    "name": "Dvergr Trophy"
+   },
+   {
+    "token": "$item_trophy_eikthyr",
+    "prefab": "TrophyEikthyr",
+    "name": "Eikthyr Trophy"
+   },
+   {
+    "token": "$item_trophy_elaking",
+    "prefab": "TrophyElaking",
+    "name": "Elaking Trophy"
+   },
+   {
+    "token": "$item_trophy_fader",
+    "prefab": "TrophyFader",
+    "name": "Fader Trophy"
+   },
+   {
+    "token": "$item_trophy_fallenvalkyrie",
+    "prefab": "TrophyFallenValkyrie",
+    "name": "Fallen Valkyrie Trophy"
+   },
+   {
+    "token": "$item_trophy_fenring",
+    "prefab": "TrophyFenring",
+    "name": "Fenring Trophy"
+   },
+   {
+    "token": "$item_trophy_troll",
+    "prefab": "TrophyForestTroll",
+    "name": "Troll Trophy"
+   },
+   {
+    "token": "$item_trophy_ghost",
+    "prefab": "TrophyGhost",
+    "name": "Ghost Trophy"
+   },
+   {
+    "token": "$item_trophy_gjall",
+    "prefab": "TrophyGjall",
+    "name": "Gjall Trophy"
+   },
+   {
+    "token": "$item_trophy_goblin",
+    "prefab": "TrophyGoblin",
+    "name": "Fuling Trophy"
+   },
+   {
+    "token": "$item_trophy_goblinbrute",
+    "prefab": "TrophyGoblinBrute",
+    "name": "Fuling Berserker Trophy"
+   },
+   {
+    "token": "$item_trophy_brutebro",
+    "prefab": "TrophyGoblinBruteBrosBrute",
+    "name": "Thungr Trophy"
+   },
+   {
+    "token": "$item_trophy_shamanbro",
+    "prefab": "TrophyGoblinBruteBrosShaman",
+    "name": "Zil Trophy"
+   },
+   {
+    "token": "$item_trophy_goblinking",
+    "prefab": "TrophyGoblinKing",
+    "name": "Yagluth Trophy"
+   },
+   {
+    "token": "$item_trophy_goblinshaman",
+    "prefab": "TrophyGoblinShaman",
+    "name": "Fuling Shaman Trophy"
+   },
+   {
+    "token": "$item_trophy_greydwarf",
+    "prefab": "TrophyGreydwarf",
+    "name": "Greydwarf Trophy"
+   },
+   {
+    "token": "$item_trophy_greydwarfbrute",
+    "prefab": "TrophyGreydwarfBrute",
+    "name": "Greydwarf Brute Trophy"
+   },
+   {
+    "token": "$item_trophy_greydwarfshaman",
+    "prefab": "TrophyGreydwarfShaman",
+    "name": "Greydwarf Shaman Trophy"
+   },
+   {
+    "token": "$item_trophy_growth",
+    "prefab": "TrophyGrowth",
+    "name": "Growth Trophy"
+   },
+   {
+    "token": "$item_trophy_hare",
+    "prefab": "TrophyHare",
+    "name": "Hare Trophy"
+   },
+   {
+    "token": "$item_trophy_hatchling",
+    "prefab": "TrophyHatchling",
+    "name": "Drake Trophy"
+   },
+   {
+    "token": "$item_trophy_jotunwarrior",
+    "prefab": "TrophyJotunWarrior",
+    "name": "Krigen Trophy"
+   },
+   {
+    "token": "$item_trophy_jotunwitch",
+    "prefab": "TrophyJotunWitch",
+    "name": "Hexen Trophy"
+   },
+   {
+    "token": "$enemy_kvastur",
+    "prefab": "TrophyKvastur",
+    "name": "Kvastur"
+   },
+   {
+    "token": "$item_trophy_leech",
+    "prefab": "TrophyLeech",
+    "name": "Leech Trophy"
+   },
+   {
+    "token": "$item_trophy_lox",
+    "prefab": "TrophyLox",
+    "name": "Lox Trophy"
+   },
+   {
+    "token": "$item_trophy_mole",
+    "prefab": "TrophyMole",
+    "name": "Eyeless One Trophy"
+   },
+   {
+    "token": "$item_trophy_moose",
+    "prefab": "TrophyMoose",
+    "name": "Moose Trophy"
+   },
+   {
+    "token": "$item_trophy_morgen",
+    "prefab": "TrophyMorgen",
+    "name": "Morgen Trophy"
+   },
+   {
+    "token": "$item_trophy_neck",
+    "prefab": "TrophyNeck",
+    "name": "Neck Trophy"
+   },
+   {
+    "token": "$item_trophy_seal",
+    "prefab": "TrophySeal",
+    "name": "Seal Trophy"
+   },
+   {
+    "token": "$item_trophy_seeker",
+    "prefab": "TrophySeeker",
+    "name": "Seeker Trophy"
+   },
+   {
+    "token": "$item_trophy_seeker_brute",
+    "prefab": "TrophySeekerBrute",
+    "name": "Seeker Soldier Trophy"
+   },
+   {
+    "token": "$item_trophy_seekerqueen",
+    "prefab": "TrophySeekerQueen",
+    "name": "The Queen Trophy"
+   },
+   {
+    "token": "$item_trophy_serpent",
+    "prefab": "TrophySerpent",
+    "name": "Serpent Trophy"
+   },
+   {
+    "token": "$item_trophy_sgolem",
+    "prefab": "TrophySGolem",
+    "name": "Stone Golem Trophy"
+   },
+   {
+    "token": "$item_trophy_skeleton",
+    "prefab": "TrophySkeleton",
+    "name": "Skeleton Trophy"
+   },
+   {
+    "token": "$item_trophy_skeleton_hildir",
+    "prefab": "TrophySkeletonHildir",
+    "name": "Brenna Trophy"
+   },
+   {
+    "token": "$item_trophy_skeletonpoison",
+    "prefab": "TrophySkeletonPoison",
+    "name": "Rancid Remains Trophy"
+   },
+   {
+    "token": "$item_trophy_surtling",
+    "prefab": "TrophySurtling",
+    "name": "Surtling Trophy"
+   },
+   {
+    "token": "$item_trophy_elder",
+    "prefab": "TrophyTheElder",
+    "name": "The Elder Trophy"
+   },
+   {
+    "token": "$item_trophy_tick",
+    "prefab": "TrophyTick",
+    "name": "Tick Trophy"
+   },
+   {
+    "token": "$item_trophy_ulv",
+    "prefab": "TrophyUlv",
+    "name": "Ulv Trophy"
+   },
+   {
+    "token": "$item_trophy_volture",
+    "prefab": "TrophyVolture",
+    "name": "Volture Trophy"
+   },
+   {
+    "token": "$item_trophy_wolf",
+    "prefab": "TrophyWolf",
+    "name": "Wolf Trophy"
+   },
+   {
+    "token": "$item_trophy_wraith",
+    "prefab": "TrophyWraith",
+    "name": "Wraith Trophy"
+   },
+   {
+    "token": "$item_trophy_writhan",
+    "prefab": "TrophyWrithan",
+    "name": "Writhan Trophy"
+   }
+  ]
+ },
+ {
+  "id": "FirstDeath",
+  "name": "The First of Many",
+  "desc": "Meet your end, then prepare to do it all again...",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 0,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "GrindBuild",
+  "name": "The Builder",
+  "desc": "Build 500 pieces.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 169,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "GrindComfort",
+  "name": "Comfort is King",
+  "desc": "Reach a comfort level of 20.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 132,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "GrindCook",
+  "name": "The Cook",
+  "desc": "Cook 100 dishes.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 109,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "GrindDays",
+  "name": "The Survivor",
+  "desc": "Survive for 30 consecutive days.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 129,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "GrindEat",
+  "name": "No Adventuring On an Empty Stomach",
+  "desc": "Eat 500 items of food.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 49,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "GrindFish",
+  "name": "The Fisherman",
+  "desc": "Catch every kind of fish.",
+  "icon": true,
+  "difficulty": 1,
+  "caught": [
+   {
+    "token": "$animal_fish1",
+    "prefab": "Fish1",
+    "name": "Perch"
+   },
+   {
+    "token": "$animal_fish2",
+    "prefab": "Fish2",
+    "name": "Pike"
+   },
+   {
+    "token": "$animal_fish3",
+    "prefab": "Fish3",
+    "name": "Tuna"
+   },
+   {
+    "token": "$animal_fish4",
+    "prefab": "Fish4_cave",
+    "name": "Tetra"
+   },
+   {
+    "token": "$animal_fish5",
+    "prefab": "Fish5",
+    "name": "Trollfish"
+   },
+   {
+    "token": "$animal_fish6",
+    "prefab": "Fish6",
+    "name": "Giant Herring"
+   },
+   {
+    "token": "$animal_fish7",
+    "prefab": "Fish7",
+    "name": "Grouper"
+   },
+   {
+    "token": "$animal_fish8",
+    "prefab": "Fish8",
+    "name": "Coral Cod"
+   },
+   {
+    "token": "$animal_fish9",
+    "prefab": "Fish9",
+    "name": "Anglerfish"
+   },
+   {
+    "token": "$animal_fish10",
+    "prefab": "Fish10",
+    "name": "Northern Salmon"
+   },
+   {
+    "token": "$animal_fish11",
+    "prefab": "Fish11",
+    "name": "Magmafish"
+   },
+   {
+    "token": "$animal_fish12",
+    "prefab": "Fish12",
+    "name": "Pufferfish"
+   }
+  ]
+ },
+ {
+  "id": "GrindForager",
+  "name": "The Forager",
+  "desc": "Pick 250 berries and 250 mushrooms.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 124,
+    "amount": 0
+   },
+   {
+    "stat": 125,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "GrindHarvest",
+  "name": "The Farmer",
+  "desc": "Harvest 500 crops.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 123,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "GrindHoney",
+  "name": "The Beekeeper",
+  "desc": "Harvest 500 honey.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 76,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "GrindLeviathan",
+  "name": "No Time For Snoozing",
+  "desc": "Awaken a sea creature.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 136,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "GrindSail",
+  "name": "The Sailor",
+  "desc": "Sail far enough to circle the world twice.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 19,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "GrindSailHelm",
+  "name": "The Captain",
+  "desc": "Sail far enough to circle the world, while manning the helm.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 150,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "GrindTreasure",
+  "name": "The Treasure Hunter",
+  "desc": "Discover 10 buried treasure chests.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 133,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "GrindTrees",
+  "name": "The Lumberjack",
+  "desc": "Cut down 500 trees.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 28,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "KillAllCreatures",
+  "name": "The Hunter",
+  "desc": "Kill every kind of creature.",
+  "icon": true,
+  "difficulty": 1,
+  "dynamic": true,
+  "kills": [
+   {
+    "token": "$enemy_abomination",
+    "prefab": "Abomination",
+    "name": "Abomination"
+   },
+   {
+    "token": "$enemy_asksvin",
+    "prefab": "Asksvin",
+    "name": "Asksvin"
+   },
+   {
+    "token": "$enemy_asksvin_hatchling",
+    "prefab": "Asksvin_hatchling",
+    "name": "Asksvin Hatchling"
+   },
+   {
+    "token": "$enemy_aspect_bonemass",
+    "prefab": "Aspect_Bonemass",
+    "name": "Aspect of the Writhing Dead"
+   },
+   {
+    "token": "$enemy_aspect_eikthyr",
+    "prefab": "Aspect_Eikthyr",
+    "name": "Aspect of the Lightning Stag"
+   },
+   {
+    "token": "$enemy_aspect_gdking",
+    "prefab": "Aspect_Elder",
+    "name": "Aspect of the Living Forest"
+   },
+   {
+    "token": "$enemy_aspect_fader",
+    "prefab": "Aspect_Fader",
+    "name": "Aspect of the Emerald Flame"
+   },
+   {
+    "token": "$enemy_aspect_dragon",
+    "prefab": "Aspect_Moder",
+    "name": "Aspect of the Dragon Mother"
+   },
+   {
+    "token": "$enemy_aspect_seekerqueen",
+    "prefab": "Aspect_SeekerQueen",
+    "name": "Aspect of the Crawling Matriarch"
+   },
+   {
+    "token": "Root",
+    "prefab": "Tendril_back",
+    "name": "Root"
+   },
+   {
+    "token": "$enemy_aspect_goblinking",
+    "prefab": "Aspect_Yagluth",
+    "name": "Aspect of the Twisted Soul"
+   },
+   {
+    "token": "$enemy_barka",
+    "prefab": "Barka",
+    "name": "Barka"
+   },
+   {
+    "token": "$enemy_bat",
+    "prefab": "Bat",
+    "name": "Bat"
+   },
+   {
+    "token": "$enemy_bjorn",
+    "prefab": "Bjorn",
+    "name": "Bear"
+   },
+   {
+    "token": "$enemy_blob",
+    "prefab": "Blob",
+    "name": "Blob"
+   },
+   {
+    "token": "$enemy_blobelite",
+    "prefab": "BlobElite",
+    "name": "Oozer"
+   },
+   {
+    "token": "$enemy_blobfrost",
+    "prefab": "BlobFrost",
+    "name": "Frost Blob"
+   },
+   {
+    "token": "$enemy_bloblava",
+    "prefab": "BlobLava",
+    "name": "Lava Blob"
+   },
+   {
+    "token": "$enemy_blobmork",
+    "prefab": "BlobMork",
+    "name": "Shapeless Pulp"
+   },
+   {
+    "token": "$enemy_blobmorkmini",
+    "prefab": "BlobMorkMini",
+    "name": "Tiny Pulp"
+   },
+   {
+    "token": "$enemy_blobtar",
+    "prefab": "BlobTar",
+    "name": "Growth"
+   },
+   {
+    "token": "$enemy_boar",
+    "prefab": "Boar",
+    "name": "Boar"
+   },
+   {
+    "token": "$enemy_boarpiggy",
+    "prefab": "Boar_piggy",
+    "name": "Piggy"
+   },
+   {
+    "token": "$enemy_kvastur",
+    "prefab": "TrophyKvastur",
+    "name": "Kvastur"
+   },
+   {
+    "token": "$enemy_bonemass",
+    "prefab": "Bonemass",
+    "name": "Bonemass"
+   },
+   {
+    "token": "$enemy_bonemawserpent",
+    "prefab": "BonemawSerpent",
+    "name": "Bonemaw"
+   },
+   {
+    "token": "$enemy_charred_archer",
+    "prefab": "Charred_Archer",
+    "name": "Charred Marksman"
+   },
+   {
+    "token": "$enemy_charred_melee_Fader",
+    "prefab": "Charred_Melee_Fader",
+    "name": "Summoned Charred Warrior"
+   },
+   {
+    "token": "$enemy_charred_mage",
+    "prefab": "Charred_Mage",
+    "name": "Charred Warlock"
+   },
+   {
+    "token": "$enemy_charred_melee",
+    "prefab": "Charred_Melee",
+    "name": "Charred Warrior"
+   },
+   {
+    "token": "$enemy_charred_melee_Dyrnwyn",
+    "prefab": "Charred_Melee_Dyrnwyn",
+    "name": "Lord Reto"
+   },
+   {
+    "token": "$enemy_charred_twitcher",
+    "prefab": "Charred_Twitcher",
+    "name": "Charred Twitcher"
+   },
+   {
+    "token": "$enemy_charred_twitcher_summoned",
+    "prefab": "Charred_Twitcher_Summoned",
+    "name": "Summoned Twitcher"
+   },
+   {
+    "token": "$enemy_chicken",
+    "prefab": "Chicken",
+    "name": "Chicken"
+   },
+   {
+    "token": "$enemy_deathsquito",
+    "prefab": "Deathsquito",
+    "name": "Deathsquito"
+   },
+   {
+    "token": "$enemy_deer",
+    "prefab": "Deer",
+    "name": "Deer"
+   },
+   {
+    "token": "$enemy_dragon",
+    "prefab": "Dragon",
+    "name": "Moder"
+   },
+   {
+    "token": "$enemy_draugr",
+    "prefab": "Draugr",
+    "name": "Draugr"
+   },
+   {
+    "token": "$enemy_draugrelite",
+    "prefab": "Draugr_Elite",
+    "name": "Draugr Elite"
+   },
+   {
+    "token": "$enemy_dvergr",
+    "prefab": "Dverger",
+    "name": "Dvergr Rogue"
+   },
+   {
+    "token": "$enemy_dvergr_deepnorth",
+    "prefab": "DvergerDeepNorth",
+    "name": "Imprisoned Dvergr"
+   },
+   {
+    "token": "$enemy_dvergr_mage",
+    "prefab": "DvergerMage",
+    "name": "Dvergr Mage"
+   },
+   {
+    "token": "$enemy_eikthyr",
+    "prefab": "Eikthyr",
+    "name": "Eikthyr"
+   },
+   {
+    "token": "$enemy_elaking",
+    "prefab": "Elaking",
+    "name": "Elaking"
+   },
+   {
+    "token": "$enemy_elakingmole",
+    "prefab": "ElakingMole",
+    "name": "Eyeless One"
+   },
+   {
+    "token": "$enemy_fader",
+    "prefab": "Fader",
+    "name": "Fader"
+   },
+   {
+    "token": "$enemy_fallenvalkyrie",
+    "prefab": "FallenValkyrie",
+    "name": "Fallen Valkyrie"
+   },
+   {
+    "token": "$enemy_fallenwarrior",
+    "prefab": "FallenWarrior",
+    "name": "Fallen Warrior"
+   },
+   {
+    "token": "$enemy_fenring",
+    "prefab": "Fenring",
+    "name": "Fenring"
+   },
+   {
+    "token": "$enemy_fenringcultist",
+    "prefab": "Fenring_Cultist",
+    "name": "Cultist"
+   },
+   {
+    "token": "$enemy_fenringcultist_hildir",
+    "prefab": "Fenring_Cultist_Hildir",
+    "name": "Geirrhafa"
+   },
+   {
+    "token": "$enemy_frozenking",
+    "prefab": "FrozenKing",
+    "name": "Kall Fimbulbringer"
+   },
+   {
+    "token": "$enemy_frozenking_p3",
+    "prefab": "FrozenKing_p3",
+    "name": "Kall Fimbulbringer"
+   },
+   {
+    "token": "$enemy_gdking",
+    "prefab": "gd_king",
+    "name": "The Elder"
+   },
+   {
+    "token": "$enemy_ghost",
+    "prefab": "Ghost",
+    "name": "Ghost"
+   },
+   {
+    "token": "$enemy_gjall",
+    "prefab": "Gjall",
+    "name": "Gjall"
+   },
+   {
+    "token": "$enemy_goblin",
+    "prefab": "Goblin",
+    "name": "Fuling"
+   },
+   {
+    "token": "$enemy_goblinbrute",
+    "prefab": "GoblinBrute",
+    "name": "Fuling Berserker"
+   },
+   {
+    "token": "$enemy_goblinbrute_hildircombined",
+    "prefab": "GoblinBruteBros",
+    "name": "Zil \u0026 Thungr"
+   },
+   {
+    "token": "$enemy_goblin_deepnorth",
+    "prefab": "GoblinDeepNorth",
+    "name": "Captive Fuling"
+   },
+   {
+    "token": "$enemy_goblinking",
+    "prefab": "GoblinKing",
+    "name": "Yagluth"
+   },
+   {
+    "token": "$enemy_goblinshaman",
+    "prefab": "GoblinShaman",
+    "name": "Fuling Shaman"
+   },
+   {
+    "token": "$enemy_goblin_hildir",
+    "prefab": "GoblinShaman_Hildir",
+    "name": "Zil"
+   },
+   {
+    "token": "$enemy_greydwarf",
+    "prefab": "Greydwarf",
+    "name": "Greydwarf"
+   },
+   {
+    "token": "$enemy_greydwarfbrute",
+    "prefab": "Greydwarf_Elite",
+    "name": "Greydwarf Brute"
+   },
+   {
+    "token": "$enemy_greydwarfshaman",
+    "prefab": "Greydwarf_Shaman",
+    "name": "Greydwarf Shaman"
+   },
+   {
+    "token": "$enemy_greyling",
+    "prefab": "Greyling",
+    "name": "Greyling"
+   },
+   {
+    "token": "$enemy_hare",
+    "prefab": "Hare",
+    "name": "Hare"
+   },
+   {
+    "token": "$enemy_drake",
+    "prefab": "Hatchling",
+    "name": "Drake"
+   },
+   {
+    "token": "$enemy_hen",
+    "prefab": "Hen",
+    "name": "Hen"
+   },
+   {
+    "token": "$enemy_jotun_warrior",
+    "prefab": "JotunWarrior",
+    "name": "Krigen"
+   },
+   {
+    "token": "$enemy_jotun_witch",
+    "prefab": "JotunWitch",
+    "name": "Hexen"
+   },
+   {
+    "token": "$enemy_leech",
+    "prefab": "Leech",
+    "name": "Leech"
+   },
+   {
+    "token": "$enemy_lox",
+    "prefab": "Lox",
+    "name": "Lox"
+   },
+   {
+    "token": "$enemy_loxcalf",
+    "prefab": "Lox_Calf",
+    "name": "Lox Calf"
+   },
+   {
+    "token": "$enemy_moose",
+    "prefab": "Moose",
+    "name": "Moose"
+   },
+   {
+    "token": "$enemy_moosecalf",
+    "prefab": "Moose_calf",
+    "name": "Moose Calf"
+   },
+   {
+    "token": "$enemy_morgen",
+    "prefab": "Morgen",
+    "name": "Morgen"
+   },
+   {
+    "token": "$enemy_neck",
+    "prefab": "Neck",
+    "name": "Neck"
+   },
+   {
+    "token": "$piece_trainingdummy",
+    "prefab": "piece_TrainingDummy",
+    "name": "T.W.I.G."
+   },
+   {
+    "token": "$enemy_seal",
+    "prefab": "Seal",
+    "name": "Seal"
+   },
+   {
+    "token": "$enemy_seal_baby",
+    "prefab": "Seal_Pup",
+    "name": "Baby Seal"
+   },
+   {
+    "token": "$enemy_seeker",
+    "prefab": "Seeker",
+    "name": "Seeker"
+   },
+   {
+    "token": "$enemy_babyseeker",
+    "prefab": "SeekerBrood",
+    "name": "Seeker Brood"
+   },
+   {
+    "token": "$enemy_seekerbrute",
+    "prefab": "SeekerBrute",
+    "name": "Seeker Soldier"
+   },
+   {
+    "token": "$enemy_seekerqueen",
+    "prefab": "SeekerQueen",
+    "name": "The Queen"
+   },
+   {
+    "token": "$enemy_serpent",
+    "prefab": "Serpent",
+    "name": "Serpent"
+   },
+   {
+    "token": "$enemy_skeleton",
+    "prefab": "Skeleton",
+    "name": "Skeleton"
+   },
+   {
+    "token": "$enemy_skeleton_summoned",
+    "prefab": "Skeleton_Friendly",
+    "name": "Skelett"
+   },
+   {
+    "token": "$enemy_skeletonfire",
+    "prefab": "Skeleton_Hildir",
+    "name": "Brenna"
+   },
+   {
+    "token": "$enemy_skeletonpoison",
+    "prefab": "Skeleton_Poison",
+    "name": "Rancid Remains"
+   },
+   {
+    "token": "$enemy_summonedroot",
+    "prefab": "staff_greenroots_tentaroot",
+    "name": "Summoned Root"
+   },
+   {
+    "token": "$enemy_stonegolem",
+    "prefab": "StoneGolem",
+    "name": "Stone Golem"
+   },
+   {
+    "token": "$enemy_surtling",
+    "prefab": "Surtling",
+    "name": "Surtling"
+   },
+   {
+    "token": "$enemy_tick",
+    "prefab": "Tick",
+    "name": "Tick"
+   },
+   {
+    "token": "$enemy_troll",
+    "prefab": "Troll",
+    "name": "Troll"
+   },
+   {
+    "token": "$enemy_summonedtroll",
+    "prefab": "Troll_Summoned",
+    "name": "Summoned Troll"
+   },
+   {
+    "token": "$enemy_trollfrost",
+    "prefab": "TrollFrost",
+    "name": "Gammeltroll"
+   },
+   {
+    "token": "$enemy_ulv",
+    "prefab": "Ulv",
+    "name": "Ulv"
+   },
+   {
+    "token": "$enemy_unbjorn",
+    "prefab": "Unbjorn",
+    "name": "Vile"
+   },
+   {
+    "token": "$enemy_volture",
+    "prefab": "Volture",
+    "name": "Volture"
+   },
+   {
+    "token": "$enemy_wolf",
+    "prefab": "Wolf",
+    "name": "Wolf"
+   },
+   {
+    "token": "$enemy_wolfcub",
+    "prefab": "Wolf_cub",
+    "name": "Wolf Cub"
+   },
+   {
+    "token": "$enemy_wraith",
+    "prefab": "Wraith",
+    "name": "Wraith"
+   },
+   {
+    "token": "Writhan",
+    "name": "Writhan"
+   }
+  ]
+ },
+ {
+  "id": "KillAllCreaturesHard",
+  "name": "The Master Hunter",
+  "desc": "Kill every kind of creature on hard difficulty.",
+  "icon": true,
+  "difficulty": 7,
+  "dynamic": true,
+  "kills": [
+   {
+    "token": "$enemy_abomination",
+    "prefab": "Abomination",
+    "name": "Abomination"
+   },
+   {
+    "token": "$enemy_asksvin",
+    "prefab": "Asksvin",
+    "name": "Asksvin"
+   },
+   {
+    "token": "$enemy_asksvin_hatchling",
+    "prefab": "Asksvin_hatchling",
+    "name": "Asksvin Hatchling"
+   },
+   {
+    "token": "$enemy_aspect_bonemass",
+    "prefab": "Aspect_Bonemass",
+    "name": "Aspect of the Writhing Dead"
+   },
+   {
+    "token": "$enemy_aspect_eikthyr",
+    "prefab": "Aspect_Eikthyr",
+    "name": "Aspect of the Lightning Stag"
+   },
+   {
+    "token": "$enemy_aspect_gdking",
+    "prefab": "Aspect_Elder",
+    "name": "Aspect of the Living Forest"
+   },
+   {
+    "token": "$enemy_aspect_fader",
+    "prefab": "Aspect_Fader",
+    "name": "Aspect of the Emerald Flame"
+   },
+   {
+    "token": "$enemy_aspect_dragon",
+    "prefab": "Aspect_Moder",
+    "name": "Aspect of the Dragon Mother"
+   },
+   {
+    "token": "$enemy_aspect_seekerqueen",
+    "prefab": "Aspect_SeekerQueen",
+    "name": "Aspect of the Crawling Matriarch"
+   },
+   {
+    "token": "$enemy_aspect_goblinking",
+    "prefab": "Aspect_Yagluth",
+    "name": "Aspect of the Twisted Soul"
+   },
+   {
+    "token": "$enemy_barka",
+    "prefab": "Barka",
+    "name": "Barka"
+   },
+   {
+    "token": "$enemy_bat",
+    "prefab": "Bat",
+    "name": "Bat"
+   },
+   {
+    "token": "$enemy_bjorn",
+    "prefab": "Bjorn",
+    "name": "Bear"
+   },
+   {
+    "token": "$enemy_blob",
+    "prefab": "Blob",
+    "name": "Blob"
+   },
+   {
+    "token": "$enemy_blobelite",
+    "prefab": "BlobElite",
+    "name": "Oozer"
+   },
+   {
+    "token": "$enemy_blobfrost",
+    "prefab": "BlobFrost",
+    "name": "Frost Blob"
+   },
+   {
+    "token": "$enemy_bloblava",
+    "prefab": "BlobLava",
+    "name": "Lava Blob"
+   },
+   {
+    "token": "$enemy_blobmork",
+    "prefab": "BlobMork",
+    "name": "Shapeless Pulp"
+   },
+   {
+    "token": "$enemy_blobmorkmini",
+    "prefab": "BlobMorkMini",
+    "name": "Tiny Pulp"
+   },
+   {
+    "token": "$enemy_blobtar",
+    "prefab": "BlobTar",
+    "name": "Growth"
+   },
+   {
+    "token": "$enemy_boar",
+    "prefab": "Boar",
+    "name": "Boar"
+   },
+   {
+    "token": "$enemy_boarpiggy",
+    "prefab": "Boar_piggy",
+    "name": "Piggy"
+   },
+   {
+    "token": "$enemy_kvastur",
+    "prefab": "TrophyKvastur",
+    "name": "Kvastur"
+   },
+   {
+    "token": "$enemy_bonemass",
+    "prefab": "Bonemass",
+    "name": "Bonemass"
+   },
+   {
+    "token": "$enemy_bonemawserpent",
+    "prefab": "BonemawSerpent",
+    "name": "Bonemaw"
+   },
+   {
+    "token": "$enemy_charred_archer",
+    "prefab": "Charred_Archer",
+    "name": "Charred Marksman"
+   },
+   {
+    "token": "$enemy_charred_melee_Fader",
+    "prefab": "Charred_Melee_Fader",
+    "name": "Summoned Charred Warrior"
+   },
+   {
+    "token": "$enemy_charred_mage",
+    "prefab": "Charred_Mage",
+    "name": "Charred Warlock"
+   },
+   {
+    "token": "$enemy_charred_melee",
+    "prefab": "Charred_Melee",
+    "name": "Charred Warrior"
+   },
+   {
+    "token": "$enemy_charred_melee_Dyrnwyn",
+    "prefab": "Charred_Melee_Dyrnwyn",
+    "name": "Lord Reto"
+   },
+   {
+    "token": "$enemy_charred_twitcher",
+    "prefab": "Charred_Twitcher",
+    "name": "Charred Twitcher"
+   },
+   {
+    "token": "$enemy_charred_twitcher_summoned",
+    "prefab": "Charred_Twitcher_Summoned",
+    "name": "Summoned Twitcher"
+   },
+   {
+    "token": "$enemy_chicken",
+    "prefab": "Chicken",
+    "name": "Chicken"
+   },
+   {
+    "token": "$enemy_deathsquito",
+    "prefab": "Deathsquito",
+    "name": "Deathsquito"
+   },
+   {
+    "token": "$enemy_deer",
+    "prefab": "Deer",
+    "name": "Deer"
+   },
+   {
+    "token": "$enemy_dragon",
+    "prefab": "Dragon",
+    "name": "Moder"
+   },
+   {
+    "token": "$enemy_draugr",
+    "prefab": "Draugr",
+    "name": "Draugr"
+   },
+   {
+    "token": "$enemy_draugrelite",
+    "prefab": "Draugr_Elite",
+    "name": "Draugr Elite"
+   },
+   {
+    "token": "$enemy_dvergr",
+    "prefab": "Dverger",
+    "name": "Dvergr Rogue"
+   },
+   {
+    "token": "$enemy_dvergr_deepnorth",
+    "prefab": "DvergerDeepNorth",
+    "name": "Imprisoned Dvergr"
+   },
+   {
+    "token": "$enemy_dvergr_mage",
+    "prefab": "DvergerMage",
+    "name": "Dvergr Mage"
+   },
+   {
+    "token": "$enemy_eikthyr",
+    "prefab": "Eikthyr",
+    "name": "Eikthyr"
+   },
+   {
+    "token": "$enemy_elaking",
+    "prefab": "Elaking",
+    "name": "Elaking"
+   },
+   {
+    "token": "$enemy_elakingmole",
+    "prefab": "ElakingMole",
+    "name": "Eyeless One"
+   },
+   {
+    "token": "$enemy_fader",
+    "prefab": "Fader",
+    "name": "Fader"
+   },
+   {
+    "token": "$enemy_fallenvalkyrie",
+    "prefab": "FallenValkyrie",
+    "name": "Fallen Valkyrie"
+   },
+   {
+    "token": "$enemy_fallenwarrior",
+    "prefab": "FallenWarrior",
+    "name": "Fallen Warrior"
+   },
+   {
+    "token": "$enemy_fenring",
+    "prefab": "Fenring",
+    "name": "Fenring"
+   },
+   {
+    "token": "$enemy_fenringcultist",
+    "prefab": "Fenring_Cultist",
+    "name": "Cultist"
+   },
+   {
+    "token": "$enemy_fenringcultist_hildir",
+    "prefab": "Fenring_Cultist_Hildir",
+    "name": "Geirrhafa"
+   },
+   {
+    "token": "$enemy_frozenking",
+    "prefab": "FrozenKing",
+    "name": "Kall Fimbulbringer"
+   },
+   {
+    "token": "$enemy_frysling",
+    "prefab": "Frysling",
+    "name": "Frysling"
+   },
+   {
+    "token": "$enemy_gdking",
+    "prefab": "gd_king",
+    "name": "The Elder"
+   },
+   {
+    "token": "$enemy_ghost",
+    "prefab": "Ghost",
+    "name": "Ghost"
+   },
+   {
+    "token": "$enemy_ghost_void",
+    "prefab": "Ghost_old",
+    "name": "The Void"
+   },
+   {
+    "token": "$enemy_gjall",
+    "prefab": "Gjall",
+    "name": "Gjall"
+   },
+   {
+    "token": "$enemy_goblin",
+    "prefab": "Goblin",
+    "name": "Fuling"
+   },
+   {
+    "token": "$enemy_gemgoblin",
+    "prefab": "Goblin_Gem",
+    "name": "Riktig Fuling"
+   },
+   {
+    "token": "$enemy_goblinbrute",
+    "prefab": "GoblinBrute",
+    "name": "Fuling Berserker"
+   },
+   {
+    "token": "$enemy_goblinbrute_hildir",
+    "prefab": "GoblinBrute_Hildir",
+    "name": "Thungr"
+   },
+   {
+    "token": "$enemy_goblinbrute_hildircombined",
+    "prefab": "GoblinBruteBros",
+    "name": "Zil \u0026 Thungr"
+   },
+   {
+    "token": "$enemy_goblin_deepnorth",
+    "prefab": "GoblinDeepNorth",
+    "name": "Captive Fuling"
+   },
+   {
+    "token": "$enemy_goblinking",
+    "prefab": "GoblinKing",
+    "name": "Yagluth"
+   },
+   {
+    "token": "$enemy_goblinshaman",
+    "prefab": "GoblinShaman",
+    "name": "Fuling Shaman"
+   },
+   {
+    "token": "$enemy_goblin_hildir",
+    "prefab": "GoblinShaman_Hildir",
+    "name": "Zil"
+   },
+   {
+    "token": "$enemy_greydwarf",
+    "prefab": "Greydwarf",
+    "name": "Greydwarf"
+   },
+   {
+    "token": "$enemy_greydwarfbrute",
+    "prefab": "Greydwarf_Elite",
+    "name": "Greydwarf Brute"
+   },
+   {
+    "token": "$enemy_greydwarfshaman",
+    "prefab": "Greydwarf_Shaman",
+    "name": "Greydwarf Shaman"
+   },
+   {
+    "token": "$enemy_greyling",
+    "prefab": "Greyling",
+    "name": "Greyling"
+   },
+   {
+    "token": "$enemy_hare",
+    "prefab": "Hare",
+    "name": "Hare"
+   },
+   {
+    "token": "$enemy_drake",
+    "prefab": "Hatchling",
+    "name": "Drake"
+   },
+   {
+    "token": "$enemy_hen",
+    "prefab": "Hen",
+    "name": "Hen"
+   },
+   {
+    "token": "$enemy_jotun_warrior",
+    "prefab": "JotunWarrior",
+    "name": "Krigen"
+   },
+   {
+    "token": "$enemy_jotun_witch",
+    "prefab": "JotunWitch",
+    "name": "Hexen"
+   },
+   {
+    "token": "$enemy_leech",
+    "prefab": "Leech",
+    "name": "Leech"
+   },
+   {
+    "token": "$enemy_lox",
+    "prefab": "Lox",
+    "name": "Lox"
+   },
+   {
+    "token": "$enemy_loxcalf",
+    "prefab": "Lox_Calf",
+    "name": "Lox Calf"
+   },
+   {
+    "token": "$enemy_moose",
+    "prefab": "Moose",
+    "name": "Moose"
+   },
+   {
+    "token": "$enemy_moosecalf",
+    "prefab": "Moose_calf",
+    "name": "Moose Calf"
+   },
+   {
+    "token": "$enemy_morgen",
+    "prefab": "Morgen",
+    "name": "Morgen"
+   },
+   {
+    "token": "$enemy_neck",
+    "prefab": "Neck",
+    "name": "Neck"
+   },
+   {
+    "token": "$enemy_seal",
+    "prefab": "Seal",
+    "name": "Seal"
+   },
+   {
+    "token": "$enemy_seal_baby",
+    "prefab": "Seal_Pup",
+    "name": "Baby Seal"
+   },
+   {
+    "token": "$enemy_seeker",
+    "prefab": "Seeker",
+    "name": "Seeker"
+   },
+   {
+    "token": "$enemy_babyseeker",
+    "prefab": "SeekerBrood",
+    "name": "Seeker Brood"
+   },
+   {
+    "token": "$enemy_seekerbrute",
+    "prefab": "SeekerBrute",
+    "name": "Seeker Soldier"
+   },
+   {
+    "token": "$enemy_seekerqueen",
+    "prefab": "SeekerQueen",
+    "name": "The Queen"
+   },
+   {
+    "token": "$enemy_serpent",
+    "prefab": "Serpent",
+    "name": "Serpent"
+   },
+   {
+    "token": "$enemy_skeleton",
+    "prefab": "Skeleton",
+    "name": "Skeleton"
+   },
+   {
+    "token": "$enemy_skeleton_summoned",
+    "prefab": "Skeleton_Friendly",
+    "name": "Skelett"
+   },
+   {
+    "token": "$enemy_skeletonfire",
+    "prefab": "Skeleton_Hildir",
+    "name": "Brenna"
+   },
+   {
+    "token": "$enemy_skeletonpoison",
+    "prefab": "Skeleton_Poison",
+    "name": "Rancid Remains"
+   },
+   {
+    "token": "$enemy_stonegolem",
+    "prefab": "StoneGolem",
+    "name": "Stone Golem"
+   },
+   {
+    "token": "$enemy_surtling",
+    "prefab": "Surtling",
+    "name": "Surtling"
+   },
+   {
+    "token": "$enemy_tick",
+    "prefab": "Tick",
+    "name": "Tick"
+   },
+   {
+    "token": "TrainingDummy",
+    "prefab": "TrainingDummy",
+    "name": "TrainingDummy"
+   },
+   {
+    "token": "$enemy_troll",
+    "prefab": "Troll",
+    "name": "Troll"
+   },
+   {
+    "token": "$enemy_summonedtroll",
+    "prefab": "Troll_Summoned",
+    "name": "Summoned Troll"
+   },
+   {
+    "token": "$enemy_trollfrost",
+    "prefab": "TrollFrost",
+    "name": "Gammeltroll"
+   },
+   {
+    "token": "$enemy_ulv",
+    "prefab": "Ulv",
+    "name": "Ulv"
+   },
+   {
+    "token": "$enemy_unbjorn",
+    "prefab": "Unbjorn",
+    "name": "Vile"
+   },
+   {
+    "token": "$enemy_wolf",
+    "prefab": "Wolf",
+    "name": "Wolf"
+   },
+   {
+    "token": "$enemy_wolfcub",
+    "prefab": "Wolf_cub",
+    "name": "Wolf Cub"
+   },
+   {
+    "token": "$enemy_volture",
+    "prefab": "Volture",
+    "name": "Volture"
+   },
+   {
+    "token": "$enemy_wraith",
+    "prefab": "Wraith",
+    "name": "Wraith"
+   }
+  ]
+ },
+ {
+  "id": "KingsQueens",
+  "name": "Kings and Queens of Valheim",
+  "desc": "Embody the spirits of the Viking, Hunter, Artisan, Master Chef, Carpenter and the Explorer.",
+  "icon": true,
+  "difficulty": 1,
+  "others": [
+   "AllBosses",
+   "ExploreNSEW",
+   "AllBuildPieces",
+   "KillAllCreatures",
+   "AllFoodCooked",
+   "AllItemCraft"
+  ]
+ },
+ {
+  "id": "MultiplayerBoss",
+  "name": "Stronger Together",
+  "desc": "Kill a boss together with a friend.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 146,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "SailEdge",
+  "name": "The Legends Are True",
+  "desc": "Sail over the edge of the world.",
+  "icon": true,
+  "secret": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 65,
+    "amount": 0
+   }
+  ]
+ },
+ {
+  "id": "SoloBoss",
+  "name": "Lone Wolf",
+  "desc": "Kill a boss all by yourself.",
+  "icon": true,
+  "difficulty": 1,
+  "stats": [
+   {
+    "stat": 147,
+    "amount": 0
+   }
+  ]
+ }
+]

@@ -728,6 +728,14 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 			bi.AltBiomes = append(bi.AltBiomes, ab)
 		}
 	}
+	// Achievements, each an anchor on the one page.
+	for _, a := range db.Achievements {
+		icon := ""
+		if hasIcon("achievements", a.ID) {
+			icon = "achievements/" + a.ID
+		}
+		ix.Things["ach:"+a.ID] = &Thing{Kind: "achievement", Prefab: a.ID, Name: a.Name, Slug: Slug(a.ID), URL: "achievements/#" + Slug(a.ID), Icon: icon, Sub: "Achievement"}
+	}
 	// The items' pages: a recipe in a station's menu, a creature's drop, a
 	// pickable, a trader, a chest or a converter hands the item out, and
 	// it has an icon (or a recipe clears the hidden mark the extractor put

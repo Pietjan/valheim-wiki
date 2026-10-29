@@ -1,0 +1,20 @@
+{{define "content"}}
+{{$d := .Data}}
+<div class="index-head"><div><p class="eyebrow">For the record</p><h1>Achievements</h1><p>{{len $d}} achievements, as the client defines them, with exactly what each one counts: a secret one is hidden in the game until it unlocks, and a few need the harder difficulties.</p></div></div>
+<div class="ach-list">
+{{range $d}}{{$a := .}}
+<section class="panel ach" id="{{.Slug}}">
+<div class="ach-head">{{if .Icon}}<img class="ach-icon" src="{{.Icon}}" alt="" loading="lazy" width="64" height="64">{{else}}<span class="ach-icon card-blank"></span>{{end}}<div><h2>{{.Name}}</h2><p class="ach-desc">{{.Description}}</p><p class="ach-tags">{{if .Secret}}<span class="tag">Secret</span>{{end}}{{if .Difficulty}}<span class="tag">{{.Difficulty}}</span>{{end}}{{if .Dynamic}}<span class="tag" title="The game fills this list from its own tables">Every kind</span>{{end}}</p></div></div>
+{{template "needs" (dict "title" "Kill" "list" .Kills)}}
+{{template "needs" (dict "title" "Craft" "list" .Crafts)}}
+{{template "needs" (dict "title" "Eat" "list" .Eaten)}}
+{{template "needs" (dict "title" "Pick up" "list" .PickedUp)}}
+{{template "needs" (dict "title" "Catch" "list" .Caught)}}
+{{template "needs" (dict "title" "Build" "list" .Pieces)}}
+{{if .Others}}<h3>Needs first</h3><ul class="chips">{{range .Others}}<li><a class="chip" href="{{url .URL}}">{{if .Icon}}<img class="chip-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" width="28" height="28">{{else}}<span class="chip-icon chip-blank"></span>{{end}}<span class="chip-name">{{.Name}}</span></a></li>{{end}}</ul>{{end}}
+</section>
+{{end}}
+</div>
+{{end}}
+
+{{define "needs"}}{{if .list}}{{if gt (len .list) 14}}<details class="ach-more"><summary><b>{{.title}}</b> <span class="count">{{len .list}}</span></summary>{{else}}<h3>{{.title}} <span class="count">{{len .list}}</span></h3>{{end}}<ul class="chips">{{range .list}}<li>{{with .Thing}}{{if .URL}}<a class="chip" href="{{url .URL}}">{{else}}<span class="chip chip-still">{{end}}{{if .Icon}}<img class="chip-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="28" height="28">{{else}}<span class="chip-icon chip-blank"></span>{{end}}<span class="chip-name">{{.Name}}</span>{{if .URL}}</a>{{else}}</span>{{end}}{{else}}<span class="chip chip-dead"><span class="chip-icon chip-blank"></span><span class="chip-name">{{.Need.Name}}</span></span>{{end}}{{if gt .Need.Amount 1}}<span class="chip-n">×{{.Need.Amount}}</span>{{end}}</li>{{end}}</ul>{{if gt (len .list) 14}}</details>{{end}}{{end}}{{end}}
