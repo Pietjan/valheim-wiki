@@ -12917,29 +12917,6 @@
    ]
   }
  },
- "VineGreen": {
-  "prefab": "VineGreen",
-  "name": "Vineberry Cluster",
-  "token": "$item_vineberry",
-  "kind": "pickable",
-  "item": "Vineberry",
-  "amount": 3,
-  "respawnMinutes": 200,
-  "hideWhenPicked": true,
-  "extraDrops": {
-   "min": 1,
-   "max": 3,
-   "chance": 0.20000000298023224,
-   "drops": [
-    {
-     "item": "VineGreenSeeds",
-     "min": 1,
-     "max": 3,
-     "weight": 1
-    }
-   ]
-  }
- },
  "YggaShoot1": {
   "prefab": "YggaShoot1",
   "name": "Yggdrasil Shoot",

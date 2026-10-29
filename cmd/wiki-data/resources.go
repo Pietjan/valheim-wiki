@@ -60,6 +60,12 @@ func (x *X) readResource(prefab string, g assets.Ref) *model.Resource {
 	r := &model.Resource{Prefab: prefab}
 	var token, hover string
 	hasDrops := false
+	// A vine grows its berries — the Pickable it carries — only where
+	// its Vine component allows any: the ivy allows none, and the
+	// vineberry cluster on it is never there to pick.
+	if vine, ok := x.Find(g, "m_maxBerriesWithinBlocker", "m_vinePrefab"); ok && I(vine.Tree, "m_maxBerriesWithinBlocker") == 0 {
+		return nil
+	}
 	for _, c := range x.Components(g) {
 		if c.ClassID != 114 {
 			continue
