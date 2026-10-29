@@ -214,6 +214,11 @@ code { font: 14px/1.4 var(--mono); background: var(--paper-3); padding: 1px 5px;
 .chips li { display: inline-flex; align-items: center; gap: 8px; }
 .chip { display: inline-flex; align-items: center; gap: 8px; padding: 3px 10px 3px 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper-2); color: var(--ink); text-decoration: none !important; line-height: 1.2; font-size: 15px; transition: border-color .12s, transform .12s; }
 .chip:hover { border-color: var(--accent); transform: translateY(-1px); }
+/* A chip in running text sits on the line's middle, and the line is tall
+   enough to hold it, so wrapped lines do not collide. */
+.chip, .chip-dead, .chip-still { vertical-align: middle; }
+:is(p, td, th, h2, h3, dd, figcaption):has(> .chip, > .chip-dead, > .chip-still) { line-height: 2.35; }
+:is(h2, h3):has(> .chip) { line-height: 1.6; }
 .chip-icon { width: 28px; height: 28px; border-radius: 50%; object-fit: contain; background: var(--paper-3); flex: none; padding: 2px; }
 .chip-blank { display: inline-block; }
 .chip-n { color: var(--accent-2); font-weight: 700; font-variant-numeric: tabular-nums; }
