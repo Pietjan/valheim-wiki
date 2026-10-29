@@ -56,6 +56,12 @@
 {{if $d.Kinds}}<h3>In places</h3><ul class="chips">{{range $d.Kinds}}<li>{{template "chip" (print "loc:" (index .Variants 0).Prefab)}}</li>{{end}}</ul>{{end}}
 {{if $d.Events}}<h3>In raids</h3><ul class="chips">{{range $d.Events}}<li><a class="chip" href="{{url "events/"}}#{{slug .Name}}"><span class="chip-name" style="padding-left:8px">{{if .StartMessage}}{{.StartMessage}}{{else}}{{.Name}}{{end}}</span></a></li>{{end}}</ul>{{end}}
 {{end}}
+{{if $d.Keys}}<h2>On defeat</h2>{{range $d.Keys}}<p>Sets the key <code>{{.Key}}</code>{{if not (or .Raids .Ends .Sold .Roams)}}, which nothing in the data reads yet{{end}}.</p>
+{{if .Raids}}<h3>Raids unlocked</h3><ul class="chips">{{range .Raids}}<li><a class="chip" href="{{url "events/"}}#{{slug .Name}}"><span class="chip-name" style="padding-left:8px">{{if .StartMessage}}{{.StartMessage}}{{else}}{{.Name}}{{end}}</span></a></li>{{end}}</ul>{{end}}
+{{if .Ends}}<h3>Raids ended</h3><ul class="chips">{{range .Ends}}<li><a class="chip" href="{{url "events/"}}#{{slug .Name}}"><span class="chip-name" style="padding-left:8px">{{if .StartMessage}}{{.StartMessage}}{{else}}{{.Name}}{{end}}</span></a></li>{{end}}</ul>{{end}}
+{{if .Sold}}<h3>Then for sale</h3><ul class="chips">{{range .Sold}}<li>{{template "chip" .Item.Item}}<span class="chip-meta">{{template "chip" .Trader.Prefab}}</span></li>{{end}}</ul>{{end}}
+{{if .Roams}}<h3>Then roam</h3><ul class="chips">{{range .Roams}}<li>{{template "chip" .Prefab}}<span class="chip-meta">{{join (biomeNames .Biomes) ", "}}</span></li>{{end}}</ul>{{end}}
+{{end}}{{end}}
 {{if $d.Summoner}}<h2>Summoned by</h2><ul class="chips">{{range $d.Summoner}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
 
 {{template "yourworld" .YourWorld}}
@@ -75,7 +81,6 @@
 {{if $c.Tolerates}}{{template "stat" (dict "k" "Unharmed by" "v" (join $c.Tolerates ", "))}}{{end}}
 {{if $c.Stagger}}{{template "stat" (dict "k" "Stagger" "v" (print (pct $c.Stagger) " of hp"))}}{{end}}
 {{if $d.Trophy}}{{template "stat" (dict "k" "Trophy" "v" (safe (print "<a href=\"" (thingURL $d.Trophy.Prefab) "\">" $d.Trophy.Name "</a>")))}}{{end}}
-{{if $c.DefeatKey}}{{template "stat" (dict "k" "Sets key" "v" $c.DefeatKey)}}{{end}}
 </dl>
 {{if $c.AI}}
 <h3>Behaviour</h3>

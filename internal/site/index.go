@@ -56,6 +56,10 @@ type Index struct {
 	// for Skeleton_Hildir, at half the health and without the chest — filed
 	// under the mini boss rather than listed on its own.
 	RaidForm map[string]*model.Creature
+	// KeyUses is what each global key gates, by the key in lower case:
+	// the raids it lets loose or ends, the wares traders then sell, the
+	// creatures that then roam new biomes.
+	KeyUses map[string]*KeyUse
 	// Visible is the items that get a page: something in the game hands
 	// them to the player and they have an icon to be seen by. The rest are
 	// the ItemDrops behind creature attacks, NPC costumes, test gear and
@@ -103,6 +107,15 @@ type BiomeIndex struct {
 	AltBiomes []*model.AltBiome
 }
 
+// KeyUse is everything a global key unlocks.
+type KeyUse struct {
+	Key   string
+	Raids []*model.Event // raids that need the key
+	Ends  []*model.Event // raids the key stops
+	Sold  []SoldLink
+	Roams []*model.Spawn // world spawns the key gates
+}
+
 // Visit is a creature spawning in a biome only after a key is set.
 type Visit struct {
 	Creature *model.Creature
@@ -145,7 +158,7 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 		InChests: map[string][]ChestLink{}, SpawnsOf: map[string][]*model.Spawn{}, Found: map[string][]*model.Location{},
 		EventsOf: map[string][]*model.Event{}, Tamers: map[string][]*model.Creature{}, Effects_: map[string][]EffectLink{},
 		Sets: map[string][]*model.Item{}, StationRecipes: map[string][]*model.Recipe{}, Extends: map[string]*model.Station{},
-		TrophyOf: map[string]string{}, Phases: map[string][]*model.Creature{}, Primary: map[string]string{}, Visible: map[string]bool{}, RaidForm: map[string]*model.Creature{}}
+		TrophyOf: map[string]string{}, Phases: map[string][]*model.Creature{}, Primary: map[string]string{}, Visible: map[string]bool{}, RaidForm: map[string]*model.Creature{}, KeyUses: map[string]*KeyUse{}}
 
 	// Items. Their slugs wait until the end, once what hands them out is
 	// known: the visible ones take the plain names.
@@ -630,6 +643,51 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 	}
 	for _, bi := range ix.ByBiome {
 		sort.SliceStable(bi.Visitors, func(i, j int) bool { return bi.Visitors[i].Creature.Name < bi.Visitors[j].Creature.Name })
+	}
+	// What the keys unlock. The game compares keys without case.
+	keyUse := func(k string) *KeyUse {
+		lk := strings.ToLower(k)
+		u := ix.KeyUses[lk]
+		if u == nil {
+			u = &KeyUse{Key: k}
+			ix.KeyUses[lk] = u
+		}
+		return u
+	}
+	for _, ev := range db.Events {
+		if !ev.Enabled || !ev.Random {
+			continue
+		}
+		for _, k := range ev.RequiredKeys {
+			keyUse(k).Raids = append(keyUse(k).Raids, ev)
+		}
+		for _, k := range ev.NotKeys {
+			keyUse(k).Ends = append(keyUse(k).Ends, ev)
+		}
+	}
+	for _, t := range db.Traders {
+		for _, ti := range t.Items {
+			if ti.RequiredKey != "" {
+				keyUse(ti.RequiredKey).Sold = append(keyUse(ti.RequiredKey).Sold, SoldLink{t, ti})
+			}
+		}
+	}
+	roamed := map[string]bool{}
+	for _, sp := range db.Spawns {
+		if !sp.Enabled || sp.RequiredKey == "" || sp.RequiredEvent != "" || !strings.HasPrefix(sp.Source, "world:") {
+			continue
+		}
+		// One line per creature and set of biomes, and only creatures
+		// with a page: not the easter eggs.
+		if t := ix.Things[sp.Prefab]; t == nil || t.Kind != "creature" {
+			continue
+		}
+		sig := strings.ToLower(sp.RequiredKey) + "|" + sp.Prefab + "|" + strings.Join(sp.Biomes, ",")
+		if roamed[sig] {
+			continue
+		}
+		roamed[sig] = true
+		keyUse(sp.RequiredKey).Roams = append(keyUse(sp.RequiredKey).Roams, sp)
 	}
 	for _, kd := range ix.KindList {
 		for _, b := range kd.Biomes {

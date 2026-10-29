@@ -28,6 +28,7 @@ type CreaturePage struct {
 	Kinds     []*Kind       // location kinds it is found in
 	Phases    []*model.Creature
 	RaidForm  *model.Creature // the copy a raid sends, at half health
+	Keys      []*KeyUse       // what its defeat sets and unlocks, its phases' keys included
 }
 
 // StarRow is health and drop chance at one star level.
@@ -171,6 +172,24 @@ func (s *Site) creaturePage(c *model.Creature) *CreaturePage {
 			if e.GuardianOf == c.Prefab {
 				pg.Power = e
 			}
+		}
+	}
+	seenKey := map[string]bool{}
+	for _, k := range append([]string{c.DefeatKey}, func() []string {
+		var ks []string
+		for _, ph := range pg.Phases {
+			ks = append(ks, ph.DefeatKey)
+		}
+		return ks
+	}()...) {
+		if k == "" || seenKey[strings.ToLower(k)] {
+			continue
+		}
+		seenKey[strings.ToLower(k)] = true
+		if u := ix.KeyUses[strings.ToLower(k)]; u != nil {
+			pg.Keys = append(pg.Keys, u)
+		} else {
+			pg.Keys = append(pg.Keys, &KeyUse{Key: k})
 		}
 	}
 	for _, it := range ix.Items {
