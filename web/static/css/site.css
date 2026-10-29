@@ -400,6 +400,7 @@ dialog::backdrop { background: rgba(20, 12, 6, .55); backdrop-filter: blur(3px);
 .dmg { display: inline-flex; flex-wrap: wrap; gap: 4px 10px; }
 .dmg b { font-weight: 400; color: var(--ink-3); }
 .quality-table td.q { font-weight: 700; color: var(--accent-2); }
+.quality-total { margin: 0.75rem 0 0.35rem; }
 .recipe { display: grid; grid-template-columns: auto 1fr; gap: 10px 16px; align-items: center; padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper-2); margin: 0 0 12px; }
 .recipe .at { font-size: 14px; color: var(--ink-3); grid-column: 1 / -1; }
 .recipe .chips { grid-column: 1 / -1; }

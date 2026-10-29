@@ -84,11 +84,14 @@ type ItemPage struct {
 	IsFood    bool
 	IsTool    bool
 	Upgrade   *model.Recipe // the recipe whose per-level costs apply
+	// MaxAt is the highest quality the recipe's station reaches: its level
+	// climbs one per quality from the recipe's minimum and stops at the
+	// station's highest. MaxLevel is the station level that takes, and
+	// Total what every level up to MaxAt costs together.
+	MaxAt    int
+	MaxLevel int
+	Total    []model.Requirement
 }
-
-// upgradeStation is the Forge of Potential, where a quality no crafting
-// station reaches is refined with an idol.
-const upgradeStation = "UpgradeStation"
 
 // QualityRow is one quality level's numbers.
 type QualityRow struct {
@@ -100,12 +103,6 @@ type QualityRow struct {
 	Durability float64
 	Weight     float64
 	Cost       []model.Requirement // what this level costs on top of the previous
-	// Station is where this level is made and Level the station level it
-	// takes: the recipe's minimum plus one per quality. A level past the
-	// station's highest is the Forge of Potential's, with its Idol.
-	Station string
-	Level   int
-	Idol    string
 }
 
 func isWeapon(t string) bool {
@@ -202,8 +199,16 @@ func (s *Site) itemPage(it *model.Item) *ItemPage {
 			break
 		}
 	}
+	pg.MaxAt = it.MaxQuality
+	if pg.Upgrade != nil && pg.Upgrade.Station != "" {
+		pg.MaxLevel = pg.Upgrade.MinStationLevel + pg.MaxAt - 1
+		if st := s.DB.Stations[pg.Upgrade.Station]; st != nil && st.MaxLevel > 0 && pg.MaxLevel > st.MaxLevel {
+			pg.MaxLevel = st.MaxLevel
+			pg.MaxAt = max(1, st.MaxLevel-pg.Upgrade.MinStationLevel+1)
+		}
+	}
 	if it.MaxQuality > 1 {
-		for q := 1; q <= it.MaxQuality; q++ {
+		for q := 1; q <= pg.MaxAt; q++ {
 			row := QualityRow{Q: q, Armor: it.Armor + float64(q-1)*it.ArmorPerLevel, Block: it.BlockPower + float64(q-1)*it.BlockPowerPerLevel,
 				Deflection: it.Deflection + float64(q-1)*it.DeflectionPerLevel, Durability: it.Durability + float64(q-1)*it.DurabilityPerLevel,
 				Weight: it.Weight + float64(q-1)*it.WeightPerLevel}
@@ -232,19 +237,17 @@ func (s *Site) itemPage(it *model.Item) *ItemPage {
 					}
 				}
 			}
-			if pg.Upgrade != nil && pg.Upgrade.Station != "" {
-				row.Station = pg.Upgrade.Station
-				row.Level = pg.Upgrade.MinStationLevel + q - 1
-				if st := s.DB.Stations[row.Station]; st != nil && st.MaxLevel > 0 && row.Level > st.MaxLevel {
-					row.Station, row.Level = upgradeStation, 0
-					for _, res := range pg.Upgrade.Resources {
-						if res.Upgrader {
-							row.Idol = res.Item
-						}
-					}
+			pg.Qualities = append(pg.Qualities, row)
+		}
+		if pg.Upgrade != nil {
+			for _, res := range pg.Upgrade.Resources {
+				if res.Upgrader {
+					continue
+				}
+				if n := res.Amount + res.PerLevel*(pg.MaxAt-1)*pg.MaxAt/2; n > 0 {
+					pg.Total = append(pg.Total, model.Requirement{Item: res.Item, Amount: n})
 				}
 			}
-			pg.Qualities = append(pg.Qualities, row)
 		}
 	}
 	// Where it comes from, for the seed layer: biomes of its droppers and
