@@ -232,7 +232,11 @@ code { font: 14px/1.4 var(--mono); background: var(--paper-3); padding: 1px 5px;
 .biome-tag i { width: 10px; height: 10px; border-radius: 50%; background: var(--biome); box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset; }
 .biome-tag:hover { border-color: var(--biome); color: var(--ink); }
 
-.cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+.cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(236px, 1fr)); gap: 10px; }
+/* A card fills its row, so a long name that wraps makes its neighbours
+   as tall rather than leaving a ragged row. */
+.cards li { display: flex; }
+.cards li > .card { flex: 1 1 auto; min-width: 0; }
 .card { display: grid; grid-template-columns: 56px 1fr; grid-template-rows: auto auto; column-gap: 12px; align-items: center; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper-2); color: var(--ink); text-decoration: none !important; min-height: 76px; transition: border-color .12s, box-shadow .12s, transform .12s; }
 .card:hover { border-color: var(--accent); box-shadow: var(--shadow); transform: translateY(-1px); }
 .card-icon { grid-row: 1 / span 2; width: 56px; height: 56px; object-fit: contain; border-radius: 10px; background: var(--paper-3); padding: 3px; }
@@ -240,7 +244,7 @@ code { font: 14px/1.4 var(--mono); background: var(--paper-3); padding: 1px 5px;
 .card-blank { display: block; }
 .card-name { font-weight: 700; line-height: 1.2; }
 .card-sub { font-size: 13px; color: var(--ink-3); line-height: 1.3; }
-.cards.compact { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.cards.compact { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
 .cards.compact .card { grid-template-columns: 40px 1fr; min-height: 56px; padding: 8px 10px; }
 .cards.compact .card-icon { width: 40px; height: 40px; }
 
