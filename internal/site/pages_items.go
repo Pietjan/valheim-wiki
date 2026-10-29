@@ -86,6 +86,10 @@ type ItemPage struct {
 	Upgrade   *model.Recipe // the recipe whose per-level costs apply
 }
 
+// upgradeStation is the Forge of Potential, where a quality no crafting
+// station reaches is refined with an idol.
+const upgradeStation = "UpgradeStation"
+
 // QualityRow is one quality level's numbers.
 type QualityRow struct {
 	Q          int
@@ -96,6 +100,12 @@ type QualityRow struct {
 	Durability float64
 	Weight     float64
 	Cost       []model.Requirement // what this level costs on top of the previous
+	// Station is where this level is made and Level the station level it
+	// takes: the recipe's minimum plus one per quality. A level past the
+	// station's highest is the Forge of Potential's, with its Idol.
+	Station string
+	Level   int
+	Idol    string
 }
 
 func isWeapon(t string) bool {
@@ -219,6 +229,18 @@ func (s *Site) itemPage(it *model.Item) *ItemPage {
 						}
 					} else if res.PerLevel > 0 {
 						row.Cost = append(row.Cost, model.Requirement{Item: res.Item, Amount: res.PerLevel * (q - 1)})
+					}
+				}
+			}
+			if pg.Upgrade != nil && pg.Upgrade.Station != "" {
+				row.Station = pg.Upgrade.Station
+				row.Level = pg.Upgrade.MinStationLevel + q - 1
+				if st := s.DB.Stations[row.Station]; st != nil && st.MaxLevel > 0 && row.Level > st.MaxLevel {
+					row.Station, row.Level = upgradeStation, 0
+					for _, res := range pg.Upgrade.Resources {
+						if res.Upgrader {
+							row.Idol = res.Item
+						}
 					}
 				}
 			}

@@ -20,7 +20,7 @@
 {{if $d.Qualities}}
 <h2 id="quality">By quality</h2>
 <div class="table-wrap"><table class="quality-table">
-<thead><tr><th>Quality</th>{{if $it.Damage}}<th>Damage</th>{{end}}{{if $d.IsArmor}}<th class="num">Armor</th>{{end}}{{if or $d.IsShield $d.IsWeapon}}<th class="num">Block</th>{{end}}{{if $it.Deflection}}<th class="num">Deflection</th>{{end}}{{if $it.UseDurability}}<th class="num">Durability</th>{{end}}{{if $it.WeightPerLevel}}<th class="num">Weight</th>{{end}}{{if $d.Upgrade}}<th>Upgrade cost</th>{{end}}</tr></thead>
+<thead><tr><th>Quality</th>{{if $it.Damage}}<th>Damage</th>{{end}}{{if $d.IsArmor}}<th class="num">Armor</th>{{end}}{{if or $d.IsShield $d.IsWeapon}}<th class="num">Block</th>{{end}}{{if $it.Deflection}}<th class="num">Deflection</th>{{end}}{{if $it.UseDurability}}<th class="num">Durability</th>{{end}}{{if $it.WeightPerLevel}}<th class="num">Weight</th>{{end}}{{if $d.Upgrade}}<th>Upgrade cost</th>{{if $d.Upgrade.Station}}<th>At</th>{{end}}{{end}}</tr></thead>
 <tbody>
 {{range $d.Qualities}}
 <tr><td class="q">{{stars .Q}}</td>
@@ -31,6 +31,7 @@
 {{if $it.UseDurability}}<td class="num">{{num .Durability}}</td>{{end}}
 {{if $it.WeightPerLevel}}<td class="num">{{num1 .Weight}}</td>{{end}}
 {{if $d.Upgrade}}<td>{{if .Cost}}<ul class="chips">{{range .Cost}}<li>{{template "chipn" (dict "prefab" .Item "n" .Amount)}}</li>{{end}}</ul>{{else}}<span class="muted">—</span>{{end}}</td>{{end}}
+{{if and $d.Upgrade $d.Upgrade.Station}}<td class="at">{{if .Station}}{{template "chip" .Station}}{{if .Level}} <span class="muted">level {{.Level}}</span>{{end}}{{if .Idol}} <span class="muted">with</span> {{template "chip" .Idol}}{{end}}{{end}}</td>{{end}}
 </tr>
 {{end}}
 </tbody></table></div>
