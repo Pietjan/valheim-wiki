@@ -417,6 +417,11 @@ func (g *stager) piece(p string) int {
 	for _, r := range pc.Resources {
 		st = maxStage(st, g.item(r.Item))
 	}
+	// And the station it is built beside: a hearth is stone, but it takes
+	// a stonecutter, which takes iron.
+	if pc.Station != "" && pc.Station != p {
+		st = maxStage(st, g.piece(pc.Station))
+	}
 	g.pieces[p] = st
 	return st
 }

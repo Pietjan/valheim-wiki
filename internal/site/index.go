@@ -92,12 +92,21 @@ type Kind struct {
 type BiomeIndex struct {
 	Biome     *model.Biome
 	Creatures []*model.Creature
+	// Visitors come once a boss is down: a world spawn rule gated by a
+	// global key puts them in biomes they are not at home in.
+	Visitors  []Visit
 	Kinds     []*Kind
 	Resources []*model.Resource
 	Items     []*model.Item // items first obtainable here (materials gathered/dropped)
 	Spawns    []*model.Spawn
 	Events    []*model.Event
 	AltBiomes []*model.AltBiome
+}
+
+// Visit is a creature spawning in a biome only after a key is set.
+type Visit struct {
+	Creature *model.Creature
+	Key      string
 }
 
 type ConvertLink struct {
@@ -268,7 +277,7 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 	// without a global-key gate, else its first rule, else the
 	// extractor's union.
 	for _, sp := range db.Spawns {
-		if !strings.HasPrefix(sp.Source, "world:") || !sp.Enabled || len(sp.Biomes) == 0 {
+		if !strings.HasPrefix(sp.Source, "world:") || !sp.Enabled || len(sp.Biomes) == 0 || sp.RequiredEvent != "" {
 			continue
 		}
 		cur, seen := ix.Primary[sp.Prefab]
@@ -319,12 +328,48 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 		sortBiomes(out)
 		return out
 	}
-	for _, c := range ix.Creatures {
-		if len(c.Biomes) == 0 {
-			c.Biomes = locBiomes(c.Prefab)
-			if _, ok := ix.Primary[c.Prefab]; !ok && len(c.Biomes) > 0 {
-				ix.Primary[c.Prefab] = c.Biomes[0]
+	// Where a creature lives: the biomes of its world spawn rules that no
+	// event gates — a raid's or Fimbulvinter's rule names every biome and
+	// says nothing about where it is at home — and of the places it stands
+	// in. The extractor's union stays only for a creature with neither.
+	homeBiomes := func(prefab string) []string {
+		var out, keyed []string
+		for _, sp := range db.Spawns {
+			if sp.Prefab != prefab || !sp.Enabled || sp.RequiredEvent != "" {
+				continue
 			}
+			if !strings.HasPrefix(sp.Source, "world:") && !strings.HasPrefix(sp.Source, "altbiome:") {
+				continue
+			}
+			for _, b := range sp.Biomes {
+				if sp.RequiredKey != "" {
+					if !contains(keyed, b) {
+						keyed = append(keyed, b)
+					}
+				} else if !contains(out, b) {
+					out = append(out, b)
+				}
+			}
+		}
+		for _, b := range locBiomes(prefab) {
+			if !contains(out, b) {
+				out = append(out, b)
+			}
+		}
+		// A creature with no rule that is not behind a key is at home
+		// where its keyed rules put it: the Deep North's patrols.
+		if len(out) == 0 {
+			out = keyed
+		}
+		sortBiomes(out)
+		return out
+	}
+	for _, c := range ix.Creatures {
+		if home := homeBiomes(c.Prefab); len(home) > 0 {
+			c.Biomes = home
+		}
+		if _, ok := ix.Primary[c.Prefab]; !ok && len(c.Biomes) > 0 {
+			ix.Primary[c.Prefab] = c.Biomes[0]
 		}
 	}
 	sort.SliceStable(ix.Creatures, func(i, j int) bool { return ix.Creatures[i].Name < ix.Creatures[j].Name })
@@ -558,6 +603,30 @@ func BuildIndex(db *model.DB, hasIcon func(kind, name string) bool) *Index {
 				bi.Creatures = append(bi.Creatures, c)
 			}
 		}
+	}
+	// The visitors: a keyed world rule's biomes the creature is not at
+	// home in, once each.
+	visited := map[string]bool{}
+	for _, sp := range db.Spawns {
+		if !strings.HasPrefix(sp.Source, "world:") || !sp.Enabled || sp.RequiredEvent != "" || sp.RequiredKey == "" {
+			continue
+		}
+		c := db.Creatures[sp.Prefab]
+		if c == nil {
+			continue
+		}
+		for _, b := range sp.Biomes {
+			if contains(c.Biomes, b) || visited[sp.Prefab+"|"+b] {
+				continue
+			}
+			if bi := ix.ByBiome[b]; bi != nil {
+				visited[sp.Prefab+"|"+b] = true
+				bi.Visitors = append(bi.Visitors, Visit{Creature: c, Key: sp.RequiredKey})
+			}
+		}
+	}
+	for _, bi := range ix.ByBiome {
+		sort.SliceStable(bi.Visitors, func(i, j int) bool { return bi.Visitors[i].Creature.Name < bi.Visitors[j].Creature.Name })
 	}
 	for _, kd := range ix.KindList {
 		for _, b := range kd.Biomes {

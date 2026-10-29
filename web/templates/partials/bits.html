@@ -47,4 +47,4 @@
 {{define "stat"}}<div class="stat"><dt>{{.k}}</dt><dd>{{.v}}</dd></div>{{end}}
 
 {{- /* cards: a grid of things. . is []*Thing */ -}}
-{{define "cards"}}<ul class="cards">{{range .}}<li><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="56" height="56">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span>{{if .Sub}}<span class="card-sub">{{.Sub}}</span>{{end}}</a></li>{{end}}</ul>{{end}}
+{{define "cards"}}<ul class="cards">{{range .}}<li><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="56" height="56">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}{{if .Hint}} <small class="muted">{{.Hint}}</small>{{end}}</span>{{if .Sub}}<span class="card-sub">{{.Sub}}</span>{{end}}</a></li>{{end}}</ul>{{end}}

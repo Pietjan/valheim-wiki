@@ -16,7 +16,7 @@
 <section class="group" data-group="{{.ID}}">
   <h2 id="{{.ID}}" class="group-title">{{.Name}} <span class="count">{{len .Items}}</span></h2>
   <ul class="cards compact">
-  {{range .Items}}{{with thing .Prefab}}<li data-name="{{lower .Name}}"><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="40" height="40">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}</span><span class="card-sub">{{.Sub}}</span></a></li>{{end}}{{end}}
+  {{range .Items}}{{with thing .Prefab}}<li data-name="{{lower .Name}}"><a class="card" href="{{url .URL}}">{{if .Icon}}<img class="card-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="40" height="40">{{else}}<span class="card-icon card-blank"></span>{{end}}<span class="card-name">{{.Name}}{{if .Hint}} <small class="muted">{{.Hint}}</small>{{end}}</span><span class="card-sub">{{.Sub}}</span></a></li>{{end}}{{end}}
   </ul>
 </section>
 {{end}}{{end}}
