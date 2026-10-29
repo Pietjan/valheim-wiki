@@ -14,8 +14,8 @@
 {{with $p.Container}}<h2>Storage</h2><p>{{.Width}} × {{.Height}} slots{{if .Private}}, private{{end}}.</p>{{if .Loot}}<h3>Starts with</h3>{{template "droptable" .Loot}}{{end}}{{end}}
 {{with $p.Plant}}<h2>Growing</h2><p>Grows in {{secs .GrowTime}} to {{secs .GrowTimeMax}}{{if .NeedCultivated}} on cultivated ground{{end}}{{if .GrowRadius}}, needing {{num .GrowRadius}} m of room{{end}}{{if .Biomes}} in {{join (biomeNames .Biomes) ", "}}{{end}}.</p>{{if .GrownPrefabs}}<ul class="chips">{{range .GrownPrefabs}}<li>{{template "chip" .}}</li>{{end}}</ul>{{end}}{{end}}
 {{with $p.Ship}}<h2>Sailing</h2><dl class="infobox" style="position:static"><div class="stat"><dt>Sail force</dt><dd>{{num .SailForce}}</dd></div><div class="stat"><dt>Rudder speed</dt><dd>{{num .RudderSpeed}}</dd></div><div class="stat"><dt>Rowing force</dt><dd>{{num .BackwardForce}}</dd></div>{{if .Container}}<div class="stat"><dt>Hold</dt><dd>{{.Container.Width}} × {{.Container.Height}}</dd></div>{{end}}{{if .AshlandsReady}}<div class="stat"><dt>Survives the Ashlands sea</dt><dd>Yes</dd></div>{{end}}</dl>{{end}}
-{{with $p.Fireplace}}<h2>Fire</h2><p>{{if .Infinite}}Burns forever.{{else}}Burns {{nameOf .Fuel}}: holds {{num .MaxFuel}}, each lasting {{secs .SecPerFuel}}{{if .StartFuel}}, starting with {{num .StartFuel}}{{end}}.{{end}}</p>{{end}}
-{{with $p.Turret}}<h2>Turret</h2><p>Fires {{range $i, $a := .Ammo}}{{if $i}}, {{end}}{{nameOf $a}}{{end}}; holds {{.MaxAmmo}}, sees {{num .Range}} m, one shot every {{secs .Cooldown}}.</p>{{end}}
+{{with $p.Fireplace}}<h2>Fire</h2><p>{{if .Infinite}}Burns forever.{{else}}Burns <a href="{{thingURL .Fuel}}">{{nameOf .Fuel}}</a>: holds {{num .MaxFuel}}, each lasting {{secs .SecPerFuel}}{{if .StartFuel}}, starting with {{num .StartFuel}}{{end}}.{{end}}</p>{{end}}
+{{with $p.Turret}}<h2>Turret</h2><p>Fires {{range $i, $a := .Ammo}}{{if $i}}, {{end}}<a href="{{thingURL $a}}">{{nameOf $a}}</a>{{end}}; holds {{.MaxAmmo}}, sees {{num .Range}} m, one shot every {{secs .Cooldown}}.</p>{{end}}
 {{with $p.ItemStand}}{{if .GuardianPower}}<h2>Forsaken power</h2><p>Grants {{template "chip" (print "effect:" .GuardianPower)}}.</p>{{end}}{{end}}
 {{if $p.Notes}}<h2>Notes</h2><ul>{{range $p.Notes}}<li>{{.}}</li>{{end}}</ul>{{end}}
 </div>
@@ -36,7 +36,7 @@
 {{if $p.Ward}}{{template "stat" (dict "k" "Ward radius" "v" (print (num $p.Ward.Radius) " m"))}}{{end}}
 {{if $p.Portal}}{{template "stat" (dict "k" "Portal" "v" (when $p.Portal.AllowAllItems "carries everything" "no metals"))}}{{end}}
 {{if $p.Bed}}{{template "stat" (dict "k" "Bed" "v" "Yes")}}{{end}}
-{{if $p.Door}}{{if $p.Door.Key}}{{template "stat" (dict "k" "Key" "v" (nameOf $p.Door.Key))}}{{end}}{{end}}
+{{if $p.Door}}{{if $p.Door.Key}}{{template "stat" (dict "k" "Key" "v" (safe (print "<a href=\"" (thingURL $p.Door.Key) "\">" (nameOf $p.Door.Key) "</a>")))}}{{end}}{{end}}
 {{if $p.DLC}}{{template "stat" (dict "k" "DLC" "v" $p.DLC)}}{{end}}
 </dl>
 <h3>Prefab</h3><p class="small muted"><code>{{$p.Prefab}}</code></p>

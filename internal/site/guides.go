@@ -59,6 +59,7 @@ var stageOverrides = map[string]int{
 	"OatSeeds":     7, // the Deep North's crops: their seeds' source is not extracted
 	"PoteitrSeeds": 7,
 	"DvergrNeedle": 5, // dropped by the Dvergr, whose drops are not extracted
+	"Fish4_cave":   3, // the mountain caves' fish, whose waters are no biome
 }
 
 // themeStage is the biome a dungeon theme belongs to, for what its rooms
@@ -331,6 +332,12 @@ func (g *stager) item(p string) int {
 	for _, d := range ix.DroppedBy[p] {
 		best = minStage(best, g.creature(d.Creature.Prefab))
 	}
+	// A fish is the creature of the same name, caught where it swims.
+	if c := g.s.DB.Creatures[p]; c != nil && c.Fish != nil {
+		for _, b := range c.Biomes {
+			best = minStage(best, biomeStage(b))
+		}
+	}
 	for _, r := range ix.Gathered[p] {
 		// Where it grows or stands, or what it is cut from; or it is
 		// grown from a sapling, which is as early as its seed.
@@ -357,7 +364,8 @@ func (g *stager) item(p string) int {
 				if ks, ok := keyStage[k]; ok {
 					st = maxStage(st, ks)
 				} else {
-					st = stageUnknown
+					// A key the table does not know: a later boss's.
+					st = maxStage(st, len(model.Biomes)-2)
 				}
 			}
 			best = minStage(best, st)

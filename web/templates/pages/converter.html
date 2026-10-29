@@ -26,16 +26,16 @@
 <aside class="infobox">
 <h3>{{converterKind $c.Kind}}</h3>
 <dl>
-{{if $c.Fuel}}{{template "stat" (dict "k" "Fuel" "v" (nameOf $c.Fuel))}}{{end}}
+{{if $c.Fuel}}{{template "stat" (dict "k" "Fuel" "v" (safe (print "<a href=\"" (thingURL $c.Fuel) "\">" (nameOf $c.Fuel) "</a>")))}}{{end}}
 {{if $c.Fuels}}{{template "stat" (dict "k" "Fuel" "v" (join $c.Fuels ", "))}}{{end}}
 {{if $c.FuelPerItem}}{{template "stat" (dict "k" "Fuel per item" "v" (num $c.FuelPerItem))}}{{end}}
 {{if $c.SecPerItem}}{{template "stat" (dict "k" "Time per item" "v" (secs $c.SecPerItem))}}{{end}}
 {{if $c.Duration}}{{template "stat" (dict "k" "Takes" "v" (secs $c.Duration))}}{{end}}
 {{if $c.MaxInput}}{{template "stat" (dict "k" "Holds" "v" $c.MaxInput)}}{{end}}
 {{if $c.MaxFuel}}{{template "stat" (dict "k" "Max fuel" "v" $c.MaxFuel)}}{{end}}
-{{if $c.Product}}{{template "stat" (dict "k" "Produces" "v" (nameOf $c.Product))}}{{end}}
+{{if $c.Product}}{{template "stat" (dict "k" "Produces" "v" (safe (print "<a href=\"" (thingURL $c.Product) "\">" (nameOf $c.Product) "</a>")))}}{{end}}
 {{if $c.MaxProduct}}{{template "stat" (dict "k" "Stores up to" "v" $c.MaxProduct)}}{{end}}
-{{if $c.Overcooked}}{{template "stat" (dict "k" "Left too long" "v" (nameOf $c.Overcooked))}}{{end}}
+{{if $c.Overcooked}}{{template "stat" (dict "k" "Left too long" "v" (safe (print "<a href=\"" (thingURL $c.Overcooked) "\">" (nameOf $c.Overcooked) "</a>")))}}{{end}}
 {{if $c.RequiresRoof}}{{template "stat" (dict "k" "Needs a roof" "v" "Yes")}}{{end}}
 {{if $c.RequiresFire}}{{template "stat" (dict "k" "Needs fire" "v" "Yes")}}{{end}}
 {{if $c.Biomes}}{{template "stat" (dict "k" "Works in" "v" (join (biomeNames $c.Biomes) ", "))}}{{end}}

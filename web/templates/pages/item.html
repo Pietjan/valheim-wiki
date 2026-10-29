@@ -63,7 +63,7 @@
 {{range $d.Gathered}}<tr><td><a href="{{thingURL .Prefab}}">{{.Name}}</a></td><td class="muted">{{resourceKind .Kind}}</td><td>{{if and (eq .Item $it.Prefab) .Amount}}{{.Amount}}{{else}}{{template "yield" (dict "r" . "item" $it.Prefab)}}{{end}}</td><td>{{if .Respawn}}{{mins .Respawn}}{{else if eq .Kind "pickable"}}never{{else}}—{{end}}</td><td>{{template "biomes" .Biomes}}</td></tr>{{end}}
 </tbody></table></div>{{end}}
 {{if $d.Converts}}<h3>Made in</h3>
-<ul class="chips">{{range $d.Converts}}<li>{{template "chip" .Converter.Prefab}}<span class="chip-meta">{{if .Conversion.From}}from {{nameOf .Conversion.From}}{{end}}{{if gt .Conversion.Amount 1}} ×{{.Conversion.Amount}}{{end}}{{if .Conversion.Time}} · {{secs .Conversion.Time}}{{end}}</span></li>{{end}}</ul>{{end}}
+<ul class="chips">{{range $d.Converts}}<li>{{template "chip" .Converter.Prefab}}{{if .Conversion.From}}<span class="chip-meta">from</span>{{template "chip" .Conversion.From}}{{end}}<span class="chip-meta">{{if gt .Conversion.Amount 1}} ×{{.Conversion.Amount}}{{end}}{{if .Conversion.Time}} · {{secs .Conversion.Time}}{{end}}</span></li>{{end}}</ul>{{end}}
 {{if $d.Sold}}<h3>Sold by</h3>
 <ul class="chips">{{range $d.Sold}}<li>{{template "chip" .Trader.Prefab}}<span class="chip-meta">{{.Item.Price}} coins{{if gt .Item.Stack 1}} for {{.Item.Stack}}{{end}}{{if .Item.RequiredKey}} · after {{keyName .Item.RequiredKey}}{{end}}</span></li>{{end}}</ul>{{end}}
 {{if $d.Chests}}<h3>Found in chests</h3>
@@ -74,7 +74,7 @@
 <h2 id="uses">Used for</h2>
 {{if $d.UsedIn}}<h3>Crafting</h3><ul class="chips">{{range $d.UsedIn}}<li>{{template "chipn" (dict "prefab" .Item "n" "")}}<span class="chip-meta">{{template "needs" (dict "r" . "item" $it.Prefab)}}</span></li>{{end}}</ul>{{end}}
 {{if $d.Builds}}<h3>Building</h3><ul class="chips">{{range $d.Builds}}<li>{{template "chip" .Prefab}}<span class="chip-meta">{{range .Resources}}{{if eq .Item $it.Prefab}}×{{.Amount}}{{end}}{{end}}</span></li>{{end}}</ul>{{end}}
-{{if $d.Consumed}}<h3>Processing</h3><ul class="chips">{{range $d.Consumed}}<li>{{template "chip" .Converter.Prefab}}<span class="chip-meta">→ {{nameOf .Conversion.To}}</span></li>{{end}}</ul>{{end}}
+{{if $d.Consumed}}<h3>Processing</h3><ul class="chips">{{range $d.Consumed}}<li>{{template "chip" .Converter.Prefab}}<span class="chip-meta">→</span>{{template "chip" .Conversion.To}}{{if gt .Conversion.Amount 1}}<span class="chip-meta">×{{.Conversion.Amount}}</span>{{end}}</li>{{end}}</ul>{{end}}
 {{if $d.Tamers}}<h3>Eaten by</h3><ul class="chips">{{range $d.Tamers}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}
 {{end}}
 
