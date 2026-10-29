@@ -406,6 +406,7 @@ dialog::backdrop { background: rgba(20, 12, 6, .55); backdrop-filter: blur(3px);
 .biome-banner h1 { position: relative; color: #fff; font-size: clamp(30px, 6vw, 56px); letter-spacing: .06em; text-transform: uppercase; text-align: center; text-shadow: 0 2px 8px rgba(0,0,0,.7), 0 0 28px rgba(0,0,0,.5); margin: 0; line-height: 1; }
 .braid-line { position: relative; width: min(504px, 86%); height: 17px; background: #e2c06a; filter: drop-shadow(0 1px 2px rgba(0,0,0,.7));
   -webkit-mask: url(../ui/BraidLineHorisontalMedium.png) center / auto 100% no-repeat; mask: url(../ui/BraidLineHorisontalMedium.png) center / auto 100% no-repeat; }
+.braid-line:last-child { transform: scaleY(-1); }
 @media (max-width: 640px) { .biome-banner { min-height: 120px; padding: 18px 12px; gap: 10px; } .braid-line { height: 12px; } }
 
 /* ---------- location page ---------- */
