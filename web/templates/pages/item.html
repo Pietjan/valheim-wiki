@@ -54,8 +54,9 @@
 </ul>
 {{end}}
 
-{{if or $d.Dropped $d.Gathered $d.Converts $d.Sold $d.Chests $d.TrophyOf}}
+{{if or $d.Dropped $d.Gathered $d.Converts $d.Sold $d.Chests $d.TrophyOf $d.Unplaced}}
 <h2 id="obtained">Where to get it</h2>
+{{if $d.Unplaced}}<p class="note">Nowhere, as the game's data stands: no biome grows it, no location, dungeon or chest holds it, and nothing drops, sells or makes it. It exists in the game's files and can only be spawned.</p>{{end}}
 {{if $d.TrophyOf}}<p>Cut from <a href="{{thingURL $d.TrophyOf.Prefab}}">{{$d.TrophyOf.Name}}</a>.</p>{{end}}
 {{if $d.Dropped}}<h3>Dropped by</h3>
 <div class="table-wrap"><table><thead><tr><th>Creature</th><th>Amount</th><th class="num">Chance</th><th>Per star</th></tr></thead><tbody>

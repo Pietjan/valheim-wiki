@@ -95,6 +95,9 @@ func (s *Site) tipLines(key string, t *Thing) []string {
 			meta = append(meta, "no portals")
 		}
 		add(meta...)
+		if s.Unplaced(t.Prefab) {
+			add("nothing in the game places it")
+		}
 		add(short(it.Description))
 	case "creature":
 		c := db.Creatures[t.Prefab]

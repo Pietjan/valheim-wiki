@@ -447,6 +447,10 @@ type ResourcePage struct {
 	Item     *model.Item
 	Rules    []*model.VegRule
 	Found    []*Kind
+	// Unplaced is a pickable whose item nothing in the data hands out; the
+	// resource model alone cannot say, since vegetation names wrapper
+	// prefabs the resources do not.
+	Unplaced bool
 }
 
 func (s *Site) pagesResources() error {
@@ -509,7 +513,7 @@ func (s *Site) pagesResources() error {
 		if t == nil || t.Kind != "resource" {
 			continue
 		}
-		pg := &ResourcePage{Resource: r, Thing: t, Item: s.DB.Items[r.Item], Rules: rulesByPrefab[r.Prefab], Found: foundIn[r.Prefab]}
+		pg := &ResourcePage{Resource: r, Thing: t, Item: s.DB.Items[r.Item], Rules: rulesByPrefab[r.Prefab], Found: foundIn[r.Prefab], Unplaced: r.Kind == "pickable" && r.Item != "" && s.Unplaced(r.Item)}
 		var prefabs []string
 		for _, k := range pg.Found {
 			for _, v := range k.Variants {

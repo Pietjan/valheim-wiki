@@ -83,6 +83,7 @@ type ItemPage struct {
 	IsShield  bool
 	IsFood    bool
 	IsTool    bool
+	Unplaced  bool          // nothing in the game's data hands it out
 	Upgrade   *model.Recipe // the recipe whose per-level costs apply
 	// MaxAt is the highest quality the recipe's station reaches: its level
 	// climbs one per quality from the recipe's minimum and stops at the
@@ -173,7 +174,7 @@ func (s *Site) itemPage(it *model.Item) *ItemPage {
 	ix := s.Index
 	pg := &ItemPage{Item: it, Thing: ix.Things[it.Prefab], Group: groupOf(it), Stations: s.DB.Stations,
 		Recipes: ix.Recipes[it.Prefab], UsedIn: ix.UsedIn[it.Prefab], Builds: ix.BuildsWith[it.Prefab],
-		Dropped: ix.DroppedBy[it.Prefab], Gathered: ix.Gathered[it.Prefab], Sold: ix.Sold[it.Prefab],
+		Dropped: ix.DroppedBy[it.Prefab], Gathered: ix.Gathered[it.Prefab], Sold: ix.Sold[it.Prefab], Unplaced: s.Unplaced(it.Prefab),
 		Chests: ix.InChests[it.Prefab], Converts: ix.Converts[it.Prefab], Consumed: ix.Consumed[it.Prefab],
 		Tamers: ix.Tamers[it.Prefab], IsWeapon: isWeapon(it.Type), IsArmor: isArmor(it.Type), IsShield: it.Type == "Shield",
 		IsFood: it.Food > 0 || it.FoodStamina > 0 || it.FoodEitr > 0, IsTool: it.Type == "Tool"}

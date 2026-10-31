@@ -57,7 +57,6 @@ const stageUnknown = 99
 var stageOverrides = map[string]int{
 	"QueenBee":     0,
 	"FishRaw":      1,
-	"MushroomBlue": 1, // the burial chambers' blue mushrooms are not in the rooms' contents
 	"OatSeeds":     7, // the Deep North's crops: their seeds' source is not extracted
 	"PoteitrSeeds": 7,
 	"DvergrNeedle": 5, // dropped by the Dvergr, whose drops are not extracted
@@ -397,6 +396,100 @@ func (g *stager) item(p string) int {
 	}
 	g.items[p] = best
 	return best
+}
+
+// Unplaced reports an item the game's data never hands out: nothing drops,
+// sells, crafts or converts it, no chest holds it, and whatever it is
+// gathered from is itself never placed. Stricter than an unknown stage,
+// which the stager also gives where its reading has a gap, so a page can
+// say so outright. The blue mushroom is one: its pickable exists and
+// nothing grows it. Iron ore is not: bog iron is vegetation.
+func (s *Site) Unplaced(p string) bool {
+	ix := s.Index
+	if len(ix.DroppedBy[p]) > 0 || len(ix.Sold[p]) > 0 || len(ix.InChests[p]) > 0 || len(ix.Recipes[p]) > 0 || len(ix.Converts[p]) > 0 {
+		return false
+	}
+	if c := s.DB.Creatures[p]; c != nil && c.Fish != nil {
+		return false
+	}
+	if _, ok := s.stagerFor().found["item:"+p]; ok {
+		return false
+	}
+	for _, r := range ix.Gathered[p] {
+		if !s.UnplacedResource(r.Prefab) {
+			return false
+		}
+	}
+	return true
+}
+
+// UnplacedResource reports a resource nothing puts in the world: no
+// vegetation rule or clutter grows it, no location or dungeon room holds
+// it, no sapling grows it, and nor is anything it is cut or broken from
+// placed. The lured pickables, a wisp at a wisp fountain and an ember at
+// Fader's, are placed by their piece, which the data does not link.
+func (s *Site) UnplacedResource(p string) bool {
+	if strings.HasPrefix(p, "Lured") {
+		return false
+	}
+	if s.placedResources()[p] {
+		return false
+	}
+	if r := s.DB.Resources[p]; r != nil && len(r.Biomes) > 0 {
+		return false
+	}
+	g := s.stagerFor()
+	if len(g.grownFrom[p]) > 0 {
+		return false
+	}
+	for _, parent := range g.parentOf[p] {
+		if !s.UnplacedResource(parent) {
+			return false
+		}
+	}
+	return true
+}
+
+// placedResources is every resource prefab some rule, clutter, location
+// or room puts in the world, built once.
+func (s *Site) placedResources() map[string]bool {
+	if s.placed != nil {
+		return s.placed
+	}
+	placed := map[string]bool{}
+	for _, v := range s.DB.Vegetation {
+		if v.Enabled {
+			placed[v.Prefab] = true
+		}
+	}
+	for _, c := range s.DB.Clutter {
+		if c.Enabled {
+			placed[c.Prefab] = true
+		}
+	}
+	note := func(c *model.Contents) {
+		if c == nil {
+			return
+		}
+		for _, pk := range c.Pickables {
+			placed[pk.Prefab] = true
+		}
+		for _, r := range c.Resources {
+			placed[r.Prefab] = true
+		}
+	}
+	for _, l := range s.DB.Locations {
+		if l.Enabled {
+			note(l.Contents)
+		}
+	}
+	for _, r := range s.DB.Rooms {
+		if r.Enabled {
+			note(r.Contents)
+		}
+	}
+	s.placed = placed
+	return placed
 }
 
 // piece is the earliest stage a piece can be built at: when its materials

@@ -47,6 +47,7 @@ type Site struct {
 	food   *FoodGuide
 	gear   *GearGuide
 	stages *stager
+	placed map[string]bool // resources something puts in the world, see placedResources
 }
 
 // Build renders everything.
