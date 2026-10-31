@@ -1,21 +1,28 @@
+{{define "head"}}<script type="module" src="{{url "static/js/achievements.js"}}"></script>{{end}}
 {{define "content"}}
 {{$d := .Data}}
 <div class="index-head"><div><p class="eyebrow">For the record</p><h1>Achievements</h1><p>{{len $d}} achievements, as the client defines them, with exactly what each one counts: a secret one is hidden in the game until it unlocks, and a few need the harder difficulties.</p></div></div>
-<div class="ach-list">
+<section class="panel ach-file" data-ach-file hidden>
+<div class="ach-file-row"><div><h2>Your progress</h2><p data-ach-file-text>Drop your character file here, or choose it, and every achievement below shows how far along you are. The file is read in your browser and goes nowhere.</p><p class="ach-file-where muted">It is <code>&lt;name&gt;.fch</code> in <code>%USERPROFILE%\AppData\LocalLow\IronGate\Valheim\characters_local</code>, or with Steam Cloud in <code>Steam\userdata\&lt;id&gt;\892970\remote\characters</code>.</p></div>
+<label class="btn btn-primary ach-file-pick">Choose file<input type="file" accept=".fch,.old" data-ach-input hidden></label></div>
+<div class="ach-file-loaded" data-ach-loaded hidden><span><b data-ach-name></b> <span data-ach-summary></span></span><button type="button" class="btn btn-quiet" data-ach-forget>Forget</button></div>
+<p class="ach-file-error" data-ach-error hidden></p>
+</section>
+<div class="ach-list" data-ach-list>
 {{range $d}}{{$a := .}}
-<section class="panel ach" id="{{.Slug}}">
-<div class="ach-head">{{if .Icon}}<img class="ach-icon" src="{{.Icon}}" alt="" loading="lazy" width="64" height="64">{{else}}<span class="ach-icon card-blank"></span>{{end}}<div><h2>{{.Name}}</h2><p class="ach-desc">{{.Description}}</p><p class="ach-tags">{{if .Secret}}<span class="tag">Secret</span>{{end}}{{if .Difficulty}}<span class="tag">{{.Difficulty}}</span>{{end}}{{if .Dynamic}}<span class="tag" title="The game fills this list from its own tables">Every kind</span>{{end}}</p></div></div>
-{{template "needs" (dict "title" "Kill" "list" .Kills)}}
-{{template "needs" (dict "title" "Craft" "list" .Crafts)}}
-{{template "needs" (dict "title" "Eat" "list" .Eaten)}}
-{{template "needs" (dict "title" "Pick up" "list" .PickedUp)}}
-{{template "needs" (dict "title" "Catch" "list" .Caught)}}
-{{template "needs" (dict "title" "Build" "list" .Pieces)}}
-{{if .Stats}}{{if gt (len .Stats) 14}}<details class="ach-more"><summary><b>Do</b> <span class="count">{{len .Stats}}</span></summary>{{else}}<h3>Do{{if gt (len .Stats) 1}} <span class="count">{{len .Stats}}</span>{{end}}</h3>{{end}}<ul class="ach-stats">{{range .Stats}}<li>{{.}}</li>{{end}}</ul>{{if gt (len .Stats) 14}}</details>{{end}}{{end}}
-{{if .Others}}<h3>Needs first</h3><ul class="chips">{{range .Others}}<li><a class="chip" href="{{url .URL}}">{{if .Icon}}<img class="chip-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" width="28" height="28">{{else}}<span class="chip-icon chip-blank"></span>{{end}}<span class="chip-name">{{.Name}}</span></a></li>{{end}}</ul>{{end}}
+<section class="panel ach" id="{{.Slug}}" data-ach="{{.ID}}" data-diff="{{.Achievement.Difficulty}}">
+<div class="ach-head">{{if .Icon}}<img class="ach-icon" src="{{.Icon}}" alt="" loading="lazy" width="64" height="64">{{else}}<span class="ach-icon card-blank"></span>{{end}}<div class="ach-text"><h2>{{.Name}}</h2><p class="ach-desc">{{.Description}}</p><p class="ach-tags">{{if .Secret}}<span class="tag">Secret</span>{{end}}{{if .Difficulty}}<span class="tag">{{.Difficulty}}</span>{{end}}{{if .Dynamic}}<span class="tag" title="The game fills this list from its own tables">Every kind</span>{{end}}</p></div></div>
+{{template "needs" (dict "title" "Kill" "kind" "kills" "list" .Kills)}}
+{{template "needs" (dict "title" "Craft" "kind" "crafts" "list" .Crafts)}}
+{{template "needs" (dict "title" "Eat" "kind" "eaten" "list" .Eaten)}}
+{{template "needs" (dict "title" "Pick up" "kind" "pickedUp" "list" .PickedUp)}}
+{{template "needs" (dict "title" "Catch" "kind" "caught" "list" .Caught)}}
+{{template "needs" (dict "title" "Build" "kind" "pieces" "list" .Pieces)}}
+{{if .Stats}}{{if gt (len .Stats) 14}}<details class="ach-more"><summary><b>Do</b> <span class="count">{{len .Stats}}</span></summary>{{else}}<h3>Do{{if gt (len .Stats) 1}} <span class="count">{{len .Stats}}</span>{{end}}</h3>{{end}}<ul class="ach-stats">{{range .Stats}}<li data-stat="{{.Stat}}" data-key="{{.Key}}" data-amount="{{.Amount}}">{{.Text}}</li>{{end}}</ul>{{if gt (len .Stats) 14}}</details>{{end}}{{end}}
+{{if .Others}}<h3>Needs first</h3><ul class="chips">{{range .Others}}<li data-other="{{.Prefab}}"><a class="chip" href="{{url .URL}}">{{if .Icon}}<img class="chip-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" width="28" height="28">{{else}}<span class="chip-icon chip-blank"></span>{{end}}<span class="chip-name">{{.Name}}</span></a></li>{{end}}</ul>{{end}}
 </section>
 {{end}}
 </div>
 {{end}}
 
-{{define "needs"}}{{if .list}}{{if gt (len .list) 14}}<details class="ach-more"><summary><b>{{.title}}</b> <span class="count">{{len .list}}</span></summary>{{else}}<h3>{{.title}} <span class="count">{{len .list}}</span></h3>{{end}}<ul class="chips">{{range .list}}<li>{{with .Thing}}{{if .URL}}<a class="chip" href="{{url .URL}}">{{else}}<span class="chip chip-still">{{end}}{{if .Icon}}<img class="chip-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="28" height="28">{{else}}<span class="chip-icon chip-blank"></span>{{end}}<span class="chip-name">{{.Name}}</span>{{if .URL}}</a>{{else}}</span>{{end}}{{else}}<span class="chip chip-dead"><span class="chip-icon chip-blank"></span><span class="chip-name">{{.Need.Name}}</span></span>{{end}}{{if gt .Need.Amount 1}}<span class="chip-n">×{{.Need.Amount}}</span>{{end}}</li>{{end}}</ul>{{if gt (len .list) 14}}</details>{{end}}{{end}}{{end}}
+{{define "needs"}}{{if .list}}{{if gt (len .list) 14}}<details class="ach-more"><summary><b>{{.title}}</b> <span class="count">{{len .list}}</span></summary>{{else}}<h3>{{.title}} <span class="count">{{len .list}}</span></h3>{{end}}<ul class="chips">{{range .list}}<li data-need="{{$.kind}}" data-token="{{.Need.Token}}"{{if gt .Need.Amount 1}} data-amount="{{.Need.Amount}}"{{end}}>{{with .Thing}}{{if .URL}}<a class="chip" href="{{url .URL}}">{{else}}<span class="chip chip-still">{{end}}{{if .Icon}}<img class="chip-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" loading="lazy" width="28" height="28">{{else}}<span class="chip-icon chip-blank"></span>{{end}}<span class="chip-name">{{.Name}}</span>{{if .URL}}</a>{{else}}</span>{{end}}{{else}}<span class="chip chip-dead"><span class="chip-icon chip-blank"></span><span class="chip-name">{{.Need.Name}}</span></span>{{end}}{{if gt .Need.Amount 1}}<span class="chip-n">×{{.Need.Amount}}</span>{{end}}</li>{{end}}</ul>{{if gt (len .list) 14}}</details>{{end}}{{end}}{{end}}

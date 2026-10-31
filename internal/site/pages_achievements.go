@@ -16,8 +16,17 @@ type AchievementView struct {
 	PickedUp   []NeedView
 	Caught     []NeedView
 	Pieces     []NeedView
-	Stats      []string // the stat triggers, each said in a sentence
+	Stats      []StatLine
 	Others     []*Thing
+}
+
+// StatLine is one stat trigger said in a sentence, with the stat and
+// threshold kept for the page's progress script.
+type StatLine struct {
+	Text   string
+	Key    string
+	Stat   int
+	Amount float64
 }
 
 // NeedView is one need with the thing it names, when the wiki has it.
@@ -90,7 +99,7 @@ func (s *Site) pagesAchievements() error {
 			v.Kills = known(v.Kills)
 		}
 		for _, st := range a.Stats {
-			v.Stats = append(v.Stats, statLine(st))
+			v.Stats = append(v.Stats, StatLine{Text: statLine(st), Key: st.Key, Stat: st.Stat, Amount: st.Amount})
 		}
 		for _, id := range a.Others {
 			if t := ix.Things["ach:"+id]; t != nil {

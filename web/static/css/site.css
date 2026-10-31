@@ -284,6 +284,31 @@ table.stats td:first-child { color: var(--ink-2); }
 .ach-more { margin: 12px 0 0; }
 .ach-more summary { cursor: pointer; font-family: var(--display); font-size: 16px; margin-bottom: 6px; }
 .ach-stats { margin: 0; padding: 0 0 0 18px; color: var(--ink-2); display: grid; gap: 3px; }
+.ach-head .ach-text { flex: 1; min-width: 0; }
+.ach-file { border-style: dashed; }
+.ach-file.is-over { border-color: var(--accent); background: var(--accent-soft); }
+.ach-file h2 { font-size: 22px; margin: 0 0 4px; }
+.ach-file p { margin: 0 0 6px; color: var(--ink-2); }
+.ach-file-row { display: flex; gap: 20px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.ach-file-where { font-size: 14px; }
+.ach-file-where code { font-size: 12px; }
+.ach-file-pick { flex: none; }
+.ach-file-loaded { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-top: 8px; }
+.ach-file-error { color: #c0392b; margin: 8px 0 0; }
+.ach-bar { position: relative; height: 8px; margin: 10px 0 18px; border-radius: 999px; background: var(--paper-3); max-width: 420px; }
+.ach-bar-fill { display: block; height: 100%; border-radius: 999px; background: var(--accent); transition: width .3s; }
+.is-unlocked .ach-bar-fill { background: var(--ok); }
+.ach-bar-text { position: absolute; left: 0; top: 12px; font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.is-unlocked .ach-bar-text { color: var(--ok); font-weight: 700; }
+.is-unlocked .ach-icon { box-shadow: 0 0 0 2px var(--ok); }
+.ach-you { color: var(--ink-3); font-size: 13px; margin-left: 6px; font-variant-numeric: tabular-nums; }
+.has-file .chips li:not(.is-done) .chip { opacity: .5; }
+.has-file .chips li.is-done .chip { border-color: var(--ok); }
+.has-file .chips li.is-done .chip-name::after { content: ' ✓'; color: var(--ok); font-weight: 700; }
+.has-file .ach-stats li:not(.is-done) { color: var(--ink-3); }
+.has-file .ach-stats li.is-done { color: var(--ink); }
+.has-file .ach-stats li.is-done::marker { color: var(--ok); }
+.has-file .ach-stats li.is-done .ach-you::before { content: '✓ '; color: var(--ok); font-weight: 700; }
 .boss-prep { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
 .boss-prep > div { min-width: 0; }
 .boss-prep h3 { margin: 10px 0 4px; }

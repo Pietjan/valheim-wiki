@@ -190,5 +190,10 @@ decompiled client (`playerstats.go`) and the float threshold.
 `cmd/wiki-data/achievements.go` reads
 them after the creatures, items and pieces, resolving tokens to prefabs,
 into `data/achievements.json`; the site renders one page with an anchor
-per achievement. Running the extractor with `-only` now starts from the
+per achievement. Each need and stat line carries its token and threshold
+in data attributes, and `web/static/js/achievements.js` reads a character
+file (`.fch`) dropped on the page in the browser — the profile's
+statistics tables, which are the dictionaries the triggers check, keyed
+by the same tokens — to mark what is done and bar each achievement; the
+file is kept in IndexedDB. Running the extractor with `-only` now starts from the
 data as written, so a partial run keeps the other files.
