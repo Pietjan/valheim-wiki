@@ -74,8 +74,11 @@ async function render(el, body, hook, handle, seed, base) {
 
   const markers = [];
   let focus = { x: start.x, z: start.z, span: 4000 };
-  const link = (x, z, text) => `<a href="${base}world/?seed=${encodeURIComponent(seed)}&x=${Math.round(x)}&z=${Math.round(z)}&zoom=12">${text}</a>`;
-  const link3d = (x, z) => `<a href="${base}world/?seed=${encodeURIComponent(seed)}&x=${Math.round(x)}&z=${Math.round(z)}&zoom=14&view=3d&pitch=35" title="Fly there in 3D">3D</a>`;
+  // The links into the map and the 3D view: centred on the spot and, with
+  // pin=1, a pin dropped on it. The list of all of them carries no pin.
+  const link = (x, z, text, pin = true) => `<a href="${base}world/?seed=${encodeURIComponent(seed)}&x=${Math.round(x)}&z=${Math.round(z)}&zoom=16${pin ? '&pin=1' : ''}">${text}</a>`;
+  const link3d = (x, z) => `<a href="${base}world/?seed=${encodeURIComponent(seed)}&x=${Math.round(x)}&z=${Math.round(z)}&zoom=14&view=3d&pitch=35&pin=1" title="Fly there in 3D">3D</a>`;
+  let caption = '';
 
   if (sites.length) {
     const near = sites.slice(0, 5);
@@ -93,13 +96,14 @@ async function render(el, body, hook, handle, seed, base) {
     }
     left.appendChild(ul);
     const n = near[0];
-    const span = Math.max(1500, Math.min(6000, n.d * 2.6));
+    const span = Math.max(500, Math.min(6000, n.d * 2.6));
     focus = { x: (start.x + n.x) / 2, z: (start.z + n.z) / 2, span };
+    caption = `${near.length === 1 ? 'the nearest one' : `the ${near.length} nearest`}`;
     if (sites.length > 5) {
       const p = document.createElement('p');
       p.className = 'yw-sub';
       p.style.marginTop = '8px';
-      p.innerHTML = `${link(start.x, start.z, 'All of them on the map')}.`;
+      p.innerHTML = `${link(start.x, start.z, 'All of them on the map', false)}.`;
       left.appendChild(p);
     }
   } else if (biomes.length) {
@@ -121,16 +125,23 @@ async function render(el, body, hook, handle, seed, base) {
       }
       left.appendChild(ul);
       markers.push({ x: f.x, z: f.z, color: '#f0bb75' });
-      focus = { x: (start.x + f.x) / 2, z: (start.z + f.z) / 2, span: Math.max(2000, Math.min(8000, f.d * 2.6)) };
+      focus = { x: (start.x + f.x) / 2, z: (start.z + f.z) / 2, span: Math.max(500, Math.min(8000, f.d * 2.6)) };
+      caption = `the nearest ${biomeName(f.biome)}`;
     } else {
       left.innerHTML = `<p class="yw-empty">None of ${biomes.map(biomeName).join(', ')} in this world.</p>`;
     }
   } else {
     left.innerHTML = `<p class="yw-empty">Not placed in this world.</p>`;
   }
-  markers.push({ x: start.x, z: start.z, color: '#ffffff', ring: true });
-  drawMiniMap(canvas, handle, { cx: focus.x, cz: focus.z, span: focus.span, markers });
-  canvas.title = 'Spawn is the white dot';
+  markers.push({ x: start.x, z: start.z, color: '#ffffff', ring: true, size: 8 });
+  drawMiniMap(canvas, handle, { cx: focus.x, cz: focus.z, span: focus.span, markers, dotRadius: 7 });
+  canvas.title = `${World.formatDistance(focus.span)} across`;
+  if (caption) {
+    const cap = document.createElement('p');
+    cap.className = 'yw-cap';
+    cap.innerHTML = `<i class="ring"></i>spawn <i class="dot"></i>${caption}`;
+    right.appendChild(cap);
+  }
 }
 
 function biomeName(b) {

@@ -827,6 +827,7 @@ export class WorldMap {
     this.viewHandlers = [];
     this.sectorLabels = sectorLabels;
     this.showGrid = !!grid;
+    this.pin = null;          // {x, z} a dropped pin, or null
     this.handle = null;
     this.sectorList = null;
     this.unsubscribe = [];
@@ -902,6 +903,9 @@ export class WorldMap {
   setSectorOutlines(on) { if (this.painter) this.painter.setShowSectors(on); this.invalidate(true); }
   setSectorLabels(on) { this.sectorLabels = !!on; this.invalidate(false); }
   setGrid(on) { this.showGrid = !!on; this.invalidate(false); }
+  // setPin drops a pin at x, z (or lifts it with null): a place the reader
+  // was sent to, drawn over everything else.
+  setPin(pin) { this.pin = pin && Number.isFinite(pin.x) && Number.isFinite(pin.z) ? { x: pin.x, z: pin.z } : null; this.invalidate(false); }
 
   // setMarkers replaces the markers: {x, z, img (Image, URL or null), size
   // (px), kind, color, label, priority, data}.
@@ -1106,6 +1110,10 @@ export class WorldMap {
     if (hovered) {
       drawMarkerDisc(ctx, hovered, true);
       drawMarkerLabel(ctx, hovered, this.width);
+    }
+    if (this.pin) {
+      const p = this.worldToScreen(this.pin.x, this.pin.z);
+      drawPin(ctx, p.x, p.y);
     }
   }
 
@@ -1314,6 +1322,34 @@ export function drawMarkerDisc(ctx, v, lifted) {
     ctx.strokeStyle = lifted ? '#ffffff' : 'rgba(0, 0, 0, 0.75)';
     ctx.stroke();
   }
+}
+
+// drawPin draws a map pin with its tip at sx, sy: a teardrop in the site's
+// amber over a dark outline, with a shadow on the ground, so it reads over
+// any biome and over the markers.
+export function drawPin(ctx, sx, sy) {
+  const h = 34, r = 11;
+  ctx.save();
+  ctx.lineJoin = 'round';
+  ctx.beginPath();
+  ctx.ellipse(sx, sy + 1, 7, 3.5, 0, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.45)';
+  ctx.fill();
+  const cy = sy - h + r;
+  ctx.beginPath();
+  ctx.moveTo(sx, sy);
+  ctx.arc(sx, cy, r, Math.PI * 0.75, Math.PI * 0.25, false);
+  ctx.closePath();
+  ctx.fillStyle = '#dfa258';
+  ctx.fill();
+  ctx.lineWidth = 2.5;
+  ctx.strokeStyle = 'rgba(20, 12, 4, 0.9)';
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(sx, cy, r * 0.4, 0, Math.PI * 2);
+  ctx.fillStyle = '#1a1208';
+  ctx.fill();
+  ctx.restore();
 }
 
 // drawMarkerLabel writes the marker's name above it, kept within width.

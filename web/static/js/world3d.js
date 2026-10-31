@@ -33,7 +33,7 @@
 // tilt, the wheel or a pinch to zoom, double-click to fly closer. The
 // compass is the caller's: onView reports the yaw.
 
-import { markerImage, declutter, drawMarkerDisc, drawMarkerLabel } from './worldmap.js';
+import { markerImage, declutter, drawMarkerDisc, drawMarkerLabel, drawPin } from './worldmap.js';
 import { ModelStore } from './models.js';
 
 const MAP_RADIUS = 12288;
@@ -842,6 +842,8 @@ export class World3D {
   }
 
   setFilter(fn) { this.filter = typeof fn === 'function' ? fn : null; this.invalidate(false); }
+  // setPin drops a pin on the ground at x, z, or lifts it with null.
+  setPin(pin) { this.pin = pin && Number.isFinite(pin.x) && Number.isFinite(pin.z) ? { x: pin.x, z: pin.z } : null; this.invalidate(false); }
   onClick(fn) { this.clickHandlers.push(fn); return () => { this.clickHandlers = this.clickHandlers.filter(f => f !== fn); }; }
   onHover(fn) { this.hoverHandlers.push(fn); return () => { this.hoverHandlers = this.hoverHandlers.filter(f => f !== fn); }; }
   onView(fn) { this.viewHandlers.push(fn); return () => { this.viewHandlers = this.viewHandlers.filter(f => f !== fn); }; }
@@ -1483,6 +1485,10 @@ export class World3D {
       this._pin(ctx, hovered);
       drawMarkerDisc(ctx, hovered, true);
       drawMarkerLabel(ctx, hovered, this.width);
+    }
+    if (this.pin) {
+      const p = this.worldToScreen(this.pin.x, this.pin.z);
+      if (p.visible && p.x > -40 && p.y > -40 && p.x < W + 40 && p.y < H + 40) drawPin(ctx, p.x, p.y);
     }
   }
 

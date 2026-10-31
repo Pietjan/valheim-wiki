@@ -457,16 +457,33 @@ export function drawMiniMap(canvas, handle, { cx = 0, cz = 0, span = null, marke
     }
   }
   ctx.putImageData(img, 0, 0);
+  // The markers: a dot in its colour with a dark edge and a light halo, so
+  // it stands off any biome; a ring (m.ring) is hollow, for the spawn.
   for (const m of markers || []) {
     const sx = (m.x - left) / mpp, sy = (top - m.z) / mpp;
     const rad = m.size || dotRadius;
+    ctx.lineCap = 'round';
+    if (m.ring) {
+      ctx.beginPath();
+      ctx.arc(sx, sy, rad, 0, Math.PI * 2);
+      ctx.lineWidth = Math.max(2, rad * 0.9);
+      ctx.strokeStyle = 'rgba(0,0,0,0.75)';
+      ctx.stroke();
+      ctx.lineWidth = Math.max(1, rad * 0.45);
+      ctx.strokeStyle = m.color || '#fff';
+      ctx.stroke();
+      continue;
+    }
     ctx.beginPath();
     ctx.arc(sx, sy, rad, 0, Math.PI * 2);
+    ctx.lineWidth = Math.max(2, rad * 0.9);
+    ctx.strokeStyle = 'rgba(0,0,0,0.75)';
+    ctx.stroke();
+    ctx.lineWidth = Math.max(1, rad * 0.4);
+    ctx.strokeStyle = 'rgba(255,255,255,0.9)';
+    ctx.stroke();
     ctx.fillStyle = m.color || '#fff';
     ctx.fill();
-    ctx.lineWidth = Math.max(1, rad / 3);
-    ctx.strokeStyle = 'rgba(0,0,0,0.7)';
-    ctx.stroke();
   }
   return true;
 }

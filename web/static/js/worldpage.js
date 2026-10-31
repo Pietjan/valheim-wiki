@@ -80,6 +80,7 @@ async function init(root) {
     root.view3d = view3d;
     if (handle) view3d.setWorld(handle);
     view3d.setMarkers(markers);
+    view3d.setPin(pin);
     view3d.onClick(onClick);
     view3d.onView(v => {
       compass.style.transform = `rotate(${-v.yaw}deg)`;
@@ -142,6 +143,7 @@ async function init(root) {
   let handle = null;
   let markers = [];
   let popover = null;
+  let pin = null;   // {x, z} from a link that sent the reader to a place
 
   const seedNow = params.get('seed') || World.seedFromPage() || '';
   input.value = seedNow;
@@ -153,8 +155,9 @@ async function init(root) {
     World.setSeed(s);
     const u = new URL(location.href);
     u.searchParams.set('seed', s);
-    u.searchParams.delete('x'); u.searchParams.delete('z'); u.searchParams.delete('zoom');
+    u.searchParams.delete('x'); u.searchParams.delete('z'); u.searchParams.delete('zoom'); u.searchParams.delete('pin');
     history.replaceState(null, '', u);
+    setPin(null);
     open(s);
   });
   window.addEventListener('vegvisir:seed', e => { if (e.detail.seed && e.detail.seed !== handle?.seed) { input.value = e.detail.seed; open(e.detail.seed); } });
@@ -268,7 +271,8 @@ async function init(root) {
       const yaw = parseFloat(params.get('yaw')), pitch = parseFloat(params.get('pitch'));
       if (!Number.isNaN(x) && !Number.isNaN(z)) {
         map.centerOn(x, z, Number.isNaN(zoom) ? 8 : zoom);
-        params.delete('x'); params.delete('z'); params.delete('zoom');
+        if (params.get('pin')) setPin({ x, z });
+        params.delete('x'); params.delete('z'); params.delete('zoom'); params.delete('pin');
       }
       if (params.get('view') === '3d') {
         params.delete('view');
@@ -280,6 +284,8 @@ async function init(root) {
       }
     });
   }
+
+  function setPin(p) { pin = p; map.setPin(p); if (view3d) view3d.setPin(p); }
 
   function closePopover() { if (popover) { popover.remove(); popover = null; } }
 
