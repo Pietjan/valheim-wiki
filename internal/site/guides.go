@@ -24,6 +24,7 @@ import (
 type FoodCombo struct {
 	ID       string
 	Label    string
+	Stat     string // the stat the combo is for: health, stamina or eitr
 	Foods    []*model.Item
 	Health   float64
 	Stamina  float64
@@ -514,19 +515,19 @@ func foodKind(it *model.Item) byte {
 // a trade worth making, and so is seven health for twenty stamina.
 func bestCombos(foods []*model.Item) []FoodCombo {
 	type pick struct {
-		id, label string
-		slots     string // the kinds the three must be, in any order; "" for any
-		score     func(h, st, e float64) float64
-		need      func(h, st, e float64) bool
+		id, label, stat string
+		slots           string // the kinds the three must be, in any order; "" for any
+		score           func(h, st, e float64) float64
+		need            func(h, st, e float64) bool
 	}
 	picks := []pick{
-		{"health", "Most health", "", func(h, st, e float64) float64 { return h*1000 + st }, nil},
-		{"stamina", "Most stamina", "", func(h, st, e float64) float64 { return st*1000 + h }, nil},
-		{"eitr", "Most eitr", "", func(h, st, e float64) float64 { return e*1000 + h + st }, func(h, st, e float64) bool { return e > 0 }},
-		{"two-health", "Two health, one stamina", "hhs", func(h, st, e float64) float64 { return h + st/2 }, nil},
-		{"two-stamina", "Two stamina, one health", "hss", func(h, st, e float64) float64 { return st + h/2 }, nil},
-		{"two-eitr-health", "Two eitr, one health", "ehe", func(h, st, e float64) float64 { return e + h/2 }, nil},
-		{"two-eitr-stamina", "Two eitr, one stamina", "ese", func(h, st, e float64) float64 { return e + st/2 }, nil},
+		{"health", "Most health", "health", "", func(h, st, e float64) float64 { return h*1000 + st }, nil},
+		{"stamina", "Most stamina", "stamina", "", func(h, st, e float64) float64 { return st*1000 + h }, nil},
+		{"eitr", "Most eitr", "eitr", "", func(h, st, e float64) float64 { return e*1000 + h + st }, func(h, st, e float64) bool { return e > 0 }},
+		{"two-health", "Two health, one stamina", "health", "hhs", func(h, st, e float64) float64 { return h + st/2 }, nil},
+		{"two-stamina", "Two stamina, one health", "stamina", "hss", func(h, st, e float64) float64 { return st + h/2 }, nil},
+		{"two-eitr-health", "Two eitr, one health", "eitr", "ehe", func(h, st, e float64) float64 { return e + h/2 }, nil},
+		{"two-eitr-stamina", "Two eitr, one stamina", "eitr", "ese", func(h, st, e float64) float64 { return e + st/2 }, nil},
 	}
 	kinds := make([]byte, len(foods))
 	for i, f := range foods {
@@ -582,7 +583,7 @@ func bestCombos(foods []*model.Item) []FoodCombo {
 						if c.FoodBurn < dur {
 							dur = c.FoodBurn
 						}
-						best[pi] = FoodCombo{ID: p.id, Label: p.label, Foods: []*model.Item{a, b, c}, Health: h, Stamina: st, Eitr: e,
+						best[pi] = FoodCombo{ID: p.id, Label: p.label, Stat: p.stat, Foods: []*model.Item{a, b, c}, Health: h, Stamina: st, Eitr: e,
 							Regen: a.FoodRegen + b.FoodRegen + c.FoodRegen, Duration: dur}
 					}
 				}

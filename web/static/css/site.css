@@ -27,6 +27,9 @@
   --rune: #8b2e22;
   --ok: #4b7a3a;
   --warn: #a47b16;
+  --stat-health: #b4433a;
+  --stat-stamina: #a3780f;
+  --stat-eitr: #5b55a8;
   --night: #15110e;
   --night-2: #1f1a14;
   --night-ink: #e9dfca;
@@ -60,6 +63,9 @@
   --rune: #e06a5a;
   --ok: #8fc274;
   --warn: #e0b24a;
+  --stat-health: #e06a5a;
+  --stat-stamina: #e0b24a;
+  --stat-eitr: #9d93e6;
   --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px -14px rgba(0, 0, 0, .6);
   color-scheme: dark;
 }
@@ -82,6 +88,9 @@
     --rune: #e06a5a;
     --ok: #8fc274;
     --warn: #e0b24a;
+    --stat-health: #e06a5a;
+    --stat-stamina: #e0b24a;
+    --stat-eitr: #9d93e6;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px -14px rgba(0, 0, 0, .6);
     color-scheme: dark;
   }
@@ -264,9 +273,14 @@ table.stats td:first-child { color: var(--ink-2); }
 
 /* panels */
 .meals { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin: 12px 0 8px; }
-.meal { border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper-2); padding: 12px 14px; box-shadow: var(--shadow); }
+.meal { --meal-c: var(--accent); position: relative; overflow: hidden; border: 1px solid color-mix(in srgb, var(--meal-c) 40%, transparent); border-radius: var(--radius); background: linear-gradient(160deg, color-mix(in srgb, var(--meal-c) 9%, var(--paper-2)), var(--paper-2) 60%); padding: 12px 14px; box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08), var(--shadow); }
+.meal::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 60% 70% at 100% 0%, color-mix(in srgb, var(--meal-c) 16%, transparent), transparent 60%); }
+.meal > * { position: relative; }
+.meal[data-stat="health"] { --meal-c: var(--stat-health); }
+.meal[data-stat="stamina"] { --meal-c: var(--stat-stamina); }
+.meal[data-stat="eitr"] { --meal-c: var(--stat-eitr); }
 .meal-head { display: flex; flex-direction: column; gap: 2px; margin-bottom: 8px; }
-.meal-head b { font-family: var(--display); font-size: 19px; letter-spacing: .02em; }
+.meal-head b { font-family: var(--display); font-size: 19px; letter-spacing: .02em; color: var(--meal-c); }
 .meal-stats { color: var(--ink-2); font-size: 13px; font-variant-numeric: tabular-nums; }
 .meal .chips { margin: 0; }
 .food-stage { margin: 34px 0 0; }
