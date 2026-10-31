@@ -1,7 +1,7 @@
 {{define "content"}}
 {{$d := .Data}}
 {{template "crumbs" .}}
-<div class="index-head"><div><p class="eyebrow">Guide</p><h1>Best food by biome</h1><p>You can eat three foods at once. For each biome, in the order you meet them, these are the three to carry out of everything the game can have handed you by then, the earlier biomes' foods included, so a stew from the Swamp keeps its place until something better comes: the most health, the most stamina, the most eitr once there is any, and the best of health and stamina together. Worked out from the recipes, the stations they need, and where every ingredient first drops, grows, sells or lies in a chest.</p></div></div>
+<div class="index-head"><div><p class="eyebrow">Guide</p><h1>Best food by biome</h1><p>You can eat three foods at once. For each biome, in the order you meet them, these are the three to carry out of everything the game can have handed you by then, the earlier biomes' foods included, so a stew from the Swamp keeps its place until something better comes. First the ceilings: the most health, the most stamina, the most eitr once there is any. Then the menus Vikings eat, a food counting as health, stamina or eitr by whichever it gives most of: two health foods and a stamina one for a fight, two stamina and a health for a day's exploring, sailing or building, and two eitr foods with a health one to stay standing or a stamina one to keep casting on the move. Worked out from the recipes, the stations they need, and where every ingredient first drops, grows, sells or lies in a chest.</p></div></div>
 {{range $d.Stages}}
 <section class="food-stage" id="{{.Biome}}">
 <h2 class="group-title">{{template "biome" .Biome}} <span class="count">{{.Count}} foods by now</span></h2>

@@ -13,7 +13,7 @@
 {{with .Armor}}{{if .Armor}}<h3>Wear</h3><ul class="chips">{{range .Armor}}<li>{{template "chip" .Item.Prefab}}</li>{{end}}{{with .Shield}}<li>{{template "chip" .Item.Prefab}}</li>{{end}}</ul><p class="small muted">{{num .ArmorTotal}} armour together.</p>{{end}}{{end}}
 </div>
 <div>
-{{if .Food}}<h3>Eat</h3>{{range .Food}}{{if or (eq .ID "health") (eq .ID "balanced")}}<p class="small muted" style="margin:6px 0 2px">{{.Label}}: {{num .Health}} hp · {{num .Stamina}} stamina</p><ul class="chips">{{range .Foods}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}{{end}}{{end}}
+{{if .Food}}<h3>Eat</h3>{{range .Food}}{{if or (eq .ID "health") (eq .ID "two-health")}}<p class="small muted" style="margin:6px 0 2px">{{.Label}}: {{num .Health}} hp · {{num .Stamina}} stamina</p><ul class="chips">{{range .Foods}}<li>{{template "chip" .Prefab}}</li>{{end}}</ul>{{end}}{{end}}{{end}}
 {{with .Offering}}<h3>Summon</h3><p>{{template "chipn" (dict "prefab" .Item "n" .Count)}}{{with $b.Altar}} at {{template "chip" (print "loc:" .Prefab)}}{{end}}</p>{{end}}
 {{with .Power}}<h3>Power</h3><p><a href="{{thingURL (print "effect:" .ID)}}">{{.Name}}</a>: {{.Tooltip}}</p>{{end}}
 </div>

@@ -8,9 +8,10 @@ import (
 )
 
 // The food guide: for each biome, in the order a Viking meets them, the
-// three foods to eat together for the most health, the most stamina, the
-// most eitr, and the best of both, out of everything the game can have
-// handed out by then.
+// three foods to eat together for the most health, the most stamina and
+// the most eitr, and the menus Vikings eat — two health foods and a
+// stamina one, two stamina and a health, two eitr with a health or a
+// stamina — out of everything the game can have handed out by then.
 //
 // When a food becomes available is worked out from the data: a food is as
 // late as the latest of its ingredients and the station that cooks it,
@@ -484,26 +485,66 @@ func (s *Site) foodGuide() *FoodGuide {
 	return guide
 }
 
+// foodKind is what a food is for: health, stamina or eitr, whichever it
+// gives most of. Raspberries are a stamina food, cooked meat a health food,
+// and a magecap, as much eitr as health, an eitr food.
+func foodKind(it *model.Item) byte {
+	switch {
+	case it.FoodEitr > 0 && it.FoodEitr >= it.Food && it.FoodEitr >= it.FoodStamina:
+		return 'e'
+	case it.FoodStamina > it.Food:
+		return 's'
+	default:
+		return 'h'
+	}
+}
+
 // bestCombos picks, over every three of the foods, the most health, the
-// most stamina, the most eitr (when any food gives it) and the best
-// balance of health and stamina.
+// most stamina and the most eitr (when any food gives it) with any three,
+// and then the menus Vikings eat: two health foods and a stamina one for a
+// fight, two stamina and a health for the day's work, and once there is
+// eitr, two eitr foods with a health or a stamina one. A menu whose slots
+// the foods cannot fill is left out.
 func bestCombos(foods []*model.Item) []FoodCombo {
 	type pick struct {
 		id, label string
+		slots     string // the kinds the three must be, in any order; "" for any
 		score     func(h, st, e float64) float64
 		need      func(h, st, e float64) bool
 	}
 	picks := []pick{
-		{"health", "Most health", func(h, st, e float64) float64 { return h*1000 + st }, nil},
-		{"stamina", "Most stamina", func(h, st, e float64) float64 { return st*1000 + h }, nil},
-		{"balanced", "Balanced", func(h, st, e float64) float64 {
-			lo := h
-			if st < lo {
-				lo = st
+		{"health", "Most health", "", func(h, st, e float64) float64 { return h*1000 + st }, nil},
+		{"stamina", "Most stamina", "", func(h, st, e float64) float64 { return st*1000 + h }, nil},
+		{"eitr", "Most eitr", "", func(h, st, e float64) float64 { return e*1000 + h + st }, func(h, st, e float64) bool { return e > 0 }},
+		{"two-health", "Two health, one stamina", "hhs", func(h, st, e float64) float64 { return h*1000 + st }, nil},
+		{"two-stamina", "Two stamina, one health", "hss", func(h, st, e float64) float64 { return st*1000 + h }, nil},
+		{"two-eitr-health", "Two eitr, one health", "ehe", func(h, st, e float64) float64 { return e*1000 + h }, nil},
+		{"two-eitr-stamina", "Two eitr, one stamina", "ese", func(h, st, e float64) float64 { return e*1000 + st }, nil},
+	}
+	kinds := make([]byte, len(foods))
+	for i, f := range foods {
+		kinds[i] = foodKind(f)
+	}
+	// fills is whether three kinds are the slots, in any order.
+	fills := func(slots string, a, b, c byte) bool {
+		if slots == "" {
+			return true
+		}
+		want := [3]byte{slots[0], slots[1], slots[2]}
+		for _, k := range [3]byte{a, b, c} {
+			hit := false
+			for i, w := range want {
+				if w == k {
+					want[i] = 0
+					hit = true
+					break
+				}
 			}
-			return lo + (h+st)/4
-		}, nil},
-		{"eitr", "Most eitr", func(h, st, e float64) float64 { return e*1000 + h + st }, func(h, st, e float64) bool { return e > 0 }},
+			if !hit {
+				return false
+			}
+		}
+		return true
 	}
 	best := make([]FoodCombo, len(picks))
 	bestScore := make([]float64, len(picks))
@@ -518,6 +559,9 @@ func bestCombos(foods []*model.Item) []FoodCombo {
 				e := a.FoodEitr + b.FoodEitr + c.FoodEitr
 				for pi, p := range picks {
 					if p.need != nil && !p.need(h, st, e) {
+						continue
+					}
+					if !fills(p.slots, kinds[i], kinds[j], kinds[k]) {
 						continue
 					}
 					sc := p.score(h, st, e)
@@ -552,7 +596,7 @@ func bestCombos(foods []*model.Item) []FoodCombo {
 func (s *Site) pagesGuides() error {
 	guide := s.foodGuide()
 	if err := s.write("guides/food/", "food", &Page{Site: s, Title: "Best food by biome",
-		Description: "The best three foods to eat together in every biome of Valheim, for the most health, stamina or eitr, worked out from what the game can have handed you by then.",
+		Description: "The best three foods to eat together in every biome of Valheim: the most health, stamina or eitr, and the two-and-one menus for fighting, working and casting, worked out from what the game can have handed you by then.",
 		Section:     "guides", Path: "guides/food/", Crumbs: []Crumb{{"Guides", "guides/"}, {"Best food", ""}}, Data: guide}); err != nil {
 		return err
 	}
