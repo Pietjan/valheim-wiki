@@ -486,13 +486,15 @@ func (s *Site) foodGuide() *FoodGuide {
 }
 
 // foodKind is what a food is for: health, stamina or eitr, whichever it
-// gives most of. Raspberries are a stamina food, cooked meat a health food,
-// and a magecap, as much eitr as health, an eitr food.
+// gives most of. Raspberries are a stamina food, cooked meat a health food;
+// a magecap, as much eitr as health, is an eitr food, and a mushroom, as
+// much stamina as health, a stamina food, since that is what it is eaten
+// for.
 func foodKind(it *model.Item) byte {
 	switch {
 	case it.FoodEitr > 0 && it.FoodEitr >= it.Food && it.FoodEitr >= it.FoodStamina:
 		return 'e'
-	case it.FoodStamina > it.Food:
+	case it.FoodStamina >= it.Food:
 		return 's'
 	default:
 		return 'h'
@@ -505,6 +507,11 @@ func foodKind(it *model.Item) byte {
 // fight, two stamina and a health for the day's work, and once there is
 // eitr, two eitr foods with a health or a stamina one. A menu whose slots
 // the foods cannot fill is left out.
+//
+// The ceilings are strict: the most of their stat, the other only breaking
+// ties. The menus weigh the other stat at a half, so a few points of the
+// main stat can buy many of the other: three stamina for twenty health is
+// a trade worth making, and so is seven health for twenty stamina.
 func bestCombos(foods []*model.Item) []FoodCombo {
 	type pick struct {
 		id, label string
@@ -516,10 +523,10 @@ func bestCombos(foods []*model.Item) []FoodCombo {
 		{"health", "Most health", "", func(h, st, e float64) float64 { return h*1000 + st }, nil},
 		{"stamina", "Most stamina", "", func(h, st, e float64) float64 { return st*1000 + h }, nil},
 		{"eitr", "Most eitr", "", func(h, st, e float64) float64 { return e*1000 + h + st }, func(h, st, e float64) bool { return e > 0 }},
-		{"two-health", "Two health, one stamina", "hhs", func(h, st, e float64) float64 { return h*1000 + st }, nil},
-		{"two-stamina", "Two stamina, one health", "hss", func(h, st, e float64) float64 { return st*1000 + h }, nil},
-		{"two-eitr-health", "Two eitr, one health", "ehe", func(h, st, e float64) float64 { return e*1000 + h }, nil},
-		{"two-eitr-stamina", "Two eitr, one stamina", "ese", func(h, st, e float64) float64 { return e*1000 + st }, nil},
+		{"two-health", "Two health, one stamina", "hhs", func(h, st, e float64) float64 { return h + st/2 }, nil},
+		{"two-stamina", "Two stamina, one health", "hss", func(h, st, e float64) float64 { return st + h/2 }, nil},
+		{"two-eitr-health", "Two eitr, one health", "ehe", func(h, st, e float64) float64 { return e + h/2 }, nil},
+		{"two-eitr-stamina", "Two eitr, one stamina", "ese", func(h, st, e float64) float64 { return e + st/2 }, nil},
 	}
 	kinds := make([]byte, len(foods))
 	for i, f := range foods {
