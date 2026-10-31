@@ -44,6 +44,8 @@ async function init(root) {
   const reliefOut = $('[data-world-relief-out]', root);
   const treesRow = $('[data-world-trees-row]', root);
   const treesInput = $('[data-world-trees]', root);
+  const gridRow = $('[data-world-grid-row]', root);
+  const gridInput = $('[data-world-grid]', root);
   const compass = $('[data-world-compass]', root);
   const hint = $('[data-world-hint]', root);
 
@@ -110,6 +112,7 @@ async function init(root) {
     for (const b of modeButtons) b.setAttribute('aria-pressed', b.dataset.worldMode === mode ? 'true' : 'false');
     reliefRow.hidden = mode !== '3d';
     treesRow.hidden = mode !== '3d';
+    gridRow.hidden = mode === '3d';
     hint.hidden = mode !== '3d';
     compass.classList.toggle('is-live', mode === '3d');
     applyFilter();
@@ -123,6 +126,7 @@ async function init(root) {
     if (view3d) view3d.setRelief(+reliefInput.value);
   });
   treesInput.addEventListener('change', () => { if (view3d) view3d.setVegetation(treesInput.checked); });
+  gridInput.addEventListener('change', () => map.setGrid(gridInput.checked));
   compass.addEventListener('click', () => { if (mode === '3d' && view3d) view3d.lookAt(view3d.tx, view3d.tz, { yaw: 0, pitch: 55 }); });
   const catalogue = await (await fetch(base + 'world/locations.json')).json();
   const byPrefab = new Map(catalogue.map(l => [l.prefab, l]));

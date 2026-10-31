@@ -26,6 +26,7 @@
 // the marker under it.
 
 const MAP_RADIUS = 12288;
+const ZONE = 64;  // the game's zone: 64 m squares, zone (0,0) centred on the origin
 const WORLD_RADIUS = 10500;
 const HEIGHT_OFFSET = 512, HEIGHT_SCALE = 16;
 
@@ -791,7 +792,7 @@ const DBLCLICK_WAIT = 260;  // ms a click waits for a second one
 export class WorldMap {
   // el is a canvas (the GL canvas; the overlay goes beside it in its
   // parent, which is made position: relative) or a container to fill.
-  constructor(el, { assetsBase = null, cx = 0, cz = 0, zoom = 1, sectorLabels = true, sectorOutlines = true, maxDPR = 2 } = {}) {
+  constructor(el, { assetsBase = null, cx = 0, cz = 0, zoom = 1, sectorLabels = true, sectorOutlines = true, grid = false, maxDPR = 2 } = {}) {
     if (!el) throw new Error('WorldMap: an element is required');
     if (el.tagName === 'CANVAS') {
       this.glCanvas = el;
@@ -825,6 +826,7 @@ export class WorldMap {
     this.hoverHandlers = [];
     this.viewHandlers = [];
     this.sectorLabels = sectorLabels;
+    this.showGrid = !!grid;
     this.handle = null;
     this.sectorList = null;
     this.unsubscribe = [];
@@ -899,6 +901,7 @@ export class WorldMap {
 
   setSectorOutlines(on) { if (this.painter) this.painter.setShowSectors(on); this.invalidate(true); }
   setSectorLabels(on) { this.sectorLabels = !!on; this.invalidate(false); }
+  setGrid(on) { this.showGrid = !!on; this.invalidate(false); }
 
   // setMarkers replaces the markers: {x, z, img (Image, URL or null), size
   // (px), kind, color, label, priority, data}.
@@ -1033,6 +1036,29 @@ export class WorldMap {
       ctx.font = '14px system-ui, sans-serif';
       ctx.textAlign = 'center';
       ctx.fillText('The map needs WebGL2: ' + (this.painterError.message || this.painterError), W / 2, H / 2);
+    }
+
+    // The game's zone grid: lines at 64k + 32, since zone (0,0) is centred
+    // on the origin. Drawn once a zone is six pixels across, fading in to
+    // full strength by sixteen.
+    if (this.showGrid) {
+      const px = ZONE / this.mpp;
+      if (px >= 6) {
+        const a = Math.min(1, (px - 6) / 10);
+        const tl = this.screenToWorld(0, 0), br = this.screenToWorld(W, H);
+        ctx.strokeStyle = `rgba(255, 240, 210, ${(0.08 + 0.22 * a).toFixed(3)})`;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        for (let i = Math.floor((tl.x + ZONE / 2) / ZONE), end = Math.ceil((br.x + ZONE / 2) / ZONE); i <= end; i++) {
+          const sx = Math.round(this.worldToScreen(i * ZONE - ZONE / 2, 0).x) + 0.5;
+          ctx.moveTo(sx, 0); ctx.lineTo(sx, H);
+        }
+        for (let j = Math.floor((br.z + ZONE / 2) / ZONE), end = Math.ceil((tl.z + ZONE / 2) / ZONE); j <= end; j++) {
+          const sy = Math.round(this.worldToScreen(0, j * ZONE - ZONE / 2).y) + 0.5;
+          ctx.moveTo(0, sy); ctx.lineTo(W, sy);
+        }
+        ctx.stroke();
+      }
     }
 
     // The sector names, once a label is readable: past zoom 3.
