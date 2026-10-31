@@ -216,3 +216,65 @@ async function startYourWorld() {
   ywStarted = true;
 }
 if (seed && ywPanels.length) startYourWorld();
+
+// ---------- hover cards ----------
+// A chip shows a card after a short hover, or at once on keyboard focus:
+// name, type line, icon and a few lines from tips.json, fetched the first
+// time one is wanted. The card never takes the pointer, so the chip's
+// link still gets the click; the chip's own title is dropped while the
+// card is up so the browser's tooltip does not double it.
+{
+  let tips = null, loading = null;
+  const loadTips = () => loading || (loading = fetch(base + 'tips.json').then(r => r.json()).then(t => (tips = t)).catch(() => (tips = {})));
+  let card = null, timer = 0, current = null;
+  const hide = () => {
+    clearTimeout(timer); timer = 0;
+    if (card) { card.remove(); card = null; }
+    if (current) { if (current.dataset.tipTitle) current.title = current.dataset.tipTitle; current = null; }
+  };
+  const show = chip => {
+    const tip = tips && tips[chip.dataset.tip];
+    if (!tip || current !== chip) return;
+    if (chip.title) { chip.dataset.tipTitle = chip.title; chip.removeAttribute('title'); }
+    card = document.createElement('div');
+    card.className = 'tip-card';
+    card.setAttribute('role', 'tooltip');
+    const icon = tip.i ? `<img src="${base}icons/${tip.i}.png" alt="" width="40" height="40">` : '';
+    card.innerHTML = `<div class="tip-head">${icon}<div><b></b><span class="tip-sub"></span></div></div>`;
+    card.querySelector('b').textContent = tip.n;
+    card.querySelector('.tip-sub').textContent = tip.s || '';
+    for (const l of tip.l || []) { const p = document.createElement('p'); p.textContent = l; card.appendChild(p); }
+    document.body.appendChild(card);
+    // Below the chip, or above when there is no room; kept inside the window.
+    const r = chip.getBoundingClientRect();
+    const cw = card.offsetWidth, ch = card.offsetHeight;
+    let x = r.left + r.width / 2 - cw / 2;
+    x = Math.max(8, Math.min(window.innerWidth - cw - 8, x));
+    let y = r.bottom + 8;
+    if (y + ch > window.innerHeight - 8 && r.top - ch - 8 > 0) { y = r.top - ch - 8; card.classList.add('is-above'); }
+    card.style.left = Math.round(x + window.scrollX) + 'px';
+    card.style.top = Math.round(y + window.scrollY) + 'px';
+  };
+  const arm = (chip, delay) => {
+    if (current === chip) return;
+    hide();
+    current = chip;
+    timer = setTimeout(() => { loadTips().then(() => show(chip)); }, delay);
+  };
+  document.addEventListener('mouseover', e => {
+    const chip = e.target.closest && e.target.closest('[data-tip]');
+    if (chip) arm(chip, 220);
+  });
+  document.addEventListener('mouseout', e => {
+    const chip = e.target.closest && e.target.closest('[data-tip]');
+    if (chip && chip === current && !(e.relatedTarget && chip.contains(e.relatedTarget))) hide();
+  });
+  document.addEventListener('focusin', e => {
+    const chip = e.target.closest && e.target.closest('[data-tip]');
+    if (chip) arm(chip, 0);
+  });
+  document.addEventListener('focusout', hide);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') hide(); });
+  window.addEventListener('scroll', hide, { passive: true });
+  document.addEventListener('touchstart', hide, { passive: true });
+}

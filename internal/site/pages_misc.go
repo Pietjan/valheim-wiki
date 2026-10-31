@@ -194,6 +194,9 @@ func (s *Site) writeSiteData() error {
 	if err := s.writeJSON("search.json", entries); err != nil {
 		return err
 	}
+	if err := s.writeTips(); err != nil {
+		return err
+	}
 	// The map's catalogue: every location prefab the engine can place,
 	// with its kind, name, biome, icon and category for the layer list.
 	type mapLoc struct {
