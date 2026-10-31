@@ -114,7 +114,8 @@ func extractAchievements(x *X) error {
 				}
 				for _, e := range L(t, "m_statTrigger") {
 					m := assets.AsMap(e)
-					a.Stats = append(a.Stats, model.StatNeed{Stat: I(m, "m_stat"), Amount: I(m, "m_amountAboveEquals")})
+					n := I(m, "m_stat")
+					a.Stats = append(a.Stats, model.StatNeed{Stat: n, Key: playerStatName(n), Amount: F(m, "m_amountAboveEquals")})
 				}
 				for _, oref := range L(t, "m_otherAchievementTriggers") {
 					if ot, _ := x.Env.TreeOf(r.Cab, oref); ot != nil {

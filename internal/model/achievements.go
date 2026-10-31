@@ -36,8 +36,11 @@ type Need struct {
 	Amount int    `json:"amount,omitempty"`
 }
 
-// StatNeed is a PlayerStatType (by its number) to reach.
+// StatNeed is a PlayerStatType to reach: its number, its enum name as
+// the client spells it (BuiltPieces, DeathByTree) and the value the
+// stat has to reach or pass.
 type StatNeed struct {
-	Stat   int `json:"stat"`
-	Amount int `json:"amount"`
+	Stat   int     `json:"stat"`
+	Key    string  `json:"key,omitempty"`
+	Amount float64 `json:"amount"`
 }

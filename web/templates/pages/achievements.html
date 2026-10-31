@@ -11,6 +11,7 @@
 {{template "needs" (dict "title" "Pick up" "list" .PickedUp)}}
 {{template "needs" (dict "title" "Catch" "list" .Caught)}}
 {{template "needs" (dict "title" "Build" "list" .Pieces)}}
+{{if .Stats}}{{if gt (len .Stats) 14}}<details class="ach-more"><summary><b>Do</b> <span class="count">{{len .Stats}}</span></summary>{{else}}<h3>Do{{if gt (len .Stats) 1}} <span class="count">{{len .Stats}}</span>{{end}}</h3>{{end}}<ul class="ach-stats">{{range .Stats}}<li>{{.}}</li>{{end}}</ul>{{if gt (len .Stats) 14}}</details>{{end}}{{end}}
 {{if .Others}}<h3>Needs first</h3><ul class="chips">{{range .Others}}<li><a class="chip" href="{{url .URL}}">{{if .Icon}}<img class="chip-icon" src="{{url (print "icons/" .Icon ".png")}}" alt="" width="28" height="28">{{else}}<span class="chip-icon chip-blank"></span>{{end}}<span class="chip-name">{{.Name}}</span></a></li>{{end}}</ul>{{end}}
 </section>
 {{end}}

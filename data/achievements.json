@@ -6256,7 +6256,8 @@
   "stats": [
    {
     "stat": 151,
-    "amount": 0
+    "key": "PlayerSpawn",
+    "amount": 1
    }
   ]
  },
@@ -6269,11 +6270,13 @@
   "stats": [
    {
     "stat": 165,
-    "amount": 0
+    "key": "FishCaughtTier4",
+    "amount": 1
    },
    {
     "stat": 166,
-    "amount": 0
+    "key": "FishCaughtTier5",
+    "amount": 1
    }
   ]
  },
@@ -6421,7 +6424,8 @@
   "stats": [
    {
     "stat": 130,
-    "amount": 0
+    "key": "MaxBuildingHeight",
+    "amount": 49
    }
   ]
  },
@@ -6434,7 +6438,8 @@
   "stats": [
    {
     "stat": 131,
-    "amount": 0
+    "key": "MaxBuildingHeightWorld",
+    "amount": 432
    }
   ]
  },
@@ -6448,27 +6453,33 @@
   "stats": [
    {
     "stat": 174,
-    "amount": 0
+    "key": "BuildClusterFloor",
+    "amount": 6
    },
    {
     "stat": 175,
-    "amount": 0
+    "key": "BuildClusterWall",
+    "amount": 8
    },
    {
     "stat": 176,
-    "amount": 0
+    "key": "BuildClusterRoof",
+    "amount": 4
    },
    {
     "stat": 178,
-    "amount": 0
+    "key": "BuildClusterFurniture",
+    "amount": 1
    },
    {
     "stat": 179,
-    "amount": 0
+    "key": "BuildClusterLighting",
+    "amount": 1
    },
    {
     "stat": 181,
-    "amount": 0
+    "key": "BuildClusterStorage",
+    "amount": 1
    }
   ]
  },
@@ -6482,35 +6493,43 @@
   "stats": [
    {
     "stat": 173,
-    "amount": 0
+    "key": "BuildClusterBuilding",
+    "amount": 10
    },
    {
     "stat": 174,
-    "amount": 0
+    "key": "BuildClusterFloor",
+    "amount": 40
    },
    {
     "stat": 175,
-    "amount": 0
+    "key": "BuildClusterWall",
+    "amount": 40
    },
    {
     "stat": 176,
-    "amount": 0
+    "key": "BuildClusterRoof",
+    "amount": 20
    },
    {
     "stat": 177,
-    "amount": 0
+    "key": "BuildClusterArchitecture",
+    "amount": 10
    },
    {
     "stat": 178,
-    "amount": 0
+    "key": "BuildClusterFurniture",
+    "amount": 10
    },
    {
     "stat": 179,
-    "amount": 0
+    "key": "BuildClusterLighting",
+    "amount": 5
    },
    {
     "stat": 180,
-    "amount": 0
+    "key": "BuildClusterDecor",
+    "amount": 5
    }
   ]
  },
@@ -6536,67 +6555,83 @@
   "stats": [
    {
     "stat": 56,
-    "amount": 0
+    "key": "DeathByEnemyHit",
+    "amount": 1
    },
    {
     "stat": 58,
-    "amount": 0
+    "key": "DeathByFall",
+    "amount": 1
    },
    {
     "stat": 59,
-    "amount": 0
+    "key": "DeathByDrowning",
+    "amount": 1
    },
    {
     "stat": 60,
-    "amount": 0
+    "key": "DeathByBurning",
+    "amount": 1
    },
    {
     "stat": 61,
-    "amount": 0
+    "key": "DeathByFreezing",
+    "amount": 1
    },
    {
     "stat": 62,
-    "amount": 0
+    "key": "DeathByPoisoned",
+    "amount": 1
    },
    {
     "stat": 63,
-    "amount": 0
+    "key": "DeathBySmoke",
+    "amount": 1
    },
    {
     "stat": 65,
-    "amount": 0
+    "key": "DeathByEdgeOfWorld",
+    "amount": 1
    },
    {
     "stat": 68,
-    "amount": 0
+    "key": "DeathByTree",
+    "amount": 1
    },
    {
     "stat": 71,
-    "amount": 0
+    "key": "DeathByTurret",
+    "amount": 1
    },
    {
     "stat": 73,
-    "amount": 0
+    "key": "DeathByStalagtite",
+    "amount": 1
    },
    {
     "stat": 105,
-    "amount": 0
+    "key": "DeathByCatapult",
+    "amount": 1
    },
    {
     "stat": 107,
-    "amount": 0
+    "key": "DeathByAshlandsOcean",
+    "amount": 1
    },
    {
     "stat": 108,
-    "amount": 0
+    "key": "DeathByIncinerator",
+    "amount": 1
    },
    {
     "stat": 203,
-    "amount": 0
+    "key": "DeathByDrawBridge",
+    "amount": 1
    },
    {
     "stat": 204,
-    "amount": 0
+    "key": "DeathByAshlandsLava",
+    "amount": 1
    }
   ]
  },
@@ -6610,7 +6645,8 @@
   "stats": [
    {
     "stat": 108,
-    "amount": 0
+    "key": "DeathByIncinerator",
+    "amount": 1
    }
   ]
  },
@@ -6624,7 +6660,8 @@
   "stats": [
    {
     "stat": 68,
-    "amount": 0
+    "key": "DeathByTree",
+    "amount": 1
    }
   ]
  },
@@ -6638,43 +6675,53 @@
   "stats": [
    {
     "stat": 199,
-    "amount": 0
+    "key": "TreeBeech",
+    "amount": 1
    },
    {
     "stat": 200,
-    "amount": 0
+    "key": "TreeBirch",
+    "amount": 1
    },
    {
     "stat": 201,
-    "amount": 0
+    "key": "TreeSnowFir",
+    "amount": 1
    },
    {
     "stat": 202,
-    "amount": 0
+    "key": "TreeSnowPine",
+    "amount": 1
    },
    {
     "stat": 193,
-    "amount": 0
+    "key": "TreeFir",
+    "amount": 1
    },
    {
     "stat": 194,
-    "amount": 0
+    "key": "TreeOak",
+    "amount": 1
    },
    {
     "stat": 195,
-    "amount": 0
+    "key": "TreePine",
+    "amount": 1
    },
    {
     "stat": 196,
-    "amount": 0
+    "key": "TreeAshlands",
+    "amount": 1
    },
    {
     "stat": 197,
-    "amount": 0
+    "key": "TreeYggdrasilShoot",
+    "amount": 1
    },
    {
     "stat": 198,
-    "amount": 0
+    "key": "TreeSwamp",
+    "amount": 1
    }
   ]
  },
@@ -6687,19 +6734,23 @@
   "stats": [
    {
     "stat": 138,
-    "amount": 0
+    "key": "ExploreNorth",
+    "amount": 1
    },
    {
     "stat": 139,
-    "amount": 0
+    "key": "ExploreSouth",
+    "amount": 1
    },
    {
     "stat": 140,
-    "amount": 0
+    "key": "ExploreEast",
+    "amount": 1
    },
    {
     "stat": 141,
-    "amount": 0
+    "key": "ExploreWest",
+    "amount": 1
    }
   ]
  },
@@ -6712,19 +6763,23 @@
   "stats": [
    {
     "stat": 142,
-    "amount": 0
+    "key": "ExploreNorthNoMap",
+    "amount": 1
    },
    {
     "stat": 143,
-    "amount": 0
+    "key": "ExploreSouthNoMap",
+    "amount": 1
    },
    {
     "stat": 144,
-    "amount": 0
+    "key": "ExploreEastNoMap",
+    "amount": 1
    },
    {
     "stat": 145,
-    "amount": 0
+    "key": "ExploreWestNoMap",
+    "amount": 1
    }
   ]
  },
@@ -7098,7 +7153,8 @@
   "stats": [
    {
     "stat": 0,
-    "amount": 0
+    "key": "Deaths",
+    "amount": 1
    }
   ]
  },
@@ -7111,7 +7167,8 @@
   "stats": [
    {
     "stat": 169,
-    "amount": 0
+    "key": "BuiltPiecesNoDebt",
+    "amount": 500
    }
   ]
  },
@@ -7124,7 +7181,8 @@
   "stats": [
    {
     "stat": 132,
-    "amount": 0
+    "key": "MaxComfort",
+    "amount": 20
    }
   ]
  },
@@ -7137,7 +7195,8 @@
   "stats": [
    {
     "stat": 109,
-    "amount": 0
+    "key": "CraftFood",
+    "amount": 100
    }
   ]
  },
@@ -7150,7 +7209,8 @@
   "stats": [
    {
     "stat": 129,
-    "amount": 0
+    "key": "ConsecutiveDaysSurvivedMax",
+    "amount": 30
    }
   ]
  },
@@ -7163,7 +7223,8 @@
   "stats": [
    {
     "stat": 49,
-    "amount": 0
+    "key": "FoodEaten",
+    "amount": 500
    }
   ]
  },
@@ -7245,11 +7306,13 @@
   "stats": [
    {
     "stat": 124,
-    "amount": 0
+    "key": "HarvestBerry",
+    "amount": 250
    },
    {
     "stat": 125,
-    "amount": 0
+    "key": "HarvestMushroom",
+    "amount": 250
    }
   ]
  },
@@ -7262,7 +7325,8 @@
   "stats": [
    {
     "stat": 123,
-    "amount": 0
+    "key": "HarvestCrop",
+    "amount": 500
    }
   ]
  },
@@ -7275,7 +7339,8 @@
   "stats": [
    {
     "stat": 76,
-    "amount": 0
+    "key": "BeesHarvested",
+    "amount": 500
    }
   ]
  },
@@ -7289,7 +7354,8 @@
   "stats": [
    {
     "stat": 136,
-    "amount": 0
+    "key": "LeviathanSink",
+    "amount": 1
    }
   ]
  },
@@ -7302,7 +7368,8 @@
   "stats": [
    {
     "stat": 19,
-    "amount": 0
+    "key": "DistanceSail",
+    "amount": 131946
    }
   ]
  },
@@ -7315,7 +7382,8 @@
   "stats": [
    {
     "stat": 150,
-    "amount": 0
+    "key": "DistanceSailHelm",
+    "amount": 65973
    }
   ]
  },
@@ -7329,7 +7397,8 @@
   "stats": [
    {
     "stat": 133,
-    "amount": 0
+    "key": "TreasureBuriedFound",
+    "amount": 10
    }
   ]
  },
@@ -7342,7 +7411,8 @@
   "stats": [
    {
     "stat": 28,
-    "amount": 0
+    "key": "Tree",
+    "amount": 500
    }
   ]
  },
@@ -8439,7 +8509,8 @@
   "stats": [
    {
     "stat": 146,
-    "amount": 0
+    "key": "BossKillMultiplayer",
+    "amount": 1
    }
   ]
  },
@@ -8453,7 +8524,8 @@
   "stats": [
    {
     "stat": 65,
-    "amount": 0
+    "key": "DeathByEdgeOfWorld",
+    "amount": 1
    }
   ]
  },
@@ -8466,7 +8538,8 @@
   "stats": [
    {
     "stat": 147,
-    "amount": 0
+    "key": "BossKillSolo",
+    "amount": 1
    }
   ]
  }

@@ -185,7 +185,9 @@ The client's achievements live in the `Achievements1` prefab: an
 an icon, flags (secret, difficulty, dynamically populated) and trigger
 lists that name things by localisation token — `$enemy_eikthyr`,
 `$item_trophy_abomination`, `$piece_woodwall` — plus `m_statTrigger`
-entries by PlayerStatType number. `cmd/wiki-data/achievements.go` reads
+entries by PlayerStatType number, kept with the enum's name from the
+decompiled client (`playerstats.go`) and the float threshold.
+`cmd/wiki-data/achievements.go` reads
 them after the creatures, items and pieces, resolving tokens to prefabs,
 into `data/achievements.json`; the site renders one page with an anchor
 per achievement. Running the extractor with `-only` now starts from the

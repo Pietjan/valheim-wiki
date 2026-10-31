@@ -283,6 +283,7 @@ table.stats td:first-child { color: var(--ink-2); }
 .ach h3 { margin: 12px 0 6px; font-size: 16px; }
 .ach-more { margin: 12px 0 0; }
 .ach-more summary { cursor: pointer; font-family: var(--display); font-size: 16px; margin-bottom: 6px; }
+.ach-stats { margin: 0; padding: 0 0 0 18px; color: var(--ink-2); display: grid; gap: 3px; }
 .boss-prep { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; }
 .boss-prep > div { min-width: 0; }
 .boss-prep h3 { margin: 10px 0 4px; }
