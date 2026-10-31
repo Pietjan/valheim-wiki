@@ -35,6 +35,9 @@ async function init(root) {
   const layersEl = $('[data-world-layers]', root);
   const legend = $('[data-world-legend]', root);
   const empty = $('[data-world-empty]', root);
+  const loading = $('[data-world-loading]', root);
+  const loadingText = $('[data-world-loading-text]', root);
+  const loadingFill = $('[data-world-loading-fill]', root);
   const modeButtons = Array.from(root.querySelectorAll('[data-world-mode]'));
   const reliefRow = $('[data-world-relief-row]', root);
   const reliefInput = $('[data-world-relief]', root);
@@ -224,17 +227,23 @@ async function init(root) {
       bar.querySelector('i').style.width = Math.round(frac * 100) + '%';
       status.appendChild(bar);
     }
+    // The overlay on the map, while there is no map yet, says the same.
+    if (!loading.hidden) {
+      loadingText.textContent = text;
+      loadingFill.style.width = Math.round((frac || 0) * 100) + '%';
+    }
   }
 
   function open(seed) {
     empty.hidden = true;
+    loading.hidden = false;
     closePopover();
     handle = World.open(seed);
     map.setWorld(handle);
     if (view3d) view3d.setWorld(handle);
     setStatus('Reading the seed…', 0);
     handle.on('info', info => { setStatus(`World ${info.seedNumber}. Drawing the biomes…`, 0.05); drawLegend(info.landArea); });
-    handle.on('map', () => setStatus('Placing the world…', 0.15));
+    handle.on('map', () => { loading.hidden = true; setStatus('Placing the world…', 0.15); });
     handle.on('progress', p => {
       if (p.phase === 'scene') setStatus('Growing the forest: the biome map, once…');
       else if (p.phase === 'scene-ready') setStatus(`${handle.sites().length} places in this world.`);
@@ -246,7 +255,7 @@ async function init(root) {
       const n = handle.sites().length;
       if (n - lastSites > 400 || n < 200) { lastSites = n; rebuildMarkers(); }
     });
-    handle.on('error', e => setStatus('The seed engine failed: ' + e.message));
+    handle.on('error', e => { loading.hidden = true; setStatus('The seed engine failed: ' + e.message); });
     handle.ready.then(() => {
       rebuildMarkers();
       const n = handle.sites().length;
