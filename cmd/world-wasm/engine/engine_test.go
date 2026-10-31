@@ -47,7 +47,7 @@ func world(t *testing.T) (*World, []RuleReport) {
 
 func TestVersionNamesTheTables(t *testing.T) {
 	v := Version()
-	if !regexp.MustCompile(`^v1-[0-9a-f]{8}$`).MatchString(v) {
+	if !regexp.MustCompile(`^v2-[0-9a-f]{8}$`).MatchString(v) {
 		t.Fatalf("version %q", v)
 	}
 	if Version() != v {
@@ -109,17 +109,20 @@ func TestInfoAndCounts(t *testing.T) {
 	if len(info.LandArea) != len(biomeSlugs) {
 		t.Fatalf("land area for %d biomes, want %d", len(info.LandArea), len(biomeSlugs))
 	}
-	land := 0.0
+	area := 0.0
 	for slug, a := range info.LandArea {
-		if slug != "ocean" && a <= 0 {
-			t.Errorf("%s has no land above the waterline", slug)
+		if a <= 0 {
+			t.Errorf("%s covers no area", slug)
 		}
-		land += a
+		area += a
 	}
-	// A world is a disc of 10.5 km radius, some three hundred and fifty
-	// square kilometres, and most of it is sea.
-	if disc := math.Pi * worldmap.WorldRadius * worldmap.WorldRadius; land <= disc/10 || land >= disc {
-		t.Errorf("%.0f m² of land above the waterline in a %.0f m² world", land, disc)
+	// The biomes tile the world, a disc of 10.5 km radius: some three
+	// hundred and fifty square kilometres, most of it ocean.
+	if disc := math.Pi * worldmap.WorldRadius * worldmap.WorldRadius; math.Abs(area-disc) > disc/20 {
+		t.Errorf("the biomes cover %.0f m² of a %.0f m² world", area, disc)
+	}
+	if info.LandArea["ocean"] < area/5 {
+		t.Errorf("the ocean is %.0f m² of %.0f m²; want at least a fifth", info.LandArea["ocean"], area)
 	}
 
 	if len(report) != wantRules {

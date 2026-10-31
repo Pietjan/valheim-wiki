@@ -50,14 +50,15 @@ async function init(root) {
   const hint = $('[data-world-hint]', root);
 
   // The legend: a swatch and name per biome, and once a world is open its
-  // land above the waterline in km², from the engine's info message.
-  function drawLegend(land) {
+  // area in km² from the engine's info message: the biome's whole footprint
+  // as the game assigns it, the shallows of a swamp included.
+  function drawLegend(area) {
     const km2 = a => { const k = a / 1e6; return k >= 100 ? Math.round(k).toLocaleString() : k.toFixed(1); };
     legend.innerHTML = BIOMES.map(([id, n, c]) => {
-      const a = land && id !== 'ocean' ? land[id] : undefined;
+      const a = area ? area[id] : undefined;
       return `<span><i style="background:${c}"></i>${n}${a != null ? `<b>${km2(a)} km²</b>` : ''}</span>`;
     }).join('');
-    legend.title = land ? 'Land above the waterline, per biome' : '';
+    legend.title = area ? 'Each biome\'s area, water included' : '';
   }
   drawLegend(null);
 

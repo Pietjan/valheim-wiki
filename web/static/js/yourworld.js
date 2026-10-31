@@ -6,6 +6,7 @@
 
 import { World, drawMiniMap } from './world.js';
 
+const SIZEABLE = 250000;   // m²: a patch under a quarter km² is not the headline
 const CAT_COLOR = { boss: '#e06a5a', start: '#ffffff', trader: '#f0bb75', dungeon: '#9fc4ff', camp: '#dfa258', ruin: '#c9c0ad', runestone: '#b7a2d8', other: '#8fb28a' };
 
 let catalogue = null;
@@ -107,26 +108,53 @@ async function render(el, body, hook, handle, seed, base) {
       left.appendChild(p);
     }
   } else if (biomes.length) {
+    // Every patch of each named biome, nearest first. The headline is the
+    // nearest one of some size, since the nearest of all may be a sliver;
+    // one biome lists its nearest patches with their sizes, several list
+    // the sizeable patch nearest for each.
     const found = [];
     for (const b of biomes) {
-      const hit = await nearestBiome(handle, b, start);
-      if (hit) found.push({ biome: b, ...hit });
+      const r = await biomePatches(handle, b, start);
+      if (!r) continue;
+      const head = r.patches.find(pch => pch.area >= SIZEABLE) || r.patches[0];
+      found.push({ biome: b, patches: r.patches, share: r.share, of: r.of, head });
     }
-    found.sort((a, b) => a.d - b.d);
+    found.sort((a, b) => a.head.d - b.head.d);
     if (found.length) {
       const f = found[0];
-      left.innerHTML = `<div class="yw-big">${World.formatDistance(f.d)}</div><div class="yw-sub">to the nearest ${biomeName(f.biome)}, ${f.b} of spawn · ${link(f.x, f.z, 'map')} · ${link3d(f.x, f.z)}</div>`;
+      const head = f.head;
+      const skipped = head !== f.patches[0];
+      left.innerHTML = `<div class="yw-big">${World.formatDistance(head.d)}</div><div class="yw-sub">to the nearest ${biomeName(f.biome)}${skipped ? ' of at least ¼ km²' : ''}, ${head.b} of spawn · ${link(head.x, head.z, 'map')} · ${link3d(head.x, head.z)}</div>`;
       const ul = document.createElement('ul');
       ul.className = 'yw-rows';
-      for (const g of found) {
+      let listed = [];
+      if (found.length === 1 && f.patches.length > 1) {
+        listed = f.patches.slice(0, 5);
+        if (!listed.includes(head)) listed.splice(-1, 1, head);
         const li = document.createElement('li');
-        li.innerHTML = `<span class="k">${biomeName(g.biome)}</span><span class="v">${World.formatDistance(g.d)} ${g.b}${g.share != null ? ` · ${g.share.toFixed(1)}% of the land` : ''}</span>`;
+        li.innerHTML = `<span class="k">${biomeName(f.biome)}</span><span class="v">${f.patches.length} patches${f.share != null ? ` · ${f.share.toFixed(1)}% of ${f.of}` : ''}</span>`;
         ul.appendChild(li);
+        for (const g of listed) {
+          const row = document.createElement('li');
+          row.className = g === head ? 'is-head' : '';
+          row.innerHTML = `<span class="k">${World.formatDistance(g.d)} ${g.b}</span><span class="v">${formatArea(g.area)}${g === head ? '' : ` · ${link(g.x, g.z, 'map')}`}</span>`;
+          ul.appendChild(row);
+        }
+      } else {
+        for (const g of found) {
+          const row = document.createElement('li');
+          row.innerHTML = `<span class="k">${biomeName(g.biome)}</span><span class="v">${World.formatDistance(g.head.d)} ${g.head.b} · ${formatArea(g.head.area)}${g.share != null ? ` · ${g.share.toFixed(1)}% of ${g.of}` : ''}${g === f ? '' : ` · ${link(g.head.x, g.head.z, 'map')}`}</span>`;
+          ul.appendChild(row);
+          listed.push(g.head);
+        }
       }
       left.appendChild(ul);
-      markers.push({ x: f.x, z: f.z, color: '#f0bb75' });
-      focus = { x: (start.x + f.x) / 2, z: (start.z + f.z) / 2, span: Math.max(500, Math.min(8000, f.d * 2.6)) };
-      caption = `the nearest ${biomeName(f.biome)}`;
+      for (const g of listed) markers.push({ x: g.x, z: g.z, color: '#f0bb75', size: g === head ? 7 : 5 });
+      // The crop holds spawn and every listed patch.
+      let minx = start.x, maxx = start.x, minz = start.z, maxz = start.z;
+      for (const g of listed) { minx = Math.min(minx, g.x); maxx = Math.max(maxx, g.x); minz = Math.min(minz, g.z); maxz = Math.max(maxz, g.z); }
+      focus = { x: (minx + maxx) / 2, z: (minz + maxz) / 2, span: Math.max(500, Math.min(8000, 1.6 * Math.max(maxx - minx, maxz - minz))) };
+      caption = listed.length > 1 ? (found.length === 1 ? `the ${listed.length} nearest ${biomeName(f.biome)} patches` : `the nearest of each`) : `the nearest ${biomeName(f.biome)}`;
     } else {
       left.innerHTML = `<p class="yw-empty">None of ${biomes.map(biomeName).join(', ')} in this world.</p>`;
     }
@@ -148,30 +176,69 @@ function biomeName(b) {
   return { 'meadows': 'Meadows', 'black-forest': 'Black Forest', 'swamp': 'Swamp', 'mountain': 'Mountains', 'plains': 'Plains', 'mistlands': 'Mistlands', 'ashlands': 'Ashlands', 'deep-north': 'Deep North', 'ocean': 'Ocean' }[b] || b;
 }
 
-// nearestBiome scans the biome plane in rings around the start for the
-// closest texel of the biome, and counts its share of the land.
-async function nearestBiome(handle, biome, start) {
+// biomePatches flood-fills the biome plane into the connected patches of
+// one biome (four-way, so two patches touching at a corner are two), each
+// with its area and its nearest texel to the start, nearest first; and the
+// biome's share of the land.
+async function biomePatches(handle, biome, start) {
   const map = handle.map;
   if (!map) return null;
   const idx = { meadows: 1, swamp: 2, mountain: 3, 'black-forest': 4, plains: 5, ashlands: 6, 'deep-north': 7, ocean: 9, mistlands: 10 }[biome];
   if (!idx) return null;
   const size = map.size, R = handle.info.radius;
-  const texel = 2 * R / size;
-  let best = null, count = 0, land = 0;
+  const texel = 2 * R / size, texelArea = texel * texel;
+  const worldR2 = (handle.info.worldRadius || 10500) ** 2;   // the world's edge; the plane runs past it
+  const biomesAt = map.biomes;
+  const n = size * size;
+  const seen = new Uint8Array(n);
+  const stack = new Int32Array(n);
   const sx = (start.x + R) / texel, sz = (R - start.z) / texel;
-  for (let y = 0; y < size; y++) {
-    for (let x = 0; x < size; x++) {
-      const b = map.biomes[y * size + x];
-      if (b === 0) continue;
-      if (b !== 9) land++;
-      if (b !== idx) continue;
-      count++;
+  const cx = size / 2, cz = size / 2;
+  const inWorld = (x, y) => { const dx = x + 0.5 - cx, dz = y + 0.5 - cz; return (dx * dx + dz * dz) * texelArea <= worldR2; };
+  const patches = [];
+  let land = 0, world = 0, count = 0;
+  for (let i = 0; i < n; i++) {
+    const b = biomesAt[i];
+    if (b === 0) continue;
+    const x0 = i % size, y0 = (i - x0) / size;
+    if (inWorld(x0, y0)) { world++; if (b !== 9) land++; }
+    if (b !== idx || seen[i]) continue;
+    // A new patch: walk it, counting the area inside the world's edge.
+    let top = 0, area = 0, best = -1, bestD2 = Infinity;
+    stack[top++] = i; seen[i] = 1;
+    while (top) {
+      const j = stack[--top];
+      const x = j % size, y = (j - x) / size;
+      if (inWorld(x, y)) area++;
       const dx = x + 0.5 - sx, dz = y + 0.5 - sz;
       const d2 = dx * dx + dz * dz;
-      if (!best || d2 < best.d2) best = { d2, x, y };
+      if (d2 < bestD2) { bestD2 = d2; best = j; }
+      if (x > 0 && !seen[j - 1] && biomesAt[j - 1] === idx) { seen[j - 1] = 1; stack[top++] = j - 1; }
+      if (x < size - 1 && !seen[j + 1] && biomesAt[j + 1] === idx) { seen[j + 1] = 1; stack[top++] = j + 1; }
+      if (y > 0 && !seen[j - size] && biomesAt[j - size] === idx) { seen[j - size] = 1; stack[top++] = j - size; }
+      if (y < size - 1 && !seen[j + size] && biomesAt[j + size] === idx) { seen[j + size] = 1; stack[top++] = j + size; }
     }
+    if (!area) continue;   // wholly past the edge of the world
+    count += area;
+    const bx = best % size, by = (best - bx) / size;
+    const wx = (bx + 0.5) * texel - R, wz = R - (by + 0.5) * texel;
+    patches.push({ x: wx, z: wz, d: Math.sqrt(bestD2) * texel, b: World.bearing(start.x, start.z, wx, wz), area: area * texelArea });
   }
-  if (!best) return null;
-  const wx = (best.x + 0.5) * texel - R, wz = R - (best.y + 0.5) * texel;
-  return { x: wx, z: wz, d: Math.sqrt(best.d2) * texel, b: World.bearing(start.x, start.z, wx, wz), share: land ? 100 * count / land : null };
+  if (!patches.length) return null;
+  patches.sort((a, b) => a.d - b.d);
+  // The share: of the land for a land biome, of the whole world for the
+  // ocean; both the biome's footprint as the game assigns it.
+  const of = idx === 9 ? 'the world' : 'the land';
+  const base = idx === 9 ? world : land;
+  const share = base ? 100 * count / base : null;
+  return { patches, share, of };
+}
+
+// formatArea is square kilometres to a sensible precision.
+function formatArea(m2) {
+  const k = m2 / 1e6;
+  if (k >= 100) return `${Math.round(k)} km²`;
+  if (k >= 1) return `${k.toFixed(1)} km²`;
+  if (k >= 0.01) return `${k.toFixed(2)} km²`;
+  return '<0.01 km²';
 }

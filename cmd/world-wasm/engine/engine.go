@@ -38,7 +38,7 @@ func Version() string {
 		h.Write([]byte(t))
 		h.Write([]byte{0})
 	}
-	return fmt.Sprintf("v1-%08x", uint32(h.Sum64()))
+	return fmt.Sprintf("v2-%08x", uint32(h.Sum64()))
 }
 
 // biomeSlugs are the biome slugs the wiki uses, model.Biomes, by the
@@ -83,10 +83,11 @@ type Info struct {
 	// biome map is built.
 	SectorCount, AltSectorCount int
 
-	// LandArea is each biome's area above the waterline in square metres,
-	// by slug: its points on the biome map at or over sea level, the list
-	// the game draws location zones from, times the twelve-metre cell. Nil
-	// until the biome map is built.
+	// LandArea is each biome's area in square metres, by slug: every point
+	// on the biome map inside the world's edge the game assigns to it,
+	// under water or not, since a swamp is Swamp whether its ground sits at
+	// 28 or 32 metres, times the twelve-metre cell. Nil until the biome map
+	// is built.
 	LandArea map[string]float64
 }
 
@@ -243,8 +244,14 @@ func (w *World) Info() Info {
 		}
 		info.LandArea = make(map[string]float64, len(biomeSlugs))
 		for b, slug := range biomeSlugs {
-			_, above := w.m.Points(b)
-			info.LandArea[slug] = float64(len(above)) * worldgen.BiomeMapCell * worldgen.BiomeMapCell
+			all, _ := w.m.Points(b)
+			n := 0
+			for _, p := range all {
+				if x, z := p.World(); math.Hypot(float64(x), float64(z)) <= worldmap.WorldRadius {
+					n++
+				}
+			}
+			info.LandArea[slug] = float64(n) * worldgen.BiomeMapCell * worldgen.BiomeMapCell
 		}
 	}
 	return info

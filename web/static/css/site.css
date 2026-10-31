@@ -361,6 +361,7 @@ input::placeholder { color: var(--ink-3); }
 .yw-rows li:last-child { border-bottom: 0; }
 .yw-rows .k { color: var(--night-ink-2); }
 .yw-rows .v { text-align: right; font-variant-numeric: tabular-nums; }
+.yw-rows li.is-head .k { color: var(--night-ink); }
 .yw-big { font-family: var(--display); font-size: 34px; line-height: 1; color: #fff; }
 .yw-sub { color: var(--night-ink-2); font-size: 14px; margin: 2px 0 10px; }
 .yw-progress { color: var(--night-ink-2); font-size: 14px; }

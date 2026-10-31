@@ -399,8 +399,9 @@ export function clearSeed() {
 
 // drawMiniMap paints the biome plane in the flat palette onto a 2D canvas:
 // span metres across the canvas's width centred on cx, cz (the whole world
-// by default), water where the height is under sea level as the ocean colour
-// darkened by depth, then the markers as dots. Returns false until the map
+// by default), water as the game's map shader draws it — under 29.5 m, the
+// shallows light and the deep blue only twenty metres down, so a swamp's
+// pools read as shallows and not as sea — then the markers as dots. Returns false until the map
 // has arrived. The canvas's own width and height are the pixels drawn.
 export function drawMiniMap(canvas, handle, { cx = 0, cz = 0, span = null, markers = [], dotRadius = 4 } = {}) {
   const map = handle && handle.map;
@@ -423,6 +424,9 @@ export function drawMiniMap(canvas, handle, { cx = 0, cz = 0, span = null, marke
   const byIndex = [];
   for (let i = 0; i < 16; i++) byIndex[i] = rgb[BIOME_SLUGS[i]] || rgb.none;
   const ocean = rgb.ocean, none = rgb.none;
+  // The shallows: the ocean colour lifted by the ratio of the game's
+  // _WaterColor to its _WaterColorDeep.
+  const shallow = [Math.min(255, ocean[0] * 2.46), Math.min(255, ocean[1] * 1.76), Math.min(255, ocean[2] * 1.43)];
   const left = cx - span / 2, top = cz + (H * mpp) / 2;
   const scale = n / (2 * R);
   for (let py = 0; py < H; py++) {
@@ -440,11 +444,13 @@ export function drawMiniMap(canvas, handle, { cx = 0, cz = 0, span = null, marke
           c = none;
         } else {
           const h = map.heights[i] / hScale - hOff;
-          if (h < water) {
-            // The sea, darker the deeper: full colour at the shore, 45% at
-            // sixty metres down.
-            const k = 1 - 0.55 * Math.min(1, (water - h) / 60);
-            r = ocean[0] * k; g = ocean[1] * k; b = ocean[2] * k;
+          if (h < water - 0.5) {
+            // The game's shader: water under 29.5 m, mixed from deep to
+            // shallow over the heights 9.5 to 29.5.
+            const t = Math.max(0, Math.min(1, (h - (water - 20.5)) * 0.05));
+            r = ocean[0] + (shallow[0] - ocean[0]) * t;
+            g = ocean[1] + (shallow[1] - ocean[1]) * t;
+            b = ocean[2] + (shallow[2] - ocean[2]) * t;
             c = null;
           } else {
             c = byIndex[bi];
