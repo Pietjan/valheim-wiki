@@ -82,6 +82,12 @@ type Info struct {
 	// AltSectorCount how many of them carry an alt biome. Zero until the
 	// biome map is built.
 	SectorCount, AltSectorCount int
+
+	// LandArea is each biome's area above the waterline in square metres,
+	// by slug: its points on the biome map at or over sea level, the list
+	// the game draws location zones from, times the twelve-metre cell. Nil
+	// until the biome map is built.
+	LandArea map[string]float64
 }
 
 // Map is the raster as the painter uploads it: row zero north, Size texels
@@ -234,6 +240,11 @@ func (w *World) Info() Info {
 			if len(s.AltBiomes) > 0 {
 				info.AltSectorCount++
 			}
+		}
+		info.LandArea = make(map[string]float64, len(biomeSlugs))
+		for b, slug := range biomeSlugs {
+			_, above := w.m.Points(b)
+			info.LandArea[slug] = float64(len(above)) * worldgen.BiomeMapCell * worldgen.BiomeMapCell
 		}
 	}
 	return info

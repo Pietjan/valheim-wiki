@@ -493,6 +493,7 @@ dialog::backdrop { background: rgba(20, 12, 6, .55); backdrop-filter: blur(3px);
 .world-legend { position: absolute; right: 14px; bottom: 14px; z-index: 5; display: flex; flex-wrap: wrap; gap: 4px 10px; max-width: 420px; font-size: 12px; }
 .world-legend span { display: inline-flex; align-items: center; gap: 5px; color: var(--night-ink-2); }
 .world-legend i { width: 10px; height: 10px; border-radius: 2px; }
+.world-legend b { font-weight: 500; color: var(--night-ink); font-variant-numeric: tabular-nums; }
 .world-pop { position: absolute; z-index: 6; min-width: 220px; max-width: 300px; transform: translate(-50%, calc(-100% - 14px)); pointer-events: auto; }
 .world-pop::after { content: ""; position: absolute; left: 50%; bottom: -7px; width: 12px; height: 12px; background: inherit; border-right: 1px solid rgba(223,162,88,.3); border-bottom: 1px solid rgba(223,162,88,.3); transform: translateX(-50%) rotate(45deg); }
 .world-pop .close { position: absolute; right: 8px; top: 6px; background: none; border: 0; color: var(--night-ink-2); font-size: 18px; cursor: pointer; }

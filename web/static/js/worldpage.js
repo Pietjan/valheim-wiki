@@ -44,7 +44,17 @@ async function init(root) {
   const compass = $('[data-world-compass]', root);
   const hint = $('[data-world-hint]', root);
 
-  legend.innerHTML = BIOMES.map(([, n, c]) => `<span><i style="background:${c}"></i>${n}</span>`).join('');
+  // The legend: a swatch and name per biome, and once a world is open its
+  // land above the waterline in km², from the engine's info message.
+  function drawLegend(land) {
+    const km2 = a => { const k = a / 1e6; return k >= 100 ? Math.round(k).toLocaleString() : k.toFixed(1); };
+    legend.innerHTML = BIOMES.map(([id, n, c]) => {
+      const a = land && id !== 'ocean' ? land[id] : undefined;
+      return `<span><i style="background:${c}"></i>${n}${a != null ? `<b>${km2(a)} km²</b>` : ''}</span>`;
+    }).join('');
+    legend.title = land ? 'Land above the waterline, per biome' : '';
+  }
+  drawLegend(null);
 
   const params = new URLSearchParams(location.search);
   const map = new WorldMap(canvas, { assetsBase: base + 'static/' });
@@ -223,7 +233,7 @@ async function init(root) {
     map.setWorld(handle);
     if (view3d) view3d.setWorld(handle);
     setStatus('Reading the seed…', 0);
-    handle.on('info', info => { setStatus(`World ${info.seedNumber}. Drawing the biomes…`, 0.05); });
+    handle.on('info', info => { setStatus(`World ${info.seedNumber}. Drawing the biomes…`, 0.05); drawLegend(info.landArea); });
     handle.on('map', () => setStatus('Placing the world…', 0.15));
     handle.on('progress', p => {
       if (p.phase === 'scene') setStatus('Growing the forest: the biome map, once…');

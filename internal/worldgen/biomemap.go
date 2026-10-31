@@ -31,6 +31,10 @@ const biomeMapSize = 2048
 // twelve metres, AltBiomeWorldData.c_textureSize.
 const BiomeMapSize = biomeMapSize
 
+// BiomeMapCell is a point's cell width in metres: the map's twelve metres,
+// so a biome's area is its point count times the cell squared.
+const BiomeMapCell = 12.0
+
 // mapToWorld is AltBiomeWorldData.MapSpaceToWorldSpace: 12 m per point, the
 // grid centred on the world, sampled at pixel centres.
 func mapToWorld(x float32) float32 { return (x-1024)*12 + 6 }

@@ -106,6 +106,21 @@ func TestInfoAndCounts(t *testing.T) {
 			t.Errorf("palette for %v is not worldmap's", biome)
 		}
 	}
+	if len(info.LandArea) != len(biomeSlugs) {
+		t.Fatalf("land area for %d biomes, want %d", len(info.LandArea), len(biomeSlugs))
+	}
+	land := 0.0
+	for slug, a := range info.LandArea {
+		if slug != "ocean" && a <= 0 {
+			t.Errorf("%s has no land above the waterline", slug)
+		}
+		land += a
+	}
+	// A world is a disc of 10.5 km radius, some three hundred and fifty
+	// square kilometres, and most of it is sea.
+	if disc := math.Pi * worldmap.WorldRadius * worldmap.WorldRadius; land <= disc/10 || land >= disc {
+		t.Errorf("%.0f m² of land above the waterline in a %.0f m² world", land, disc)
+	}
 
 	if len(report) != wantRules {
 		t.Fatalf("%d rules reported, want %d", len(report), wantRules)

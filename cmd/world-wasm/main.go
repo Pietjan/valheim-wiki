@@ -173,6 +173,11 @@ func open(_ js.Value, args []js.Value) any {
 	m["palette"] = bytesJS(info.Palette[:])
 	m["sectorCount"] = info.SectorCount
 	m["altSectorCount"] = info.AltSectorCount
+	land := map[string]any{}
+	for slug, a := range info.LandArea {
+		land[slug] = a
+	}
+	m["landArea"] = land
 	emit(m)
 
 	progress("map", 0, 0, 0)
