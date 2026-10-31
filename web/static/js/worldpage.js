@@ -12,11 +12,11 @@ const base = document.documentElement.dataset.base || '/';
 const $ = (sel, el = document) => el.querySelector(sel);
 
 const CATS = [
-  { id: 'start', name: 'Spawn', color: '#ffffff', size: 34, on: true },
-  { id: 'boss', name: 'Forsaken altars', color: '#e06a5a', size: 36, on: true },
-  { id: 'trader', name: 'Traders', color: '#f0bb75', size: 32, on: true },
-  { id: 'dungeon', name: 'Dungeons and caves', color: '#9fc4ff', size: 26, on: true },
-  { id: 'camp', name: 'Camps and villages', color: '#dfa258', size: 26, on: true },
+  { id: 'start', name: 'Spawn', color: '#ffffff', size: 34, on: false },
+  { id: 'boss', name: 'Forsaken altars', color: '#e06a5a', size: 36, on: false },
+  { id: 'trader', name: 'Traders', color: '#f0bb75', size: 32, on: false },
+  { id: 'dungeon', name: 'Dungeons and caves', color: '#9fc4ff', size: 26, on: false },
+  { id: 'camp', name: 'Camps and villages', color: '#dfa258', size: 26, on: false },
   { id: 'ruin', name: 'Ruins with loot', color: '#c9c0ad', size: 22, on: false },
   { id: 'runestone', name: 'Runestones', color: '#b7a2d8', size: 20, on: false },
   { id: 'other', name: 'Everything else', color: '#8fb28a', size: 18, on: false },
