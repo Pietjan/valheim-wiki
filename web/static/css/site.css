@@ -177,9 +177,6 @@ code { font: 14px/1.4 var(--mono); background: var(--paper-3); padding: 1px 5px;
 /* ---------- page frame ---------- */
 .page { flex: 1; width: 100%; max-width: var(--content); margin: 0 auto; padding: 28px var(--gutter) 60px; }
 .page-world { max-width: none; padding: 0; }
-.foot { border-top: 1px solid var(--line); color: var(--ink-3); font-size: 14px; }
-.foot-inner { max-width: var(--content); margin: 0 auto; padding: 26px var(--gutter) 34px; }
-.foot p { margin: 0 0 6px; }
 
 .crumbs { font-size: 14px; color: var(--ink-3); margin: 0 0 14px; display: flex; flex-wrap: wrap; gap: 6px; }
 .crumbs a { color: var(--ink-2); }
@@ -571,4 +568,4 @@ dialog::backdrop { background: rgba(20, 12, 6, .55); backdrop-filter: blur(3px);
 }
 
 /* print */
-@media print { .top, .foot, .yw, dialog { display: none !important; } .cols { grid-template-columns: 1fr; } }
+@media print { .top, .yw, dialog { display: none !important; } .cols { grid-template-columns: 1fr; } }

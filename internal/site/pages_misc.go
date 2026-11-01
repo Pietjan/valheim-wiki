@@ -154,10 +154,6 @@ func (s *Site) pageSearch() error {
 	return s.write("search/", "search", &Page{Site: s, Title: "Search", Description: "Search the wiki.", Section: "search", Path: "search/"})
 }
 
-func (s *Site) pageAbout() error {
-	return s.write("about/", "about", &Page{Site: s, Title: "About", Description: "Where the data comes from and how the site is built.", Section: "about", Path: "about/"})
-}
-
 // SearchEntry is one row of search.json.
 type SearchEntry struct {
 	N string `json:"n"`           // name

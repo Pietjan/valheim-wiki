@@ -92,7 +92,6 @@ func Build(cfg Config) error {
 		{"achievements", s.pagesAchievements},
 		{"world", s.pageWorld},
 		{"search", s.pageSearch},
-		{"about", s.pageAbout},
 		{"data", s.writeSiteData},
 		{"sitemap", s.writeSitemap},
 	}

@@ -52,12 +52,6 @@
 <main id="main" class="page page-{{.Section}}">
 {{template "content" .}}
 </main>
-<footer class="foot">
-  <div class="foot-inner">
-    <p><strong>Vegvísir</strong> is an unofficial Valheim wiki generated from the game's own data, version {{.Site.DB.Meta.Game}}{{if .Site.DB.Meta.Extracted}} (read {{.Site.DB.Meta.Extracted}}){{end}}. Valheim and its art are © Iron Gate Studio; this site is fan-made and free.</p>
-    <p><a href="{{url "about/"}}">About the data</a> · <a href="{{url "search/"}}">Search</a> · <a href="https://github.com/Pietjan/valheim-wiki">Source</a></p>
-  </div>
-</footer>
 <dialog class="search-dialog" data-search aria-label="Search the wiki">
   <form class="search-form" method="dialog">
     <svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#search"/></svg>
