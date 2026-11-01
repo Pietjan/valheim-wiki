@@ -47,6 +47,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.33000001311302185,
   "attacks": [
    {
@@ -176,6 +177,7 @@
    "smoke",
    "tar"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -330,6 +332,7 @@
    "smoke",
    "tar"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "drops": [
    {
@@ -431,6 +434,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "aspect_bonemass_attack_aoe",
@@ -512,6 +516,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "aspect_Eikthyr_antler",
@@ -606,6 +611,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "aspect_gd_king_rootspawn",
@@ -700,6 +706,7 @@
    "water",
    "fire"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "aspect_Fader_Fissure",
@@ -866,6 +873,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "aspect_dragon_bite",
@@ -997,6 +1005,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "aspect_SeekerQueen_Rush",
@@ -1127,6 +1136,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "tentaroot_attack",
@@ -1197,6 +1207,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "aspect_GoblinKing_Beam",
@@ -1301,6 +1312,7 @@
    "water",
    "fire"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -1477,6 +1489,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -1567,6 +1580,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -1648,6 +1662,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -1832,6 +1847,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -2013,6 +2029,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -2178,6 +2195,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "blob_attack_aoe",
@@ -2276,6 +2294,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "blob_attack_aoe",
@@ -2371,6 +2390,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "blobelite_attack_aoe",
@@ -2484,6 +2504,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "blob_frost_attack_aoe",
@@ -2576,6 +2597,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "drops": [
    {
     "item": "ProustitePowder",
@@ -2669,6 +2691,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "blobmork_attack_aoe",
@@ -2771,6 +2794,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "drops": [
    {
     "item": "OozeMork",
@@ -2840,6 +2864,7 @@
    "smoke",
    "tar"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "blobtar_attack",
@@ -2918,6 +2943,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -3026,6 +3052,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "ai": {
    "kind": "AnimalAI",
    "viewRange": 20,
@@ -3070,6 +3097,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -3155,6 +3183,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -3264,6 +3293,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "bonemass_attack_aoe",
@@ -3385,6 +3415,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "BonemawSerpent_spit",
@@ -3513,6 +3544,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -3635,6 +3667,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -3735,6 +3768,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -3846,6 +3880,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -3997,6 +4032,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -4117,6 +4153,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -4237,6 +4274,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -4347,6 +4385,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -4443,6 +4482,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "drops": [
    {
     "item": "ChickenMeat",
@@ -4510,6 +4550,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -4586,6 +4627,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "drops": [
    {
     "item": "DeerMeat",
@@ -4654,6 +4696,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "excluded",
   "drops": [
    {
     "item": "DeerMeat",
@@ -4725,6 +4768,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "dragon_bite",
@@ -4877,6 +4921,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -4984,6 +5029,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -5066,6 +5112,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -5146,6 +5193,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -5226,6 +5274,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -5307,6 +5356,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -5404,6 +5454,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -5528,6 +5579,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -5653,6 +5705,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -5799,6 +5852,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -6042,6 +6096,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -6185,6 +6240,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -6328,6 +6384,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -6448,6 +6505,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "excluded",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -6616,6 +6674,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "Eikthyr_antler",
@@ -6731,6 +6790,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -6849,6 +6909,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -6935,6 +6996,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -7062,6 +7124,7 @@
    "water",
    "fire"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "Fader_Fissure",
@@ -7309,6 +7372,7 @@
    "water",
    "fire"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -7448,6 +7512,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.4000000059604645,
   "attacks": [
    {
@@ -7715,6 +7780,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -7811,6 +7877,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -7920,6 +7987,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -8043,6 +8111,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -8676,6 +8745,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "excluded",
   "staggerDamageFactor": 0.5,
   "drops": [
    {
@@ -8746,6 +8816,7 @@
    "smoke",
    "tar"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "FrozenKing_ChainSlam_L",
@@ -8935,6 +9006,7 @@
    "smoke",
    "tar"
   ],
+  "killedForAchievements": "included",
   "ai": {
    "kind": "MonsterAI",
    "viewRange": 100,
@@ -8995,6 +9067,7 @@
    "smoke",
    "tar"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "FrozenKing_P3_ChainSlam_L_double",
@@ -9188,6 +9261,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "excluded",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -9272,6 +9346,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -9362,6 +9437,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "excluded",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -9444,6 +9520,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "excluded",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -9525,6 +9602,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -9605,6 +9683,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "gjall_attack_spit",
@@ -9709,6 +9788,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -9853,6 +9933,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -9949,6 +10030,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -10113,6 +10195,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -10253,6 +10336,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -10392,6 +10476,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "excluded",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -10493,6 +10578,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -10641,6 +10727,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "GoblinKing_Beam",
@@ -10750,6 +10837,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -10929,6 +11017,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -11046,6 +11135,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -11153,6 +11243,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "excluded",
   "drops": [
    {
     "item": "GemstoneBlue",
@@ -11225,6 +11316,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -11349,6 +11441,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -11465,6 +11558,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -11596,6 +11690,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.33000001311302185,
   "attacks": [
    {
@@ -11728,6 +11823,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.33000001311302185,
   "attacks": [
    {
@@ -11866,6 +11962,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -11936,6 +12033,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "drops": [
    {
     "item": "HareMeat",
@@ -12012,6 +12110,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "hatchling_spit_cold",
@@ -12092,6 +12191,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -12211,6 +12311,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "excluded",
   "attacks": [
    {
     "item": "hive_attack_aoe",
@@ -12345,6 +12446,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -12615,6 +12717,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -12827,6 +12930,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -13025,6 +13129,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "Leech_BiteAttack",
@@ -13112,6 +13217,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "Leech_BiteAttack",
@@ -13202,6 +13308,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -13337,6 +13444,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "drops": [
    {
@@ -13391,6 +13499,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "excluded",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -13464,6 +13573,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -13474,7 +13584,7 @@
     },
     "knockback": 150,
     "range": 5,
-    "reach": 5.5,
+    "reach": 4,
     "interval": 4,
     "type": "Horizontal"
    },
@@ -13486,7 +13596,7 @@
     },
     "knockback": 30,
     "range": 5,
-    "reach": 5.5,
+    "reach": 4,
     "interval": 4,
     "type": "Vertical"
    },
@@ -13498,7 +13608,7 @@
     },
     "knockback": 60,
     "range": 5,
-    "reach": 5.5,
+    "reach": 4,
     "interval": 4,
     "type": "Horizontal"
    }
@@ -13615,6 +13725,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -13625,7 +13736,7 @@
     },
     "knockback": 150,
     "range": 5,
-    "reach": 5.5,
+    "reach": 4,
     "interval": 4,
     "type": "Horizontal"
    },
@@ -13637,7 +13748,7 @@
     },
     "knockback": 30,
     "range": 5,
-    "reach": 5.5,
+    "reach": 4,
     "interval": 4,
     "type": "Vertical"
    }
@@ -13704,6 +13815,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -13714,7 +13826,7 @@
     },
     "knockback": 30,
     "range": 5,
-    "reach": 5.5,
+    "reach": 4,
     "interval": 4,
     "type": "Vertical"
    },
@@ -13726,7 +13838,7 @@
     },
     "knockback": 150,
     "range": 5,
-    "reach": 5.5,
+    "reach": 4,
     "interval": 4,
     "type": "Horizontal"
    },
@@ -13738,7 +13850,7 @@
     },
     "knockback": 60,
     "range": 5,
-    "reach": 5.5,
+    "reach": 4,
     "interval": 4,
     "type": "Horizontal"
    }
@@ -13816,6 +13928,7 @@
    "water",
    "fire"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -14026,6 +14139,7 @@
    "water",
    "fire"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -14231,6 +14345,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -14314,6 +14429,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "drops": [
    {
     "item": "SealHide",
@@ -14381,6 +14497,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "drops": [
    {
     "item": "SealBlubber",
@@ -14444,6 +14561,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -14638,6 +14756,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -14719,6 +14838,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -14865,6 +14985,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "SeekerQueen_Teleport",
@@ -15055,6 +15176,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "Serpent_attack",
@@ -15182,6 +15304,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "excluded",
   "staggerDamageFactor": 0.4000000059604645,
   "attacks": [
    {
@@ -15363,6 +15486,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -15482,6 +15606,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -15589,6 +15714,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -15798,6 +15924,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -15908,6 +16035,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -16006,6 +16134,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -16118,6 +16247,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -16214,6 +16344,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -16327,6 +16458,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -16426,6 +16558,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -16521,6 +16654,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -16613,6 +16747,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -16729,6 +16864,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -16828,6 +16964,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -16946,6 +17083,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.33000001311302185,
   "attacks": [
    {
@@ -17107,6 +17245,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -17196,6 +17335,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "excluded",
   "attacks": [
    {
     "item": "tendril_attack",
@@ -17284,6 +17424,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "excluded",
   "attacks": [
    {
     "item": "tentaroot_attack",
@@ -17351,6 +17492,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "tentaroot_attack",
@@ -17418,6 +17560,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "excluded",
   "attacks": [
    {
     "item": "tentaroot_attack",
@@ -17510,6 +17653,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "excluded",
   "attacks": [
    {
     "item": "gjall_attack_spit",
@@ -17599,6 +17743,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -17669,6 +17814,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "excluded",
   "attacks": [
    {
     "item": "TrainingDummy_attack",
@@ -17765,6 +17911,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -17957,6 +18104,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -17972,7 +18120,7 @@
     "reach": 15,
     "interval": 4,
     "type": "Horizontal",
-    "toolTier": 6
+    "toolTier": 4
    },
    {
     "item": "trollsnow_groundslam",
@@ -18017,7 +18165,7 @@
     "reach": 15,
     "interval": 4,
     "type": "Horizontal",
-    "toolTier": 6
+    "toolTier": 4
    },
    {
     "item": "trollsnow_groundslam_r",
@@ -18100,6 +18248,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -18246,6 +18395,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -18419,6 +18569,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -18532,6 +18683,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.30000001192092896,
   "attacks": [
    {
@@ -18712,6 +18864,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -18802,6 +18955,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -18943,6 +19097,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "ai": {
    "kind": "AnimalAI",
@@ -18986,6 +19141,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -19053,14 +19209,6 @@
    "skill": "BloodMagic",
    "unsummonDistance": 150
   },
-  "procreation": {
-   "offspring": "Wolf_cub",
-   "maxCreatures": 4,
-   "pregnancyChance": 0.33000001311302185,
-   "pregnancyDuration": 60,
-   "requiredLovePoints": 3,
-   "partnerRange": 3
-  },
   "summoned": true,
   "defaultItems": [
    "SpiritWolf_Attack1",
@@ -19120,6 +19268,7 @@
   "tolerates": [
    "water"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -19210,6 +19359,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 0.5,
   "attacks": [
    {
@@ -19302,6 +19452,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "attacks": [
    {
     "item": "gd_king_rootspawn",
@@ -19393,6 +19544,7 @@
    "water",
    "smoke"
   ],
+  "killedForAchievements": "included",
   "staggerDamageFactor": 100,
   "attacks": [
    {
@@ -19490,6 +19642,7 @@
    "fire",
    "smoke"
   ],
+  "killedForAchievements": "excluded",
   "attacks": [
    {
     "item": "staff_greenroots_tentaroot_attack",

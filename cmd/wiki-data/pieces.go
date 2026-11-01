@@ -56,6 +56,7 @@ func (x *X) readPiece(cab, prefab string, g assets.Ref, t map[string]any) *model
 		Description: x.Text(S(t, "m_description")),
 		Category:    pieceCategoryName(I(t, "m_category")),
 		Usage:       pieceUsageTags(I(t, "m_usage")),
+		RepairPiece: B(t, "m_repairPiece"),
 		Enabled:     B(t, "m_enabled"),
 		DLC:         S(t, "m_dlc"),
 		Station:     x.GameObjectName(cab, t["m_craftingStation"]),
@@ -279,7 +280,9 @@ func (x *X) readPieceTables(category map[string]int) {
 			return
 		}
 		seen[root] = true
-		pt := &model.PieceTable{Prefab: root, Tool: tool[root]}
+		// m_canRemovePieces defaults to true in the game's code, so a tree
+		// without the field means true.
+		pt := &model.PieceTable{Prefab: root, Tool: tool[root], CanRemovePieces: !Has(t, "m_canRemovePieces") || B(t, "m_canRemovePieces")}
 		for _, p := range L(t, "m_pieces") {
 			if n := x.GameObjectName(cab, p); n != "" {
 				pt.Pieces = append(pt.Pieces, n)

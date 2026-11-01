@@ -27,7 +27,11 @@ type Creature struct {
 	Flying    bool        `json:"flying,omitempty"`
 	CanSwim   bool        `json:"canSwim,omitempty"`
 	Tolerates []string    `json:"tolerates,omitempty"` // water, fire, smoke, tar
-	Stagger   float64     `json:"staggerDamageFactor,omitempty"`
+	// KilledForAchievements is the game's AchievementInclusion mark on the
+	// character: included, excluded or undefined. The Hunter counts the
+	// included ones.
+	KilledForAchievements string  `json:"killedForAchievements,omitempty"`
+	Stagger               float64 `json:"staggerDamageFactor,omitempty"`
 
 	Attacks []CreatureAttack `json:"attacks,omitempty"`
 	Drops   []Drop           `json:"drops,omitempty"`

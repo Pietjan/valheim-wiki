@@ -1,8 +1,6 @@
 package site
 
 import (
-	"sort"
-
 	"github.com/pietjan/valheim-wiki/internal/model"
 )
 
@@ -35,12 +33,9 @@ type StatLine struct {
 }
 
 // NeedView is one need with the thing it names, when the wiki has it.
-// Extra marks a thing the data has that the list in the game's files
-// lacks, added to a dynamic achievement's list.
 type NeedView struct {
 	Need  model.Need
 	Thing *Thing
-	Extra bool
 }
 
 // resolveNeeds finds the thing each need names: the prefab the extractor
@@ -105,19 +100,10 @@ func (s *Site) pagesAchievements() error {
 			v.PickedUp = known(v.PickedUp)
 			v.Pieces = known(v.Pieces)
 			v.Kills = known(v.Kills)
-			// The list in the files is a snapshot, and the rule the game
-			// fills it by is in its code, which the wiki does not read. Where
-			// the kind is plain — every food, every trophy — the things the
-			// data has that the snapshot lacks are added, marked.
-			v.DynamicNote = "The game fills this list itself when it runs, by a rule the wiki cannot read. Shown is the list in the game's files, which can lag behind new content."
-			switch a.ID {
-			case "AllFoodEaten":
-				v.Eaten = s.withExtras(v.Eaten, func(it *model.Item) bool { return it.Food > 0 || it.FoodStamina > 0 || it.FoodEitr > 0 })
-				v.DynamicNote += " Every food in the data it lacks is added and marked."
-			case "FindAllTrophies":
-				v.PickedUp = s.withExtras(v.PickedUp, func(it *model.Item) bool { return it.Type == "Trophy" })
-				v.DynamicNote += " Every trophy in the data it lacks is added and marked."
-			}
+			// The lists are filled as the game fills them when it runs, by
+			// the extractor (see populateDynamic in cmd/wiki-data); the
+			// snapshot the asset carries is thrown away as the game does.
+			v.DynamicNote = dynamicNotes[a.ID]
 		}
 		for _, st := range a.Stats {
 			v.Stats = append(v.Stats, StatLine{Text: statLine(st), Key: st.Key, Stat: st.Stat, Amount: st.Amount})
@@ -135,24 +121,17 @@ func (s *Site) pagesAchievements() error {
 }
 
 // known keeps the needs that name something the wiki has.
-// withExtras appends, marked, the visible items of a kind that the list
-// does not name, by name.
-func (s *Site) withExtras(list []NeedView, kind func(*model.Item) bool) []NeedView {
-	have := map[string]bool{}
-	for _, v := range list {
-		if v.Need.Prefab != "" {
-			have[v.Need.Prefab] = true
-		}
-	}
-	var extra []NeedView
-	for _, it := range s.Index.Items {
-		if !kind(it) || have[it.Prefab] || !s.visible(it) || it.Name == "" {
-			continue
-		}
-		extra = append(extra, NeedView{Need: model.Need{Token: it.Token, Prefab: it.Prefab, Name: it.Name}, Thing: s.Index.Things[it.Prefab], Extra: true})
-	}
-	sort.Slice(extra, func(i, j int) bool { return extra[i].Need.Name < extra[j].Need.Name })
-	return append(list, extra...)
+// dynamicNotes say, per dynamically populated achievement, what the game
+// fills its list with when it runs, which is what the page lists.
+var dynamicNotes = map[string]string{
+	"AllWeaponCraft":       "Filled when the game runs: every weapon any recipe makes.",
+	"AllFoodCooked":        "Filled when the game runs: every food a recipe makes, and every cooked dish a cooking station or oven turns out.",
+	"AllItemCraft":         "Filled when the game runs: every item a recipe makes at a crafting station. Things made by hand, like the club and the stone axe, are not counted.",
+	"AllFoodEaten":         "Filled when the game runs: every edible item in the game's tables.",
+	"AllBuildPieces":       "Filled when the game runs: every piece in the hammer's menu, hidden ones included, the repair entry aside. The hoe's and the cultivator's are not counted.",
+	"FindAllTrophies":      "Filled when the game runs: every trophy in the game's tables, one per name.",
+	"KillAllCreatures":     "Filled when the game runs: every creature the game marks as counting for achievements, one per name.",
+	"KillAllCreaturesHard": "Filled when the game runs: every creature the game marks as counting for achievements, one per name.",
 }
 
 func known(list []NeedView) []NeedView {

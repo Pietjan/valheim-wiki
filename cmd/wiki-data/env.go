@@ -221,7 +221,8 @@ func (x *X) MiniBoss(token string) bool {
 // then the token given, then the prefab name spaced out.
 func (x *X) NameOf(prefab, token string) string {
 	if r, ok := x.names[prefab]; ok && r.english != "" {
-		return r.english
+		// The table keeps the game's text as it is, orange marks and all.
+		return strings.TrimSpace(StripRichText(r.english))
 	}
 	if token != "" {
 		if t := x.Text(token); t != "" && !strings.HasPrefix(t, "$") {

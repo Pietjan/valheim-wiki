@@ -2718,8 +2718,8 @@
   "id": "Recipe_BakedPoteitr",
   "item": "BakedPoteitrUncooked",
   "amount": 1,
-  "station": "piece_cauldron",
-  "minStationLevel": 7,
+  "station": "piece_preptable",
+  "minStationLevel": 1,
   "qualityMult": 1,
   "resources": [
    {
@@ -6358,7 +6358,6 @@
    {
     "item": "TrophyMoose",
     "amount": 1,
-    "perLevel": 1,
     "recover": true
    },
    {
@@ -6956,8 +6955,8 @@
   "id": "Recipe_KaleChips",
   "item": "KaleChipsUncooked",
   "amount": 4,
-  "station": "piece_cauldron",
-  "minStationLevel": 6,
+  "station": "piece_preptable",
+  "minStationLevel": 1,
   "qualityMult": 1,
   "resources": [
    {
@@ -8734,8 +8733,8 @@
   "id": "Recipe_OvenPancake",
   "item": "OvenPancakeUncooked",
   "amount": 1,
-  "station": "piece_cauldron",
-  "minStationLevel": 6,
+  "station": "piece_preptable",
+  "minStationLevel": 1,
   "qualityMult": 1,
   "resources": [
    {

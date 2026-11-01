@@ -27,7 +27,8 @@
    "FirTree_big_Sapling",
    "VineAsh_sapling",
    "VineGreen_sapling"
-  ]
+  ],
+  "canRemovePieces": false
  },
  {
   "prefab": "_FeasterPieceTable",
@@ -154,6 +155,7 @@
    "MeadBugRepellent",
    "MeadTrollPheromones"
   ],
+  "canRemovePieces": false,
   "categories": [
    "Food",
    "Meads",
@@ -568,6 +570,7 @@
    "BatteringRam",
    "Catapult"
   ],
+  "canRemovePieces": true,
   "categories": [
    "Misc",
    "Crafting",
@@ -596,6 +599,7 @@
    "Placeable_Stone",
    "placeable_bigrock_02",
    "placeable_bigrock_01"
-  ]
+  ],
+  "canRemovePieces": false
  }
 ]

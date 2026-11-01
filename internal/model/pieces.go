@@ -18,6 +18,8 @@ type Piece struct {
 
 	Comfort      int    `json:"comfort,omitempty"`
 	ComfortGroup string `json:"comfortGroup,omitempty"`
+	// RepairPiece is the hammer's repair entry, a piece that places nothing.
+	RepairPiece bool `json:"repairPiece,omitempty"`
 
 	// WearNTear.
 	Health      float64     `json:"health,omitempty"`
@@ -140,9 +142,12 @@ type TurretInfo struct {
 
 // PieceTable is a tool's build menu.
 type PieceTable struct {
-	Prefab     string   `json:"prefab"` // _HammerPieceTable
-	Tool       string   `json:"tool"`   // item prefab that opens it
-	Pieces     []string `json:"pieces"` // in menu order
-	Categories []string `json:"categories,omitempty"`
-	Labels     []string `json:"labels,omitempty"`
+	Prefab string   `json:"prefab"` // _HammerPieceTable
+	Tool   string   `json:"tool"`   // item prefab that opens it
+	Pieces []string `json:"pieces"` // in menu order
+	// CanRemovePieces is the table's m_canRemovePieces: the hammer's can,
+	// and the game counts only such tables' pieces for The Carpenter.
+	CanRemovePieces bool     `json:"canRemovePieces"`
+	Categories      []string `json:"categories,omitempty"`
+	Labels          []string `json:"labels,omitempty"`
 }

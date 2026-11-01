@@ -88,6 +88,17 @@ func fishRoot(x *X, refs []assets.Ref) (assets.Ref, Component, bool) {
 	return assets.Ref{}, Component{}, false
 }
 
+// achievementInclusion names a Utils.AchievementInclusion value.
+func achievementInclusion(v int) string {
+	switch v {
+	case 1:
+		return "included"
+	case 2:
+		return "excluded"
+	}
+	return "undefined"
+}
+
 // factionName names a Character.Faction value.
 func factionName(v int) string {
 	if v >= 0 && v < len(factionNames) {
@@ -120,6 +131,8 @@ func (x *X) creature(name string, g assets.Ref, ch Component) *model.Creature {
 		Flying:    B(t, "m_flying"),
 		CanSwim:   B(t, "m_canSwim"),
 		Stagger:   F(t, "m_staggerDamageFactor"),
+
+		KilledForAchievements: achievementInclusion(I(t, "m_killedForAchievements")),
 	}
 	if c.Flying {
 		c.FlySpeed = F(t, "m_flyFastSpeed")

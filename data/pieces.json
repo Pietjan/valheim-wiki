@@ -27219,6 +27219,7 @@
   ],
   "tool": "Hammer",
   "enabled": true,
+  "repairPiece": true,
   "placement": [
    "noInWater"
   ]
