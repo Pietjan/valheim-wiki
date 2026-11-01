@@ -303,6 +303,7 @@ table.stats td:first-child { color: var(--ink-2); }
 .ach-head h2 { font-size: 24px; margin: 2px 0 2px; }
 .ach-desc { margin: 0 0 6px; color: var(--ink-2); }
 .ach-tags { margin: 0; display: flex; gap: 6px; flex-wrap: wrap; }
+.ach-note { margin: 8px 0 0; font-size: 14px; color: var(--ink-3); }
 .ach-tags .tag { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); border: 1px solid var(--line); border-radius: 999px; padding: 2px 8px; }
 .ach h3 { margin: 12px 0 6px; font-size: 16px; }
 .ach-more { margin: 12px 0 0; }
