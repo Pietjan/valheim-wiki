@@ -541,6 +541,9 @@ dialog::backdrop { background: rgba(20, 12, 6, .55); backdrop-filter: blur(3px);
 .world-pop .pop-head img { width: 40px; height: 40px; border-radius: 50%; }
 .world-pop .pop-head b { font-family: var(--display); font-size: 18px; }
 .world-pop .meta { color: var(--night-ink-2); font-size: 13px; }
+.world-pop .pop-actions { display: flex; gap: 8px; align-items: center; margin: 8px 0 0; font-size: 13px; }
+.world-pop .pop-actions button { background: none; border: 1px solid rgba(223,162,88,.4); border-radius: 6px; color: #f0bb75; font: inherit; font-size: 13px; padding: 3px 9px; cursor: pointer; }
+.world-pop .pop-actions button:hover { border-color: #f0bb75; }
 .world-empty { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; z-index: 4; pointer-events: none; }
 .world-empty > div { pointer-events: auto; max-width: 440px; padding: 28px 30px; background: rgba(21,17,14,.9); border: 1px solid rgba(223,162,88,.3); border-radius: 12px; }
 .world-empty h2 { font-size: 30px; margin: 0 0 8px; color: #f0bb75; }

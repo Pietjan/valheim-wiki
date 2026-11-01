@@ -3,7 +3,9 @@
 // (worldmap.js) or the terrain view (world3d.js, loaded when first asked
 // for); this file wires them to the page: the seed form, progress, the
 // layer list built from the site's location catalogue, the map/3D switch,
-// the click popover and the URL (?seed=&x=&z=&zoom=&view=3d&yaw=&pitch=).
+// the click popover and the URL (?seed=&x=&z=&zoom=&view=3d&yaw=&pitch=,
+// and pin=1 when a pin stands at x, z). Pin here in the popover drops the
+// pin, writes that link to the address bar and copies it.
 
 import { World } from './world.js';
 import { WorldMap } from './worldmap.js';
@@ -293,6 +295,33 @@ async function init(root) {
 
   function setPin(p) { pin = p; map.setPin(p); if (view3d) view3d.setPin(p); }
 
+  // pinLink is this page's link to the pin: the seed, the pin's place, the
+  // view's zoom, and in 3D the view and its angles.
+  function pinLink() {
+    const u = new URL(location.href);
+    const v = active().view;
+    u.searchParams.set('seed', handle.seed);
+    u.searchParams.set('x', String(Math.round(pin.x)));
+    u.searchParams.set('z', String(Math.round(pin.z)));
+    u.searchParams.set('zoom', String(Math.round(v.zoom * 10) / 10));
+    u.searchParams.delete('view'); u.searchParams.delete('yaw'); u.searchParams.delete('pitch');
+    if (mode === '3d') { u.searchParams.set('view', '3d'); u.searchParams.set('yaw', String(Math.round(v.yaw))); u.searchParams.set('pitch', String(Math.round(v.pitch))); }
+    u.searchParams.set('pin', '1');
+    return u;
+  }
+  function dropPin(x, z) {
+    setPin({ x, z });
+    const u = pinLink();
+    history.replaceState(null, '', u);
+    return u.href;
+  }
+  function liftPin() {
+    setPin(null);
+    const u = new URL(location.href);
+    u.searchParams.delete('x'); u.searchParams.delete('z'); u.searchParams.delete('zoom'); u.searchParams.delete('pin');
+    history.replaceState(null, '', u);
+  }
+
   function closePopover() { if (popover) { popover.remove(); popover = null; } }
 
   map.onClick(onClick);
@@ -311,6 +340,23 @@ async function init(root) {
       pop.innerHTML = `<button class="close" aria-label="Close">×</button><div class="pop-head">${l.icon ? `<img src="${base}icons/${l.icon}.png" alt="">` : ''}<div><b>${l.name}</b><div class="meta">${marker.data.prefab}</div></div></div><p class="meta">${where}</p><p style="margin:0"><a href="${base}${l.url}">About this place →</a></p>`;
     } else {
       pop.innerHTML = `<button class="close" aria-label="Close">×</button><div class="pop-head"><div><b>${biome || 'Here'}</b><div class="meta">${Math.round(x)}, ${Math.round(z)}</div></div></div><p class="meta" style="margin:0">${where}</p>`;
+    }
+    if (handle) {
+      const acts = document.createElement('p');
+      acts.className = 'pop-actions';
+      acts.innerHTML = `<button type="button" data-pin>Pin here</button>${pin ? '<button type="button" data-lift>Lift pin</button>' : ''}`;
+      const pinBtn = acts.querySelector('[data-pin]');
+      pinBtn.addEventListener('click', async () => {
+        const href = dropPin(x, z);
+        const lift = acts.querySelector('[data-lift]');
+        if (lift) lift.remove();
+        let copied = false;
+        try { await navigator.clipboard.writeText(href); copied = true; } catch (_) { }
+        pinBtn.replaceWith(Object.assign(document.createElement('span'), { className: 'meta', textContent: copied ? 'Pinned · link copied' : 'Pinned · the address bar has the link' }));
+      });
+      const liftBtn = acts.querySelector('[data-lift]');
+      if (liftBtn) liftBtn.addEventListener('click', () => { liftPin(); closePopover(); });
+      pop.appendChild(acts);
     }
     pop.querySelector('.close').addEventListener('click', closePopover);
     root.appendChild(pop);
