@@ -613,12 +613,14 @@ func bestCombos(foods []*model.Item) []FoodCombo {
 		score           func(h, st, e float64) float64
 		need            func(h, st, e float64) bool
 	}
+	// In the order the page lists them: the health menus, then stamina,
+	// then eitr, the ceiling of each before its two-and-one.
 	picks := []pick{
 		{"health", "Most health", "health", "", func(h, st, e float64) float64 { return h*1000 + st }, nil},
-		{"stamina", "Most stamina", "stamina", "", func(h, st, e float64) float64 { return st*1000 + h }, nil},
-		{"eitr", "Most eitr", "eitr", "", func(h, st, e float64) float64 { return e*1000 + h + st }, func(h, st, e float64) bool { return e > 0 }},
 		{"two-health", "Two health, one stamina", "health", "hhs", func(h, st, e float64) float64 { return h + st/2 }, nil},
+		{"stamina", "Most stamina", "stamina", "", func(h, st, e float64) float64 { return st*1000 + h }, nil},
 		{"two-stamina", "Two stamina, one health", "stamina", "hss", func(h, st, e float64) float64 { return st + h/2 }, nil},
+		{"eitr", "Most eitr", "eitr", "", func(h, st, e float64) float64 { return e*1000 + h + st }, func(h, st, e float64) bool { return e > 0 }},
 		{"two-eitr-health", "Two eitr, one health", "eitr", "ehe", func(h, st, e float64) float64 { return e + h/2 }, nil},
 		{"two-eitr-stamina", "Two eitr, one stamina", "eitr", "ese", func(h, st, e float64) float64 { return e + st/2 }, nil},
 	}

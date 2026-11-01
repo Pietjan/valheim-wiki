@@ -283,14 +283,16 @@ table.stats td:first-child { color: var(--ink-2); }
 .sortable th[aria-sort="ascending"]::after { content: " ▴"; }
 
 /* panels */
-.meals { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin: 12px 0 8px; }
+.meals { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 12px 0 8px; }
 .meal { --meal-c: var(--accent); position: relative; overflow: hidden; border: 1px solid color-mix(in srgb, var(--meal-c) 40%, transparent); border-radius: var(--radius); background: linear-gradient(160deg, color-mix(in srgb, var(--meal-c) 9%, var(--paper-2)), var(--paper-2) 60%); padding: 12px 14px; box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08), var(--shadow); }
 .meal::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 60% 70% at 100% 0%, color-mix(in srgb, var(--meal-c) 16%, transparent), transparent 60%); }
 .meal > * { position: relative; }
 .meal[data-stat="health"] { --meal-c: var(--stat-health); }
 .meal[data-stat="stamina"] { --meal-c: var(--stat-stamina); }
 .meal[data-stat="eitr"] { --meal-c: var(--stat-eitr); }
-.meal-head { display: flex; flex-direction: column; gap: 2px; margin-bottom: 8px; }
+.meal { display: grid; grid-template-columns: 300px 1fr; gap: 6px 18px; align-items: center; }
+.meal-head { display: flex; flex-direction: column; gap: 2px; }
+@media (max-width: 640px) { .meal { grid-template-columns: 1fr; } }
 .meal-head b { font-family: var(--display); font-size: 19px; letter-spacing: .02em; color: var(--meal-c); }
 .meal-stats { color: var(--ink-2); font-size: 13px; font-variant-numeric: tabular-nums; }
 .meal .chips { margin: 0; }
