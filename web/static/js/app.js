@@ -243,17 +243,32 @@ if (seed && ywPanels.length) startYourWorld();
     card.innerHTML = `<div class="tip-head">${icon}<div><b></b><span class="tip-sub"></span></div></div>`;
     card.querySelector('b').textContent = tip.n;
     card.querySelector('.tip-sub').textContent = tip.s || '';
-    for (const l of tip.l || []) { const p = document.createElement('p'); p.textContent = l; card.appendChild(p); }
+    // A line is text, or parts: text and things drawn as small chips.
+    for (const l of tip.l || []) {
+      const p = document.createElement('p');
+      if (typeof l === 'string') p.textContent = l;
+      else for (const part of l) {
+        if (part.t) { p.appendChild(document.createTextNode(part.t)); continue; }
+        const c = document.createElement('span');
+        c.className = 'tip-chip';
+        if (part.i) { const img = document.createElement('img'); img.src = `${base}icons/${part.i}.png`; img.alt = ''; img.width = 18; img.height = 18; c.appendChild(img); }
+        c.appendChild(document.createTextNode(part.n || part.k));
+        if (part.x > 1) { const n = document.createElement('b'); n.textContent = '×' + part.x; c.appendChild(n); }
+        p.appendChild(c);
+      }
+      card.appendChild(p);
+    }
     document.body.appendChild(card);
-    // Below the chip, or above when there is no room; kept inside the window.
+    // Below the chip, or above when there is no room; kept inside the
+    // window. Fixed to the viewport, so no scroll offset comes into it.
     const r = chip.getBoundingClientRect();
     const cw = card.offsetWidth, ch = card.offsetHeight;
     let x = r.left + r.width / 2 - cw / 2;
     x = Math.max(8, Math.min(window.innerWidth - cw - 8, x));
     let y = r.bottom + 8;
     if (y + ch > window.innerHeight - 8 && r.top - ch - 8 > 0) { y = r.top - ch - 8; card.classList.add('is-above'); }
-    card.style.left = Math.round(x + window.scrollX) + 'px';
-    card.style.top = Math.round(y + window.scrollY) + 'px';
+    card.style.left = Math.round(x) + 'px';
+    card.style.top = Math.round(y) + 'px';
   };
   const arm = (chip, delay) => {
     if (current === chip) return;

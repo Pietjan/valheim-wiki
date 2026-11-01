@@ -82,6 +82,21 @@ type Thing struct {
 	Hint string
 }
 
+// Key is the thing's key in Index.Things, which a chip carries for its
+// hover card: the prefab, or the kind-prefixed id for the kinds that are
+// not prefabs.
+func (t *Thing) Key() string {
+	switch t.Kind {
+	case "effect", "skill", "biome":
+		return t.Kind + ":" + t.Prefab
+	case "achievement":
+		return "ach:" + t.Prefab
+	case "location":
+		return "loc:" + t.Prefab
+	}
+	return t.Prefab
+}
+
 // Kind groups location variants under one page.
 type Kind struct {
 	Slug     string

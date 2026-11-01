@@ -235,7 +235,7 @@ code { font: 14px/1.4 var(--mono); background: var(--paper-3); padding: 1px 5px;
 .chip-dead { color: var(--ink-3); }
 .chip-still { cursor: default; color: var(--ink-2); }
 .chip.big { font-size: 16px; padding: 4px 12px 4px 4px; }
-.tip-card { position: absolute; z-index: 40; width: max-content; max-width: 320px; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--paper-2); color: var(--ink); box-shadow: var(--shadow), 0 16px 40px -16px rgba(0,0,0,.5); pointer-events: none; font-size: 14px; line-height: 1.4; animation: tip-in .12s ease-out; }
+.tip-card { position: fixed; z-index: 40; width: max-content; max-width: 320px; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: var(--radius); background: var(--paper-2); color: var(--ink); box-shadow: var(--shadow), 0 16px 40px -16px rgba(0,0,0,.5); pointer-events: none; font-size: 14px; line-height: 1.4; animation: tip-in .12s ease-out; }
 .tip-card.is-above { animation-name: tip-in-up; }
 @keyframes tip-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
 @keyframes tip-in-up { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
@@ -245,6 +245,10 @@ code { font: 14px/1.4 var(--mono); background: var(--paper-3); padding: 1px 5px;
 .tip-sub { color: var(--ink-3); font-size: 13px; }
 .tip-card p { margin: 6px 0 0; color: var(--ink-2); }
 .tip-card p:first-of-type { color: var(--ink); }
+.tip-chip { display: inline-flex; align-items: center; gap: 4px; padding: 1px 7px 1px 2px; margin: 1px 0; border: 1px solid var(--line); border-radius: 999px; background: var(--paper-3); color: var(--ink); font-size: 13px; line-height: 1.2; vertical-align: middle; white-space: nowrap; }
+.tip-chip img { width: 18px; height: 18px; border-radius: 50%; object-fit: contain; }
+.tip-chip b { color: var(--accent-2); font-weight: 700; font-variant-numeric: tabular-nums; }
+.tip-card p:has(.tip-chip) { line-height: 1.7; }
 .chip.big .chip-icon { width: 36px; height: 36px; }
 
 .biome-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 14px; padding: 2px 10px 2px 7px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper-2); color: var(--ink-2); text-decoration: none !important; margin: 0 6px 6px 0; }

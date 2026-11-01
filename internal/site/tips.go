@@ -10,13 +10,24 @@ import (
 // about it, by the key the chip carries. The page's script fetches it
 // once on the first hover and draws the card beside the chip.
 
-// Tip is one row of tips.json.
+// Tip is one row of tips.json. A line is a string, or a row of parts
+// where things are drawn as small chips with their icons: a recipe's
+// materials and station.
 type Tip struct {
-	N string   `json:"n"`           // name
-	S string   `json:"s,omitempty"` // sub line
-	I string   `json:"i,omitempty"` // icon path under icons/
-	U string   `json:"u,omitempty"` // url (site-relative)
-	L []string `json:"l,omitempty"` // the lines
+	N string `json:"n"`           // name
+	S string `json:"s,omitempty"` // sub line
+	I string `json:"i,omitempty"` // icon path under icons/
+	U string `json:"u,omitempty"` // url (site-relative)
+	L []any  `json:"l,omitempty"` // the lines: string or []TipPart
+}
+
+// TipPart is text, or a thing with its icon and a count.
+type TipPart struct {
+	T string `json:"t,omitempty"` // text
+	K string `json:"k,omitempty"` // the thing's key
+	N string `json:"n,omitempty"` // its name
+	I string `json:"i,omitempty"` // its icon path under icons/
+	X int    `json:"x,omitempty"` // a count
 }
 
 // writeTips writes tips.json.
@@ -36,8 +47,13 @@ func (s *Site) writeTips() error {
 // tipLines is what a card says under the name, by kind: the numbers a
 // reader would look the page up for, and the game's own words where they
 // are short.
-func (s *Site) tipLines(key string, t *Thing) []string {
-	var lines []string
+func (s *Site) tipLines(key string, t *Thing) []any {
+	var lines []any
+	addRow := func(parts []TipPart) {
+		if len(parts) > 0 {
+			lines = append(lines, parts)
+		}
+	}
 	add := func(parts ...string) {
 		var keep []string
 		for _, p := range parts {
@@ -99,14 +115,14 @@ func (s *Site) tipLines(key string, t *Thing) []string {
 		// cooking station it comes off and what goes on, with that thing's
 		// own materials when it has a recipe, so a pie says what its dough
 		// took.
-		if n := s.needsLine(t.Prefab); n != "" {
-			add(n)
+		if row := s.needsRow(t.Prefab); row != nil {
+			addRow(row)
 		} else if cs := s.Index.Converts[t.Prefab]; len(cs) > 0 {
 			c := cs[0]
 			if c.Conversion.From != "" {
-				add("from " + s.nameOf(c.Conversion.From) + " on " + s.nameOf(c.Converter.Prefab))
-				if n := s.needsLine(c.Conversion.From); n != "" {
-					add(s.nameOf(c.Conversion.From) + " " + n)
+				addRow([]TipPart{{T: "from "}, s.tipRef(c.Conversion.From, 0), {T: " on "}, s.tipRef(c.Converter.Prefab, 0)})
+				if row := s.needsRow(c.Conversion.From); row != nil {
+					addRow(append([]TipPart{s.tipRef(c.Conversion.From, 0), {T: " "}}, row...))
 				}
 			}
 		}
@@ -154,12 +170,15 @@ func (s *Site) tipLines(key string, t *Thing) []string {
 		if p == nil {
 			break
 		}
-		var need []string
-		for _, r := range p.Resources {
-			need = append(need, fmt.Sprintf("%s ×%d", s.nameOf(r.Item), r.Amount))
+		var row []TipPart
+		for i, r := range p.Resources {
+			if i > 0 {
+				row = append(row, TipPart{T: ", "})
+			}
+			row = append(row, s.tipRef(r.Item, r.Amount))
 		}
-		if len(need) > 0 {
-			add("needs " + strings.Join(need, ", "))
+		if len(row) > 0 {
+			addRow(append([]TipPart{{T: "needs "}}, row...))
 		}
 		var meta []string
 		if p.Comfort > 0 {
@@ -252,32 +271,44 @@ func (s *Site) tipLines(key string, t *Thing) []string {
 	return lines
 }
 
-// needsLine is "needs A ×n, B ×m at Station level k" from an item's first
-// recipe, or "" without one.
-func (s *Site) needsLine(prefab string) string {
+// needsRow is "needs A ×n, B ×m at Station level k" from an item's first
+// recipe as parts, the things as chips, or nil without one.
+func (s *Site) needsRow(prefab string) []TipPart {
 	rs := s.Index.Recipes[prefab]
 	if len(rs) == 0 {
-		return ""
+		return nil
 	}
 	r := rs[0]
-	var need []string
+	var row []TipPart
 	for _, res := range r.Resources {
 		if res.Upgrader || res.Amount <= 0 {
 			continue
 		}
-		need = append(need, fmt.Sprintf("%s ×%d", s.nameOf(res.Item), res.Amount))
+		if len(row) > 0 {
+			row = append(row, TipPart{T: ", "})
+		}
+		row = append(row, s.tipRef(res.Item, res.Amount))
 	}
-	if len(need) == 0 {
-		return ""
+	if len(row) == 0 {
+		return nil
 	}
-	at := ""
+	row = append([]TipPart{{T: "needs "}}, row...)
 	if r.Station != "" {
-		at = " at " + s.nameOf(r.Station)
+		row = append(row, TipPart{T: " at "}, s.tipRef(r.Station, 0))
 		if r.MinStationLevel > 1 {
-			at += fmt.Sprintf(" level %d", r.MinStationLevel)
+			row = append(row, TipPart{T: fmt.Sprintf(" level %d", r.MinStationLevel)})
 		}
 	}
-	return "needs " + strings.Join(need, ", ") + at
+	return row
+}
+
+// tipRef is a thing as a card part: its key, name, icon and a count.
+func (s *Site) tipRef(key string, count int) TipPart {
+	p := TipPart{K: key, N: s.nameOf(key), X: count}
+	if t := s.Index.Things[key]; t != nil {
+		p.I = t.Icon
+	}
+	return p
 }
 
 // nameOf is a thing's name by key, or the key.
