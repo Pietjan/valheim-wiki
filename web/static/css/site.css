@@ -30,6 +30,7 @@
   --stat-health: #b4433a;
   --stat-stamina: #a3780f;
   --stat-eitr: #5b55a8;
+  --stat-balanced: #6b7682;
   --night: #15110e;
   --night-2: #1f1a14;
   --night-ink: #e9dfca;
@@ -66,6 +67,7 @@
   --stat-health: #e06a5a;
   --stat-stamina: #e0b24a;
   --stat-eitr: #9d93e6;
+  --stat-balanced: #b9c2cc;
   --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px -14px rgba(0, 0, 0, .6);
   color-scheme: dark;
 }
@@ -91,6 +93,7 @@
     --stat-health: #e06a5a;
     --stat-stamina: #e0b24a;
     --stat-eitr: #9d93e6;
+    --stat-balanced: #b9c2cc;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px -14px rgba(0, 0, 0, .6);
     color-scheme: dark;
   }
@@ -290,6 +293,7 @@ table.stats td:first-child { color: var(--ink-2); }
 .meal[data-stat="health"] { --meal-c: var(--stat-health); }
 .meal[data-stat="stamina"] { --meal-c: var(--stat-stamina); }
 .meal[data-stat="eitr"] { --meal-c: var(--stat-eitr); }
+.meal[data-stat="balanced"] { --meal-c: var(--stat-balanced); }
 .meal { display: grid; grid-template-columns: 300px 1fr; gap: 6px 18px; align-items: center; }
 .meal-head { display: flex; flex-direction: column; gap: 2px; }
 @media (max-width: 640px) { .meal { grid-template-columns: 1fr; } }
