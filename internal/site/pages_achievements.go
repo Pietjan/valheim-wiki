@@ -124,12 +124,12 @@ func (s *Site) pagesAchievements() error {
 // dynamicNotes say, per dynamically populated achievement, what the game
 // fills its list with when it runs, which is what the page lists.
 var dynamicNotes = map[string]string{
-	"AllWeaponCraft":       "Filled when the game runs: every weapon any recipe makes.",
+	"AllWeaponCraft":       "Filled when the game runs: every weapon any recipe makes, less the ones the game's own exclusion list names, such as the wooden training weapons and the tankards.",
 	"AllFoodCooked":        "Filled when the game runs: every food a recipe makes, and every cooked dish a cooking station or oven turns out.",
-	"AllItemCraft":         "Filled when the game runs: every item a recipe makes at a crafting station. Things made by hand, like the club and the stone axe, are not counted.",
-	"AllFoodEaten":         "Filled when the game runs: every edible item in the game's tables.",
+	"AllItemCraft":         "Filled when the game runs: every item a recipe makes at a crafting station, less the ones the game's own exclusion list names. Things made by hand, like the club and the stone axe, are not counted.",
+	"AllFoodEaten":         "Filled when the game runs: every edible item in the game's tables, less the ones the game's own exclusion list names: the blue mushroom, which nothing places.",
 	"AllBuildPieces":       "Filled when the game runs: every piece in the hammer's menu, hidden ones included, the repair entry aside. The hoe's and the cultivator's are not counted.",
-	"FindAllTrophies":      "Filled when the game runs: every trophy in the game's tables, one per name.",
+	"FindAllTrophies":      "Filled when the game runs: every trophy in the game's tables, one per name, less the ones the game's own exclusion list names: the white deer's.",
 	"KillAllCreatures":     "Filled when the game runs: every creature the game marks as counting for achievements, one per name.",
 	"KillAllCreaturesHard": "Filled when the game runs: every creature the game marks as counting for achievements, one per name.",
 }

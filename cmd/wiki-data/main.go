@@ -66,6 +66,7 @@ func main() {
 	noIcons := flag.Bool("no-icons", false, "skip the icon pass")
 	probe := flag.String("probe", "", "comma-separated prefab or asset names: dump every component's fields to -probe-out and exit")
 	probeOut := flag.String("probe-out", "probe.txt", "where -probe writes")
+	refs := flag.String("refs", "", "comma-separated prefab names: print every component field that points at them and exit")
 	list := flag.Bool("list-bundles", false, "print which bundles would be loaded and exit")
 	flag.Parse()
 	if *softRef == "" {
@@ -75,13 +76,13 @@ func main() {
 	if *dataDir == "" {
 		*dataDir = filepath.Dir(filepath.Dir(*softRef))
 	}
-	if err := run(*softRef, *dataDir, *out, *icons, *game, *only, !*noIcons, *probe, *probeOut, *list); err != nil {
+	if err := run(*softRef, *dataDir, *out, *icons, *game, *only, !*noIcons, *probe, *probeOut, *refs, *list); err != nil {
 		fmt.Fprintln(os.Stderr, "error:", err)
 		os.Exit(1)
 	}
 }
 
-func run(softRef, dataDir, out, iconDir, game, only string, icons bool, probe, probeOut string, list bool) error {
+func run(softRef, dataDir, out, iconDir, game, only string, icons bool, probe, probeOut, refs string, list bool) error {
 	started := time.Now()
 	x, err := open(softRef, dataDir, list)
 	if err != nil {
@@ -94,6 +95,13 @@ func run(softRef, dataDir, out, iconDir, game, only string, icons bool, probe, p
 	x.memStat()
 	fmt.Printf("==> %d serialised files, %d root prefabs, %d strings in %.0fs\n", len(x.Env.Files), len(x.Roots), len(x.Strings), time.Since(started).Seconds())
 
+	if refs != "" {
+		names := map[string]bool{}
+		for _, n := range strings.Split(refs, ",") {
+			names[strings.TrimSpace(n)] = true
+		}
+		return x.refs(names)
+	}
 	if probe != "" {
 		names := map[string]bool{}
 		for _, n := range strings.Split(probe, ",") {

@@ -3289,12 +3289,6 @@
     "amount": 1
    },
    {
-    "token": "$item_mushroomblue",
-    "prefab": "MushroomBlue",
-    "name": "Blue Mushroom",
-    "amount": 1
-   },
-   {
     "token": "$item_jotunpuffs",
     "prefab": "MushroomJotunPuffs",
     "name": "Jotun Puffs",
@@ -3941,12 +3935,6 @@
     "amount": 1
    },
    {
-    "token": "$item_atgeir_wood",
-    "prefab": "AtgeirWood",
-    "name": "Wooden Atgeir",
-    "amount": 1
-   },
-   {
     "token": "$item_axe_berzerkr",
     "prefab": "AxeBerzerkr",
     "name": "Berserkir Axes",
@@ -4031,12 +4019,6 @@
     "amount": 1
    },
    {
-    "token": "$item_axe_wood",
-    "prefab": "AxeWood",
-    "name": "Wooden Axe",
-    "amount": 1
-   },
-   {
     "token": "$item_bakedpoteitr_uncooked",
     "prefab": "BakedPoteitrUncooked",
     "name": "Unbaked Poteitr",
@@ -4094,12 +4076,6 @@
     "token": "$item_battleaxe_gold_uncooked",
     "prefab": "BattleaxeGoldUncooked",
     "name": "Cast: Nord Greataxe",
-    "amount": 1
-   },
-   {
-    "token": "$item_battleaxe_wood",
-    "prefab": "BattleaxeWood",
-    "name": "Wooden Battleaxe",
     "amount": 1
    },
    {
@@ -4217,12 +4193,6 @@
     "amount": 1
    },
    {
-    "token": "$item_lavabomb",
-    "prefab": "BombLava",
-    "name": "Basalt Bomb",
-    "amount": 1
-   },
-   {
     "token": "$item_oozebomb",
     "prefab": "BombOoze",
     "name": "Ooze Bomb",
@@ -4232,12 +4202,6 @@
     "token": "$item_catapult_ammo",
     "prefab": "BombSiege",
     "name": "Explosive Payload",
-    "amount": 1
-   },
-   {
-    "token": "$item_smokebomb",
-    "prefab": "BombSmoke",
-    "name": "Smoke Bomb",
     "amount": 1
    },
    {
@@ -4382,12 +4346,6 @@
     "token": "$item_cape_lox",
     "prefab": "CapeLox",
     "name": "Lox Cape",
-    "amount": 1
-   },
-   {
-    "token": "$item_cape_odin",
-    "prefab": "CapeOdin",
-    "name": "Cape of Oden",
     "amount": 1
    },
    {
@@ -4865,27 +4823,9 @@
     "amount": 1
    },
    {
-    "token": "$item_helmet_midsummercrown",
-    "prefab": "HelmetMidsummerCrown",
-    "name": "Midsummer Crown",
-    "amount": 1
-   },
-   {
-    "token": "$item_helmet_odin",
-    "prefab": "HelmetOdin",
-    "name": "Hood of Oden",
-    "amount": 1
-   },
-   {
     "token": "$item_helmet_padded",
     "prefab": "HelmetPadded",
     "name": "Padded Helmet",
-    "amount": 1
-   },
-   {
-    "token": "$item_helmet_witchhat",
-    "prefab": "HelmetPointyHat",
-    "name": "Pointy Hat",
     "amount": 1
    },
    {
@@ -4991,24 +4931,6 @@
     "amount": 1
    },
    {
-    "token": "$item_knife_void",
-    "prefab": "KnifeVoid",
-    "name": "Voidcaller",
-    "amount": 1
-   },
-   {
-    "token": "$item_knife_wood",
-    "prefab": "KnifeWood",
-    "name": "Wooden Knife",
-    "amount": 1
-   },
-   {
-    "token": "$item_lantern",
-    "prefab": "Lantern",
-    "name": "Dvergr Lantern",
-    "amount": 1
-   },
-   {
     "token": "$item_lingondricka",
     "prefab": "Lingondricka",
     "name": "Lingonberry Juice",
@@ -5090,12 +5012,6 @@
     "token": "$item_mace_silver",
     "prefab": "MaceSilver",
     "name": "Frostner",
-    "amount": 1
-   },
-   {
-    "token": "$item_mace_wood",
-    "prefab": "MaceWood",
-    "name": "Wooden Mace",
     "amount": 1
    },
    {
@@ -5327,12 +5243,6 @@
     "amount": 1
    },
    {
-    "token": "$item_pickaxe_stone",
-    "prefab": "PickaxeStone",
-    "name": "Stone Pickaxe",
-    "amount": 1
-   },
-   {
     "token": "$item_piquantpie_uncooked",
     "prefab": "PiquantPieUncooked",
     "name": "Uncooked Piquant Pie",
@@ -5501,12 +5411,6 @@
     "amount": 1
    },
    {
-    "token": "$item_shield_iron_square",
-    "prefab": "ShieldIronSquare",
-    "name": "Iron Shield",
-    "amount": 1
-   },
-   {
     "token": "$item_shield_iron_tower",
     "prefab": "ShieldIronTower",
     "name": "Iron Tower Shield",
@@ -5621,12 +5525,6 @@
     "amount": 1
    },
    {
-    "token": "$item_sledge_wood",
-    "prefab": "SledgeWood",
-    "name": "Wooden Sledge",
-    "amount": 1
-   },
-   {
     "token": "$item_smokedfish",
     "prefab": "SmokedFish",
     "name": "Smoked Fish",
@@ -5636,12 +5534,6 @@
     "token": "$item_smokedmoosemeat",
     "prefab": "SmokedMooseMeat",
     "name": "Smoked Moose Meat",
-    "amount": 1
-   },
-   {
-    "token": "$item_snowshovel",
-    "prefab": "Shovel",
-    "name": "Snow Shovel",
     "amount": 1
    },
    {
@@ -5732,12 +5624,6 @@
     "token": "$item_spear_wolffang",
     "prefab": "SpearWolfFang",
     "name": "Fang Spear",
-    "amount": 1
-   },
-   {
-    "token": "$item_spear_wood",
-    "prefab": "SpearWood",
-    "name": "Wooden Spear",
     "amount": 1
    },
    {
@@ -5963,24 +5849,6 @@
     "amount": 1
    },
    {
-    "token": "$item_tankard",
-    "prefab": "Tankard",
-    "name": "Tankard",
-    "amount": 1
-   },
-   {
-    "token": "$item_tankard_anniversary",
-    "prefab": "TankardAnniversary",
-    "name": "Horn of Celebration",
-    "amount": 1
-   },
-   {
-    "token": "$item_tankard_odin",
-    "prefab": "TankardOdin",
-    "name": "Mead Horn of Oden",
-    "amount": 1
-   },
-   {
     "token": "$item_sword2h_gold",
     "prefab": "THSwordGold",
     "name": "Nord Greatsword",
@@ -6002,18 +5870,6 @@
     "token": "$item_sword2h_gold_uncooked",
     "prefab": "THSwordGoldUncooked",
     "name": "Cast: Nord Greatsword",
-    "amount": 1
-   },
-   {
-    "token": "$item_sword_wood_2h",
-    "prefab": "THSwordWood",
-    "name": "Wooden Greatsword",
-    "amount": 1
-   },
-   {
-    "token": "$item_torchmist",
-    "prefab": "TorchMist",
-    "name": "item torchmist",
     "amount": 1
    },
    {
@@ -6247,12 +6103,6 @@
     "amount": 1
    },
    {
-    "token": "$item_atgeir_wood",
-    "prefab": "AtgeirWood",
-    "name": "Wooden Atgeir",
-    "amount": 1
-   },
-   {
     "token": "$item_axe_berzerkr",
     "prefab": "AxeBerzerkr",
     "name": "Berserkir Axes",
@@ -6337,12 +6187,6 @@
     "amount": 1
    },
    {
-    "token": "$item_axe_wood",
-    "prefab": "AxeWood",
-    "name": "Wooden Axe",
-    "amount": 1
-   },
-   {
     "token": "$item_battleaxe",
     "prefab": "Battleaxe",
     "name": "Battleaxe",
@@ -6382,12 +6226,6 @@
     "token": "$item_axe2h_gold_frostfire",
     "prefab": "BattleaxeGold_FrostFire",
     "name": "Frostfire Greataxe",
-    "amount": 1
-   },
-   {
-    "token": "$item_battleaxe_wood",
-    "prefab": "BattleaxeWood",
-    "name": "Wooden Battleaxe",
     "amount": 1
    },
    {
@@ -6439,21 +6277,9 @@
     "amount": 1
    },
    {
-    "token": "$item_lavabomb",
-    "prefab": "BombLava",
-    "name": "Basalt Bomb",
-    "amount": 1
-   },
-   {
     "token": "$item_oozebomb",
     "prefab": "BombOoze",
     "name": "Ooze Bomb",
-    "amount": 1
-   },
-   {
-    "token": "$item_smokebomb",
-    "prefab": "BombSmoke",
-    "name": "Smoke Bomb",
     "amount": 1
    },
    {
@@ -6685,24 +6511,6 @@
     "amount": 1
    },
    {
-    "token": "$item_knife_void",
-    "prefab": "KnifeVoid",
-    "name": "Voidcaller",
-    "amount": 1
-   },
-   {
-    "token": "$item_knife_wood",
-    "prefab": "KnifeWood",
-    "name": "Wooden Knife",
-    "amount": 1
-   },
-   {
-    "token": "$item_lantern",
-    "prefab": "Lantern",
-    "name": "Dvergr Lantern",
-    "amount": 1
-   },
-   {
     "token": "$item_mace_bronze",
     "prefab": "MaceBronze",
     "name": "Bronze Mace",
@@ -6769,12 +6577,6 @@
     "amount": 1
    },
    {
-    "token": "$item_mace_wood",
-    "prefab": "MaceWood",
-    "name": "Wooden Mace",
-    "amount": 1
-   },
-   {
     "token": "$item_pickaxe_antler",
     "prefab": "PickaxeAntler",
     "name": "Antler Pickaxe",
@@ -6796,12 +6598,6 @@
     "token": "$item_pickaxe_iron",
     "prefab": "PickaxeIron",
     "name": "Iron Pickaxe",
-    "amount": 1
-   },
-   {
-    "token": "$item_pickaxe_stone",
-    "prefab": "PickaxeStone",
-    "name": "Stone Pickaxe",
     "amount": 1
    },
    {
@@ -6844,24 +6640,6 @@
     "token": "$item_stagbreaker",
     "prefab": "SledgeStagbreaker",
     "name": "Stagbreaker",
-    "amount": 1
-   },
-   {
-    "token": "$item_sledge_wood",
-    "prefab": "SledgeWood",
-    "name": "Wooden Sledge",
-    "amount": 1
-   },
-   {
-    "token": "$item_snowball",
-    "prefab": "Snowball",
-    "name": "Snowball",
-    "amount": 1
-   },
-   {
-    "token": "$item_snowshovel",
-    "prefab": "Shovel",
-    "name": "Snow Shovel",
     "amount": 1
    },
    {
@@ -6940,12 +6718,6 @@
     "token": "$item_spear_wolffang",
     "prefab": "SpearWolfFang",
     "name": "Fang Spear",
-    "amount": 1
-   },
-   {
-    "token": "$item_spear_wood",
-    "prefab": "SpearWood",
-    "name": "Wooden Spear",
     "amount": 1
    },
    {
@@ -7135,24 +6907,6 @@
     "amount": 1
    },
    {
-    "token": "$item_tankard",
-    "prefab": "Tankard",
-    "name": "Tankard",
-    "amount": 1
-   },
-   {
-    "token": "$item_tankard_anniversary",
-    "prefab": "TankardAnniversary",
-    "name": "Horn of Celebration",
-    "amount": 1
-   },
-   {
-    "token": "$item_tankard_odin",
-    "prefab": "TankardOdin",
-    "name": "Mead Horn of Oden",
-    "amount": 1
-   },
-   {
     "token": "$item_sword2h_gold",
     "prefab": "THSwordGold",
     "name": "Nord Greatsword",
@@ -7171,21 +6925,9 @@
     "amount": 1
    },
    {
-    "token": "$item_sword_wood_2h",
-    "prefab": "THSwordWood",
-    "name": "Wooden Greatsword",
-    "amount": 1
-   },
-   {
     "token": "$item_torch",
     "prefab": "Torch",
     "name": "Torch",
-    "amount": 1
-   },
-   {
-    "token": "$item_torchmist",
-    "prefab": "TorchMist",
-    "name": "item torchmist",
     "amount": 1
    }
   ]
@@ -7846,12 +7588,6 @@
     "token": "$item_trophy_deer",
     "prefab": "TrophyDeer",
     "name": "Deer Trophy",
-    "amount": 1
-   },
-   {
-    "token": "$item_trophy_deer_white",
-    "prefab": "TrophyDeerWhite",
-    "name": "item trophy deer white",
     "amount": 1
    },
    {

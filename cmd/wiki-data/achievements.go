@@ -91,13 +91,6 @@ func extractAchievements(x *X) error {
 			if len(list) == 0 {
 				continue
 			}
-			for _, field := range []string{"m_itemsExcluded", "m_consumablesExcluded", "m_charactersExcluded"} {
-				for _, ref := range L(c.Tree, field) {
-					if n := x.GameObjectName(c.Ref.Cab, ref); n != "" {
-						excluded[field] = append(excluded[field], n)
-					}
-				}
-			}
 			for _, ref := range list {
 				t, r := x.Env.TreeOf(c.Ref.Cab, ref)
 				if t == nil {
@@ -140,6 +133,24 @@ func extractAchievements(x *X) error {
 				x.DB.Achievements = append(x.DB.Achievements, a)
 			}
 		}
+	}
+	// The exclusion lists sit on the Achievements component, which holds
+	// the achievement lists, not on the list objects read above.
+	x.EachMono([]string{"m_itemsExcluded", "m_consumablesExcluded", "m_charactersExcluded"}, func(cab string, id int64, t map[string]any) {
+		if len(excluded) > 0 {
+			return
+		}
+		for _, field := range []string{"m_itemsExcluded", "m_consumablesExcluded", "m_charactersExcluded"} {
+			excluded[field] = []string{}
+			for _, ref := range L(t, field) {
+				if n := x.GameObjectName(cab, ref); n != "" {
+					excluded[field] = append(excluded[field], n)
+				}
+			}
+		}
+	})
+	if len(excluded) == 0 {
+		log.Printf("achievements: no Achievements component with exclusion lists found")
 	}
 	x.populateDynamic(excluded)
 	return nil
@@ -187,6 +198,7 @@ func (x *X) populateDynamic(excluded map[string][]string) {
 	}
 	itemsExcluded := set(excluded["m_itemsExcluded"])
 	foodExcluded := set(excluded["m_consumablesExcluded"])
+	log.Printf("achievements: excluded items %v, consumables %v, characters %v", excluded["m_itemsExcluded"], excluded["m_consumablesExcluded"], excluded["m_charactersExcluded"])
 
 	// ObjectDB: the items and recipes the game registers, in order.
 	var dbItems []string
