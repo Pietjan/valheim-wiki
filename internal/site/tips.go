@@ -95,6 +95,21 @@ func (s *Site) tipLines(key string, t *Thing) []string {
 			meta = append(meta, "no portals")
 		}
 		add(meta...)
+		// How it is made: the first recipe's materials and station, or the
+		// cooking station it comes off and what goes on, with that thing's
+		// own materials when it has a recipe, so a pie says what its dough
+		// took.
+		if n := s.needsLine(t.Prefab); n != "" {
+			add(n)
+		} else if cs := s.Index.Converts[t.Prefab]; len(cs) > 0 {
+			c := cs[0]
+			if c.Conversion.From != "" {
+				add("from " + s.nameOf(c.Conversion.From) + " on " + s.nameOf(c.Converter.Prefab))
+				if n := s.needsLine(c.Conversion.From); n != "" {
+					add(s.nameOf(c.Conversion.From) + " " + n)
+				}
+			}
+		}
 		if s.Unplaced(t.Prefab) {
 			add("nothing in the game places it")
 		}
@@ -235,6 +250,34 @@ func (s *Site) tipLines(key string, t *Thing) []string {
 		}
 	}
 	return lines
+}
+
+// needsLine is "needs A ×n, B ×m at Station level k" from an item's first
+// recipe, or "" without one.
+func (s *Site) needsLine(prefab string) string {
+	rs := s.Index.Recipes[prefab]
+	if len(rs) == 0 {
+		return ""
+	}
+	r := rs[0]
+	var need []string
+	for _, res := range r.Resources {
+		if res.Upgrader || res.Amount <= 0 {
+			continue
+		}
+		need = append(need, fmt.Sprintf("%s ×%d", s.nameOf(res.Item), res.Amount))
+	}
+	if len(need) == 0 {
+		return ""
+	}
+	at := ""
+	if r.Station != "" {
+		at = " at " + s.nameOf(r.Station)
+		if r.MinStationLevel > 1 {
+			at += fmt.Sprintf(" level %d", r.MinStationLevel)
+		}
+	}
+	return "needs " + strings.Join(need, ", ") + at
 }
 
 // nameOf is a thing's name by key, or the key.
