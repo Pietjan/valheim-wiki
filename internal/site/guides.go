@@ -20,11 +20,14 @@ import (
 // late as the latest material it is built from. The ocean counts as the
 // Black Forest, where the first boat and fishing rod come from.
 
-// FoodCombo is three foods eaten together and what they add up to.
+// FoodCombo is three foods eaten together and what they add up to. Alt,
+// when a food of the three needs fishing, is the best of the same menu
+// without fish, since many never pick up a rod.
 type FoodCombo struct {
 	ID       string
 	Label    string
 	Stat     string // the stat the combo is for: health, stamina or eitr
+	Alt      *FoodCombo
 	Foods    []*model.Item
 	Health   float64
 	Stamina  float64
@@ -537,7 +540,8 @@ func (s *Site) foodGuide() *FoodGuide {
 		if it.Food <= 0 && it.FoodStamina <= 0 && it.FoodEitr <= 0 {
 			continue
 		}
-		if !s.visible(it) {
+		if !s.visible(it) || s.Unplaced(it.Prefab) {
+			// The blue mushroom: in the game, placed nowhere.
 			continue
 		}
 		st := g.item(it.Prefab)
@@ -568,7 +572,7 @@ func (s *Site) foodGuide() *FoodGuide {
 		}
 		stage.Count = len(have)
 		if len(have) >= 3 {
-			stage.Combos = bestCombos(have)
+			stage.Combos = bestCombos(have, s.needsFish)
 		}
 		guide.Stages = append(guide.Stages, stage)
 	}
@@ -606,7 +610,7 @@ func foodKind(it *model.Item) byte {
 // ties. The menus weigh the other stat at a half, so a few points of the
 // main stat can buy many of the other: three stamina for twenty health is
 // a trade worth making, and so is seven health for twenty stamina.
-func bestCombos(foods []*model.Item) []FoodCombo {
+func bestCombos(foods []*model.Item, fishy func(*model.Item) bool) []FoodCombo {
 	type pick struct {
 		id, label, stat string
 		slots           string // the kinds the three must be, in any order; "" for any
@@ -636,8 +640,10 @@ func bestCombos(foods []*model.Item) []FoodCombo {
 		}, nil},
 	}
 	kinds := make([]byte, len(foods))
+	fish := make([]bool, len(foods))
 	for i, f := range foods {
 		kinds[i] = foodKind(f)
+		fish[i] = fishy != nil && fishy(f)
 	}
 	// fills is whether three kinds are the slots, in any order.
 	fills := func(slots string, a, b, c byte) bool {
@@ -660,9 +666,13 @@ func bestCombos(foods []*model.Item) []FoodCombo {
 		}
 		return true
 	}
+	// Two bests per pick: with any food, and with no fish among the three.
 	best := make([]FoodCombo, len(picks))
 	bestScore := make([]float64, len(picks))
 	found := make([]bool, len(picks))
+	noFish := make([]FoodCombo, len(picks))
+	noFishScore := make([]float64, len(picks))
+	noFishFound := make([]bool, len(picks))
 	n := len(foods)
 	for i := 0; i < n; i++ {
 		for j := i + 1; j < n; j++ {
@@ -679,9 +689,8 @@ func bestCombos(foods []*model.Item) []FoodCombo {
 						continue
 					}
 					sc := p.score(h, st, e)
-					if !found[pi] || sc > bestScore[pi] {
-						found[pi] = true
-						bestScore[pi] = sc
+					anyFish := fish[i] || fish[j] || fish[k]
+					if (!found[pi] || sc > bestScore[pi]) || (!anyFish && (!noFishFound[pi] || sc > noFishScore[pi])) {
 						dur := a.FoodBurn
 						if b.FoodBurn < dur {
 							dur = b.FoodBurn
@@ -689,8 +698,18 @@ func bestCombos(foods []*model.Item) []FoodCombo {
 						if c.FoodBurn < dur {
 							dur = c.FoodBurn
 						}
-						best[pi] = FoodCombo{ID: p.id, Label: p.label, Stat: p.stat, Foods: []*model.Item{a, b, c}, Health: h, Stamina: st, Eitr: e,
+						combo := FoodCombo{ID: p.id, Label: p.label, Stat: p.stat, Foods: []*model.Item{a, b, c}, Health: h, Stamina: st, Eitr: e,
 							Regen: a.FoodRegen + b.FoodRegen + c.FoodRegen, Duration: dur}
+						if !found[pi] || sc > bestScore[pi] {
+							found[pi] = true
+							bestScore[pi] = sc
+							best[pi] = combo
+						}
+						if !anyFish && (!noFishFound[pi] || sc > noFishScore[pi]) {
+							noFishFound[pi] = true
+							noFishScore[pi] = sc
+							noFish[pi] = combo
+						}
 					}
 				}
 			}
@@ -698,11 +717,53 @@ func bestCombos(foods []*model.Item) []FoodCombo {
 	}
 	var out []FoodCombo
 	for pi := range picks {
-		if found[pi] {
-			out = append(out, best[pi])
+		if !found[pi] {
+			continue
 		}
+		b := best[pi]
+		hasFish := false
+		for _, f := range b.Foods {
+			if fishy != nil && fishy(f) {
+				hasFish = true
+			}
+		}
+		if hasFish && noFishFound[pi] {
+			alt := noFish[pi]
+			b.Alt = &alt
+		}
+		out = append(out, b)
 	}
 	return out
+}
+
+// needsFish is whether an item is a fish, raw fish, or made from either
+// anywhere down its recipes and conversions: what takes a rod to have.
+func (s *Site) needsFish(it *model.Item) bool {
+	seen := map[string]bool{}
+	var walk func(p string, depth int) bool
+	walk = func(p string, depth int) bool {
+		if seen[p] || depth > 8 {
+			return false
+		}
+		seen[p] = true
+		if x := s.DB.Items[p]; x != nil && (x.Type == "Fish" || p == "FishRaw" || p == "FishAnglerRaw") {
+			return true
+		}
+		for _, r := range s.Index.Recipes[p] {
+			for _, res := range r.Resources {
+				if walk(res.Item, depth+1) {
+					return true
+				}
+			}
+		}
+		for _, c := range s.Index.Converts[p] {
+			if c.Conversion.From != "" && walk(c.Conversion.From, depth+1) {
+				return true
+			}
+		}
+		return false
+	}
+	return walk(it.Prefab, 0)
 }
 
 // pagesGuides writes the guides: the food guide here, the rest in

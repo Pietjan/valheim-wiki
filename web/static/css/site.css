@@ -296,6 +296,9 @@ table.stats td:first-child { color: var(--ink-2); }
 .meal[data-stat="balanced"] { --meal-c: var(--stat-balanced); }
 .meal { display: grid; grid-template-columns: 300px 1fr; gap: 6px 18px; align-items: center; }
 .meal-head { display: flex; flex-direction: column; gap: 2px; }
+.meal-alt { grid-column: 1 / -1; display: grid; grid-template-columns: 300px 1fr; gap: 6px 18px; align-items: center; padding-top: 8px; border-top: 1px dashed color-mix(in srgb, var(--meal-c) 35%, transparent); }
+.meal-alt .meal-head b { font-size: 14px; font-family: var(--serif); letter-spacing: 0; color: var(--ink-2); font-weight: 700; }
+@media (max-width: 640px) { .meal-alt { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .meal { grid-template-columns: 1fr; } }
 .meal-head b { font-family: var(--display); font-size: 19px; letter-spacing: .02em; color: var(--meal-c); }
 .meal-stats { color: var(--ink-2); font-size: 13px; font-variant-numeric: tabular-nums; }
