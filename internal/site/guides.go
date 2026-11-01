@@ -271,16 +271,21 @@ func (g *stager) creature(p string) int {
 	defer delete(g.visiting, "c:"+p)
 	ix := g.s.Index
 	best := stageUnknown
-	if b := ix.Primary[p]; b != "" {
+	// Where it spawns in the open first. A place it stands in counts only
+	// for a creature with no open-world spawn: the dvergr, the cultists.
+	// The Meadows draugr village holds draugr, but draugr are met in the
+	// Swamp, and entrails and sausages belong there.
+	if b := strings.TrimPrefix(ix.Primary[p], "?"); b != "" {
 		best = biomeStage(b)
-	}
-	for _, l := range ix.Found[p] {
-		for _, b := range l.Biomes {
-			best = minStage(best, biomeStage(b))
+	} else {
+		for _, l := range ix.Found[p] {
+			for _, b := range l.Biomes {
+				best = minStage(best, biomeStage(b))
+			}
 		}
-	}
-	if st, ok := g.found["creature:"+p]; ok {
-		best = minStage(best, st)
+		if st, ok := g.found["creature:"+p]; ok {
+			best = minStage(best, st)
+		}
 	}
 	if c := g.s.DB.Creatures[p]; c != nil && c.Egg != nil && c.Egg.From != "" {
 		best = minStage(best, g.item(c.Egg.From))
@@ -690,26 +695,24 @@ func bestCombos(foods []*model.Item, fishy func(*model.Item) bool) []FoodCombo {
 					}
 					sc := p.score(h, st, e)
 					anyFish := fish[i] || fish[j] || fish[k]
-					if (!found[pi] || sc > bestScore[pi]) || (!anyFish && (!noFishFound[pi] || sc > noFishScore[pi])) {
-						dur := a.FoodBurn
-						if b.FoodBurn < dur {
-							dur = b.FoodBurn
-						}
-						if c.FoodBurn < dur {
-							dur = c.FoodBurn
-						}
-						combo := FoodCombo{ID: p.id, Label: p.label, Stat: p.stat, Foods: []*model.Item{a, b, c}, Health: h, Stamina: st, Eitr: e,
-							Regen: a.FoodRegen + b.FoodRegen + c.FoodRegen, Duration: dur}
-						if !found[pi] || sc > bestScore[pi] {
-							found[pi] = true
-							bestScore[pi] = sc
-							best[pi] = combo
-						}
-						if !anyFish && (!noFishFound[pi] || sc > noFishScore[pi]) {
-							noFishFound[pi] = true
-							noFishScore[pi] = sc
-							noFish[pi] = combo
-						}
+					dur := a.FoodBurn
+					if b.FoodBurn < dur {
+						dur = b.FoodBurn
+					}
+					if c.FoodBurn < dur {
+						dur = c.FoodBurn
+					}
+					combo := FoodCombo{ID: p.id, Label: p.label, Stat: p.stat, Foods: []*model.Item{a, b, c}, Health: h, Stamina: st, Eitr: e,
+						Regen: a.FoodRegen + b.FoodRegen + c.FoodRegen, Duration: dur}
+					if !found[pi] || sc > bestScore[pi] || (sc == bestScore[pi] && better(combo, best[pi])) {
+						found[pi] = true
+						bestScore[pi] = sc
+						best[pi] = combo
+					}
+					if !anyFish && (!noFishFound[pi] || sc > noFishScore[pi] || (sc == noFishScore[pi] && better(combo, noFish[pi]))) {
+						noFishFound[pi] = true
+						noFishScore[pi] = sc
+						noFish[pi] = combo
 					}
 				}
 			}
@@ -734,6 +737,17 @@ func bestCombos(foods []*model.Item, fishy func(*model.Item) bool) []FoodCombo {
 		out = append(out, b)
 	}
 	return out
+}
+
+// better breaks a tie on a menu's score: the more of everything together,
+// health, stamina, eitr and the regen a tick, then the longer lasting.
+func better(a, b FoodCombo) bool {
+	ta := a.Health + a.Stamina + a.Eitr + a.Regen
+	tb := b.Health + b.Stamina + b.Eitr + b.Regen
+	if ta != tb {
+		return ta > tb
+	}
+	return a.Duration > b.Duration
 }
 
 // needsFish is whether an item is a fish, raw fish, or made from either

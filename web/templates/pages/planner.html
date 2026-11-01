@@ -1,0 +1,43 @@
+{{define "head"}}<script type="module" src="{{url "static/js/planner.js"}}"></script>{{end}}
+{{define "content"}}
+{{template "crumbs" .}}
+<div class="index-head"><div><p class="eyebrow">Tool</p><h1>Planner</h1><p>List what you mean to build and make: the pieces of a new settlement, the gear for the next biome, a stack of arrows. The planner adds up what it all costs, follows every ingredient back to the ore and the wood it starts as, works out the stations and the levels it takes, and sorts the materials by what a portal will carry. The plan lives in the page's address, so copy it to keep it or to hand it to the crew. Nothing leaves your browser.</p></div></div>
+<section class="plan" data-plan>
+  <div class="plan-add">
+    <svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#search"/></svg>
+    <input type="search" data-plan-search placeholder="Add a piece or an item to make: portal, forge, bronze sword…" autocomplete="off" spellcheck="false" aria-label="Add to the plan" aria-expanded="false" aria-controls="plan-results" aria-autocomplete="list">
+    <ol class="plan-results" id="plan-results" data-plan-results role="listbox" hidden></ol>
+  </div>
+  <div class="plan-cols">
+    <section class="panel plan-list">
+      <h2>The plan <span class="count" data-plan-count></span></h2>
+      <ul class="plan-entries" data-plan-entries></ul>
+      <p class="empty" data-plan-empty>Nothing yet. Search above for a piece from the hammer's menu or an item with a recipe, and set how many and at what quality.</p>
+      <div class="plan-actions">
+        <label class="plan-check"><input type="checkbox" data-plan-stations checked> Count the stations and upgrades the plan needs but does not list</label>
+        <div class="plan-buttons">
+          <button type="button" class="btn" data-plan-share>Copy link</button>
+          <button type="button" class="btn btn-quiet" data-plan-clear>Clear</button>
+        </div>
+      </div>
+      <p class="plan-note muted small" data-plan-shared hidden></p>
+    </section>
+    <div class="plan-out" data-plan-out hidden>
+      <section class="panel plan-materials">
+        <h2>Materials <span class="count" data-plan-mat-count></span></h2>
+        <div data-plan-materials></div>
+      </section>
+      <section class="panel plan-steps" data-plan-steps-panel hidden>
+        <h2>Step by step</h2>
+        <p class="muted small">What gets made from what, earliest first, ending with what the plan is for. Click <em>bring it</em> on a thing made along the way to carry it ready-made instead of its makings.</p>
+        <ol class="plan-step-list" data-plan-steps></ol>
+      </section>
+      <section class="panel plan-stations" data-plan-stations-panel hidden>
+        <h2>Stations</h2>
+        <ul class="plan-station-list" data-plan-station-list></ul>
+      </section>
+    </div>
+  </div>
+</section>
+<p class="muted small plan-foot">Costs are the recipes' and the pieces' as the game ships them (game {{.Site.DB.Meta.Game}}). Upgrades cost the per-level amount once for the second quality and twice for the third, then four times for the fourth and half as much again for each beyond, as the client's code counts it. A material is counted at its first recipe or conversion; a thing that can be smelted from more than one ore shows the choice. Fuel is counted for smelters at their rate per bar; a cooking fire's wood is not. Portals refuse what the game marks as not teleportable, unless your world's modifiers let everything through.</p>
+{{end}}

@@ -578,3 +578,89 @@ dialog::backdrop { background: rgba(20, 12, 6, .55); backdrop-filter: blur(3px);
 
 /* print */
 @media print { .top, .yw, dialog { display: none !important; } .cols { grid-template-columns: 1fr; } }
+
+/* ---------- planner ---------- */
+.plan-add { position: relative; display: flex; align-items: center; gap: 10px; margin: 0 0 20px; }
+.plan-add > .ico { position: absolute; left: 14px; color: var(--ink-3); width: 20px; height: 20px; pointer-events: none; }
+.plan-add input[type=search] { flex: 1; height: 48px; font-size: 17px; padding-left: 44px; }
+.plan-results { position: absolute; left: 0; right: 0; top: calc(100% + 6px); z-index: 30; list-style: none; margin: 0; padding: 6px; max-height: 60vh; overflow: auto; background: var(--paper-2); border: 1px solid var(--line-2); border-radius: var(--radius); box-shadow: var(--shadow), 0 16px 40px -16px rgba(0,0,0,.5); }
+.plan-results button { display: grid; grid-template-columns: 36px 1fr auto; align-items: center; gap: 12px; width: 100%; padding: 8px 10px; border: 0; border-radius: 8px; background: none; color: var(--ink); font: inherit; text-align: left; cursor: pointer; }
+.plan-results button:hover, .plan-results li[aria-selected="true"] button { background: var(--accent-soft); }
+.plan-results img, .plan-results .blank { width: 36px; height: 36px; object-fit: contain; border-radius: 8px; background: var(--paper-3); display: block; }
+.plan-results .r-name { font-weight: 700; }
+.plan-results .r-sub { font-size: 13px; color: var(--ink-3); display: block; }
+.plan-results .r-kind { font-size: 12px; color: var(--ink-3); letter-spacing: .1em; text-transform: uppercase; }
+.plan-cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.plan-cols > .panel { margin: 0; }
+.plan-list { position: sticky; top: calc(var(--top-h) + 16px); }
+.plan-list h2, .plan-out h2 { font-size: 22px; margin: 0 0 12px; }
+/* One grid for the whole list, each row a subgrid, so the counts, the
+   quality and the remove buttons line up down the column whatever the
+   chips' widths and whether a row has a quality to pick. */
+.plan-entries { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto auto auto; column-gap: 10px; }
+.plan-entry { display: grid; grid-column: 1 / -1; grid-template-columns: subgrid; grid-template-rows: auto auto; align-items: center; row-gap: 2px; padding: 6px 0; border-bottom: 1px dotted var(--line); }
+.plan-entry:last-child { border-bottom: 0; }
+.plan-entry .chip { grid-column: 1; grid-row: 1; justify-self: start; min-width: 0; max-width: 100%; }
+.plan-entry .chip-name { min-width: 0; }
+.plan-entry-sub { grid-column: 1; grid-row: 2; font-size: 12.5px; color: var(--ink-3); padding-left: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.plan-qty { grid-column: 3; grid-row: 1 / span 2; display: inline-flex; align-items: center; border: 1px solid var(--line-2); border-radius: 6px; background: var(--paper-2); overflow: hidden; }
+.plan-qty input { width: 58px; height: 34px; border: 0; border-radius: 0; text-align: center; font-variant-numeric: tabular-nums; -moz-appearance: textfield; padding: 0 4px; }
+.plan-qty input::-webkit-outer-spin-button, .plan-qty input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.plan-qty input:focus { box-shadow: none; }
+.plan-pm { width: 30px; height: 34px; border: 0; background: var(--paper-3); color: var(--ink-2); font: inherit; font-size: 18px; line-height: 1; cursor: pointer; }
+.plan-pm:hover { background: var(--accent-soft); color: var(--accent-2); }
+.plan-q { grid-column: 2; grid-row: 1 / span 2; height: 36px; padding: 0 6px; font-size: 14px; color: var(--ink-2); }
+.plan-x { grid-column: 4; grid-row: 1 / span 2; width: 30px; height: 34px; border: 0; background: none; color: var(--ink-3); font: inherit; font-size: 20px; line-height: 1; cursor: pointer; border-radius: 6px; }
+.plan-x:hover { color: var(--rune); background: var(--paper-3); }
+.plan-entry.is-new { animation: plan-in .5s ease-out; }
+@keyframes plan-in { from { background: var(--accent-soft); } to { background: transparent; } }
+.plan-actions { display: flex; flex-direction: column; gap: 12px; margin: 14px 0 0; padding-top: 14px; border-top: 1px solid var(--line); }
+.plan-check { display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; color: var(--ink-2); cursor: pointer; line-height: 1.4; }
+.plan-check input { accent-color: var(--accent); margin: 3px 0 0; flex: none; }
+.plan-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+.plan-note { margin: 10px 0 0; color: var(--ok); }
+.plan-out { display: grid; gap: 20px; }
+.plan-group + .plan-group { margin-top: 22px; }
+.plan-group h3 { font-size: 18px; margin: 0 0 2px; display: flex; align-items: baseline; gap: 10px; }
+.plan-group h3 .count { font: 400 13px/1 var(--serif); color: var(--ink-3); letter-spacing: 0; }
+.plan-group-note { margin: 0 0 8px; }
+.plan-table { font-size: 15px; }
+.plan-table th, .plan-table td { padding: 6px 8px; }
+.plan-table td:first-child, .plan-table th:first-child { padding-left: 0; }
+.plan-table td.num b { font-size: 16px; color: var(--accent-2); }
+.plan-table .plan-act { width: 1%; white-space: nowrap; text-align: right; padding-right: 0; }
+.link.small { font-size: 13px; }
+.plan-step-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; counter-reset: step; }
+.plan-step { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; padding: 10px 0 10px 34px; border-bottom: 1px dotted var(--line); position: relative; counter-increment: step; }
+.plan-step:last-child { border-bottom: 0; }
+.plan-step::before { content: counter(step); position: absolute; left: 0; top: 12px; width: 24px; height: 24px; border-radius: 50%; background: var(--paper-3); color: var(--ink-2); font: 700 12px/24px var(--serif); text-align: center; font-variant-numeric: tabular-nums; }
+.plan-step-what { grid-column: 1; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.plan-step.is-goal::before { background: var(--accent); color: var(--accent-ink); }
+.plan-step-body { grid-column: 1; display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; margin-top: 6px; font-size: 14px; color: var(--ink-2); }
+.plan-step-how, .plan-step-from { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; }
+.plan-step-body .chip { font-size: 14px; padding: 2px 8px 2px 2px; }
+.plan-step-body .chip-icon { width: 22px; height: 22px; }
+.plan-step-alts { color: var(--ink-3); font-size: 13px; }
+.plan-step-alts b { color: var(--ink); }
+.plan-step-bring { grid-column: 2; grid-row: 1 / span 2; align-self: start; margin-top: 6px; white-space: nowrap; }
+.plan-station-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.plan-station-list li { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; padding: 7px 0; border-bottom: 1px dotted var(--line); font-size: 14.5px; }
+.plan-station-list li:last-child { border-bottom: 0; }
+.plan-station-lv { font-weight: 700; color: var(--accent-2); }
+.plan-station-ext { color: var(--ink-3); display: inline-flex; flex-wrap: wrap; gap: 4px 6px; align-items: center; }
+.plan-station-ext .chip { font-size: 13px; padding: 1px 7px 1px 2px; }
+.plan-station-ext .chip-icon { width: 20px; height: 20px; }
+.plan-station-have { margin-left: auto; font-size: 13px; }
+.plan-tools { color: var(--ink-2); }
+.plan-foot { margin: 28px 0 0; max-width: 80ch; line-height: 1.5; }
+@media (max-width: 900px) {
+  .plan-cols { grid-template-columns: 1fr; }
+  .plan-list { position: static; }
+}
+@media (max-width: 520px) {
+  .plan-entries { grid-template-columns: minmax(0, 1fr) auto auto; }
+  .plan-q { grid-column: 1; grid-row: 2; justify-self: start; height: 30px; }
+  .plan-qty { grid-column: 2; }
+  .plan-x { grid-column: 3; }
+  .plan-entry-sub { display: none; }
+}

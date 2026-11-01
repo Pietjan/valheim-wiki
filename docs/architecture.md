@@ -178,6 +178,21 @@ takes the best armour per slot and weapon per skill at top quality; the
 boss guide scales each weapon's damage by the boss's modifiers; the
 comfort guide counts one piece per comfort group.
 
+The planner (`/guides/planner/`) is a tool rather than a guide: the
+reader lists pieces to build and items to make, with counts and
+qualities, and `web/static/js/planner.js` adds up what it costs from
+`planner.json`, which `internal/site/planner.go` writes: every piece a
+tool's menu lists and every visible item with a recipe, the materials
+they name, the converters (smelter, kiln, fermenter, ...) with their fuel
+per product, and the stations with their upgrade pieces. Each ingredient
+is followed to its first recipe or conversion until something is found
+rather than made; the game's `Requirement.GetAmount` rule prices each
+upgrade (once, twice, then four times the per-level amount, and half as
+much again per level beyond); the stations and upgrades the levels need
+are added to the cost unless the plan lists them. The plan is the URL's
+hash (`#list=SwordBronze.1.3,forge.1&bring=Bronze&from=Iron.IronScrap`)
+and is kept in localStorage.
+
 ## Achievements
 
 The client's achievements live in the `Achievements1` prefab: an

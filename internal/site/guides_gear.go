@@ -382,6 +382,9 @@ func (s *Site) pagesGuideSet() error {
 	if err := s.pagesGuideMore(); err != nil {
 		return err
 	}
+	if err := s.pagesPlanner(); err != nil {
+		return err
+	}
 	return s.write("guides/", "guides", &Page{Site: s, Title: "Guides",
 		Description: "What the numbers add up to: the best food, gear and comfort in every biome of Valheim, and what to bring to each boss.",
 		Section:     "guides", Path: "guides/", Data: nil})
