@@ -44,6 +44,8 @@ async function init(root) {
   const reliefOut = $('[data-world-relief-out]', root);
   const treesRow = $('[data-world-trees-row]', root);
   const treesInput = $('[data-world-trees]', root);
+  const terrainRow = $('[data-world-terrain-row]', root);
+  const terrainInput = $('[data-world-terrain]', root);
   const gridRow = $('[data-world-grid-row]', root);
   const gridInput = $('[data-world-grid]', root);
   const compass = $('[data-world-compass]', root);
@@ -78,6 +80,7 @@ async function init(root) {
     root.insertBefore(box3d, root.querySelector('.world-ui'));
     view3d = new World3D(box3d, { relief: +reliefInput.value || 2 });
     view3d.setVegetation(treesInput.checked);
+    view3d.setTerrain(terrainInput.checked);
     root.view3d = view3d;
     if (handle) view3d.setWorld(handle);
     view3d.setMarkers(markers);
@@ -114,6 +117,7 @@ async function init(root) {
     for (const b of modeButtons) b.setAttribute('aria-pressed', b.dataset.worldMode === mode ? 'true' : 'false');
     reliefRow.hidden = mode !== '3d';
     treesRow.hidden = mode !== '3d';
+    terrainRow.hidden = mode !== '3d';
     gridRow.hidden = mode === '3d';
     hint.hidden = mode !== '3d';
     compass.classList.toggle('is-live', mode === '3d');
@@ -128,6 +132,7 @@ async function init(root) {
     if (view3d) view3d.setRelief(+reliefInput.value);
   });
   treesInput.addEventListener('change', () => { if (view3d) view3d.setVegetation(treesInput.checked); });
+  terrainInput.addEventListener('change', () => { if (view3d) view3d.setTerrain(terrainInput.checked); });
   gridInput.addEventListener('change', () => map.setGrid(gridInput.checked));
   compass.addEventListener('click', () => { if (mode === '3d' && view3d) view3d.lookAt(view3d.tx, view3d.tz, { yaw: 0, pitch: 55 }); });
   const catalogue = await (await fetch(base + 'world/locations.json')).json();

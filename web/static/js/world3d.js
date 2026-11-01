@@ -707,6 +707,7 @@ export class World3D {
     this.models = null;
     this.zones = new Map();      // 'zx,zz' → {zx, zz, status, byModel: Map(name → {kind, arr: Float32Array})}
     this.showKinds = { vegetation: true, location: true };
+    this.showTerrain = true;   // the land itself; off leaves the sea and what stands on it
     this.zoneInflight = 0;
     this.instancesDirty = true;
     this.visibleZoneKey = '';
@@ -854,6 +855,14 @@ export class World3D {
     this._settleTarget();
     this.invalidate();
     this._viewChanged();
+  }
+
+  // setTerrain shows or hides the land: off leaves the sky, the sea and
+  // whatever stands on the ground, markers and models, where the ground
+  // would be.
+  setTerrain(on) {
+    this.showTerrain = !!on;
+    this.invalidate();
   }
 
   // setVegetation shows or hides the trees, rocks and bushes; the sites'
@@ -1111,6 +1120,7 @@ export class World3D {
     if (!base) return;
 
     // The land, coarse to fine.
+    if (this.showTerrain) {
     gl.useProgram(this.terrain.p);
     gl.bindVertexArray(this.vao);
     gl.enable(gl.CULL_FACE);
@@ -1134,6 +1144,7 @@ export class World3D {
       this._drawLayer(l, parent, child);
     }
     gl.disable(gl.CULL_FACE);
+    }
 
     // What stands on the land.
     this._drawModels();
