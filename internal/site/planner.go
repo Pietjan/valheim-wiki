@@ -210,5 +210,17 @@ func (s *Site) pagesPlanner() error {
 	}
 	return s.write("guides/planner/", "planner", &Page{Site: s, Title: "Planner",
 		Description: "List what you mean to build and make in Valheim — the pieces of a new settlement, the gear of the next biome — and see what it costs down to the ore and the wood, the stations and levels it takes, and what of it a portal will carry.",
-		Section:     "guides", Path: "guides/planner/", Crumbs: []Crumb{{"Guides", "guides/"}, {"Planner", ""}}, Data: map[string]any{"Things": len(d.Things)}})
+		Section:     "guides", Path: "guides/planner/", Crumbs: []Crumb{{"Guides", "guides/"}, {"Planner", ""}}, Data: map[string]any{"Things": len(d.Things), "Biomes": stageBiomes()}})
+}
+
+// stageBiomes is the biomes in the order a Viking meets them, by name,
+// for naming a playthrough's stages; the ocean is crossed, not settled.
+func stageBiomes() []string {
+	var out []string
+	for _, b := range model.Biomes {
+		if b != "ocean" {
+			out = append(out, model.BiomeName[b])
+		}
+	}
+	return out
 }

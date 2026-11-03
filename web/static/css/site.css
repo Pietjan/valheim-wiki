@@ -583,6 +583,31 @@ dialog::backdrop { background: rgba(20, 12, 6, .55); backdrop-filter: blur(3px);
 @media print { .top, .yw, dialog { display: none !important; } .cols { grid-template-columns: 1fr; } }
 
 /* ---------- planner ---------- */
+.plan-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 0 0 12px; }
+.plan-pick { display: inline-flex; align-items: center; gap: 8px; }
+.plan-label { font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); font-weight: 700; }
+.plan-pick select { max-width: min(320px, 62vw); }
+.plan-bar-buttons { margin-left: auto; }
+.plan-name { flex: 0 1 320px; min-width: 0; }
+.plan-bar-buttons { display: flex; flex-wrap: wrap; gap: 6px; }
+.plan-del.is-armed, .plan-stage-tools .is-armed { color: var(--rune); border-color: var(--rune); }
+.plan-stages { margin: 0 0 14px; }
+.plan-stage-add { border-style: dashed; }
+.plan-stage-all { margin-left: auto; }
+.plan-stage-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0 0 12px; }
+.plan-stage-name { flex: 1 1 160px; min-width: 0; height: 40px !important; font-family: var(--display) !important; font-size: 22px !important; letter-spacing: .02em; border-color: transparent !important; background: transparent !important; padding: 0 6px !important; margin-left: -6px; }
+.plan-stage-name:hover { border-color: var(--line-2) !important; }
+.plan-stage-name:focus { border-color: var(--accent) !important; background: var(--paper-2) !important; }
+.plan-stage-head .count { font: 400 14px/1 var(--serif); color: var(--ink-3); }
+.plan-stage-tools { display: flex; gap: 2px; margin-left: auto; }
+.plan-stage-tools .btn { height: 32px; padding: 0 10px; font-size: 14px; }
+.plan-stage-tools .btn:disabled { opacity: .35; cursor: default; }
+.plan-fresh { margin: -4px 0 12px; }
+.plan-stage-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; counter-reset: stage; }
+.plan-stage-row { display: grid; grid-template-columns: 28px 1fr; grid-template-rows: auto auto; column-gap: 10px; width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: var(--radius-s); background: var(--paper-2); color: var(--ink); font: inherit; text-align: left; cursor: pointer; counter-increment: stage; }
+.plan-stage-row:hover { border-color: var(--accent); }
+.plan-stage-row::before { content: counter(stage); grid-row: 1 / span 2; align-self: center; width: 24px; height: 24px; border-radius: 50%; background: var(--paper-3); color: var(--ink-2); font: 700 12px/24px var(--serif); text-align: center; }
+.plan-stage-row-name { font-family: var(--display); font-size: 17px; letter-spacing: .02em; }
 .plan-add { position: relative; display: flex; align-items: center; gap: 10px; margin: 0 0 20px; }
 .plan-add > .ico { position: absolute; left: 14px; color: var(--ink-3); width: 20px; height: 20px; pointer-events: none; }
 .plan-add input[type=search] { flex: 1; height: 48px; font-size: 17px; padding-left: 44px; }
@@ -621,9 +646,10 @@ dialog::backdrop { background: rgba(20, 12, 6, .55); backdrop-filter: blur(3px);
 .plan-check { display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; color: var(--ink-2); cursor: pointer; line-height: 1.4; }
 .plan-check input { accent-color: var(--accent); margin: 3px 0 0; flex: none; }
 .plan-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
-.plan-note { margin: 10px 0 0; color: var(--ok); }
+.plan-note { margin: 10px 0 0; color: var(--ok); line-height: 1.45; }
 .plan-out { display: grid; gap: 20px; }
 .plan-group + .plan-group { margin-top: 22px; }
+.plan-group { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .plan-group h3 { font-size: 18px; margin: 0 0 2px; display: flex; align-items: baseline; gap: 10px; }
 .plan-group h3 .count { font: 400 13px/1 var(--serif); color: var(--ink-3); letter-spacing: 0; }
 .plan-group-note { margin: 0 0 8px; }
@@ -657,7 +683,7 @@ dialog::backdrop { background: rgba(20, 12, 6, .55); backdrop-filter: blur(3px);
 .plan-tools { color: var(--ink-2); }
 .plan-foot { margin: 28px 0 0; max-width: 80ch; line-height: 1.5; }
 @media (max-width: 900px) {
-  .plan-cols { grid-template-columns: 1fr; }
+  .plan-cols { grid-template-columns: minmax(0, 1fr); }
   .plan-list { position: static; }
 }
 @media (max-width: 520px) {

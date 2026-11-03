@@ -1,8 +1,20 @@
 {{define "head"}}<script type="module" src="{{url "static/js/planner.js"}}"></script>{{end}}
 {{define "content"}}
 {{template "crumbs" .}}
-<div class="index-head"><div><p class="eyebrow">Tool</p><h1>Planner</h1><p>List what you mean to build and make: the pieces of a new settlement, the gear for the next biome, a stack of arrows. The planner adds up what it all costs, follows every ingredient back to the ore and the wood it starts as, works out the stations and the levels it takes, and sorts the materials by what a portal will carry. The plan lives in the page's address, so copy it to keep it or to hand it to the crew. Nothing leaves your browser.</p></div></div>
-<section class="plan" data-plan>
+<div class="index-head"><div><p class="eyebrow">Tool</p><h1>Planner</h1><p>List what you mean to build and make: the pieces of a new settlement, the gear for the next biome, a stack of arrows. The planner adds up what it all costs, follows every ingredient back to the ore and the wood it starts as, works out the stations and the levels it takes, and sorts the materials by what a portal will carry. Keep as many plans as you like, and split one into stages to plan a whole playthrough: what an earlier stage builds is counted as standing in the later ones. Plans stay in this browser; a link hands one to the crew.</p></div></div>
+<section class="plan" data-plan data-biomes='{{json .Data.Biomes}}'>
+  <div class="plan-bar">
+    <label class="plan-pick"><span class="plan-label">Plan</span><select data-plan-pick aria-label="Your plans"></select></label>
+    <input type="text" class="plan-name" data-plan-name maxlength="60" spellcheck="false" aria-label="Plan name" hidden>
+    <div class="plan-bar-buttons">
+      <button type="button" class="btn btn-quiet" data-plan-rename>Rename</button>
+      <button type="button" class="btn" data-plan-new>New plan</button>
+      <button type="button" class="btn" data-plan-new-play title="A plan with a stage for every biome">New playthrough</button>
+      <button type="button" class="btn btn-quiet" data-plan-dup>Duplicate</button>
+      <button type="button" class="btn btn-quiet plan-del" data-plan-del>Delete</button>
+    </div>
+  </div>
+  <div class="plan-stages pills" data-plan-stages role="group" aria-label="Stages"></div>
   <div class="plan-add">
     <svg class="ico" aria-hidden="true"><use href="{{url "static/img/sprite.svg"}}#search"/></svg>
     <input type="search" data-plan-search placeholder="Add a piece or an item to make: portal, forge, bronze sword…" autocomplete="off" spellcheck="false" aria-label="Add to the plan" aria-expanded="false" aria-controls="plan-results" aria-autocomplete="list">
@@ -10,21 +22,33 @@
   </div>
   <div class="plan-cols">
     <section class="panel plan-list">
-      <h2>The plan <span class="count" data-plan-count></span></h2>
+      <div class="plan-stage-head" data-plan-stage-head>
+        <input type="text" class="plan-stage-name" data-plan-stage-name maxlength="60" spellcheck="false" list="plan-biome-names" aria-label="Stage name">
+        <span class="count" data-plan-count></span>
+        <div class="plan-stage-tools" data-plan-stage-tools>
+          <button type="button" class="btn btn-quiet" data-stage-act="earlier" aria-label="Move stage earlier" title="Move earlier">←</button>
+          <button type="button" class="btn btn-quiet" data-stage-act="later" aria-label="Move stage later" title="Move later">→</button>
+          <button type="button" class="btn btn-quiet" data-stage-act="remove">Remove stage</button>
+        </div>
+      </div>
+      <datalist id="plan-biome-names">{{range .Data.Biomes}}<option value="{{.}}">{{end}}</datalist>
+      <label class="plan-check plan-fresh" data-plan-fresh-row><input type="checkbox" data-plan-fresh> A fresh base: nothing the earlier stages built stands here</label>
+      <h2 data-plan-all-head hidden>All stages</h2>
       <ul class="plan-entries" data-plan-entries></ul>
+      <ol class="plan-stage-rows" data-plan-stage-rows hidden></ol>
       <p class="empty" data-plan-empty>Nothing yet. Search above for a piece from the hammer's menu or an item with a recipe, and set how many and at what quality.</p>
       <div class="plan-actions">
-        <label class="plan-check"><input type="checkbox" data-plan-stations checked> Count the stations and upgrades the plan needs but does not list</label>
+        <label class="plan-check"><input type="checkbox" data-plan-stations checked> Count the stations and upgrades the plan needs but does not list or have</label>
         <div class="plan-buttons">
           <button type="button" class="btn" data-plan-share>Copy link</button>
-          <button type="button" class="btn btn-quiet" data-plan-clear>Clear</button>
+          <button type="button" class="btn btn-quiet" data-plan-clear>Clear stage</button>
         </div>
       </div>
       <p class="plan-note muted small" data-plan-shared hidden></p>
     </section>
     <div class="plan-out" data-plan-out hidden>
       <section class="panel plan-materials">
-        <h2>Materials <span class="count" data-plan-mat-count></span></h2>
+        <h2><span data-plan-mat-title>Materials</span> <span class="count" data-plan-mat-count></span></h2>
         <div data-plan-materials></div>
       </section>
       <section class="panel plan-steps" data-plan-steps-panel hidden>

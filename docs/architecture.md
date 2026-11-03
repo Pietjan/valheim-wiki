@@ -189,9 +189,14 @@ is followed to its first recipe or conversion until something is found
 rather than made; the game's `Requirement.GetAmount` rule prices each
 upgrade (once, twice, then four times the per-level amount, and half as
 much again per level beyond); the stations and upgrades the levels need
-are added to the cost unless the plan lists them. The plan is the URL's
-hash (`#list=SwordBronze.1.3,forge.1&bring=Bronze&from=Iron.IronScrap`)
-and is kept in localStorage.
+are added to the cost unless the plan lists them. A reader keeps any
+number of named plans in localStorage (`vegvisir.plans`); a plan is one
+or more stages, each with its own list, and every piece an earlier stage
+lists or has counted in stands for the later ones, unless a stage is
+marked a fresh base. A link carries one whole plan as
+`#plan=<compact JSON, base64url>` and opens as a plan of the reader's
+own; the first links' `#list=SwordBronze.1.3,forge.1&bring=...` still
+open, as a one-stage plan.
 
 ## Achievements
 
